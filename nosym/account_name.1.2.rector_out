@@ -1,0 +1,58 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/account_name/account_name.module
+[parsing] modules/contrib/account_name/src/Form/AccountNameSettingsForm.php
+[refactoring] modules/contrib/account_name/account_name.module
+[refactoring] modules/contrib/account_name/src/Form/AccountNameSettingsForm.php
+[printing] modules/contrib/account_name/account_name.module
+[printing] modules/contrib/account_name/src/Form/AccountNameSettingsForm.php
+
+
+2 files with changes
+====================
+
+1) modules/contrib/account_name/account_name.module
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -55,7 +55,7 @@
+
+           }
+
+-          $image = drupal_render($picture);
++          $image = \Drupal::service('renderer')->render($picture);
+           if ($config->get('flip')) {
+             $variables['text'] = t('<div class="account-link"> @username @picture </div>', ['@username' => $accountName, '@picture' => $image]);
+           }
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalRenderRector
+
+
+2) modules/contrib/account_name/src/Form/AccountNameSettingsForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -92,7 +92,7 @@
+     ->set('label', $form_state->getValue('label'))
+     ->set('image_style', $form_state->getValue('image_style'))
+     ->save();
+-    drupal_set_message(t('Save account name configuration.'), 'status');
++    $this->messenger()->addStatus(t('Save account name configuration.'));
+   }
+
+ }
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+ [OK] Rector is done! 2 files have been changed.                                
+

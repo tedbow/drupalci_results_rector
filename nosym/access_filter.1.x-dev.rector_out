@@ -1,0 +1,182 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/access_filter/src/AccessFilterListBuilder.php
+[parsing] modules/contrib/access_filter/src/AccessFilterMiddleware.php
+[parsing] modules/contrib/access_filter/src/Annotation/AccessFilterCondition.php
+[parsing] modules/contrib/access_filter/src/Annotation/AccessFilterRule.php
+[parsing] modules/contrib/access_filter/src/Entity/Filter.php
+[parsing] modules/contrib/access_filter/src/FilterInterface.php
+[parsing] modules/contrib/access_filter/src/Form/DeleteForm.php
+[parsing] modules/contrib/access_filter/src/Form/EditForm.php
+[parsing] modules/contrib/access_filter/src/Plugin/AccessFilter/Condition/AndCondition.php
+[parsing] modules/contrib/access_filter/src/Plugin/AccessFilter/Condition/ArrayConditionBase.php
+[parsing] modules/contrib/access_filter/src/Plugin/AccessFilter/Condition/ChainConditionBase.php
+[parsing] modules/contrib/access_filter/src/Plugin/AccessFilter/Condition/ConditionBase.php
+[parsing] modules/contrib/access_filter/src/Plugin/AccessFilter/Condition/CookieCondition.php
+[parsing] modules/contrib/access_filter/src/Plugin/AccessFilter/Condition/OrCondition.php
+[parsing] modules/contrib/access_filter/src/Plugin/AccessFilter/Condition/PathCondition.php
+[parsing] modules/contrib/access_filter/src/Plugin/AccessFilter/Condition/ServerEnvironmentCondition.php
+[parsing] modules/contrib/access_filter/src/Plugin/AccessFilter/Condition/SessionCondition.php
+[parsing] modules/contrib/access_filter/src/Plugin/AccessFilter/Condition/UriCondition.php
+[parsing] modules/contrib/access_filter/src/Plugin/AccessFilter/Rule/IpRule.php
+[parsing] modules/contrib/access_filter/src/Plugin/AccessFilterPluginManager.php
+[parsing] modules/contrib/access_filter/src/Plugin/AccessFilterPluginManagerInterface.php
+[parsing] modules/contrib/access_filter/src/Plugin/ConditionInterface.php
+[parsing] modules/contrib/access_filter/src/Plugin/RuleInterface.php
+[refactoring] modules/contrib/access_filter/src/AccessFilterListBuilder.php
+[refactoring] modules/contrib/access_filter/src/AccessFilterMiddleware.php
+[refactoring] modules/contrib/access_filter/src/Annotation/AccessFilterCondition.php
+[refactoring] modules/contrib/access_filter/src/Annotation/AccessFilterRule.php
+[refactoring] modules/contrib/access_filter/src/Entity/Filter.php
+[refactoring] modules/contrib/access_filter/src/FilterInterface.php
+[refactoring] modules/contrib/access_filter/src/Form/DeleteForm.php
+[refactoring] modules/contrib/access_filter/src/Form/EditForm.php
+[refactoring] modules/contrib/access_filter/src/Plugin/AccessFilter/Condition/AndCondition.php
+[refactoring] modules/contrib/access_filter/src/Plugin/AccessFilter/Condition/ArrayConditionBase.php
+[refactoring] modules/contrib/access_filter/src/Plugin/AccessFilter/Condition/ChainConditionBase.php
+[refactoring] modules/contrib/access_filter/src/Plugin/AccessFilter/Condition/ConditionBase.php
+[refactoring] modules/contrib/access_filter/src/Plugin/AccessFilter/Condition/CookieCondition.php
+[refactoring] modules/contrib/access_filter/src/Plugin/AccessFilter/Condition/OrCondition.php
+[refactoring] modules/contrib/access_filter/src/Plugin/AccessFilter/Condition/PathCondition.php
+[refactoring] modules/contrib/access_filter/src/Plugin/AccessFilter/Condition/ServerEnvironmentCondition.php
+[refactoring] modules/contrib/access_filter/src/Plugin/AccessFilter/Condition/SessionCondition.php
+[refactoring] modules/contrib/access_filter/src/Plugin/AccessFilter/Condition/UriCondition.php
+[refactoring] modules/contrib/access_filter/src/Plugin/AccessFilter/Rule/IpRule.php
+[refactoring] modules/contrib/access_filter/src/Plugin/AccessFilterPluginManager.php
+[refactoring] modules/contrib/access_filter/src/Plugin/AccessFilterPluginManagerInterface.php
+[refactoring] modules/contrib/access_filter/src/Plugin/ConditionInterface.php
+[refactoring] modules/contrib/access_filter/src/Plugin/RuleInterface.php
+[printing] modules/contrib/access_filter/src/AccessFilterListBuilder.php
+[printing] modules/contrib/access_filter/src/AccessFilterMiddleware.php
+[printing] modules/contrib/access_filter/src/Annotation/AccessFilterCondition.php
+[printing] modules/contrib/access_filter/src/Annotation/AccessFilterRule.php
+[printing] modules/contrib/access_filter/src/Entity/Filter.php
+[printing] modules/contrib/access_filter/src/FilterInterface.php
+[printing] modules/contrib/access_filter/src/Form/DeleteForm.php
+[printing] modules/contrib/access_filter/src/Form/EditForm.php
+[printing] modules/contrib/access_filter/src/Plugin/AccessFilter/Condition/AndCondition.php
+[printing] modules/contrib/access_filter/src/Plugin/AccessFilter/Condition/ArrayConditionBase.php
+[printing] modules/contrib/access_filter/src/Plugin/AccessFilter/Condition/ChainConditionBase.php
+[printing] modules/contrib/access_filter/src/Plugin/AccessFilter/Condition/ConditionBase.php
+[printing] modules/contrib/access_filter/src/Plugin/AccessFilter/Condition/CookieCondition.php
+[printing] modules/contrib/access_filter/src/Plugin/AccessFilter/Condition/OrCondition.php
+[printing] modules/contrib/access_filter/src/Plugin/AccessFilter/Condition/PathCondition.php
+[printing] modules/contrib/access_filter/src/Plugin/AccessFilter/Condition/ServerEnvironmentCondition.php
+[printing] modules/contrib/access_filter/src/Plugin/AccessFilter/Condition/SessionCondition.php
+[printing] modules/contrib/access_filter/src/Plugin/AccessFilter/Condition/UriCondition.php
+[printing] modules/contrib/access_filter/src/Plugin/AccessFilter/Rule/IpRule.php
+[printing] modules/contrib/access_filter/src/Plugin/AccessFilterPluginManager.php
+[printing] modules/contrib/access_filter/src/Plugin/AccessFilterPluginManagerInterface.php
+[printing] modules/contrib/access_filter/src/Plugin/ConditionInterface.php
+[printing] modules/contrib/access_filter/src/Plugin/RuleInterface.php
+
+
+3 files with changes
+====================
+
+1) modules/contrib/access_filter/src/AccessFilterListBuilder.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -111,7 +111,7 @@
+   public function submitForm(array &$form, FormStateInterface $form_state) {
+     parent::submitForm($form, $form_state);
+
+-    drupal_set_message($this->t('The configuration options have been saved.'));
++    $this->messenger()->addStatus($this->t('The configuration options have been saved.'));
+   }
+
+ }
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+2) modules/contrib/access_filter/src/Form/DeleteForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -37,7 +37,7 @@
+    */
+   public function submitForm(array &$form, FormStateInterface $form_state) {
+     $this->entity->delete();
+-    drupal_set_message($this->t('Filter %label has been deleted.', ['%label' => $this->entity->label()]));
++    $this->messenger()->addStatus($this->t('Filter %label has been deleted.', ['%label' => $this->entity->label()]));
+
+     $form_state->setRedirectUrl($this->getCancelUrl());
+   }
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+3) modules/contrib/access_filter/src/Form/EditForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -226,13 +226,13 @@
+
+     if (!empty($condition_errors)) {
+       $form_state->setErrorByName('conditions', '');
+-      drupal_set_message($this->t('There are configuration errors in conditions.'), 'error', TRUE);
++      $this->messenger()->addError($this->t('There are configuration errors in conditions.'), TRUE);
+
+       foreach ($condition_errors as $i => $line_errors) {
+-        drupal_set_message($this->t('Line @line:', ['@line' => $i + 1]), 'error', TRUE);
++        $this->messenger()->addError($this->t('Line @line:', ['@line' => $i + 1]), TRUE);
+
+         foreach ($line_errors as $error) {
+-          drupal_set_message($this->t('- @error', ['@error' => $error]), 'error', TRUE);
++          $this->messenger()->addError($this->t('- @error', ['@error' => $error]), TRUE);
+         }
+       }
+     }
+@@ -281,13 +281,13 @@
+
+     if (!empty($rule_errors)) {
+       $form_state->setErrorByName('rules', '');
+-      drupal_set_message($this->t('There are configuration errors in rules.'), 'error', TRUE);
++      $this->messenger()->addError($this->t('There are configuration errors in rules.'), TRUE);
+
+       foreach ($rule_errors as $i => $line_errors) {
+-        drupal_set_message($this->t('Line @line:', ['@line' => $i + 1]), 'error', TRUE);
++        $this->messenger()->addError($this->t('Line @line:', ['@line' => $i + 1]), TRUE);
+
+         foreach ($line_errors as $error) {
+-          drupal_set_message($this->t('- @error', ['@error' => $error]), 'error', TRUE);
++          $this->messenger()->addError($this->t('- @error', ['@error' => $error]), TRUE);
+         }
+       }
+     }
+@@ -305,12 +305,12 @@
+
+     $status = $filter->save();
+     if ($status) {
+-      drupal_set_message($this->t('Filter %label has been saved.', [
++      $this->messenger()->addStatus($this->t('Filter %label has been saved.', [
+         '%label' => $filter->name,
+       ]));
+     }
+     else {
+-      drupal_set_message($this->t('Filter %label was not saved.', [
++      $this->messenger()->addStatus($this->t('Filter %label was not saved.', [
+         '%label' => $filter->name,
+       ]));
+     }
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+ [OK] Rector is done! 3 files have been changed.                                
+

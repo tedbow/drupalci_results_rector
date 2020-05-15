@@ -1,0 +1,13 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/a11y_paragraphs_tabs/a11y_paragraphs_tabs.install
+[parsing] modules/contrib/a11y_paragraphs_tabs/a11y_paragraphs_tabs.module
+[refactoring] modules/contrib/a11y_paragraphs_tabs/a11y_paragraphs_tabs.install
+[refactoring] modules/contrib/a11y_paragraphs_tabs/a11y_paragraphs_tabs.module
+[printing] modules/contrib/a11y_paragraphs_tabs/a11y_paragraphs_tabs.install
+[printing] modules/contrib/a11y_paragraphs_tabs/a11y_paragraphs_tabs.module
+
+
+ [OK] Rector is done!                                                           
+

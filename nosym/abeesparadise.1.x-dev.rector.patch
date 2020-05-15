@@ -1,0 +1,13 @@
+diff --git a/drupal8.theme b/drupal8.theme
+index 2ea67c5..c7d2005 100644
+--- a/drupal8.theme
++++ b/drupal8.theme
+@@ -44,7 +44,7 @@ function drupal8_preprocess_page(array &$variables) {
+   $variables['site_slogan'] = $config->get('slogan');
+ 
+   // Getting primary links to display on footer
+-  $menu = \Drupal\block\Entity\Block::load('drupal8_main_menu');
++  $menu = Block::load('drupal8_main_menu');
+   $variables['main_menu'] = \Drupal::entityTypeManager()
+     ->getViewBuilder('block')
+     ->view($menu);

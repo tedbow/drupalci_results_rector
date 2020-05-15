@@ -1,0 +1,298 @@
+diff --git a/block_visibility_groups_admin/src/Form/ConditionCreatorForm.php b/block_visibility_groups_admin/src/Form/ConditionCreatorForm.php
+index f1f4255..c91d90b 100644
+--- a/block_visibility_groups_admin/src/Form/ConditionCreatorForm.php
++++ b/block_visibility_groups_admin/src/Form/ConditionCreatorForm.php
+@@ -9,9 +9,6 @@ use Drupal\Core\Form\FormBase;
+ use Drupal\Core\Form\FormStateInterface;
+ use Symfony\Component\DependencyInjection\ContainerInterface;
+ 
+-/**
+- *
+- */
+ class ConditionCreatorForm extends FormBase {
+ 
+   /**
+@@ -89,9 +86,6 @@ class ConditionCreatorForm extends FormBase {
+     return $form;
+   }
+ 
+-  /**
+-   *
+-   */
+   protected function conditionOptions($route_name, $parameters) {
+     $elements = [
+       '#tree' => TRUE,
+@@ -168,9 +162,6 @@ class ConditionCreatorForm extends FormBase {
+     );
+   }
+ 
+-  /**
+-   *
+-   */
+   protected function getConditionValues(FormStateInterface $form_state) {
+     return $form_state->cleanValues()->getValue('conditions');
+   }
+diff --git a/block_visibility_groups_admin/src/Plugin/ConditionCreator/NodeTypeConditionCreator.php b/block_visibility_groups_admin/src/Plugin/ConditionCreator/NodeTypeConditionCreator.php
+index de8100e..3e08986 100644
+--- a/block_visibility_groups_admin/src/Plugin/ConditionCreator/NodeTypeConditionCreator.php
++++ b/block_visibility_groups_admin/src/Plugin/ConditionCreator/NodeTypeConditionCreator.php
+@@ -59,16 +59,10 @@ class NodeTypeConditionCreator extends ConditionCreatorBase implements Container
+     );
+   }
+ 
+-  /**
+-   *
+-   */
+   public function getNewConditionLabel() {
+     return $this->t('Content Types');
+   }
+ 
+-  /**
+-   *
+-   */
+   public function createConditionElements() {
+     $elements['condition_config'] = [
+       '#tree' => TRUE,
+@@ -94,17 +88,11 @@ class NodeTypeConditionCreator extends ConditionCreatorBase implements Container
+     return $elements;
+   }
+ 
+-  /**
+-   *
+-   */
+   public function itemSelected($condition_info) {
+     $bundles = $condition_info['condition_config']['bundles'];
+     return !empty(array_filter($bundles));
+   }
+ 
+-  /**
+-   *
+-   */
+   public function createConditionConfig($plugin_info) {
+     $config = parent::createConditionConfig($plugin_info);
+     $config['bundles'] = array_filter($config['bundles']);
+diff --git a/block_visibility_groups_admin/src/Plugin/ConditionCreator/RolesConditionCreator.php b/block_visibility_groups_admin/src/Plugin/ConditionCreator/RolesConditionCreator.php
+index 5c6afc3..e3dc481 100644
+--- a/block_visibility_groups_admin/src/Plugin/ConditionCreator/RolesConditionCreator.php
++++ b/block_visibility_groups_admin/src/Plugin/ConditionCreator/RolesConditionCreator.php
+@@ -15,16 +15,10 @@ use Drupal\block_visibility_groups_admin\Plugin\ConditionCreatorBase;
+  */
+ class RolesConditionCreator extends ConditionCreatorBase {
+ 
+-  /**
+-   *
+-   */
+   public function getNewConditionLabel() {
+     return $this->t('Roles');
+   }
+ 
+-  /**
+-   *
+-   */
+   public function createConditionElements() {
+     $elements['condition_config'] = [
+       '#tree' => TRUE,
+@@ -39,17 +33,11 @@ class RolesConditionCreator extends ConditionCreatorBase {
+     return $elements;
+   }
+ 
+-  /**
+-   *
+-   */
+   public function itemSelected($condition_info) {
+     $roles = $condition_info['condition_config']['roles'];
+     return !empty(array_filter($roles));
+   }
+ 
+-  /**
+-   *
+-   */
+   public function createConditionConfig($plugin_info) {
+     $config = parent::createConditionConfig($plugin_info);
+     $config['roles'] = array_filter($config['roles']);
+diff --git a/block_visibility_groups_admin/src/Plugin/ConditionCreator/RouteConditionCreator.php b/block_visibility_groups_admin/src/Plugin/ConditionCreator/RouteConditionCreator.php
+index c6b8ac7..9ec8eeb 100644
+--- a/block_visibility_groups_admin/src/Plugin/ConditionCreator/RouteConditionCreator.php
++++ b/block_visibility_groups_admin/src/Plugin/ConditionCreator/RouteConditionCreator.php
+@@ -15,9 +15,6 @@ use Drupal\block_visibility_groups_admin\Plugin\ConditionCreatorBase;
+  */
+ class RouteConditionCreator extends ConditionCreatorBase {
+ 
+-  /**
+-   *
+-   */
+   public function getNewConditionLabel() {
+     $current_path = $this->getPathPattern();
+     return $this->t('Current path: @path', ['@path' => $current_path]);
+@@ -36,9 +33,6 @@ class RouteConditionCreator extends ConditionCreatorBase {
+     return $path;
+   }
+ 
+-  /**
+-   *
+-   */
+   public function createConditionElements() {
+     $elements = parent::createConditionElements();
+ 
+diff --git a/block_visibility_groups_admin/src/Plugin/ConditionCreatorBase.php b/block_visibility_groups_admin/src/Plugin/ConditionCreatorBase.php
+index 65c501d..9e32602 100644
+--- a/block_visibility_groups_admin/src/Plugin/ConditionCreatorBase.php
++++ b/block_visibility_groups_admin/src/Plugin/ConditionCreatorBase.php
+@@ -5,9 +5,6 @@ namespace Drupal\block_visibility_groups_admin\Plugin;
+ use Drupal\Component\Plugin\PluginBase;
+ use Drupal\Core\StringTranslation\StringTranslationTrait;
+ 
+-/**
+- *
+- */
+ abstract class ConditionCreatorBase extends PluginBase implements ConditionCreatorInterface {
+ 
+   use StringTranslationTrait;
+@@ -31,9 +28,6 @@ abstract class ConditionCreatorBase extends PluginBase implements ConditionCreat
+     $this->route = $configuration['route'];
+   }
+ 
+-  /**
+-   *
+-   */
+   public function createConditionConfig($plugin_info) {
+     $config = $plugin_info['condition_config'];
+     $config['id'] = isset($config['id']) ? $config['id'] : $this->getPluginDefinition()['condition_plugin'];
+@@ -41,9 +35,6 @@ abstract class ConditionCreatorBase extends PluginBase implements ConditionCreat
+     return $config;
+   }
+ 
+-  /**
+-   *
+-   */
+   public function createConditionElements() {
+     $elements = [
+       '#tree' => TRUE,
+@@ -57,9 +48,6 @@ abstract class ConditionCreatorBase extends PluginBase implements ConditionCreat
+     return $elements;
+   }
+ 
+-  /**
+-   *
+-   */
+   public function itemSelected($condition_info) {
+     return !empty($condition_info['selected']);
+   }
+diff --git a/block_visibility_groups_admin/src/Plugin/ConditionCreatorInterface.php b/block_visibility_groups_admin/src/Plugin/ConditionCreatorInterface.php
+index 228642e..96eaa2a 100644
+--- a/block_visibility_groups_admin/src/Plugin/ConditionCreatorInterface.php
++++ b/block_visibility_groups_admin/src/Plugin/ConditionCreatorInterface.php
+@@ -2,9 +2,6 @@
+ 
+ namespace Drupal\block_visibility_groups_admin\Plugin;
+ 
+-/**
+- *
+- */
+ interface ConditionCreatorInterface {
+ 
+   /**
+diff --git a/src/BlockVisibilityLister.php b/src/BlockVisibilityLister.php
+index 7125425..a004c3d 100644
+--- a/src/BlockVisibilityLister.php
++++ b/src/BlockVisibilityLister.php
+@@ -5,9 +5,6 @@ namespace Drupal\block_visibility_groups;
+ use Drupal\block\Entity\Block;
+ use Drupal\Core\Entity\EntityStorageInterface;
+ 
+-/**
+- *
+- */
+ trait BlockVisibilityLister {
+ 
+   /**
+diff --git a/src/ConditionsSetFormTrait.php b/src/ConditionsSetFormTrait.php
+index 1b00c7c..e5024b2 100644
+--- a/src/ConditionsSetFormTrait.php
++++ b/src/ConditionsSetFormTrait.php
+@@ -7,9 +7,6 @@ use Drupal\Component\Serialization\Json;
+ use Drupal\Component\Utility\NestedArray;
+ use Drupal\Core\Url;
+ 
+-/**
+- *
+- */
+ trait ConditionsSetFormTrait {
+ 
+   /**
+diff --git a/src/Form/ConditionFormBase.php b/src/Form/ConditionFormBase.php
+index 7fba148..b1d42e6 100644
+--- a/src/Form/ConditionFormBase.php
++++ b/src/Form/ConditionFormBase.php
+@@ -51,9 +51,6 @@ abstract class ConditionFormBase extends FormBase {
+     $this->contextRepository = $context_repository;
+   }
+ 
+-  /**
+-   *
+-   */
+   public static function create(ContainerInterface $container) {
+     return new static (
+       $container->get('context.repository')
+diff --git a/src/Plugin/Condition/ConditionGroup.php b/src/Plugin/Condition/ConditionGroup.php
+index 0f6450a..a56226e 100644
+--- a/src/Plugin/Condition/ConditionGroup.php
++++ b/src/Plugin/Condition/ConditionGroup.php
+@@ -81,9 +81,6 @@ class ConditionGroup extends ConditionPluginBase implements ContainerFactoryPlug
+     // TODO: Implement summary() method.
+   }
+ 
+-  /**
+-   *
+-   */
+   public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
+     $block_visibility_groups = $this->entityStorage->loadMultiple();
+     $options = ['' => $this->t('No Block Visibility Group')];
+@@ -113,9 +110,6 @@ class ConditionGroup extends ConditionPluginBase implements ContainerFactoryPlug
+     return $form;
+   }
+ 
+-  /**
+-   *
+-   */
+   public function submitConfigurationForm(array &$form, FormStateInterface $form_state) {
+     $user_values = $form_state->getValues();
+     foreach ($user_values as $key => $value) {
+@@ -153,9 +147,6 @@ class ConditionGroup extends ConditionPluginBase implements ContainerFactoryPlug
+       $plugin_definition);
+   }
+ 
+-  /**
+-   *
+-   */
+   public function __construct(EntityStorageInterface $entity_storage, ExecutableManagerInterface $manager, Request $request, GroupEvaluator $group_evaluator, array $configuration, $plugin_id, $plugin_definition) {
+     // TODO: Change the autogenerated stub.
+     parent::__construct($configuration, $plugin_id, $plugin_definition);
+diff --git a/src/Tests/BlockVisibilityGroupsTestBase.php b/src/Tests/BlockVisibilityGroupsTestBase.php
+index 8fb1312..9809ada 100644
+--- a/src/Tests/BlockVisibilityGroupsTestBase.php
++++ b/src/Tests/BlockVisibilityGroupsTestBase.php
+@@ -9,9 +9,6 @@ namespace Drupal\block_visibility_groups\Tests;
+ 
+ use Drupal\simpletest\WebTestBase;
+ 
+-/**
+- *
+- */
+ abstract class BlockVisibilityGroupsTestBase extends WebTestBase {
+ 
+   /**
+diff --git a/src/Tests/VisibilityTest.php b/src/Tests/VisibilityTest.php
+index e02247b..2a1a2e3 100644
+--- a/src/Tests/VisibilityTest.php
++++ b/src/Tests/VisibilityTest.php
+@@ -39,9 +39,6 @@ class VisibilityTest extends BlockVisibilityGroupsTestBase {
+    */
+   public static $modules = ['block', 'block_visibility_groups', 'node'];
+ 
+-  /**
+-   *
+-   */
+   public function testSingleConditions() {
+     // @todo Condition with node doesn't work for some reason.
+     $config = [

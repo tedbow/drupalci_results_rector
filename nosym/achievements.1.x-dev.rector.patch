@@ -1,0 +1,98 @@
+diff --git a/achievements.api.php b/achievements.api.php
+index af716f1..444fd55 100755
+--- a/achievements.api.php
++++ b/achievements.api.php
+@@ -1,5 +1,6 @@
+ <?php
+ 
++use Drupal\Core\Entity\EntityInterface;
+ /**
+  * @file
+  * Hooks provided by the Achievements module and how to implement them.
+@@ -8,7 +9,7 @@
+ /**
+  * Implements hook_entity_insert().
+  */
+-function achievements_example_entity_insert(Drupal\Core\Entity\EntityInterface $entity) {
++function achievements_example_entity_insert(EntityInterface $entity) {
+   if ($entity->getEntityType()->id() == 'comment') {
+     /** @var \Drupal\comment\Entity\Comment $comment */
+     $comment = $entity;
+@@ -60,7 +61,7 @@ function achievements_example_entity_insert(Drupal\Core\Entity\EntityInterface $
+  */
+ function example_node_insert($node) {
+   // Sometimes, we don't need any storage at all.
+-  if (format_date(\Drupal::time()->getRequestTime(), 'custom', 'D') == 'Mon') {
++  if (\Drupal::service('date.formatter')->format(\Drupal::time()->getRequestTime(), 'custom', 'D') == 'Mon') {
+     achievements_unlocked('node-mondays', $node->uid);
+   }
+ }
+@@ -177,7 +178,7 @@ function example_query_alter(QueryAlterableInterface $query) {
+  *   or NULL if there's no change to the user's default access.
+  */
+ function example_achievements_access_earn($uid) {
+-  $account = \Drupal::entityManager()->getStorage('user')->load($uid);
++  $account = \Drupal::service('entity_type.manager')->getStorage('user')->load($uid);
+   if (format_username($account) == 'Morbus Iff') {
+     // always, mastah, alllwayyYAYsss.
+     return TRUE;
+diff --git a/achievements.module b/achievements.module
+index b4d85b6..0bd6b05 100755
+--- a/achievements.module
++++ b/achievements.module
+@@ -152,9 +152,6 @@ function achievements_load($achievement_id) {
+   return $achievements[$achievement_id];
+ }
+ 
+-/**
+- *
+- */
+ function achievements_load_all($reset = FALSE) {
+   $achievements = &drupal_static(__FUNCTION__);
+   if (!isset($achievements) || $reset) {
+diff --git a/achievements.pages.inc b/achievements.pages.inc
+index 5465638..22c1d6d 100755
+--- a/achievements.pages.inc
++++ b/achievements.pages.inc
+@@ -4,12 +4,10 @@
+  * @file
+  * Page callbacks for the Achievements module.
+  */
+-
+ /**
+  * Default theme for the wrapper around a user's achievements page.
+  *
+- * @param $variables
+- *   An associative array containing:
++ * @param $variables   An associative array containing:
+  *   - element: A render containing the user's achievements page.
+  */
+ function theme_achievement_groups_wrapper($variables) {
+diff --git a/src/Entity/AchievementEntityViewBuilder.php b/src/Entity/AchievementEntityViewBuilder.php
+index f7f1549..fed4a71 100644
+--- a/src/Entity/AchievementEntityViewBuilder.php
++++ b/src/Entity/AchievementEntityViewBuilder.php
+@@ -5,9 +5,6 @@ namespace Drupal\achievements\Entity;
+ use Drupal\Core\Entity\EntityInterface;
+ use Drupal\Core\Entity\EntityViewBuilder;
+ 
+-/**
+- *
+- */
+ class AchievementEntityViewBuilder extends EntityViewBuilder {
+ 
+   /**
+diff --git a/src/Form/AdminForm.php b/src/Form/AdminForm.php
+index 18ecf6a..0f2189c 100755
+--- a/src/Form/AdminForm.php
++++ b/src/Form/AdminForm.php
+@@ -13,9 +13,6 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
+  */
+ class AdminForm extends ConfigFormBase {
+ 
+-  /**
+-   *
+-   */
+   public static function create(ContainerInterface $container) {
+     return new static(
+       $container->get('config.factory')

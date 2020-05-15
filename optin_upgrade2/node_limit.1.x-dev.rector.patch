@@ -1,0 +1,488 @@
+diff --git a/old/node_limit.api.php b/old/node_limit.api.php
+index 13b7492..12b2bae 100644
+--- a/old/node_limit.api.php
++++ b/old/node_limit.api.php
+@@ -49,7 +49,7 @@ function hook_node_limit_applies_in_context($lid, $node, $user) {
+  *   An array of node limit ids. Cannot be empty.
+  */
+ function hook_node_limit_delete(array $lids) {
+-  db_delete('submodule')
++  \Drupal::database()->delete('submodule')
+     ->condition('lid', $lids, 'IN')
+     ->execute();
+ }
+@@ -129,7 +129,7 @@ function hook_node_limit_element_validate($element) {
+  *   submodule, and the value is an array containing submodule's data.
+  */
+ function hook_node_limit_load($lid) {
+-  $select = db_select('submodule', 'sub');
++  $select = \Drupal::database()->select('submodule', 'sub');
+   $select->join('users', 'u', 'u.uid = sub.uid');
+   $select->fields('sub')
+     ->fields('u', array('name'))
+@@ -161,7 +161,7 @@ function hook_node_limit_load($lid) {
+  */
+ function hook_node_limit_render_element(&$element) {
+   unset($element['submodule']['#title']);
+-  return drupal_render($element['submodule']);
++  return \Drupal::service('renderer')->render($element['submodule']);
+ }
+ 
+ /**
+@@ -182,7 +182,7 @@ function hook_node_limit_save($lid, $applies, $element) {
+     // user_load based on the name to get the uid.
+     $user = user_load_by_name($element);
+ 
+-    db_insert('submodule')
++    \Drupal::database()->insert('submodule')
+       ->fields(array(
+         'lid' => $lid,
+         'uid' => $user->uid,
+diff --git a/old/node_limit.install b/old/node_limit.install
+index ab6a4d1..96038ec 100644
+--- a/old/node_limit.install
++++ b/old/node_limit.install
+@@ -60,7 +60,7 @@ function node_limit_schema() {
+  */
+ function node_limit_update_7001() {
+   // Cannot use db_change_field() because of the restricted name.
+-  $ret = db_query("ALTER TABLE {node_limit} CHANGE `limit` `limit_count` INT(11) NOT NULL DEFAULT '-1' COMMENT 'The node limit for this limit'");
++  $ret = \Drupal::database()->query("ALTER TABLE {node_limit} CHANGE `limit` `limit_count` INT(11) NOT NULL DEFAULT '-1' COMMENT 'The node limit for this limit'");
+   return !empty($ret);
+ }
+ 
+@@ -84,7 +84,7 @@ function node_limit_update_7002() {
+  * Implements hook_disable().
+  */
+ function node_limit_disable() {
+-  db_delete('variable')
++  \Drupal::database()->delete('variable')
+     ->condition('name', 'node_limit_%', 'LIKE')
+     ->execute();
+ }
+diff --git a/old/node_limit.module b/old/node_limit.module
+index 2f58892..08db4bb 100644
+--- a/old/node_limit.module
++++ b/old/node_limit.module
+@@ -190,7 +190,7 @@ function node_limit_node_prepare($node) {
+     // We have a violation
+     // and this is a new node.
+     $nodetype = node_type_get_type($node);
+-    drupal_set_message(t("You can't create more content of type !type", array('!type' => check_plain($nodetype->name))), 'error');
++    \Drupal::messenger()->addError(t("You can't create more content of type !type", array('!type' => check_plain($nodetype->name))));
+ 
+     // Avoid redirection loop if there is just one content type.
+     $count = 0;
+@@ -259,7 +259,7 @@ function _node_limit_violates_limit(&$node) {
+  *   Identifier of limit rule.
+  */
+ function _node_limit_sql($lid) {
+-  $select = db_select('node', 'n');
++  $select = \Drupal::database()->select('node', 'n');
+   $select->addExpression('COUNT(n.nid)', 'number');
+ 
+   module_invoke_all('node_limit_sql', $lid, $select);
+@@ -276,7 +276,7 @@ function _node_limit_sql($lid) {
+ function node_limit_limits(&$node) {
+   $user = user_load($node->uid);
+   // Get all the limits.
+-  $query = db_select('node_limit', 'nl')
++  $query = \Drupal::database()->select('node_limit', 'nl')
+     ->fields('nl')
+     ->orderBy('weight', 'ASC')
+     ->execute();
+@@ -316,15 +316,15 @@ function theme_node_limit_list_limits($variables) {
+       $limit = &$form['limits'][$key];
+ 
+       $row = array();
+-      $row[] = drupal_render($limit['title']);
+-      $row[] = drupal_render($limit['limit']);
++      $row[] = \Drupal::service('renderer')->render($limit['title']);
++      $row[] = \Drupal::service('renderer')->render($limit['limit']);
+       if (isset($limit['weight'])) {
+         $limit['weight']['#attributes']['class'] = array('node_limit-weight');
+-        $row[] = drupal_render($limit['weight']);
++        $row[] = \Drupal::service('renderer')->render($limit['weight']);
+       }
+-      $row[] = drupal_render($limit['edit']);
+-      $row[] = drupal_render($limit['list']);
+-      $row[] = drupal_render($limit['clone']);
++      $row[] = \Drupal::service('renderer')->render($limit['edit']);
++      $row[] = \Drupal::service('renderer')->render($limit['list']);
++      $row[] = \Drupal::service('renderer')->render($limit['clone']);
+       $rows[] = array('data' => $row, 'class' => array('draggable'));
+     }
+   }
+@@ -339,7 +339,7 @@ function theme_node_limit_list_limits($variables) {
+   return theme('table', array(
+     'header' => $header,
+     'rows' => $rows,
+-    'empty' => t('No limit available.') . ' ' . drupal_render($form['create']),
++    'empty' => t('No limit available.') . ' ' . \Drupal::service('renderer')->render($form['create']),
+     'attributes' => array('id' => 'node_limit'),
+   )) . drupal_render_children($form);
+ }
+@@ -358,7 +358,7 @@ function node_limit_list_limits() {
+   $form = array('#tree' => TRUE);
+   $form['limits'] = array();
+ 
+-  $query = db_select('node_limit', 'nl')
++  $query = \Drupal::database()->select('node_limit', 'nl')
+     ->fields('nl')
+     ->orderBy('weight', 'ASC')
+     ->execute();
+@@ -414,14 +414,14 @@ function node_limit_list_limits() {
+  */
+ function node_limit_list_limits_submit($form_id, &$form_state) {
+   foreach ($form_state['values']['limits'] as $lid => $info) {
+-    $query = db_update('node_limit')
++    $query = \Drupal::database()->update('node_limit')
+       ->fields(array(
+         'weight' => $info['weight']
+       ))
+       ->condition('lid', $lid)
+       ->execute();
+   }
+-  drupal_set_message(t('Limits saved!'));
++  \Drupal::messenger()->addStatus(t('Limits saved!'));
+ }
+ 
+ /**
+@@ -557,7 +557,7 @@ function node_limit_limit_form_submit($form_id, &$form_state) {
+   node_limit_save($limit);
+ 
+   $form_state['redirect'] = 'admin/structure/node_limit';
+-  drupal_set_message(t('Saved limit "%limit"', array('%limit' => $limit['title'])));
++  \Drupal::messenger()->addStatus(t('Saved limit "%limit"', array('%limit' => $limit['title'])));
+ }
+ 
+ /**
+@@ -595,7 +595,7 @@ function node_limit_clone_limit($limit) {
+   $limit['lid'] = _node_limit_next_limit_id();
+   $limit['title'] = t('Clone of !title', array('!title' => $old_title));
+   node_limit_save($limit);
+-  drupal_set_message(t('Cloned limit "%limit"', array('%limit' => $old_title)));
++  \Drupal::messenger()->addStatus(t('Cloned limit "%limit"', array('%limit' => $old_title)));
+   drupal_goto('admin/structure/node_limit');
+ }
+ 
+@@ -603,7 +603,7 @@ function node_limit_clone_limit($limit) {
+  * Helper function to get the next available node limit id.
+  */
+ function _node_limit_next_limit_id() {
+-  $select = db_select('node_limit', 'nl');
++  $select = \Drupal::database()->select('node_limit', 'nl');
+   $select->addExpression('MAX(lid)+1', 'lid');
+   $query = $select->execute();
+ 
+@@ -624,7 +624,7 @@ function node_limit_load($lid) {
+   if (!is_numeric($lid)) {
+     return FALSE;
+   }
+-  $info = db_select('node_limit', 'nl')
++  $info = \Drupal::database()->select('node_limit', 'nl')
+     ->fields('nl')
+     ->condition('lid', $lid)
+     ->execute()
+@@ -656,14 +656,14 @@ function node_limit_delete($lids, $silent = FALSE) {
+   if (empty($lids)) {
+     return;
+   }
+-  $num = db_delete('node_limit')
++  $num = \Drupal::database()->delete('node_limit')
+     ->condition('lid', $lids, 'IN')
+     ->execute();
+ 
+   module_invoke_all('node_limit_delete', $lids);
+ 
+   if ($num > 0 && !$silent) {
+-    drupal_set_message(t('Deleted !num.', array(
++    \Drupal::messenger()->addStatus(t('Deleted !num.', array(
+       '!num' => format_plural((int) $num, '1 limit rule', '@count limit rules'),
+     )));
+   }
+@@ -678,7 +678,7 @@ function node_limit_delete($lids, $silent = FALSE) {
+ function node_limit_save(array $limit) {
+   node_limit_delete($limit['lid'], TRUE);
+ 
+-  db_insert('node_limit')
++  \Drupal::database()->insert('node_limit')
+     ->fields(array(
+       'lid' => $limit['lid'],
+       'nlimit' => $limit['nlimit'],
+diff --git a/old/node_limit_interval/node_limit_interval.install b/old/node_limit_interval/node_limit_interval.install
+index 821160c..22a00c0 100644
+--- a/old/node_limit_interval/node_limit_interval.install
++++ b/old/node_limit_interval/node_limit_interval.install
+@@ -39,7 +39,7 @@ function node_limit_interval_schema() {
+  */
+ function node_limit_interval_update_7001() {
+   // Cannot use db_change_field() because of the restricted name.
+-  $ret = db_query("ALTER TABLE {node_limit_interval} CHANGE `interval` `interval_value` INT(11) NOT NULL DEFAULT '0' COMMENT 'The interval for this limit'");
++  $ret = \Drupal::database()->query("ALTER TABLE {node_limit_interval} CHANGE `interval` `interval_value` INT(11) NOT NULL DEFAULT '0' COMMENT 'The interval for this limit'");
+   return !empty($ret);
+ }
+ 
+diff --git a/old/node_limit_interval/node_limit_interval.module b/old/node_limit_interval/node_limit_interval.module
+index 5e58148..a7abb6c 100644
+--- a/old/node_limit_interval/node_limit_interval.module
++++ b/old/node_limit_interval/node_limit_interval.module
+@@ -43,7 +43,7 @@ function node_limit_interval_node_limit_sql($lid, SelectQuery $select) {
+     $now = mktime();
+     $interval = $now - $then;
+   }
+-  $select->where('created + :interval >= :reference', array(':interval' => $interval, ':reference' => REQUEST_TIME));
++  $select->where('created + :interval >= :reference', array(':interval' => $interval, ':reference' => \Drupal::time()->getRequestTime()));
+ }
+ 
+ /**
+@@ -52,8 +52,8 @@ function node_limit_interval_node_limit_sql($lid, SelectQuery $select) {
+ function node_limit_interval_node_limit_render_element(&$element) {
+   $title = $element['interval']['#title'];
+   unset($element['interval']['#title']);
+-  $interval = drupal_render($element['interval']);
+-  $unit = drupal_render($element['unit']);
++  $interval = \Drupal::service('renderer')->render($element['interval']);
++  $unit = \Drupal::service('renderer')->render($element['unit']);
+   $html = str_replace('div', 'span', $title . $interval . $unit);
+   return $html;
+ }
+@@ -127,7 +127,7 @@ function node_limit_interval_node_limit_save($lid, $applies, $element) {
+   if ($applies) {
+     $interval = intval($element['interval']);
+     $unit = intval($element['unit']);
+-    db_insert('node_limit_interval')
++    \Drupal::database()->insert('node_limit_interval')
+       ->fields(array(
+         'lid' => $lid,
+         'ninterval' => $interval,
+@@ -141,7 +141,7 @@ function node_limit_interval_node_limit_save($lid, $applies, $element) {
+  * Implements hook_node_limit_delete().
+  */
+ function node_limit_interval_node_limit_delete($lids) {
+-  db_delete('node_limit_interval')
++  \Drupal::database()->delete('node_limit_interval')
+     ->condition('lid', $lids, 'IN')
+     ->execute();
+ }
+@@ -150,7 +150,7 @@ function node_limit_interval_node_limit_delete($lids) {
+  * Implements hook_node_limit_load().
+  */
+ function node_limit_interval_node_limit_load($lid) {
+-  $select = db_select('node_limit_interval', 'nti')
++  $select = \Drupal::database()->select('node_limit_interval', 'nti')
+     ->fields('nti')
+     ->condition('lid', $lid);
+ 
+diff --git a/old/node_limit_role/node_limit_role.module b/old/node_limit_role/node_limit_role.module
+index 7541047..d660c50 100644
+--- a/old/node_limit_role/node_limit_role.module
++++ b/old/node_limit_role/node_limit_role.module
+@@ -11,7 +11,7 @@
+  * Delete all rules related to the role being deleted.
+  */
+ function node_limit_role_user_role_delete($role) {
+-  $limits = db_select('node_limit_role', 'src')
++  $limits = \Drupal::database()->select('node_limit_role', 'src')
+     ->fields('src', array('lid'))
+     ->condition('rid', $role->rid)
+     ->execute();
+@@ -57,7 +57,7 @@ function node_limit_role_node_limit_sql($lid, SelectQuery $select) {
+     $select->condition('uid', 0, '!=');
+   }
+   else {
+-    $subselect = db_select('users_roles', 'ur')
++    $subselect = \Drupal::database()->select('users_roles', 'ur')
+       ->fields('ur', array('uid'))
+       ->condition('rid', $limit['node_limit_role']['rid']);
+     $select->condition('uid', $subselect, 'IN');
+@@ -113,7 +113,7 @@ function node_limit_role_node_limit_save($lid, $applies, $element) {
+     if (is_array($element)) {
+       $element = $element['rid'];
+     }
+-    db_insert('node_limit_role')
++    \Drupal::database()->insert('node_limit_role')
+       ->fields(array(
+         'lid' => $lid,
+         'rid' => $element,
+@@ -126,7 +126,7 @@ function node_limit_role_node_limit_save($lid, $applies, $element) {
+  * Implements hook_node_limit_delete().
+  */
+ function node_limit_role_node_limit_delete($lids) {
+-  db_delete('node_limit_role')
++  \Drupal::database()->delete('node_limit_role')
+     ->condition('lid', $lids, 'IN')
+     ->execute();
+ }
+@@ -135,7 +135,7 @@ function node_limit_role_node_limit_delete($lids) {
+  * Implements hook_node_limit_load().
+  */
+ function node_limit_role_node_limit_load($lid) {
+-  $select = db_select('node_limit_role', 'nlr');
++  $select = \Drupal::database()->select('node_limit_role', 'nlr');
+   $select->join('role', 'r', 'r.rid = nlr.rid');
+   $select->fields('nlr')
+     ->fields('r', array('name'))
+diff --git a/old/node_limit_type/node_limit_type.module b/old/node_limit_type/node_limit_type.module
+index 00715be..c6f83bb 100644
+--- a/old/node_limit_type/node_limit_type.module
++++ b/old/node_limit_type/node_limit_type.module
+@@ -11,7 +11,7 @@
+  * Delete all rules related to the node type being deleted.
+  */
+ function node_limit_type_node_type_delete($info) {
+-  $limits = db_select('node_limit_type', 'src')
++  $limits = \Drupal::database()->select('node_limit_type', 'src')
+     ->fields('src', array('lid'))
+     ->condition('type', $info->type)
+     ->execute();
+@@ -80,7 +80,7 @@ function node_limit_type_node_limit_element_validate($element) {
+  */
+ function node_limit_type_node_limit_save($lid, $applies, $element) {
+   if ($applies) {
+-    db_insert('node_limit_type')
++    \Drupal::database()->insert('node_limit_type')
+       ->fields(array(
+         'lid' => $lid,
+         'type' => $element,
+@@ -93,7 +93,7 @@ function node_limit_type_node_limit_save($lid, $applies, $element) {
+  * Implements hook_node_limit_delete().
+  */
+ function node_limit_type_node_limit_delete($lids) {
+-  db_delete('node_limit_type')
++  \Drupal::database()->delete('node_limit_type')
+     ->condition('lid', $lids, 'IN')
+     ->execute();
+ }
+@@ -102,7 +102,7 @@ function node_limit_type_node_limit_delete($lids) {
+  * Implements hook_node_limit_load().
+  */
+ function node_limit_type_node_limit_load($lid) {
+-  $select = db_select('node_limit_type', 'nlt')
++  $select = \Drupal::database()->select('node_limit_type', 'nlt')
+     ->fields('nlt')
+     ->condition('lid', $lid);
+ 
+diff --git a/old/node_limit_user/node_limit_user.module b/old/node_limit_user/node_limit_user.module
+index f25eccd..4ef78fc 100644
+--- a/old/node_limit_user/node_limit_user.module
++++ b/old/node_limit_user/node_limit_user.module
+@@ -11,7 +11,7 @@
+  * Delete all limit rules related to the deleted user.
+  */
+ function node_limit_user_delete($account) {
+-  $limits = db_select('node_limit_user', 'src')
++  $limits = \Drupal::database()->select('node_limit_user', 'src')
+     ->fields('src', array('lid'))
+     ->condition('uid', $account->uid)
+     ->execute();
+@@ -108,7 +108,7 @@ function node_limit_user_node_limit_save($lid, $applies, $element) {
+       $uid = $user->uid;
+     }
+ 
+-    db_insert('node_limit_user')
++    \Drupal::database()->insert('node_limit_user')
+       ->fields(array(
+         'lid' => $lid,
+         'uid' => $uid,
+@@ -121,7 +121,7 @@ function node_limit_user_node_limit_save($lid, $applies, $element) {
+  * Implements hook_node_limit_delete().
+  */
+ function node_limit_user_node_limit_delete($lids) {
+-  db_delete('node_limit_user')
++  \Drupal::database()->delete('node_limit_user')
+     ->condition('lid', $lids, 'IN')
+     ->execute();
+ }
+@@ -130,7 +130,7 @@ function node_limit_user_node_limit_delete($lids) {
+  * Implements hook_node_limit_load().
+  */
+ function node_limit_user_node_limit_load($lid) {
+-  $select = db_select('node_limit_user', 'nlu');
++  $select = \Drupal::database()->select('node_limit_user', 'nlu');
+   $select->join('users', 'u', 'u.uid = nlu.uid');
+   $select->fields('nlu')
+     ->fields('u', array('name'))
+diff --git a/old/node_limit_userofrole/node_limit_userofrole.module b/old/node_limit_userofrole/node_limit_userofrole.module
+index 826a5f7..63262ed 100644
+--- a/old/node_limit_userofrole/node_limit_userofrole.module
++++ b/old/node_limit_userofrole/node_limit_userofrole.module
+@@ -11,7 +11,7 @@
+  * Delete all rules related to the role being deleted.
+  */
+ function node_limit_userofrole_user_role_delete($role) {
+-  $limits = db_select('node_limit_userofrole', 'src')
++  $limits = \Drupal::database()->select('node_limit_userofrole', 'src')
+     ->fields('src', array('lid'))
+     ->condition('rid', $role->rid)
+     ->execute();
+@@ -104,7 +104,7 @@ function node_limit_userofrole_node_limit_save($lid, $applies, $element) {
+     if (is_array($element)) {
+       $element = $element['rid'];
+     }
+-    db_insert('node_limit_userofrole')
++    \Drupal::database()->insert('node_limit_userofrole')
+       ->fields(array(
+         'lid' => $lid,
+         'rid' => $element,
+@@ -117,7 +117,7 @@ function node_limit_userofrole_node_limit_save($lid, $applies, $element) {
+  * Implements hook_node_limit_delete().
+  */
+ function node_limit_userofrole_node_limit_delete($lids) {
+-  db_delete('node_limit_userofrole')
++  \Drupal::database()->delete('node_limit_userofrole')
+     ->condition('lid', $lids, 'IN')
+     ->execute();
+ }
+@@ -126,7 +126,7 @@ function node_limit_userofrole_node_limit_delete($lids) {
+  * Implements hook_node_limit_load().
+  */
+ function node_limit_userofrole_node_limit_load($lid) {
+-  $select = db_select('node_limit_userofrole', 'nlr');
++  $select = \Drupal::database()->select('node_limit_userofrole', 'nlr');
+   $select->join('role', 'r', 'r.rid = nlr.rid');
+   $select->fields('nlr')
+     ->fields('r', array('name'))
+diff --git a/src/Form/NodeLimitDeleteForm.php b/src/Form/NodeLimitDeleteForm.php
+index 6c9b8aa..506173a 100644
+--- a/src/Form/NodeLimitDeleteForm.php
++++ b/src/Form/NodeLimitDeleteForm.php
+@@ -38,13 +38,12 @@ class NodeLimitDeleteForm extends EntityConfirmFormBase {
+   public function submitForm(array &$form, FormStateInterface $form_state) {
+     $this->entity->delete();
+ 
+-    drupal_set_message(
+-      $this->t('content @type: deleted @label.',
+-      [
+-        '@type' => $this->entity->bundle(),
+-        '@label' => $this->entity->label()
+-      ]
+-    ));
++    $this->messenger()->addStatus($this->t('content @type: deleted @label.',
++    [
++      '@type' => $this->entity->bundle(),
++      '@label' => $this->entity->label()
++    ]
++  ));
+ 
+     $form_state->setRedirectUrl($this->getCancelUrl());
+   }
+diff --git a/src/Form/NodeLimitForm.php b/src/Form/NodeLimitForm.php
+index 564a0bf..4adcf3e 100644
+--- a/src/Form/NodeLimitForm.php
++++ b/src/Form/NodeLimitForm.php
+@@ -49,12 +49,12 @@ class NodeLimitForm extends EntityForm {
+     $status = $node_limit->save();
+ 
+     if ($status) {
+-      drupal_set_message($this->t('Saved the %label NodeLimit.', array(
++      $this->messenger()->addStatus($this->t('Saved the %label NodeLimit.', array(
+         '%label' => $node_limit->label(),
+       )));
+     }
+     else {
+-      drupal_set_message($this->t('The %label NodeLimit was not saved.', array(
++      $this->messenger()->addStatus($this->t('The %label NodeLimit was not saved.', array(
+         '%label' => $node_limit->label(),
+       )));
+     }

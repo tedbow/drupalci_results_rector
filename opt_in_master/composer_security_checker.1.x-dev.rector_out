@@ -1,0 +1,65 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/composer_security_checker/composer_security_checker.install
+[parsing] modules/contrib/composer_security_checker/composer_security_checker.module
+[parsing] modules/contrib/composer_security_checker/spec/Collections/AdvisoryCollectionSpec.php
+[parsing] modules/contrib/composer_security_checker/spec/Models/AdvisorySpec.php
+[parsing] modules/contrib/composer_security_checker/spec/Parsers/SensioLabsSecurityCheckerParserSpec.php
+[parsing] modules/contrib/composer_security_checker/src/Collections/AdvisoryCollection.php
+[parsing] modules/contrib/composer_security_checker/src/Controller/SecurityCheckerReportController.php
+[parsing] modules/contrib/composer_security_checker/src/Form/ComposerSecurityCheckerSettingsForm.php
+[parsing] modules/contrib/composer_security_checker/src/Models/Advisory.php
+[parsing] modules/contrib/composer_security_checker/src/Parsers/SensioLabsSecurityCheckerParser.php
+[parsing] modules/contrib/composer_security_checker/src/Repositories/RepositoryInterface.php
+[parsing] modules/contrib/composer_security_checker/src/Repositories/SensioLabsSecurityCheckerRepository.php
+[parsing] modules/contrib/composer_security_checker/tests/src/Functional/RequirementsTest.php
+[refactoring] modules/contrib/composer_security_checker/composer_security_checker.install
+[refactoring] modules/contrib/composer_security_checker/composer_security_checker.module
+[refactoring] modules/contrib/composer_security_checker/spec/Collections/AdvisoryCollectionSpec.php
+[refactoring] modules/contrib/composer_security_checker/spec/Models/AdvisorySpec.php
+[refactoring] modules/contrib/composer_security_checker/spec/Parsers/SensioLabsSecurityCheckerParserSpec.php
+[refactoring] modules/contrib/composer_security_checker/src/Collections/AdvisoryCollection.php
+[refactoring] modules/contrib/composer_security_checker/src/Controller/SecurityCheckerReportController.php
+[refactoring] modules/contrib/composer_security_checker/src/Form/ComposerSecurityCheckerSettingsForm.php
+[refactoring] modules/contrib/composer_security_checker/src/Models/Advisory.php
+[refactoring] modules/contrib/composer_security_checker/src/Parsers/SensioLabsSecurityCheckerParser.php
+[refactoring] modules/contrib/composer_security_checker/src/Repositories/RepositoryInterface.php
+[refactoring] modules/contrib/composer_security_checker/src/Repositories/SensioLabsSecurityCheckerRepository.php
+[refactoring] modules/contrib/composer_security_checker/tests/src/Functional/RequirementsTest.php
+[printing] modules/contrib/composer_security_checker/composer_security_checker.install
+[printing] modules/contrib/composer_security_checker/composer_security_checker.module
+[printing] modules/contrib/composer_security_checker/spec/Collections/AdvisoryCollectionSpec.php
+[printing] modules/contrib/composer_security_checker/spec/Models/AdvisorySpec.php
+[printing] modules/contrib/composer_security_checker/spec/Parsers/SensioLabsSecurityCheckerParserSpec.php
+[printing] modules/contrib/composer_security_checker/src/Collections/AdvisoryCollection.php
+[printing] modules/contrib/composer_security_checker/src/Controller/SecurityCheckerReportController.php
+[printing] modules/contrib/composer_security_checker/src/Form/ComposerSecurityCheckerSettingsForm.php
+[printing] modules/contrib/composer_security_checker/src/Models/Advisory.php
+[printing] modules/contrib/composer_security_checker/src/Parsers/SensioLabsSecurityCheckerParser.php
+[printing] modules/contrib/composer_security_checker/src/Repositories/RepositoryInterface.php
+[printing] modules/contrib/composer_security_checker/src/Repositories/SensioLabsSecurityCheckerRepository.php
+[printing] modules/contrib/composer_security_checker/tests/src/Functional/RequirementsTest.php
+
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/composer_security_checker/spec/Collections/AdvisoryCol
+         lectionSpec.php" file, due to:                                         
+         "Analyze error: "Class PhpSpec\ObjectBehavior not found and could not  
+         be autoloaded.". Include your files in "parameters > autoload_paths".  
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/composer_security_checker/spec/Models/AdvisorySpec.php
+         " file, due to:                                                        
+         "Analyze error: "Class PhpSpec\ObjectBehavior not found and could not  
+         be autoloaded.". Include your files in "parameters > autoload_paths".  
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/composer_security_checker/spec/Parsers/SensioLabsSecur
+         ityCheckerParserSpec.php" file, due to:                                
+         "Analyze error: "Class PhpSpec\ObjectBehavior not found and could not  
+         be autoloaded.". Include your files in "parameters > autoload_paths".  
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+

@@ -1,0 +1,451 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/block_visibility_groups/block_visibility_groups.install
+[parsing] modules/contrib/block_visibility_groups/block_visibility_groups.module
+[parsing] modules/contrib/block_visibility_groups/block_visibility_groups_admin/block_visibility_groups_admin.module
+[parsing] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/Annotation/ConditionCreator.php
+[parsing] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/ConditionCreatorManager.php
+[parsing] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/Controller/GroupLister.php
+[parsing] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/Form/ConditionCreatorForm.php
+[parsing] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/GroupInfo.php
+[parsing] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/GroupInfoInterface.php
+[parsing] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/Plugin/ConditionCreator/NodeTypeConditionCreator.php
+[parsing] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/Plugin/ConditionCreator/RolesConditionCreator.php
+[parsing] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/Plugin/ConditionCreator/RouteConditionCreator.php
+[parsing] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/Plugin/ConditionCreatorBase.php
+[parsing] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/Plugin/ConditionCreatorInterface.php
+[parsing] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/Tests/GroupListerTest.php
+[parsing] modules/contrib/block_visibility_groups/src/BlockVisibilityGroupInterface.php
+[parsing] modules/contrib/block_visibility_groups/src/BlockVisibilityGroupedListBuilder.php
+[parsing] modules/contrib/block_visibility_groups/src/BlockVisibilityLister.php
+[parsing] modules/contrib/block_visibility_groups/src/ConditionRedirectTrait.php
+[parsing] modules/contrib/block_visibility_groups/src/ConditionsSetFormTrait.php
+[parsing] modules/contrib/block_visibility_groups/src/Controller/BlockLibraryGroupsController.php
+[parsing] modules/contrib/block_visibility_groups/src/Controller/BlockVisibilityGroupController.php
+[parsing] modules/contrib/block_visibility_groups/src/Controller/BlockVisibilityGroupListBuilder.php
+[parsing] modules/contrib/block_visibility_groups/src/Entity/BlockVisibilityGroup.php
+[parsing] modules/contrib/block_visibility_groups/src/Form/BlockVisibilityGroupDeleteForm.php
+[parsing] modules/contrib/block_visibility_groups/src/Form/BlockVisibilityGroupForm.php
+[parsing] modules/contrib/block_visibility_groups/src/Form/ConditionAddForm.php
+[parsing] modules/contrib/block_visibility_groups/src/Form/ConditionDeleteForm.php
+[parsing] modules/contrib/block_visibility_groups/src/Form/ConditionEditForm.php
+[parsing] modules/contrib/block_visibility_groups/src/Form/ConditionFormBase.php
+[parsing] modules/contrib/block_visibility_groups/src/GroupEvaluator.php
+[parsing] modules/contrib/block_visibility_groups/src/GroupEvaluatorInterface.php
+[parsing] modules/contrib/block_visibility_groups/src/Plugin/Condition/ConditionGroup.php
+[parsing] modules/contrib/block_visibility_groups/src/Tests/BlockVisibilityGroupsTestBase.php
+[parsing] modules/contrib/block_visibility_groups/src/Tests/BlockVisibilityGroupsUITest.php
+[parsing] modules/contrib/block_visibility_groups/src/Tests/VisibilityTest.php
+[refactoring] modules/contrib/block_visibility_groups/block_visibility_groups.install
+[refactoring] modules/contrib/block_visibility_groups/block_visibility_groups.module
+[refactoring] modules/contrib/block_visibility_groups/block_visibility_groups_admin/block_visibility_groups_admin.module
+[refactoring] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/Annotation/ConditionCreator.php
+[refactoring] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/ConditionCreatorManager.php
+[refactoring] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/Controller/GroupLister.php
+[refactoring] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/Form/ConditionCreatorForm.php
+[refactoring] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/GroupInfo.php
+[refactoring] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/GroupInfoInterface.php
+[refactoring] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/Plugin/ConditionCreator/NodeTypeConditionCreator.php
+[refactoring] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/Plugin/ConditionCreator/RolesConditionCreator.php
+[refactoring] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/Plugin/ConditionCreator/RouteConditionCreator.php
+[refactoring] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/Plugin/ConditionCreatorBase.php
+[refactoring] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/Plugin/ConditionCreatorInterface.php
+[refactoring] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/Tests/GroupListerTest.php
+[refactoring] modules/contrib/block_visibility_groups/src/BlockVisibilityGroupInterface.php
+[refactoring] modules/contrib/block_visibility_groups/src/BlockVisibilityGroupedListBuilder.php
+[refactoring] modules/contrib/block_visibility_groups/src/BlockVisibilityLister.php
+[refactoring] modules/contrib/block_visibility_groups/src/ConditionRedirectTrait.php
+[refactoring] modules/contrib/block_visibility_groups/src/ConditionsSetFormTrait.php
+[refactoring] modules/contrib/block_visibility_groups/src/Controller/BlockLibraryGroupsController.php
+[refactoring] modules/contrib/block_visibility_groups/src/Controller/BlockVisibilityGroupController.php
+[refactoring] modules/contrib/block_visibility_groups/src/Controller/BlockVisibilityGroupListBuilder.php
+[refactoring] modules/contrib/block_visibility_groups/src/Entity/BlockVisibilityGroup.php
+[refactoring] modules/contrib/block_visibility_groups/src/Form/BlockVisibilityGroupDeleteForm.php
+[refactoring] modules/contrib/block_visibility_groups/src/Form/BlockVisibilityGroupForm.php
+[refactoring] modules/contrib/block_visibility_groups/src/Form/ConditionAddForm.php
+[refactoring] modules/contrib/block_visibility_groups/src/Form/ConditionDeleteForm.php
+[refactoring] modules/contrib/block_visibility_groups/src/Form/ConditionEditForm.php
+[refactoring] modules/contrib/block_visibility_groups/src/Form/ConditionFormBase.php
+[refactoring] modules/contrib/block_visibility_groups/src/GroupEvaluator.php
+[refactoring] modules/contrib/block_visibility_groups/src/GroupEvaluatorInterface.php
+[refactoring] modules/contrib/block_visibility_groups/src/Plugin/Condition/ConditionGroup.php
+[refactoring] modules/contrib/block_visibility_groups/src/Tests/BlockVisibilityGroupsTestBase.php
+[refactoring] modules/contrib/block_visibility_groups/src/Tests/BlockVisibilityGroupsUITest.php
+[refactoring] modules/contrib/block_visibility_groups/src/Tests/VisibilityTest.php
+[printing] modules/contrib/block_visibility_groups/block_visibility_groups.install
+[printing] modules/contrib/block_visibility_groups/block_visibility_groups.module
+[printing] modules/contrib/block_visibility_groups/block_visibility_groups_admin/block_visibility_groups_admin.module
+[printing] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/Annotation/ConditionCreator.php
+[printing] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/ConditionCreatorManager.php
+[printing] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/Controller/GroupLister.php
+[printing] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/Form/ConditionCreatorForm.php
+[printing] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/GroupInfo.php
+[printing] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/GroupInfoInterface.php
+[printing] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/Plugin/ConditionCreator/NodeTypeConditionCreator.php
+[printing] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/Plugin/ConditionCreator/RolesConditionCreator.php
+[printing] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/Plugin/ConditionCreator/RouteConditionCreator.php
+[printing] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/Plugin/ConditionCreatorBase.php
+[printing] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/Plugin/ConditionCreatorInterface.php
+[printing] modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/Tests/GroupListerTest.php
+[printing] modules/contrib/block_visibility_groups/src/BlockVisibilityGroupInterface.php
+[printing] modules/contrib/block_visibility_groups/src/BlockVisibilityGroupedListBuilder.php
+[printing] modules/contrib/block_visibility_groups/src/BlockVisibilityLister.php
+[printing] modules/contrib/block_visibility_groups/src/ConditionRedirectTrait.php
+[printing] modules/contrib/block_visibility_groups/src/ConditionsSetFormTrait.php
+[printing] modules/contrib/block_visibility_groups/src/Controller/BlockLibraryGroupsController.php
+[printing] modules/contrib/block_visibility_groups/src/Controller/BlockVisibilityGroupController.php
+[printing] modules/contrib/block_visibility_groups/src/Controller/BlockVisibilityGroupListBuilder.php
+[printing] modules/contrib/block_visibility_groups/src/Entity/BlockVisibilityGroup.php
+[printing] modules/contrib/block_visibility_groups/src/Form/BlockVisibilityGroupDeleteForm.php
+[printing] modules/contrib/block_visibility_groups/src/Form/BlockVisibilityGroupForm.php
+[printing] modules/contrib/block_visibility_groups/src/Form/ConditionAddForm.php
+[printing] modules/contrib/block_visibility_groups/src/Form/ConditionDeleteForm.php
+[printing] modules/contrib/block_visibility_groups/src/Form/ConditionEditForm.php
+[printing] modules/contrib/block_visibility_groups/src/Form/ConditionFormBase.php
+[printing] modules/contrib/block_visibility_groups/src/GroupEvaluator.php
+[printing] modules/contrib/block_visibility_groups/src/GroupEvaluatorInterface.php
+[printing] modules/contrib/block_visibility_groups/src/Plugin/Condition/ConditionGroup.php
+[printing] modules/contrib/block_visibility_groups/src/Tests/BlockVisibilityGroupsTestBase.php
+[printing] modules/contrib/block_visibility_groups/src/Tests/BlockVisibilityGroupsUITest.php
+[printing] modules/contrib/block_visibility_groups/src/Tests/VisibilityTest.php
+
+
+12 files with changes
+=====================
+
+1) modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/Form/ConditionCreatorForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -9,9 +9,6 @@
+ use Drupal\Core\Form\FormStateInterface;
+ use Symfony\Component\DependencyInjection\ContainerInterface;
+
+-/**
+- *
+- */
+ class ConditionCreatorForm extends FormBase {
+
+   /**
+@@ -89,9 +86,6 @@
+     return $form;
+   }
+
+-  /**
+-   *
+-   */
+   protected function conditionOptions($route_name, $parameters) {
+     $elements = [
+       '#tree' => TRUE,
+@@ -168,9 +162,6 @@
+     );
+   }
+
+-  /**
+-   *
+-   */
+   protected function getConditionValues(FormStateInterface $form_state) {
+     return $form_state->cleanValues()->getValue('conditions');
+   }
+    ----------- end diff -----------
+
+2) modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/Plugin/ConditionCreator/NodeTypeConditionCreator.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -59,16 +59,10 @@
+     );
+   }
+
+-  /**
+-   *
+-   */
+   public function getNewConditionLabel() {
+     return $this->t('Content Types');
+   }
+
+-  /**
+-   *
+-   */
+   public function createConditionElements() {
+     $elements['condition_config'] = [
+       '#tree' => TRUE,
+@@ -94,17 +88,11 @@
+     return $elements;
+   }
+
+-  /**
+-   *
+-   */
+   public function itemSelected($condition_info) {
+     $bundles = $condition_info['condition_config']['bundles'];
+     return !empty(array_filter($bundles));
+   }
+
+-  /**
+-   *
+-   */
+   public function createConditionConfig($plugin_info) {
+     $config = parent::createConditionConfig($plugin_info);
+     $config['bundles'] = array_filter($config['bundles']);
+    ----------- end diff -----------
+
+3) modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/Plugin/ConditionCreator/RolesConditionCreator.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -15,16 +15,10 @@
+  */
+ class RolesConditionCreator extends ConditionCreatorBase {
+
+-  /**
+-   *
+-   */
+   public function getNewConditionLabel() {
+     return $this->t('Roles');
+   }
+
+-  /**
+-   *
+-   */
+   public function createConditionElements() {
+     $elements['condition_config'] = [
+       '#tree' => TRUE,
+@@ -39,17 +33,11 @@
+     return $elements;
+   }
+
+-  /**
+-   *
+-   */
+   public function itemSelected($condition_info) {
+     $roles = $condition_info['condition_config']['roles'];
+     return !empty(array_filter($roles));
+   }
+
+-  /**
+-   *
+-   */
+   public function createConditionConfig($plugin_info) {
+     $config = parent::createConditionConfig($plugin_info);
+     $config['roles'] = array_filter($config['roles']);
+    ----------- end diff -----------
+
+4) modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/Plugin/ConditionCreator/RouteConditionCreator.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -15,9 +15,6 @@
+  */
+ class RouteConditionCreator extends ConditionCreatorBase {
+
+-  /**
+-   *
+-   */
+   public function getNewConditionLabel() {
+     $current_path = $this->getPathPattern();
+     return $this->t('Current path: @path', ['@path' => $current_path]);
+@@ -36,9 +33,6 @@
+     return $path;
+   }
+
+-  /**
+-   *
+-   */
+   public function createConditionElements() {
+     $elements = parent::createConditionElements();
+    ----------- end diff -----------
+
+5) modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/Plugin/ConditionCreatorBase.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -5,9 +5,6 @@
+ use Drupal\Component\Plugin\PluginBase;
+ use Drupal\Core\StringTranslation\StringTranslationTrait;
+
+-/**
+- *
+- */
+ abstract class ConditionCreatorBase extends PluginBase implements ConditionCreatorInterface {
+
+   use StringTranslationTrait;
+@@ -31,9 +28,6 @@
+     $this->route = $configuration['route'];
+   }
+
+-  /**
+-   *
+-   */
+   public function createConditionConfig($plugin_info) {
+     $config = $plugin_info['condition_config'];
+     $config['id'] = isset($config['id']) ? $config['id'] : $this->getPluginDefinition()['condition_plugin'];
+@@ -41,9 +35,6 @@
+     return $config;
+   }
+
+-  /**
+-   *
+-   */
+   public function createConditionElements() {
+     $elements = [
+       '#tree' => TRUE,
+@@ -57,9 +48,6 @@
+     return $elements;
+   }
+
+-  /**
+-   *
+-   */
+   public function itemSelected($condition_info) {
+     return !empty($condition_info['selected']);
+   }
+    ----------- end diff -----------
+
+6) modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/Plugin/ConditionCreatorInterface.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -2,9 +2,6 @@
+
+ namespace Drupal\block_visibility_groups_admin\Plugin;
+
+-/**
+- *
+- */
+ interface ConditionCreatorInterface {
+
+   /**
+    ----------- end diff -----------
+
+7) modules/contrib/block_visibility_groups/src/BlockVisibilityLister.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -5,9 +5,6 @@
+ use Drupal\block\Entity\Block;
+ use Drupal\Core\Entity\EntityStorageInterface;
+
+-/**
+- *
+- */
+ trait BlockVisibilityLister {
+
+   /**
+    ----------- end diff -----------
+
+8) modules/contrib/block_visibility_groups/src/ConditionsSetFormTrait.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -7,9 +7,6 @@
+ use Drupal\Component\Utility\NestedArray;
+ use Drupal\Core\Url;
+
+-/**
+- *
+- */
+ trait ConditionsSetFormTrait {
+
+   /**
+    ----------- end diff -----------
+
+9) modules/contrib/block_visibility_groups/src/Form/ConditionFormBase.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -51,9 +51,6 @@
+     $this->contextRepository = $context_repository;
+   }
+
+-  /**
+-   *
+-   */
+   public static function create(ContainerInterface $container) {
+     return new static (
+       $container->get('context.repository')
+    ----------- end diff -----------
+
+10) modules/contrib/block_visibility_groups/src/Plugin/Condition/ConditionGroup.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -81,9 +81,6 @@
+     // TODO: Implement summary() method.
+   }
+
+-  /**
+-   *
+-   */
+   public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
+     $block_visibility_groups = $this->entityStorage->loadMultiple();
+     $options = ['' => $this->t('No Block Visibility Group')];
+@@ -113,9 +110,6 @@
+     return $form;
+   }
+
+-  /**
+-   *
+-   */
+   public function submitConfigurationForm(array &$form, FormStateInterface $form_state) {
+     $user_values = $form_state->getValues();
+     foreach ($user_values as $key => $value) {
+@@ -153,9 +147,6 @@
+       $plugin_definition);
+   }
+
+-  /**
+-   *
+-   */
+   public function __construct(EntityStorageInterface $entity_storage, ExecutableManagerInterface $manager, Request $request, GroupEvaluator $group_evaluator, array $configuration, $plugin_id, $plugin_definition) {
+     // TODO: Change the autogenerated stub.
+     parent::__construct($configuration, $plugin_id, $plugin_definition);
+    ----------- end diff -----------
+
+11) modules/contrib/block_visibility_groups/src/Tests/BlockVisibilityGroupsTestBase.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -9,9 +9,6 @@
+
+ use Drupal\simpletest\WebTestBase;
+
+-/**
+- *
+- */
+ abstract class BlockVisibilityGroupsTestBase extends WebTestBase {
+
+   /**
+    ----------- end diff -----------
+
+12) modules/contrib/block_visibility_groups/src/Tests/VisibilityTest.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -39,9 +39,6 @@
+    */
+   public static $modules = ['block', 'block_visibility_groups', 'node'];
+
+-  /**
+-   *
+-   */
+   public function testSingleConditions() {
+     // @todo Condition with node doesn't work for some reason.
+     $config = [
+    ----------- end diff -----------
+
+ [OK] Rector is done! 12 files have been changed.                               
+

@@ -1,0 +1,17 @@
+./composer.json has been updated
+> Drupal\Composer\Composer::ensureComposerVersion
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+Package operations: 1 install, 0 updates, 0 removals
+  - Installing drupal/ipsum (dev-1.x ded1bd5): Cloning ded1bd5bdc
+Package phpunit/phpunit-mock-objects is abandoned, you should avoid using it. No replacement was suggested.
+Writing lock file
+Generating autoload files
+> Drupal\Core\Composer\Composer::preAutoloadDump
+Hardening vendor directory with .htaccess and web.config files.
+33 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+Cleaning vendor directory.
+> Drupal\Composer\Composer::generateMetapackages
+PHP Fatal error:  Class Drupal\ipsum\Plugin\Ipsum\provider\DrupalIpsum contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (Drupal\Component\Plugin\DependentPluginInterface::calculateDependencies) in /var/lib/drupalci/workspace/drupal-checkouts/drupal4/modules/contrib/ipsum/src/Plugin/Ipsum/provider/DrupalIpsum.php on line 141
+Fatal error: Class Drupal\ipsum\Plugin\Ipsum\provider\DrupalIpsum contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (Drupal\Component\Plugin\DependentPluginInterface::calculateDependencies) in /var/lib/drupalci/workspace/drupal-checkouts/drupal4/modules/contrib/ipsum/src/Plugin/Ipsum/provider/DrupalIpsum.php on line 141

@@ -1,0 +1,60 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/abjs/abjs.install
+[parsing] modules/contrib/abjs/abjs.module
+[parsing] modules/contrib/abjs/src/Controller/AbjsDefaultController.php
+[parsing] modules/contrib/abjs/src/Form/AbjsConditionDeleteConfirmForm.php
+[parsing] modules/contrib/abjs/src/Form/AbjsConditionForm.php
+[parsing] modules/contrib/abjs/src/Form/AbjsExperienceDeleteConfirmForm.php
+[parsing] modules/contrib/abjs/src/Form/AbjsExperienceForm.php
+[parsing] modules/contrib/abjs/src/Form/AbjsSettingsAdmin.php
+[parsing] modules/contrib/abjs/src/Form/AbjsTestDeleteConfirmForm.php
+[parsing] modules/contrib/abjs/src/Form/AbjsTestForm.php
+[parsing] modules/contrib/abjs/tests/src/Kernel/Form/AbjsSettingsAdminTest.php
+[refactoring] modules/contrib/abjs/abjs.install
+[refactoring] modules/contrib/abjs/abjs.module
+[refactoring] modules/contrib/abjs/src/Controller/AbjsDefaultController.php
+[refactoring] modules/contrib/abjs/src/Form/AbjsConditionDeleteConfirmForm.php
+[refactoring] modules/contrib/abjs/src/Form/AbjsConditionForm.php
+[refactoring] modules/contrib/abjs/src/Form/AbjsExperienceDeleteConfirmForm.php
+[refactoring] modules/contrib/abjs/src/Form/AbjsExperienceForm.php
+[refactoring] modules/contrib/abjs/src/Form/AbjsSettingsAdmin.php
+[refactoring] modules/contrib/abjs/src/Form/AbjsTestDeleteConfirmForm.php
+[refactoring] modules/contrib/abjs/src/Form/AbjsTestForm.php
+[refactoring] modules/contrib/abjs/tests/src/Kernel/Form/AbjsSettingsAdminTest.php
+[printing] modules/contrib/abjs/abjs.install
+[printing] modules/contrib/abjs/abjs.module
+[printing] modules/contrib/abjs/src/Controller/AbjsDefaultController.php
+[printing] modules/contrib/abjs/src/Form/AbjsConditionDeleteConfirmForm.php
+[printing] modules/contrib/abjs/src/Form/AbjsConditionForm.php
+[printing] modules/contrib/abjs/src/Form/AbjsExperienceDeleteConfirmForm.php
+[printing] modules/contrib/abjs/src/Form/AbjsExperienceForm.php
+[printing] modules/contrib/abjs/src/Form/AbjsSettingsAdmin.php
+[printing] modules/contrib/abjs/src/Form/AbjsTestDeleteConfirmForm.php
+[printing] modules/contrib/abjs/src/Form/AbjsTestForm.php
+[printing] modules/contrib/abjs/tests/src/Kernel/Form/AbjsSettingsAdminTest.php
+
+
+1 file with changes
+===================
+
+1) modules/contrib/abjs/tests/src/Kernel/Form/AbjsSettingsAdminTest.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -1,3 +1,3 @@
+ <?php
+ 
+ namespace Drupal\Tests\abjs\Kernel\Form;
+@@ -77,4 +77,4 @@
+     $this->assertInstanceOf(FormInterface::class, $this->abjsSettingsForm);
+   }
+ 
+-}
++}
+    ----------- end diff -----------
+
+ [OK] Rector is done! 1 file have been changed.                                 
+

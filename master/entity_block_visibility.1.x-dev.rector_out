@@ -1,0 +1,33 @@
+Rector 0.8.x-dev@40275b2
+Config file: rector.yml
+
+[parsing] modules/contrib/entity_block_visibility/entity_block_visibility.install
+[parsing] modules/contrib/entity_block_visibility/entity_block_visibility.module
+[parsing] modules/contrib/entity_block_visibility/src/Plugin/Condition/EntityBundleCondition.php
+[refactoring] modules/contrib/entity_block_visibility/entity_block_visibility.install
+[refactoring] modules/contrib/entity_block_visibility/entity_block_visibility.module
+[refactoring] modules/contrib/entity_block_visibility/src/Plugin/Condition/EntityBundleCondition.php
+[printing] modules/contrib/entity_block_visibility/entity_block_visibility.install
+[printing] modules/contrib/entity_block_visibility/entity_block_visibility.module
+[printing] modules/contrib/entity_block_visibility/src/Plugin/Condition/EntityBundleCondition.php
+
+
+1 file with changes
+===================
+
+1) modules/contrib/entity_block_visibility/entity_block_visibility.install
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -10,4 +10,4 @@
+   // Make sure our hook_form_FORM_ID_alter runs after node's
+   // @todo should we use hook_module_implements instead
+   module_set_weight('entity_block_visibility', 10);
+-}
+\ No newline at end of file
++}
+    ----------- end diff -----------
+
+ [OK] Rector is done! 1 file have been changed.                                 
+

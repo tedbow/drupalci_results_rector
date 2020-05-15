@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle>
+<file name="modules/contrib/abbrfilter/src/Form/AddAbbrfilterForm.php">
+  <error line="124" column="1" severity="error" message="Call to deprecated function drupal_set_message():
+in drupal:8.5.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead." />
+  <error line="127" column="1" severity="error" message="Call to deprecated function drupal_set_message():
+in drupal:8.5.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead." />
+  <error line="132" column="1" severity="error" message="Call to deprecated function drupal_set_message():
+in drupal:8.5.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead." />
+  <error line="140" column="1" severity="error" message="Call to deprecated function drupal_set_message():
+in drupal:8.5.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead." />
+  <error line="148" column="1" severity="error" message="Call to deprecated function drupal_set_message():
+in drupal:8.5.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead." />
+</file>
+<file name="modules/contrib/abbrfilter/src/Form/DeleteAbbrfilterForm.php">
+  <error line="108" column="1" severity="error" message="Call to deprecated function drupal_set_message():
+in drupal:8.5.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead." />
+</file>
+<file name="modules/contrib/abbrfilter/src/Form/EditAbbrfilterForm.php">
+  <error line="69" column="1" severity="error" message="Call to deprecated function drupal_set_message():
+in drupal:8.5.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead." />
+  <error line="70" column="1" severity="error" message="Call to deprecated method url() of class Drupal:
+in drupal:8.0.0 and is removed from drupal:9.0.0.
+Instead create a \Drupal\Core\Url object directly, for example using
+Url::fromRoute()." />
+  <error line="118" column="1" severity="error" message="Call to deprecated function drupal_set_message():
+in drupal:8.5.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead." />
+  <error line="127" column="1" severity="error" message="Call to deprecated function drupal_set_message():
+in drupal:8.5.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead." />
+  <error line="132" column="1" severity="error" message="Call to deprecated function drupal_set_message():
+in drupal:8.5.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead." />
+</file>
+<file name="modules/contrib/abbrfilter/src/tests/src/Unit/AbbrFilterTest.php">
+  <error line="0" column="1" severity="error" message="Class Drupal\Tests\abbrfilter\Unit\AbbrfilterTest was not found while trying to analyse it - autoloading is probably not configured properly." />
+</file>
+</checkstyle>

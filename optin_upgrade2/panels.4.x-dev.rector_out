@@ -1,0 +1,138 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/panels/panels.api.php
+[parsing] modules/contrib/panels/panels.install
+[parsing] modules/contrib/panels/panels.module
+[parsing] modules/contrib/panels/panels_ipe/panels_ipe.api.php
+[parsing] modules/contrib/panels/panels_ipe/panels_ipe.install
+[parsing] modules/contrib/panels/panels_ipe/panels_ipe.module
+[parsing] modules/contrib/panels/panels_ipe/src/Annotation/IPEAccess.php
+[parsing] modules/contrib/panels/panels_ipe/src/Controller/PanelsIPEPageController.php
+[parsing] modules/contrib/panels/panels_ipe/src/Exception/EmptyRequestContentException.php
+[parsing] modules/contrib/panels/panels_ipe/src/Form/PanelsIPEBlockContentForm.php
+[parsing] modules/contrib/panels/panels_ipe/src/Form/PanelsIPEBlockPluginForm.php
+[parsing] modules/contrib/panels/panels_ipe/src/Form/PanelsIPELayoutForm.php
+[parsing] modules/contrib/panels/panels_ipe/src/Helpers/RemoveBlockRequestHandler.php
+[parsing] modules/contrib/panels/panels_ipe/src/Helpers/RequestHandlerBase.php
+[parsing] modules/contrib/panels/panels_ipe/src/Helpers/RequestHandlerInterface.php
+[parsing] modules/contrib/panels/panels_ipe/src/Helpers/UpdateLayoutRequestHandler.php
+[parsing] modules/contrib/panels/panels_ipe/src/PanelsIPEBlockRendererTrait.php
+[parsing] modules/contrib/panels/panels_ipe/src/Plugin/DisplayBuilder/InPlaceEditorDisplayBuilder.php
+[parsing] modules/contrib/panels/panels_ipe/src/Plugin/IPEAccessBase.php
+[parsing] modules/contrib/panels/panels_ipe/src/Plugin/IPEAccessInterface.php
+[parsing] modules/contrib/panels/panels_ipe/src/Plugin/IPEAccessManager.php
+[parsing] modules/contrib/panels/panels_ipe/src/Plugin/IPEAccessManagerInterface.php
+[parsing] modules/contrib/panels/panels_ipe/tests/src/FunctionalJavascript/PageManagerIntegrationTest.php
+[parsing] modules/contrib/panels/panels_ipe/tests/src/FunctionalJavascript/PanelsIPETestBase.php
+[parsing] modules/contrib/panels/panels_ipe/tests/src/FunctionalJavascript/PanelsIPETestTrait.php
+[parsing] modules/contrib/panels/panels_ipe/tests/src/Unit/RemoveBlockRequestHandlerTest.php
+[parsing] modules/contrib/panels/panels_ipe/tests/src/Unit/RequestHandlerTestBase.php
+[parsing] modules/contrib/panels/panels_ipe/tests/src/Unit/UpdateLayoutRequestHandlerTest.php
+[parsing] modules/contrib/panels/src/Annotation/DisplayBuilder.php
+[parsing] modules/contrib/panels/src/Annotation/PanelsPattern.php
+[parsing] modules/contrib/panels/src/Annotation/PanelsStorage.php
+[parsing] modules/contrib/panels/src/CachedValuesGetterTrait.php
+[parsing] modules/contrib/panels/src/Controller/Panels.php
+[parsing] modules/contrib/panels/src/Form/LayoutChangeRegions.php
+[parsing] modules/contrib/panels/src/Form/LayoutChangeSettings.php
+[parsing] modules/contrib/panels/src/Form/LayoutPluginSelector.php
+[parsing] modules/contrib/panels/src/Form/PanelsAddBlockForm.php
+[parsing] modules/contrib/panels/src/Form/PanelsBlockConfigureFormBase.php
+[parsing] modules/contrib/panels/src/Form/PanelsContentForm.php
+[parsing] modules/contrib/panels/src/Form/PanelsDeleteBlockForm.php
+[parsing] modules/contrib/panels/src/Form/PanelsEditBlockForm.php
+[parsing] modules/contrib/panels/src/PanelsDisplayManager.php
+[parsing] modules/contrib/panels/src/PanelsDisplayManagerInterface.php
+[parsing] modules/contrib/panels/src/PanelsEvents.php
+[parsing] modules/contrib/panels/src/PanelsPatternManager.php
+[parsing] modules/contrib/panels/src/PanelsVariantEvent.php
+[parsing] modules/contrib/panels/src/Plugin/DisplayBuilder/DisplayBuilderBase.php
+[parsing] modules/contrib/panels/src/Plugin/DisplayBuilder/DisplayBuilderInterface.php
+[parsing] modules/contrib/panels/src/Plugin/DisplayBuilder/DisplayBuilderManager.php
+[parsing] modules/contrib/panels/src/Plugin/DisplayBuilder/DisplayBuilderManagerInterface.php
+[parsing] modules/contrib/panels/src/Plugin/DisplayBuilder/StandardDisplayBuilder.php
+[parsing] modules/contrib/panels/src/Plugin/DisplayVariant/PanelsDisplayVariant.php
+[parsing] modules/contrib/panels/src/Plugin/PanelsPattern/DefaultPattern.php
+[parsing] modules/contrib/panels/src/Plugin/PanelsPattern/PanelsPatternInterface.php
+[parsing] modules/contrib/panels/src/Plugin/PanelsStorage/PageManagerPanelsStorage.php
+[parsing] modules/contrib/panels/src/Storage/PanelsStorageAccess.php
+[parsing] modules/contrib/panels/src/Storage/PanelsStorageBase.php
+[parsing] modules/contrib/panels/src/Storage/PanelsStorageInterface.php
+[parsing] modules/contrib/panels/src/Storage/PanelsStorageManager.php
+[parsing] modules/contrib/panels/src/Storage/PanelsStorageManagerInterface.php
+[parsing] modules/contrib/panels/tests/modules/panels_test/src/Plugin/Layout/LayoutExampleTest.php
+[parsing] modules/contrib/panels/tests/src/Functional/PageManagerPanelsStorageIntegrationTest.php
+[parsing] modules/contrib/panels/tests/src/Functional/PanelsConfigSchemaTest.php
+[parsing] modules/contrib/panels/tests/src/Functional/PanelsTest.php
+[parsing] modules/contrib/panels/tests/src/Kernel/LayoutAlterHookTest.php
+[parsing] modules/contrib/panels/tests/src/Kernel/PanelsStorageManagerTest.php
+[parsing] modules/contrib/panels/tests/src/Unit/PanelsDisplayVariantTest.php
+[parsing] modules/contrib/panels/tests/src/Unit/PanelsStorageTest.php
+[parsing] modules/contrib/panels/tests/src/Unit/StandardDisplayBuilderTest.php
+[refactoring] modules/contrib/panels/panels.api.php
+[refactoring] modules/contrib/panels/panels.install
+[refactoring] modules/contrib/panels/panels.module
+[refactoring] modules/contrib/panels/panels_ipe/panels_ipe.api.php
+[refactoring] modules/contrib/panels/panels_ipe/panels_ipe.install
+[refactoring] modules/contrib/panels/panels_ipe/panels_ipe.module
+[refactoring] modules/contrib/panels/panels_ipe/src/Annotation/IPEAccess.php
+[refactoring] modules/contrib/panels/panels_ipe/src/Controller/PanelsIPEPageController.php
+[refactoring] modules/contrib/panels/panels_ipe/src/Exception/EmptyRequestContentException.php
+[refactoring] modules/contrib/panels/panels_ipe/src/Form/PanelsIPEBlockContentForm.php
+[refactoring] modules/contrib/panels/panels_ipe/src/Form/PanelsIPEBlockPluginForm.php
+[refactoring] modules/contrib/panels/panels_ipe/src/Form/PanelsIPELayoutForm.php
+[refactoring] modules/contrib/panels/panels_ipe/src/Helpers/RemoveBlockRequestHandler.php
+[refactoring] modules/contrib/panels/panels_ipe/src/Helpers/RequestHandlerBase.php
+[refactoring] modules/contrib/panels/panels_ipe/src/Helpers/RequestHandlerInterface.php
+[refactoring] modules/contrib/panels/panels_ipe/src/Helpers/UpdateLayoutRequestHandler.php
+[refactoring] modules/contrib/panels/panels_ipe/src/PanelsIPEBlockRendererTrait.php
+[refactoring] modules/contrib/panels/panels_ipe/src/Plugin/DisplayBuilder/InPlaceEditorDisplayBuilder.php
+[refactoring] modules/contrib/panels/panels_ipe/src/Plugin/IPEAccessBase.php
+[refactoring] modules/contrib/panels/panels_ipe/src/Plugin/IPEAccessInterface.php
+[refactoring] modules/contrib/panels/panels_ipe/src/Plugin/IPEAccessManager.php
+[refactoring] modules/contrib/panels/panels_ipe/src/Plugin/IPEAccessManagerInterface.php
+[refactoring] modules/contrib/panels/panels_ipe/tests/src/FunctionalJavascript/PageManagerIntegrationTest.php
+[refactoring] modules/contrib/panels/panels_ipe/tests/src/FunctionalJavascript/PanelsIPETestBase.php
+[refactoring] modules/contrib/panels/panels_ipe/tests/src/FunctionalJavascript/PanelsIPETestTrait.php
+[refactoring] modules/contrib/panels/panels_ipe/tests/src/Unit/RemoveBlockRequestHandlerTest.php
+[refactoring] modules/contrib/panels/panels_ipe/tests/src/Unit/RequestHandlerTestBase.php
+
+In NodeNameResolver.php line 81:
+                                                                 
+  [Rector\Core\Exception\ShouldNotHappenException]               
+  Pick more specific node than "PhpParser\Node\Expr\MethodCall"  
+                                                                 
+
+Exception trace:
+  at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/rector/rector-prefixed/rector/packages/node-name-resolver/src/NodeNameResolver.php:81
+ Rector\NodeNameResolver\NodeNameResolver->getName() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/rector/rector-prefixed/rector/src/Rector/AbstractRector/NameResolverTrait.php:56
+ Rector\Core\Rector\AbstractRector->getName() at /var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/palantirnet/drupal-rector/src/Rector/Deprecation/Base/GetMockBase.php:47
+ DrupalRector\Rector\Deprecation\Base\GetMockBase->refactor() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/rector/rector-prefixed/rector/src/Rector/AbstractRector.php:111
+ Rector\Core\Rector\AbstractRector->enterNode() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/phpstan/phpstan/phpstan.phar/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php:113
+ PhpParser\NodeTraverser->traverseNode() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/phpstan/phpstan/phpstan.phar/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php:133
+ PhpParser\NodeTraverser->traverseNode() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/phpstan/phpstan/phpstan.phar/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php:196
+ PhpParser\NodeTraverser->traverseArray() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/phpstan/phpstan/phpstan.phar/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php:105
+ PhpParser\NodeTraverser->traverseNode() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/phpstan/phpstan/phpstan.phar/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php:196
+ PhpParser\NodeTraverser->traverseArray() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/phpstan/phpstan/phpstan.phar/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php:105
+ PhpParser\NodeTraverser->traverseNode() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/phpstan/phpstan/phpstan.phar/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php:196
+ PhpParser\NodeTraverser->traverseArray() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/phpstan/phpstan/phpstan.phar/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php:105
+ PhpParser\NodeTraverser->traverseNode() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/phpstan/phpstan/phpstan.phar/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php:196
+ PhpParser\NodeTraverser->traverseArray() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/phpstan/phpstan/phpstan.phar/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php:85
+ PhpParser\NodeTraverser->traverse() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/rector/rector-prefixed/rector/src/PhpParser/NodeTraverser/RectorNodeTraverser.php:58
+ Rector\Core\PhpParser\NodeTraverser\RectorNodeTraverser->traverse() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/rector/rector-prefixed/rector/src/Application/FileProcessor.php:107
+ Rector\Core\Application\FileProcessor->refactor() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/rector/rector-prefixed/rector/src/Application/RectorApplication.php:118
+ Rector\Core\Application\RectorApplication->Rector\Core\Application\{closure}() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/rector/rector-prefixed/rector/src/Application/RectorApplication.php:168
+ Rector\Core\Application\RectorApplication->tryCatchWrapper() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/rector/rector-prefixed/rector/src/Application/RectorApplication.php:119
+ Rector\Core\Application\RectorApplication->runOnFileInfos() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/rector/rector-prefixed/rector/src/Console/Command/ProcessCommand.php:147
+ Rector\Core\Console\Command\ProcessCommand->execute() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/rector/rector-prefixed/rector/vendor/symfony/console/Command/Command.php:228
+ _HumbugBoxeee6bda8eb22\Symfony\Component\Console\Command\Command->run() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/rector/rector-prefixed/rector/src/Console/Command/AbstractCommand.php:30
+ Rector\Core\Console\Command\AbstractCommand->run() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/rector/rector-prefixed/rector/vendor/symfony/console/Application.php:849
+ _HumbugBoxeee6bda8eb22\Symfony\Component\Console\Application->doRunCommand() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/rector/rector-prefixed/rector/vendor/symfony/console/Application.php:235
+ _HumbugBoxeee6bda8eb22\Symfony\Component\Console\Application->doRun() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/rector/rector-prefixed/rector/src/Console/Application.php:77
+ Rector\Core\Console\Application->doRun() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/rector/rector-prefixed/rector/vendor/symfony/console/Application.php:136
+ _HumbugBoxeee6bda8eb22\Symfony\Component\Console\Application->run() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/rector/rector-prefixed/rector/bin/rector:46
+ require() at /var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/rector/rector-prefixed/rector:6
+
+process [-n|--dry-run] [-a|--autoload-file AUTOLOAD-FILE] [--match-git-diff] [-r|--only ONLY] [-o|--output-format [OUTPUT-FORMAT]] [--no-progress-bar] [--output-file OUTPUT-FILE] [--cache-debug] [--clear-cache] [--] [<source>...]
+

@@ -1,0 +1,165 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/access_conditions/modules/entity/access_conditions_entity.module
+[parsing] modules/contrib/access_conditions/modules/entity/src/AbstractEnum.php
+[parsing] modules/contrib/access_conditions/modules/entity/src/EntityOperation.php
+[parsing] modules/contrib/access_conditions/modules/entity/src/Plugin/Field/FieldFormatter/AccessModelReferenceFormatter.php
+[parsing] modules/contrib/access_conditions/modules/entity/src/Plugin/Field/FieldType/AccessModelItem.php
+[parsing] modules/contrib/access_conditions/modules/entity/src/Plugin/Field/FieldWidget/AccessModelReferenceAutocompleteWidget.php
+[parsing] modules/contrib/access_conditions/src/AccessChecker.php
+[parsing] modules/contrib/access_conditions/src/AccessModelListBuilder.php
+[parsing] modules/contrib/access_conditions/src/Entity/AccessModel.php
+[parsing] modules/contrib/access_conditions/src/Entity/AccessModelInterface.php
+[parsing] modules/contrib/access_conditions/src/Form/AccessModelAddForm.php
+[parsing] modules/contrib/access_conditions/src/Form/AccessModelDeleteForm.php
+[parsing] modules/contrib/access_conditions/src/Form/AccessModelEditForm.php
+[parsing] modules/contrib/access_conditions/src/Form/ConditionAddForm.php
+[parsing] modules/contrib/access_conditions/src/Form/ConditionDeleteForm.php
+[parsing] modules/contrib/access_conditions/src/Form/ConditionEditForm.php
+[parsing] modules/contrib/access_conditions/src/Plugin/Condition/AccessModel.php
+[refactoring] modules/contrib/access_conditions/modules/entity/access_conditions_entity.module
+[refactoring] modules/contrib/access_conditions/modules/entity/src/AbstractEnum.php
+[refactoring] modules/contrib/access_conditions/modules/entity/src/EntityOperation.php
+[refactoring] modules/contrib/access_conditions/modules/entity/src/Plugin/Field/FieldFormatter/AccessModelReferenceFormatter.php
+[refactoring] modules/contrib/access_conditions/modules/entity/src/Plugin/Field/FieldType/AccessModelItem.php
+[refactoring] modules/contrib/access_conditions/modules/entity/src/Plugin/Field/FieldWidget/AccessModelReferenceAutocompleteWidget.php
+[refactoring] modules/contrib/access_conditions/src/AccessChecker.php
+[refactoring] modules/contrib/access_conditions/src/AccessModelListBuilder.php
+[refactoring] modules/contrib/access_conditions/src/Entity/AccessModel.php
+[refactoring] modules/contrib/access_conditions/src/Entity/AccessModelInterface.php
+[refactoring] modules/contrib/access_conditions/src/Form/AccessModelAddForm.php
+[refactoring] modules/contrib/access_conditions/src/Form/AccessModelDeleteForm.php
+[refactoring] modules/contrib/access_conditions/src/Form/AccessModelEditForm.php
+[refactoring] modules/contrib/access_conditions/src/Form/ConditionAddForm.php
+[refactoring] modules/contrib/access_conditions/src/Form/ConditionDeleteForm.php
+[refactoring] modules/contrib/access_conditions/src/Form/ConditionEditForm.php
+[refactoring] modules/contrib/access_conditions/src/Plugin/Condition/AccessModel.php
+[printing] modules/contrib/access_conditions/modules/entity/access_conditions_entity.module
+[printing] modules/contrib/access_conditions/modules/entity/src/AbstractEnum.php
+[printing] modules/contrib/access_conditions/modules/entity/src/EntityOperation.php
+[printing] modules/contrib/access_conditions/modules/entity/src/Plugin/Field/FieldFormatter/AccessModelReferenceFormatter.php
+[printing] modules/contrib/access_conditions/modules/entity/src/Plugin/Field/FieldType/AccessModelItem.php
+[printing] modules/contrib/access_conditions/modules/entity/src/Plugin/Field/FieldWidget/AccessModelReferenceAutocompleteWidget.php
+[printing] modules/contrib/access_conditions/src/AccessChecker.php
+[printing] modules/contrib/access_conditions/src/AccessModelListBuilder.php
+[printing] modules/contrib/access_conditions/src/Entity/AccessModel.php
+[printing] modules/contrib/access_conditions/src/Entity/AccessModelInterface.php
+[printing] modules/contrib/access_conditions/src/Form/AccessModelAddForm.php
+[printing] modules/contrib/access_conditions/src/Form/AccessModelDeleteForm.php
+[printing] modules/contrib/access_conditions/src/Form/AccessModelEditForm.php
+[printing] modules/contrib/access_conditions/src/Form/ConditionAddForm.php
+[printing] modules/contrib/access_conditions/src/Form/ConditionDeleteForm.php
+[printing] modules/contrib/access_conditions/src/Form/ConditionEditForm.php
+[printing] modules/contrib/access_conditions/src/Plugin/Condition/AccessModel.php
+
+
+5 files with changes
+====================
+
+1) modules/contrib/access_conditions/src/Form/AccessModelAddForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -57,7 +57,7 @@
+     $status = $this->save($form, $form_state);
+
+     if ($status == SAVED_NEW) {
+-      drupal_set_message($this->t('The access model configuration has been saved.'));
++      $this->messenger()->addStatus($this->t('The access model configuration has been saved.'));
+     }
+     $form_state->setRedirect('entity.access_model.edit_form', ['access_model' => $this->entity->id()]);
+   }
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+2) modules/contrib/access_conditions/src/Form/AccessModelEditForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -169,7 +169,7 @@
+
+     parent::submitForm($form, $form_state);
+
+-    drupal_set_message($this->t('The access model configuration has been updated.'));
++    $this->messenger()->addStatus($this->t('The access model configuration has been updated.'));
+     $form_state->setRedirect('entity.access_model.collection');
+   }
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+3) modules/contrib/access_conditions/src/Form/ConditionAddForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -131,7 +131,7 @@
+       $this->accessModel->set('access_conditions', $conditions);
+     }
+     else {
+-      drupal_set_message($this->t('The access model condition has been added.'));
++      $this->messenger()->addStatus($this->t('The access model condition has been added.'));
+       $this->accessModel->addAccessCondition($instance->getConfiguration());
+     }
+     $this->accessModel->save();
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+4) modules/contrib/access_conditions/src/Form/ConditionDeleteForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -121,7 +121,7 @@
+       unset($conditions[$id]);
+       $this->accessModel->set('access_conditions', $conditions);
+       $this->accessModel->save();
+-      drupal_set_message($this->t('The access model condition has been deleted.'));
++      $this->messenger()->addStatus($this->t('The access model condition has been deleted.'));
+     }
+
+     $form_state->setRedirect('entity.access_model.edit_form', ['access_model' => $this->accessModel->id()]);
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+5) modules/contrib/access_conditions/src/Form/ConditionEditForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -32,7 +32,7 @@
+   public function submitForm(array &$form, FormStateInterface $form_state) {
+     parent::submitForm($form, $form_state);
+
+-    drupal_set_message($this->t('The access model condition has been updated.'));
++    $this->messenger()->addStatus($this->t('The access model condition has been updated.'));
+   }
+
+ }
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+ [OK] Rector is done! 5 files have been changed.                                
+

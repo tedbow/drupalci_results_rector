@@ -1,0 +1,236 @@
+diff --git a/abookings.module b/abookings.module
+index dbaadbc..2be063c 100644
+--- a/abookings.module
++++ b/abookings.module
+@@ -427,7 +427,7 @@ function check_confirmed_bookings() {
+ 
+     $prearrival_hours = \Drupal::config('abookings.bookingsettings')->get('prearrival_hours');
+     // kint($prearrival_hours, '$prearrival_hours');
+-    $checkin_timestamp = \Drupal\Core\Datetime\DrupalDateTime
++    $checkin_timestamp = DrupalDateTime
+       ::createFromFormat('Y-m-d:H:i', $checkin_date . ':' . $checkin_time)->format('U');
+     // kint($checkin_timestamp, '$checkin_timestamp');
+     $prearrival_timestamp = intval($checkin_timestamp) - ($prearrival_hours * 60 * 60);
+@@ -444,7 +444,7 @@ function check_confirmed_bookings() {
+ 
+     // If past checkout time, complete the booking process
+ 
+-    $checkout_date_timestamp = \Drupal\Core\Datetime\DrupalDateTime
++    $checkout_date_timestamp = DrupalDateTime
+       ::createFromFormat('Y-m-d:H:i', $checkout_date . ':' . $checkout_time)->format('U');
+     // kint($checkout_date_timestamp, '$checkout_date_timestamp');
+ 
+diff --git a/includes/emails.inc b/includes/emails.inc
+index 155f2ff..56a0643 100644
+--- a/includes/emails.inc
++++ b/includes/emails.inc
+@@ -3,12 +3,11 @@
+  * @file
+  * Contains emails abookings.module.
+  */
+-
+ /**
+  * CONTENTS
+- * 
++ *
+  * send_booking_email()
+- * 
++ *
+  * send_confirmation_email()
+  * send_provis_booking_email()
+  * send_prearrival_email()
+@@ -16,7 +15,6 @@
+  * send_expired_booking_email()
+  * send_completed_booking_email()
+  */
+-
+ use Drupal\node\Entity\Node;
+ 
+ 
+@@ -92,14 +90,14 @@ function send_booking_email($subject, $body, $to, $key) {
+   if ($result['result'] != true) {
+     $message = t('There was a problem sending your email notification to @email, email key: @key.',
+       array('@email' => $to, '@key' => $key));
+-    drupal_set_message($message, 'error');
++    \Drupal::messenger()->addError($message);
+     \Drupal::logger('mail-log')->error($message);
+     return;
+   }
+ 
+   $message = t('An email notification has been sent to @email, email key: @key.',
+     array('@email' => $to, '@key' => $key));
+-  drupal_set_message($message);
++  \Drupal::messenger()->addStatus($message);
+   \Drupal::logger('mail-log')->notice($message);
+ }
+ 
+@@ -339,4 +337,4 @@ function send_completed_booking_email(Node $booking, Node $bookable) {
+     $notifn_emails_addresses_st, $email_key);
+ 
+   log_email_to_history($booking, 'Booking completed; feedback asked for.');
+-}
+\ No newline at end of file
++}
+diff --git a/includes/queries.inc b/includes/queries.inc
+index 6e13ba2..8c13d0d 100644
+--- a/includes/queries.inc
++++ b/includes/queries.inc
+@@ -1,4 +1,5 @@
+ <?php
++use Drupal\Core\Datetime\DrupalDateTime;
+ /**
+  * @file
+  * Contains functions that query site data such as fetching bookings.
+@@ -143,13 +144,13 @@ function get_seasons_data() {
+     // Get Start date as unix timestamp
+     $start_iso_8601_date = $season->get('field_start_date')->get(0)
+       ->getValue()['value'];
+-    $start_timestamp = \Drupal\Core\Datetime\DrupalDateTime
++    $start_timestamp = DrupalDateTime
+       ::createFromFormat('Y-m-d', $start_iso_8601_date)->format('U'); // 'c'
+ 
+     // Get End date as unix timestamp
+     $end_iso_8601_date = $season->get('field_end_date')->get(0)
+       ->getValue()['value'];
+-    $end_timestamp = \Drupal\Core\Datetime\DrupalDateTime
++    $end_timestamp = DrupalDateTime
+       ::createFromFormat('Y-m-d', $end_iso_8601_date)->format('U'); // 'c'
+ 
+     // Add season data to drupalSettings (for JS to use)
+@@ -180,13 +181,13 @@ function get_bookings_data() {
+     // Get Check-in date as unix timestamp
+     $checkin_iso_8601_date = $booking->get('field_checkin_date')->get(0)
+       ->getValue()['value'];
+-    $checkin_timestamp = \Drupal\Core\Datetime\DrupalDateTime
++    $checkin_timestamp = DrupalDateTime
+       ::createFromFormat('Y-m-d', $checkin_iso_8601_date)->format('U'); // 'c'
+ 
+     // Get Check-out date as unix timestamp
+     $checkout_iso_8601_date = $booking->get('field_checkout_date')->get(0)
+       ->getValue()['value'];
+-    $checkout_timestamp = \Drupal\Core\Datetime\DrupalDateTime
++    $checkout_timestamp = DrupalDateTime
+       ::createFromFormat('Y-m-d', $checkout_iso_8601_date)->format('U'); // 'c'
+ 
+     // Add booking data to drupalSettings (for JS to use)
+diff --git a/libraries/fullcalendar/demos/php/get-events.php b/libraries/fullcalendar/demos/php/get-events.php
+index 5b7b388..460523b 100644
+--- a/libraries/fullcalendar/demos/php/get-events.php
++++ b/libraries/fullcalendar/demos/php/get-events.php
+@@ -47,4 +47,4 @@ foreach ($input_arrays as $array) {
+ }
+ 
+ // Send JSON to the client.
+-echo json_encode($output_arrays);
+\ No newline at end of file
++echo json_encode($output_arrays);
+diff --git a/libraries/fullcalendar/demos/php/get-timezones.php b/libraries/fullcalendar/demos/php/get-timezones.php
+index 241e1bd..95ef07d 100644
+--- a/libraries/fullcalendar/demos/php/get-timezones.php
++++ b/libraries/fullcalendar/demos/php/get-timezones.php
+@@ -6,4 +6,4 @@
+ // Requires PHP 5.2.0 or higher.
+ //--------------------------------------------------------------------------------------------------
+ 
+-echo json_encode(DateTimeZone::listIdentifiers());
+\ No newline at end of file
++echo json_encode(DateTimeZone::listIdentifiers());
+diff --git a/modules/booking/booking.module b/modules/booking/booking.module
+index e149d9a..f4b59a2 100644
+--- a/modules/booking/booking.module
++++ b/modules/booking/booking.module
+@@ -138,9 +138,6 @@ function booking_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+ 
+ 
+ 
+-/**
+- *
+- */
+ function get_line_items($booking_nid, $type) {
+   $l_items = [];
+ 
+diff --git a/modules/bookings_backend/bookings_backend.module b/modules/bookings_backend/bookings_backend.module
+index 1d3f317..8b80325 100644
+--- a/modules/bookings_backend/bookings_backend.module
++++ b/modules/bookings_backend/bookings_backend.module
+@@ -76,4 +76,4 @@ function bookings_backend_views_post_render(ViewExecutable $view, &$output, Cach
+   // kint($cache, '$cache');
+ 
+   $output['#attached']['library'][] = 'bookings_backend/booking_views';
+-}
+\ No newline at end of file
++}
+diff --git a/modules/bookings_backend/src/Controller/BookingController.php b/modules/bookings_backend/src/Controller/BookingController.php
+index ae2491a..fcde415 100644
+--- a/modules/bookings_backend/src/Controller/BookingController.php
++++ b/modules/bookings_backend/src/Controller/BookingController.php
+@@ -132,7 +132,7 @@ class BookingController extends ControllerBase {
+ 
+     // Prepare the response
+ 
+-    $url = $booking->urlInfo('canonical', ['absolute' => TRUE])->toString(TRUE);
++    $url = $booking->toUrl('canonical', ['absolute' => TRUE])->toString(TRUE);
+     // $response = new ModifiedResourceResponse($booking, 201, [
+     //   'Location' => $url->getGeneratedUrl()
+     // ]);
+diff --git a/modules/season/season.module b/modules/season/season.module
+index abb0f9b..7da803b 100644
+--- a/modules/season/season.module
++++ b/modules/season/season.module
+@@ -1,5 +1,6 @@
+ <?php
+ 
++use Drupal\Core\Form\FormStateInterface;
+ /**
+  * @file
+  * Contains season.module.
+@@ -36,7 +37,7 @@ function season_help($route_name, RouteMatchInterface $route_match) {
+  * Implements hook_form_FORM_ID_alter().
+  */
+ function season_form_node_season_edit_form_alter(&$form,
+-  \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
++  FormStateInterface $form_state, $form_id) {
+   $form['#validate'][] = 'validate_season';
+ }
+ 
+diff --git a/src/Controller/BookingStatsPageController.php b/src/Controller/BookingStatsPageController.php
+index a46fab9..9047efb 100644
+--- a/src/Controller/BookingStatsPageController.php
++++ b/src/Controller/BookingStatsPageController.php
+@@ -2,6 +2,7 @@
+ 
+ namespace Drupal\abookings\Controller;
+ 
++use Drupal\Core\Datetime\DrupalDateTime;
+ use Drupal\Core\Controller\ControllerBase;
+ 
+ /**
+@@ -76,7 +77,7 @@ function get_booking_data($bookable_nid) {
+   $current_timestamp = time();
+   // $timezone = drupal_get_user_timezone();
+   // kint($timezone, '$timezone');
+-  $datetime = \Drupal\Core\Datetime\DrupalDateTime
++  $datetime = DrupalDateTime
+     ::createFromFormat('U', $current_timestamp);
+   // drupal_set_message(t('1'), 'status', FALSE);
+ 
+@@ -189,7 +190,7 @@ function stats_get_occupancy_perc($date_ranges, $bookable_nid = NULL) {
+     }
+     // kint($nodes, '$nodes');
+ 
+-    $i_date = \Drupal\Core\Datetime\DrupalDateTime
++    $i_date = DrupalDateTime
+       ::createFromFormat('Y-m-d', $dates_pair[1]);
+     $start_month = intval($i_date->format('n'));
+     $start_year = intval($i_date->format('Y'));
+diff --git a/tests/src/Unit/ExampleConversionsTest.php b/tests/src/Unit/ExampleConversionsTest.php
+index b076793..484da40 100644
+--- a/tests/src/Unit/ExampleConversionsTest.php
++++ b/tests/src/Unit/ExampleConversionsTest.php
+@@ -35,4 +35,4 @@ class ExampleConversionsTest extends UnitTestCase {
+     $this->assertEquals(12, 11 + 1);
+   }
+  
+-}
+\ No newline at end of file
++}

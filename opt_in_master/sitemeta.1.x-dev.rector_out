@@ -1,0 +1,25 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/sitemeta/sitemeta.module
+[parsing] modules/contrib/sitemeta/src/Entity/SiteMeta.php
+[parsing] modules/contrib/sitemeta/src/Entity/SiteMetaInterface.php
+[parsing] modules/contrib/sitemeta/src/Form/SiteMetaForm.php
+[parsing] modules/contrib/sitemeta/src/SiteMetaListBuilder.php
+[parsing] modules/contrib/sitemeta/src/SitemetaGenerator.php
+[refactoring] modules/contrib/sitemeta/sitemeta.module
+[refactoring] modules/contrib/sitemeta/src/Entity/SiteMeta.php
+[refactoring] modules/contrib/sitemeta/src/Entity/SiteMetaInterface.php
+[refactoring] modules/contrib/sitemeta/src/Form/SiteMetaForm.php
+[refactoring] modules/contrib/sitemeta/src/SiteMetaListBuilder.php
+[refactoring] modules/contrib/sitemeta/src/SitemetaGenerator.php
+[printing] modules/contrib/sitemeta/sitemeta.module
+[printing] modules/contrib/sitemeta/src/Entity/SiteMeta.php
+[printing] modules/contrib/sitemeta/src/Entity/SiteMetaInterface.php
+[printing] modules/contrib/sitemeta/src/Form/SiteMetaForm.php
+[printing] modules/contrib/sitemeta/src/SiteMetaListBuilder.php
+[printing] modules/contrib/sitemeta/src/SitemetaGenerator.php
+
+
+ [OK] Rector is done!                                                           
+

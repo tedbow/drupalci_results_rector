@@ -1,0 +1,51 @@
+diff --git a/entity.drush.inc b/entity.drush.inc
+index d0b257c..7a2bcb7 100644
+--- a/entity.drush.inc
++++ b/entity.drush.inc
+@@ -1,5 +1,6 @@
+ <?php
+ 
++use SebastianBergmann\Exporter\Exporter;
+ /**
+  * @file
+  *   Drush support for entities.
+@@ -448,7 +449,7 @@ function _drush_entity_id_list($entity_type, array $bundles = array(), $print =
+           $sql .= "IN (" . db_placeholders($bundles, 'varchar') . ")";
+         }
+       }
+-      $result = db_query($sql, $bundles);
++      $result = \Drupal::database()->query($sql, $bundles);
+       // Create our own list of ids, to mimic return from EFQ.
+       while ($row = db_fetch_object($result)) {
+         $entities[$entity_type][$row->id] = $row->id;
+@@ -1031,8 +1032,8 @@ function _drush_entity_delete_node(array $nids = array()) {
+     // node-delete is implemented this way to prevent calling cache_clear_all() for each node.
+     foreach ($nids as $nid) {
+       $node = node_load($nid, NULL, TRUE);
+-      db_query('DELETE FROM {node} WHERE nid = %d', $nid);
+-      db_query('DELETE FROM {node_revisions} WHERE nid = %d', $nid);
++      \Drupal::database()->query('DELETE FROM {node} WHERE nid = %d', $nid);
++      \Drupal::database()->query('DELETE FROM {node_revisions} WHERE nid = %d', $nid);
+       node_invoke($node, 'delete');
+       node_invoke_nodeapi($node, 'delete');
+       if (function_exists('search_wipe')) {
+@@ -1064,8 +1065,8 @@ function _drush_entity_get_info($entity_type = NULL, $count = FALSE) {
+ 
+       $entities_info = array();
+ 
+-      $exporter = new \SebastianBergmann\Exporter\Exporter();
+-      foreach(\Drupal::entityManager()->getDefinitions() as $id => $definition) {
++      $exporter = new Exporter();
++      foreach(\Drupal::service('entity_type.manager')->getDefinitions() as $id => $definition) {
+         if (is_a($definition ,'Drupal\Core\Entity\ContentEntityType')) {
+           $entities_info[$id] = $exporter->toArray($definition);
+         }
+@@ -1159,7 +1160,7 @@ function _drush_entity_get_info($entity_type = NULL, $count = FALSE) {
+       // Added entity counts
+       foreach ($entities_info as $key => $info) {
+         $table = db_escape_table($info['base table']);
+-        $entities_info[$key]['drush']['count'] = db_result(db_query("SELECT COUNT(*) FROM {{$table}}"));
++        $entities_info[$key]['drush']['count'] = db_result(\Drupal::database()->query("SELECT COUNT(*) FROM {{$table}}"));
+       }
+     }
+     else if ($version < 8) {

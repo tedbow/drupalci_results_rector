@@ -1,0 +1,5 @@
+commit cbec93f2b7600e4132f2e5e2999a2c56ce6411a2
+Author: Drupalci Testbot <git@drupal.org>
+Date:   Thu May 14 19:57:10 2020 +0000
+
+    git project before rector

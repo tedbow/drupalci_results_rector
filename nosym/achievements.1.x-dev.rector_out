@@ -1,0 +1,183 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/achievements/achievements.api.php
+[parsing] modules/contrib/achievements/achievements.install
+[parsing] modules/contrib/achievements/achievements.module
+[parsing] modules/contrib/achievements/achievements.pages.inc
+[parsing] modules/contrib/achievements/achievements.views.inc
+[parsing] modules/contrib/achievements/src/AchievementEntityHtmlRouteProvider.php
+[parsing] modules/contrib/achievements/src/AchievementEntityListBuilder.php
+[parsing] modules/contrib/achievements/src/Controller/AchievementsController.php
+[parsing] modules/contrib/achievements/src/Entity/AchievementEntity.php
+[parsing] modules/contrib/achievements/src/Entity/AchievementEntityInterface.php
+[parsing] modules/contrib/achievements/src/Entity/AchievementEntityViewBuilder.php
+[parsing] modules/contrib/achievements/src/Form/AchievementEntityDeleteForm.php
+[parsing] modules/contrib/achievements/src/Form/AchievementEntityForm.php
+[parsing] modules/contrib/achievements/src/Form/AdminForm.php
+[parsing] modules/contrib/achievements/src/Plugin/views/argument/AchievementId.php
+[parsing] modules/contrib/achievements/src/Plugin/views/field/AchievementConfig.php
+[parsing] modules/contrib/achievements/src/Plugin/views/field/LatestAchievement.php
+[parsing] modules/contrib/achievements/src/Tests/Form/AdminFormTest.php
+[refactoring] modules/contrib/achievements/achievements.api.php
+[refactoring] modules/contrib/achievements/achievements.install
+[refactoring] modules/contrib/achievements/achievements.module
+[refactoring] modules/contrib/achievements/achievements.pages.inc
+[refactoring] modules/contrib/achievements/achievements.views.inc
+[refactoring] modules/contrib/achievements/src/AchievementEntityHtmlRouteProvider.php
+[refactoring] modules/contrib/achievements/src/AchievementEntityListBuilder.php
+[refactoring] modules/contrib/achievements/src/Controller/AchievementsController.php
+[refactoring] modules/contrib/achievements/src/Entity/AchievementEntity.php
+[refactoring] modules/contrib/achievements/src/Entity/AchievementEntityInterface.php
+[refactoring] modules/contrib/achievements/src/Entity/AchievementEntityViewBuilder.php
+[refactoring] modules/contrib/achievements/src/Form/AchievementEntityDeleteForm.php
+[refactoring] modules/contrib/achievements/src/Form/AchievementEntityForm.php
+[refactoring] modules/contrib/achievements/src/Form/AdminForm.php
+[refactoring] modules/contrib/achievements/src/Plugin/views/argument/AchievementId.php
+[refactoring] modules/contrib/achievements/src/Plugin/views/field/AchievementConfig.php
+[refactoring] modules/contrib/achievements/src/Plugin/views/field/LatestAchievement.php
+[refactoring] modules/contrib/achievements/src/Tests/Form/AdminFormTest.php
+[printing] modules/contrib/achievements/achievements.api.php
+[printing] modules/contrib/achievements/achievements.install
+[printing] modules/contrib/achievements/achievements.module
+[printing] modules/contrib/achievements/achievements.pages.inc
+[printing] modules/contrib/achievements/achievements.views.inc
+[printing] modules/contrib/achievements/src/AchievementEntityHtmlRouteProvider.php
+[printing] modules/contrib/achievements/src/AchievementEntityListBuilder.php
+[printing] modules/contrib/achievements/src/Controller/AchievementsController.php
+[printing] modules/contrib/achievements/src/Entity/AchievementEntity.php
+[printing] modules/contrib/achievements/src/Entity/AchievementEntityInterface.php
+[printing] modules/contrib/achievements/src/Entity/AchievementEntityViewBuilder.php
+[printing] modules/contrib/achievements/src/Form/AchievementEntityDeleteForm.php
+[printing] modules/contrib/achievements/src/Form/AchievementEntityForm.php
+[printing] modules/contrib/achievements/src/Form/AdminForm.php
+[printing] modules/contrib/achievements/src/Plugin/views/argument/AchievementId.php
+[printing] modules/contrib/achievements/src/Plugin/views/field/AchievementConfig.php
+[printing] modules/contrib/achievements/src/Plugin/views/field/LatestAchievement.php
+[printing] modules/contrib/achievements/src/Tests/Form/AdminFormTest.php
+
+
+5 files with changes
+====================
+
+1) modules/contrib/achievements/achievements.api.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -1,5 +1,6 @@
+ <?php
+
++use Drupal\Core\Entity\EntityInterface;
+ /**
+  * @file
+  * Hooks provided by the Achievements module and how to implement them.
+@@ -8,7 +9,7 @@
+ /**
+  * Implements hook_entity_insert().
+  */
+-function achievements_example_entity_insert(Drupal\Core\Entity\EntityInterface $entity) {
++function achievements_example_entity_insert(EntityInterface $entity) {
+   if ($entity->getEntityType()->id() == 'comment') {
+     /** @var \Drupal\comment\Entity\Comment $comment */
+     $comment = $entity;
+@@ -60,7 +61,7 @@
+  */
+ function example_node_insert($node) {
+   // Sometimes, we don't need any storage at all.
+-  if (format_date(\Drupal::time()->getRequestTime(), 'custom', 'D') == 'Mon') {
++  if (\Drupal::service('date.formatter')->format(\Drupal::time()->getRequestTime(), 'custom', 'D') == 'Mon') {
+     achievements_unlocked('node-mondays', $node->uid);
+   }
+ }
+@@ -177,7 +178,7 @@
+  *   or NULL if there's no change to the user's default access.
+  */
+ function example_achievements_access_earn($uid) {
+-  $account = \Drupal::entityManager()->getStorage('user')->load($uid);
++  $account = \Drupal::service('entity_type.manager')->getStorage('user')->load($uid);
+   if (format_username($account) == 'Morbus Iff') {
+     // always, mastah, alllwayyYAYsss.
+     return TRUE;
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\EntityManagerRector
+ * DrupalRector\Rector\Deprecation\FormatDateRector
+
+
+2) modules/contrib/achievements/achievements.module
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -152,9 +152,6 @@
+   return $achievements[$achievement_id];
+ }
+
+-/**
+- *
+- */
+ function achievements_load_all($reset = FALSE) {
+   $achievements = &drupal_static(__FUNCTION__);
+   if (!isset($achievements) || $reset) {
+    ----------- end diff -----------
+
+3) modules/contrib/achievements/achievements.pages.inc
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -4,12 +4,10 @@
+  * @file
+  * Page callbacks for the Achievements module.
+  */
+-
+ /**
+  * Default theme for the wrapper around a user's achievements page.
+  *
+- * @param $variables
+- *   An associative array containing:
++ * @param $variables   An associative array containing:
+  *   - element: A render containing the user's achievements page.
+  */
+ function theme_achievement_groups_wrapper($variables) {
+    ----------- end diff -----------
+
+4) modules/contrib/achievements/src/Entity/AchievementEntityViewBuilder.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -5,9 +5,6 @@
+ use Drupal\Core\Entity\EntityInterface;
+ use Drupal\Core\Entity\EntityViewBuilder;
+
+-/**
+- *
+- */
+ class AchievementEntityViewBuilder extends EntityViewBuilder {
+
+   /**
+    ----------- end diff -----------
+
+5) modules/contrib/achievements/src/Form/AdminForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -13,9 +13,6 @@
+  */
+ class AdminForm extends ConfigFormBase {
+
+-  /**
+-   *
+-   */
+   public static function create(ContainerInterface $container) {
+     return new static(
+       $container->get('config.factory')
+    ----------- end diff -----------
+
+ [OK] Rector is done! 5 files have been changed.                                
+

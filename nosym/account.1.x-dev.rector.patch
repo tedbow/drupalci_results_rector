@@ -1,0 +1,197 @@
+diff --git a/account.page.inc b/account.page.inc
+index fab6208..e99f8d8 100644
+--- a/account.page.inc
++++ b/account.page.inc
+@@ -1,5 +1,6 @@
+ <?php
+ 
++use Drupal\Core\Url;
+ /**
+  * @file
+  * Contains account.page.inc.
+@@ -42,13 +43,13 @@ function template_preprocess_account(array &$variables)
+   $variables['links'][] = [
+     '#title' => t('查看账户流水'),
+     '#type' => 'link',
+-    '#url' => \Drupal\Core\Url::fromRoute('view.ledgers.page_1', ['account_id' => $account->id()]),
++    '#url' => Url::fromRoute('view.ledgers.page_1', ['account_id' => $account->id()]),
+   ];
+   // 调整账户余额按钮
+   $variables['links'][] = [
+     '#title' => t('调整账户余额'),
+     '#type' => 'link',
+-    '#url' => \Drupal\Core\Url::fromRoute('account.manual_add_account_ledger_form', ['account_id' => $account->id()]),
++    '#url' => Url::fromRoute('account.manual_add_account_ledger_form', ['account_id' => $account->id()]),
+   ];
+ 
+   // 账户统计表
+diff --git a/src/Form/AccountForm.php b/src/Form/AccountForm.php
+index d853901..78198f2 100644
+--- a/src/Form/AccountForm.php
++++ b/src/Form/AccountForm.php
+@@ -34,13 +34,13 @@ class AccountForm extends ContentEntityForm {
+ 
+     switch ($status) {
+       case SAVED_NEW:
+-        drupal_set_message($this->t('Created the %label Account.', [
++        $this->messenger()->addStatus($this->t('Created the %label Account.', [
+           '%label' => $entity->label(),
+         ]));
+         break;
+ 
+       default:
+-        drupal_set_message($this->t('Saved the %label Account.', [
++        $this->messenger()->addStatus($this->t('Saved the %label Account.', [
+           '%label' => $entity->label(),
+         ]));
+     }
+diff --git a/src/Form/AccountTypeDeleteForm.php b/src/Form/AccountTypeDeleteForm.php
+index 78e338e..3a6b0e2 100644
+--- a/src/Form/AccountTypeDeleteForm.php
++++ b/src/Form/AccountTypeDeleteForm.php
+@@ -38,14 +38,12 @@ class AccountTypeDeleteForm extends EntityConfirmFormBase {
+   public function submitForm(array &$form, FormStateInterface $form_state) {
+     $this->entity->delete();
+ 
+-    drupal_set_message(
+-      $this->t('content @type: deleted @label.',
+-        [
+-          '@type' => $this->entity->bundle(),
+-          '@label' => $this->entity->label(),
+-        ]
+-        )
+-    );
++    $this->messenger()->addStatus($this->t('content @type: deleted @label.',
++      [
++        '@type' => $this->entity->bundle(),
++        '@label' => $this->entity->label(),
++      ]
++      ));
+ 
+     $form_state->setRedirectUrl($this->getCancelUrl());
+   }
+diff --git a/src/Form/AccountTypeForm.php b/src/Form/AccountTypeForm.php
+index 2234170..1f7d588 100644
+--- a/src/Form/AccountTypeForm.php
++++ b/src/Form/AccountTypeForm.php
+@@ -77,13 +77,13 @@ class AccountTypeForm extends EntityForm
+ 
+         switch ($status) {
+             case SAVED_NEW:
+-                drupal_set_message($this->t('Created the %label Account type.', [
++                $this->messenger()->addStatus($this->t('Created the %label Account type.', [
+                     '%label' => $account_type->label(),
+                 ]));
+                 break;
+ 
+             default:
+-                drupal_set_message($this->t('Saved the %label Account type.', [
++                $this->messenger()->addStatus($this->t('Saved the %label Account type.', [
+                     '%label' => $account_type->label(),
+                 ]));
+         }
+diff --git a/src/Form/LedgerForm.php b/src/Form/LedgerForm.php
+index 593d8e4..23f5590 100644
+--- a/src/Form/LedgerForm.php
++++ b/src/Form/LedgerForm.php
+@@ -34,13 +34,13 @@ class LedgerForm extends ContentEntityForm {
+ 
+     switch ($status) {
+       case SAVED_NEW:
+-        drupal_set_message($this->t('Created the %label Ledger.', [
++        $this->messenger()->addStatus($this->t('Created the %label Ledger.', [
+           '%label' => $entity->label(),
+         ]));
+         break;
+ 
+       default:
+-        drupal_set_message($this->t('Saved the %label Ledger.', [
++        $this->messenger()->addStatus($this->t('Saved the %label Ledger.', [
+           '%label' => $entity->label(),
+         ]));
+     }
+diff --git a/src/Form/TransferGatewayDeleteForm.php b/src/Form/TransferGatewayDeleteForm.php
+index 82e8018..3873864 100644
+--- a/src/Form/TransferGatewayDeleteForm.php
++++ b/src/Form/TransferGatewayDeleteForm.php
+@@ -38,14 +38,12 @@ class TransferGatewayDeleteForm extends EntityConfirmFormBase {
+   public function submitForm(array &$form, FormStateInterface $form_state) {
+     $this->entity->delete();
+ 
+-    drupal_set_message(
+-      $this->t('content @type: deleted @label.',
+-        [
+-          '@type' => $this->entity->bundle(),
+-          '@label' => $this->entity->label(),
+-        ]
+-        )
+-    );
++    $this->messenger()->addStatus($this->t('content @type: deleted @label.',
++      [
++        '@type' => $this->entity->bundle(),
++        '@label' => $this->entity->label(),
++      ]
++      ));
+ 
+     $form_state->setRedirectUrl($this->getCancelUrl());
+   }
+diff --git a/src/Form/TransferGatewayForm.php b/src/Form/TransferGatewayForm.php
+index 5d1d0e8..7f158a3 100644
+--- a/src/Form/TransferGatewayForm.php
++++ b/src/Form/TransferGatewayForm.php
+@@ -111,13 +111,13 @@ class TransferGatewayForm extends EntityForm {
+ 
+     switch ($status) {
+       case SAVED_NEW:
+-        drupal_set_message($this->t('Created the %label Transfer gateway.', [
++        $this->messenger()->addStatus($this->t('Created the %label Transfer gateway.', [
+           '%label' => $transfer_gateway->label(),
+         ]));
+         break;
+ 
+       default:
+-        drupal_set_message($this->t('Saved the %label Transfer gateway.', [
++        $this->messenger()->addStatus($this->t('Saved the %label Transfer gateway.', [
+           '%label' => $transfer_gateway->label(),
+         ]));
+     }
+diff --git a/src/Form/TransferMethodForm.php b/src/Form/TransferMethodForm.php
+index 611a5a4..d14a273 100644
+--- a/src/Form/TransferMethodForm.php
++++ b/src/Form/TransferMethodForm.php
+@@ -34,13 +34,13 @@ class TransferMethodForm extends ContentEntityForm {
+ 
+     switch ($status) {
+       case SAVED_NEW:
+-        drupal_set_message($this->t('Created the %label Transfer method.', [
++        $this->messenger()->addStatus($this->t('Created the %label Transfer method.', [
+           '%label' => $entity->label(),
+         ]));
+         break;
+ 
+       default:
+-        drupal_set_message($this->t('Saved the %label Transfer method.', [
++        $this->messenger()->addStatus($this->t('Saved the %label Transfer method.', [
+           '%label' => $entity->label(),
+         ]));
+     }
+diff --git a/src/Form/WithdrawForm.php b/src/Form/WithdrawForm.php
+index bd1dd54..d638c37 100644
+--- a/src/Form/WithdrawForm.php
++++ b/src/Form/WithdrawForm.php
+@@ -34,13 +34,13 @@ class WithdrawForm extends ContentEntityForm {
+ 
+     switch ($status) {
+       case SAVED_NEW:
+-        drupal_set_message($this->t('Created the %label Withdraw.', [
++        $this->messenger()->addStatus($this->t('Created the %label Withdraw.', [
+           '%label' => $entity->label(),
+         ]));
+         break;
+ 
+       default:
+-        drupal_set_message($this->t('Saved the %label Withdraw.', [
++        $this->messenger()->addStatus($this->t('Saved the %label Withdraw.', [
+           '%label' => $entity->label(),
+         ]));
+     }

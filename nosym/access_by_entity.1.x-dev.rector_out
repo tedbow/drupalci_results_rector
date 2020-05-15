@@ -1,0 +1,93 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/access_by_entity/access_by_entity.install
+[parsing] modules/contrib/access_by_entity/access_by_entity.module
+[parsing] modules/contrib/access_by_entity/src/AccessByEntityStorage.php
+[parsing] modules/contrib/access_by_entity/src/AccessByEntityStorageInterface.php
+[parsing] modules/contrib/access_by_entity/src/EntityTypeInfo.php
+[parsing] modules/contrib/access_by_entity/src/EventSubscriber/AccessByEntityKernelEventSubscriber.php
+[parsing] modules/contrib/access_by_entity/src/Form/AccessByEntityForm.php
+[parsing] modules/contrib/access_by_entity/src/Form/AccessByEntitySettingsForm.php
+[parsing] modules/contrib/access_by_entity/src/Plugin/Derivative/AccessByEntityLocalTask.php
+[parsing] modules/contrib/access_by_entity/src/Routing/RouteSubscriber.php
+[parsing] modules/contrib/access_by_entity/tests/bootstrap.php
+[parsing] modules/contrib/access_by_entity/tests/src/Unit/AccessByEntityTest.php
+[refactoring] modules/contrib/access_by_entity/access_by_entity.install
+[refactoring] modules/contrib/access_by_entity/access_by_entity.module
+[refactoring] modules/contrib/access_by_entity/src/AccessByEntityStorage.php
+[refactoring] modules/contrib/access_by_entity/src/AccessByEntityStorageInterface.php
+[refactoring] modules/contrib/access_by_entity/src/EntityTypeInfo.php
+[refactoring] modules/contrib/access_by_entity/src/EventSubscriber/AccessByEntityKernelEventSubscriber.php
+[refactoring] modules/contrib/access_by_entity/src/Form/AccessByEntityForm.php
+[refactoring] modules/contrib/access_by_entity/src/Form/AccessByEntitySettingsForm.php
+[refactoring] modules/contrib/access_by_entity/src/Plugin/Derivative/AccessByEntityLocalTask.php
+[refactoring] modules/contrib/access_by_entity/src/Routing/RouteSubscriber.php
+[refactoring] modules/contrib/access_by_entity/tests/bootstrap.php
+[refactoring] modules/contrib/access_by_entity/tests/src/Unit/AccessByEntityTest.php
+[printing] modules/contrib/access_by_entity/access_by_entity.install
+[printing] modules/contrib/access_by_entity/access_by_entity.module
+[printing] modules/contrib/access_by_entity/src/AccessByEntityStorage.php
+[printing] modules/contrib/access_by_entity/src/AccessByEntityStorageInterface.php
+[printing] modules/contrib/access_by_entity/src/EntityTypeInfo.php
+[printing] modules/contrib/access_by_entity/src/EventSubscriber/AccessByEntityKernelEventSubscriber.php
+[printing] modules/contrib/access_by_entity/src/Form/AccessByEntityForm.php
+[printing] modules/contrib/access_by_entity/src/Form/AccessByEntitySettingsForm.php
+[printing] modules/contrib/access_by_entity/src/Plugin/Derivative/AccessByEntityLocalTask.php
+[printing] modules/contrib/access_by_entity/src/Routing/RouteSubscriber.php
+[printing] modules/contrib/access_by_entity/tests/bootstrap.php
+[printing] modules/contrib/access_by_entity/tests/src/Unit/AccessByEntityTest.php
+
+
+2 files with changes
+====================
+
+1) modules/contrib/access_by_entity/src/Form/AccessByEntityForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -239,7 +239,7 @@
+     $tags = $entity->getCacheTags();
+     $this->cacheTagsInvalidator->invalidateTags($tags);
+
+-    drupal_set_message($this->t('The changes have been saved.'));
++    $this->messenger()->addStatus($this->t('The changes have been saved.'));
+   }
+
+ }
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+2) modules/contrib/access_by_entity/src/Form/AccessByEntitySettingsForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -97,11 +97,9 @@
+     $config = $this->config('access_by_entity.settings');
+     $config->set('access_by_entity.entity_types', $form_state->getValue('entity_types'));
+     $config->save();
+-    drupal_set_message(
+-      $this->t(
+-        'You need to clear cache manuelly so that the changes will be taken.'
+-      )
+-    );
++    $this->messenger()->addStatus($this->t(
++      'You need to clear cache manuelly so that the changes will be taken.'
++    ));
+     return parent::submitForm($form, $form_state);
+   }
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+ [OK] Rector is done! 2 files have been changed.                                
+

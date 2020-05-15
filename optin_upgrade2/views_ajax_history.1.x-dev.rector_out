@@ -1,0 +1,16 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/views_ajax_history/src/Plugin/views/display_extender/AjaxHistory.php
+[parsing] modules/contrib/views_ajax_history/views_ajax_history.install
+[parsing] modules/contrib/views_ajax_history/views_ajax_history.module
+[refactoring] modules/contrib/views_ajax_history/src/Plugin/views/display_extender/AjaxHistory.php
+[refactoring] modules/contrib/views_ajax_history/views_ajax_history.install
+[refactoring] modules/contrib/views_ajax_history/views_ajax_history.module
+[printing] modules/contrib/views_ajax_history/src/Plugin/views/display_extender/AjaxHistory.php
+[printing] modules/contrib/views_ajax_history/views_ajax_history.install
+[printing] modules/contrib/views_ajax_history/views_ajax_history.module
+
+
+ [OK] Rector is done!                                                           
+

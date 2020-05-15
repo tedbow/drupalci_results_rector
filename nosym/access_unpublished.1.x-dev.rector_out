@@ -1,0 +1,67 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/access_unpublished/access_unpublished.drush8.inc
+[parsing] modules/contrib/access_unpublished/access_unpublished.module
+[parsing] modules/contrib/access_unpublished/access_unpublished.tokens.inc
+[parsing] modules/contrib/access_unpublished/src/Access/LatestRevisionCheck.php
+[parsing] modules/contrib/access_unpublished/src/AccessTokenAccessControlHandler.php
+[parsing] modules/contrib/access_unpublished/src/AccessTokenInterface.php
+[parsing] modules/contrib/access_unpublished/src/AccessTokenListBuilder.php
+[parsing] modules/contrib/access_unpublished/src/AccessTokenManager.php
+[parsing] modules/contrib/access_unpublished/src/AccessUnpublishedPermissions.php
+[parsing] modules/contrib/access_unpublished/src/AccessUnpublishedServiceProvider.php
+[parsing] modules/contrib/access_unpublished/src/Controller/AccessTokenController.php
+[parsing] modules/contrib/access_unpublished/src/Entity/AccessToken.php
+[parsing] modules/contrib/access_unpublished/src/EntityFormAccessTokenListBuilder.php
+[parsing] modules/contrib/access_unpublished/src/Form/AccessUnpublishedForm.php
+[parsing] modules/contrib/access_unpublished/src/Form/SettingsForm.php
+[parsing] modules/contrib/access_unpublished/src/Routing/AccessTokenRouteProvider.php
+[parsing] modules/contrib/access_unpublished/tests/src/Functional/AccessTest.php
+[parsing] modules/contrib/access_unpublished/tests/src/Functional/ContentModerationAccessTest.php
+[parsing] modules/contrib/access_unpublished/tests/src/FunctionalJavascript/AccessUnpublishedTest.php
+[parsing] modules/contrib/access_unpublished/tests/src/Kernel/TokenTest.php
+[refactoring] modules/contrib/access_unpublished/access_unpublished.drush8.inc
+[refactoring] modules/contrib/access_unpublished/access_unpublished.module
+[refactoring] modules/contrib/access_unpublished/access_unpublished.tokens.inc
+[refactoring] modules/contrib/access_unpublished/src/Access/LatestRevisionCheck.php
+[refactoring] modules/contrib/access_unpublished/src/AccessTokenAccessControlHandler.php
+[refactoring] modules/contrib/access_unpublished/src/AccessTokenInterface.php
+[refactoring] modules/contrib/access_unpublished/src/AccessTokenListBuilder.php
+[refactoring] modules/contrib/access_unpublished/src/AccessTokenManager.php
+[refactoring] modules/contrib/access_unpublished/src/AccessUnpublishedPermissions.php
+[refactoring] modules/contrib/access_unpublished/src/AccessUnpublishedServiceProvider.php
+[refactoring] modules/contrib/access_unpublished/src/Controller/AccessTokenController.php
+[refactoring] modules/contrib/access_unpublished/src/Entity/AccessToken.php
+[refactoring] modules/contrib/access_unpublished/src/EntityFormAccessTokenListBuilder.php
+[refactoring] modules/contrib/access_unpublished/src/Form/AccessUnpublishedForm.php
+[refactoring] modules/contrib/access_unpublished/src/Form/SettingsForm.php
+[refactoring] modules/contrib/access_unpublished/src/Routing/AccessTokenRouteProvider.php
+[refactoring] modules/contrib/access_unpublished/tests/src/Functional/AccessTest.php
+[refactoring] modules/contrib/access_unpublished/tests/src/Functional/ContentModerationAccessTest.php
+[refactoring] modules/contrib/access_unpublished/tests/src/FunctionalJavascript/AccessUnpublishedTest.php
+[refactoring] modules/contrib/access_unpublished/tests/src/Kernel/TokenTest.php
+[printing] modules/contrib/access_unpublished/access_unpublished.drush8.inc
+[printing] modules/contrib/access_unpublished/access_unpublished.module
+[printing] modules/contrib/access_unpublished/access_unpublished.tokens.inc
+[printing] modules/contrib/access_unpublished/src/Access/LatestRevisionCheck.php
+[printing] modules/contrib/access_unpublished/src/AccessTokenAccessControlHandler.php
+[printing] modules/contrib/access_unpublished/src/AccessTokenInterface.php
+[printing] modules/contrib/access_unpublished/src/AccessTokenListBuilder.php
+[printing] modules/contrib/access_unpublished/src/AccessTokenManager.php
+[printing] modules/contrib/access_unpublished/src/AccessUnpublishedPermissions.php
+[printing] modules/contrib/access_unpublished/src/AccessUnpublishedServiceProvider.php
+[printing] modules/contrib/access_unpublished/src/Controller/AccessTokenController.php
+[printing] modules/contrib/access_unpublished/src/Entity/AccessToken.php
+[printing] modules/contrib/access_unpublished/src/EntityFormAccessTokenListBuilder.php
+[printing] modules/contrib/access_unpublished/src/Form/AccessUnpublishedForm.php
+[printing] modules/contrib/access_unpublished/src/Form/SettingsForm.php
+[printing] modules/contrib/access_unpublished/src/Routing/AccessTokenRouteProvider.php
+[printing] modules/contrib/access_unpublished/tests/src/Functional/AccessTest.php
+[printing] modules/contrib/access_unpublished/tests/src/Functional/ContentModerationAccessTest.php
+[printing] modules/contrib/access_unpublished/tests/src/FunctionalJavascript/AccessUnpublishedTest.php
+[printing] modules/contrib/access_unpublished/tests/src/Kernel/TokenTest.php
+
+
+ [OK] Rector is done!                                                           
+

@@ -1,0 +1,43 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/accessibility_scanner/accessibility_scanner.install
+[parsing] modules/contrib/accessibility_scanner/accessibility_scanner.module
+[parsing] modules/contrib/accessibility_scanner/src/Controller/AcheckerHistoryController.php
+[parsing] modules/contrib/accessibility_scanner/src/EventSubscriber/WebPageArchiveEventSubscriber.php
+[parsing] modules/contrib/accessibility_scanner/src/Plugin/CaptureResponse/AcheckerCaptureResponse.php
+[parsing] modules/contrib/accessibility_scanner/src/Plugin/CaptureUtility/AcheckerCaptureUtility.php
+[parsing] modules/contrib/accessibility_scanner/src/Plugin/views/area/AcheckerResult.php
+[parsing] modules/contrib/accessibility_scanner/src/Sql/AcheckerSummaryStorage.php
+[parsing] modules/contrib/accessibility_scanner/src/Sql/AcheckerSummaryStorageInterface.php
+[parsing] modules/contrib/accessibility_scanner/tests/src/Functional/AcheckerEndToEndTest.php
+[parsing] modules/contrib/accessibility_scanner/tests/src/Kernel/Plugin/CaptureResponse/AcheckerCaptureResponseTest.php
+[parsing] modules/contrib/accessibility_scanner/tests/src/Unit/Plugin/CaptureResponse/AcheckerCaptureResponseTest.php
+[refactoring] modules/contrib/accessibility_scanner/accessibility_scanner.install
+[refactoring] modules/contrib/accessibility_scanner/accessibility_scanner.module
+[refactoring] modules/contrib/accessibility_scanner/src/Controller/AcheckerHistoryController.php
+[refactoring] modules/contrib/accessibility_scanner/src/EventSubscriber/WebPageArchiveEventSubscriber.php
+[refactoring] modules/contrib/accessibility_scanner/src/Plugin/CaptureResponse/AcheckerCaptureResponse.php
+[refactoring] modules/contrib/accessibility_scanner/src/Plugin/CaptureUtility/AcheckerCaptureUtility.php
+[refactoring] modules/contrib/accessibility_scanner/src/Plugin/views/area/AcheckerResult.php
+[refactoring] modules/contrib/accessibility_scanner/src/Sql/AcheckerSummaryStorage.php
+[refactoring] modules/contrib/accessibility_scanner/src/Sql/AcheckerSummaryStorageInterface.php
+[refactoring] modules/contrib/accessibility_scanner/tests/src/Functional/AcheckerEndToEndTest.php
+[refactoring] modules/contrib/accessibility_scanner/tests/src/Kernel/Plugin/CaptureResponse/AcheckerCaptureResponseTest.php
+[refactoring] modules/contrib/accessibility_scanner/tests/src/Unit/Plugin/CaptureResponse/AcheckerCaptureResponseTest.php
+[printing] modules/contrib/accessibility_scanner/accessibility_scanner.install
+[printing] modules/contrib/accessibility_scanner/accessibility_scanner.module
+[printing] modules/contrib/accessibility_scanner/src/Controller/AcheckerHistoryController.php
+[printing] modules/contrib/accessibility_scanner/src/EventSubscriber/WebPageArchiveEventSubscriber.php
+[printing] modules/contrib/accessibility_scanner/src/Plugin/CaptureResponse/AcheckerCaptureResponse.php
+[printing] modules/contrib/accessibility_scanner/src/Plugin/CaptureUtility/AcheckerCaptureUtility.php
+[printing] modules/contrib/accessibility_scanner/src/Plugin/views/area/AcheckerResult.php
+[printing] modules/contrib/accessibility_scanner/src/Sql/AcheckerSummaryStorage.php
+[printing] modules/contrib/accessibility_scanner/src/Sql/AcheckerSummaryStorageInterface.php
+[printing] modules/contrib/accessibility_scanner/tests/src/Functional/AcheckerEndToEndTest.php
+[printing] modules/contrib/accessibility_scanner/tests/src/Kernel/Plugin/CaptureResponse/AcheckerCaptureResponseTest.php
+[printing] modules/contrib/accessibility_scanner/tests/src/Unit/Plugin/CaptureResponse/AcheckerCaptureResponseTest.php
+
+
+ [OK] Rector is done!                                                           
+

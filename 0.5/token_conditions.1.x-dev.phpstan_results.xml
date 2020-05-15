@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle>
+<file name="modules/contrib/token_conditions/src/Plugin/Condition/TokenMatcher.php">
+  <error line="90" column="1" severity="error" message="Parameter $entity_manager of method Drupal\token_conditions\Plugin\Condition\TokenMatcher::__construct() has typehint with deprecated interface Drupal\Core\Entity\EntityManagerInterface:
+in drupal:8.0.0 and is removed from drupal:9.0.0." />
+</file>
+<file name="modules/contrib/token_conditions/src/Tests/TokenMatcherTest.php">
+  <error line="17" column="1" severity="error" message="Class Drupal\token_conditions\Tests\TokenMatcherTest extends deprecated class Drupal\simpletest\WebTestBase:
+in drupal:8.8.0 and is removed from drupal:9.0.0. Instead,
+use \Drupal\Tests\BrowserTestBase. See https://www.drupal.org/node/3030340." />
+  <error line="53" column="1" severity="error" message="Call to method setUp() of deprecated class Drupal\simpletest\WebTestBase:
+in drupal:8.8.0 and is removed from drupal:9.0.0. Instead,
+use \Drupal\Tests\BrowserTestBase. See https://www.drupal.org/node/3030340." />
+</file>
+</checkstyle>

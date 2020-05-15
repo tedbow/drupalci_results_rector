@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle>
+<file name="modules/contrib/google_analytics/google_analytics.module">
+  <error line="216" column="1" severity="error" message="Call to deprecated method strlen() of class Drupal\Component\Utility\Unicode:
+in drupal:8.6.0 and is removed from drupal:9.0.0. Use
+mb_strlen() instead." />
+  <error line="216" column="1" severity="error" message="Call to deprecated method strlen() of class Drupal\Component\Utility\Unicode:
+in drupal:8.6.0 and is removed from drupal:9.0.0. Use
+mb_strlen() instead." />
+  <error line="224" column="1" severity="error" message="Call to deprecated method strlen() of class Drupal\Component\Utility\Unicode:
+in drupal:8.6.0 and is removed from drupal:9.0.0. Use
+mb_strlen() instead." />
+  <error line="522" column="1" severity="error" message="Call to deprecated function file_prepare_directory():
+in drupal:8.7.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\File\FileSystemInterface::prepareDirectory()." />
+  <error line="524" column="1" severity="error" message="Call to deprecated constant FILE_EXISTS_REPLACE: Deprecated in drupal:8.7.0 and is removed from drupal:9.0.0. Use \Drupal\Core\File\FileSystemInterface::EXISTS_REPLACE." />
+  <error line="524" column="1" severity="error" message="Call to deprecated function file_unmanaged_save_data():
+in drupal:8.7.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\File\FileSystemInterface::saveData()." />
+  <error line="527" column="1" severity="error" message="Call to deprecated constant FILE_EXISTS_REPLACE: Deprecated in drupal:8.7.0 and is removed from drupal:9.0.0. Use \Drupal\Core\File\FileSystemInterface::EXISTS_REPLACE." />
+  <error line="527" column="1" severity="error" message="Call to deprecated function file_unmanaged_save_data():
+in drupal:8.7.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\File\FileSystemInterface::saveData()." />
+  <error line="538" column="1" severity="error" message="Call to deprecated constant FILE_CREATE_DIRECTORY: Deprecated in drupal:8.7.0 and is removed from drupal:9.0.0. Use \Drupal\Core\File\FileSystemInterface::CREATE_DIRECTORY." />
+  <error line="538" column="1" severity="error" message="Call to deprecated function file_prepare_directory():
+in drupal:8.7.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\File\FileSystemInterface::prepareDirectory()." />
+  <error line="541" column="1" severity="error" message="Call to deprecated constant FILE_EXISTS_REPLACE: Deprecated in drupal:8.7.0 and is removed from drupal:9.0.0. Use \Drupal\Core\File\FileSystemInterface::EXISTS_REPLACE." />
+  <error line="541" column="1" severity="error" message="Call to deprecated function file_unmanaged_save_data():
+in drupal:8.7.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\File\FileSystemInterface::saveData()." />
+  <error line="544" column="1" severity="error" message="Call to deprecated constant FILE_EXISTS_REPLACE: Deprecated in drupal:8.7.0 and is removed from drupal:9.0.0. Use \Drupal\Core\File\FileSystemInterface::EXISTS_REPLACE." />
+  <error line="544" column="1" severity="error" message="Call to deprecated function file_unmanaged_save_data():
+in drupal:8.7.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\File\FileSystemInterface::saveData()." />
+  <error line="568" column="1" severity="error" message="Call to deprecated function file_prepare_directory():
+in drupal:8.7.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\File\FileSystemInterface::prepareDirectory()." />
+  <error line="569" column="1" severity="error" message="Call to deprecated function file_scan_directory():
+in drupal:8.8.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\File\FileSystemInterface::scanDirectory() instead." />
+  <error line="671" column="1" severity="error" message="Call to deprecated method strtolower() of class Drupal\Component\Utility\Unicode:
+in drupal:8.6.0 and is removed from drupal:9.0.0. Use
+mb_strtolower() instead." />
+  <error line="675" column="1" severity="error" message="Call to deprecated method strtolower() of class Drupal\Component\Utility\Unicode:
+in drupal:8.6.0 and is removed from drupal:9.0.0. Use
+mb_strtolower() instead." />
+</file>
+<file name="modules/contrib/google_analytics/src/Form/GoogleAnalyticsAdminSettingsForm.php">
+  <error line="586" column="1" severity="error" message="Call to deprecated method strlen() of class Drupal\Component\Utility\Unicode:
+in drupal:8.6.0 and is removed from drupal:9.0.0. Use
+mb_strlen() instead." />
+  <error line="595" column="1" severity="error" message="Call to deprecated method strlen() of class Drupal\Component\Utility\Unicode:
+in drupal:8.6.0 and is removed from drupal:9.0.0. Use
+mb_strlen() instead." />
+  <error line="724" column="1" severity="error" message="Call to deprecated method strlen() of class Drupal\Component\Utility\Unicode:
+in drupal:8.6.0 and is removed from drupal:9.0.0. Use
+mb_strlen() instead." />
+  <error line="949" column="1" severity="error" message="Call to deprecated method strlen() of class Drupal\Component\Utility\Unicode:
+in drupal:8.6.0 and is removed from drupal:9.0.0. Use
+mb_strlen() instead." />
+  <error line="952" column="1" severity="error" message="Call to deprecated method strlen() of class Drupal\Component\Utility\Unicode:
+in drupal:8.6.0 and is removed from drupal:9.0.0. Use
+mb_strlen() instead." />
+  <error line="997" column="1" severity="error" message="Call to deprecated method strtolower() of class Drupal\Component\Utility\Unicode:
+in drupal:8.6.0 and is removed from drupal:9.0.0. Use
+mb_strtolower() instead." />
+</file>
+<file name="modules/contrib/google_analytics/src/Tests/GoogleAnalyticsBasicTest.php">
+  <error line="14" column="1" severity="error" message="Class Drupal\google_analytics\Tests\GoogleAnalyticsBasicTest extends deprecated class Drupal\simpletest\WebTestBase:
+in drupal:8.8.0 and is removed from drupal:9.0.0. Instead,
+use \Drupal\Tests\BrowserTestBase. See https://www.drupal.org/node/3030340." />
+  <error line="38" column="1" severity="error" message="Call to method setUp() of deprecated class Drupal\simpletest\WebTestBase:
+in drupal:8.8.0 and is removed from drupal:9.0.0. Instead,
+use \Drupal\Tests\BrowserTestBase. See https://www.drupal.org/node/3030340." />
+</file>
+<file name="modules/contrib/google_analytics/src/Tests/GoogleAnalyticsCustomDimensionsAndMetricsTest.php">
+  <error line="15" column="1" severity="error" message="Class Drupal\google_analytics\Tests\GoogleAnalyticsCustomDimensionsAndMetricsTest extends deprecated class Drupal\simpletest\WebTestBase:
+in drupal:8.8.0 and is removed from drupal:9.0.0. Instead,
+use \Drupal\Tests\BrowserTestBase. See https://www.drupal.org/node/3030340." />
+  <error line="28" column="1" severity="error" message="Call to method setUp() of deprecated class Drupal\simpletest\WebTestBase:
+in drupal:8.8.0 and is removed from drupal:9.0.0. Instead,
+use \Drupal\Tests\BrowserTestBase. See https://www.drupal.org/node/3030340." />
+</file>
+<file name="modules/contrib/google_analytics/src/Tests/GoogleAnalyticsCustomUrls.php">
+  <error line="13" column="1" severity="error" message="Class Drupal\google_analytics\Tests\GoogleAnalyticsCustomUrls extends deprecated class Drupal\simpletest\WebTestBase:
+in drupal:8.8.0 and is removed from drupal:9.0.0. Instead,
+use \Drupal\Tests\BrowserTestBase. See https://www.drupal.org/node/3030340." />
+  <error line="26" column="1" severity="error" message="Call to method setUp() of deprecated class Drupal\simpletest\WebTestBase:
+in drupal:8.8.0 and is removed from drupal:9.0.0. Instead,
+use \Drupal\Tests\BrowserTestBase. See https://www.drupal.org/node/3030340." />
+</file>
+<file name="modules/contrib/google_analytics/src/Tests/GoogleAnalyticsPhpFilterTest.php">
+  <error line="15" column="1" severity="error" message="Class Drupal\google_analytics\Tests\GoogleAnalyticsPhpFilterTest extends deprecated class Drupal\simpletest\WebTestBase:
+in drupal:8.8.0 and is removed from drupal:9.0.0. Instead,
+use \Drupal\Tests\BrowserTestBase. See https://www.drupal.org/node/3030340." />
+  <error line="28" column="1" severity="error" message="Call to method setUp() of deprecated class Drupal\simpletest\WebTestBase:
+in drupal:8.8.0 and is removed from drupal:9.0.0. Instead,
+use \Drupal\Tests\BrowserTestBase. See https://www.drupal.org/node/3030340." />
+</file>
+<file name="modules/contrib/google_analytics/src/Tests/GoogleAnalyticsRolesTest.php">
+  <error line="13" column="1" severity="error" message="Class Drupal\google_analytics\Tests\GoogleAnalyticsRolesTest extends deprecated class Drupal\simpletest\WebTestBase:
+in drupal:8.8.0 and is removed from drupal:9.0.0. Instead,
+use \Drupal\Tests\BrowserTestBase. See https://www.drupal.org/node/3030340." />
+  <error line="26" column="1" severity="error" message="Call to method setUp() of deprecated class Drupal\simpletest\WebTestBase:
+in drupal:8.8.0 and is removed from drupal:9.0.0. Instead,
+use \Drupal\Tests\BrowserTestBase. See https://www.drupal.org/node/3030340." />
+</file>
+<file name="modules/contrib/google_analytics/src/Tests/GoogleAnalyticsSearchTest.php">
+  <error line="13" column="1" severity="error" message="Class Drupal\google_analytics\Tests\GoogleAnalyticsSearchTest extends deprecated class Drupal\simpletest\WebTestBase:
+in drupal:8.8.0 and is removed from drupal:9.0.0. Instead,
+use \Drupal\Tests\BrowserTestBase. See https://www.drupal.org/node/3030340." />
+  <error line="26" column="1" severity="error" message="Call to method setUp() of deprecated class Drupal\simpletest\WebTestBase:
+in drupal:8.8.0 and is removed from drupal:9.0.0. Instead,
+use \Drupal\Tests\BrowserTestBase. See https://www.drupal.org/node/3030340." />
+</file>
+<file name="modules/contrib/google_analytics/src/Tests/GoogleAnalyticsStatusMessagesTest.php">
+  <error line="12" column="1" severity="error" message="Class Drupal\google_analytics\Tests\GoogleAnalyticsStatusMessagesTest extends deprecated class Drupal\simpletest\WebTestBase:
+in drupal:8.8.0 and is removed from drupal:9.0.0. Instead,
+use \Drupal\Tests\BrowserTestBase. See https://www.drupal.org/node/3030340." />
+  <error line="25" column="1" severity="error" message="Call to method setUp() of deprecated class Drupal\simpletest\WebTestBase:
+in drupal:8.8.0 and is removed from drupal:9.0.0. Instead,
+use \Drupal\Tests\BrowserTestBase. See https://www.drupal.org/node/3030340." />
+</file>
+<file name="modules/contrib/google_analytics/src/Tests/GoogleAnalyticsUninstallTest.php">
+  <error line="12" column="1" severity="error" message="Class Drupal\google_analytics\Tests\GoogleAnalyticsUninstallTest extends deprecated class Drupal\simpletest\WebTestBase:
+in drupal:8.8.0 and is removed from drupal:9.0.0. Instead,
+use \Drupal\Tests\BrowserTestBase. See https://www.drupal.org/node/3030340." />
+  <error line="25" column="1" severity="error" message="Call to method setUp() of deprecated class Drupal\simpletest\WebTestBase:
+in drupal:8.8.0 and is removed from drupal:9.0.0. Instead,
+use \Drupal\Tests\BrowserTestBase. See https://www.drupal.org/node/3030340." />
+  <error line="55" column="1" severity="error" message="Call to deprecated function file_prepare_directory():
+in drupal:8.7.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\File\FileSystemInterface::prepareDirectory()." />
+  <error line="68" column="1" severity="error" message="Call to deprecated function file_scan_directory():
+in drupal:8.8.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\File\FileSystemInterface::scanDirectory() instead." />
+  <error line="69" column="1" severity="error" message="Call to deprecated function file_prepare_directory():
+in drupal:8.7.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\File\FileSystemInterface::prepareDirectory()." />
+</file>
+<file name="modules/contrib/google_analytics/src/Tests/GoogleAnalyticsUserFieldsTest.php">
+  <error line="12" column="1" severity="error" message="Class Drupal\google_analytics\Tests\GoogleAnalyticsUserFieldsTest extends deprecated class Drupal\simpletest\WebTestBase:
+in drupal:8.8.0 and is removed from drupal:9.0.0. Instead,
+use \Drupal\Tests\BrowserTestBase. See https://www.drupal.org/node/3030340." />
+  <error line="25" column="1" severity="error" message="Call to method setUp() of deprecated class Drupal\simpletest\WebTestBase:
+in drupal:8.8.0 and is removed from drupal:9.0.0. Instead,
+use \Drupal\Tests\BrowserTestBase. See https://www.drupal.org/node/3030340." />
+</file>
+</checkstyle>

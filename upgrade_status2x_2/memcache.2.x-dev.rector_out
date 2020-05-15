@@ -1,0 +1,197 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/memcache/memcache.install
+[parsing] modules/contrib/memcache/memcache_admin/memcache_admin.install
+[parsing] modules/contrib/memcache/memcache_admin/src/Controller/MemcacheStatisticsController.php
+[parsing] modules/contrib/memcache/memcache_admin/src/EventSubscriber/MemcacheAdminSubscriber.php
+[parsing] modules/contrib/memcache/memcache_admin/src/Form/MemcacheAdminSettingsForm.php
+[parsing] modules/contrib/memcache/src/Cache/TimestampCacheTagsChecksum.php
+[parsing] modules/contrib/memcache/src/Connection/MemcacheConnection.php
+[parsing] modules/contrib/memcache/src/Connection/MemcacheConnectionInterface.php
+[parsing] modules/contrib/memcache/src/Connection/MemcachedConnection.php
+[parsing] modules/contrib/memcache/src/Driver/DriverBase.php
+[parsing] modules/contrib/memcache/src/Driver/MemcacheDriver.php
+[parsing] modules/contrib/memcache/src/Driver/MemcacheDriverFactory.php
+[parsing] modules/contrib/memcache/src/Driver/MemcachedDriver.php
+[parsing] modules/contrib/memcache/src/DrupalMemcacheInterface.php
+[parsing] modules/contrib/memcache/src/Invalidator/MemcacheTimestampInvalidator.php
+[parsing] modules/contrib/memcache/src/Invalidator/TimestampInvalidatorBase.php
+[parsing] modules/contrib/memcache/src/Invalidator/TimestampInvalidatorInterface.php
+[parsing] modules/contrib/memcache/src/Lock/MemcacheLockBackend.php
+[parsing] modules/contrib/memcache/src/Lock/MemcacheLockFactory.php
+[parsing] modules/contrib/memcache/src/MemcacheBackend.php
+[parsing] modules/contrib/memcache/src/MemcacheBackendFactory.php
+[parsing] modules/contrib/memcache/src/MemcacheException.php
+[parsing] modules/contrib/memcache/src/MemcacheSettings.php
+[parsing] modules/contrib/memcache/src/Tests/MemcacheLockFunctionalTest.php
+[parsing] modules/contrib/memcache/tests/modules/memcache_test/src/MemcacheTestServiceProvider.php
+[parsing] modules/contrib/memcache/tests/src/Kernel/MemcacheBackendTest.php
+[parsing] modules/contrib/memcache/tests/src/Unit/MemcacheSettingsTest.php
+[refactoring] modules/contrib/memcache/memcache.install
+[refactoring] modules/contrib/memcache/memcache_admin/memcache_admin.install
+[refactoring] modules/contrib/memcache/memcache_admin/src/Controller/MemcacheStatisticsController.php
+[refactoring] modules/contrib/memcache/memcache_admin/src/EventSubscriber/MemcacheAdminSubscriber.php
+[refactoring] modules/contrib/memcache/memcache_admin/src/Form/MemcacheAdminSettingsForm.php
+[refactoring] modules/contrib/memcache/src/Cache/TimestampCacheTagsChecksum.php
+[refactoring] modules/contrib/memcache/src/Connection/MemcacheConnection.php
+[refactoring] modules/contrib/memcache/src/Connection/MemcacheConnectionInterface.php
+[refactoring] modules/contrib/memcache/src/Connection/MemcachedConnection.php
+[refactoring] modules/contrib/memcache/src/Driver/DriverBase.php
+[refactoring] modules/contrib/memcache/src/Driver/MemcacheDriver.php
+[refactoring] modules/contrib/memcache/src/Driver/MemcacheDriverFactory.php
+[refactoring] modules/contrib/memcache/src/Driver/MemcachedDriver.php
+[refactoring] modules/contrib/memcache/src/DrupalMemcacheInterface.php
+[refactoring] modules/contrib/memcache/src/Invalidator/MemcacheTimestampInvalidator.php
+[refactoring] modules/contrib/memcache/src/Invalidator/TimestampInvalidatorBase.php
+[refactoring] modules/contrib/memcache/src/Invalidator/TimestampInvalidatorInterface.php
+[refactoring] modules/contrib/memcache/src/Lock/MemcacheLockBackend.php
+[refactoring] modules/contrib/memcache/src/Lock/MemcacheLockFactory.php
+[refactoring] modules/contrib/memcache/src/MemcacheBackend.php
+[refactoring] modules/contrib/memcache/src/MemcacheBackendFactory.php
+[refactoring] modules/contrib/memcache/src/MemcacheException.php
+[refactoring] modules/contrib/memcache/src/MemcacheSettings.php
+[refactoring] modules/contrib/memcache/src/Tests/MemcacheLockFunctionalTest.php
+[refactoring] modules/contrib/memcache/tests/modules/memcache_test/src/MemcacheTestServiceProvider.php
+[refactoring] modules/contrib/memcache/tests/src/Kernel/MemcacheBackendTest.php
+[refactoring] modules/contrib/memcache/tests/src/Unit/MemcacheSettingsTest.php
+[printing] modules/contrib/memcache/memcache.install
+[printing] modules/contrib/memcache/memcache_admin/memcache_admin.install
+[printing] modules/contrib/memcache/memcache_admin/src/Controller/MemcacheStatisticsController.php
+[printing] modules/contrib/memcache/memcache_admin/src/EventSubscriber/MemcacheAdminSubscriber.php
+[printing] modules/contrib/memcache/memcache_admin/src/Form/MemcacheAdminSettingsForm.php
+[printing] modules/contrib/memcache/src/Cache/TimestampCacheTagsChecksum.php
+[printing] modules/contrib/memcache/src/Connection/MemcacheConnection.php
+[printing] modules/contrib/memcache/src/Connection/MemcacheConnectionInterface.php
+[printing] modules/contrib/memcache/src/Connection/MemcachedConnection.php
+[printing] modules/contrib/memcache/src/Driver/DriverBase.php
+[printing] modules/contrib/memcache/src/Driver/MemcacheDriver.php
+[printing] modules/contrib/memcache/src/Driver/MemcacheDriverFactory.php
+[printing] modules/contrib/memcache/src/Driver/MemcachedDriver.php
+[printing] modules/contrib/memcache/src/DrupalMemcacheInterface.php
+[printing] modules/contrib/memcache/src/Invalidator/MemcacheTimestampInvalidator.php
+[printing] modules/contrib/memcache/src/Invalidator/TimestampInvalidatorBase.php
+[printing] modules/contrib/memcache/src/Invalidator/TimestampInvalidatorInterface.php
+[printing] modules/contrib/memcache/src/Lock/MemcacheLockBackend.php
+[printing] modules/contrib/memcache/src/Lock/MemcacheLockFactory.php
+[printing] modules/contrib/memcache/src/MemcacheBackend.php
+[printing] modules/contrib/memcache/src/MemcacheBackendFactory.php
+[printing] modules/contrib/memcache/src/MemcacheException.php
+[printing] modules/contrib/memcache/src/MemcacheSettings.php
+[printing] modules/contrib/memcache/src/Tests/MemcacheLockFunctionalTest.php
+[printing] modules/contrib/memcache/tests/modules/memcache_test/src/MemcacheTestServiceProvider.php
+[printing] modules/contrib/memcache/tests/src/Kernel/MemcacheBackendTest.php
+[printing] modules/contrib/memcache/tests/src/Unit/MemcacheSettingsTest.php
+
+
+3 files with changes
+====================
+
+1) modules/contrib/memcache/memcache_admin/src/Controller/MemcacheStatisticsController.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -52,16 +52,13 @@
+
+       // Failed to load statistics. Provide a useful error about where to get
+       // more information and help.
+-      drupal_set_message(
+-        t(
+-          'There may be a problem with your Memcache configuration. Please review @readme and :more for more information.',
+-          [
+-            '@readme' => 'README.txt',
+-            ':more'   => $additional_message,
+-          ]
+-        ),
+-        'error'
+-      );
++      $this->messenger()->addError(t(
++        'There may be a problem with your Memcache configuration. Please review @readme and :more for more information.',
++        [
++          '@readme' => 'README.txt',
++          ':more'   => $additional_message,
++        ]
++      ));
+     }
+     else {
+       if (count($stats[$bin])) {
+@@ -76,12 +73,12 @@
+         }
+         else {
+           $version = t('Unknown');
+-          drupal_set_message(t('Failed to detect the memcache PECL extension.'), 'error');
++          $this->messenger()->addError(t('Failed to detect the memcache PECL extension.'));
+         }
+
+         foreach ($stats as $server => $statistics) {
+           if (empty($statistics['uptime'])) {
+-            drupal_set_message(t('Failed to connect to server at :address.', [':address' => $server]), 'error');
++            $this->messenger()->addError(t('Failed to connect to server at :address.', [':address' => $server]));
+           }
+           else {
+             $servers[] = $server;
+@@ -221,7 +218,7 @@
+     }
+     else {
+       $output = $this->statsTablesRawOutput($cluster, $server, [], $type);
+-      drupal_set_message(t('No @type statistics for this bin.', ['@type' => $type]));
++      $this->messenger()->addStatus(t('No @type statistics for this bin.', ['@type' => $type]));
+     }
+
+     return $output;
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+2) modules/contrib/memcache/memcache_admin/src/EventSubscriber/MemcacheAdminSubscriber.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -57,7 +57,7 @@
+       // }.
+       // @codingStandardsIgnoreEnd
+       // Try not to break non-HTML pages.
+-      if ($response instanceof HTMLResponse) {
++      if ($response instanceof HtmlResponse) {
+
+         // This should only apply to page content.
+         if (stripos($response->headers->get('content-type'), 'text/html') !== FALSE) {
+    ----------- end diff -----------
+
+3) modules/contrib/memcache/src/MemcacheBackend.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -119,7 +119,7 @@
+     $cache->valid = TRUE;
+
+     // Items that have expired are invalid.
+-    if ($cache->expire != CacheBackendInterface::CACHE_PERMANENT && $cache->expire <= REQUEST_TIME) {
++    if ($cache->expire != CacheBackendInterface::CACHE_PERMANENT && $cache->expire <= \Drupal::time()->getRequestTime()) {
+       $cache->valid = FALSE;
+     }
+
+@@ -216,7 +216,7 @@
+   public function invalidateMultiple(array $cids) {
+     foreach ($cids as $cid) {
+       if ($item = $this->get($cid)) {
+-        $item->expire = REQUEST_TIME - 1;
++        $item->expire = \Drupal::time()->getRequestTime() - 1;
+         $this->memcache->set($cid, $item);
+       }
+     }
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\RequestTimeConstRector
+
+
+ [OK] Rector is done! 3 files have been changed.                                
+

@@ -1,0 +1,11 @@
+ [notice] Processing /var/lib/drupalci/workspace/drupal-checkouts/drupal2/modules/contrib/asana.
+ 0/5 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   0%[2K 4/5 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░]  80%[2K 5/5 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 100%
+
+ [notice] Processing /var/lib/drupalci/workspace/drupal-checkouts/drupal2/modules/contrib/asana.
+PHPStan crashed in the previous run probably because of excessive memory consumption.
+It consumed around 49 MB of memory.
+
+
+To avoid this issue, allow to use more memory with the --memory-limit option.
+ 0/5 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   0%[2K 5/5 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 100%
+

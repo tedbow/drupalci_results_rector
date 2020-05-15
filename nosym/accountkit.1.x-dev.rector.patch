@@ -1,0 +1,68 @@
+diff --git a/accountkit.info.yml b/accountkit.info.yml
+index 9aad330..550ca09 100644
+--- a/accountkit.info.yml
++++ b/accountkit.info.yml
+@@ -1,5 +1,6 @@
+-name: Account Kit
++name: 'Account Kit'
+ type: module
+-description: Facebook's Account Kit integration for Drupal 8.
++description: 'Facebook''s Account Kit integration for Drupal 8.'
+ core: 8.x
+ package: Custom
++core_version_requirement: '^8 || ^9'
+diff --git a/src/AccountKitManager.php b/src/AccountKitManager.php
+index 075f43b..6159a25 100644
+--- a/src/AccountKitManager.php
++++ b/src/AccountKitManager.php
+@@ -34,11 +34,10 @@ class AccountKitManager {
+     $data = $this->curlit($token_exchange_url);
+ 
+     if(!empty($data['error'])) {
+-      drupal_set_message($data['error']['message']
++      \Drupal::messenger()->addError($data['error']['message']
+         . " type: ". $data['error']['type']
+         . " code: " . $data['error']['code']
+-        . " fbtrace_id:" . $data['error']['fbtrace_id'],
+-        "error");
++        . " fbtrace_id:" . $data['error']['fbtrace_id']);
+     }
+ 
+     return $data['access_token'];
+diff --git a/src/Authentication/Provider/AccountKitAuthenticationProvider.php b/src/Authentication/Provider/AccountKitAuthenticationProvider.php
+index 3b8d990..59e4c04 100644
+--- a/src/Authentication/Provider/AccountKitAuthenticationProvider.php
++++ b/src/Authentication/Provider/AccountKitAuthenticationProvider.php
+@@ -68,7 +68,7 @@ class AccountKitAuthenticationProvider implements AuthenticationProviderInterfac
+     }
+ 
+     if ($user) {
+-      drupal_set_message("You are now logged in as " . $user->getDisplayName(), "status");
++      \Drupal::messenger()->addStatus("You are now logged in as " . $user->getDisplayName());
+     }
+     else {
+       $user = User::create();
+@@ -80,8 +80,8 @@ class AccountKitAuthenticationProvider implements AuthenticationProviderInterfac
+       }
+       $user->save();
+ 
+-      drupal_set_message("User successfully created!", "status");
+-      drupal_set_message("You are now logged in as " . $user->getDisplayName(), "status");
++      \Drupal::messenger()->addStatus("User successfully created!");
++      \Drupal::messenger()->addStatus("You are now logged in as " . $user->getDisplayName());
+     }
+ 
+     user_login_finalize($user);
+diff --git a/src/Form/EmailLoginForm.php b/src/Form/EmailLoginForm.php
+index 3f7fe2e..61acd73 100644
+--- a/src/Form/EmailLoginForm.php
++++ b/src/Form/EmailLoginForm.php
+@@ -72,7 +72,7 @@ class EmailLoginForm extends FormBase {
+   public function submitForm(array &$form, FormStateInterface $form_state) {
+     // Display result.
+     foreach ($form_state->getValues() as $key => $value) {
+-      drupal_set_message($key . ': ' . $value);
++      $this->messenger()->addStatus($key . ': ' . $value);
+     }
+ 
+   }

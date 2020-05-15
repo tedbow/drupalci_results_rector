@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle>
+<file name="modules/contrib/block_visibility_groups/block_visibility_groups_admin/src/Tests/GroupListerTest.php">
+  <error line="12" column="1" severity="error" message="Class Drupal\block_visibility_groups_admin\Tests\GroupListerTest extends deprecated class Drupal\simpletest\WebTestBase:
+in drupal:8.8.0 and is removed from drupal:9.0.0. Instead,
+use \Drupal\Tests\BrowserTestBase. See https://www.drupal.org/node/3030340." />
+  <error line="36" column="1" severity="error" message="Call to method setUp() of deprecated class Drupal\simpletest\WebTestBase:
+in drupal:8.8.0 and is removed from drupal:9.0.0. Instead,
+use \Drupal\Tests\BrowserTestBase. See https://www.drupal.org/node/3030340." />
+</file>
+<file name="modules/contrib/block_visibility_groups/src/BlockVisibilityGroupedListBuilder.php">
+  <error line="76" column="1" severity="error" message="Call to deprecated method getStorage() of class Drupal\Core\Entity\EntityManager:
+in drupal:8.0.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Entity\EntityTypeManagerInterface::getStorage() instead." />
+  <error line="79" column="1" severity="error" message="Call to deprecated method getStorage() of class Drupal\Core\Entity\EntityManager:
+in drupal:8.0.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Entity\EntityTypeManagerInterface::getStorage() instead." />
+</file>
+<file name="modules/contrib/block_visibility_groups/src/Plugin/Condition/ConditionGroup.php">
+  <error line="147" column="1" severity="error" message="Call to deprecated method getStorage() of class Drupal\Core\Entity\EntityManager:
+in drupal:8.0.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Entity\EntityTypeManagerInterface::getStorage() instead." />
+</file>
+<file name="modules/contrib/block_visibility_groups/src/Tests/BlockVisibilityGroupsTestBase.php">
+  <error line="15" column="1" severity="error" message="Class Drupal\block_visibility_groups\Tests\BlockVisibilityGroupsTestBase extends deprecated class Drupal\simpletest\WebTestBase:
+in drupal:8.8.0 and is removed from drupal:9.0.0. Instead,
+use \Drupal\Tests\BrowserTestBase. See https://www.drupal.org/node/3030340." />
+  <error line="28" column="1" severity="error" message="Call to method setUp() of deprecated class Drupal\simpletest\WebTestBase:
+in drupal:8.8.0 and is removed from drupal:9.0.0. Instead,
+use \Drupal\Tests\BrowserTestBase. See https://www.drupal.org/node/3030340." />
+</file>
+</checkstyle>

@@ -1,0 +1,11 @@
+ [notice] Processing /var/lib/drupalci/workspace/drupal-checkouts/drupal4/modules/contrib/views_ajax_history.
+ 0/3 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   0%[2K 3/3 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 100%
+
+ [notice] Processing /var/lib/drupalci/workspace/drupal-checkouts/drupal4/modules/contrib/views_ajax_history.
+PHPStan crashed in the previous run probably because of excessive memory consumption.
+It consumed around 49 MB of memory.
+
+
+To avoid this issue, allow to use more memory with the --memory-limit option.
+ 0/3 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   0%[2K 3/3 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 100%
+

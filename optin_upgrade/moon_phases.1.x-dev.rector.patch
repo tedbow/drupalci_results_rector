@@ -1,0 +1,14 @@
+diff --git a/src/MoonCalc.php b/src/MoonCalc.php
+index 1f4074a..e538a38 100644
+--- a/src/MoonCalc.php
++++ b/src/MoonCalc.php
+@@ -186,9 +186,6 @@ class MoonCalc implements MoonCalcInterface {
+     return strtotime($this->phaseDate->format('Y-m-d H:i:s'));
+   }
+ 
+-  /**
+-   *
+-   */
+   public function getMoonPhaseDateTime() {
+     return $this->phaseDate;
+   }

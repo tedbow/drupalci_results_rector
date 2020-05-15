@@ -1,0 +1,19 @@
+./composer.json has been updated
+> Drupal\Composer\Composer::ensureComposerVersion
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+Your requirements could not be resolved to an installable set of packages.
+
+  Problem 1
+    - Installation request for drupal/ace_editor 1.x-dev -> satisfiable by drupal/ace_editor[1.x-dev].
+    - drupal/ace_editor 1.x-dev requires npm-asset/ace-builds ~1.0 -> no matching package found.
+
+Potential causes:
+ - A typo in the package name
+ - The package is not available in a stable-enough version according to your minimum-stability setting
+   see <https://getcomposer.org/doc/04-schema.md#minimum-stability> for more details.
+ - It's a private package and you forgot to add a custom repository to find it
+
+Read <https://getcomposer.org/doc/articles/troubleshooting.md> for further common problems.
+
+Installation failed, reverting ./composer.json to its original content.

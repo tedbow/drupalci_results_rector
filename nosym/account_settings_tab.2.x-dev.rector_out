@@ -1,0 +1,55 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/account_settings_tab/account_settings_tab.module
+[parsing] modules/contrib/account_settings_tab/src/Form/AccountSettingsTabForm.php
+[refactoring] modules/contrib/account_settings_tab/account_settings_tab.module
+[refactoring] modules/contrib/account_settings_tab/src/Form/AccountSettingsTabForm.php
+[printing] modules/contrib/account_settings_tab/account_settings_tab.module
+[printing] modules/contrib/account_settings_tab/src/Form/AccountSettingsTabForm.php
+
+
+1 file with changes
+===================
+
+1) modules/contrib/account_settings_tab/src/Form/AccountSettingsTabForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -170,7 +170,7 @@
+         $user_exist = user_load_by_name($name_value);
+         if (empty($user_exist)) {
+           $account->setUsername($name_value);
+-          drupal_set_message("Username successfully updated..", 'status');
++          $this->messenger()->addStatus("Username successfully updated..");
+           $account->save();
+         }
+       }
+@@ -180,7 +180,7 @@
+     if ($mail_default_value != $mail_value) {
+           $mail_value = $form['account']['mail']['#value'];
+           $account->setEmail($mail_value);
+-          drupal_set_message("User email successfully updated..", 'status');
++          $this->messenger()->addStatus("User email successfully updated..");
+           $account->save();
+       }
+       // set the password
+@@ -188,7 +188,7 @@
+       $pass2 = $form['account']['pass']['#value']['pass2'];
+       if (!empty($pass1) && !empty($pass2)) {
+           $account->setPassword($pass1);
+-          drupal_set_message("Password successfully updated..", 'status');
++          $this->messenger()->addStatus("Password successfully updated..");
+           $account->save();
+       }
+     }
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+ [OK] Rector is done! 1 file have been changed.                                 
+

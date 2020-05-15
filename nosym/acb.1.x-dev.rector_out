@@ -1,0 +1,37 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/acb/acb.install
+[parsing] modules/contrib/acb/acb.module
+[refactoring] modules/contrib/acb/acb.install
+[refactoring] modules/contrib/acb/acb.module
+[printing] modules/contrib/acb/acb.install
+[printing] modules/contrib/acb/acb.module
+
+
+1 file with changes
+===================
+
+1) modules/contrib/acb/acb.module
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -135,7 +135,7 @@
+
+   // ACL requires special care. The responsible module can only be determined by using the database.
+   if (\Drupal::moduleHandler()->moduleExists('acl')) {
+-    $acl = db_select('acl')
++    $acl = \Drupal::database()->select('acl')
+       ->fields('acl', ['acl_id','module'])
+       ->execute()
+       ->fetchAllAssoc('acl_id');
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DBSelectRector
+
+
+ [OK] Rector is done! 1 file have been changed.                                 
+

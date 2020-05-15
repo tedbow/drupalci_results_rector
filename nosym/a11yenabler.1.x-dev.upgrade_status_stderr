@@ -1,0 +1,25 @@
+ [notice] Processing /var/lib/drupalci/workspace/drupal-checkouts/drupal1/modules/contrib/a11yenabler.
+ 0/2 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   0%[2K 2/2 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 100%
+
+
+In LibraryDiscoveryParser.php line 120:
+                                                                               
+  Incomplete library definition for definition 'a11yenabler' in extension 'a1  
+  1yenabler'                                                                   
+                                                                               
+
+upgrade_status:checkstyle [--all] [--skip-existing] [--ignore-uninstalled] [--ignore-contrib] [--ignore-custom] [-h|--help] [-q|--quiet] [-v|vv|vvv|--verbose] [-V|--version] [--ansi] [--no-ansi] [-n|--no-interaction] [-d|--debug] [-y|--yes] [--no] [--remote-host REMOTE-HOST] [--remote-user REMOTE-USER] [-r|--root ROOT] [-l|--uri URI] [--simulate] [--pipe] [-D|--define DEFINE] [--notify [NOTIFY]] [--druplicon] [--xh-link XH-LINK] [--] <command> [<projects>]...
+
+ [notice] Processing /var/lib/drupalci/workspace/drupal-checkouts/drupal1/modules/contrib/a11yenabler.
+PHP Fatal error:  Cannot redeclare composerRequireDrupal8() (previously declared in /var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/composer/autoload_real.php:70) in /var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/composer/autoload_real.php on line 77
+Fatal error: Cannot redeclare composerRequireDrupal8() (previously declared in /var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/composer/autoload_real.php:70) in /var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/composer/autoload_real.php on line 77
+ [error]  PHPStan failed:  
+
+In LibraryDiscoveryParser.php line 120:
+                                                                               
+  Incomplete library definition for definition 'a11yenabler' in extension 'a1  
+  1yenabler'                                                                   
+                                                                               
+
+upgrade_status:checkstyle [--all] [--skip-existing] [--ignore-uninstalled] [--ignore-contrib] [--ignore-custom] [-h|--help] [-q|--quiet] [-v|vv|vvv|--verbose] [-V|--version] [--ansi] [--no-ansi] [-n|--no-interaction] [-d|--debug] [-y|--yes] [--no] [--remote-host REMOTE-HOST] [--remote-user REMOTE-USER] [-r|--root ROOT] [-l|--uri URI] [--simulate] [--pipe] [-D|--define DEFINE] [--notify [NOTIFY]] [--druplicon] [--xh-link XH-LINK] [--] <command> [<projects>]...
+

@@ -1,0 +1,30 @@
+diff --git a/src/Form/AccordionMenusConfigForm.php b/src/Form/AccordionMenusConfigForm.php
+index e47b51e..61699ae 100644
+--- a/src/Form/AccordionMenusConfigForm.php
++++ b/src/Form/AccordionMenusConfigForm.php
+@@ -62,4 +62,4 @@ class AccordionMenusConfigForm extends ConfigFormBase {
+     // See @src/Plugin/Derivative/AccordionMenusBlock
+     drupal_flush_all_caches();
+   }
+-}
++}
+diff --git a/src/Plugin/Block/AccordionMenusBlock.php b/src/Plugin/Block/AccordionMenusBlock.php
+index 168c753..3e3d674 100644
+--- a/src/Plugin/Block/AccordionMenusBlock.php
++++ b/src/Plugin/Block/AccordionMenusBlock.php
+@@ -70,4 +70,4 @@ class AccordionMenusBlock extends BlockBase {
+     return $output;
+   }
+ 
+-}
++}
+diff --git a/src/Plugin/Derivative/AccordionMenusBlock.php b/src/Plugin/Derivative/AccordionMenusBlock.php
+index de3c5d1..9a7c127 100644
+--- a/src/Plugin/Derivative/AccordionMenusBlock.php
++++ b/src/Plugin/Derivative/AccordionMenusBlock.php
+@@ -62,4 +62,4 @@ class AccordionMenusBlock extends DeriverBase implements ContainerDeriverInterfa
+     return $this->derivatives;
+   }
+ 
+-}
++}

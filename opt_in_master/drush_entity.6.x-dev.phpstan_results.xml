@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle>
+<file name="modules/contrib/drush_entity/entity.drush.inc">
+  <error line="451" column="1" severity="error" message="Call to deprecated function db_query():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead,
+get a database connection injected into your service from the container
+and call query() on it. For example," />
+  <error line="477" column="1" severity="error" message="Call to deprecated function entity_load_multiple():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Use the
+entity type storage's loadMultiple() method." />
+  <error line="812" column="1" severity="error" message="Call to deprecated function entity_load():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Use the
+entity type storage's load() method." />
+  <error line="816" column="1" severity="error" message="Call to deprecated function entity_load_multiple():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Use the
+entity type storage's loadMultiple() method." />
+  <error line="939" column="1" severity="error" message="Call to deprecated function user_delete():
+in drupal:8.8.0 and is removed from drupal:9.0.0. Use the user
+entity's delete method to delete the user." />
+  <error line="1033" column="1" severity="error" message="Call to deprecated function node_load():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Use
+\Drupal\node\Entity\Node::load()." />
+  <error line="1034" column="1" severity="error" message="Call to deprecated function db_query():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead,
+get a database connection injected into your service from the container
+and call query() on it. For example," />
+  <error line="1035" column="1" severity="error" message="Call to deprecated function db_query():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead,
+get a database connection injected into your service from the container
+and call query() on it. For example," />
+  <error line="1068" column="1" severity="error" message="Call to deprecated method entityManager() of class Drupal:
+in drupal:8.0.0 and is removed from drupal:9.0.0.
+Use \Drupal::entityTypeManager() instead in most cases. If the needed
+method is not on \Drupal\Core\Entity\EntityTypeManagerInterface, see the
+deprecated \Drupal\Core\Entity\EntityManager to find the
+correct interface or service." />
+  <error line="1161" column="1" severity="error" message="Call to deprecated function db_escape_table():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead,
+get a database connection injected into your service from the container
+and call escapeTable() on it. For example," />
+  <error line="1162" column="1" severity="error" message="Call to deprecated function db_query():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead,
+get a database connection injected into your service from the container
+and call query() on it. For example," />
+</file>
+<file name="modules/contrib/drush_entity/tests/entityTest.php">
+  <error line="0" column="1" severity="error" message="Class EntityTestCase was not found while trying to analyse it - autoloading is probably not configured properly." />
+</file>
+</checkstyle>

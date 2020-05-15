@@ -1,0 +1,310 @@
+diff --git a/src/Controller/ListController.php b/src/Controller/ListController.php
+index a024150..e5465a7 100644
+--- a/src/Controller/ListController.php
++++ b/src/Controller/ListController.php
+@@ -40,9 +40,6 @@ class ListController extends ControllerBase {
+     );
+   }
+ 
+-  /**
+-   *
+-   */
+   public function __construct(
+     TestStorage $testStorage,
+     RendererInterface $renderer,
+diff --git a/src/Form/ABTestForm.php b/src/Form/ABTestForm.php
+index 26bdc9c..27711b5 100644
+--- a/src/Form/ABTestForm.php
++++ b/src/Form/ABTestForm.php
+@@ -32,9 +32,6 @@ class ABTestForm extends FormBase {
+    */
+   private $abtestuiPath;
+ 
+-  /**
+-   *
+-   */
+   public function __construct() {
+     $this->abtestuiPath = drupal_get_path('module', 'abtestui');
+   }
+@@ -377,9 +374,6 @@ class ABTestForm extends FormBase {
+     return $form['variations_fieldgroup'];
+   }
+ 
+-  /**
+-   *
+-   */
+   public function ajaxRemoveVariation(array $form, FormStateInterface $form_state) {
+     $elementDelta = array_keys($form_state->getValue(['variations_fieldgroup', 'variations']));
+     $elementDelta = reset($elementDelta);
+@@ -408,9 +402,6 @@ class ABTestForm extends FormBase {
+     $form_state->setRebuild();
+   }
+ 
+-  /**
+-   *
+-   */
+   public function ajaxAddVariation(array $form, FormStateInterface $form_state) {
+     $lastElement = end($form_state->getUserInput()['variations_fieldgroup']['variations']);
+ 
+diff --git a/src/Service/AbjsConditionStorage.php b/src/Service/AbjsConditionStorage.php
+index dc691b2..038fb6f 100644
+--- a/src/Service/AbjsConditionStorage.php
++++ b/src/Service/AbjsConditionStorage.php
+@@ -21,16 +21,10 @@ class AbjsConditionStorage {
+    */
+   private $db;
+ 
+-  /**
+-   *
+-   */
+   public function __construct(Connection $database) {
+     $this->db = $database;
+   }
+ 
+-  /**
+-   *
+-   */
+   public function save(array $values) {
+     // If there's no cid, insert.
+     if (NULL === $values['cid']) {
+@@ -57,9 +51,6 @@ class AbjsConditionStorage {
+     return $values['cid'];
+   }
+ 
+-  /**
+-   *
+-   */
+   public function loadMultipleByTids($tids) {
+     $query = $this->db->select(AbjsTestStorage::CONDITION_RELATION_TABLE, 'base_table');
+     $query->condition('base_table.tid', $tids, 'in');
+@@ -69,9 +60,6 @@ class AbjsConditionStorage {
+     return array_keys($result->fetchAllAssoc('cid', PDO::FETCH_ASSOC));
+   }
+ 
+-  /**
+-   *
+-   */
+   public function deleteMultiple(array $cids) {
+     if (empty($cids)) {
+       return;
+@@ -82,9 +70,6 @@ class AbjsConditionStorage {
+     $query->execute();
+   }
+ 
+-  /**
+-   *
+-   */
+   public function deleteMultipleByTids(array $tids) {
+     if (empty($tids)) {
+       return;
+diff --git a/src/Service/AbjsExperienceStorage.php b/src/Service/AbjsExperienceStorage.php
+index 1a97e97..1d18abb 100644
+--- a/src/Service/AbjsExperienceStorage.php
++++ b/src/Service/AbjsExperienceStorage.php
+@@ -28,9 +28,6 @@ class AbjsExperienceStorage {
+ 
+   private $state;
+ 
+-  /**
+-   *
+-   */
+   public function __construct(
+     Connection $database,
+     LoggerChannelFactoryInterface $loggerChannelFactory,
+@@ -41,9 +38,6 @@ class AbjsExperienceStorage {
+     $this->state = $state;
+   }
+ 
+-  /**
+-   *
+-   */
+   public function createOrLoadControl() {
+     $controlExperienceID = $this->loadControl();
+ 
+@@ -160,9 +154,6 @@ class AbjsExperienceStorage {
+     return array_keys($result->fetchAllAssoc('eid', PDO::FETCH_ASSOC));
+   }
+ 
+-  /**
+-   *
+-   */
+   public function deleteMultiple(array $eids) {
+     if (empty($eids)) {
+       return;
+@@ -198,9 +189,6 @@ class AbjsExperienceStorage {
+     $this->deleteMultiple($eids);
+   }
+ 
+-  /**
+-   *
+-   */
+   public function delete($eid) {
+     $query = $this->db->delete(static::BASE_TABLE_NAME);
+     $query->condition('eid', $eid);
+diff --git a/src/Service/AbjsTestStorage.php b/src/Service/AbjsTestStorage.php
+index 4cf3653..590c04c 100644
+--- a/src/Service/AbjsTestStorage.php
++++ b/src/Service/AbjsTestStorage.php
+@@ -22,16 +22,10 @@ class AbjsTestStorage {
+    */
+   private $db;
+ 
+-  /**
+-   *
+-   */
+   public function __construct(Connection $database) {
+     $this->db = $database;
+   }
+ 
+-  /**
+-   *
+-   */
+   public function save(array $values) {
+     // If there's no tid, insert.
+     if (NULL === $values['tid']) {
+@@ -108,16 +102,10 @@ class AbjsTestStorage {
+     return $values['tcid'];
+   }
+ 
+-  /**
+-   *
+-   */
+   public function delete($tid) {
+     $this->deleteMultiple([$tid]);
+   }
+ 
+-  /**
+-   *
+-   */
+   public function deleteMultiple(array $tids) {
+     if (empty($tids)) {
+       return;
+@@ -128,9 +116,6 @@ class AbjsTestStorage {
+     $query->execute();
+   }
+ 
+-  /**
+-   *
+-   */
+   public function deleteExperienceRelation($teid) {
+     $query = $this->db->delete(static::EXPERIENCE_RELATION_TABLE);
+     $query->condition('teid', $teid);
+diff --git a/src/Service/RequestParser.php b/src/Service/RequestParser.php
+index d94e358..6d890c0 100644
+--- a/src/Service/RequestParser.php
++++ b/src/Service/RequestParser.php
+@@ -121,9 +121,6 @@ class RequestParser {
+     return $experiences;
+   }
+ 
+-  /**
+-   *
+-   */
+   public function generateGathererScript() {
+     $test = $this->getTest();
+ 
+diff --git a/src/Service/TestStorage.php b/src/Service/TestStorage.php
+index ffcfcff..0b59dd0 100644
+--- a/src/Service/TestStorage.php
++++ b/src/Service/TestStorage.php
+@@ -31,9 +31,6 @@ class TestStorage {
+ 
+   private $abjsExperienceStorage;
+ 
+-  /**
+-   *
+-   */
+   public function __construct(
+     Connection $database,
+     LoggerChannelFactoryInterface $loggerChannelFactory,
+@@ -50,9 +47,6 @@ class TestStorage {
+     $this->abjsExperienceStorage = $abjsExperienceStorage;
+   }
+ 
+-  /**
+-   *
+-   */
+   public function load($tid) {
+     if (NULL === $tid) {
+       return FALSE;
+@@ -92,9 +86,6 @@ class TestStorage {
+     return $test;
+   }
+ 
+-  /**
+-   *
+-   */
+   private function fetchTest($tid) {
+     $query = $this->db->select(static::BASE_TABLE_NAME, 'base_table');
+     $query->addJoin('left', 'abjs_test', 'test', 'base_table.tid = test.tid');
+@@ -105,9 +96,6 @@ class TestStorage {
+     return $result->fetchAssoc();
+   }
+ 
+-  /**
+-   *
+-   */
+   private function fetchConditions($tid) {
+     $query = $this->db->select('abjs_condition', 'cond');
+     $query->addJoin('left', 'abjs_test_condition', 'test_cond', 'cond.cid = test_cond.cid');
+@@ -118,9 +106,6 @@ class TestStorage {
+     return $cResult->fetchAllAssoc('tcid');
+   }
+ 
+-  /**
+-   *
+-   */
+   private function fetchExperiences($tid) {
+     $query = $this->db->select('abjs_experience', 'exp');
+     $query->addJoin('left', 'abjs_test_experience', 'test_exp', 'exp.eid = test_exp.eid');
+@@ -133,9 +118,6 @@ class TestStorage {
+     return $result->fetchAllAssoc('teid');
+   }
+ 
+-  /**
+-   *
+-   */
+   public function save($values) {
+     $this->db->merge(static::BASE_TABLE_NAME)
+       ->key('tid', $values['tid'])
+@@ -151,9 +133,6 @@ class TestStorage {
+     return $values['tid'];
+   }
+ 
+-  /**
+-   *
+-   */
+   public function loadMultiple(array $tids = []) {
+     if (empty($tids)) {
+       $query = $this->db->select(static::BASE_TABLE_NAME, 'base_table');
+diff --git a/src/Service/VariationStorage.php b/src/Service/VariationStorage.php
+index 49df985..82384c1 100644
+--- a/src/Service/VariationStorage.php
++++ b/src/Service/VariationStorage.php
+@@ -20,16 +20,10 @@ class VariationStorage {
+    */
+   private $db;
+ 
+-  /**
+-   *
+-   */
+   public function __construct(Connection $database) {
+     $this->db = $database;
+   }
+ 
+-  /**
+-   *
+-   */
+   public function save(array $values) {
+     // If there's no vid, insert.
+     if (NULL === $values['vid']) {
+@@ -52,9 +46,6 @@ class VariationStorage {
+     return $values['vid'];
+   }
+ 
+-  /**
+-   *
+-   */
+   public function delete($vid) {
+     $query = $this->db->delete(static::BASE_TABLE_NAME);
+     $query->condition('vid', $vid);

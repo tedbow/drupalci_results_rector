@@ -1,0 +1,41 @@
+commit 523dce2bff2c2c867f0fc5d67aa09c47b322525b
+Author: Joshua Li <oasislrjjrl@gmail.com>
+Date:   Sat Oct 1 16:38:44 2016 +1000
+
+    [8.x-1.x] Rewrote form, filter and Unit test with injected services.
+
+commit 739a1ee54e8c96d640e48ddb729576573649f03d
+Author: rli <oasislrjjrl@gmail.com>
+Date:   Tue Mar 17 20:28:35 2015 +1100
+
+    Added changes to work for beta7.
+
+commit ae7a3410238720fc57880902f26a7d9caabfe65c
+Author: rli <oasislrjjrl@gmail.com>
+Date:   Mon Jan 26 17:06:57 2015 +1100
+
+    8.x-1.x: Fixed FormState errors.
+
+commit ccaf8b14e9a335efa26c2122a1ceb0a3f031bf02
+Author: Joshua Li <joshua.li@technocrat.com.au>
+Date:   Mon Jan 26 16:54:30 2015 +1100
+
+    8.x-1.x: Updated module for beta4.
+
+commit 7f598fe60954f7609b94b66f54828a66a811aba2
+Author: rli <rli@633216.no-reply.drupal.org>
+Date:   Fri Apr 4 08:37:57 2014 +1100
+
+    first commit of a working D8 version based on alpha 10
+
+commit 34a30c806859a417a8c86f11a150e6c83ddf5395
+Author: The Great Git Migration <tggm@no-reply.drupal.org>
+Date:   Fri Feb 25 02:12:08 2011 +0000
+
+    Stripping CVS keywords
+
+commit 546d3306316c3ae303cae3947c983078e542be55
+Author: Eric Davila <erykmynn@gmail.com>
+Date:   Tue Oct 13 18:32:08 2009 +0000
+
+    Initial commit of Abbreviations Filter (abbr) module. This module is a filter that scans text for abbreviations and replaces them with an ABBR tag.

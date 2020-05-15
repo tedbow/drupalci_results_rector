@@ -1,0 +1,31 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/accessibility/accessibility-test.tpl.php
+[parsing] modules/contrib/accessibility/accessibility.admin.inc
+[parsing] modules/contrib/accessibility/accessibility.api.php
+[parsing] modules/contrib/accessibility/accessibility.install
+[parsing] modules/contrib/accessibility/accessibility.module
+[parsing] modules/contrib/accessibility/accessibility.pages.inc
+[parsing] modules/contrib/accessibility/accessibility.views.inc
+[parsing] modules/contrib/accessibility/lib/Drupal/accessibility/AccessibilityTestAccessController.php
+[parsing] modules/contrib/accessibility/lib/Drupal/accessibility/AccessibilityTestInterface.php
+[parsing] modules/contrib/accessibility/lib/Drupal/accessibility/AccessibilityTestRenderController.php
+[parsing] modules/contrib/accessibility/lib/Drupal/accessibility/AccessibilityTestStorageController.php
+[parsing] modules/contrib/accessibility/lib/Drupal/accessibility/AccessibilityTestStorageControllerInterface.php
+[parsing] modules/contrib/accessibility/lib/Drupal/accessibility/Controller/AccessibilityController.php
+[parsing] modules/contrib/accessibility/lib/Drupal/accessibility/Entity/AccessibilityTest.php
+PHP Warning:  Uncaught PHPStan\Broker\ClassAutoloadingException: Class Drupal\Core\Entity\EntityStorageControllerInterface not found and could not be autoloaded. in phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/phpstan/phpstan/phpstan.phar/src/Reflection/Runtime/RuntimeReflectionProvider.php:164
+Stack trace:
+#0 [internal function]: PHPStan\Reflection\Runtime\RuntimeReflectionProvider->PHPStan\Reflection\Runtime\{closure}('Drupal\\Core\\Ent...')
+#1 /var/lib/drupalci/workspace/drupal-checkouts/drupal3/modules/contrib/accessibility/lib/Drupal/accessibility/Entity/AccessibilityTest.php(57): spl_autoload_call('Drupal\\Core\\Ent...')
+#2 phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/rector/rector-prefixed/rector/vendor/nette/robot-loader/src/RobotLoader/RobotLoader.php(92): require('/var/lib/drupal...')
+#3 phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/rector/rector-prefixed/rector/vendor/nette/robot-loader/src/RobotLoader/RobotLoader.php(93): _HumbugBoxeee6bda8eb22\Ne in phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/phpstan/phpstan/phpstan.phar/src/Reflection/Runtime/RuntimeReflectionProvider.php on line 164
+Warning: Uncaught PHPStan\Broker\ClassAutoloadingException: Class Drupal\Core\Entity\EntityStorageControllerInterface not found and could not be autoloaded. in phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/phpstan/phpstan/phpstan.phar/src/Reflection/Runtime/RuntimeReflectionProvider.php:164
+Stack trace:
+#0 [internal function]: PHPStan\Reflection\Runtime\RuntimeReflectionProvider->PHPStan\Reflection\Runtime\{closure}('Drupal\\Core\\Ent...')
+#1 /var/lib/drupalci/workspace/drupal-checkouts/drupal3/modules/contrib/accessibility/lib/Drupal/accessibility/Entity/AccessibilityTest.php(57): spl_autoload_call('Drupal\\Core\\Ent...')
+#2 phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/rector/rector-prefixed/rector/vendor/nette/robot-loader/src/RobotLoader/RobotLoader.php(92): require('/var/lib/drupal...')
+#3 phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/rector/rector-prefixed/rector/vendor/nette/robot-loader/src/RobotLoader/RobotLoader.php(93): _HumbugBoxeee6bda8eb22\Ne in phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/phpstan/phpstan/phpstan.phar/src/Reflection/Runtime/RuntimeReflectionProvider.php on line 164
+PHP Fatal error:  Declaration of Drupal\accessibility\Entity\AccessibilityTest::postSave(Drupal\Core\Entity\EntityStorageControllerInterface $storage_controller, $update = true) must be compatible with Drupal\Core\Entity\ContentEntityBase::postSave(Drupal\Core\Entity\EntityStorageInterface $storage, $update = true) in /var/lib/drupalci/workspace/drupal-checkouts/drupal3/modules/contrib/accessibility/lib/Drupal/accessibility/Entity/AccessibilityTest.php on line 57
+Fatal error: Declaration of Drupal\accessibility\Entity\AccessibilityTest::postSave(Drupal\Core\Entity\EntityStorageControllerInterface $storage_controller, $update = true) must be compatible with Drupal\Core\Entity\ContentEntityBase::postSave(Drupal\Core\Entity\EntityStorageInterface $storage, $update = true) in /var/lib/drupalci/workspace/drupal-checkouts/drupal3/modules/contrib/accessibility/lib/Drupal/accessibility/Entity/AccessibilityTest.php on line 57

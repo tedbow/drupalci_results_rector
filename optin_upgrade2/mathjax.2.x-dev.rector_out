@@ -1,0 +1,22 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/mathjax/mathjax.install
+[parsing] modules/contrib/mathjax/mathjax.module
+[parsing] modules/contrib/mathjax/src/Form/MathjaxSettingsForm.php
+[parsing] modules/contrib/mathjax/src/Plugin/Filter/MathjaxFilter.php
+[parsing] modules/contrib/mathjax/src/Tests/MathjaxWebTest.php
+[refactoring] modules/contrib/mathjax/mathjax.install
+[refactoring] modules/contrib/mathjax/mathjax.module
+[refactoring] modules/contrib/mathjax/src/Form/MathjaxSettingsForm.php
+[refactoring] modules/contrib/mathjax/src/Plugin/Filter/MathjaxFilter.php
+[refactoring] modules/contrib/mathjax/src/Tests/MathjaxWebTest.php
+[printing] modules/contrib/mathjax/mathjax.install
+[printing] modules/contrib/mathjax/mathjax.module
+[printing] modules/contrib/mathjax/src/Form/MathjaxSettingsForm.php
+[printing] modules/contrib/mathjax/src/Plugin/Filter/MathjaxFilter.php
+[printing] modules/contrib/mathjax/src/Tests/MathjaxWebTest.php
+
+
+ [OK] Rector is done!                                                           
+

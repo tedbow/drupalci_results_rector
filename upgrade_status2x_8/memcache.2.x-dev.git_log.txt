@@ -1,0 +1,1624 @@
+commit 3a623de259a2482d4a23015051f5172c634c6abb
+Author: Brandon Bergren <git@bdragon.rtk0.net>
+Date:   Wed Sep 26 17:19:32 2018 -0500
+
+    Revert "Issue #2999614 by visabhishek: Replace uses of deprecated functions"
+    
+    This reverts commit 58b9eb98c2be31b771eaac3b8e6236849e02e7d1.
+
+commit 58b9eb98c2be31b771eaac3b8e6236849e02e7d1
+Author: visabhishek <visabhishek@896554.no-reply.drupal.org>
+Date:   Wed Sep 26 17:15:50 2018 -0500
+
+    Issue #2999614 by visabhishek: Replace uses of deprecated functions
+
+commit a91175bed43c7e1963f8d75e0db7bb28b02e2da4
+Author: Brandon Bergren <git@bdragon.rtk0.net>
+Date:   Wed Sep 26 17:10:10 2018 -0500
+
+    Issue #3002637: Repair memcache_admin table theming.
+
+commit 59a5628b4b60973ff714a647a2f305244fe0d5e5
+Author: bdragon <bdragon@53081.no-reply.drupal.org>
+Date:   Wed Sep 26 16:47:09 2018 -0500
+
+    Issue #2877947 by idebr, bdragon, sathish.redcrackle, bonus, guilopes, tcmug, damiankloip: Apply Drupal coding standards (part 2)
+
+commit 7a58420cdd8c386864c1155a55d69b9ccc19d0d1
+Author: idebr <idebr@1879760.no-reply.drupal.org>
+Date:   Wed Sep 26 16:30:51 2018 -0500
+
+    Issue #2877947 by idebr, sathish.redcrackle, bonus, bdragon, tcmug, damiankloip, guilopes: Apply Drupal coding standards (part 1)
+
+commit 9a910f23ee766b37969f19ffb820940d074f0824
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Thu Sep 20 11:11:10 2018 +0100
+
+    Issue #2865364 by damiankloip, catch, derhasi, Fabianx: Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException: You have requested a non-existent service "user.field_user_food_blogger"
+
+commit f3ad3c96c1e0e0cc6169653b17310e776fa81126
+Author: Brandon Bergren <git@bdragon.rtk0.net>
+Date:   Tue Sep 11 16:45:19 2018 -0500
+
+    Issue #2998887 work: Fix getMulti statistics collection bug.
+
+commit 26b2d42c316775bc2677a049172e4a4d47816bc7
+Author: Brandon Bergren <git@bdragon.rtk0.net>
+Date:   Tue Sep 11 16:25:42 2018 -0500
+
+    Fix output of memcache statistics table.
+
+commit 3b645a4849c7689d8cd454e8de46e8cf232d6561
+Author: bdragon <bdragon@53081.no-reply.drupal.org>
+Date:   Tue Sep 11 15:56:10 2018 -0500
+
+    Issue #2996620 by bdragon, Fabianx: Fix clock skew tolerance in deleteAll; make it configurable [Follow-up: Add mechanism to support invalidateAll and deleteAll]
+
+commit 00b288a4cac38cdeedecb2bcfbb93dcab9148cba
+Author: bdragon <bdragon@53081.no-reply.drupal.org>
+Date:   Tue Sep 11 14:11:48 2018 -0500
+
+    Issue #2989601 by bdragon, damiankloip, Fabianx, catch: Support for cache tags natively in memcache
+
+commit b49c96c93834ee8508171dd2d80bf04cb17d0ab5
+Author: KarlShea <KarlShea@294283.no-reply.drupal.org>
+Date:   Fri Sep 7 18:11:46 2018 -0500
+
+    Issue #2997537 by KarlShea: Undefined method error on Statistics page
+
+commit de03e20c3a22b4275b9673d3a9f530255a21be58
+Author: bdragon <bdragon@53081.no-reply.drupal.org>
+Date:   Fri Sep 7 16:05:21 2018 -0500
+
+    Issue #2996621 by bdragon, Fabianx: Create timestamp service, which both cache tags and deleteAll() can use
+
+commit f30543ba2d991e5fd068963ebfe5bb00e163c818
+Author: Damian Lee <damiankloip@gmail.com>
+Date:   Tue Sep 4 13:04:58 2018 +0100
+
+    Move MemcacheBackendUnitTest to Kernel test namespace
+
+commit d0107b1728044ab79e22ad2f84b7c1a119adea03
+Author: damiankloip <damiankloip@1037976.no-reply.drupal.org>
+Date:   Tue Sep 4 12:55:28 2018 +0100
+
+    Issue #2997186 by damiankloip, Fabianx: Remove key() usage from Lock Backend
+
+commit 9b92d6244ad79eb9380e1b728ba882b880274d20
+Author: damiankloip <damiankloip@1037976.no-reply.drupal.org>
+Date:   Tue Sep 4 12:40:35 2018 +0100
+
+    Issue #2996626 by Fabianx, damiankloip: Follow-up; class renames
+
+commit a815d073e98104d94a0edb5a8f547632d6aff3d0
+Author: damiankloip <damiankloip@1037976.no-reply.drupal.org>
+Date:   Tue Sep 4 11:02:40 2018 +0100
+
+    Issue #2996626 by Fabianx, damiankloip: Class structure is very confusing, unclear when to use factory and when instance
+
+commit fe643be4fe8db87bb23d69709ac37f98053ac54a
+Author: Damian Lee <damiankloip@gmail.com>
+Date:   Tue Sep 4 08:53:26 2018 +0100
+
+    Issue #2996946 by damiankloip: Follow up - Fix MemcacheBackendUnitTest
+
+commit 7bba7982c129a0c0632b1483ab4dc0ff312e1859
+Author: Fabianx <Fabianx@693738.no-reply.drupal.org>
+Date:   Tue Sep 4 08:28:31 2018 +0100
+
+    Issue #2996946 by Fabianx, catch: Remove stampede protection: lock->release() is never called explicitly + can't return expired items in D8 + move stampede protection into subclass / decorator
+
+commit df437885d3aa61ff48cfcd584e65dc49df76bf81
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Mon Sep 3 10:42:29 2018 +0100
+
+    Issue #2958403 by mcdruid, catch, mxh, bkosborne, vurt, Jeremy, damiankloip, Fabianx: enable compression by default with memcached extension
+
+commit a39c03a903ac517d0cfa08d827d738a237c1e925
+Author: damiankloip <damiankloip@1037976.no-reply.drupal.org>
+Date:   Wed Aug 29 19:30:05 2018 +0100
+
+    Issue #2995907 by damiankloip, Fabianx: Remove Persistent Lock Implementation
+
+commit 6086e151e3b13695426c23ab393ded8df820dfb9
+Author: damiankloip <damiankloip@1037976.no-reply.drupal.org>
+Date:   Wed Aug 29 19:27:53 2018 +0100
+
+    Issue #2905341 by damiankloip, Fabianx, Evgeny_Yudkin: MemcacheLockBackend service should use "add" and "delete" instead of "get" and "set"
+
+commit 9ea21dba4e1b092d3fc5647c30a7df3553f7066d
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Wed Aug 29 14:49:48 2018 +0100
+
+    Issue #2995457 by catch, mcdruid: Human readable hashed memcache keys
+
+commit 93dcfe2dd52b9d454708a3bde7361b8539046f7b
+Author: Nathaniel Catchpole <catch@35733.no-reply.drupal.org>
+Date:   Wed Aug 29 12:10:21 2018 +0900
+
+    Issue #2930417 by anavarre, Venkatesh Rajan.J: Convert module to use short array syntax (new coding standard)
+
+commit 2d0b1a0d07e8cc795127fb70ef808d88f1322f21
+Author: damiankloip <damiankloip@1037976.no-reply.drupal.org>
+Date:   Tue Aug 28 17:20:13 2018 +0100
+
+    Issue #2484595 by damiankloip, mcdruid, Fabianx, vurt, catch: Add mechanism to support invalidateAll and deleteAll
+
+commit a86ef524b8ab11070ec05b39d7c9ede66952a2d8
+Author: mcdruid <mcdruid@255969.no-reply.drupal.org>
+Date:   Tue Aug 28 15:23:19 2018 +0900
+
+    Issue #2909178 by mcdruid: remove extra indentation from lock services.yml stanza in README
+
+commit 9fdec32d1e24ea5a713404ca5c42bb3f99b785b9
+Author: adan <adan@516420.no-reply.drupal.org>
+Date:   Tue Aug 28 14:17:00 2018 +0900
+
+    Issue #2944396 by manuel.adan, anavarre, ProFire: [PHP 7.2] Deprecated assert calling with a string argument
+
+commit 730846bddd660e50ba42651b5510041fdec75634
+Author: slydevil <slydevil@1846786.no-reply.drupal.org>
+Date:   Mon Aug 27 15:59:16 2018 +0200
+
+    Issue #2364557 by slydevil, Rok Žlender: Port memcache_admin module to d8
+
+commit 3c415e6e57e464659667991d6b73f68608fca9c6
+Author: hauptm <hauptm@1124384.no-reply.drupal.org>
+Date:   Thu Aug 16 18:33:44 2018 -0500
+
+    Issue #2976241 by mxh: class MemcacheBackendFactory does not implement CacheFactoryInterface
+
+commit 730f0ef2ba6bfc52b25d50cc2103f5f674b9cffd
+Author: Damian Lee <damiankloip@gmail.com>
+Date:   Mon Sep 25 08:47:51 2017 +0100
+
+    Issue #2882755 by guilopes, mxh, damiankloip, afi13: Move container to memcache
+
+commit b6881b3f375c8a9ee30ce4d9758564cdbc1d97e5
+Author: yas <yas@17536.no-reply.drupal.org>
+Date:   Mon Sep 4 15:24:57 2017 +0100
+
+    Issue #2903077 by yas, damiankloip, realityloop: Undefined index 'description' when module installed without memcache available
+
+commit 86e390036fa801c656b148ac74ffcd19f784a6ac
+Author: skek <skek@417078.no-reply.drupal.org>
+Date:   Fri Aug 18 09:41:19 2017 +0100
+
+    Issue #2886818 by skek: Wrong fragments in README.txt file
+
+commit c7531d24597d08680dc19e0189934250d251792c
+Author: Damian Lee <damiankloip@gmail.com>
+Date:   Fri Aug 18 09:33:48 2017 +0100
+
+    Issue #2903077 by damiankloip, npcoder: Undefined index 'description' when module installed without memcache available
+
+commit cd53ea6efe8306419e6052269b5899b07214f144
+Author: Damian Lee <damiankloip@gmail.com>
+Date:   Thu Jul 6 14:14:21 2017 +0100
+
+    Issue #2887558 by damiankloip, hswong3i, delta, MiSc: Circular reference detected for service "cache.backend.memcache"
+
+commit ed98d696169be0ad7ecd7b25639fbf5353a4ec79
+Author: Damian Lee <damiankloip@gmail.com>
+Date:   Fri Jun 16 09:30:39 2017 +0100
+
+    Issue #2779147 by martin107, damiankloip: Inject the logger
+
+commit 97888cf2b53d7903d7f4756138f96d42ec5a7952
+Author: slydevil <slydevil@1846786.no-reply.drupal.org>
+Date:   Fri Jun 16 09:19:26 2017 +0100
+
+    Issue #2882431 by slydevil: Socket file configuration not working
+
+commit fb3e4ff2b9e5610a36241595a0b6267e2e510cb3
+Author: marcelovani <marcelovani@854220.no-reply.drupal.org>
+Date:   Wed Apr 12 20:23:14 2017 +0100
+
+    Issue #2852488 by marcelovani: Add composer.json
+
+commit 5b6a8da5ecb6e498cd65a0a4b853ab064fb3e903
+Author: Damian Lee <damiankloip@gmail.com>
+Date:   Wed Apr 12 20:19:19 2017 +0100
+
+    Issue #2852460 by kalpaitch, bkosborne, vurt, damiankloip: Document Locking Backend
+
+commit 0e4ef4d6134bdbc6e0ee9c7e85a6cd060bcdea83
+Author: rokZlender <rokZlender@61873.no-reply.drupal.org>
+Date:   Wed Apr 12 20:07:02 2017 +0100
+
+    Issue #2862230 by Rok Žlender: SASL Support in Drupal 8 version
+
+commit 01d903e04bfd9eb32dd4d1d74990ebbd3ee8e593
+Author: Damian Lee <damiankloip@gmail.com>
+Date:   Wed Apr 12 20:04:14 2017 +0100
+
+    Fix namespace for extended LockFunctionalTest
+
+commit 9e4c514b2aa63b6a8981e9a375de4e2fcaa100e3
+Author: Damian Lee <damiankloip@gmail.com>
+Date:   Wed Sep 28 09:38:34 2016 +0100
+
+    Issue #2728427 by lussoluca, GroovyCarrot, MiSc, damiankloip: Add compatibility with PHP 7
+
+commit bf772cf935fc43b7d279fdcbd165cf36753cb332
+Author: Damian Lee <damiankloip@gmail.com>
+Date:   Thu Sep 22 08:47:40 2016 +0100
+
+    Issue #2701903 by egruel, MiSc, LeStat: Setting prefix_key is not use by memcache
+
+commit 20bcb68e72f17ec7f156eff69e9fab925ca30d54
+Author: Damian Lee <damiankloip@gmail.com>
+Date:   Tue Sep 13 10:19:31 2016 +0100
+
+    Issue #2674884 by damiankloip, jcnventura, h3rj4n, vurt: Array exception and notices
+
+commit 908c0a2bfa19363859d3cf935437c4170ad4d24c
+Author: Damian Lee <damiankloip@gmail.com>
+Date:   Tue Jun 7 14:12:58 2016 +0100
+
+    Issue #2680347 by jcnventura, anavarre, gokulnk: Update documentation
+
+commit e0b03a7ae4ef1a8e02f0e0ee6e71494a6552942d
+Author: git <git@2318788.no-reply.drupal.org>
+Date:   Thu May 12 17:22:00 2016 +0100
+
+    Issue #2701903 by egruel: Setting prefix_key is not use by memcache
+
+commit d895e15a8c2b3860ae683cafaab5821e4ba42ae5
+Author: Damian Lee <damiankloip@gmail.com>
+Date:   Mon Feb 29 13:04:52 2016 +0000
+
+    Fix docblock and typehint stdClass for MemcacheBackend::valid
+
+commit d95db90bb64bb41dd556337b70e5a880fb91dbbe
+Author: Damian Lee <damiankloip@gmail.com>
+Date:   Mon Feb 29 13:01:56 2016 +0000
+
+    Fix memcache_stampede_semaphore setting call
+
+commit daecae3e5e2fdf7c6e731877357028ee80a09322
+Author: Damian Lee <damiankloip@gmail.com>
+Date:   Wed Feb 3 11:37:25 2016 +0000
+
+    Add a MemcacheLockFactory
+
+commit e43814c5e1eeb3d8731775804b7a8ec3008e299c
+Author: Damian Lee <damiankloip@gmail.com>
+Date:   Tue Feb 2 17:14:49 2016 +0000
+
+    Fix lock backend and add test coverage
+
+commit 2b95044fb80d2eee6837e759009329b13edd8f5d
+Author: Damian Lee <damiankloip@gmail.com>
+Date:   Tue Feb 2 14:13:47 2016 +0000
+
+    Add a close method to DrupalMemcacheInterface for flushing
+
+commit 45d285cbf9094a28f08a7a2452006404a5325063
+Author: damiankloip <damiankloip@1037976.no-reply.drupal.org>
+Date:   Tue Feb 2 14:02:17 2016 +0000
+
+    Issue #2305791 by damiankloip: Unuseful error in case of problems with memcached server or extension
+
+commit 29698ac165bfa875f038e9abac670dc45f3b70da
+Author: Damian Lee <damiankloip@gmail.com>
+Date:   Sat Jan 30 11:25:43 2016 +0000
+
+    Add back hook_requirements
+
+commit ed786f33095fa2478761676ceed0bb0b16a63f0d
+Author: Damian Lee <damiankloip@gmail.com>
+Date:   Fri Jan 29 11:25:50 2016 +0000
+
+    Issue #2562833 by jhedstrom, damiankloip: Order isn't guaranteed in \Memcache::get()
+
+commit 222f62f7c462f084d7d1852f747e0bf7e16909ca
+Author: Damian Lee <damiankloip@gmail.com>
+Date:   Tue Jan 12 10:06:13 2016 +0000
+
+    #2578789 Follow up - Small code clean up for DrupalMemcacheConfig
+
+commit a4adf3135c39d006b0da8b2d56a1da7ffceb9469
+Author: Damian Lee <damiankloip@gmail.com>
+Date:   Tue Jan 12 10:04:13 2016 +0000
+
+    Remove unported unstable directory
+
+commit 27b65fd5a09c1e5ac17dabf044abe17bfc92fa49
+Author: Damian Lee <damiankloip@gmail.com>
+Date:   Tue Jan 12 10:03:01 2016 +0000
+
+    Remove unported memcache test files
+
+commit 474ddaeca37aa9effbe33cecbdb448bd2dc641f6
+Author: Damian Lee <damiankloip@gmail.com>
+Date:   Tue Jan 12 10:02:19 2016 +0000
+
+    Remove memcache_admin module files
+
+commit 08769dc4fe9698d101f1edd621a1c0ad481d1e54
+Author: Damian Lee <damiankloip@gmail.com>
+Date:   Tue Jan 12 09:47:10 2016 +0000
+
+    Issue #2467005 by jhedstrom, damiankloip: bin gets ignored in cache key unless each bin is declared in settings
+
+commit d1d1a9801f18eb19c6823eb384b358ee350a9b09
+Author: Damian Lee <damiankloip@gmail.com>
+Date:   Tue Jan 12 09:39:47 2016 +0000
+
+    #2578789 Follow up - Remove statics from DrupalMemcacheConfig, misc code cleanup
+
+commit 6a55bb2e6e3e2677fee95a32cb68e42ed3745e22
+Author: Damian Lee <damiankloip@gmail.com>
+Date:   Tue Jan 12 09:32:35 2016 +0000
+
+    #2578789 Follow up - Move DrupalMemcacheConfigTest to unit test directory
+
+commit 3e0cfaa18528b0ef338d566385a4d39f013235ac
+Author: Damian Lee <damiankloip@gmail.com>
+Date:   Tue Jan 12 09:28:21 2016 +0000
+
+    #2578789 Follow up - Fix MemcacheBackendUnitTest
+
+commit 417aa3e29058ea7d74b0be0ba66de33e9837900c
+Author: timhilliard <timhilliard@195493.no-reply.drupal.org>
+Date:   Tue Jan 12 09:25:50 2016 +0000
+
+    Issue #2578789 by timhilliard, anavarre, damiankloip, nielsvm: Switch to a new config class for memcache configuration
+
+commit 99c57f89cdde13a000667b56ec21d00e2aab229b
+Author: Damian Lee <damiankloip@gmail.com>
+Date:   Thu May 7 09:35:40 2015 +0100
+
+    Issue #2056373 by damiankloip, jhedstrom, slashrsm, msonnabaum: Implement cache tag support
+
+commit 16834c281bbdadf1e9931e36e64396a579a3d61d
+Author: slashrsm <slashrsm@744628.no-reply.drupal.org>
+Date:   Tue Sep 2 09:50:04 2014 +0100
+
+    Issue #2298473 by slashrsm: Convert watchdog() calls to use logger service.
+
+commit fa8163ba34fd4f2a822c5a744119498a51c23533
+Author: Damian Lee <damian@damoweb.co.uk>
+Date:   Fri Jul 18 16:43:29 2014 +0100
+
+    Issue #2305649 by slashrsm, damiankloip: Fix/update expiration logic.
+
+commit 0f4f2d037f6cb5fcdf49206f856f787805d8506a
+Author: Damian Lee <damian@damoweb.co.uk>
+Date:   Sat Jul 5 09:59:48 2014 +0100
+
+    Use "default" instead of "cache" for default memcache bin
+
+commit 214de4639a9a3e85ced53bbc8bb66f11ec3f5159
+Author: Damian Lee <damian@damoweb.co.uk>
+Date:   Sat Jul 5 09:20:47 2014 +0100
+
+    Issue #2297915: Add setMultiple() method to MemcacheBackend
+
+commit 907727e323476a6182cb2284770f20a2258eccf3
+Author: slashrsm <slashrsm@744628.no-reply.drupal.org>
+Date:   Sat Jul 5 09:18:53 2014 +0100
+
+    Issue #2297915 by slashrsm: Conversion to Drupal\Core\Site\Settings
+
+commit 6debea836a986937220f577442c20ad36b004052
+Author: Damian Lee <damian@damoweb.co.uk>
+Date:   Sat Jul 5 08:59:30 2014 +0100
+
+    Conversion to PSR-4
+
+commit 8289485b7ed3ea4631db941e18b19579cbb249d9
+Author: Damian Lee <damian@damoweb.co.uk>
+Date:   Wed Sep 11 07:53:33 2013 +0100
+
+    Issue #2082291 by damiankloip: Fixed Remove usage of state in MemcacheBackend.
+
+commit 0478ff840f342f2bb265b56cfafa4354b64707fc
+Author: Damian Lee <damian@damoweb.co.uk>
+Date:   Wed Sep 4 16:23:44 2013 +0100
+
+    Issue #2081687 by damiankloip, berdir: Fixed Cache sets should use set() not add() method.
+
+commit a33a14a16d132d4b6e9c2e9d370b66f921232ba2
+Author: Damian Lee <damian@damoweb.co.uk>
+Date:   Thu Aug 8 14:01:23 2013 +0100
+
+    Issue #2056369 by damiankloip: Replace DrupalMemcache static class with factory pattern.
+
+commit ddab90b52ea553b5ce2a1710b3c1049e66c0208e
+Author: Damian Lee <damian@damoweb.co.uk>
+Date:   Wed Jul 17 16:04:28 2013 +0100
+
+    Added MemcacheBackendUnitTest, removed some inc files
+
+commit dd7378704ecc6546ed168f97b1dca42e9c734acc
+Author: Damian Lee <damian@damoweb.co.uk>
+Date:   Mon Jul 15 12:44:37 2013 +0100
+
+    Removed session storage logic, clear method, Inject state
+
+commit 502a3c275e0460356da3be32ea7d81f6febfaa77
+Author: Damian Lee <damian@damoweb.co.uk>
+Date:   Mon Jul 15 10:59:15 2013 +0100
+
+    Removed wildcard support
+
+commit 42b69233479e6ec2f56c96ace8ad8481d0848c54
+Author: Damian Lee <damian@damoweb.co.uk>
+Date:   Mon Jul 15 09:22:10 2013 +0100
+
+    Use bin property in lock backend
+
+commit d3fb7fac7f05e98317e79ef1513ec51d662d67ed
+Author: Damian Lee <damian@damoweb.co.uk>
+Date:   Fri Jul 12 18:18:22 2013 -0400
+
+    Initial conversion of memcache-locl-code.inc to MemcacheLockBackend service
+
+commit 6dace31628191255c4404394fc21e3189f254eb3
+Author: Damian Lee <damian@damoweb.co.uk>
+Date:   Fri Jul 12 18:01:05 2013 -0400
+
+     Small tidy to DrupalMemcache class
+
+commit e2cf1a75e4d44aded5ed21b5f4374128c82a7402
+Author: Damian Lee <damian@damoweb.co.uk>
+Date:   Fri Jul 12 13:30:07 2013 -0400
+
+    Fixed missing interface methods, get/set working
+
+commit b86b3ed34cfac34e68a86613b9bc1dea50803223
+Author: Damian Lee <damian@damoweb.co.uk>
+Date:   Thu Jul 11 13:05:39 2013 -0400
+
+    Fixed get/getMultiple
+
+commit ef0d19c0d68a64fdd672147caf34570cef7c284e
+Author: Damian Lee <damian@damoweb.co.uk>
+Date:   Tue Jul 9 17:11:32 2013 -0400
+
+    Added settings.yml file, renamed backend class properties
+
+commit faa9e9866643215183c51d08d818ca49ab0c13c7
+Author: Damian Lee <damian@damoweb.co.uk>
+Date:   Tue Jul 9 14:54:48 2013 -0400
+
+    Added cache backend factory
+
+commit 1ba42f619b6d0708b131d3f4ce5b4918f212ab1a
+Author: Damian Lee <damian@damoweb.co.uk>
+Date:   Tue Jul 9 14:23:23 2013 -0400
+
+    Conversion of dmemcache.inc file to DrupalMemcache class
+
+commit fdad90fdbac0c4e7dbb56676ba4c3703f8975c6d
+Author: Damian Lee <damian@damoweb.co.uk>
+Date:   Tue Jul 9 11:30:04 2013 -0400
+
+    Updated .info file to yml
+
+commit cf758f792cd5ad1efdfc0f722741ff01f1dda7fd
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Fri May 24 16:38:58 2013 -0700
+
+    Issue #1733674 by markpavlitski, marcingy, and Jeremy: only collect statistics if enabled, disable by default.
+
+commit 2a21912745427afb3eb0ae73adb34616d9fee2a7
+Author: markpavlitski <markpavlitski@2438878.no-reply.drupal.org>
+Date:   Fri May 24 15:45:45 2013 -0700
+
+    Issue #1908348 by markpavlitski, update user access in session backend.
+
+commit 321f39b9732fc8dcf38d7a86eca9bbd424b9d46d
+Author: markpavlitski <markpavlitski@2438878.no-reply.drupal.org>
+Date:   Fri May 24 15:37:38 2013 -0700
+
+    Issue #1427256 by markpavlitski, remove headers parameter not used in drupal 7.x
+
+commit 1d19d3f735e9b980fc6a10147f97531117a36841
+Author: markpavlitski <markpavlitski@2438878.no-reply.drupal.org>
+Date:   Fri Apr 26 15:27:37 2013 -0400
+
+    Issue #1597788 by markpavlitski, clarify memcache_admin documentation.
+
+commit 1d4cd8b123044f9760c44fae26575a86d1202f20
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Sun Apr 21 09:57:15 2013 -0400
+
+    Issue 1613622 by Jeremy, markpavlitski, tzakrajs: properly hash keys >250 characters
+
+commit fcd303ac665864c39018e7a681d76e8352da1566
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Fri Apr 19 01:07:04 2013 -0400
+
+    Issue #1974088 by Jeremy, erikwebb: document memcache lock implementation and stampede protection; documentation cleanup.
+
+commit f70270f798ec2354041028802d3a472c8bd14473
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Fri Apr 19 00:03:14 2013 -0400
+
+    Issue #1472332 by Jeremy, markpavlitski: better explain Binary protocol and TCP_NODELAY
+
+commit bcd9c751718c0345a25d238326dca208c20dc409
+Author: markpavlitski <markpavlitski@2438878.no-reply.drupal.org>
+Date:   Thu Apr 18 23:30:29 2013 -0400
+
+    Issue #1785744 by markpavlitski, quicksketch: initialize user timezone in memcache-session.inc
+
+commit 811d169f4d68f4d39095ad5aaecff5d3c4981ce8
+Author: alanmackenzie <alanmackenzie@1045032.no-reply.drupal.org>
+Date:   Thu Apr 18 23:09:32 2013 -0400
+
+    Issue #1633948 by alanmackenzie: Add configuration link on admin module page.
+
+commit 1af2c91b7ca42952c1cb293f7488bdeae8c541f6
+Author: markpavlitski <markpavlitski@2438878.no-reply.drupal.org>
+Date:   Thu Apr 18 01:37:52 2013 -0400
+
+    Issue #1150042 by markpavlitski, fix statistics for default cluster
+
+commit dab8e8927c7ac3bf760f3e3379060c37324edbb2
+Author: markpavlitski <markpavlitski@2438878.no-reply.drupal.org>
+Date:   Thu Apr 18 01:27:25 2013 -0400
+
+    Issue #1830496 by markpavlitski: log connect errors in watchdog.
+
+commit a878c95542ca144c224fa6e9b1f425c4be0e8f19
+Author: fgm <fgm@27985.no-reply.drupal.org>
+Date:   Thu Apr 18 01:16:27 2013 -0400
+
+    Issue #1331018 by fgm: fix undefined index notices
+
+commit b8f5c59ea650fd655874eeef19dba59b8a2100da
+Author: webbj74 <webbj74@61512.no-reply.drupal.org>
+Date:   Wed Apr 17 20:44:49 2013 -0400
+
+    Issue #1452966 by Jonathan Webb, remove outdated INSTALLATION.txt.
+
+commit d341d880524894675e6e8495340552295f006e92
+Author: JeffSheltren <JeffSheltren@191182.no-reply.drupal.org>
+Date:   Wed Apr 17 20:39:27 2013 -0400
+
+    Issue #1536222 by JeffSheltren, helmo, Jeremy: cleanup documentation.
+
+commit 812d5dca24ffb5bb735f9e0eb90035912d2955b5
+Author: markpavlitski <markpavlitski@2438878.no-reply.drupal.org>
+Date:   Wed Apr 17 19:17:14 2013 -0400
+
+    Isssue #1750476 by markpavlitski, mgifford, valderama: fix typo, fix PHP notices.
+
+commit 13163ccb5e15a1bf2a99247cb858b1064117bfbd
+Author: gielfeldt <gielfeldt@366993.no-reply.drupal.org>
+Date:   Wed Apr 17 19:04:46 2013 -0400
+
+    Issue #366993 by gielfeldt: add default value for lock_id to match core lock.inc
+
+commit cd5df57a838bcf006d8914f0577cd5083a9eb383
+Author: Phizes <Phizes@1093080.no-reply.drupal.org>
+Date:   Wed Apr 17 18:57:09 2013 -0400
+
+    Issue #1690130 by Phizes: Support sockets with PECL memcached extension.
+
+commit f173ea71cbf61d397e01210769a3d29b9f48230d
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Wed Apr 18 11:19:59 2012 +0900
+
+    Issue #1150072 by Jeremy, JeffSheltren: Review expires handling.
+
+commit 145c0c7ba3adaf7e8f5ffcd6a96716c33375efcf
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Wed Mar 28 12:45:23 2012 +0900
+
+    Issue #1362316 by sionescu, catch: Fixed ->data does not get unserialized.
+
+commit 002a01fad71e47d75a67a4278d688a82f89b5eb7
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Wed Mar 28 12:40:59 2012 +0900
+
+    Issue #656838 by quicksketch: Fix session handling for anonymous users and drupal_set_message().
+
+commit 527313506beb0b6b42e108f96851a72fdb9ade80
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Wed Mar 28 12:38:09 2012 +0900
+
+    Issue #1150072 by catch: Review expires handling.
+
+commit 91af33a887ea929556526ab61727eb00a88489ce
+Author: Nathaniel <catch@35733.no-reply.drupal.org>
+Date:   Mon Jan 30 14:06:47 2012 +0900
+
+    Issue #1417958 by glennpratt: Remove .gitignore.
+
+commit 5947cf0d625628b2423237baabe512984114a7a7
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Sat Jan 7 15:13:42 2012 +0900
+
+    Issue #1396866 by greggles: Fixed remove unnecessary ! placeholder - switch to @.
+
+commit 56a4611f41d3d59e8ec9cc499b088588849362c2
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Thu Jan 5 20:15:35 2012 +0900
+
+    Issue #1394866: move memcache-session.inc to unstable folder.
+
+commit 78d299f82df3c1efa9208e3f4ab0f8d25f4805f8
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Thu Jan 5 19:57:48 2012 +0900
+
+    Issue #1394762 by catch: use the testing profile.
+
+commit d14c69bd656e60f1857080391403a2edf27a5b17
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Thu Jan 5 15:35:22 2012 +0900
+
+    Issue #1219176 by psynaptic: Fixed Error running drush when memcache extension is missing.
+
+commit dadb20603d0fa01ad3047ca34b8af79d7a91882b
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Thu Jan 5 15:27:02 2012 +0900
+
+    Issue #1364678 by tcmug: Fixed Patched undefined function dmemcache_object().
+
+commit 7c73644b0eb4a3e47ee59bfdbe94a7cf58aea296
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Fri Dec 23 20:30:24 2011 +0900
+
+    Issue #1344036 by das-peter, Berdir: Fix cache clear fails when using wildcards - strange behavior with wildcard_valid().
+
+commit 7ccb566a0589dda585915cb00b2a74eef470eae8
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Fri Nov 11 13:17:46 2011 +0900
+
+    Issue #1184678 by das-peter: Added Enhance failure tolerance.
+
+commit 983065517812956bc733dec11b2ee8a99cc92667
+Author: Nathaniel <catch@35733.no-reply.drupal.org>
+Date:   Wed Nov 2 13:30:41 2011 +0900
+
+    Issue #538426 by mikeytown2: Enable socket connections.
+
+commit 3847c1df7da0a8af92301b9e19bb9bbc71df39b5
+Author: Nathaniel <catch@35733.no-reply.drupal.org>
+Date:   Wed Nov 2 13:28:12 2011 +0900
+
+    Issue #1014154 by pillarsdotnet, valthebald: Fixed Incorrect documentation in README.txt.
+
+commit bdb5f62b875477a87d6b1eb6932a20397984ca09
+Author: Nathaniel <catch@35733.no-reply.drupal.org>
+Date:   Wed Nov 2 13:16:22 2011 +0900
+
+    Issue #1322040 by dixon_: Fixed Change private methods to protected.
+
+commit 8a4bf57a87685ba00ba8e76ecde31ae47d70e55f
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Tue Oct 25 01:13:53 2011 +0900
+
+    Issue #656838 by catch: interim commit to remove an outdated cache constant in the test.
+
+commit 5bff8e5cc95490fcb8512e03846117691bd0d8e5
+Author: Nathaniel <catch@35733.no-reply.drupal.org>
+Date:   Fri Oct 21 17:49:25 2011 +0900
+
+    Issue #1131370 by Berdir: Fixed Segment wildcard counts by $string[0].
+
+commit 40a960722c5b77786a713da395b5beab7dd29746
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Wed Oct 19 07:33:57 2011 +0900
+
+    Issue #1307102 by Berdir: Fixed Wildcard clears are broken again...
+
+commit 09c5a725989a7b6aa1398f2abefe1aa4286c9c27
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Sat Oct 1 01:09:49 2011 +0900
+
+    Issue #1292208 by brianV: Fixed cache_page() not flushed when updating a node.
+
+commit 46b23ffb898633f51de6db87646f9bf9a18a7543
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Thu Sep 29 21:34:54 2011 +0900
+
+    Issue #1131370 by das-peter: Follow-up for segment wildcard counts by [0].
+
+commit 57f44554375a38209abe515cfe7919493aff16d2
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Tue Sep 27 22:14:28 2011 +0900
+
+    Issue #1244296 by das-peter: fix strict warning from reset().
+
+commit 7464fa3902892a8e34d171fef02a59b5305c8353
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Mon Sep 26 22:08:42 2011 +0900
+
+    Issue #1289762 by catch: fix E_STRICT warning from array_keys().
+
+commit 9dc9449a79b0cad974732b01ab903905b6e1f1b4
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Mon Sep 26 20:51:17 2011 +0900
+
+    Issue #1131370 by das-peter: wildcard_invalidate variable was not properly updated to 7.x.
+
+commit 5c11809bd0c28269ec6a1dffba784ae8ba533af6
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Mon Sep 26 19:59:39 2011 +0900
+
+    Issue #962422 by das-peter: fix a syntax error.
+
+commit be4e1b9154f7d36398afef863fded4a2b2c5c43b
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Mon Sep 26 19:57:47 2011 +0900
+
+    Issue #1131380 by das-peter: fix undefined variable.
+
+commit 8a714b057158dc0d289ae068ab174902c1512e14
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Fri Sep 23 13:09:07 2011 +0900
+
+    Issue #962422: forward port stampede protection improvements from 6.x
+
+commit 0de438f34fd72eba20bb7a5d052424a43c07cf3c
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Fri Sep 23 12:29:32 2011 +0900
+
+    Issue #1131370: forward port wildcard optimization from 6.x-1.9.
+
+commit 63bc6f2f52107b39fe6f300d46f39eea11b16068
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Mon Sep 19 13:08:12 2011 +0200
+
+    Issue #293902 by Jeremy: Improved admin statistics.
+
+commit 687433da346566cbacd1bd7a1c2bbf56f7fd6bc6
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Fri Sep 16 23:16:06 2011 +0900
+
+    Issue #1281484 by Berdir: wildcards clears broken on subsequent requests.
+
+commit a0b7cb6ec6bae061789febb7abbabdaa11263ad1
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Fri Sep 16 17:17:58 2011 +0900
+
+    Issue #1233634 by  c960657: require dmemcache.inc from memcache-lock.inc
+
+commit 1502097b651d3340c13739502fe48b88f75185b0
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Fri Sep 16 17:15:18 2011 +0900
+
+    Issue #616282 by longwave: avoid calling theme() if the theme system wasn't initiatilized.
+
+commit 7db276643545b4c0f97dc0a4f75dbba5b679d120
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Thu May 5 11:42:50 2011 -0400
+
+    Issue #319697: ultimike, jaydub, Jeremy: Don't break uploads when memcache_admin stats are enabled, and other related fixes.
+
+commit 51386939904cc1f4989fd6dee276456c627cf864
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Fri Sep 16 17:03:27 2011 +0900
+
+    Issue #1085626 by Berdir, catch: Wildcard entries may go missing, leading to caches not being invalidated properly.
+
+commit 94a0970bf86202048e02ab609918b3fde876bd27
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Fri Sep 16 16:21:50 2011 +0900
+
+    Issue #907614 by catch, David Strauss, Jeremy: allow a choice of Memcache extension.
+
+commit 41ead8b81dccaa64b319f7c9dfe9662189a4c8bf
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Fri Sep 16 15:03:47 2011 +0900
+
+    Issue #1103478 by Berdir, catch: port wildcard optimization to Drupal 7, also fixes tests (except one remaining session bug.
+
+commit bb2165f60eeb2bc0f971130fb94c87eadafa0eda
+Author: pillarsdotnet <pillarsdotnet@36148.no-reply.drupal.org>
+Date:   Tue Sep 13 18:52:34 2011 +0200
+
+    Issue #1014154: by pillarsdotnet, README.txt cleanup.
+
+commit 7e3081798f086b29c73da0eaf2e92b794becf491
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Tue Sep 13 13:41:46 2011 +0200
+
+    Bug #1014154: Correct installation instructions; cleanup.
+
+commit ffc86e5ca560c573c64757b6f2594b85515e5435
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Fri Aug 12 20:52:44 2011 +0900
+
+    Issue #1078626 by Berdir: remove 'full key' from cache objects.
+
+commit a2f25b9ce264f87536e65198d878fd7284ce5ef4
+Author: Nathaniel <catch@35733.no-reply.drupal.org>
+Date:   Tue Jul 19 12:11:11 2011 +0900
+
+    Issue
+    1177512 by girishmuraly, hook_perm() is now hook_permission().
+
+commit 02a0a4e75130d19cfbd0ba5b5f291d9405be4295
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Sat Jul 16 12:43:58 2011 +0900
+
+    Issue ##1190426 by pillarsdotnet: fix undefined variable in dmemcache.inc.
+
+commit 8fab0c9f602bf5261a3ab8c611f630630e122c57
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Mon Jul 4 23:54:05 2011 +0900
+
+    Issue #1208742 by catch: fixes undefined function lock_initialize() in bootstrap.inc.
+
+commit d4ee49cea4b7f3c0d423000363a3cb3fabd9fb12
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Mon Jul 4 01:06:47 2011 +0900
+
+    Issue #1131140: remove some cruft from memcache_test.module, remove static caching of  in dmemcache_key.
+
+commit 2fe64c55d491c4bf08e90fd2f89f68d961b8a490
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Mon Jul 4 00:19:50 2011 +0900
+
+    Issues #969998, #1131140 and #1144394: forward port lock improvements from 6.x branch.
+
+commit 00ae2056806ad985c8db02602bf2ee4b185cad57
+Author: catch <catch@35733.no-reply.drupal.org>
+Date:   Mon Jul 4 00:00:31 2011 +0900
+
+    Issue #1095608: fix simpletest compatibility and sync tests between 6.x and 7.x branches.
+
+commit 931e6cf5b162c357084022a4bc31941f4d23f7bd
+Author: Nathaniel <catch@35733.no-reply.drupal.org>
+Date:   Fri Jul 1 11:33:57 2011 +0900
+
+    Issue #1048546: Invalid argument supplied for foreach() in MemCacheDrupal->getMultiple().
+
+commit 04d827cb02de26ca9a044dbb6fa52d80148a7fb2
+Author: Nathaniel <catch@35733.no-reply.drupal.org>
+Date:   Mon May 30 14:36:10 2011 +0900
+
+    Issue #1103796 by FilmKnurd: memcache delete fix.
+
+commit 87e87a48ccb2c65b77ff2c13c9462b1ce3b609b1
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Wed Apr 13 18:24:36 2011 -0400
+
+    Ignore vi swap files
+
+commit 566a13ff3d5317b4f90aac192f13cf9f9ddddac3
+Merge: e62f3f6 7041e1b
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Mon Apr 11 10:49:49 2011 -0400
+
+    Merge branch '7.x-1.x' of git.drupal.org:project/memcache into 7.x-1.x
+
+commit e62f3f6dd1d94911d268af41212b5ece1b6e6498
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Mon Apr 11 10:49:13 2011 -0400
+
+    The memcache.db.inc include file was deprecated in an earlier release and is no longer supported.  Removing.
+
+commit 7041e1b8d02b1b5d7620b2770132fc1ada2cc2a6
+Author: = <catch@35733-no-reply.drupal.org>
+Date:   Thu Mar 17 15:58:42 2011 +0900
+
+    #1095608 by catch: fix simpletest compatibility.
+
+commit 597718bf1f6e1ef01e9429a0ea361a24ed521ad6
+Author: The Great Git Migration <tggm@no-reply.drupal.org>
+Date:   Fri Feb 25 02:07:20 2011 +0000
+
+    Stripping CVS keywords
+
+commit 1c87fbe51e495430a6608325a8240c5a9bc9a0e0
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Tue Jan 4 06:00:56 2011 +0000
+
+    Bug #656838: get basic session support working.  Patch thanks to bblake.
+
+commit 37c94c5b7ff788ecfcd435d9eb44f3ce776dcf90
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Thu Dec 16 19:21:13 2010 +0000
+
+    #958930: do not flush memcache each time cron runs.
+
+commit bb5b9a1bcd9daf30d9b98b9535bf25d5f3d2a399
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Wed Nov 3 19:49:08 2010 +0000
+
+    #961474 by robertDouglass don't advertise a reset option on memcache stats
+
+commit ec941074281dbadad0e21f8bbc9beb3081fc4c44
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Tue Nov 2 17:00:29 2010 +0000
+
+    #925096 by Richard Eriksson - stray debug line accidentally got committed.
+
+commit b7839f53e87ebe49da4a390a639a6b8aec1dfcdf
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Thu Oct 14 01:57:32 2010 +0000
+
+    bug #941082: don't break json and other non-html pages.  Patch thanks to chx.
+
+commit 30279450082e1b37edb6114f75e102f1251a14d2
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Wed Oct 13 03:18:49 2010 +0000
+
+    Rename wildcard_timestamps to wildcard_flushes to ease upgrades from older release, array format changed.
+
+commit 636e92f8b2fa89c3851c670c142713a6c4546581
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Wed Oct 13 02:22:25 2010 +0000
+
+    Bug #911232: Multiget optimization and logic cleanup, thanks to longwave.
+
+commit ca36d78140b714495c9303751a5a2fe3b087f0b0
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Mon Oct 11 23:06:11 2010 +0000
+
+    Bug #931036
+
+commit 08bcb03a0ce32c572cffd9179f91669bf4600922
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Fri Oct 1 14:25:27 2010 +0000
+
+    Bug #926994: typo in wildcards, performance.
+
+commit 17a1d558316f8d30b83ed3e79921e574eddb9f49
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Thu Sep 30 19:58:16 2010 +0000
+
+    Bug #927692: Fix collisions in multihash, patch thanks to jkarlsson.
+
+commit e7deee8621b081d66cf43ca4a3cb11c792041bb6
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Wed Sep 29 15:03:26 2010 +0000
+
+    #854516 by longwave: document use of OPT_BINARY_PROTOCOL and don't make it the default.
+
+commit e4a212651f18aaac49ba9c3495209f4ba1a367cb
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Wed Sep 29 12:43:56 2010 +0000
+
+    Tweaking stats and sessions.
+
+commit 3833d8be0f90d1c70e6b6a2edc22bfe1d48f455b
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Wed Sep 29 11:55:15 2010 +0000
+
+    whitespace
+
+commit aee1b6acef6eddbf527b12d1e5f1ddcc230f1c55
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Wed Sep 29 11:54:34 2010 +0000
+
+    #925096 by robertDouglass | swentel: Fixed Use of REQUEST_TIME improper, incomplete.
+
+commit eb0424fa117aeb01551b612e13cc074909723df7
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Wed Sep 29 11:30:23 2010 +0000
+
+    #856276 by nycnate, srjosh | whytewolf: Fixed Call to undefined method Memcached::getExtendedStats().
+
+commit 438e39dd34a2ec3b3c79755ed9edbbd8b2884765
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Tue Sep 28 16:59:03 2010 +0000
+
+    Extra unneeded line snuck in...
+
+commit 6b64d9a120ffb73134ec1dc024695fb6e9fb7ec1
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Tue Sep 28 16:57:46 2010 +0000
+
+    #911226 by robertDouglass: Added Improved statistics reporting.
+
+commit 1cde38f2e372ef5a6be680fd441bc2c28e8f6734
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Tue Sep 28 12:45:19 2010 +0000
+
+    Updating README requirements
+
+commit cb449a12250808604a165aa5103e35ff142ed5c2
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Tue Sep 28 12:17:53 2010 +0000
+
+    #925096 by robertDouglass: Fixed Use of REQUEST_TIME improper, incomplete.
+
+commit 97d2bc253ad3b77401b47a95be564da0b7c6d2a9
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Sat Sep 25 12:45:59 2010 +0000
+
+    #900436: Optimize memcache::valid(), only check wildcards when necessary.
+
+commit 70c8cb2a939b38fd697cfd1c08ef2d60d406a581
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Thu Aug 26 07:22:31 2010 +0000
+
+    Be sure ->flushes exists before using it.
+
+commit 1d05fe9a6167b48d90499eaa7248414236b4d061
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Wed Aug 25 16:41:24 2010 +0000
+
+    Bug #828664, from core bug fix.
+
+commit d2ece1096373a047b1d2ec8badd820a8fccbdba8
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Wed Aug 25 16:29:23 2010 +0000
+
+    Bug #877074, add missing memcache.js file, used by memcache_admin module.
+
+commit c2ff95c3e98ee91ae63309e3607a2437e3e3b76c
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Wed Aug 25 14:10:10 2010 +0000
+
+    Fix variable typo (thanks catch), and make it possible to disable hashes altogether.
+
+commit 50e2e98df856541ccab08e33460ab692c99662cd
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Wed Aug 25 08:34:52 2010 +0000
+
+    Simplify wildcard logic, alleviate lock contention when flushing a large number of different wildcards.
+
+commit 432a4d11ec636fb7406f6547996af0c2375231a2
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Mon Jul 26 20:57:48 2010 +0000
+
+    Add ability to set options with memcached PECL package.  Set sane defaults.  Document.  Patch thanks to nnewton.
+
+commit a9a4a50b3ffa6421a6314d5321d5fb29403f7474
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Mon Jun 28 20:00:56 2010 +0000
+
+    Add support for using memcache for Drupal locking.
+
+commit 672a53f1225b175af20b3ad884139e3a932ff386
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Wed May 26 21:36:09 2010 +0000
+
+    Bug #810306: remove debug logging calls.
+
+commit 9f790ca9a840ff4b0b67c5a2659dc970690ffd9b
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Thu May 13 20:06:58 2010 +0000
+
+    Bug #788436: Remove accidental pass-by-reference from getMultiple.  Patch thanks to Catch.
+
+commit dbbeb9164c7d5af30adecb40c7892c1bbe160ba7
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Fri Apr 30 14:05:03 2010 +0000
+
+    Fix dmemcache_add to use $full_key.
+
+commit 4c5d206e0df41dc9cbd3d1c83a26b3177cb179c8
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Thu Apr 29 04:28:12 2010 +0000
+
+    Push some more fixes.
+
+commit cd7f137f3ff38be44b7050a0b966e5db22643c43
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Mon Apr 26 19:11:21 2010 +0000
+
+    Bug #525400: hash keys if longer than 250 bytes, as otherwise they get
+    truncated by memcache leading to collisions.
+
+commit 4e372aad176b3a31b7275a6fc5812e2ff96d4e9b
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Sat Apr 24 01:20:11 2010 +0000
+
+    Comment cleanup.  Simplify logic in dmemcache_set().
+
+commit c18ecb2199b5da865738bbb558ad628b5172e063
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Fri Apr 23 23:43:04 2010 +0000
+
+    Restore full test suite, including sessions.
+
+commit 8c08428167294c13fa0a7eda468e3f7fbcdd84e2
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Fri Apr 23 23:40:21 2010 +0000
+
+    Updating from code provided by chx.
+
+commit 2f807b64c397e23af6a9891acf968e306b27c8ba
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Fri Apr 23 23:31:10 2010 +0000
+
+    Port the memcache module to D7.
+
+commit bc86e202540f5606b26dfa57cd4032f7af6531db
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Fri Apr 23 23:27:37 2010 +0000
+
+    Feature #768604: implement support for multiget.  If using the Memcached
+    extension use its implementation, otherwise make multiple gets.
+
+commit f36cfb895fb5eae1abc04f757166103a0ebb1da6
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Fri Apr 23 20:22:45 2010 +0000
+
+    Allow the memcache module to use either the memcache or the memcached PECL
+    extension.
+
+commit 63859f1a951a46d7728c7befb206253c157164db
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Fri Apr 23 19:29:11 2010 +0000
+
+    Fix clear() to properly clear cache when cache_clear_all() is called.
+
+commit 508a65c36cd36e0f44edd8f115f990b13484197a
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Tue Apr 13 20:35:08 2010 +0000
+
+    Merge in effort to port memcache-sessions to D7.  Still needs work.
+    Patch thanks to chx.
+
+commit d5a061c8f373a3ec66e1df5ef06a3be263c20e6c
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Tue Apr 13 20:15:19 2010 +0000
+
+    #493448:
+    Add support for wild card flushing, without flushing an entire bin.
+    Patch thanks to David Strauss.
+
+commit 46ea753c21aa4ae2f25ddc97ef06a64ce0e2b03f
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Sat Dec 5 00:28:13 2009 +0000
+
+    Commit memcache.test to the correct branch.
+
+commit 0b6f05cf60987cef445cec3487e2f016fa92bf8f
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Sat Dec 5 00:26:30 2009 +0000
+
+    Port to dmemcache.inc and memcache.inc to Drupal 7, patch thanks to chx.
+    Minimally updated README and INSTALLATION docs.
+    NOTE: memcache.db.inc and memcache-session.inc are note yet ported.
+
+commit 28b988c1a01e1134128e2b6af914be86f15e29b3
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Fri Dec 4 21:35:36 2009 +0000
+
+    Further cleanup.
+
+commit 38ee8103b3b0307a4459f7adaefa5ca04498b418
+Author: Jeremy Andrews <jeremy@tag1consulting.com>
+Date:   Fri Dec 4 21:34:01 2009 +0000
+
+    Cleanup, remove old files not in D6.
+
+commit 1c34d9f2622f4cbe6a38940916c470f4bc513a66
+Author: jeremy <>
+Date:   Tue Nov 11 03:09:41 2008 +0000
+
+    Bug #332719: don't lose anonymous sessions.
+
+commit fe2a698143e7c7df75081b4ee5d54356da78d22c
+Author: jeremy <>
+Date:   Tue Nov 11 03:05:10 2008 +0000
+
+    Fix bug #330044 in HEAD: {user} -> {users}
+
+commit 7b997ca4c5f79b19e744a900909ef5c308f5da54
+Author: jeremy <>
+Date:   Thu Oct 30 19:20:53 2008 +0000
+
+    Bug #225365: write data to session bin
+
+commit a7ea630bbba43d940b1be97da2724a7411503dbb
+Author: jeremy <>
+Date:   Thu Oct 30 19:15:37 2008 +0000
+
+    Bug #292346: properly invalidate cache_page when cache_clear_all() called.
+
+commit 831816ab5d9f37611c2c2294366646f5d9a8fd4d
+Author: Steve Rude <slantview@73183.no-reply.drupal.org>
+Date:   Tue Jan 29 23:43:34 2008 +0000
+
+    * Sync with DRUPAL-5
+    * Update INSTALLATION.txt and README.txt
+
+commit 568b637acb01ee5b591a404ae4daa21134ba7d3b
+Author: Steve Rude <slantview@73183.no-reply.drupal.org>
+Date:   Tue Jan 29 22:50:25 2008 +0000
+
+    Cleanup work:
+      * Fixed SQL Error in memcache.db.inc
+      * Added CACHE_TEMPORARY memcache caching to memcache.db.inc (full page cache and other things weren't going in)
+      * Small code cleanup in memcache.db.inc
+      * Changed MENU_DEFAULT_LOCAL_TASK to MENU_LOCAL_TASK in memcache_admin.module
+      * Updated README.txt for memcache-session.inc
+    
+    Added:
+      * patches directory to hold all of the patches
+      * Drupal 5.0 - 5.6 patches for core
+    
+    Removed:
+      * Old core serialization patch that only "kinda" applied to certain versions. Should be easier
+        to know which version to use now.
+
+commit a9e78c8327aa54907cb320cb2406422977fef808
+Author: Steve Rude <slantview@73183.no-reply.drupal.org>
+Date:   Tue Dec 25 00:50:51 2007 +0000
+
+    Fix for cache_clear_all issue in issue #199483.  Combined patches posted by Reg, firebus and robertDouglass.
+    Fixes both memcache.inc and memcache.db.inc.
+
+commit b3ed35e8bb75a713e4cef5ea2311868171a918c9
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Thu Jun 28 12:02:18 2007 +0000
+
+    #154996 by lyricnz; smarter inclusion of .js file (for memcache stats) and registering of shutdown function.
+
+commit f240aaac42a2455a29f89e1b6a0920d9f83b9168
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Wed Jun 27 08:02:39 2007 +0000
+
+    #154287 by chx: no table locking
+
+commit 1ae1086aaf63ec806fe965d3ec45ac63355aae89
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Wed Jun 27 07:59:23 2007 +0000
+
+    #154247 by chx and robertDouglass: clone objects going into memcache
+
+commit 23e652a6aa5df4cf13d8394d738245a69870ccbd
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Wed Jun 27 07:26:28 2007 +0000
+
+    clean up the patch
+
+commit b24f7780c3119ed73f31b60a8c4d8086dab96131
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Wed Jun 27 07:00:09 2007 +0000
+
+    Missed README update (sync with DRUPAL-5)
+
+commit b1e4adbeeb2bf6361c88e867e9deb1abc0f0a4fe
+Author: Derek Wright <git@dwwright.net>
+Date:   Mon Jun 18 23:50:54 2007 +0000
+
+    #152819: Module .info files should not define 'version' in CVS
+
+commit b45fd2caba8ffe6cbf2da5ccea99d18786b8d34b
+Author: Derek Wright <git@dwwright.net>
+Date:   Mon Jun 18 22:53:49 2007 +0000
+
+    #152819: Module .info files should not define 'version' in CVS
+
+commit 7c4bd569ee473300d4ca3b3e701b9269052c3786
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Mon May 28 12:58:25 2007 +0000
+
+    session handling doesn't work right. I'm removing it for now in advance of a 1.0 release
+
+commit 5cac8a998c50da56b0386370616f57e8369c6d4e
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Mon May 28 11:53:17 2007 +0000
+
+    Adding a TROUBLESHOOTING section to README.txt
+
+commit 1409f57d85c413a41e51e6ae313b736e77f6b411
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Mon May 28 11:30:59 2007 +0000
+
+    rob discovers hook_devel_cache and promptly simplifies the install and uninstall hooks for memcache.
+
+commit f5dbe3fb0de286b82e477888b4df98be8419fc98
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Tue May 22 08:58:15 2007 +0000
+
+    refactored all dmemcache functions into separate include
+
+commit 2f7c41472bf462a0d76bd02c49f8a69f874856da
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Tue May 22 08:28:56 2007 +0000
+
+    simplifying stats output a bit
+
+commit 7f8e7ca177589388248a870d407f4975e100ed0f
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Tue May 22 07:51:29 2007 +0000
+
+    stats hover states faded on page load
+
+commit ca9430e68aadbe8d57c270d10eb1b891b65bc41a
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Tue May 22 07:33:34 2007 +0000
+
+    obsolete hook_help; handle default cluster/bin/server config gracefully.
+
+commit 9987ce14f4ecfd09cce9608f0582d3bf675c2e3c
+Author: Nicholas Thompson <njt1982@gmail.com>
+Date:   Mon May 21 23:16:24 2007 +0000
+
+    Adding new admin files
+
+commit 7a7fb9c0918dd9023c9696b7efd2acb02bb0bd57
+Author: Nicholas Thompson <njt1982@gmail.com>
+Date:   Mon May 21 23:15:24 2007 +0000
+
+    Added first revision of admin area. Needs LOTS more work.
+
+commit 6b51826ceb978f4b590417ba207ae5561dc59fc0
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Mon May 21 20:18:16 2007 +0000
+
+    going with getExtendedStats over getStats so that we can read stats from whole clusters.
+
+commit 4bc836bd9cc8d979f0e16d4bff0db05fd89f65e7
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Mon May 21 20:00:49 2007 +0000
+
+    a compromise for CACHE_TEMPORARY. These items are cached for three minutes. More documentation as well.
+
+commit 5843ee535ff8e3e3b5942c70b5fc8babd7d379de
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Mon May 21 19:18:48 2007 +0000
+
+    memcache.inc is now memcache only - no database storage whatsoever. If you want memcache that falls back on db storage, use memcache.db.inc
+
+commit 586709bca8c893f3403a12e8911b9bcb23532e1d
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Mon May 21 18:43:02 2007 +0000
+
+    shuffling file names and moving current memcache.inc to memcache.db.inc in preparation for a memcache-only memcache.inc
+
+commit 458a81144cd74cdefe24115cb6fb3e6f2769f13a
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Mon May 21 18:33:00 2007 +0000
+
+    move the js include inside of the conditional to avoid extra loading
+
+commit 50aabd70dc8b97352f9a244d29029cd656dbba79
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Mon May 21 17:12:50 2007 +0000
+
+    moving drupal_add_js to the shutdown function gets rid of the bootstrap problem for anonymous users when page caching is turned on.
+
+commit 0ab98683e5f49136c8609f6125198dcb1bff53f1
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Mon May 21 17:02:00 2007 +0000
+
+    adding hook perm, an 'access memcache statistics' permission, and using that to determine whether to show the stats.
+
+commit d294a98522f9b8e898428cb059893e9189365e9c
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Mon May 21 15:56:23 2007 +0000
+
+    sync HEAD
+
+commit 64e5ff977471f3f517223e385a308a1eb8b540d8
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Fri May 11 07:47:25 2007 +0000
+
+    Fix wildcard error in cache_clear_all
+
+commit 2d8cab74d7a863385ae35e189af70c71f303c813
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Fri May 11 06:16:28 2007 +0000
+
+    Id's all around
+
+commit 71548cff9165003b5b09966414bd1a6be49ad77f
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Fri May 11 06:08:00 2007 +0000
+
+    Renaming global variable to conform with coding standards. Extending statistics tracking.
+
+commit 597ee4816291c1f3633058c2d9aa807b7b469c86
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Thu May 10 17:50:51 2007 +0000
+
+    The two-tiered variable system (which was designed to support a configuration GUI) is now gone. All memcache related configuration must be done in settings.php. The GUI will assist in generating pastable text which can be copied into settings.php. The bootstrap order problems that the two-tiered system created are nearly insurmountable and not worth the effort.
+
+commit 4c970c2eacc0024f32c04778146172612bf142bc
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Thu May 10 17:48:11 2007 +0000
+
+    Adding DRUPAL-5-cache-serialze.patch which is a backport of the cache cleanup that has gone into Drupal 6. Updated memcache.inc with the same changes.
+
+commit 4f66bdaade86380afb5636713f34909c5581a481
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Thu May 10 14:09:49 2007 +0000
+
+    adding memcache.install. The install, uninstall and update hooks implemented add or remove the serialized column from any cache tables. See #137415. Postgres support only partially implemented.
+
+commit 3cec50d3e35b4853946afb25b8bfc7e99d954249
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Sat Apr 21 11:31:21 2007 +0000
+
+    Finally, a memcache.inc that actually sets and gets all the potential cache hits it is supposed to. This version is dependent on this patch: http://drupal.org/files/issues/cache_serialization_1.patch
+
+commit bed7066c25a359ff835c40d6290277bf1b387e03
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Sat Apr 21 11:26:30 2007 +0000
+
+    Finally, a memcache.inc that actually sets and gets all the potential cache hits it is supposed to. This version is dependent on this patch: http://drupal.org/files/issues/cache_serialization_1.patch
+
+commit 9621c2db243053ea722fde30398ee44fc1309a5d
+Author: Simon Roberts <lyricnz@33667.no-reply.drupal.org>
+Date:   Sat Apr 14 13:01:57 2007 +0000
+
+    Update statistics variable name. See Coding Standards http://drupal.org/node/318
+    "If you need to define global variables, their name should start with a single underscore followed by the module/theme name and another underscore"
+
+commit c9fe2012029fad57bbae2f5528eba486ce941995
+Author: Steve Rude <slantview@73183.no-reply.drupal.org>
+Date:   Thu Apr 12 02:52:10 2007 +0000
+
+    Fixed sess_write logic bug.  Need to add to memcache only when we have a non-anonymous user.
+
+commit 0d0fc19eecbff21aae1596ba7a78b2312754ccea
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Wed Apr 11 14:46:53 2007 +0000
+
+    Improving devel stats and handling the cache_set case where the expiration time is a timestamp in the future.
+
+commit b84e6070e80ea83e0732338c33e482a7b63d0d51
+Author: Simon Roberts <lyricnz@33667.no-reply.drupal.org>
+Date:   Tue Apr 10 13:09:42 2007 +0000
+
+    Implement a few dummy functions to keep memcache.inc happy
+
+commit d97546eb907c81778fcdf5dc92d59253abc0d156
+Author: Simon Roberts <lyricnz@33667.no-reply.drupal.org>
+Date:   Tue Apr 10 12:24:52 2007 +0000
+
+    Fix memcache_inc should be cache_inc
+
+commit 79323857b679a5573924e6ed98b70e10aac44884
+Author: Steve Rude <slantview@73183.no-reply.drupal.org>
+Date:   Mon Apr 9 17:05:53 2007 +0000
+
+    Initial Import of memcache sessions with database failover.
+
+commit a88c06a9404273294bff3749c9f5b0c33a3b47a2
+Author: Simon Roberts <lyricnz@33667.no-reply.drupal.org>
+Date:   Sun Apr 8 15:09:22 2007 +0000
+
+    Initial commit. Documentation for installing and configuring memcache on
+    a Fedora Linux machine.
+
+commit 64f98880cdd38dbed743687d112a1990daf4f307
+Author: Simon Roberts <lyricnz@33667.no-reply.drupal.org>
+Date:   Sun Apr 8 15:05:31 2007 +0000
+
+    Wordwrap, fix typo.
+
+commit ede6fb27c31703b959bfbefceb7fa857dd54f9ac
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Sun Apr 8 13:53:48 2007 +0000
+
+    getting rid of patch files. These will mostly live in a different module.
+
+commit a29264c6ae57fcfb36f3236a879b817db52c4166
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Sun Apr 8 13:51:04 2007 +0000
+
+    Improving the way js is included for the devel hints.
+
+commit ac7e2ad9824ab7b50345e48464094b4d65a303f8
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Sun Apr 8 13:34:07 2007 +0000
+
+    Updating the README
+
+commit ceff8be151ad214854935722b413881eea466d06
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Sat Apr 7 10:53:15 2007 +0000
+
+    #134174 by lyricnz and robertDouglass: add get/set/hit statistics to the bottom of pages like devel module does with queries. Note that this marks the beginning of the rebuilding of memcache.module. All other functionality has been stripped for the time being.
+
+commit eed6f5635118000fe7c0ff22e39a21846da98792
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Fri Apr 6 15:23:40 2007 +0000
+
+    fixing prefixing, cache_set, and adding gzip compression
+
+commit 6d1ec8a54aa613012b441c3a568705b5ac2e9cb9
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Mon Apr 2 11:05:36 2007 +0000
+
+    Keys now support a site-specific prefix so that multi-site installations are namespace safe.
+
+commit d813c13462acd423314e9fe3644b39d24ea9aa0f
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Mon Apr 2 10:21:36 2007 +0000
+
+    Now with error supression on connecting so that your site can keep running if no memcache servers are available
+
+commit 0c974e01493edf7f25d7564cde8f928a134be765
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Sun Apr 1 18:30:56 2007 +0000
+
+    Code style, code comments.
+
+commit c2fdf840fd67d6cc62f2ac70f6beebb09d975475
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Sun Apr 1 18:25:35 2007 +0000
+
+    Close network resources when flushing the bin->Memcache mappings.
+
+commit 1e9db3b3b71086289ef376ee98974699cf5daf26
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Sun Apr 1 18:05:04 2007 +0000
+
+    With this version of memcache.inc, it is now possible to totally replace cache.inc. use  = array('cache_inc' => './includes/memcache.inc'); in settings.php, make sure that memcache.inc is in ./includes, and you can run a default memcache on localhost:11211 with no further configuration or patching.
+
+commit 09e9439597df6781c3db24fd486bb0663a69da05
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Wed Jan 24 19:34:48 2007 +0000
+
+    rerolled bootstrap patch against the D5 release
+
+commit d36bc524b14ccb10136b504e9ad683771b6b19e2
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Sat Jan 13 21:59:17 2007 +0000
+
+    rm some cruft
+
+commit 8832b862f65771b1c3d7c73ccda907dc40a40bbd
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Sat Jan 13 20:54:25 2007 +0000
+
+    making provision for flushing cached aliases when cache is dirty
+
+commit 8636519aa0804bb7be20cd1c252d9904a2dd6ef8
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Sat Jan 13 20:45:00 2007 +0000
+
+    Cache path lookups. This reduces the number of db queries by a huge number if you have pages with path aliases.
+
+commit ced01ec2acbf195e1ef06ff366d0e50369564410
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Sat Jan 13 18:47:43 2007 +0000
+
+    Pluggable sessions :D
+
+commit d69df621c587571bf7284c3909e4e60a03f5142e
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Fri Jan 12 23:02:36 2007 +0000
+
+    Adding node.patch. This caches built nodes for authenticated users who only have one role (authenticated user), aka your normal logged-in site user. Anonymously loaded nodes aren't cached because the page cache handles these, and nodes for users with more roles aren't cached because of the risk that they might render differently. In fact, there is some doubt that caching any built nodes is a viable solution. In any case, this reduces the queries to serve a Page to a logged in user from 24 to 19.
+
+commit 74c35a0ccc6dc8cee34c391bbebedf1a648294c9
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Fri Jan 12 22:19:52 2007 +0000
+
+    Adding taxonomy.patch. Apply this patch to memcache taxonomy vocabularies, trees and terms.
+
+commit 28806090956806d50704b2c609325fa1b12adaeb
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Fri Jan 12 21:24:11 2007 +0000
+
+    updated the API functions to their new names
+
+commit 453f82c9cbf4edd3e2eda028aebbb294fe957cd1
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Fri Jan 12 20:31:17 2007 +0000
+
+    need the info file
+
+commit 0e394039367dd7c168cfdb982be5b36607f8078b
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Fri Jan 12 20:23:12 2007 +0000
+
+    bug in setting  in the tests
+
+commit 7f45c403e257320e3109d55c9ed4e9a662b6cddf
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Fri Jan 12 20:01:28 2007 +0000
+
+    Adding memcache.module (not useful until I provide patches for specific caching targets, though). Rewrote the server cluster management code in dmemcache_object. Added some (sloppily coded) tests.
+
+commit 670c4e7c31d9c16f86df531ada707c5d4281d408
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Fri Jan 12 19:57:44 2007 +0000
+
+    rewrote the server cluster code. Adding memcache.module. Added some tests (warning... sloppy code in the tests =)
+
+commit 157a03c4f3b0a40caf53cb6fb89ebe3a765c6447
+Author: Robert Douglass <robertdouglass@5449.no-reply.drupal.org>
+Date:   Thu Jan 11 19:18:50 2007 +0000
+
+    Initial commit of an API for using memcache with Drupal. Not ready for production.

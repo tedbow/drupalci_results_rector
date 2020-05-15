@@ -1,0 +1,27 @@
+diff --git a/acl.admin.inc b/acl.admin.inc
+index 55cc0a3..1823642 100644
+--- a/acl.admin.inc
++++ b/acl.admin.inc
+@@ -199,4 +199,3 @@ function acl_edit_form_get_user_list($form, $get_default = FALSE) {
+   }
+   return unserialize($form['user_list']);
+ }
+-
+diff --git a/acl.api.php b/acl.api.php
+index 1f2ef2b..7960574 100644
+--- a/acl.api.php
++++ b/acl.api.php
+@@ -37,4 +37,3 @@ function hook_enabled($set = NULL) {
+   }
+   return $enabled;
+ }
+-
+diff --git a/acl.module b/acl.module
+index c669718..5b42530 100644
+--- a/acl.module
++++ b/acl.module
+@@ -439,4 +439,3 @@ function _acl_get_explanation($text, $acl_id, $module, $name, $figure, $username
+ function _acl_format_account_name($account) {
+   return check_plain(format_username($account));
+ }
+-

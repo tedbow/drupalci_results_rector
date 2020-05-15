@@ -1,0 +1,478 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/account/account.module
+[parsing] modules/contrib/account/account.page.inc
+[parsing] modules/contrib/account/account_transfer_method.page.inc
+[parsing] modules/contrib/account/ledger.page.inc
+[parsing] modules/contrib/account/src/AccountAccessControlHandler.php
+[parsing] modules/contrib/account/src/AccountHtmlRouteProvider.php
+[parsing] modules/contrib/account/src/AccountListBuilder.php
+[parsing] modules/contrib/account/src/AccountTypeHtmlRouteProvider.php
+[parsing] modules/contrib/account/src/AccountTypeListBuilder.php
+[parsing] modules/contrib/account/src/Annotation/TransferGateway.php
+[parsing] modules/contrib/account/src/Entity/Account.php
+[parsing] modules/contrib/account/src/Entity/AccountInterface.php
+[parsing] modules/contrib/account/src/Entity/AccountType.php
+[parsing] modules/contrib/account/src/Entity/AccountTypeInterface.php
+[parsing] modules/contrib/account/src/Entity/AccountViewsData.php
+[parsing] modules/contrib/account/src/Entity/Ledger.php
+[parsing] modules/contrib/account/src/Entity/LedgerInterface.php
+[parsing] modules/contrib/account/src/Entity/LedgerViewsData.php
+[parsing] modules/contrib/account/src/Entity/TransferGateway.php
+[parsing] modules/contrib/account/src/Entity/TransferGatewayInterface.php
+[parsing] modules/contrib/account/src/Entity/TransferMethod.php
+[parsing] modules/contrib/account/src/Entity/TransferMethodInterface.php
+[parsing] modules/contrib/account/src/Entity/TransferMethodViewsData.php
+[parsing] modules/contrib/account/src/Entity/Withdraw.php
+[parsing] modules/contrib/account/src/Entity/WithdrawInterface.php
+[parsing] modules/contrib/account/src/Entity/WithdrawViewsData.php
+[parsing] modules/contrib/account/src/EventSubscriber/WithdrawSubscriber.php
+[parsing] modules/contrib/account/src/FinanceManager.php
+[parsing] modules/contrib/account/src/FinanceManagerInterface.php
+[parsing] modules/contrib/account/src/Form/AccountDeleteForm.php
+[parsing] modules/contrib/account/src/Form/AccountForm.php
+[parsing] modules/contrib/account/src/Form/AccountSettingsForm.php
+[parsing] modules/contrib/account/src/Form/AccountTypeDeleteForm.php
+[parsing] modules/contrib/account/src/Form/AccountTypeForm.php
+[parsing] modules/contrib/account/src/Form/ApplyWithdrawForm.php
+[parsing] modules/contrib/account/src/Form/LedgerDeleteForm.php
+[parsing] modules/contrib/account/src/Form/LedgerForm.php
+[parsing] modules/contrib/account/src/Form/LedgerSettingsForm.php
+[parsing] modules/contrib/account/src/Form/ManualAddAccountLedgerForm.php
+[parsing] modules/contrib/account/src/Form/TransferGatewayDeleteForm.php
+[parsing] modules/contrib/account/src/Form/TransferGatewayForm.php
+[parsing] modules/contrib/account/src/Form/TransferMethodDeleteForm.php
+[parsing] modules/contrib/account/src/Form/TransferMethodForm.php
+[parsing] modules/contrib/account/src/Form/TransferMethodSettingsForm.php
+[parsing] modules/contrib/account/src/Form/WithdrawDeleteForm.php
+[parsing] modules/contrib/account/src/Form/WithdrawForm.php
+[parsing] modules/contrib/account/src/Form/WithdrawSettingsForm.php
+[parsing] modules/contrib/account/src/LedgerAccessControlHandler.php
+[parsing] modules/contrib/account/src/LedgerHtmlRouteProvider.php
+[parsing] modules/contrib/account/src/LedgerListBuilder.php
+[parsing] modules/contrib/account/src/Plugin/Action/TransferWithdraw.php
+[parsing] modules/contrib/account/src/Plugin/TransferGateway/Manual.php
+[parsing] modules/contrib/account/src/Plugin/TransferGatewayBase.php
+[parsing] modules/contrib/account/src/Plugin/TransferGatewayInterface.php
+[parsing] modules/contrib/account/src/Plugin/TransferGatewayManager.php
+[parsing] modules/contrib/account/src/Plugin/rest/resource/ApplyWithdraw.php
+[parsing] modules/contrib/account/src/Plugin/rest/resource/WithdrawLimitation.php
+[parsing] modules/contrib/account/src/TransferGatewayHtmlRouteProvider.php
+[parsing] modules/contrib/account/src/TransferGatewayListBuilder.php
+[parsing] modules/contrib/account/src/TransferMethodAccessControlHandler.php
+[parsing] modules/contrib/account/src/TransferMethodHtmlRouteProvider.php
+[parsing] modules/contrib/account/src/TransferMethodListBuilder.php
+[parsing] modules/contrib/account/src/TransferMethodStorage.php
+[parsing] modules/contrib/account/src/WithdrawAccessControlHandler.php
+[parsing] modules/contrib/account/src/WithdrawHtmlRouteProvider.php
+[parsing] modules/contrib/account/src/WithdrawListBuilder.php
+[parsing] modules/contrib/account/tests/src/Functional/LoadTest.php
+[parsing] modules/contrib/account/withdraw.page.inc
+[refactoring] modules/contrib/account/account.module
+[refactoring] modules/contrib/account/account.page.inc
+[refactoring] modules/contrib/account/account_transfer_method.page.inc
+[refactoring] modules/contrib/account/ledger.page.inc
+[refactoring] modules/contrib/account/src/AccountAccessControlHandler.php
+[refactoring] modules/contrib/account/src/AccountHtmlRouteProvider.php
+[refactoring] modules/contrib/account/src/AccountListBuilder.php
+[refactoring] modules/contrib/account/src/AccountTypeHtmlRouteProvider.php
+[refactoring] modules/contrib/account/src/AccountTypeListBuilder.php
+[refactoring] modules/contrib/account/src/Annotation/TransferGateway.php
+[refactoring] modules/contrib/account/src/Entity/Account.php
+[refactoring] modules/contrib/account/src/Entity/AccountInterface.php
+[refactoring] modules/contrib/account/src/Entity/AccountType.php
+[refactoring] modules/contrib/account/src/Entity/AccountTypeInterface.php
+[refactoring] modules/contrib/account/src/Entity/AccountViewsData.php
+[refactoring] modules/contrib/account/src/Entity/Ledger.php
+[refactoring] modules/contrib/account/src/Entity/LedgerInterface.php
+[refactoring] modules/contrib/account/src/Entity/LedgerViewsData.php
+[refactoring] modules/contrib/account/src/Entity/TransferGateway.php
+[refactoring] modules/contrib/account/src/Entity/TransferGatewayInterface.php
+[refactoring] modules/contrib/account/src/Entity/TransferMethod.php
+[refactoring] modules/contrib/account/src/Entity/TransferMethodInterface.php
+[refactoring] modules/contrib/account/src/Entity/TransferMethodViewsData.php
+[refactoring] modules/contrib/account/src/Entity/Withdraw.php
+[refactoring] modules/contrib/account/src/Entity/WithdrawInterface.php
+[refactoring] modules/contrib/account/src/Entity/WithdrawViewsData.php
+[refactoring] modules/contrib/account/src/EventSubscriber/WithdrawSubscriber.php
+[refactoring] modules/contrib/account/src/FinanceManager.php
+[refactoring] modules/contrib/account/src/FinanceManagerInterface.php
+[refactoring] modules/contrib/account/src/Form/AccountDeleteForm.php
+[refactoring] modules/contrib/account/src/Form/AccountForm.php
+[refactoring] modules/contrib/account/src/Form/AccountSettingsForm.php
+[refactoring] modules/contrib/account/src/Form/AccountTypeDeleteForm.php
+[refactoring] modules/contrib/account/src/Form/AccountTypeForm.php
+[refactoring] modules/contrib/account/src/Form/ApplyWithdrawForm.php
+[refactoring] modules/contrib/account/src/Form/LedgerDeleteForm.php
+[refactoring] modules/contrib/account/src/Form/LedgerForm.php
+[refactoring] modules/contrib/account/src/Form/LedgerSettingsForm.php
+[refactoring] modules/contrib/account/src/Form/ManualAddAccountLedgerForm.php
+[refactoring] modules/contrib/account/src/Form/TransferGatewayDeleteForm.php
+[refactoring] modules/contrib/account/src/Form/TransferGatewayForm.php
+[refactoring] modules/contrib/account/src/Form/TransferMethodDeleteForm.php
+[refactoring] modules/contrib/account/src/Form/TransferMethodForm.php
+[refactoring] modules/contrib/account/src/Form/TransferMethodSettingsForm.php
+[refactoring] modules/contrib/account/src/Form/WithdrawDeleteForm.php
+[refactoring] modules/contrib/account/src/Form/WithdrawForm.php
+[refactoring] modules/contrib/account/src/Form/WithdrawSettingsForm.php
+[refactoring] modules/contrib/account/src/LedgerAccessControlHandler.php
+[refactoring] modules/contrib/account/src/LedgerHtmlRouteProvider.php
+[refactoring] modules/contrib/account/src/LedgerListBuilder.php
+[refactoring] modules/contrib/account/src/Plugin/Action/TransferWithdraw.php
+[refactoring] modules/contrib/account/src/Plugin/TransferGateway/Manual.php
+[refactoring] modules/contrib/account/src/Plugin/TransferGatewayBase.php
+[refactoring] modules/contrib/account/src/Plugin/TransferGatewayInterface.php
+[refactoring] modules/contrib/account/src/Plugin/TransferGatewayManager.php
+[refactoring] modules/contrib/account/src/Plugin/rest/resource/ApplyWithdraw.php
+[refactoring] modules/contrib/account/src/Plugin/rest/resource/WithdrawLimitation.php
+[refactoring] modules/contrib/account/src/TransferGatewayHtmlRouteProvider.php
+[refactoring] modules/contrib/account/src/TransferGatewayListBuilder.php
+[refactoring] modules/contrib/account/src/TransferMethodAccessControlHandler.php
+[refactoring] modules/contrib/account/src/TransferMethodHtmlRouteProvider.php
+[refactoring] modules/contrib/account/src/TransferMethodListBuilder.php
+[refactoring] modules/contrib/account/src/TransferMethodStorage.php
+[refactoring] modules/contrib/account/src/WithdrawAccessControlHandler.php
+[refactoring] modules/contrib/account/src/WithdrawHtmlRouteProvider.php
+[refactoring] modules/contrib/account/src/WithdrawListBuilder.php
+[refactoring] modules/contrib/account/tests/src/Functional/LoadTest.php
+[refactoring] modules/contrib/account/withdraw.page.inc
+[printing] modules/contrib/account/account.module
+[printing] modules/contrib/account/account.page.inc
+[printing] modules/contrib/account/account_transfer_method.page.inc
+[printing] modules/contrib/account/ledger.page.inc
+[printing] modules/contrib/account/src/AccountAccessControlHandler.php
+[printing] modules/contrib/account/src/AccountHtmlRouteProvider.php
+[printing] modules/contrib/account/src/AccountListBuilder.php
+[printing] modules/contrib/account/src/AccountTypeHtmlRouteProvider.php
+[printing] modules/contrib/account/src/AccountTypeListBuilder.php
+[printing] modules/contrib/account/src/Annotation/TransferGateway.php
+[printing] modules/contrib/account/src/Entity/Account.php
+[printing] modules/contrib/account/src/Entity/AccountInterface.php
+[printing] modules/contrib/account/src/Entity/AccountType.php
+[printing] modules/contrib/account/src/Entity/AccountTypeInterface.php
+[printing] modules/contrib/account/src/Entity/AccountViewsData.php
+[printing] modules/contrib/account/src/Entity/Ledger.php
+[printing] modules/contrib/account/src/Entity/LedgerInterface.php
+[printing] modules/contrib/account/src/Entity/LedgerViewsData.php
+[printing] modules/contrib/account/src/Entity/TransferGateway.php
+[printing] modules/contrib/account/src/Entity/TransferGatewayInterface.php
+[printing] modules/contrib/account/src/Entity/TransferMethod.php
+[printing] modules/contrib/account/src/Entity/TransferMethodInterface.php
+[printing] modules/contrib/account/src/Entity/TransferMethodViewsData.php
+[printing] modules/contrib/account/src/Entity/Withdraw.php
+[printing] modules/contrib/account/src/Entity/WithdrawInterface.php
+[printing] modules/contrib/account/src/Entity/WithdrawViewsData.php
+[printing] modules/contrib/account/src/EventSubscriber/WithdrawSubscriber.php
+[printing] modules/contrib/account/src/FinanceManager.php
+[printing] modules/contrib/account/src/FinanceManagerInterface.php
+[printing] modules/contrib/account/src/Form/AccountDeleteForm.php
+[printing] modules/contrib/account/src/Form/AccountForm.php
+[printing] modules/contrib/account/src/Form/AccountSettingsForm.php
+[printing] modules/contrib/account/src/Form/AccountTypeDeleteForm.php
+[printing] modules/contrib/account/src/Form/AccountTypeForm.php
+[printing] modules/contrib/account/src/Form/ApplyWithdrawForm.php
+[printing] modules/contrib/account/src/Form/LedgerDeleteForm.php
+[printing] modules/contrib/account/src/Form/LedgerForm.php
+[printing] modules/contrib/account/src/Form/LedgerSettingsForm.php
+[printing] modules/contrib/account/src/Form/ManualAddAccountLedgerForm.php
+[printing] modules/contrib/account/src/Form/TransferGatewayDeleteForm.php
+[printing] modules/contrib/account/src/Form/TransferGatewayForm.php
+[printing] modules/contrib/account/src/Form/TransferMethodDeleteForm.php
+[printing] modules/contrib/account/src/Form/TransferMethodForm.php
+[printing] modules/contrib/account/src/Form/TransferMethodSettingsForm.php
+[printing] modules/contrib/account/src/Form/WithdrawDeleteForm.php
+[printing] modules/contrib/account/src/Form/WithdrawForm.php
+[printing] modules/contrib/account/src/Form/WithdrawSettingsForm.php
+[printing] modules/contrib/account/src/LedgerAccessControlHandler.php
+[printing] modules/contrib/account/src/LedgerHtmlRouteProvider.php
+[printing] modules/contrib/account/src/LedgerListBuilder.php
+[printing] modules/contrib/account/src/Plugin/Action/TransferWithdraw.php
+[printing] modules/contrib/account/src/Plugin/TransferGateway/Manual.php
+[printing] modules/contrib/account/src/Plugin/TransferGatewayBase.php
+[printing] modules/contrib/account/src/Plugin/TransferGatewayInterface.php
+[printing] modules/contrib/account/src/Plugin/TransferGatewayManager.php
+[printing] modules/contrib/account/src/Plugin/rest/resource/ApplyWithdraw.php
+[printing] modules/contrib/account/src/Plugin/rest/resource/WithdrawLimitation.php
+[printing] modules/contrib/account/src/TransferGatewayHtmlRouteProvider.php
+[printing] modules/contrib/account/src/TransferGatewayListBuilder.php
+[printing] modules/contrib/account/src/TransferMethodAccessControlHandler.php
+[printing] modules/contrib/account/src/TransferMethodHtmlRouteProvider.php
+[printing] modules/contrib/account/src/TransferMethodListBuilder.php
+[printing] modules/contrib/account/src/TransferMethodStorage.php
+[printing] modules/contrib/account/src/WithdrawAccessControlHandler.php
+[printing] modules/contrib/account/src/WithdrawHtmlRouteProvider.php
+[printing] modules/contrib/account/src/WithdrawListBuilder.php
+[printing] modules/contrib/account/tests/src/Functional/LoadTest.php
+[printing] modules/contrib/account/withdraw.page.inc
+
+
+9 files with changes
+====================
+
+1) modules/contrib/account/account.page.inc
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -1,5 +1,6 @@
+ <?php
+
++use Drupal\Core\Url;
+ /**
+  * @file
+  * Contains account.page.inc.
+@@ -42,13 +43,13 @@
+   $variables['links'][] = [
+     '#title' => t('查看账户流水'),
+     '#type' => 'link',
+-    '#url' => \Drupal\Core\Url::fromRoute('view.ledgers.page_1', ['account_id' => $account->id()]),
++    '#url' => Url::fromRoute('view.ledgers.page_1', ['account_id' => $account->id()]),
+   ];
+   // 调整账户余额按钮
+   $variables['links'][] = [
+     '#title' => t('调整账户余额'),
+     '#type' => 'link',
+-    '#url' => \Drupal\Core\Url::fromRoute('account.manual_add_account_ledger_form', ['account_id' => $account->id()]),
++    '#url' => Url::fromRoute('account.manual_add_account_ledger_form', ['account_id' => $account->id()]),
+   ];
+
+   // 账户统计表
+    ----------- end diff -----------
+
+2) modules/contrib/account/src/Form/AccountForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -34,13 +34,13 @@
+
+     switch ($status) {
+       case SAVED_NEW:
+-        drupal_set_message($this->t('Created the %label Account.', [
++        $this->messenger()->addStatus($this->t('Created the %label Account.', [
+           '%label' => $entity->label(),
+         ]));
+         break;
+
+       default:
+-        drupal_set_message($this->t('Saved the %label Account.', [
++        $this->messenger()->addStatus($this->t('Saved the %label Account.', [
+           '%label' => $entity->label(),
+         ]));
+     }
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+3) modules/contrib/account/src/Form/AccountTypeDeleteForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -38,14 +38,12 @@
+   public function submitForm(array &$form, FormStateInterface $form_state) {
+     $this->entity->delete();
+
+-    drupal_set_message(
+-      $this->t('content @type: deleted @label.',
+-        [
+-          '@type' => $this->entity->bundle(),
+-          '@label' => $this->entity->label(),
+-        ]
+-        )
+-    );
++    $this->messenger()->addStatus($this->t('content @type: deleted @label.',
++      [
++        '@type' => $this->entity->bundle(),
++        '@label' => $this->entity->label(),
++      ]
++      ));
+
+     $form_state->setRedirectUrl($this->getCancelUrl());
+   }
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+4) modules/contrib/account/src/Form/AccountTypeForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -77,13 +77,13 @@
+
+         switch ($status) {
+             case SAVED_NEW:
+-                drupal_set_message($this->t('Created the %label Account type.', [
++                $this->messenger()->addStatus($this->t('Created the %label Account type.', [
+                     '%label' => $account_type->label(),
+                 ]));
+                 break;
+
+             default:
+-                drupal_set_message($this->t('Saved the %label Account type.', [
++                $this->messenger()->addStatus($this->t('Saved the %label Account type.', [
+                     '%label' => $account_type->label(),
+                 ]));
+         }
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+5) modules/contrib/account/src/Form/LedgerForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -34,13 +34,13 @@
+
+     switch ($status) {
+       case SAVED_NEW:
+-        drupal_set_message($this->t('Created the %label Ledger.', [
++        $this->messenger()->addStatus($this->t('Created the %label Ledger.', [
+           '%label' => $entity->label(),
+         ]));
+         break;
+
+       default:
+-        drupal_set_message($this->t('Saved the %label Ledger.', [
++        $this->messenger()->addStatus($this->t('Saved the %label Ledger.', [
+           '%label' => $entity->label(),
+         ]));
+     }
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+6) modules/contrib/account/src/Form/TransferGatewayDeleteForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -38,14 +38,12 @@
+   public function submitForm(array &$form, FormStateInterface $form_state) {
+     $this->entity->delete();
+
+-    drupal_set_message(
+-      $this->t('content @type: deleted @label.',
+-        [
+-          '@type' => $this->entity->bundle(),
+-          '@label' => $this->entity->label(),
+-        ]
+-        )
+-    );
++    $this->messenger()->addStatus($this->t('content @type: deleted @label.',
++      [
++        '@type' => $this->entity->bundle(),
++        '@label' => $this->entity->label(),
++      ]
++      ));
+
+     $form_state->setRedirectUrl($this->getCancelUrl());
+   }
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+7) modules/contrib/account/src/Form/TransferGatewayForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -111,13 +111,13 @@
+
+     switch ($status) {
+       case SAVED_NEW:
+-        drupal_set_message($this->t('Created the %label Transfer gateway.', [
++        $this->messenger()->addStatus($this->t('Created the %label Transfer gateway.', [
+           '%label' => $transfer_gateway->label(),
+         ]));
+         break;
+
+       default:
+-        drupal_set_message($this->t('Saved the %label Transfer gateway.', [
++        $this->messenger()->addStatus($this->t('Saved the %label Transfer gateway.', [
+           '%label' => $transfer_gateway->label(),
+         ]));
+     }
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+8) modules/contrib/account/src/Form/TransferMethodForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -34,13 +34,13 @@
+
+     switch ($status) {
+       case SAVED_NEW:
+-        drupal_set_message($this->t('Created the %label Transfer method.', [
++        $this->messenger()->addStatus($this->t('Created the %label Transfer method.', [
+           '%label' => $entity->label(),
+         ]));
+         break;
+
+       default:
+-        drupal_set_message($this->t('Saved the %label Transfer method.', [
++        $this->messenger()->addStatus($this->t('Saved the %label Transfer method.', [
+           '%label' => $entity->label(),
+         ]));
+     }
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+9) modules/contrib/account/src/Form/WithdrawForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -34,13 +34,13 @@
+
+     switch ($status) {
+       case SAVED_NEW:
+-        drupal_set_message($this->t('Created the %label Withdraw.', [
++        $this->messenger()->addStatus($this->t('Created the %label Withdraw.', [
+           '%label' => $entity->label(),
+         ]));
+         break;
+
+       default:
+-        drupal_set_message($this->t('Saved the %label Withdraw.', [
++        $this->messenger()->addStatus($this->t('Saved the %label Withdraw.', [
+           '%label' => $entity->label(),
+         ]));
+     }
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+ [OK] Rector is done! 9 files have been changed.                                
+

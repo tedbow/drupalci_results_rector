@@ -1,0 +1,30 @@
+diff --git a/src/Controller/SuggestionController.php b/src/Controller/SuggestionController.php
+index 99a37fe..7e30cfb 100644
+--- a/src/Controller/SuggestionController.php
++++ b/src/Controller/SuggestionController.php
+@@ -232,4 +232,4 @@ class SuggestionController extends ControllerBase {
+     return array_diff($title_array, $ignored_array);
+   }
+ 
+-}
++}
+diff --git a/src/Form/SuggestionConfigurationForm.php b/src/Form/SuggestionConfigurationForm.php
+index 24635bd..e505f52 100644
+--- a/src/Form/SuggestionConfigurationForm.php
++++ b/src/Form/SuggestionConfigurationForm.php
+@@ -182,4 +182,4 @@ class SuggestionConfigurationForm extends ConfigFormBase {
+     $this->suggestionConfig->save();
+   }
+ 
+-}
++}
+diff --git a/suggest_similar_titles.module b/suggest_similar_titles.module
+index 206d934..3ebb42f 100644
+--- a/suggest_similar_titles.module
++++ b/suggest_similar_titles.module
+@@ -101,4 +101,4 @@ function suggest_similar_titles_theme() {
+       'template' => 'title-suggestion',
+     ],
+   ];
+-}
++}

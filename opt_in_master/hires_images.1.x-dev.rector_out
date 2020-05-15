@@ -1,0 +1,7 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/hires_images/hires_images.module
+[parsing] modules/contrib/hires_images/lib/Drupal/hires_images/Plugin/ImageEffect/HiResImageEffect.php
+PHP Fatal error:  Declaration of Drupal\hires_images\Plugin\ImageEffect\HiResImageEffect::transformDimensions(array &$dimensions) must be compatible with Drupal\image\ImageEffectBase::transformDimensions(array &$dimensions, $uri) in /var/lib/drupalci/workspace/drupal-checkouts/drupal3/modules/contrib/hires_images/lib/Drupal/hires_images/Plugin/ImageEffect/HiResImageEffect.php on line 22
+Fatal error: Declaration of Drupal\hires_images\Plugin\ImageEffect\HiResImageEffect::transformDimensions(array &$dimensions) must be compatible with Drupal\image\ImageEffectBase::transformDimensions(array &$dimensions, $uri) in /var/lib/drupalci/workspace/drupal-checkouts/drupal3/modules/contrib/hires_images/lib/Drupal/hires_images/Plugin/ImageEffect/HiResImageEffect.php on line 22

@@ -1,0 +1,54 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/node_revisions_autoclean/node_revisions_autoclean.install
+[parsing] modules/contrib/node_revisions_autoclean/node_revisions_autoclean.module
+[parsing] modules/contrib/node_revisions_autoclean/src/Batch/Batch.php
+[parsing] modules/contrib/node_revisions_autoclean/src/Commands/NodeRevisionsAutocleanCommands.php
+[parsing] modules/contrib/node_revisions_autoclean/src/Form/NodeRevisionsByBundleForm.php
+[parsing] modules/contrib/node_revisions_autoclean/src/Plugin/QueueWorker/CleanupRevisionsQueueWorker.php
+[parsing] modules/contrib/node_revisions_autoclean/src/Services/RevisionsManager.php
+[parsing] modules/contrib/node_revisions_autoclean/tests/src/Functional/NodeRevisionsAutocleanTest.php
+[refactoring] modules/contrib/node_revisions_autoclean/node_revisions_autoclean.install
+[refactoring] modules/contrib/node_revisions_autoclean/node_revisions_autoclean.module
+[refactoring] modules/contrib/node_revisions_autoclean/src/Batch/Batch.php
+[refactoring] modules/contrib/node_revisions_autoclean/src/Commands/NodeRevisionsAutocleanCommands.php
+[refactoring] modules/contrib/node_revisions_autoclean/src/Form/NodeRevisionsByBundleForm.php
+[refactoring] modules/contrib/node_revisions_autoclean/src/Plugin/QueueWorker/CleanupRevisionsQueueWorker.php
+[refactoring] modules/contrib/node_revisions_autoclean/src/Services/RevisionsManager.php
+[refactoring] modules/contrib/node_revisions_autoclean/tests/src/Functional/NodeRevisionsAutocleanTest.php
+[printing] modules/contrib/node_revisions_autoclean/node_revisions_autoclean.install
+[printing] modules/contrib/node_revisions_autoclean/node_revisions_autoclean.module
+[printing] modules/contrib/node_revisions_autoclean/src/Batch/Batch.php
+[printing] modules/contrib/node_revisions_autoclean/src/Commands/NodeRevisionsAutocleanCommands.php
+[printing] modules/contrib/node_revisions_autoclean/src/Form/NodeRevisionsByBundleForm.php
+[printing] modules/contrib/node_revisions_autoclean/src/Plugin/QueueWorker/CleanupRevisionsQueueWorker.php
+[printing] modules/contrib/node_revisions_autoclean/src/Services/RevisionsManager.php
+[printing] modules/contrib/node_revisions_autoclean/tests/src/Functional/NodeRevisionsAutocleanTest.php
+
+
+1 file with changes
+===================
+
+1) modules/contrib/node_revisions_autoclean/src/Batch/Batch.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -46,4 +46,4 @@
+       );
+     }
+   }
+-}
+\ No newline at end of file
++}
+    ----------- end diff -----------
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/node_revisions_autoclean/src/Commands/NodeRevisionsAut
+         ocleanCommands.php" file, due to:                                      
+         "Analyze error: "Class Drush\Commands\DrushCommands not found and could
+         not be autoloaded.". Include your files in "parameters >               
+         autoload_paths".                                                       
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+

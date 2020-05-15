@@ -1,0 +1,98 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/menu_megadrop/menu_megadrop.module
+[parsing] modules/contrib/menu_megadrop/menu_megadrop.page.inc
+[parsing] modules/contrib/menu_megadrop/src/Entity/MenuMegadrop.php
+[parsing] modules/contrib/menu_megadrop/src/Entity/MenuMegadropInterface.php
+[parsing] modules/contrib/menu_megadrop/src/Entity/MenuMegadropViewsData.php
+[parsing] modules/contrib/menu_megadrop/src/Form/MenuMegadropDeleteForm.php
+[parsing] modules/contrib/menu_megadrop/src/Form/MenuMegadropForm.php
+[parsing] modules/contrib/menu_megadrop/src/Form/MenuMegadropSettingsForm.php
+[parsing] modules/contrib/menu_megadrop/src/MenuMegadropAccessControlHandler.php
+[parsing] modules/contrib/menu_megadrop/src/MenuMegadropHtmlRouteProvider.php
+[parsing] modules/contrib/menu_megadrop/src/MenuMegadropListBuilder.php
+[parsing] modules/contrib/menu_megadrop/src/MenuMegadropTranslationHandler.php
+[parsing] modules/contrib/menu_megadrop/tests/src/Functional/LoadTest.php
+[refactoring] modules/contrib/menu_megadrop/menu_megadrop.module
+[refactoring] modules/contrib/menu_megadrop/menu_megadrop.page.inc
+[refactoring] modules/contrib/menu_megadrop/src/Entity/MenuMegadrop.php
+[refactoring] modules/contrib/menu_megadrop/src/Entity/MenuMegadropInterface.php
+[refactoring] modules/contrib/menu_megadrop/src/Entity/MenuMegadropViewsData.php
+[refactoring] modules/contrib/menu_megadrop/src/Form/MenuMegadropDeleteForm.php
+[refactoring] modules/contrib/menu_megadrop/src/Form/MenuMegadropForm.php
+[refactoring] modules/contrib/menu_megadrop/src/Form/MenuMegadropSettingsForm.php
+[refactoring] modules/contrib/menu_megadrop/src/MenuMegadropAccessControlHandler.php
+[refactoring] modules/contrib/menu_megadrop/src/MenuMegadropHtmlRouteProvider.php
+[refactoring] modules/contrib/menu_megadrop/src/MenuMegadropListBuilder.php
+[refactoring] modules/contrib/menu_megadrop/src/MenuMegadropTranslationHandler.php
+[refactoring] modules/contrib/menu_megadrop/tests/src/Functional/LoadTest.php
+[printing] modules/contrib/menu_megadrop/menu_megadrop.module
+[printing] modules/contrib/menu_megadrop/menu_megadrop.page.inc
+[printing] modules/contrib/menu_megadrop/src/Entity/MenuMegadrop.php
+[printing] modules/contrib/menu_megadrop/src/Entity/MenuMegadropInterface.php
+[printing] modules/contrib/menu_megadrop/src/Entity/MenuMegadropViewsData.php
+[printing] modules/contrib/menu_megadrop/src/Form/MenuMegadropDeleteForm.php
+[printing] modules/contrib/menu_megadrop/src/Form/MenuMegadropForm.php
+[printing] modules/contrib/menu_megadrop/src/Form/MenuMegadropSettingsForm.php
+[printing] modules/contrib/menu_megadrop/src/MenuMegadropAccessControlHandler.php
+[printing] modules/contrib/menu_megadrop/src/MenuMegadropHtmlRouteProvider.php
+[printing] modules/contrib/menu_megadrop/src/MenuMegadropListBuilder.php
+[printing] modules/contrib/menu_megadrop/src/MenuMegadropTranslationHandler.php
+[printing] modules/contrib/menu_megadrop/tests/src/Functional/LoadTest.php
+
+
+2 files with changes
+====================
+
+1) modules/contrib/menu_megadrop/menu_megadrop.module
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -50,7 +50,7 @@
+     if ($megadrop_id = $item['url']->getOption('megadrop')) {
+       $megadrop_entity = \Drupal::entityTypeManager()->getStorage('menu_megadrop')->load($megadrop_id);
+       $variables['items'][$key]['megadrop'] = [
+-        'content' => \Drupal::entityManager()->getViewBuilder('menu_megadrop')->view($megadrop_entity, 'full'),
++        'content' => \Drupal::service('entity_type.manager')->getViewBuilder('menu_megadrop')->view($megadrop_entity, 'full'),
+       ];
+     }
+   }
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\EntityManagerRector
+
+
+2) modules/contrib/menu_megadrop/src/Form/MenuMegadropForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -34,13 +34,13 @@
+
+     switch ($status) {
+       case SAVED_NEW:
+-        drupal_set_message($this->t('Created the %label Menu megadrop.', [
++        $this->messenger()->addStatus($this->t('Created the %label Menu megadrop.', [
+           '%label' => $entity->label(),
+         ]));
+         break;
+
+       default:
+-        drupal_set_message($this->t('Saved the %label Menu megadrop.', [
++        $this->messenger()->addStatus($this->t('Saved the %label Menu megadrop.', [
+           '%label' => $entity->label(),
+         ]));
+     }
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+ [OK] Rector is done! 2 files have been changed.                                
+

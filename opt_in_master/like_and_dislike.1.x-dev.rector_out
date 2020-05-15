@@ -1,0 +1,37 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/like_and_dislike/like_and_dislike.module
+[parsing] modules/contrib/like_and_dislike/like_and_dislike.views.inc
+[parsing] modules/contrib/like_and_dislike/src/Controller/VoteController.php
+[parsing] modules/contrib/like_and_dislike/src/Form/SettingsForm.php
+[parsing] modules/contrib/like_and_dislike/src/LikeDislikePermissions.php
+[parsing] modules/contrib/like_and_dislike/src/LikeDislikeVoteBuilder.php
+[parsing] modules/contrib/like_and_dislike/src/LikeDislikeVoteBuilderInterface.php
+[parsing] modules/contrib/like_and_dislike/src/Plugin/views/field/LikeAndDislike.php
+[parsing] modules/contrib/like_and_dislike/src/Tests/LikeAndDislikeTest.php
+[parsing] modules/contrib/like_and_dislike/tests/src/FunctionalJavascript/LikeAndDislikeTest.php
+[refactoring] modules/contrib/like_and_dislike/like_and_dislike.module
+[refactoring] modules/contrib/like_and_dislike/like_and_dislike.views.inc
+[refactoring] modules/contrib/like_and_dislike/src/Controller/VoteController.php
+[refactoring] modules/contrib/like_and_dislike/src/Form/SettingsForm.php
+[refactoring] modules/contrib/like_and_dislike/src/LikeDislikePermissions.php
+[refactoring] modules/contrib/like_and_dislike/src/LikeDislikeVoteBuilder.php
+[refactoring] modules/contrib/like_and_dislike/src/LikeDislikeVoteBuilderInterface.php
+[refactoring] modules/contrib/like_and_dislike/src/Plugin/views/field/LikeAndDislike.php
+[refactoring] modules/contrib/like_and_dislike/src/Tests/LikeAndDislikeTest.php
+[refactoring] modules/contrib/like_and_dislike/tests/src/FunctionalJavascript/LikeAndDislikeTest.php
+[printing] modules/contrib/like_and_dislike/like_and_dislike.module
+[printing] modules/contrib/like_and_dislike/like_and_dislike.views.inc
+[printing] modules/contrib/like_and_dislike/src/Controller/VoteController.php
+[printing] modules/contrib/like_and_dislike/src/Form/SettingsForm.php
+[printing] modules/contrib/like_and_dislike/src/LikeDislikePermissions.php
+[printing] modules/contrib/like_and_dislike/src/LikeDislikeVoteBuilder.php
+[printing] modules/contrib/like_and_dislike/src/LikeDislikeVoteBuilderInterface.php
+[printing] modules/contrib/like_and_dislike/src/Plugin/views/field/LikeAndDislike.php
+[printing] modules/contrib/like_and_dislike/src/Tests/LikeAndDislikeTest.php
+[printing] modules/contrib/like_and_dislike/tests/src/FunctionalJavascript/LikeAndDislikeTest.php
+
+
+ [OK] Rector is done!                                                           
+

@@ -1,0 +1,19 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/accordion_menus/accordion_menus.module
+[parsing] modules/contrib/accordion_menus/src/Form/AccordionMenusConfigForm.php
+[parsing] modules/contrib/accordion_menus/src/Plugin/Block/AccordionMenusBlock.php
+[parsing] modules/contrib/accordion_menus/src/Plugin/Derivative/AccordionMenusBlock.php
+[refactoring] modules/contrib/accordion_menus/accordion_menus.module
+[refactoring] modules/contrib/accordion_menus/src/Form/AccordionMenusConfigForm.php
+[refactoring] modules/contrib/accordion_menus/src/Plugin/Block/AccordionMenusBlock.php
+[refactoring] modules/contrib/accordion_menus/src/Plugin/Derivative/AccordionMenusBlock.php
+[printing] modules/contrib/accordion_menus/accordion_menus.module
+[printing] modules/contrib/accordion_menus/src/Form/AccordionMenusConfigForm.php
+[printing] modules/contrib/accordion_menus/src/Plugin/Block/AccordionMenusBlock.php
+[printing] modules/contrib/accordion_menus/src/Plugin/Derivative/AccordionMenusBlock.php
+
+
+ [OK] Rector is done!                                                           
+

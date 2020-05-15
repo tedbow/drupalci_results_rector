@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle>
+<file name="modules/contrib/menu_megadrop/menu_megadrop.module">
+  <error line="53" column="1" severity="error" message="Call to deprecated method entityManager() of class Drupal:
+in drupal:8.0.0 and is removed from drupal:9.0.0.
+Use \Drupal::entityTypeManager() instead in most cases. If the needed
+method is not on \Drupal\Core\Entity\EntityTypeManagerInterface, see the
+deprecated \Drupal\Core\Entity\EntityManager to find the
+correct interface or service." />
+</file>
+<file name="modules/contrib/menu_megadrop/src/Form/MenuMegadropForm.php">
+  <error line="37" column="1" severity="error" message="Call to deprecated function drupal_set_message():
+in drupal:8.5.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead." />
+  <error line="43" column="1" severity="error" message="Call to deprecated function drupal_set_message():
+in drupal:8.5.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead." />
+</file>
+</checkstyle>

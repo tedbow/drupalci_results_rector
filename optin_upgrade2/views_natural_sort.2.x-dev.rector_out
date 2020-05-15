@@ -1,0 +1,192 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/views_natural_sort/src/Annotation/IndexRecordContentTransformation.php
+[parsing] modules/contrib/views_natural_sort/src/Form/ConfigurationForm.php
+[parsing] modules/contrib/views_natural_sort/src/IndexRecord.php
+[parsing] modules/contrib/views_natural_sort/src/IndexRecordType.php
+[parsing] modules/contrib/views_natural_sort/src/Plugin/IndexRecordContentTransformation/DaysOfTheWeek.php
+[parsing] modules/contrib/views_natural_sort/src/Plugin/IndexRecordContentTransformation/Numbers.php
+[parsing] modules/contrib/views_natural_sort/src/Plugin/IndexRecordContentTransformation/RemoveBeginningWords.php
+[parsing] modules/contrib/views_natural_sort/src/Plugin/IndexRecordContentTransformation/RemoveSymbols.php
+[parsing] modules/contrib/views_natural_sort/src/Plugin/IndexRecordContentTransformation/RemoveWords.php
+[parsing] modules/contrib/views_natural_sort/src/Plugin/IndexRecordContentTransformationBase.php
+[parsing] modules/contrib/views_natural_sort/src/Plugin/IndexRecordContentTransformationInterface.php
+[parsing] modules/contrib/views_natural_sort/src/Plugin/IndexRecordContentTransformationManager.php
+[parsing] modules/contrib/views_natural_sort/src/Plugin/QueueWorker/EntityIndexer.php
+[parsing] modules/contrib/views_natural_sort/src/Plugin/views/sort/Natural.php
+[parsing] modules/contrib/views_natural_sort/src/ViewsNaturalSortService.php
+[parsing] modules/contrib/views_natural_sort/tests/modules/views_natural_sort_test/views_natural_sort_test.module
+[parsing] modules/contrib/views_natural_sort/tests/src/Kernel/BasicTest.php
+[parsing] modules/contrib/views_natural_sort/views_natural_sort.inc
+[parsing] modules/contrib/views_natural_sort/views_natural_sort.install
+[parsing] modules/contrib/views_natural_sort/views_natural_sort.module
+[parsing] modules/contrib/views_natural_sort/views_natural_sort.views.inc
+[refactoring] modules/contrib/views_natural_sort/src/Annotation/IndexRecordContentTransformation.php
+[refactoring] modules/contrib/views_natural_sort/src/Form/ConfigurationForm.php
+[refactoring] modules/contrib/views_natural_sort/src/IndexRecord.php
+[refactoring] modules/contrib/views_natural_sort/src/IndexRecordType.php
+[refactoring] modules/contrib/views_natural_sort/src/Plugin/IndexRecordContentTransformation/DaysOfTheWeek.php
+[refactoring] modules/contrib/views_natural_sort/src/Plugin/IndexRecordContentTransformation/Numbers.php
+[refactoring] modules/contrib/views_natural_sort/src/Plugin/IndexRecordContentTransformation/RemoveBeginningWords.php
+[refactoring] modules/contrib/views_natural_sort/src/Plugin/IndexRecordContentTransformation/RemoveSymbols.php
+[refactoring] modules/contrib/views_natural_sort/src/Plugin/IndexRecordContentTransformation/RemoveWords.php
+[refactoring] modules/contrib/views_natural_sort/src/Plugin/IndexRecordContentTransformationBase.php
+[refactoring] modules/contrib/views_natural_sort/src/Plugin/IndexRecordContentTransformationInterface.php
+[refactoring] modules/contrib/views_natural_sort/src/Plugin/IndexRecordContentTransformationManager.php
+[refactoring] modules/contrib/views_natural_sort/src/Plugin/QueueWorker/EntityIndexer.php
+[refactoring] modules/contrib/views_natural_sort/src/Plugin/views/sort/Natural.php
+[refactoring] modules/contrib/views_natural_sort/src/ViewsNaturalSortService.php
+[refactoring] modules/contrib/views_natural_sort/tests/modules/views_natural_sort_test/views_natural_sort_test.module
+[refactoring] modules/contrib/views_natural_sort/tests/src/Kernel/BasicTest.php
+[refactoring] modules/contrib/views_natural_sort/views_natural_sort.inc
+[refactoring] modules/contrib/views_natural_sort/views_natural_sort.install
+[refactoring] modules/contrib/views_natural_sort/views_natural_sort.module
+[refactoring] modules/contrib/views_natural_sort/views_natural_sort.views.inc
+[printing] modules/contrib/views_natural_sort/src/Annotation/IndexRecordContentTransformation.php
+[printing] modules/contrib/views_natural_sort/src/Form/ConfigurationForm.php
+[printing] modules/contrib/views_natural_sort/src/IndexRecord.php
+[printing] modules/contrib/views_natural_sort/src/IndexRecordType.php
+[printing] modules/contrib/views_natural_sort/src/Plugin/IndexRecordContentTransformation/DaysOfTheWeek.php
+[printing] modules/contrib/views_natural_sort/src/Plugin/IndexRecordContentTransformation/Numbers.php
+[printing] modules/contrib/views_natural_sort/src/Plugin/IndexRecordContentTransformation/RemoveBeginningWords.php
+[printing] modules/contrib/views_natural_sort/src/Plugin/IndexRecordContentTransformation/RemoveSymbols.php
+[printing] modules/contrib/views_natural_sort/src/Plugin/IndexRecordContentTransformation/RemoveWords.php
+[printing] modules/contrib/views_natural_sort/src/Plugin/IndexRecordContentTransformationBase.php
+[printing] modules/contrib/views_natural_sort/src/Plugin/IndexRecordContentTransformationInterface.php
+[printing] modules/contrib/views_natural_sort/src/Plugin/IndexRecordContentTransformationManager.php
+[printing] modules/contrib/views_natural_sort/src/Plugin/QueueWorker/EntityIndexer.php
+[printing] modules/contrib/views_natural_sort/src/Plugin/views/sort/Natural.php
+[printing] modules/contrib/views_natural_sort/src/ViewsNaturalSortService.php
+[printing] modules/contrib/views_natural_sort/tests/modules/views_natural_sort_test/views_natural_sort_test.module
+[printing] modules/contrib/views_natural_sort/tests/src/Kernel/BasicTest.php
+[printing] modules/contrib/views_natural_sort/views_natural_sort.inc
+[printing] modules/contrib/views_natural_sort/views_natural_sort.install
+[printing] modules/contrib/views_natural_sort/views_natural_sort.module
+[printing] modules/contrib/views_natural_sort/views_natural_sort.views.inc
+
+
+4 files with changes
+====================
+
+1) modules/contrib/views_natural_sort/src/Form/ConfigurationForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -124,7 +124,7 @@
+       ->set('transformation_settings.days_of_the_week.enabled', $values['days_of_the_week_enabled'])
+       ->set('rebuild_items_per_batch', $values['rebuild_items_per_batch'])
+       ->save();
+-    drupal_set_message($this->t('The configuration options have been saved.'));
++    $this->messenger()->addStatus($this->t('The configuration options have been saved.'));
+     $this->submitFormReindexOnly($form, $form_state);
+   }
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+2) modules/contrib/views_natural_sort/src/ViewsNaturalSortService.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -223,8 +223,8 @@
+
+   public function finishRebuild($success, $results, $operations) {
+     if ($success) {
+-      drupal_set_message($this->t('Index rebuild has completed.'));
+-      drupal_set_message($this->t('Indexed %count.', [
++      \Drupal::messenger()->addStatus($this->t('Index rebuild has completed.'));
++      \Drupal::messenger()->addStatus($this->t('Indexed %count.', [
+         '%count' => format_plural($results['entries'], '1 entry', '@count entries'),
+       ]));
+     }
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+3) modules/contrib/views_natural_sort/tests/src/Kernel/BasicTest.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -2,6 +2,7 @@
+
+ namespace Drupal\Tests\views_natural_sort\Kernel;
+
++use Drupal\views_natural_sort\Plugin\IndexRecordContentTransformation\RemoveSymbols;
+ use Drupal\node\Entity\Node;
+ use Drupal\Tests\views\Kernel\ViewsKernelTestBase;
+ use Drupal\views\Tests\ViewTestData;
+@@ -125,7 +126,7 @@
+    * Test Unicode symbol removal in sorting.
+    */
+   public function testNaturalSortUnicodeSymbols() {
+-    $plugin = new \Drupal\views_natural_sort\Plugin\IndexRecordContentTransformation\RemoveSymbols([
++    $plugin = new RemoveSymbols([
+       'settings' => "#…\",'\\()[]«?!»¡¿",
+     ], '', '');
+     $titles = [
+@@ -180,7 +181,7 @@
+       'title' => '-3.5501 apples',
+     ]);
+     $node8->save();
+-    $node9 = node::create([
++    $node9 = Node::create([
+       'type' => 'views_natural_sort_test_content',
+       'title' => '3.5501 apples',
+     ]);
+@@ -269,12 +270,12 @@
+   }
+
+   public function testStoringLongUnicode() {
+-    $node = node::create([
++    $node = Node::create([
+       'type' => 'views_natural_sort_test_content',
+       'title' => str_repeat('⌘', 255),
+     ]);
+     $node->save();
+-    $content = db_select('views_natural_sort', 'vns')
++    $content = \Drupal::database()->select('views_natural_sort', 'vns')
+       ->fields('vns', ['content'])
+       ->condition('vns.eid', $node->id())
+       ->condition('vns.entity_type', 'node')
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DBSelectRector
+
+
+4) modules/contrib/views_natural_sort/views_natural_sort.module
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -212,8 +212,8 @@
+
+ function views_natural_sort_finish_rebuild($success, $results, $operations) {
+   if ($success) {
+-    drupal_set_message(t('Index rebuild has completed.'));
+-    drupal_set_message(t('Indexed %count.', [
++    \Drupal::messenger()->addStatus(t('Index rebuild has completed.'));
++    \Drupal::messenger()->addStatus(t('Indexed %count.', [
+       '%count' => \Drupal::translation()->formatPlural($results['entries'], '1 entry', '@count entries'),
+     ]));
+   }
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+ [OK] Rector is done! 4 files have been changed.                                
+

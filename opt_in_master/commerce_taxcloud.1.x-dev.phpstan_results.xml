@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle>
+<file name="modules/contrib/commerce_taxcloud/src/Form/ConfigSettingsForm.php">
+  <error line="90" column="1" severity="error" message="Call to deprecated function drupal_set_message():
+in drupal:8.5.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead." />
+  <error line="93" column="1" severity="error" message="Call to deprecated function drupal_set_message():
+in drupal:8.5.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead." />
+</file>
+<file name="modules/contrib/commerce_taxcloud/src/Plugin/Commerce/TaxType/TaxCloud.php">
+  <error line="199" column="1" severity="error" message="Access to deprecated property $entityId of class Drupal\commerce_tax\Plugin\Commerce\TaxType\TaxTypeBase:
+in commerce:8.x-2.16 and is removed from commerce:3.x.
+Use $this-&gt;parentEntity-&gt;id() instead." />
+</file>
+</checkstyle>

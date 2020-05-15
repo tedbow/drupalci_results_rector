@@ -1,0 +1,96 @@
+diff --git a/memcache.info.yml b/memcache.info.yml
+index cf4e499..115a115 100644
+--- a/memcache.info.yml
++++ b/memcache.info.yml
+@@ -3,3 +3,4 @@ description: 'High performance integration with memcache.'
+ type: module
+ package: 'Performance and scalability'
+ core: 8.x
++core_version_requirement: '^8 || ^9'
+diff --git a/memcache_admin/src/Controller/MemcacheStatisticsController.php b/memcache_admin/src/Controller/MemcacheStatisticsController.php
+index 08a6af7..f90bd87 100644
+--- a/memcache_admin/src/Controller/MemcacheStatisticsController.php
++++ b/memcache_admin/src/Controller/MemcacheStatisticsController.php
+@@ -52,16 +52,13 @@ class MemcacheStatisticsController extends ControllerBase {
+ 
+       // Failed to load statistics. Provide a useful error about where to get
+       // more information and help.
+-      drupal_set_message(
+-        t(
+-          'There may be a problem with your Memcache configuration. Please review @readme and :more for more information.',
+-          [
+-            '@readme' => 'README.txt',
+-            ':more'   => $additional_message,
+-          ]
+-        ),
+-        'error'
+-      );
++      $this->messenger()->addError(t(
++        'There may be a problem with your Memcache configuration. Please review @readme and :more for more information.',
++        [
++          '@readme' => 'README.txt',
++          ':more'   => $additional_message,
++        ]
++      ));
+     }
+     else {
+       if (count($stats[$bin])) {
+@@ -76,12 +73,12 @@ class MemcacheStatisticsController extends ControllerBase {
+         }
+         else {
+           $version = t('Unknown');
+-          drupal_set_message(t('Failed to detect the memcache PECL extension.'), 'error');
++          $this->messenger()->addError(t('Failed to detect the memcache PECL extension.'));
+         }
+ 
+         foreach ($stats as $server => $statistics) {
+           if (empty($statistics['uptime'])) {
+-            drupal_set_message(t('Failed to connect to server at :address.', [':address' => $server]), 'error');
++            $this->messenger()->addError(t('Failed to connect to server at :address.', [':address' => $server]));
+           }
+           else {
+             $servers[] = $server;
+@@ -221,7 +218,7 @@ class MemcacheStatisticsController extends ControllerBase {
+     }
+     else {
+       $output = $this->statsTablesRawOutput($cluster, $server, [], $type);
+-      drupal_set_message(t('No @type statistics for this bin.', ['@type' => $type]));
++      $this->messenger()->addStatus(t('No @type statistics for this bin.', ['@type' => $type]));
+     }
+ 
+     return $output;
+diff --git a/memcache_admin/src/EventSubscriber/MemcacheAdminSubscriber.php b/memcache_admin/src/EventSubscriber/MemcacheAdminSubscriber.php
+index 2dec7e6..083de9f 100644
+--- a/memcache_admin/src/EventSubscriber/MemcacheAdminSubscriber.php
++++ b/memcache_admin/src/EventSubscriber/MemcacheAdminSubscriber.php
+@@ -57,7 +57,7 @@ class MemcacheAdminSubscriber implements EventSubscriberInterface {
+       // }.
+       // @codingStandardsIgnoreEnd
+       // Try not to break non-HTML pages.
+-      if ($response instanceof HTMLResponse) {
++      if ($response instanceof HtmlResponse) {
+ 
+         // This should only apply to page content.
+         if (stripos($response->headers->get('content-type'), 'text/html') !== FALSE) {
+diff --git a/src/MemcacheBackend.php b/src/MemcacheBackend.php
+index d85de8e..56662df 100644
+--- a/src/MemcacheBackend.php
++++ b/src/MemcacheBackend.php
+@@ -119,7 +119,7 @@ class MemcacheBackend implements CacheBackendInterface {
+     $cache->valid = TRUE;
+ 
+     // Items that have expired are invalid.
+-    if ($cache->expire != CacheBackendInterface::CACHE_PERMANENT && $cache->expire <= REQUEST_TIME) {
++    if ($cache->expire != CacheBackendInterface::CACHE_PERMANENT && $cache->expire <= \Drupal::time()->getRequestTime()) {
+       $cache->valid = FALSE;
+     }
+ 
+@@ -216,7 +216,7 @@ class MemcacheBackend implements CacheBackendInterface {
+   public function invalidateMultiple(array $cids) {
+     foreach ($cids as $cid) {
+       if ($item = $this->get($cid)) {
+-        $item->expire = REQUEST_TIME - 1;
++        $item->expire = \Drupal::time()->getRequestTime() - 1;
+         $this->memcache->set($cid, $item);
+       }
+     }

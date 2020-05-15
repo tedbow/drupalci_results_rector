@@ -1,0 +1,131 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/abstractpermissions/abstractpermissions.module
+[parsing] modules/contrib/abstractpermissions/src/AbstractPermissionsService.php
+[parsing] modules/contrib/abstractpermissions/src/AbstractPermissionsServiceInterface.php
+[parsing] modules/contrib/abstractpermissions/src/Entity/PermissionAbstraction.php
+[parsing] modules/contrib/abstractpermissions/src/Entity/PermissionAbstractionInterface.php
+[parsing] modules/contrib/abstractpermissions/src/Form/AbstractPermissionsCheckForm.php
+[parsing] modules/contrib/abstractpermissions/src/Form/PermissionAbstractionDeleteForm.php
+[parsing] modules/contrib/abstractpermissions/src/Form/PermissionAbstractionForm.php
+[parsing] modules/contrib/abstractpermissions/src/Form/PermissionAbstractionListBuilder.php
+[parsing] modules/contrib/abstractpermissions/src/Form/PermissionsForm.php
+[parsing] modules/contrib/abstractpermissions/src/Form/PermissionsFormInterface.php
+[parsing] modules/contrib/abstractpermissions/src/FormAlter/PermissionsFormAlterBase.php
+[parsing] modules/contrib/abstractpermissions/src/FormAlter/PermissionsFormMarkGoverned.php
+[parsing] modules/contrib/abstractpermissions/src/FormAlter/PermissionsFormOnlyGoverned.php
+[parsing] modules/contrib/abstractpermissions/src/FormAlter/PermissionsFormOnlyUngoverned.php
+[parsing] modules/contrib/abstractpermissions/src/PermissionGovernor.php
+[parsing] modules/contrib/abstractpermissions/src/PermissionGraph.php
+[refactoring] modules/contrib/abstractpermissions/abstractpermissions.module
+[refactoring] modules/contrib/abstractpermissions/src/AbstractPermissionsService.php
+[refactoring] modules/contrib/abstractpermissions/src/AbstractPermissionsServiceInterface.php
+[refactoring] modules/contrib/abstractpermissions/src/Entity/PermissionAbstraction.php
+[refactoring] modules/contrib/abstractpermissions/src/Entity/PermissionAbstractionInterface.php
+[refactoring] modules/contrib/abstractpermissions/src/Form/AbstractPermissionsCheckForm.php
+[refactoring] modules/contrib/abstractpermissions/src/Form/PermissionAbstractionDeleteForm.php
+[refactoring] modules/contrib/abstractpermissions/src/Form/PermissionAbstractionForm.php
+[refactoring] modules/contrib/abstractpermissions/src/Form/PermissionAbstractionListBuilder.php
+[refactoring] modules/contrib/abstractpermissions/src/Form/PermissionsForm.php
+[refactoring] modules/contrib/abstractpermissions/src/Form/PermissionsFormInterface.php
+[refactoring] modules/contrib/abstractpermissions/src/FormAlter/PermissionsFormAlterBase.php
+[refactoring] modules/contrib/abstractpermissions/src/FormAlter/PermissionsFormMarkGoverned.php
+[refactoring] modules/contrib/abstractpermissions/src/FormAlter/PermissionsFormOnlyGoverned.php
+[refactoring] modules/contrib/abstractpermissions/src/FormAlter/PermissionsFormOnlyUngoverned.php
+[refactoring] modules/contrib/abstractpermissions/src/PermissionGovernor.php
+[refactoring] modules/contrib/abstractpermissions/src/PermissionGraph.php
+[printing] modules/contrib/abstractpermissions/abstractpermissions.module
+[printing] modules/contrib/abstractpermissions/src/AbstractPermissionsService.php
+[printing] modules/contrib/abstractpermissions/src/AbstractPermissionsServiceInterface.php
+[printing] modules/contrib/abstractpermissions/src/Entity/PermissionAbstraction.php
+[printing] modules/contrib/abstractpermissions/src/Entity/PermissionAbstractionInterface.php
+[printing] modules/contrib/abstractpermissions/src/Form/AbstractPermissionsCheckForm.php
+[printing] modules/contrib/abstractpermissions/src/Form/PermissionAbstractionDeleteForm.php
+[printing] modules/contrib/abstractpermissions/src/Form/PermissionAbstractionForm.php
+[printing] modules/contrib/abstractpermissions/src/Form/PermissionAbstractionListBuilder.php
+[printing] modules/contrib/abstractpermissions/src/Form/PermissionsForm.php
+[printing] modules/contrib/abstractpermissions/src/Form/PermissionsFormInterface.php
+[printing] modules/contrib/abstractpermissions/src/FormAlter/PermissionsFormAlterBase.php
+[printing] modules/contrib/abstractpermissions/src/FormAlter/PermissionsFormMarkGoverned.php
+[printing] modules/contrib/abstractpermissions/src/FormAlter/PermissionsFormOnlyGoverned.php
+[printing] modules/contrib/abstractpermissions/src/FormAlter/PermissionsFormOnlyUngoverned.php
+[printing] modules/contrib/abstractpermissions/src/PermissionGovernor.php
+[printing] modules/contrib/abstractpermissions/src/PermissionGraph.php
+
+
+4 files with changes
+====================
+
+1) modules/contrib/abstractpermissions/src/Entity/PermissionAbstractionInterface.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -88,4 +88,4 @@
+    */
+   public function getGoverningFactor($abstractedPermissionId, $governedPermissionId);
+
+-}
+\ No newline at end of file
++}
+    ----------- end diff -----------
+
+2) modules/contrib/abstractpermissions/src/Form/PermissionAbstractionDeleteForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -47,7 +47,7 @@
+
+     $entity->delete();
+
+-    drupal_set_message($this->t('@type deleted: @label.', [
++    $this->messenger()->addStatus($this->t('@type deleted: @label.', [
+       '@type' => $entity->getEntityType()->getLabel(),
+       '@label' => $entity->label(),
+     ]));
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+3) modules/contrib/abstractpermissions/src/Form/PermissionAbstractionForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -239,7 +239,7 @@
+         ]);
+         $log = '%type permission abstraction %id saved';
+     }
+-    drupal_set_message($message);
++    $this->messenger()->addStatus($message);
+     \Drupal::logger('abstractpermissions')->notice($log, [
+       '%type' => $entity->getEntityTypeId(),
+       '%id' => $entity->id(),
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+4) modules/contrib/abstractpermissions/src/Form/PermissionsFormInterface.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -26,4 +26,4 @@
+    */
+   public function extractPermissionsByRole($values);
+
+-}
+\ No newline at end of file
++}
+    ----------- end diff -----------
+
+ [OK] Rector is done! 4 files have been changed.                                
+

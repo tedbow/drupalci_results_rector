@@ -1,0 +1,93 @@
+diff --git a/access_filter.info.yml b/access_filter.info.yml
+index 485c2c3..2f236e7 100644
+--- a/access_filter.info.yml
++++ b/access_filter.info.yml
+@@ -1,7 +1,7 @@
+-name: Access Filter
++name: 'Access Filter'
+ type: module
+ description: 'Enable the access restriction feature using IP address.'
+ package: 'Access Control'
+ core: 8.x
+-
+ configure: entity.access_filter.collection
++core_version_requirement: '^8 || ^9'
+diff --git a/src/AccessFilterListBuilder.php b/src/AccessFilterListBuilder.php
+index 238b4f0..b1190b3 100644
+--- a/src/AccessFilterListBuilder.php
++++ b/src/AccessFilterListBuilder.php
+@@ -111,7 +111,7 @@ class AccessFilterListBuilder extends DraggableListBuilder {
+   public function submitForm(array &$form, FormStateInterface $form_state) {
+     parent::submitForm($form, $form_state);
+ 
+-    drupal_set_message($this->t('The configuration options have been saved.'));
++    $this->messenger()->addStatus($this->t('The configuration options have been saved.'));
+   }
+ 
+ }
+diff --git a/src/Form/DeleteForm.php b/src/Form/DeleteForm.php
+index 6f6a8f0..a5dcf4e 100644
+--- a/src/Form/DeleteForm.php
++++ b/src/Form/DeleteForm.php
+@@ -37,7 +37,7 @@ class DeleteForm extends EntityConfirmFormBase {
+    */
+   public function submitForm(array &$form, FormStateInterface $form_state) {
+     $this->entity->delete();
+-    drupal_set_message($this->t('Filter %label has been deleted.', ['%label' => $this->entity->label()]));
++    $this->messenger()->addStatus($this->t('Filter %label has been deleted.', ['%label' => $this->entity->label()]));
+ 
+     $form_state->setRedirectUrl($this->getCancelUrl());
+   }
+diff --git a/src/Form/EditForm.php b/src/Form/EditForm.php
+index 3b6d8e6..aaa20b8 100644
+--- a/src/Form/EditForm.php
++++ b/src/Form/EditForm.php
+@@ -226,13 +226,13 @@ class EditForm extends EntityForm {
+ 
+     if (!empty($condition_errors)) {
+       $form_state->setErrorByName('conditions', '');
+-      drupal_set_message($this->t('There are configuration errors in conditions.'), 'error', TRUE);
++      $this->messenger()->addError($this->t('There are configuration errors in conditions.'), TRUE);
+ 
+       foreach ($condition_errors as $i => $line_errors) {
+-        drupal_set_message($this->t('Line @line:', ['@line' => $i + 1]), 'error', TRUE);
++        $this->messenger()->addError($this->t('Line @line:', ['@line' => $i + 1]), TRUE);
+ 
+         foreach ($line_errors as $error) {
+-          drupal_set_message($this->t('- @error', ['@error' => $error]), 'error', TRUE);
++          $this->messenger()->addError($this->t('- @error', ['@error' => $error]), TRUE);
+         }
+       }
+     }
+@@ -281,13 +281,13 @@ class EditForm extends EntityForm {
+ 
+     if (!empty($rule_errors)) {
+       $form_state->setErrorByName('rules', '');
+-      drupal_set_message($this->t('There are configuration errors in rules.'), 'error', TRUE);
++      $this->messenger()->addError($this->t('There are configuration errors in rules.'), TRUE);
+ 
+       foreach ($rule_errors as $i => $line_errors) {
+-        drupal_set_message($this->t('Line @line:', ['@line' => $i + 1]), 'error', TRUE);
++        $this->messenger()->addError($this->t('Line @line:', ['@line' => $i + 1]), TRUE);
+ 
+         foreach ($line_errors as $error) {
+-          drupal_set_message($this->t('- @error', ['@error' => $error]), 'error', TRUE);
++          $this->messenger()->addError($this->t('- @error', ['@error' => $error]), TRUE);
+         }
+       }
+     }
+@@ -305,12 +305,12 @@ class EditForm extends EntityForm {
+ 
+     $status = $filter->save();
+     if ($status) {
+-      drupal_set_message($this->t('Filter %label has been saved.', [
++      $this->messenger()->addStatus($this->t('Filter %label has been saved.', [
+         '%label' => $filter->name,
+       ]));
+     }
+     else {
+-      drupal_set_message($this->t('Filter %label was not saved.', [
++      $this->messenger()->addStatus($this->t('Filter %label was not saved.', [
+         '%label' => $filter->name,
+       ]));
+     }

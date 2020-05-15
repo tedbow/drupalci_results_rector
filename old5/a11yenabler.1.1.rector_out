@@ -1,0 +1,45 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/a11yenabler/a11yenabler.module
+[parsing] modules/contrib/a11yenabler/src/Form/A11yEnablerSettingsForm.php
+[refactoring] modules/contrib/a11yenabler/a11yenabler.module
+[refactoring] modules/contrib/a11yenabler/src/Form/A11yEnablerSettingsForm.php
+[printing] modules/contrib/a11yenabler/a11yenabler.module
+[printing] modules/contrib/a11yenabler/src/Form/A11yEnablerSettingsForm.php
+
+
+2 files with changes
+====================
+
+1) modules/contrib/a11yenabler/a11yenabler.module
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -104,5 +104,3 @@
+
+   return FALSE;
+ }
+-
+-
+    ----------- end diff -----------
+
+2) modules/contrib/a11yenabler/src/Form/A11yEnablerSettingsForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -49,7 +49,7 @@
+   /**
+    * {@inheritdoc}
+    */
+-  public function buildForm(array $form, \Drupal\Core\Form\FormStateInterface $form_state) {
++  public function buildForm(array $form, FormStateInterface $form_state) {
+     $form = [];
+
+     $form['a11yenabler_heading'] = array(
+    ----------- end diff -----------
+
+ [OK] Rector is done! 2 files have been changed.                                
+

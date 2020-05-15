@@ -1,0 +1,105 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/views_bulk_operations/modules/actions_permissions/src/ActionsPermissions.php
+[parsing] modules/contrib/views_bulk_operations/modules/actions_permissions/src/EventSubscriber/ActionsPermissionsEventSubscriber.php
+[parsing] modules/contrib/views_bulk_operations/modules/views_bulk_operations_example/src/Plugin/Action/ViewsBulkOperationExampleAction.php
+[parsing] modules/contrib/views_bulk_operations/src/Access/ViewsBulkOperationsAccess.php
+[parsing] modules/contrib/views_bulk_operations/src/Action/ViewsBulkOperationsActionBase.php
+[parsing] modules/contrib/views_bulk_operations/src/Action/ViewsBulkOperationsActionInterface.php
+[parsing] modules/contrib/views_bulk_operations/src/Action/ViewsBulkOperationsPreconfigurationInterface.php
+[parsing] modules/contrib/views_bulk_operations/src/Commands/ViewsBulkOperationsCommands.php
+[parsing] modules/contrib/views_bulk_operations/src/Controller/ViewsBulkOperationsController.php
+[parsing] modules/contrib/views_bulk_operations/src/EventSubscriber/ViewsBulkOperationsEventSubscriber.php
+[parsing] modules/contrib/views_bulk_operations/src/Form/ConfigureAction.php
+[parsing] modules/contrib/views_bulk_operations/src/Form/ConfirmAction.php
+[parsing] modules/contrib/views_bulk_operations/src/Form/ViewsBulkOperationsFormTrait.php
+[parsing] modules/contrib/views_bulk_operations/src/Plugin/Action/CancelUserAction.php
+[parsing] modules/contrib/views_bulk_operations/src/Plugin/Action/EntityDeleteAction.php
+[parsing] modules/contrib/views_bulk_operations/src/Plugin/views/field/ViewsBulkOperationsBulkForm.php
+[parsing] modules/contrib/views_bulk_operations/src/Service/ViewsBulkOperationsActionManager.php
+[parsing] modules/contrib/views_bulk_operations/src/Service/ViewsBulkOperationsActionProcessor.php
+[parsing] modules/contrib/views_bulk_operations/src/Service/ViewsBulkOperationsActionProcessorInterface.php
+[parsing] modules/contrib/views_bulk_operations/src/Service/ViewsBulkOperationsViewData.php
+[parsing] modules/contrib/views_bulk_operations/src/Service/ViewsBulkOperationsViewDataInterface.php
+[parsing] modules/contrib/views_bulk_operations/src/ViewsBulkOperationsBatch.php
+[parsing] modules/contrib/views_bulk_operations/src/ViewsBulkOperationsEvent.php
+[parsing] modules/contrib/views_bulk_operations/tests/src/Functional/ViewsBulkOperationsBulkFormTest.php
+[parsing] modules/contrib/views_bulk_operations/tests/src/Kernel/ViewsBulkOperationsActionProcessorTest.php
+[parsing] modules/contrib/views_bulk_operations/tests/src/Kernel/ViewsBulkOperationsDataServiceTest.php
+[parsing] modules/contrib/views_bulk_operations/tests/src/Kernel/ViewsBulkOperationsKernelTestBase.php
+[parsing] modules/contrib/views_bulk_operations/tests/src/Unit/TestViewsBulkOperationsBatch.php
+[parsing] modules/contrib/views_bulk_operations/tests/src/Unit/ViewsBulkOperationsBatchTest.php
+[parsing] modules/contrib/views_bulk_operations/tests/views_bulk_operations_test/src/Plugin/Action/ViewsBulkOperationsAdvancedTestAction.php
+[parsing] modules/contrib/views_bulk_operations/tests/views_bulk_operations_test/src/Plugin/Action/ViewsBulkOperationsPassTestAction.php
+[parsing] modules/contrib/views_bulk_operations/tests/views_bulk_operations_test/src/Plugin/Action/ViewsBulkOperationsSimpleTestAction.php
+[parsing] modules/contrib/views_bulk_operations/views_bulk_operations.drush.inc
+[parsing] modules/contrib/views_bulk_operations/views_bulk_operations.module
+[refactoring] modules/contrib/views_bulk_operations/modules/actions_permissions/src/ActionsPermissions.php
+[refactoring] modules/contrib/views_bulk_operations/modules/actions_permissions/src/EventSubscriber/ActionsPermissionsEventSubscriber.php
+[refactoring] modules/contrib/views_bulk_operations/modules/views_bulk_operations_example/src/Plugin/Action/ViewsBulkOperationExampleAction.php
+[refactoring] modules/contrib/views_bulk_operations/src/Access/ViewsBulkOperationsAccess.php
+[refactoring] modules/contrib/views_bulk_operations/src/Action/ViewsBulkOperationsActionBase.php
+[refactoring] modules/contrib/views_bulk_operations/src/Action/ViewsBulkOperationsActionInterface.php
+[refactoring] modules/contrib/views_bulk_operations/src/Action/ViewsBulkOperationsPreconfigurationInterface.php
+[refactoring] modules/contrib/views_bulk_operations/src/Commands/ViewsBulkOperationsCommands.php
+[refactoring] modules/contrib/views_bulk_operations/src/Controller/ViewsBulkOperationsController.php
+[refactoring] modules/contrib/views_bulk_operations/src/EventSubscriber/ViewsBulkOperationsEventSubscriber.php
+[refactoring] modules/contrib/views_bulk_operations/src/Form/ConfigureAction.php
+[refactoring] modules/contrib/views_bulk_operations/src/Form/ConfirmAction.php
+[refactoring] modules/contrib/views_bulk_operations/src/Form/ViewsBulkOperationsFormTrait.php
+[refactoring] modules/contrib/views_bulk_operations/src/Plugin/Action/CancelUserAction.php
+[refactoring] modules/contrib/views_bulk_operations/src/Plugin/Action/EntityDeleteAction.php
+[refactoring] modules/contrib/views_bulk_operations/src/Plugin/views/field/ViewsBulkOperationsBulkForm.php
+[refactoring] modules/contrib/views_bulk_operations/src/Service/ViewsBulkOperationsActionManager.php
+[refactoring] modules/contrib/views_bulk_operations/src/Service/ViewsBulkOperationsActionProcessor.php
+[refactoring] modules/contrib/views_bulk_operations/src/Service/ViewsBulkOperationsActionProcessorInterface.php
+[refactoring] modules/contrib/views_bulk_operations/src/Service/ViewsBulkOperationsViewData.php
+[refactoring] modules/contrib/views_bulk_operations/src/Service/ViewsBulkOperationsViewDataInterface.php
+[refactoring] modules/contrib/views_bulk_operations/src/ViewsBulkOperationsBatch.php
+[refactoring] modules/contrib/views_bulk_operations/src/ViewsBulkOperationsEvent.php
+[refactoring] modules/contrib/views_bulk_operations/tests/src/Functional/ViewsBulkOperationsBulkFormTest.php
+[refactoring] modules/contrib/views_bulk_operations/tests/src/Kernel/ViewsBulkOperationsActionProcessorTest.php
+[refactoring] modules/contrib/views_bulk_operations/tests/src/Kernel/ViewsBulkOperationsDataServiceTest.php
+[refactoring] modules/contrib/views_bulk_operations/tests/src/Kernel/ViewsBulkOperationsKernelTestBase.php
+[refactoring] modules/contrib/views_bulk_operations/tests/src/Unit/TestViewsBulkOperationsBatch.php
+[refactoring] modules/contrib/views_bulk_operations/tests/src/Unit/ViewsBulkOperationsBatchTest.php
+
+In NodeNameResolver.php line 81:
+                                                                 
+  [Rector\Core\Exception\ShouldNotHappenException]               
+  Pick more specific node than "PhpParser\Node\Expr\MethodCall"  
+                                                                 
+
+Exception trace:
+  at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/rector/rector-prefixed/rector/packages/node-name-resolver/src/NodeNameResolver.php:81
+ Rector\NodeNameResolver\NodeNameResolver->getName() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/rector/rector-prefixed/rector/src/Rector/AbstractRector/NameResolverTrait.php:56
+ Rector\Core\Rector\AbstractRector->getName() at /var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/palantirnet/drupal-rector/src/Rector/Deprecation/Base/GetMockBase.php:47
+ DrupalRector\Rector\Deprecation\Base\GetMockBase->refactor() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/rector/rector-prefixed/rector/src/Rector/AbstractRector.php:111
+ Rector\Core\Rector\AbstractRector->enterNode() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/phpstan/phpstan/phpstan.phar/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php:113
+ PhpParser\NodeTraverser->traverseNode() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/phpstan/phpstan/phpstan.phar/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php:133
+ PhpParser\NodeTraverser->traverseNode() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/phpstan/phpstan/phpstan.phar/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php:196
+ PhpParser\NodeTraverser->traverseArray() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/phpstan/phpstan/phpstan.phar/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php:105
+ PhpParser\NodeTraverser->traverseNode() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/phpstan/phpstan/phpstan.phar/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php:196
+ PhpParser\NodeTraverser->traverseArray() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/phpstan/phpstan/phpstan.phar/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php:105
+ PhpParser\NodeTraverser->traverseNode() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/phpstan/phpstan/phpstan.phar/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php:196
+ PhpParser\NodeTraverser->traverseArray() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/phpstan/phpstan/phpstan.phar/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php:105
+ PhpParser\NodeTraverser->traverseNode() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/phpstan/phpstan/phpstan.phar/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php:196
+ PhpParser\NodeTraverser->traverseArray() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/phpstan/phpstan/phpstan.phar/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php:85
+ PhpParser\NodeTraverser->traverse() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/rector/rector-prefixed/rector/src/PhpParser/NodeTraverser/RectorNodeTraverser.php:58
+ Rector\Core\PhpParser\NodeTraverser\RectorNodeTraverser->traverse() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/rector/rector-prefixed/rector/src/Application/FileProcessor.php:107
+ Rector\Core\Application\FileProcessor->refactor() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/rector/rector-prefixed/rector/src/Application/RectorApplication.php:118
+ Rector\Core\Application\RectorApplication->Rector\Core\Application\{closure}() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/rector/rector-prefixed/rector/src/Application/RectorApplication.php:168
+ Rector\Core\Application\RectorApplication->tryCatchWrapper() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/rector/rector-prefixed/rector/src/Application/RectorApplication.php:119
+ Rector\Core\Application\RectorApplication->runOnFileInfos() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/rector/rector-prefixed/rector/src/Console/Command/ProcessCommand.php:147
+ Rector\Core\Console\Command\ProcessCommand->execute() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/rector/rector-prefixed/rector/vendor/symfony/console/Command/Command.php:228
+ _HumbugBoxeee6bda8eb22\Symfony\Component\Console\Command\Command->run() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/rector/rector-prefixed/rector/src/Console/Command/AbstractCommand.php:30
+ Rector\Core\Console\Command\AbstractCommand->run() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/rector/rector-prefixed/rector/vendor/symfony/console/Application.php:849
+ _HumbugBoxeee6bda8eb22\Symfony\Component\Console\Application->doRunCommand() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/rector/rector-prefixed/rector/vendor/symfony/console/Application.php:235
+ _HumbugBoxeee6bda8eb22\Symfony\Component\Console\Application->doRun() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/rector/rector-prefixed/rector/src/Console/Application.php:77
+ Rector\Core\Console\Application->doRun() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/rector/rector-prefixed/rector/vendor/symfony/console/Application.php:136
+ _HumbugBoxeee6bda8eb22\Symfony\Component\Console\Application->run() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/rector/rector-prefixed/rector/bin/rector:46
+ require() at /var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/rector/rector-prefixed/rector:6
+
+process [-n|--dry-run] [-a|--autoload-file AUTOLOAD-FILE] [--match-git-diff] [-r|--only ONLY] [-o|--output-format [OUTPUT-FORMAT]] [--no-progress-bar] [--output-file OUTPUT-FILE] [--cache-debug] [--clear-cache] [--] [<source>...]
+

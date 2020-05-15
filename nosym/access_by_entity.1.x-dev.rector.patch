@@ -1,0 +1,32 @@
+diff --git a/src/Form/AccessByEntityForm.php b/src/Form/AccessByEntityForm.php
+index be3e40d..f700a01 100644
+--- a/src/Form/AccessByEntityForm.php
++++ b/src/Form/AccessByEntityForm.php
+@@ -239,7 +239,7 @@ class AccessByEntityForm extends FormBase {
+     $tags = $entity->getCacheTags();
+     $this->cacheTagsInvalidator->invalidateTags($tags);
+ 
+-    drupal_set_message($this->t('The changes have been saved.'));
++    $this->messenger()->addStatus($this->t('The changes have been saved.'));
+   }
+ 
+ }
+diff --git a/src/Form/AccessByEntitySettingsForm.php b/src/Form/AccessByEntitySettingsForm.php
+index f959461..574239b 100644
+--- a/src/Form/AccessByEntitySettingsForm.php
++++ b/src/Form/AccessByEntitySettingsForm.php
+@@ -97,11 +97,9 @@ class AccessByEntitySettingsForm extends ConfigFormBase {
+     $config = $this->config('access_by_entity.settings');
+     $config->set('access_by_entity.entity_types', $form_state->getValue('entity_types'));
+     $config->save();
+-    drupal_set_message(
+-      $this->t(
+-        'You need to clear cache manuelly so that the changes will be taken.'
+-      )
+-    );
++    $this->messenger()->addStatus($this->t(
++      'You need to clear cache manuelly so that the changes will be taken.'
++    ));
+     return parent::submitForm($form, $form_state);
+   }
+ 

@@ -1,0 +1,7 @@
+ [notice] Processing /var/lib/drupalci/workspace/drupal-checkouts/drupal4/modules/contrib/abjs.
+  0/11 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   0%[2K  2/11 [▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░]  18%[2K  4/11 [▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░]  36%[2K  5/11 [▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░]  45%[2K  7/11 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░]  63%[2K  9/11 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░]  81%[2K 11/11 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 100%
+
+ [notice] Processing /var/lib/drupalci/workspace/drupal-checkouts/drupal4/modules/contrib/abjs.
+PHP Fatal error:  Cannot redeclare composerRequireDrupal8() (previously declared in /var/lib/drupalci/workspace/drupal-checkouts/drupal4/vendor/composer/autoload_real.php:70) in /var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/composer/autoload_real.php on line 77
+Fatal error: Cannot redeclare composerRequireDrupal8() (previously declared in /var/lib/drupalci/workspace/drupal-checkouts/drupal4/vendor/composer/autoload_real.php:70) in /var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/composer/autoload_real.php on line 77
+ [error]  PHPStan failed:  

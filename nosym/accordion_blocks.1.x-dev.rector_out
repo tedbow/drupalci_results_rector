@@ -1,0 +1,105 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/accordion_blocks/accordion_blocks.module
+[parsing] modules/contrib/accordion_blocks/src/Plugin/Field/FieldFormatter/AccordionBlockFormatter.php
+[parsing] modules/contrib/accordion_blocks/src/Plugin/migrate/source/Accordionblock.php
+[parsing] modules/contrib/accordion_blocks/src/Tests/AccordionBlocksTest.php
+[parsing] modules/contrib/accordion_blocks/tests/features/bootstrap/FeatureContext.php
+[refactoring] modules/contrib/accordion_blocks/accordion_blocks.module
+[refactoring] modules/contrib/accordion_blocks/src/Plugin/Field/FieldFormatter/AccordionBlockFormatter.php
+[refactoring] modules/contrib/accordion_blocks/src/Plugin/migrate/source/Accordionblock.php
+[refactoring] modules/contrib/accordion_blocks/src/Tests/AccordionBlocksTest.php
+[refactoring] modules/contrib/accordion_blocks/tests/features/bootstrap/FeatureContext.php
+[printing] modules/contrib/accordion_blocks/accordion_blocks.module
+[printing] modules/contrib/accordion_blocks/src/Plugin/Field/FieldFormatter/AccordionBlockFormatter.php
+[printing] modules/contrib/accordion_blocks/src/Plugin/migrate/source/Accordionblock.php
+[printing] modules/contrib/accordion_blocks/src/Tests/AccordionBlocksTest.php
+[printing] modules/contrib/accordion_blocks/tests/features/bootstrap/FeatureContext.php
+
+
+3 files with changes
+====================
+
+1) modules/contrib/accordion_blocks/accordion_blocks.module
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -14,4 +14,4 @@
+       'variables' => array('blocks' => array()),
+     ),
+   );
+-}
+\ No newline at end of file
++}
+    ----------- end diff -----------
+
+2) modules/contrib/accordion_blocks/src/Plugin/Field/FieldFormatter/AccordionBlockFormatter.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -40,7 +40,7 @@
+       }
+
+       if ($entity->id()) {
+-        $view_builder = \Drupal::entityManager()->getViewBuilder($entity->getEntityTypeId());
++        $view_builder = \Drupal::service('entity_type.manager')->getViewBuilder($entity->getEntityTypeId());
+         $elements[$delta] = $view_builder->view($entity, $view_mode, $entity->language()->getId());
+         $items[$delta]->_attributes += array('resource' => $entity->url(), 'title' => $label);
+         
+@@ -70,4 +70,3 @@
+   }
+   
+ }
+-
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\EntityManagerRector
+
+
+3) modules/contrib/accordion_blocks/src/Tests/AccordionBlocksTest.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -81,12 +81,12 @@
+    * - Displaying of accordion block on the specified region.
+    */
+   public function testCreateAccordionBlock() {
+-    
++
+     $admin_user = $this->drupalCreateUser(array(
+       'administer blocks', 
+       'administer block_content display'));
+     $this->drupalLogin($admin_user);
+-    
++
+     // Create a block.
+     $edit = array();
+     $edit['info[0][value]'] = 'Test Block';
+@@ -104,9 +104,9 @@
+     )), 'Accordion block created.');
+
+     //$this->drupalPostForm(NULL, NULL, t('Save block'));
+-    
++
+     //$this->drupalPlaceBlock('testblock', array('id' => 'test_block', 'label' => 'Test Block', 'region' => 'sidebar_first'));
+-    
++
+     //$this->drupalGet('/node');
+     //$block = $this->xpath('//div[@id=sidebar-first]/div[contains(@class, accordion_blocks_container)]');
+     //$this->assertTrue(!empty($block));
+    ----------- end diff -----------
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/accordion_blocks/tests/features/bootstrap/FeatureConte
+         xt.php" file, due to:                                                  
+         "Analyze error: "Class Drupal\DrupalExtension\Context\RawDrupalContext 
+         not found and could not be autoloaded.". Include your files in         
+         "parameters > autoload_paths".                                         
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+

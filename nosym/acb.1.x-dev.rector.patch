@@ -1,0 +1,22 @@
+diff --git a/acb.info.yml b/acb.info.yml
+index aa2c989..774f204 100644
+--- a/acb.info.yml
++++ b/acb.info.yml
+@@ -3,3 +3,4 @@ description: 'Bridge module linking Access Control modules so their access permi
+ core: 8.x
+ package: 'Access control'
+ type: module
++core_version_requirement: '^8 || ^9'
+diff --git a/acb.module b/acb.module
+index f512d86..4bfcb81 100644
+--- a/acb.module
++++ b/acb.module
+@@ -135,7 +135,7 @@ function acb_node_grants_alter(&$grants, AccountInterface $account, $op) {
+ 
+   // ACL requires special care. The responsible module can only be determined by using the database.
+   if (\Drupal::moduleHandler()->moduleExists('acl')) {
+-    $acl = db_select('acl')
++    $acl = \Drupal::database()->select('acl')
+       ->fields('acl', ['acl_id','module'])
+       ->execute()
+       ->fetchAllAssoc('acl_id');

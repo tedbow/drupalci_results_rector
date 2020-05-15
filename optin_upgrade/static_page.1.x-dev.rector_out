@@ -1,0 +1,16 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/static_page/src/EventSubscriber/StaticPageSubscriber.php
+[parsing] modules/contrib/static_page/src/Form/StaticPageSettingsForm.php
+[parsing] modules/contrib/static_page/static_page.module
+[refactoring] modules/contrib/static_page/src/EventSubscriber/StaticPageSubscriber.php
+[refactoring] modules/contrib/static_page/src/Form/StaticPageSettingsForm.php
+[refactoring] modules/contrib/static_page/static_page.module
+[printing] modules/contrib/static_page/src/EventSubscriber/StaticPageSubscriber.php
+[printing] modules/contrib/static_page/src/Form/StaticPageSettingsForm.php
+[printing] modules/contrib/static_page/static_page.module
+
+
+ [OK] Rector is done!                                                           
+

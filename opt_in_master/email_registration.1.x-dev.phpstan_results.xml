@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle>
+<file name="modules/contrib/email_registration/src/Plugin/Commerce/CheckoutPane/EmailRegistrationCompletionRegistration.php">
+  <error line="0" column="1" severity="error" message="Class Drupal\commerce_checkout\Plugin\Commerce\CheckoutPane\CompletionRegister not found and could not be autoloaded." />
+  <error line="18" column="1" severity="error" message="Class Drupal\commerce_checkout\Plugin\Commerce\CheckoutPane\CompletionRegister not found and could not be autoloaded." />
+</file>
+<file name="modules/contrib/email_registration/src/Plugin/Commerce/CheckoutPane/EmailRegistrationLogin.php">
+  <error line="0" column="1" severity="error" message="Class Drupal\commerce_checkout\Plugin\Commerce\CheckoutPane\Login not found and could not be autoloaded." />
+  <error line="27" column="1" severity="error" message="Class Drupal\commerce_checkout\Plugin\Commerce\CheckoutPane\Login not found and could not be autoloaded." />
+</file>
+<file name="modules/contrib/email_registration/tests/src/Functional/Plugin/Commerce/CheckoutPane/EmailRegistrationLoginTest.php">
+  <error line="0" column="1" severity="error" message="Class Drupal\Tests\commerce\Functional\CommerceBrowserTestBase not found and could not be autoloaded." />
+  <error line="15" column="1" severity="error" message="Class Drupal\Tests\commerce\Functional\CommerceBrowserTestBase not found and could not be autoloaded." />
+</file>
+</checkstyle>

@@ -1,0 +1,115 @@
+diff --git a/google_analytics.module b/google_analytics.module
+index 3996b24..6c21209 100644
+--- a/google_analytics.module
++++ b/google_analytics.module
+@@ -1,5 +1,6 @@
+ <?php
+ 
++use Drupal\Core\File\FileSystemInterface;
+ /**
+  * @file
+  * Drupal Module: Google Analytics.
+@@ -500,12 +501,12 @@ function _google_analytics_cache($location, $synchronize = FALSE) {
+         $data_hash_local = Crypt::hashBase64(file_get_contents($file_destination));
+         $data_hash_remote = Crypt::hashBase64($data);
+         // Check that the files directory is writable.
+-        if ($data_hash_local != $data_hash_remote && file_prepare_directory($path)) {
++        if ($data_hash_local != $data_hash_remote && \Drupal::service('file_system')->prepareDirectory($path)) {
+           // Save updated tracking code file to disk.
+-          file_unmanaged_save_data($data, $file_destination, FILE_EXISTS_REPLACE);
++          \Drupal::service('file_system')->saveData($data, $file_destination, FileSystemInterface::EXISTS_REPLACE);
+           // Based on Drupal Core class AssetDumper.
+           if (extension_loaded('zlib') && \Drupal::config('system.performance')->get('js.gzip')) {
+-            file_unmanaged_save_data(gzencode($data, 9, FORCE_GZIP), $file_destination . '.gz', FILE_EXISTS_REPLACE);
++            \Drupal::service('file_system')->saveData(gzencode($data, 9, FORCE_GZIP), $file_destination . '.gz', FileSystemInterface::EXISTS_REPLACE);
+           }
+           \Drupal::logger('google_analytics')->info('Locally cached tracking code file has been updated.');
+ 
+@@ -516,13 +517,13 @@ function _google_analytics_cache($location, $synchronize = FALSE) {
+       }
+       else {
+         // Check that the files directory is writable.
+-        if (file_prepare_directory($path, FILE_CREATE_DIRECTORY)) {
++        if (\Drupal::service('file_system')->prepareDirectory($path, FileSystemInterface::CREATE_DIRECTORY)) {
+           // There is no need to flush JS here as core refreshes JS caches
+           // automatically, if new files are added.
+-          file_unmanaged_save_data($data, $file_destination, FILE_EXISTS_REPLACE);
++          \Drupal::service('file_system')->saveData($data, $file_destination, FileSystemInterface::EXISTS_REPLACE);
+           // Based on Drupal Core class AssetDumper.
+           if (extension_loaded('zlib') && \Drupal::config('system.performance')->get('js.gzip')) {
+-            file_unmanaged_save_data(gzencode($data, 9, FORCE_GZIP), $file_destination . '.gz', FILE_EXISTS_REPLACE);
++            \Drupal::service('file_system')->saveData(gzencode($data, 9, FORCE_GZIP), $file_destination . '.gz', FileSystemInterface::EXISTS_REPLACE);
+           }
+           \Drupal::logger('google_analytics')->info('Locally cached tracking code file has been saved.');
+ 
+@@ -546,8 +547,8 @@ function _google_analytics_cache($location, $synchronize = FALSE) {
+  */
+ function google_analytics_clear_js_cache() {
+   $path = 'public://google_analytics';
+-  if (file_prepare_directory($path)) {
+-    file_scan_directory($path, '/.*/', ['callback' => 'file_unmanaged_delete']);
++  if (\Drupal::service('file_system')->prepareDirectory($path)) {
++    \Drupal::service('file_system')->scanDirectory($path, '/.*/', ['callback' => 'file_unmanaged_delete']);
+     \Drupal::service('file_system')->rmdir($path);
+ 
+     // Change query-strings on css/js files to enforce reload for all users.
+@@ -649,11 +650,11 @@ function _google_analytics_visibility_pages() {
+     if (!empty($visibility_request_path_pages)) {
+       // Convert path to lowercase. This allows comparison of the same path
+       // with different case. Ex: /Page, /page, /PAGE.
+-      $pages = Unicode::strtolower($visibility_request_path_pages);
++      $pages = mb_strtolower($visibility_request_path_pages);
+       if ($visibility_request_path_mode < 2) {
+         // Compare the lowercase path alias (if any) and internal path.
+         $path = \Drupal::service('path.current')->getPath();
+-        $path_alias = Unicode::strtolower(\Drupal::service('path.alias_manager')->getAliasByPath($path));
++        $path_alias = mb_strtolower(\Drupal::service('path_alias.manager')->getAliasByPath($path));
+         $page_match = \Drupal::service('path.matcher')->matchPath($path_alias, $pages) || (($path != $path_alias) && \Drupal::service('path.matcher')->matchPath($path, $pages));
+         // When $visibility_request_path_mode has a value of 0, the tracking
+         // code is displayed on all pages except those listed in $pages. When
+diff --git a/src/Form/GoogleAnalyticsAdminSettingsForm.php b/src/Form/GoogleAnalyticsAdminSettingsForm.php
+index 639184b..9eeffab 100644
+--- a/src/Form/GoogleAnalyticsAdminSettingsForm.php
++++ b/src/Form/GoogleAnalyticsAdminSettingsForm.php
+@@ -176,7 +176,7 @@ class GoogleAnalyticsAdminSettingsForm extends ConfigFormBase {
+       if ($this->moduleHandler->moduleExists('php') && $php_access) {
+         $options[] = $this->t('Pages on which this PHP code returns <code>TRUE</code> (experts only)');
+         $title = $this->t('Pages or PHP code');
+-        $description .= ' ' . $this->t('If the PHP option is chosen, enter PHP code between %php. Note that executing incorrect PHP code can break your Drupal site.', ['%php' => '<?php ?>']);
++        $description .= ' ' . $this->t('If the PHP option is chosen, enter PHP code between %php. Note that executing incorrect PHP code can break your Drupal site.', ['%php' => '']);
+       }
+       else {
+         $title = $this->t('Pages');
+@@ -972,7 +972,7 @@ class GoogleAnalyticsAdminSettingsForm extends ConfigFormBase {
+ 
+     foreach ($values as $name => $value) {
+       // Convert data types.
+-      $match = Unicode::strtolower($value);
++      $match = mb_strtolower($value);
+       if ($match == 'true') {
+         $value = TRUE;
+       }
+diff --git a/src/Tests/GoogleAnalyticsUninstallTest.php b/src/Tests/GoogleAnalyticsUninstallTest.php
+index f73f0a7..4f38b0f 100644
+--- a/src/Tests/GoogleAnalyticsUninstallTest.php
++++ b/src/Tests/GoogleAnalyticsUninstallTest.php
+@@ -52,7 +52,7 @@ class GoogleAnalyticsUninstallTest extends WebTestBase {
+     $this->drupalGet('');
+ 
+     // Test if the directory and analytics.js exists.
+-    $this->assertTrue(file_prepare_directory($cache_path), 'Cache directory "public://google_analytics" has been found.');
++    $this->assertTrue(\Drupal::service('file_system')->prepareDirectory($cache_path), 'Cache directory "public://google_analytics" has been found.');
+     $this->assertTrue(file_exists($cache_path . '/analytics.js'), 'Cached analytics.js tracking file has been found.');
+     $this->assertTrue(file_exists($cache_path . '/analytics.js.gz'), 'Cached analytics.js.gz tracking file has been found.');
+ 
+@@ -65,8 +65,8 @@ class GoogleAnalyticsUninstallTest extends WebTestBase {
+     $this->assertText(t('The selected modules have been uninstalled.'), 'Modules status has been updated.');
+ 
+     // Test if the directory and all files have been removed.
+-    $this->assertFalse(file_scan_directory($cache_path, '/.*/'), 'Cached JavaScript files have been removed.');
+-    $this->assertFalse(file_prepare_directory($cache_path), 'Cache directory "public://google_analytics" has been removed.');
++    $this->assertFalse(\Drupal::service('file_system')->scanDirectory($cache_path, '/.*/'), 'Cached JavaScript files have been removed.');
++    $this->assertFalse(\Drupal::service('file_system')->prepareDirectory($cache_path), 'Cache directory "public://google_analytics" has been removed.');
+   }
+ 
+ }

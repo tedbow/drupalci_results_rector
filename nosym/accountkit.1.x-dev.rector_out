@@ -1,0 +1,107 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/accountkit/accountkit.module
+[parsing] modules/contrib/accountkit/src/AccountKitManager.php
+[parsing] modules/contrib/accountkit/src/Authentication/Provider/AccountKitAuthenticationProvider.php
+[parsing] modules/contrib/accountkit/src/Form/AccountKitSettingsForm.php
+[parsing] modules/contrib/accountkit/src/Form/EmailLoginForm.php
+[parsing] modules/contrib/accountkit/src/Form/SMSLoginForm.php
+[refactoring] modules/contrib/accountkit/accountkit.module
+[refactoring] modules/contrib/accountkit/src/AccountKitManager.php
+[refactoring] modules/contrib/accountkit/src/Authentication/Provider/AccountKitAuthenticationProvider.php
+[refactoring] modules/contrib/accountkit/src/Form/AccountKitSettingsForm.php
+[refactoring] modules/contrib/accountkit/src/Form/EmailLoginForm.php
+[refactoring] modules/contrib/accountkit/src/Form/SMSLoginForm.php
+[printing] modules/contrib/accountkit/accountkit.module
+[printing] modules/contrib/accountkit/src/AccountKitManager.php
+[printing] modules/contrib/accountkit/src/Authentication/Provider/AccountKitAuthenticationProvider.php
+[printing] modules/contrib/accountkit/src/Form/AccountKitSettingsForm.php
+[printing] modules/contrib/accountkit/src/Form/EmailLoginForm.php
+[printing] modules/contrib/accountkit/src/Form/SMSLoginForm.php
+
+
+3 files with changes
+====================
+
+1) modules/contrib/accountkit/src/AccountKitManager.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -34,11 +34,10 @@
+     $data = $this->curlit($token_exchange_url);
+
+     if(!empty($data['error'])) {
+-      drupal_set_message($data['error']['message']
++      \Drupal::messenger()->addError($data['error']['message']
+         . " type: ". $data['error']['type']
+         . " code: " . $data['error']['code']
+-        . " fbtrace_id:" . $data['error']['fbtrace_id'],
+-        "error");
++        . " fbtrace_id:" . $data['error']['fbtrace_id']);
+     }
+
+     return $data['access_token'];
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+2) modules/contrib/accountkit/src/Authentication/Provider/AccountKitAuthenticationProvider.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -68,7 +68,7 @@
+     }
+
+     if ($user) {
+-      drupal_set_message("You are now logged in as " . $user->getDisplayName(), "status");
++      \Drupal::messenger()->addStatus("You are now logged in as " . $user->getDisplayName());
+     }
+     else {
+       $user = User::create();
+@@ -80,8 +80,8 @@
+       }
+       $user->save();
+
+-      drupal_set_message("User successfully created!", "status");
+-      drupal_set_message("You are now logged in as " . $user->getDisplayName(), "status");
++      \Drupal::messenger()->addStatus("User successfully created!");
++      \Drupal::messenger()->addStatus("You are now logged in as " . $user->getDisplayName());
+     }
+
+     user_login_finalize($user);
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+3) modules/contrib/accountkit/src/Form/EmailLoginForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -72,7 +72,7 @@
+   public function submitForm(array &$form, FormStateInterface $form_state) {
+     // Display result.
+     foreach ($form_state->getValues() as $key => $value) {
+-      drupal_set_message($key . ': ' . $value);
++      $this->messenger()->addStatus($key . ': ' . $value);
+     }
+
+   }
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+ [OK] Rector is done! 3 files have been changed.                                
+

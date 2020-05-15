@@ -1,0 +1,16 @@
+PHP Fatal error:  Uncaught _HumbugBoxeee6bda8eb22\Nette\FileNotFoundException: File '/var/lib/drupalci/workspace/drupal-checkouts/drupal2/./vendor/mglaman/phpstan-drupal/extension.neon' is missing or is not readable. in phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/rector/rector-prefixed/rector/vendor/nette/di/src/DI/Config/Loader.php:29
+Stack trace:
+#0 phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/rector/rector-prefixed/rector/vendor/phpstan/phpstan-src/src/DependencyInjection/NeonLoader.php(26): _HumbugBoxeee6bda8eb22\Nette\DI\Config\Loader->load('/var/lib/drupal...', false)
+#1 phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/rector/rector-prefixed/rector/vendor/nette/di/src/DI/Config/Loader.php(43): PHPStan\DependencyInjection\NeonLoader->load('/var/lib/drupal...', false)
+#2 phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/rector/rector-prefixed/rector/vendor/phpstan/phpstan-src/src/DependencyInjection/NeonLoader.php(26): _HumbugBoxeee6bda8eb22\Ne in phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/rector/rector-prefixed/rector/vendor/nette/di/src/DI/Config/Loader.php on line 29
+
+Fatal error: Uncaught _HumbugBoxeee6bda8eb22\Nette\FileNotFoundException: File '/var/lib/drupalci/workspace/drupal-checkouts/drupal2/./vendor/mglaman/phpstan-drupal/extension.neon' is missing or is not readable. in phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/rector/rector-prefixed/rector/vendor/nette/di/src/DI/Config/Loader.php on line 29
+
+_HumbugBoxeee6bda8eb22\Nette\FileNotFoundException: File '/var/lib/drupalci/workspace/drupal-checkouts/drupal2/./vendor/mglaman/phpstan-drupal/extension.neon' is missing or is not readable. in phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/rector/rector-prefixed/rector/vendor/nette/di/src/DI/Config/Loader.php on line 29
+
+Call Stack:
+    0.0001     387376   1. {main}() /var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/rector/rector-prefixed/rector:0
+    0.0880    5832264   2. require('phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/rector/rector-prefixed/rector/bin/rector') /var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/rector/rector-prefixed/rector:6
+    7.3176   30753160   3. ContainerQAGoyZi\HttpKernelRector_Core_HttpKernel_RectorKernelProd8580284Container->get() phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/rector/rector-prefixed/rector/bin/rector:45
+    7.3176   30753160   4. ContainerQAGoyZi\HttpKernelRector_Core_HttpKernel_RectorKernelProd8580284Container->make() phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/rector/rector-prefixed/rector/vendor/symfony/dependency-injection/Container.php:203
+

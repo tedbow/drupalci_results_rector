@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle>
+<file name="modules/contrib/entity_block_visibility/src/Plugin/Condition/EntityBundleCondition.php">
+  <error line="53" column="1" severity="error" message="Parameter $entity_manager of method Drupal\entity_block_visibility\Plugin\Condition\EntityBundleCondition::__construct() has typehint with deprecated interface Drupal\Core\Entity\EntityManagerInterface:
+in drupal:8.0.0 and is removed from drupal:9.0.0." />
+</file>
+</checkstyle>

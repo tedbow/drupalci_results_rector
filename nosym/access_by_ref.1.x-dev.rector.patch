@@ -1,0 +1,111 @@
+diff --git a/access_by_ref.install b/access_by_ref.install
+index 5c1b7d4..9576131 100644
+--- a/access_by_ref.install
++++ b/access_by_ref.install
+@@ -39,4 +39,4 @@ function access_by_ref_schema() {
+ 	
+   return $schema;
+ 
+-}
+\ No newline at end of file
++}
+diff --git a/access_by_ref.module b/access_by_ref.module
+index bd5f3b0..50fbd1a 100644
+--- a/access_by_ref.module
++++ b/access_by_ref.module
+@@ -1,5 +1,9 @@
+ <?php
+ 
++use Drupal\node\NodeInterface;
++use Drupal\Core\Session\AccountInterface;
++use Drupal\user\Entity\User;
++use Drupal\Core\Entity\EntityInterface;
+ /******************
+ *
+ * If access not already granted, and if it's a content type we manage, and if user has permission
+@@ -26,7 +30,7 @@ function haveNodeAccess($target_id,$op,$account){
+ 
+ 
+ 
+-function access_by_ref_node_access(\Drupal\node\NodeInterface $node, $op, \Drupal\Core\Session\AccountInterface $account) {
++function access_by_ref_node_access(NodeInterface $node, $op, AccountInterface $account) {
+ 
+ 	//return AccessResult::allowed();
+    // Perform basic access checks
+@@ -65,7 +69,7 @@ function access_by_ref_node_access(\Drupal\node\NodeInterface $node, $op, \Drupa
+         $umail = (\Drupal::currentUser()->getEmail());
+         foreach($vals as $value){
+          if(strcasecmp($value['value'], $umail) == 0){
+-          $control_entity = \Drupal\user\Entity\User::load(\Drupal::currentUser()); 
++          $control_entity = User::load(\Drupal::currentUser()); 
+           $grant_access = true; break;
+          }
+         }
+@@ -73,7 +77,7 @@ function access_by_ref_node_access(\Drupal\node\NodeInterface $node, $op, \Drupa
+       case 'shared':  //allow if user shares a value is in this field
+ 
+         
+-        $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
++        $user = User::load(\Drupal::currentUser()->id());
+         $ufield = $config['reference_data'];
+         $uvals =  $user->get($ufield)->getValue();
+      
+@@ -165,7 +169,7 @@ function access_by_ref_node_access(\Drupal\node\NodeInterface $node, $op, \Drupa
+           ->addCacheableDependency($control_entity);
+ }
+ 
+-function access_by_ref_get_config(\Drupal\node\NodeInterface $node){
++function access_by_ref_get_config(NodeInterface $node){
+   $my_type = $node->getType();
+   $sql = 'SELECT * FROM {access_by_ref} WHERE `node_type` = :ntype'; // query the database for the set of configured access methods
+ 
+@@ -178,7 +182,7 @@ function access_by_ref_get_config(\Drupal\node\NodeInterface $node){
+   return $rows;
+ }
+ 
+-function access_by_ref_get_overlords(\Drupal\node\NodeInterface $node, $overfield){ // collect the nids of the nodes that reference this node in the named field
++function access_by_ref_get_overlords(NodeInterface $node, $overfield){ // collect the nids of the nodes that reference this node in the named field
+ 
+ 
+   $table = "node__$overfield"; // naming convention
+@@ -196,10 +200,8 @@ function access_by_ref_get_overlords(\Drupal\node\NodeInterface $node, $overfiel
+ 
+ }
+ 
+-function access_by_ref_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
++function access_by_ref_entity_presave(EntityInterface $entity) {
+ 
+   //dsm($entity->getEntityTypeId());
+ 
+-}
+-
+-
++}
+diff --git a/src/Form/access_by_ref_settings_form.php b/src/Form/access_by_ref_settings_form.php
+index fc1dc97..a484d45 100644
+--- a/src/Form/access_by_ref_settings_form.php
++++ b/src/Form/access_by_ref_settings_form.php
+@@ -294,7 +294,7 @@ public function validateForm(array &$form, FormStateInterface $form_state) {
+ 
+       if($cbox == 1){// delete this
+         $sql = "DELETE FROM {access_by_ref} WHERE `id` = :rowid";
+-        $result = db_query($sql,array(':rowid'=>$id));
++        $result = \Drupal::database()->query($sql, array(':rowid'=>$id));
+         continue; // go to next row
+ 
+       }
+@@ -313,11 +313,11 @@ public function validateForm(array &$form, FormStateInterface $form_state) {
+         $parms[':id'] = $id; // add that parm
+       }
+ // okay, now run the query
+-      $result = db_query($sql,$parms);
++      $result = \Drupal::database()->query($sql, $parms);
+     }
+ 
+   // flush the cache
+    $this->flush_twig();
+   
+   }
+-}
+\ No newline at end of file
++}

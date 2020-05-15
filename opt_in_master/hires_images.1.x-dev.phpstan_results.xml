@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle>
+<file name="modules/contrib/hires_images/lib/Drupal/hires_images/Plugin/ImageEffect/HiResImageEffect.php">
+  <error line="0" column="1" severity="error" message="Class Drupal\hires_images\Plugin\ImageEffect\HiResImageEffect was not found while trying to analyse it - autoloading is probably not configured properly." />
+</file>
+</checkstyle>

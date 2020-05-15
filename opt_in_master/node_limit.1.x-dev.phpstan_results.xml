@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle>
+<file name="modules/contrib/node_limit/old/node_limit.install">
+  <error line="63" column="1" severity="error" message="Call to deprecated function db_query():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead,
+get a database connection injected into your service from the container
+and call query() on it. For example," />
+  <error line="73" column="1" severity="error" message="Call to deprecated function db_change_field():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead,
+get a database connection injected into your service from the container,
+get its schema driver, and call changeField() on it. For example," />
+  <error line="87" column="1" severity="error" message="Call to deprecated function db_delete():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead, get
+a database connection injected into your service from the container and
+call delete() on it. For example," />
+</file>
+<file name="modules/contrib/node_limit/old/node_limit.module">
+  <error line="102" column="1" severity="error" message="Call to deprecated function node_type_get_types():
+in drupal:8.0.0 and is removed from drupal:9.0.0.
+Use \Drupal\node\Entity\NodeType::loadMultiple()." />
+  <error line="119" column="1" severity="error" message="Call to deprecated function node_type_get_types():
+in drupal:8.0.0 and is removed from drupal:9.0.0.
+Use \Drupal\node\Entity\NodeType::loadMultiple()." />
+  <error line="193" column="1" severity="error" message="Call to deprecated function drupal_set_message():
+in drupal:8.5.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead." />
+  <error line="197" column="1" severity="error" message="Call to deprecated function node_type_get_types():
+in drupal:8.0.0 and is removed from drupal:9.0.0.
+Use \Drupal\node\Entity\NodeType::loadMultiple()." />
+  <error line="262" column="1" severity="error" message="Call to deprecated function db_select():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead, get
+a database connection injected into your service from the container and
+call select() on it. For example," />
+  <error line="277" column="1" severity="error" message="Call to deprecated function user_load():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Use
+Drupal\user\Entity\User::load()." />
+  <error line="279" column="1" severity="error" message="Call to deprecated function db_select():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead, get
+a database connection injected into your service from the container and
+call select() on it. For example," />
+  <error line="319" column="1" severity="error" message="Call to deprecated function drupal_render():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Use the" />
+  <error line="320" column="1" severity="error" message="Call to deprecated function drupal_render():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Use the" />
+  <error line="323" column="1" severity="error" message="Call to deprecated function drupal_render():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Use the" />
+  <error line="325" column="1" severity="error" message="Call to deprecated function drupal_render():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Use the" />
+  <error line="326" column="1" severity="error" message="Call to deprecated function drupal_render():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Use the" />
+  <error line="327" column="1" severity="error" message="Call to deprecated function drupal_render():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Use the" />
+  <error line="342" column="1" severity="error" message="Call to deprecated function drupal_render():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Use the" />
+  <error line="344" column="1" severity="error" message="Call to deprecated function drupal_render_children():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Avoid early
+rendering when possible or loop through the elements and render them as
+they are available." />
+  <error line="361" column="1" severity="error" message="Call to deprecated function db_select():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead, get
+a database connection injected into your service from the container and
+call select() on it. For example," />
+  <error line="417" column="1" severity="error" message="Call to deprecated function db_update():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead, get
+a database connection injected into your service from the container and
+call update() on it. For example," />
+  <error line="424" column="1" severity="error" message="Call to deprecated function drupal_set_message():
+in drupal:8.5.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead." />
+  <error line="560" column="1" severity="error" message="Call to deprecated function drupal_set_message():
+in drupal:8.5.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead." />
+  <error line="598" column="1" severity="error" message="Call to deprecated function drupal_set_message():
+in drupal:8.5.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead." />
+  <error line="606" column="1" severity="error" message="Call to deprecated function db_select():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead, get
+a database connection injected into your service from the container and
+call select() on it. For example," />
+  <error line="627" column="1" severity="error" message="Call to deprecated function db_select():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead, get
+a database connection injected into your service from the container and
+call select() on it. For example," />
+  <error line="659" column="1" severity="error" message="Call to deprecated function db_delete():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead, get
+a database connection injected into your service from the container and
+call delete() on it. For example," />
+  <error line="666" column="1" severity="error" message="Call to deprecated function drupal_set_message():
+in drupal:8.5.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead." />
+  <error line="681" column="1" severity="error" message="Call to deprecated function db_insert():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead, get
+a database connection injected into your service from the container and
+call insert() on it. For example," />
+</file>
+<file name="modules/contrib/node_limit/old/node_limit_interval/node_limit_interval.install">
+  <error line="42" column="1" severity="error" message="Call to deprecated function db_query():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead,
+get a database connection injected into your service from the container
+and call query() on it. For example," />
+  <error line="50" column="1" severity="error" message="Call to deprecated function db_change_field():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead,
+get a database connection injected into your service from the container,
+get its schema driver, and call changeField() on it. For example," />
+</file>
+<file name="modules/contrib/node_limit/old/node_limit_interval/node_limit_interval.module">
+  <error line="55" column="1" severity="error" message="Call to deprecated function drupal_render():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Use the" />
+  <error line="56" column="1" severity="error" message="Call to deprecated function drupal_render():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Use the" />
+  <error line="130" column="1" severity="error" message="Call to deprecated function db_insert():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead, get
+a database connection injected into your service from the container and
+call insert() on it. For example," />
+  <error line="144" column="1" severity="error" message="Call to deprecated function db_delete():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead, get
+a database connection injected into your service from the container and
+call delete() on it. For example," />
+  <error line="153" column="1" severity="error" message="Call to deprecated function db_select():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead, get
+a database connection injected into your service from the container and
+call select() on it. For example," />
+</file>
+<file name="modules/contrib/node_limit/old/node_limit_role/node_limit_role.module">
+  <error line="14" column="1" severity="error" message="Call to deprecated function db_select():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead, get
+a database connection injected into your service from the container and
+call select() on it. For example," />
+  <error line="35" column="1" severity="error" message="Call to deprecated constant DRUPAL_ANONYMOUS_RID: Deprecated in drupal:8.0.0 and is removed from drupal:9.0.0. Use Drupal\Core\Session\AccountInterface::ANONYMOUS_ROLE or \Drupal\user\RoleInterface::ANONYMOUS_ID instead." />
+  <error line="36" column="1" severity="error" message="Call to deprecated constant DRUPAL_AUTHENTICATED_RID: Deprecated in drupal:8.0.0 and is removed from drupal:9.0.0. Use Drupal\Core\Session\AccountInterface::AUTHENTICATED_ROLE or \Drupal\user\RoleInterface::AUTHENTICATED_ID instead." />
+  <error line="53" column="1" severity="error" message="Call to deprecated constant DRUPAL_ANONYMOUS_RID: Deprecated in drupal:8.0.0 and is removed from drupal:9.0.0. Use Drupal\Core\Session\AccountInterface::ANONYMOUS_ROLE or \Drupal\user\RoleInterface::ANONYMOUS_ID instead." />
+  <error line="56" column="1" severity="error" message="Call to deprecated constant DRUPAL_AUTHENTICATED_RID: Deprecated in drupal:8.0.0 and is removed from drupal:9.0.0. Use Drupal\Core\Session\AccountInterface::AUTHENTICATED_ROLE or \Drupal\user\RoleInterface::AUTHENTICATED_ID instead." />
+  <error line="60" column="1" severity="error" message="Call to deprecated function db_select():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead, get
+a database connection injected into your service from the container and
+call select() on it. For example," />
+  <error line="116" column="1" severity="error" message="Call to deprecated function db_insert():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead, get
+a database connection injected into your service from the container and
+call insert() on it. For example," />
+  <error line="129" column="1" severity="error" message="Call to deprecated function db_delete():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead, get
+a database connection injected into your service from the container and
+call delete() on it. For example," />
+  <error line="138" column="1" severity="error" message="Call to deprecated function db_select():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead, get
+a database connection injected into your service from the container and
+call select() on it. For example," />
+</file>
+<file name="modules/contrib/node_limit/old/node_limit_type/node_limit_type.module">
+  <error line="14" column="1" severity="error" message="Call to deprecated function db_select():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead, get
+a database connection injected into your service from the container and
+call select() on it. For example," />
+  <error line="83" column="1" severity="error" message="Call to deprecated function db_insert():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead, get
+a database connection injected into your service from the container and
+call insert() on it. For example," />
+  <error line="96" column="1" severity="error" message="Call to deprecated function db_delete():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead, get
+a database connection injected into your service from the container and
+call delete() on it. For example," />
+  <error line="105" column="1" severity="error" message="Call to deprecated function db_select():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead, get
+a database connection injected into your service from the container and
+call select() on it. For example," />
+  <error line="121" column="1" severity="error" message="Call to deprecated function node_type_get_types():
+in drupal:8.0.0 and is removed from drupal:9.0.0.
+Use \Drupal\node\Entity\NodeType::loadMultiple()." />
+</file>
+<file name="modules/contrib/node_limit/old/node_limit_user/node_limit_user.module">
+  <error line="14" column="1" severity="error" message="Call to deprecated function db_select():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead, get
+a database connection injected into your service from the container and
+call select() on it. For example," />
+  <error line="111" column="1" severity="error" message="Call to deprecated function db_insert():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead, get
+a database connection injected into your service from the container and
+call insert() on it. For example," />
+  <error line="124" column="1" severity="error" message="Call to deprecated function db_delete():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead, get
+a database connection injected into your service from the container and
+call delete() on it. For example," />
+  <error line="133" column="1" severity="error" message="Call to deprecated function db_select():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead, get
+a database connection injected into your service from the container and
+call select() on it. For example," />
+</file>
+<file name="modules/contrib/node_limit/old/node_limit_userofrole/node_limit_userofrole.module">
+  <error line="14" column="1" severity="error" message="Call to deprecated function db_select():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead, get
+a database connection injected into your service from the container and
+call select() on it. For example," />
+  <error line="35" column="1" severity="error" message="Call to deprecated constant DRUPAL_ANONYMOUS_RID: Deprecated in drupal:8.0.0 and is removed from drupal:9.0.0. Use Drupal\Core\Session\AccountInterface::ANONYMOUS_ROLE or \Drupal\user\RoleInterface::ANONYMOUS_ID instead." />
+  <error line="36" column="1" severity="error" message="Call to deprecated constant DRUPAL_AUTHENTICATED_RID: Deprecated in drupal:8.0.0 and is removed from drupal:9.0.0. Use Drupal\Core\Session\AccountInterface::AUTHENTICATED_ROLE or \Drupal\user\RoleInterface::AUTHENTICATED_ID instead." />
+  <error line="107" column="1" severity="error" message="Call to deprecated function db_insert():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead, get
+a database connection injected into your service from the container and
+call insert() on it. For example," />
+  <error line="120" column="1" severity="error" message="Call to deprecated function db_delete():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead, get
+a database connection injected into your service from the container and
+call delete() on it. For example," />
+  <error line="129" column="1" severity="error" message="Call to deprecated function db_select():
+in drupal:8.0.0 and is removed from drupal:9.0.0. Instead, get
+a database connection injected into your service from the container and
+call select() on it. For example," />
+</file>
+<file name="modules/contrib/node_limit/src/Controller/NodeLimitListBuilder.php">
+  <error line="26" column="1" severity="error" message="Call to deprecated method getLabel() of class Drupal\Core\Entity\EntityListBuilder:
+in drupal:8.0.0 and is removed from drupal:9.0.0.
+Use $entity-&gt;label() instead. This method used to escape the entity
+label. The render system's autoescape is now relied upon." />
+</file>
+<file name="modules/contrib/node_limit/src/Form/NodeLimitDeleteForm.php">
+  <error line="41" column="1" severity="error" message="Call to deprecated function drupal_set_message():
+in drupal:8.5.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead." />
+</file>
+<file name="modules/contrib/node_limit/src/Form/NodeLimitForm.php">
+  <error line="52" column="1" severity="error" message="Call to deprecated function drupal_set_message():
+in drupal:8.5.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead." />
+  <error line="57" column="1" severity="error" message="Call to deprecated function drupal_set_message():
+in drupal:8.5.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead." />
+</file>
+</checkstyle>

@@ -1,0 +1,16 @@
+Rector 0.8.x-dev@40275b2
+Config file: rector.yml
+
+[parsing] modules/contrib/token_conditions/src/Plugin/Condition/TokenMatcher.php
+[parsing] modules/contrib/token_conditions/src/Tests/TokenMatcherTest.php
+[parsing] modules/contrib/token_conditions/token_conditions.module
+[refactoring] modules/contrib/token_conditions/src/Plugin/Condition/TokenMatcher.php
+[refactoring] modules/contrib/token_conditions/src/Tests/TokenMatcherTest.php
+[refactoring] modules/contrib/token_conditions/token_conditions.module
+[printing] modules/contrib/token_conditions/src/Plugin/Condition/TokenMatcher.php
+[printing] modules/contrib/token_conditions/src/Tests/TokenMatcherTest.php
+[printing] modules/contrib/token_conditions/token_conditions.module
+
+
+ [OK] Rector is done!                                                           
+

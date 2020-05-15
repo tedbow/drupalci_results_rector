@@ -1,0 +1,11 @@
+diff --git a/entity_block_visibility.install b/entity_block_visibility.install
+index e7faec8..d6a2517 100644
+--- a/entity_block_visibility.install
++++ b/entity_block_visibility.install
+@@ -10,4 +10,4 @@ function entity_block_visibility_install() {
+   // Make sure our hook_form_FORM_ID_alter runs after node's
+   // @todo should we use hook_module_implements instead
+   module_set_weight('entity_block_visibility', 10);
+-}
+\ No newline at end of file
++}

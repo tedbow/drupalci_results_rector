@@ -1,0 +1,34 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/a11y_form_helpers/a11y_form_helpers.module
+[parsing] modules/contrib/a11y_form_helpers/src/A11yFormHelpersRenderElement.php
+[parsing] modules/contrib/a11y_form_helpers/src/Annotation/AutocompleteAttribute.php
+[parsing] modules/contrib/a11y_form_helpers/src/AutocompleteAttributeManager.php
+[parsing] modules/contrib/a11y_form_helpers/src/AutocompleteAttributeManagerInterface.php
+[parsing] modules/contrib/a11y_form_helpers/src/Plugin/AutocompleteAttribute/GivenName.php
+[parsing] modules/contrib/a11y_form_helpers/src/Plugin/AutocompleteAttribute/Name.php
+[parsing] modules/contrib/a11y_form_helpers/src/Plugin/AutocompleteAttributePluginBase.php
+[parsing] modules/contrib/a11y_form_helpers/src/Plugin/AutocompleteAttributePluginBaseInterface.php
+[refactoring] modules/contrib/a11y_form_helpers/a11y_form_helpers.module
+[refactoring] modules/contrib/a11y_form_helpers/src/A11yFormHelpersRenderElement.php
+[refactoring] modules/contrib/a11y_form_helpers/src/Annotation/AutocompleteAttribute.php
+[refactoring] modules/contrib/a11y_form_helpers/src/AutocompleteAttributeManager.php
+[refactoring] modules/contrib/a11y_form_helpers/src/AutocompleteAttributeManagerInterface.php
+[refactoring] modules/contrib/a11y_form_helpers/src/Plugin/AutocompleteAttribute/GivenName.php
+[refactoring] modules/contrib/a11y_form_helpers/src/Plugin/AutocompleteAttribute/Name.php
+[refactoring] modules/contrib/a11y_form_helpers/src/Plugin/AutocompleteAttributePluginBase.php
+[refactoring] modules/contrib/a11y_form_helpers/src/Plugin/AutocompleteAttributePluginBaseInterface.php
+[printing] modules/contrib/a11y_form_helpers/a11y_form_helpers.module
+[printing] modules/contrib/a11y_form_helpers/src/A11yFormHelpersRenderElement.php
+[printing] modules/contrib/a11y_form_helpers/src/Annotation/AutocompleteAttribute.php
+[printing] modules/contrib/a11y_form_helpers/src/AutocompleteAttributeManager.php
+[printing] modules/contrib/a11y_form_helpers/src/AutocompleteAttributeManagerInterface.php
+[printing] modules/contrib/a11y_form_helpers/src/Plugin/AutocompleteAttribute/GivenName.php
+[printing] modules/contrib/a11y_form_helpers/src/Plugin/AutocompleteAttribute/Name.php
+[printing] modules/contrib/a11y_form_helpers/src/Plugin/AutocompleteAttributePluginBase.php
+[printing] modules/contrib/a11y_form_helpers/src/Plugin/AutocompleteAttributePluginBaseInterface.php
+
+
+ [OK] Rector is done!                                                           
+

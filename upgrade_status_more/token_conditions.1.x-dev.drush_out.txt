@@ -1,0 +1,22 @@
+ Drupal version   : 8.9.0-dev                                            
+ Site URI         : http://default                                       
+ DB driver        : sqlite                                               
+ DB port          :                                                      
+ DB username      :                                                      
+ DB name          : sites/default/files/.ht.sqlite                       
+ Database         : Connected                                            
+ Drupal bootstrap : Successful                                           
+ Default theme    : bartik                                               
+ Admin theme      : seven                                                
+ PHP binary       : /usr/bin/php7.2                                      
+ PHP config       : /etc/php/7.2/cli/php.ini                             
+ PHP OS           : Linux                                                
+ Drush script     : /home/testbot/.composer/vendor/drush/drush/drush     
+ Drush version    : 9.7.2                                                
+ Drush temp       : /tmp                                                 
+ Drush configs    : /home/testbot/.composer/vendor/drush/drush/drush.yml 
+ Install profile  : standard                                             
+ Drupal root      : /var/lib/drupalci/workspace/drupal-checkouts/drupal4 
+ Site path        : sites/default                                        
+ Files, Public    : sites/default/files                                  
+ Files, Temp      : /tmp                                                 

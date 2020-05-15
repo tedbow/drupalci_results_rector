@@ -1,0 +1,374 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/abookings/abookings.module
+[parsing] modules/contrib/abookings/includes/emails.inc
+[parsing] modules/contrib/abookings/includes/queries.inc
+[parsing] modules/contrib/abookings/includes/template_codes.inc
+[parsing] modules/contrib/abookings/libraries/fullcalendar/demos/php/get-events.php
+[parsing] modules/contrib/abookings/libraries/fullcalendar/demos/php/get-timezones.php
+[parsing] modules/contrib/abookings/libraries/fullcalendar/demos/php/utils.php
+[parsing] modules/contrib/abookings/modules/bookable_unit/bookable_unit.module
+[parsing] modules/contrib/abookings/modules/bookable_unit/src/Tests/LoadTest.php
+[parsing] modules/contrib/abookings/modules/booking/booking.module
+[parsing] modules/contrib/abookings/modules/booking/includes/costs.inc
+[parsing] modules/contrib/abookings/modules/booking/includes/form_manipulators.inc
+[parsing] modules/contrib/abookings/modules/booking/includes/history.inc
+[parsing] modules/contrib/abookings/modules/booking/src/Plugin/Deriver/BookingDeriver.php
+[parsing] modules/contrib/abookings/modules/booking/src/Plugin/rest/resource/BookingRestResource.php
+[parsing] modules/contrib/abookings/modules/booking/src/Tests/LoadTest.php
+[parsing] modules/contrib/abookings/modules/bookings_backend/bookings_backend.module
+[parsing] modules/contrib/abookings/modules/bookings_backend/src/Controller/BookingController.php
+[parsing] modules/contrib/abookings/modules/bookings_backend/src/Controller/PromosController.php
+[parsing] modules/contrib/abookings/modules/bookings_backend/src/Tests/LoadTest.php
+[parsing] modules/contrib/abookings/modules/season/season.module
+[parsing] modules/contrib/abookings/modules/season/src/Tests/LoadTest.php
+[parsing] modules/contrib/abookings/src/Controller/BookPageController.php
+[parsing] modules/contrib/abookings/src/Controller/BookingStatsPageController.php
+[parsing] modules/contrib/abookings/src/Form/BookingEmailTemplatesForm.php
+[parsing] modules/contrib/abookings/src/Form/BookingSettingsForm.php
+[parsing] modules/contrib/abookings/src/Form/ManualEmailsForm.php
+[parsing] modules/contrib/abookings/src/Tests/LoadTest.php
+[parsing] modules/contrib/abookings/tests/src/Unit/ExampleConversionsTest.php
+[refactoring] modules/contrib/abookings/abookings.module
+[refactoring] modules/contrib/abookings/includes/emails.inc
+[refactoring] modules/contrib/abookings/includes/queries.inc
+[refactoring] modules/contrib/abookings/includes/template_codes.inc
+[refactoring] modules/contrib/abookings/libraries/fullcalendar/demos/php/get-events.php
+[refactoring] modules/contrib/abookings/libraries/fullcalendar/demos/php/get-timezones.php
+[refactoring] modules/contrib/abookings/libraries/fullcalendar/demos/php/utils.php
+[refactoring] modules/contrib/abookings/modules/bookable_unit/bookable_unit.module
+[refactoring] modules/contrib/abookings/modules/bookable_unit/src/Tests/LoadTest.php
+[refactoring] modules/contrib/abookings/modules/booking/booking.module
+[refactoring] modules/contrib/abookings/modules/booking/includes/costs.inc
+[refactoring] modules/contrib/abookings/modules/booking/includes/form_manipulators.inc
+[refactoring] modules/contrib/abookings/modules/booking/includes/history.inc
+[refactoring] modules/contrib/abookings/modules/booking/src/Plugin/Deriver/BookingDeriver.php
+[refactoring] modules/contrib/abookings/modules/booking/src/Plugin/rest/resource/BookingRestResource.php
+[refactoring] modules/contrib/abookings/modules/booking/src/Tests/LoadTest.php
+[refactoring] modules/contrib/abookings/modules/bookings_backend/bookings_backend.module
+[refactoring] modules/contrib/abookings/modules/bookings_backend/src/Controller/BookingController.php
+[refactoring] modules/contrib/abookings/modules/bookings_backend/src/Controller/PromosController.php
+[refactoring] modules/contrib/abookings/modules/bookings_backend/src/Tests/LoadTest.php
+[refactoring] modules/contrib/abookings/modules/season/season.module
+[refactoring] modules/contrib/abookings/modules/season/src/Tests/LoadTest.php
+[refactoring] modules/contrib/abookings/src/Controller/BookPageController.php
+[refactoring] modules/contrib/abookings/src/Controller/BookingStatsPageController.php
+[refactoring] modules/contrib/abookings/src/Form/BookingEmailTemplatesForm.php
+[refactoring] modules/contrib/abookings/src/Form/BookingSettingsForm.php
+[refactoring] modules/contrib/abookings/src/Form/ManualEmailsForm.php
+[refactoring] modules/contrib/abookings/src/Tests/LoadTest.php
+[refactoring] modules/contrib/abookings/tests/src/Unit/ExampleConversionsTest.php
+[printing] modules/contrib/abookings/abookings.module
+[printing] modules/contrib/abookings/includes/emails.inc
+[printing] modules/contrib/abookings/includes/queries.inc
+[printing] modules/contrib/abookings/includes/template_codes.inc
+[printing] modules/contrib/abookings/libraries/fullcalendar/demos/php/get-events.php
+[printing] modules/contrib/abookings/libraries/fullcalendar/demos/php/get-timezones.php
+[printing] modules/contrib/abookings/libraries/fullcalendar/demos/php/utils.php
+[printing] modules/contrib/abookings/modules/bookable_unit/bookable_unit.module
+[printing] modules/contrib/abookings/modules/bookable_unit/src/Tests/LoadTest.php
+[printing] modules/contrib/abookings/modules/booking/booking.module
+[printing] modules/contrib/abookings/modules/booking/includes/costs.inc
+[printing] modules/contrib/abookings/modules/booking/includes/form_manipulators.inc
+[printing] modules/contrib/abookings/modules/booking/includes/history.inc
+[printing] modules/contrib/abookings/modules/booking/src/Plugin/Deriver/BookingDeriver.php
+[printing] modules/contrib/abookings/modules/booking/src/Plugin/rest/resource/BookingRestResource.php
+[printing] modules/contrib/abookings/modules/booking/src/Tests/LoadTest.php
+[printing] modules/contrib/abookings/modules/bookings_backend/bookings_backend.module
+[printing] modules/contrib/abookings/modules/bookings_backend/src/Controller/BookingController.php
+[printing] modules/contrib/abookings/modules/bookings_backend/src/Controller/PromosController.php
+[printing] modules/contrib/abookings/modules/bookings_backend/src/Tests/LoadTest.php
+[printing] modules/contrib/abookings/modules/season/season.module
+[printing] modules/contrib/abookings/modules/season/src/Tests/LoadTest.php
+[printing] modules/contrib/abookings/src/Controller/BookPageController.php
+[printing] modules/contrib/abookings/src/Controller/BookingStatsPageController.php
+[printing] modules/contrib/abookings/src/Form/BookingEmailTemplatesForm.php
+[printing] modules/contrib/abookings/src/Form/BookingSettingsForm.php
+[printing] modules/contrib/abookings/src/Form/ManualEmailsForm.php
+[printing] modules/contrib/abookings/src/Tests/LoadTest.php
+[printing] modules/contrib/abookings/tests/src/Unit/ExampleConversionsTest.php
+
+
+11 files with changes
+=====================
+
+1) modules/contrib/abookings/abookings.module
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -427,7 +427,7 @@
+
+     $prearrival_hours = \Drupal::config('abookings.bookingsettings')->get('prearrival_hours');
+     // kint($prearrival_hours, '$prearrival_hours');
+-    $checkin_timestamp = \Drupal\Core\Datetime\DrupalDateTime
++    $checkin_timestamp = DrupalDateTime
+       ::createFromFormat('Y-m-d:H:i', $checkin_date . ':' . $checkin_time)->format('U');
+     // kint($checkin_timestamp, '$checkin_timestamp');
+     $prearrival_timestamp = intval($checkin_timestamp) - ($prearrival_hours * 60 * 60);
+@@ -444,7 +444,7 @@
+
+     // If past checkout time, complete the booking process
+
+-    $checkout_date_timestamp = \Drupal\Core\Datetime\DrupalDateTime
++    $checkout_date_timestamp = DrupalDateTime
+       ::createFromFormat('Y-m-d:H:i', $checkout_date . ':' . $checkout_time)->format('U');
+     // kint($checkout_date_timestamp, '$checkout_date_timestamp');
+    ----------- end diff -----------
+
+2) modules/contrib/abookings/includes/emails.inc
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -3,12 +3,11 @@
+  * @file
+  * Contains emails abookings.module.
+  */
+-
+ /**
+  * CONTENTS
+- * 
++ *
+  * send_booking_email()
+- * 
++ *
+  * send_confirmation_email()
+  * send_provis_booking_email()
+  * send_prearrival_email()
+@@ -16,7 +15,6 @@
+  * send_expired_booking_email()
+  * send_completed_booking_email()
+  */
+-
+ use Drupal\node\Entity\Node;
+
+
+@@ -92,7 +90,7 @@
+   if ($result['result'] != true) {
+     $message = t('There was a problem sending your email notification to @email, email key: @key.',
+       array('@email' => $to, '@key' => $key));
+-    drupal_set_message($message, 'error');
++    \Drupal::messenger()->addError($message);
+     \Drupal::logger('mail-log')->error($message);
+     return;
+   }
+@@ -99,7 +97,7 @@
+
+   $message = t('An email notification has been sent to @email, email key: @key.',
+     array('@email' => $to, '@key' => $key));
+-  drupal_set_message($message);
++  \Drupal::messenger()->addStatus($message);
+   \Drupal::logger('mail-log')->notice($message);
+ }
+
+@@ -339,4 +337,4 @@
+     $notifn_emails_addresses_st, $email_key);
+
+   log_email_to_history($booking, 'Booking completed; feedback asked for.');
+-}
+\ No newline at end of file
++}
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+3) modules/contrib/abookings/includes/queries.inc
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -1,4 +1,5 @@
+ <?php
++use Drupal\Core\Datetime\DrupalDateTime;
+ /**
+  * @file
+  * Contains functions that query site data such as fetching bookings.
+@@ -143,13 +144,13 @@
+     // Get Start date as unix timestamp
+     $start_iso_8601_date = $season->get('field_start_date')->get(0)
+       ->getValue()['value'];
+-    $start_timestamp = \Drupal\Core\Datetime\DrupalDateTime
++    $start_timestamp = DrupalDateTime
+       ::createFromFormat('Y-m-d', $start_iso_8601_date)->format('U'); // 'c'
+
+     // Get End date as unix timestamp
+     $end_iso_8601_date = $season->get('field_end_date')->get(0)
+       ->getValue()['value'];
+-    $end_timestamp = \Drupal\Core\Datetime\DrupalDateTime
++    $end_timestamp = DrupalDateTime
+       ::createFromFormat('Y-m-d', $end_iso_8601_date)->format('U'); // 'c'
+
+     // Add season data to drupalSettings (for JS to use)
+@@ -180,13 +181,13 @@
+     // Get Check-in date as unix timestamp
+     $checkin_iso_8601_date = $booking->get('field_checkin_date')->get(0)
+       ->getValue()['value'];
+-    $checkin_timestamp = \Drupal\Core\Datetime\DrupalDateTime
++    $checkin_timestamp = DrupalDateTime
+       ::createFromFormat('Y-m-d', $checkin_iso_8601_date)->format('U'); // 'c'
+
+     // Get Check-out date as unix timestamp
+     $checkout_iso_8601_date = $booking->get('field_checkout_date')->get(0)
+       ->getValue()['value'];
+-    $checkout_timestamp = \Drupal\Core\Datetime\DrupalDateTime
++    $checkout_timestamp = DrupalDateTime
+       ::createFromFormat('Y-m-d', $checkout_iso_8601_date)->format('U'); // 'c'
+
+     // Add booking data to drupalSettings (for JS to use)
+    ----------- end diff -----------
+
+4) modules/contrib/abookings/libraries/fullcalendar/demos/php/get-events.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -47,4 +47,4 @@
+ }
+
+ // Send JSON to the client.
+-echo json_encode($output_arrays);
+\ No newline at end of file
++echo json_encode($output_arrays);
+    ----------- end diff -----------
+
+5) modules/contrib/abookings/libraries/fullcalendar/demos/php/get-timezones.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -6,4 +6,4 @@
+ // Requires PHP 5.2.0 or higher.
+ //--------------------------------------------------------------------------------------------------
+
+-echo json_encode(DateTimeZone::listIdentifiers());
+\ No newline at end of file
++echo json_encode(DateTimeZone::listIdentifiers());
+    ----------- end diff -----------
+
+6) modules/contrib/abookings/modules/booking/booking.module
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -138,9 +138,6 @@
+
+
+
+-/**
+- *
+- */
+ function get_line_items($booking_nid, $type) {
+   $l_items = [];
+    ----------- end diff -----------
+
+7) modules/contrib/abookings/modules/bookings_backend/bookings_backend.module
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -76,4 +76,4 @@
+   // kint($cache, '$cache');
+
+   $output['#attached']['library'][] = 'bookings_backend/booking_views';
+-}
+\ No newline at end of file
++}
+    ----------- end diff -----------
+
+8) modules/contrib/abookings/modules/bookings_backend/src/Controller/BookingController.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -132,7 +132,7 @@
+
+     // Prepare the response
+
+-    $url = $booking->urlInfo('canonical', ['absolute' => TRUE])->toString(TRUE);
++    $url = $booking->toUrl('canonical', ['absolute' => TRUE])->toString(TRUE);
+     // $response = new ModifiedResourceResponse($booking, 201, [
+     //   'Location' => $url->getGeneratedUrl()
+     // ]);
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\EntityInterfaceUrlInfoRector
+
+
+9) modules/contrib/abookings/modules/season/season.module
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -1,5 +1,6 @@
+ <?php
+
++use Drupal\Core\Form\FormStateInterface;
+ /**
+  * @file
+  * Contains season.module.
+@@ -36,7 +37,7 @@
+  * Implements hook_form_FORM_ID_alter().
+  */
+ function season_form_node_season_edit_form_alter(&$form,
+-  \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
++  FormStateInterface $form_state, $form_id) {
+   $form['#validate'][] = 'validate_season';
+ }
+    ----------- end diff -----------
+
+10) modules/contrib/abookings/src/Controller/BookingStatsPageController.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -2,6 +2,7 @@
+
+ namespace Drupal\abookings\Controller;
+
++use Drupal\Core\Datetime\DrupalDateTime;
+ use Drupal\Core\Controller\ControllerBase;
+
+ /**
+@@ -76,7 +77,7 @@
+   $current_timestamp = time();
+   // $timezone = drupal_get_user_timezone();
+   // kint($timezone, '$timezone');
+-  $datetime = \Drupal\Core\Datetime\DrupalDateTime
++  $datetime = DrupalDateTime
+     ::createFromFormat('U', $current_timestamp);
+   // drupal_set_message(t('1'), 'status', FALSE);
+
+@@ -189,7 +190,7 @@
+     }
+     // kint($nodes, '$nodes');
+
+-    $i_date = \Drupal\Core\Datetime\DrupalDateTime
++    $i_date = DrupalDateTime
+       ::createFromFormat('Y-m-d', $dates_pair[1]);
+     $start_month = intval($i_date->format('n'));
+     $start_year = intval($i_date->format('Y'));
+    ----------- end diff -----------
+
+11) modules/contrib/abookings/tests/src/Unit/ExampleConversionsTest.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -35,4 +35,4 @@
+     $this->assertEquals(12, 11 + 1);
+   }
+  
+-}
+\ No newline at end of file
++}
+    ----------- end diff -----------
+
+ [OK] Rector is done! 11 files have been changed.                               
+

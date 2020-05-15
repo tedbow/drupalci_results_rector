@@ -1,0 +1,204 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/google_analytics/google_analytics.install
+[parsing] modules/contrib/google_analytics/google_analytics.module
+[parsing] modules/contrib/google_analytics/google_analytics.tokens.inc
+[parsing] modules/contrib/google_analytics/src/Component/Render/GoogleAnalyticsJavaScriptSnippet.php
+[parsing] modules/contrib/google_analytics/src/Form/GoogleAnalyticsAdminSettingsForm.php
+[parsing] modules/contrib/google_analytics/src/GoogleAnalitycsInterface.php
+[parsing] modules/contrib/google_analytics/src/Plugin/migrate/process/GoogleAnalyticsVisibilityPages.php
+[parsing] modules/contrib/google_analytics/src/Plugin/migrate/process/GoogleAnalyticsVisibilityRoles.php
+[parsing] modules/contrib/google_analytics/src/Tests/GoogleAnalyticsBasicTest.php
+[parsing] modules/contrib/google_analytics/src/Tests/GoogleAnalyticsCustomDimensionsAndMetricsTest.php
+[parsing] modules/contrib/google_analytics/src/Tests/GoogleAnalyticsCustomUrls.php
+[parsing] modules/contrib/google_analytics/src/Tests/GoogleAnalyticsPhpFilterTest.php
+[parsing] modules/contrib/google_analytics/src/Tests/GoogleAnalyticsRolesTest.php
+[parsing] modules/contrib/google_analytics/src/Tests/GoogleAnalyticsSearchTest.php
+[parsing] modules/contrib/google_analytics/src/Tests/GoogleAnalyticsStatusMessagesTest.php
+[parsing] modules/contrib/google_analytics/src/Tests/GoogleAnalyticsUninstallTest.php
+[parsing] modules/contrib/google_analytics/src/Tests/GoogleAnalyticsUserFieldsTest.php
+[parsing] modules/contrib/google_analytics/tests/modules/google_analytics_test/src/Controller/GoogleAnalyticsTestController.php
+[refactoring] modules/contrib/google_analytics/google_analytics.install
+[refactoring] modules/contrib/google_analytics/google_analytics.module
+[refactoring] modules/contrib/google_analytics/google_analytics.tokens.inc
+[refactoring] modules/contrib/google_analytics/src/Component/Render/GoogleAnalyticsJavaScriptSnippet.php
+[refactoring] modules/contrib/google_analytics/src/Form/GoogleAnalyticsAdminSettingsForm.php
+[refactoring] modules/contrib/google_analytics/src/GoogleAnalitycsInterface.php
+[refactoring] modules/contrib/google_analytics/src/Plugin/migrate/process/GoogleAnalyticsVisibilityPages.php
+[refactoring] modules/contrib/google_analytics/src/Plugin/migrate/process/GoogleAnalyticsVisibilityRoles.php
+[refactoring] modules/contrib/google_analytics/src/Tests/GoogleAnalyticsBasicTest.php
+[refactoring] modules/contrib/google_analytics/src/Tests/GoogleAnalyticsCustomDimensionsAndMetricsTest.php
+[refactoring] modules/contrib/google_analytics/src/Tests/GoogleAnalyticsCustomUrls.php
+[refactoring] modules/contrib/google_analytics/src/Tests/GoogleAnalyticsPhpFilterTest.php
+[refactoring] modules/contrib/google_analytics/src/Tests/GoogleAnalyticsRolesTest.php
+[refactoring] modules/contrib/google_analytics/src/Tests/GoogleAnalyticsSearchTest.php
+[refactoring] modules/contrib/google_analytics/src/Tests/GoogleAnalyticsStatusMessagesTest.php
+[refactoring] modules/contrib/google_analytics/src/Tests/GoogleAnalyticsUninstallTest.php
+[refactoring] modules/contrib/google_analytics/src/Tests/GoogleAnalyticsUserFieldsTest.php
+[refactoring] modules/contrib/google_analytics/tests/modules/google_analytics_test/src/Controller/GoogleAnalyticsTestController.php
+[printing] modules/contrib/google_analytics/google_analytics.install
+[printing] modules/contrib/google_analytics/google_analytics.module
+[printing] modules/contrib/google_analytics/google_analytics.tokens.inc
+[printing] modules/contrib/google_analytics/src/Component/Render/GoogleAnalyticsJavaScriptSnippet.php
+[printing] modules/contrib/google_analytics/src/Form/GoogleAnalyticsAdminSettingsForm.php
+[printing] modules/contrib/google_analytics/src/GoogleAnalitycsInterface.php
+[printing] modules/contrib/google_analytics/src/Plugin/migrate/process/GoogleAnalyticsVisibilityPages.php
+[printing] modules/contrib/google_analytics/src/Plugin/migrate/process/GoogleAnalyticsVisibilityRoles.php
+[printing] modules/contrib/google_analytics/src/Tests/GoogleAnalyticsBasicTest.php
+[printing] modules/contrib/google_analytics/src/Tests/GoogleAnalyticsCustomDimensionsAndMetricsTest.php
+[printing] modules/contrib/google_analytics/src/Tests/GoogleAnalyticsCustomUrls.php
+[printing] modules/contrib/google_analytics/src/Tests/GoogleAnalyticsPhpFilterTest.php
+[printing] modules/contrib/google_analytics/src/Tests/GoogleAnalyticsRolesTest.php
+[printing] modules/contrib/google_analytics/src/Tests/GoogleAnalyticsSearchTest.php
+[printing] modules/contrib/google_analytics/src/Tests/GoogleAnalyticsStatusMessagesTest.php
+[printing] modules/contrib/google_analytics/src/Tests/GoogleAnalyticsUninstallTest.php
+[printing] modules/contrib/google_analytics/src/Tests/GoogleAnalyticsUserFieldsTest.php
+[printing] modules/contrib/google_analytics/tests/modules/google_analytics_test/src/Controller/GoogleAnalyticsTestController.php
+
+
+3 files with changes
+====================
+
+1) modules/contrib/google_analytics/google_analytics.module
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -1,5 +1,6 @@
+ <?php
+
++use Drupal\Core\File\FileSystemInterface;
+ /**
+  * @file
+  * Drupal Module: Google Analytics.
+@@ -500,12 +501,12 @@
+         $data_hash_local = Crypt::hashBase64(file_get_contents($file_destination));
+         $data_hash_remote = Crypt::hashBase64($data);
+         // Check that the files directory is writable.
+-        if ($data_hash_local != $data_hash_remote && file_prepare_directory($path)) {
++        if ($data_hash_local != $data_hash_remote && \Drupal::service('file_system')->prepareDirectory($path)) {
+           // Save updated tracking code file to disk.
+-          file_unmanaged_save_data($data, $file_destination, FILE_EXISTS_REPLACE);
++          \Drupal::service('file_system')->saveData($data, $file_destination, FileSystemInterface::EXISTS_REPLACE);
+           // Based on Drupal Core class AssetDumper.
+           if (extension_loaded('zlib') && \Drupal::config('system.performance')->get('js.gzip')) {
+-            file_unmanaged_save_data(gzencode($data, 9, FORCE_GZIP), $file_destination . '.gz', FILE_EXISTS_REPLACE);
++            \Drupal::service('file_system')->saveData(gzencode($data, 9, FORCE_GZIP), $file_destination . '.gz', FileSystemInterface::EXISTS_REPLACE);
+           }
+           \Drupal::logger('google_analytics')->info('Locally cached tracking code file has been updated.');
+
+@@ -516,13 +517,13 @@
+       }
+       else {
+         // Check that the files directory is writable.
+-        if (file_prepare_directory($path, FILE_CREATE_DIRECTORY)) {
++        if (\Drupal::service('file_system')->prepareDirectory($path, FileSystemInterface::CREATE_DIRECTORY)) {
+           // There is no need to flush JS here as core refreshes JS caches
+           // automatically, if new files are added.
+-          file_unmanaged_save_data($data, $file_destination, FILE_EXISTS_REPLACE);
++          \Drupal::service('file_system')->saveData($data, $file_destination, FileSystemInterface::EXISTS_REPLACE);
+           // Based on Drupal Core class AssetDumper.
+           if (extension_loaded('zlib') && \Drupal::config('system.performance')->get('js.gzip')) {
+-            file_unmanaged_save_data(gzencode($data, 9, FORCE_GZIP), $file_destination . '.gz', FILE_EXISTS_REPLACE);
++            \Drupal::service('file_system')->saveData(gzencode($data, 9, FORCE_GZIP), $file_destination . '.gz', FileSystemInterface::EXISTS_REPLACE);
+           }
+           \Drupal::logger('google_analytics')->info('Locally cached tracking code file has been saved.');
+
+@@ -546,7 +547,7 @@
+  */
+ function google_analytics_clear_js_cache() {
+   $path = 'public://google_analytics';
+-  if (file_prepare_directory($path)) {
++  if (\Drupal::service('file_system')->prepareDirectory($path)) {
+     file_scan_directory($path, '/.*/', ['callback' => 'file_unmanaged_delete']);
+     \Drupal::service('file_system')->rmdir($path);
+
+@@ -649,11 +650,11 @@
+     if (!empty($visibility_request_path_pages)) {
+       // Convert path to lowercase. This allows comparison of the same path
+       // with different case. Ex: /Page, /page, /PAGE.
+-      $pages = Unicode::strtolower($visibility_request_path_pages);
++      $pages = mb_strtolower($visibility_request_path_pages);
+       if ($visibility_request_path_mode < 2) {
+         // Compare the lowercase path alias (if any) and internal path.
+         $path = \Drupal::service('path.current')->getPath();
+-        $path_alias = Unicode::strtolower(\Drupal::service('path.alias_manager')->getAliasByPath($path));
++        $path_alias = mb_strtolower(\Drupal::service('path_alias.manager')->getAliasByPath($path));
+         $page_match = \Drupal::service('path.matcher')->matchPath($path_alias, $pages) || (($path != $path_alias) && \Drupal::service('path.matcher')->matchPath($path, $pages));
+         // When $visibility_request_path_mode has a value of 0, the tracking
+         // code is displayed on all pages except those listed in $pages. When
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\FileCreateDirectoryRector
+ * DrupalRector\Rector\Deprecation\FileExistsReplaceRector
+ * DrupalRector\Rector\Deprecation\FilePrepareDirectoryRector
+ * DrupalRector\Rector\Deprecation\FileUnmanagedSaveDataRector
+ * DrupalRector\Rector\Deprecation\PathAliasManagerServiceNameRector
+ * DrupalRector\Rector\Deprecation\UnicodeStrtolower
+
+
+2) modules/contrib/google_analytics/src/Form/GoogleAnalyticsAdminSettingsForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -176,7 +176,7 @@
+       if ($this->moduleHandler->moduleExists('php') && $php_access) {
+         $options[] = $this->t('Pages on which this PHP code returns <code>TRUE</code> (experts only)');
+         $title = $this->t('Pages or PHP code');
+-        $description .= ' ' . $this->t('If the PHP option is chosen, enter PHP code between %php. Note that executing incorrect PHP code can break your Drupal site.', ['%php' => '<?php ?>']);
++        $description .= ' ' . $this->t('If the PHP option is chosen, enter PHP code between %php. Note that executing incorrect PHP code can break your Drupal site.', ['%php' => '']);
+       }
+       else {
+         $title = $this->t('Pages');
+@@ -972,7 +972,7 @@
+
+     foreach ($values as $name => $value) {
+       // Convert data types.
+-      $match = Unicode::strtolower($value);
++      $match = mb_strtolower($value);
+       if ($match == 'true') {
+         $value = TRUE;
+       }
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\UnicodeStrtolower
+
+
+3) modules/contrib/google_analytics/src/Tests/GoogleAnalyticsUninstallTest.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -52,7 +52,7 @@
+     $this->drupalGet('');
+
+     // Test if the directory and analytics.js exists.
+-    $this->assertTrue(file_prepare_directory($cache_path), 'Cache directory "public://google_analytics" has been found.');
++    $this->assertTrue(\Drupal::service('file_system')->prepareDirectory($cache_path), 'Cache directory "public://google_analytics" has been found.');
+     $this->assertTrue(file_exists($cache_path . '/analytics.js'), 'Cached analytics.js tracking file has been found.');
+     $this->assertTrue(file_exists($cache_path . '/analytics.js.gz'), 'Cached analytics.js.gz tracking file has been found.');
+
+@@ -66,7 +66,7 @@
+
+     // Test if the directory and all files have been removed.
+     $this->assertFalse(file_scan_directory($cache_path, '/.*/'), 'Cached JavaScript files have been removed.');
+-    $this->assertFalse(file_prepare_directory($cache_path), 'Cache directory "public://google_analytics" has been removed.');
++    $this->assertFalse(\Drupal::service('file_system')->prepareDirectory($cache_path), 'Cache directory "public://google_analytics" has been removed.');
+   }
+
+ }
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\FilePrepareDirectoryRector
+
+
+ [OK] Rector is done! 3 files have been changed.                                
+

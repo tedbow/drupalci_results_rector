@@ -1,0 +1,80 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/drush_entity/entity.drush.inc
+[parsing] modules/contrib/drush_entity/tests/entityTest.php
+[refactoring] modules/contrib/drush_entity/entity.drush.inc
+[refactoring] modules/contrib/drush_entity/tests/entityTest.php
+[printing] modules/contrib/drush_entity/entity.drush.inc
+[printing] modules/contrib/drush_entity/tests/entityTest.php
+
+
+1 file with changes
+===================
+
+1) modules/contrib/drush_entity/entity.drush.inc
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -1,5 +1,6 @@
+ <?php
+
++use SebastianBergmann\Exporter\Exporter;
+ /**
+  * @file
+  *   Drush support for entities.
+@@ -448,7 +449,7 @@
+           $sql .= "IN (" . db_placeholders($bundles, 'varchar') . ")";
+         }
+       }
+-      $result = db_query($sql, $bundles);
++      $result = \Drupal::database()->query($sql, $bundles);
+       // Create our own list of ids, to mimic return from EFQ.
+       while ($row = db_fetch_object($result)) {
+         $entities[$entity_type][$row->id] = $row->id;
+@@ -1031,8 +1032,8 @@
+     // node-delete is implemented this way to prevent calling cache_clear_all() for each node.
+     foreach ($nids as $nid) {
+       $node = node_load($nid, NULL, TRUE);
+-      db_query('DELETE FROM {node} WHERE nid = %d', $nid);
+-      db_query('DELETE FROM {node_revisions} WHERE nid = %d', $nid);
++      \Drupal::database()->query('DELETE FROM {node} WHERE nid = %d', $nid);
++      \Drupal::database()->query('DELETE FROM {node_revisions} WHERE nid = %d', $nid);
+       node_invoke($node, 'delete');
+       node_invoke_nodeapi($node, 'delete');
+       if (function_exists('search_wipe')) {
+@@ -1064,8 +1065,8 @@
+
+       $entities_info = array();
+
+-      $exporter = new \SebastianBergmann\Exporter\Exporter();
+-      foreach(\Drupal::entityManager()->getDefinitions() as $id => $definition) {
++      $exporter = new Exporter();
++      foreach(\Drupal::service('entity_type.manager')->getDefinitions() as $id => $definition) {
+         if (is_a($definition ,'Drupal\Core\Entity\ContentEntityType')) {
+           $entities_info[$id] = $exporter->toArray($definition);
+         }
+@@ -1159,7 +1160,7 @@
+       // Added entity counts
+       foreach ($entities_info as $key => $info) {
+         $table = db_escape_table($info['base table']);
+-        $entities_info[$key]['drush']['count'] = db_result(db_query("SELECT COUNT(*) FROM {{$table}}"));
++        $entities_info[$key]['drush']['count'] = db_result(\Drupal::database()->query("SELECT COUNT(*) FROM {{$table}}"));
+       }
+     }
+     else if ($version < 8) {
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DBQueryRector
+ * DrupalRector\Rector\Deprecation\EntityManagerRector
+
+
+ [ERROR] Could not process "modules/contrib/drush_entity/tests/entityTest.php"  
+         file, due to:                                                          
+         "Analyze error: "Class Drush_CommandTestCase not found and could not be
+         autoloaded.". Include your files in "parameters > autoload_paths".     
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+

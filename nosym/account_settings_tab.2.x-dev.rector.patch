@@ -1,0 +1,31 @@
+diff --git a/src/Form/AccountSettingsTabForm.php b/src/Form/AccountSettingsTabForm.php
+index 82545c7..2db29bf 100755
+--- a/src/Form/AccountSettingsTabForm.php
++++ b/src/Form/AccountSettingsTabForm.php
+@@ -170,7 +170,7 @@ class AccountSettingsTabForm extends FormBase {
+         $user_exist = user_load_by_name($name_value);
+         if (empty($user_exist)) {
+           $account->setUsername($name_value);
+-          drupal_set_message("Username successfully updated..", 'status');
++          $this->messenger()->addStatus("Username successfully updated..");
+           $account->save();
+         }
+       }
+@@ -180,7 +180,7 @@ class AccountSettingsTabForm extends FormBase {
+     if ($mail_default_value != $mail_value) {
+           $mail_value = $form['account']['mail']['#value'];
+           $account->setEmail($mail_value);
+-          drupal_set_message("User email successfully updated..", 'status');
++          $this->messenger()->addStatus("User email successfully updated..");
+           $account->save();
+       }
+       // set the password
+@@ -188,7 +188,7 @@ class AccountSettingsTabForm extends FormBase {
+       $pass2 = $form['account']['pass']['#value']['pass2'];
+       if (!empty($pass1) && !empty($pass2)) {
+           $account->setPassword($pass1);
+-          drupal_set_message("Password successfully updated..", 'status');
++          $this->messenger()->addStatus("Password successfully updated..");
+           $account->save();
+       }
+     }

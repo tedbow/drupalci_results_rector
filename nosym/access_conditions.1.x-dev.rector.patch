@@ -1,0 +1,65 @@
+diff --git a/src/Form/AccessModelAddForm.php b/src/Form/AccessModelAddForm.php
+index 4fc69dc..b8183d0 100644
+--- a/src/Form/AccessModelAddForm.php
++++ b/src/Form/AccessModelAddForm.php
+@@ -57,7 +57,7 @@ class AccessModelAddForm extends EntityForm {
+     $status = $this->save($form, $form_state);
+ 
+     if ($status == SAVED_NEW) {
+-      drupal_set_message($this->t('The access model configuration has been saved.'));
++      $this->messenger()->addStatus($this->t('The access model configuration has been saved.'));
+     }
+     $form_state->setRedirect('entity.access_model.edit_form', ['access_model' => $this->entity->id()]);
+   }
+diff --git a/src/Form/AccessModelEditForm.php b/src/Form/AccessModelEditForm.php
+index 6e73c27..d2a41bd 100644
+--- a/src/Form/AccessModelEditForm.php
++++ b/src/Form/AccessModelEditForm.php
+@@ -169,7 +169,7 @@ class AccessModelEditForm extends AccessModelAddForm {
+ 
+     parent::submitForm($form, $form_state);
+ 
+-    drupal_set_message($this->t('The access model configuration has been updated.'));
++    $this->messenger()->addStatus($this->t('The access model configuration has been updated.'));
+     $form_state->setRedirect('entity.access_model.collection');
+   }
+ 
+diff --git a/src/Form/ConditionAddForm.php b/src/Form/ConditionAddForm.php
+index 8935d08..9a99816 100644
+--- a/src/Form/ConditionAddForm.php
++++ b/src/Form/ConditionAddForm.php
+@@ -131,7 +131,7 @@ class ConditionAddForm extends FormBase {
+       $this->accessModel->set('access_conditions', $conditions);
+     }
+     else {
+-      drupal_set_message($this->t('The access model condition has been added.'));
++      $this->messenger()->addStatus($this->t('The access model condition has been added.'));
+       $this->accessModel->addAccessCondition($instance->getConfiguration());
+     }
+     $this->accessModel->save();
+diff --git a/src/Form/ConditionDeleteForm.php b/src/Form/ConditionDeleteForm.php
+index c855fbd..52b8ec3 100644
+--- a/src/Form/ConditionDeleteForm.php
++++ b/src/Form/ConditionDeleteForm.php
+@@ -121,7 +121,7 @@ class ConditionDeleteForm extends ConfirmFormBase {
+       unset($conditions[$id]);
+       $this->accessModel->set('access_conditions', $conditions);
+       $this->accessModel->save();
+-      drupal_set_message($this->t('The access model condition has been deleted.'));
++      $this->messenger()->addStatus($this->t('The access model condition has been deleted.'));
+     }
+ 
+     $form_state->setRedirect('entity.access_model.edit_form', ['access_model' => $this->accessModel->id()]);
+diff --git a/src/Form/ConditionEditForm.php b/src/Form/ConditionEditForm.php
+index 5da7a5a..e6d3f0e 100644
+--- a/src/Form/ConditionEditForm.php
++++ b/src/Form/ConditionEditForm.php
+@@ -32,7 +32,7 @@ class ConditionEditForm extends ConditionAddForm {
+   public function submitForm(array &$form, FormStateInterface $form_state) {
+     parent::submitForm($form, $form_state);
+ 
+-    drupal_set_message($this->t('The access model condition has been updated.'));
++    $this->messenger()->addStatus($this->t('The access model condition has been updated.'));
+   }
+ 
+ }

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle>
+<file name="modules/contrib/views_bulk_operations/modules/views_bulk_operations_example/src/Plugin/Action/ViewsBulkOperationExampleAction.php">
+  <error line="43" column="1" severity="error" message="Call to deprecated function drupal_set_message():
+in drupal:8.5.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead." />
+</file>
+<file name="modules/contrib/views_bulk_operations/src/Action/ViewsBulkOperationsActionBase.php">
+  <error line="16" column="1" severity="error" message="Class Drupal\views_bulk_operations\Action\ViewsBulkOperationsActionBase implements deprecated interface Drupal\Component\Plugin\ConfigurablePluginInterface:
+Drupal\Component\Plugin\ConfigurablePluginInterface is deprecated
+in Drupal 8.7.0 and will be removed before Drupal 9.0.0. You should implement
+ConfigurableInterface and/or DependentPluginInterface directly as needed. If
+you implement ConfigurableInterface you may choose to implement
+ConfigurablePluginInterface in Drupal 8 as well for maximum compatibility,
+however this must be removed prior to Drupal 9." />
+</file>
+<file name="modules/contrib/views_bulk_operations/src/Commands/ViewsBulkOperationsCommands.php">
+  <error line="0" column="1" severity="error" message="Class Drush\Commands\DrushCommands not found and could not be autoloaded." />
+  <error line="16" column="1" severity="error" message="Class Drush\Commands\DrushCommands not found and could not be autoloaded." />
+</file>
+<file name="modules/contrib/views_bulk_operations/src/Form/ViewsBulkOperationsFormTrait.php">
+  <error line="193" column="1" severity="error" message="Call to deprecated function drupal_set_message():
+in drupal:8.5.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead." />
+  <error line="193" column="1" severity="error" message="Call to deprecated function drupal_set_message():
+in drupal:8.5.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead." />
+  <error line="193" column="1" severity="error" message="Call to deprecated function drupal_set_message():
+in drupal:8.5.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead." />
+  <error line="193" column="1" severity="error" message="Call to deprecated function drupal_set_message():
+in drupal:8.5.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead." />
+</file>
+<file name="modules/contrib/views_bulk_operations/src/Plugin/Action/CancelUserAction.php">
+  <error line="95" column="1" severity="error" message="Call to deprecated function drupal_set_message():
+in drupal:8.5.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead." />
+  <error line="98" column="1" severity="error" message="Call to deprecated function drupal_set_message():
+in drupal:8.5.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead." />
+</file>
+<file name="modules/contrib/views_bulk_operations/src/ViewsBulkOperationsBatch.php">
+  <error line="27" column="1" severity="error" message="Call to deprecated function drupal_set_message():
+in drupal:8.5.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead." />
+</file>
+<file name="modules/contrib/views_bulk_operations/tests/src/Functional/ViewsBulkOperationsBulkFormTest.php">
+  <error line="108" column="1" severity="error" message="Call to deprecated function format_string():
+in drupal:8.0.0 and is removed from drupal:9.0.0.
+Use \Drupal\Component\Render\FormattableMarkup instead." />
+</file>
+<file name="modules/contrib/views_bulk_operations/tests/src/Kernel/ViewsBulkOperationsKernelTestBase.php">
+  <error line="18" column="1" severity="error" message="Usage of deprecated trait Drupal\simpletest\NodeCreationTrait in class Drupal\Tests\views_bulk_operations\Kernel\ViewsBulkOperationsKernelTestBase:
+in drupal:8.4.0 and is removed from drupal:9.0.0. Use
+\Drupal\Tests\node\Traits\NodeCreationTrait instead." />
+</file>
+<file name="modules/contrib/views_bulk_operations/tests/src/Unit/ViewsBulkOperationsBatchTest.php">
+  <error line="97" column="1" severity="error" message="Call to deprecated method getMock() of class Drupal\Tests\UnitTestCase:
+in drupal:8.5.0 and is removed from drupal:9.0.0.
+Use \Drupal\Tests\PhpunitCompatibilityTrait::createMock() instead." />
+</file>
+<file name="modules/contrib/views_bulk_operations/tests/views_bulk_operations_test/src/Plugin/Action/ViewsBulkOperationsAdvancedTestAction.php">
+  <error line="41" column="1" severity="error" message="Call to deprecated function drupal_set_message():
+in drupal:8.5.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead." />
+</file>
+<file name="modules/contrib/views_bulk_operations/tests/views_bulk_operations_test/src/Plugin/Action/ViewsBulkOperationsPassTestAction.php">
+  <error line="24" column="1" severity="error" message="Call to deprecated function drupal_set_message():
+in drupal:8.5.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead." />
+  <error line="52" column="1" severity="error" message="Call to deprecated function drupal_set_message():
+in drupal:8.5.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead." />
+</file>
+<file name="modules/contrib/views_bulk_operations/tests/views_bulk_operations_test/src/Plugin/Action/ViewsBulkOperationsSimpleTestAction.php">
+  <error line="23" column="1" severity="error" message="Call to deprecated function drupal_set_message():
+in drupal:8.5.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead." />
+</file>
+</checkstyle>

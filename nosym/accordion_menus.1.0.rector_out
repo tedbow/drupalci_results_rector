@@ -1,0 +1,73 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/accordion_menus/accordion_menus.module
+[parsing] modules/contrib/accordion_menus/src/Form/AccordionMenusConfigForm.php
+[parsing] modules/contrib/accordion_menus/src/Plugin/Block/AccordionMenusBlock.php
+[parsing] modules/contrib/accordion_menus/src/Plugin/Derivative/AccordionMenusBlock.php
+[refactoring] modules/contrib/accordion_menus/accordion_menus.module
+[refactoring] modules/contrib/accordion_menus/src/Form/AccordionMenusConfigForm.php
+[refactoring] modules/contrib/accordion_menus/src/Plugin/Block/AccordionMenusBlock.php
+[refactoring] modules/contrib/accordion_menus/src/Plugin/Derivative/AccordionMenusBlock.php
+[printing] modules/contrib/accordion_menus/accordion_menus.module
+[printing] modules/contrib/accordion_menus/src/Form/AccordionMenusConfigForm.php
+[printing] modules/contrib/accordion_menus/src/Plugin/Block/AccordionMenusBlock.php
+[printing] modules/contrib/accordion_menus/src/Plugin/Derivative/AccordionMenusBlock.php
+
+
+3 files with changes
+====================
+
+1) modules/contrib/accordion_menus/src/Form/AccordionMenusConfigForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -1,3 +1,3 @@
+ <?php
+ 
+ namespace Drupal\accordion_menus\Form;
+@@ -62,4 +62,4 @@
+     // See @src/Plugin/Derivative/AccordionMenusBlock
+     drupal_flush_all_caches();
+   }
+-}
++}
+    ----------- end diff -----------
+
+2) modules/contrib/accordion_menus/src/Plugin/Block/AccordionMenusBlock.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -1,3 +1,3 @@
+ <?php
+ 
+ namespace Drupal\accordion_menus\Plugin\Block;
+@@ -70,4 +70,4 @@
+     return $output;
+   }
+ 
+-}
++}
+    ----------- end diff -----------
+
+3) modules/contrib/accordion_menus/src/Plugin/Derivative/AccordionMenusBlock.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -1,3 +1,3 @@
+ <?php
+ 
+ /**
+@@ -62,4 +62,4 @@
+     return $this->derivatives;
+   }
+ 
+-}
++}
+    ----------- end diff -----------
+
+ [OK] Rector is done! 3 files have been changed.                                
+

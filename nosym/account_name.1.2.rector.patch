@@ -1,0 +1,47 @@
+diff --git a/account_name.info.yml b/account_name.info.yml
+index fba5686..6395a1f 100644
+--- a/account_name.info.yml
++++ b/account_name.info.yml
+@@ -1,11 +1,9 @@
+-name: Account Name
++name: 'Account Name'
+ type: module
+ description: 'My account menu change by user name and picture'
+-core: '8.x'
+-
++core: 8.x
+ configure: account_name.settings_form
+-
+-# Information added by Drupal.org packaging script on 2019-10-19
+-version: '8.x-1.2'
+-project: 'account_name'
++version: 8.x-1.2
++project: account_name
+ datestamp: 1571469792
++core_version_requirement: '^8 || ^9'
+diff --git a/account_name.module b/account_name.module
+index 71a204c..91ab810 100755
+--- a/account_name.module
++++ b/account_name.module
+@@ -55,7 +55,7 @@ function account_name_link_alter(&$variables) {
+ 
+           }
+ 
+-          $image = drupal_render($picture);
++          $image = \Drupal::service('renderer')->render($picture);
+           if ($config->get('flip')) {
+             $variables['text'] = t('<div class="account-link"> @username @picture </div>', ['@username' => $accountName, '@picture' => $image]);
+           }
+diff --git a/src/Form/AccountNameSettingsForm.php b/src/Form/AccountNameSettingsForm.php
+index e9735f9..7d07401 100644
+--- a/src/Form/AccountNameSettingsForm.php
++++ b/src/Form/AccountNameSettingsForm.php
+@@ -92,7 +92,7 @@ class AccountNameSettingsForm extends ConfigFormBase {
+     ->set('label', $form_state->getValue('label'))
+     ->set('image_style', $form_state->getValue('image_style'))
+     ->save();
+-    drupal_set_message(t('Save account name configuration.'), 'status');
++    $this->messenger()->addStatus(t('Save account name configuration.'));
+   }
+ 
+ }

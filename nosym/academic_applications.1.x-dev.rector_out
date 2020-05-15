@@ -1,0 +1,61 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/academic_applications/academic_applications.install
+[parsing] modules/contrib/academic_applications/academic_applications.module
+[parsing] modules/contrib/academic_applications/src/Controller/BundleController.php
+[parsing] modules/contrib/academic_applications/src/Entity/Workflow.php
+[parsing] modules/contrib/academic_applications/src/Entity/WorkflowInterface.php
+[parsing] modules/contrib/academic_applications/src/Form/SettingsForm.php
+[parsing] modules/contrib/academic_applications/src/Form/WorkflowDeleteForm.php
+[parsing] modules/contrib/academic_applications/src/Form/WorkflowForm.php
+[parsing] modules/contrib/academic_applications/src/SubmissionBundler.php
+[parsing] modules/contrib/academic_applications/src/SubmissionPdfFinder.php
+[parsing] modules/contrib/academic_applications/src/Utility/ArrayElement.php
+[parsing] modules/contrib/academic_applications/src/Utility/TextUtility.php
+[parsing] modules/contrib/academic_applications/src/Validator/PdfValidator.php
+[parsing] modules/contrib/academic_applications/src/WebformSubmissionListBuilder.php
+[parsing] modules/contrib/academic_applications/src/WorkflowConnector.php
+[parsing] modules/contrib/academic_applications/src/WorkflowHtmlRouteProvider.php
+[parsing] modules/contrib/academic_applications/src/WorkflowListBuilder.php
+[parsing] modules/contrib/academic_applications/tests/src/Functional/LoadTest.php
+[refactoring] modules/contrib/academic_applications/academic_applications.install
+[refactoring] modules/contrib/academic_applications/academic_applications.module
+[refactoring] modules/contrib/academic_applications/src/Controller/BundleController.php
+[refactoring] modules/contrib/academic_applications/src/Entity/Workflow.php
+[refactoring] modules/contrib/academic_applications/src/Entity/WorkflowInterface.php
+[refactoring] modules/contrib/academic_applications/src/Form/SettingsForm.php
+[refactoring] modules/contrib/academic_applications/src/Form/WorkflowDeleteForm.php
+[refactoring] modules/contrib/academic_applications/src/Form/WorkflowForm.php
+[refactoring] modules/contrib/academic_applications/src/SubmissionBundler.php
+[refactoring] modules/contrib/academic_applications/src/SubmissionPdfFinder.php
+[refactoring] modules/contrib/academic_applications/src/Utility/ArrayElement.php
+[refactoring] modules/contrib/academic_applications/src/Utility/TextUtility.php
+[refactoring] modules/contrib/academic_applications/src/Validator/PdfValidator.php
+[refactoring] modules/contrib/academic_applications/src/WebformSubmissionListBuilder.php
+[refactoring] modules/contrib/academic_applications/src/WorkflowConnector.php
+[refactoring] modules/contrib/academic_applications/src/WorkflowHtmlRouteProvider.php
+[refactoring] modules/contrib/academic_applications/src/WorkflowListBuilder.php
+[refactoring] modules/contrib/academic_applications/tests/src/Functional/LoadTest.php
+[printing] modules/contrib/academic_applications/academic_applications.install
+[printing] modules/contrib/academic_applications/academic_applications.module
+[printing] modules/contrib/academic_applications/src/Controller/BundleController.php
+[printing] modules/contrib/academic_applications/src/Entity/Workflow.php
+[printing] modules/contrib/academic_applications/src/Entity/WorkflowInterface.php
+[printing] modules/contrib/academic_applications/src/Form/SettingsForm.php
+[printing] modules/contrib/academic_applications/src/Form/WorkflowDeleteForm.php
+[printing] modules/contrib/academic_applications/src/Form/WorkflowForm.php
+[printing] modules/contrib/academic_applications/src/SubmissionBundler.php
+[printing] modules/contrib/academic_applications/src/SubmissionPdfFinder.php
+[printing] modules/contrib/academic_applications/src/Utility/ArrayElement.php
+[printing] modules/contrib/academic_applications/src/Utility/TextUtility.php
+[printing] modules/contrib/academic_applications/src/Validator/PdfValidator.php
+[printing] modules/contrib/academic_applications/src/WebformSubmissionListBuilder.php
+[printing] modules/contrib/academic_applications/src/WorkflowConnector.php
+[printing] modules/contrib/academic_applications/src/WorkflowHtmlRouteProvider.php
+[printing] modules/contrib/academic_applications/src/WorkflowListBuilder.php
+[printing] modules/contrib/academic_applications/tests/src/Functional/LoadTest.php
+
+
+ [OK] Rector is done!                                                           
+

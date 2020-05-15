@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle>
+<file name="modules/contrib/sitemeta/src/SiteMetaListBuilder.php">
+  <error line="47" column="1" severity="error" message="Call to deprecated method getStorage() of class Drupal\Core\Entity\EntityManager:
+in drupal:8.0.0 and is removed from drupal:9.0.0.
+Use \Drupal\Core\Entity\EntityTypeManagerInterface::getStorage() instead." />
+</file>
+<file name="modules/contrib/sitemeta/src/SitemetaGenerator.php">
+  <error line="35" column="1" severity="error" message="Parameter $alias_manager of method Drupal\sitemeta\SitemetaGenerator::__construct() has typehint with deprecated interface Drupal\Core\Path\AliasManagerInterface:
+in drupal:8.8.0 and is removed from drupal:9.0.0.
+Use \Drupal\path_alias\AliasManagerInterface." />
+</file>
+</checkstyle>

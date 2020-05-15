@@ -1,0 +1,702 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/acknowledgements/sign_for_acknowledgement.install
+[parsing] modules/contrib/acknowledgements/sign_for_acknowledgement.module
+[parsing] modules/contrib/acknowledgements/sign_for_acknowledgement.views.inc
+[parsing] modules/contrib/acknowledgements/src/Access/NodeTypeAccessCheck.php
+[parsing] modules/contrib/acknowledgements/src/Controller/AcknowledgementsController.php
+[parsing] modules/contrib/acknowledgements/src/Form/AdminSettingsForm.php
+[parsing] modules/contrib/acknowledgements/src/Form/AlternateForm.php
+[parsing] modules/contrib/acknowledgements/src/Form/CheckboxForm.php
+[parsing] modules/contrib/acknowledgements/src/Form/FilterForm.php
+[parsing] modules/contrib/acknowledgements/src/Form/TableForm.php
+[parsing] modules/contrib/acknowledgements/src/Plugin/views/argument/UserArgument.php
+[parsing] modules/contrib/acknowledgements/src/Plugin/views/field/SfaStatus.php
+[parsing] modules/contrib/acknowledgements/src/Plugin/views/field/User.php
+[parsing] modules/contrib/acknowledgements/src/Plugin/views/filter/StatusFilter.php
+[parsing] modules/contrib/acknowledgements/src/Plugin/views/filter/UserFilter.php
+[parsing] modules/contrib/acknowledgements/src/Service/AcknowledgementsDatabase.php
+[parsing] modules/contrib/acknowledgements/src/Service/AcknowledgementsEmails.php
+[parsing] modules/contrib/acknowledgements/src/Service/AcknowledgementsNodeFields.php
+[refactoring] modules/contrib/acknowledgements/sign_for_acknowledgement.install
+[refactoring] modules/contrib/acknowledgements/sign_for_acknowledgement.module
+[refactoring] modules/contrib/acknowledgements/sign_for_acknowledgement.views.inc
+[refactoring] modules/contrib/acknowledgements/src/Access/NodeTypeAccessCheck.php
+[refactoring] modules/contrib/acknowledgements/src/Controller/AcknowledgementsController.php
+[refactoring] modules/contrib/acknowledgements/src/Form/AdminSettingsForm.php
+[refactoring] modules/contrib/acknowledgements/src/Form/AlternateForm.php
+[refactoring] modules/contrib/acknowledgements/src/Form/CheckboxForm.php
+[refactoring] modules/contrib/acknowledgements/src/Form/FilterForm.php
+[refactoring] modules/contrib/acknowledgements/src/Form/TableForm.php
+[refactoring] modules/contrib/acknowledgements/src/Plugin/views/argument/UserArgument.php
+[refactoring] modules/contrib/acknowledgements/src/Plugin/views/field/SfaStatus.php
+[refactoring] modules/contrib/acknowledgements/src/Plugin/views/field/User.php
+[refactoring] modules/contrib/acknowledgements/src/Plugin/views/filter/StatusFilter.php
+[refactoring] modules/contrib/acknowledgements/src/Plugin/views/filter/UserFilter.php
+[refactoring] modules/contrib/acknowledgements/src/Service/AcknowledgementsDatabase.php
+[refactoring] modules/contrib/acknowledgements/src/Service/AcknowledgementsEmails.php
+[refactoring] modules/contrib/acknowledgements/src/Service/AcknowledgementsNodeFields.php
+[printing] modules/contrib/acknowledgements/sign_for_acknowledgement.install
+[printing] modules/contrib/acknowledgements/sign_for_acknowledgement.module
+[printing] modules/contrib/acknowledgements/sign_for_acknowledgement.views.inc
+[printing] modules/contrib/acknowledgements/src/Access/NodeTypeAccessCheck.php
+[printing] modules/contrib/acknowledgements/src/Controller/AcknowledgementsController.php
+[printing] modules/contrib/acknowledgements/src/Form/AdminSettingsForm.php
+[printing] modules/contrib/acknowledgements/src/Form/AlternateForm.php
+[printing] modules/contrib/acknowledgements/src/Form/CheckboxForm.php
+[printing] modules/contrib/acknowledgements/src/Form/FilterForm.php
+[printing] modules/contrib/acknowledgements/src/Form/TableForm.php
+[printing] modules/contrib/acknowledgements/src/Plugin/views/argument/UserArgument.php
+[printing] modules/contrib/acknowledgements/src/Plugin/views/field/SfaStatus.php
+[printing] modules/contrib/acknowledgements/src/Plugin/views/field/User.php
+[printing] modules/contrib/acknowledgements/src/Plugin/views/filter/StatusFilter.php
+[printing] modules/contrib/acknowledgements/src/Plugin/views/filter/UserFilter.php
+[printing] modules/contrib/acknowledgements/src/Service/AcknowledgementsDatabase.php
+[printing] modules/contrib/acknowledgements/src/Service/AcknowledgementsEmails.php
+[printing] modules/contrib/acknowledgements/src/Service/AcknowledgementsNodeFields.php
+
+
+17 files with changes
+=====================
+
+1) modules/contrib/acknowledgements/sign_for_acknowledgement.module
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -1,5 +1,6 @@
+ <?php
+
++use Drupal\Core\Entity\Entity\EntityViewDisplay;
+ use Drupal\Core\Url;
+ use Drupal\Core\Form\FormStateInterface;
+ use Drupal\Core\Link;
+@@ -54,7 +55,7 @@
+  * Implements hook_node_view
+  *
+  **/
+-function sign_for_acknowledgement_node_view(array &$build, Drupal\Core\Entity\EntityInterface $node, Drupal\Core\Entity\Entity\EntityViewDisplay  $display, $view_mode) {
++function sign_for_acknowledgement_node_view(array &$build, EntityInterface $node, EntityViewDisplay  $display, $view_mode) {
+   $config = \Drupal::config('sign_for_acknowledgement.settings');
+   $fieldman = \Drupal::service('sign_for_acknowledgement.field_manager');
+   $dbman = \Drupal::service('sign_for_acknowledgement.db_manager');
+@@ -132,7 +133,7 @@
+       ];
+ 	  
+     $msg = t('<strong>Please, remember to sign for acknowledgement.</strong>');
+-    drupal_set_message($msg, 'warning', TRUE);
++    \Drupal::messenger()->addWarning($msg, TRUE);
+
+   }
+
+@@ -393,4 +394,3 @@
+     }
+   }
+ }
+-
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+2) modules/contrib/acknowledgements/sign_for_acknowledgement.views.inc
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -114,4 +114,3 @@
+
+   return $data;
+ }
+-
+    ----------- end diff -----------
+
+3) modules/contrib/acknowledgements/src/Access/NodeTypeAccessCheck.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -1,7 +1,8 @@
+ <?php
+ 
+ namespace Drupal\sign_for_acknowledgement\Access;
+ 
++use Drupal\node\Entity\Node;
+ use Drupal\Core\Access\AccessCheckInterface;
+ use Drupal\Core\Access\AccessResult;
+ use Drupal\node\NodeInterface;
+@@ -26,8 +27,8 @@
+    *   Run access checks for this node.
+    */
+   public function access(Route $route,  $node) {
+-    $node =  \Drupal\node\Entity\Node::load($node);
++    $node =  Node::load($node);
+     $fieldman = \Drupal::service('sign_for_acknowledgement.field_manager');
+     return $fieldman->appliesToBundle($node->bundle())? AccessResult::allowed() : AccessResult::forbidden();
+   }
+-}
++}
+    ----------- end diff -----------
+
+4) modules/contrib/acknowledgements/src/Controller/AcknowledgementsController.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -1,3 +1,3 @@
+ <?php
+ 
+ namespace Drupal\sign_for_acknowledgement\Controller;
+@@ -32,4 +32,4 @@
+     return $build;
+   }
+ 
+-}
++}
+    ----------- end diff -----------
+
+5) modules/contrib/acknowledgements/src/Form/AdminSettingsForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -1,3 +1,3 @@
+ <?php
+ 
+ namespace Drupal\sign_for_acknowledgement\Form;
+@@ -144,7 +144,7 @@
+     '#title' => $this->t('Fields to be shown in the table'),
+   );
+   $my_fields = array(); //'' => $this->t('No field'));
+-  $field_map = \Drupal::entityManager()->getFieldMap();
++  $field_map = \Drupal::service('entity_field.manager')->getFieldMap();
+   $fields = $field_map['user'];
+   foreach ($fields as $name => $field) {
+     if (isset($field['bundles']['user']) && !empty($field['bundles']['user'])) {
+@@ -298,4 +298,4 @@
+     $dbman->clearRenderCache();
+   }
+ 
+-}
++}
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\EntityManagerRector
+
+
+6) modules/contrib/acknowledgements/src/Form/AlternateForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -1,7 +1,9 @@
+ <?php
+ 
+ namespace Drupal\sign_for_acknowledgement\Form;
+ 
++use Drupal\Core\Form\FormStateInterface;
++use Drupal\Component\Utility\Xss;
+ use Drupal\Core\Form\FormBase;
+ 
+ /**
+@@ -19,7 +21,7 @@
+   /**
+    * {@inheritdoc}
+    */
+-  public function buildForm(array $form, \Drupal\Core\Form\FormStateInterface $form_state, $node = NULL) {
++  public function buildForm(array $form, FormStateInterface $form_state, $node = NULL) {
+     $user =  \Drupal::currentUser();
+ 	
+     $form['user'] = array(
+@@ -54,7 +56,7 @@
+     $labels = explode( "\n", $labels);//$node->get('alternate_form_text')->getValue();
+     $options = array();
+     foreach ($labels as $label) {
+-      $val = \Drupal\Component\Utility\Xss::filter($label);
++      $val = Xss::filter($label);
+       if (empty(trim($val))) {
+           continue;
+       }
+@@ -77,7 +79,7 @@
+   /**
+    * {@inheritdoc}
+    */
+-  public function submitForm(array &$form, \Drupal\Core\Form\FormStateInterface $form_state) {
++  public function submitForm(array &$form, FormStateInterface $form_state) {
+     $dbman = \Drupal::service('sign_for_acknowledgement.db_manager');
+     $userid = $form_state->getValue('user');
+     $nodeid = $form_state->getValue('node');
+@@ -99,7 +101,7 @@
+     }
+     $annotation = $form_state->getValue('annotation');
+     if ($dbman->alternateSignDocument($userid, $nodeid, $selection, $annotation)) {
+-      drupal_set_message(t('Document has been signed.'));
++      $this->messenger()->addStatus(t('Document has been signed.'));
+     }
+   }
+-}
++}
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+7) modules/contrib/acknowledgements/src/Form/CheckboxForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -1,7 +1,8 @@
+ <?php
+ 
+ namespace Drupal\sign_for_acknowledgement\Form;
+ 
++use Drupal\Core\Form\FormStateInterface;
+ use Drupal\Core\Form\FormBase;
+ 
+ /**
+@@ -19,7 +20,7 @@
+   /**
+    * {@inheritdoc}
+    */
+-  public function buildForm(array $form, \Drupal\Core\Form\FormStateInterface $form_state, $submit = FALSE, $node = NULL) {
++  public function buildForm(array $form, FormStateInterface $form_state, $submit = FALSE, $node = NULL) {
+     $user =  \Drupal::currentUser();
+ 	
+     $form['user'] = array(
+@@ -67,7 +68,7 @@
+   /**
+    * {@inheritdoc}
+    */
+-  public function submitForm(array &$form, \Drupal\Core\Form\FormStateInterface $form_state) {
++  public function submitForm(array &$form, FormStateInterface $form_state) {
+     $dbman = \Drupal::service('sign_for_acknowledgement.db_manager');
+     $userid = $form_state->getValue('user');
+     $nodeid = $form_state->getValue('node');
+@@ -74,11 +75,11 @@
+     $checked = $form_state->getValue('signature');
+     $annotation = $form_state->getValue('annotation');
+     if (!$checked) {
+-      drupal_set_message(t('Data not saved, please select the checkbox first.'),'warning');
++      $this->messenger()->addWarning(t('Data not saved, please select the checkbox first.'));
+       return;
+     }
+     if ($dbman->signDocument($userid, $nodeid, $annotation)) {
+-      drupal_set_message(t('Document has been signed.'));
++      $this->messenger()->addStatus(t('Document has been signed.'));
+     }
+   }
+-}
++}
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+8) modules/contrib/acknowledgements/src/Form/FilterForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -1,7 +1,10 @@
+ <?php
+ 
+ namespace Drupal\sign_for_acknowledgement\Form;
+ 
++use Drupal\Component\Utility\Xss;
++use Drupal\Core\Form\FormStateInterface;
++use Drupal\node\Entity\Node;
+ use Drupal\Core\Form\FormBase;
+ use Symfony\Component\DependencyInjection\ContainerInterface;
+ use Drupal\sign_for_acknowledgement\Service\AcknowledgementsDatabase;
+@@ -72,7 +75,7 @@
+     $options = array('any' => t('any'));
+ 	$first_key = FALSE;
+ 	foreach ($labels as $label) {
+-	  $val = \Drupal\Component\Utility\Xss::filter($label);
++	  $val = Xss::filter($label);
+ 	  if (empty(trim($val))) {
+         continue;
+ 	  }
+@@ -123,7 +126,7 @@
+   /**
+    * {@inheritdoc}
+    */
+-public function buildForm(array $form, \Drupal\Core\Form\FormStateInterface $form_state, $node = NULL) {
++public function buildForm(array $form, FormStateInterface $form_state, $node = NULL) {
+   $session_name = self::sessionName($node);
+   $session = isset($_SESSION[$session_name]) ? $_SESSION[$session_name] : array();
+   $filters = self::filters($node);
+@@ -183,11 +186,11 @@
+ 
+   return $form;
+ }
+-  public function submitForm(array &$form, \Drupal\Core\Form\FormStateInterface $form_state) {
++  public function submitForm(array &$form, FormStateInterface $form_state) {
+ 	  //echo $form_state->getValue('export').'='.$_POST['submit'] ;exit;
+   }
+-  public static function submitFilter(array &$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+-    $node =  \Drupal\node\Entity\Node::load($form_state->getValue('node'));
++  public static function submitFilter(array &$form, FormStateInterface $form_state) {
++    $node =  Node::load($form_state->getValue('node'));
+ 	$filters = self::filters($node);
+ 	$session_name = self::sessionName($node);
+     foreach ($filters as $filter => $options) {
+@@ -201,8 +204,8 @@
+       }
+     }
+   }
+-  public static function submitReset(array &$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+-    $node =  \Drupal\node\Entity\Node::load($form_state->getValue('node'));
++  public static function submitReset(array &$form, FormStateInterface $form_state) {
++    $node =  Node::load($form_state->getValue('node'));
+ 	$filters = self::filters($node);
+ 	$session_name = self::sessionName($node);
+     foreach ($filters as $filter => $options) {
+@@ -209,9 +212,9 @@
+       $_SESSION[$session_name][$filter] = 'any';
+     }
+   }
+-  public static function submitCsv(array &$form, \Drupal\Core\Form\FormStateInterface $form_state) {
++  public static function submitCsv(array &$form, FormStateInterface $form_state) {
+     $config = \Drupal::config('sign_for_acknowledgement.settings');
+-    $node =  \Drupal\node\Entity\Node::load($form_state->getValue('node'));
++    $node =  Node::load($form_state->getValue('node'));
+     $session_name = self::sessionName($node);
+     $dbman = \Drupal::service('sign_for_acknowledgement.db_manager');
+     $fieldman = \Drupal::service('sign_for_acknowledgement.field_manager');
+@@ -270,4 +273,4 @@
+     preg_replace  ("/[^0-9^a-z^_^.]/", "", $string);
+     return $string;
+   }
+-}
++}
+    ----------- end diff -----------
+
+9) modules/contrib/acknowledgements/src/Form/TableForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -1,7 +1,8 @@
+ <?php
+ 
+ namespace Drupal\sign_for_acknowledgement\Form;
+ 
++use Drupal\Core\Form\FormStateInterface;
+ use Drupal\Core\Form\FormBase;
+ use Symfony\Component\DependencyInjection\ContainerInterface;
+ 
+@@ -34,7 +35,7 @@
+     return 'sign_for_acknowledgement_table_form';
+   }
+ 
+-  public function buildForm(array $form, \Drupal\Core\Form\FormStateInterface $form_state, $node = NULL) {
++  public function buildForm(array $form, FormStateInterface $form_state, $node = NULL) {
+     $session_name = FilterForm::sessionName($node);
+     $session = isset($_SESSION[$session_name]) ? $_SESSION[$session_name] : array();
+     $dbman = \Drupal::service('sign_for_acknowledgement.db_manager');
+@@ -89,7 +90,7 @@
+     return $form;
+   }
+   
+-public function submitForm(array &$form, \Drupal\Core\Form\FormStateInterface $form_state) {
++public function submitForm(array &$form, FormStateInterface $form_state) {
+   $dbman = \Drupal::service('sign_for_acknowledgement.db_manager');
+   $items = $form_state->getValue('myselector');
+   $nodeid = $form_state->getValue('node');
+@@ -102,7 +103,7 @@
+   $dbman->clearRenderCache();
+  }
+  
+-public static function sign_submitForm(array &$form, \Drupal\Core\Form\FormStateInterface $form_state) {
++public static function sign_submitForm(array &$form, FormStateInterface $form_state) {
+   $dbman = \Drupal::service('sign_for_acknowledgement.db_manager');
+   $items = $form_state->getValue('myselector');
+   $nodeid = $form_state->getValue('node');
+@@ -114,4 +115,4 @@
+   }
+   $dbman->clearRenderCache();
+  }
+-}
++}
+    ----------- end diff -----------
+
+10) modules/contrib/acknowledgements/src/Plugin/views/argument/UserArgument.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -2,6 +2,7 @@
+
+ namespace Drupal\sign_for_acknowledgement\Plugin\views\argument;
+
++use Drupal\user\Entity\User;
+ use Drupal\views\Plugin\views\argument\NumericArgument;
+ use Drupal\Core\Form\FormStateInterface;
+ use Drupal\Core\Plugin\Context\ContextDefinition;
+@@ -66,7 +67,7 @@
+     $info['join']->extra[0]['numeric'] = TRUE;
+     $info['join']->extra[0]['field'] = 'user_id';
+
+-    $usr = \Drupal\user\Entity\User::load($val);
++    $usr = User::load($val);
+ 	if (empty($usr)) {
+ 	  $this->query->addWhereExpression(0, '1 = 0'); // remove rows
+       return;
+    ----------- end diff -----------
+
+11) modules/contrib/acknowledgements/src/Plugin/views/field/SfaStatus.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -1,3 +1,3 @@
+ <?php
+ 
+ namespace Drupal\sign_for_acknowledgement\Plugin\views\field;
+@@ -84,4 +84,4 @@
+ 	  return $status? $status : '---'; 
+   }
+ 
+-}
++}
+    ----------- end diff -----------
+
+12) modules/contrib/acknowledgements/src/Plugin/views/field/User.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -1,3 +1,3 @@
+ <?php
+ 
+ namespace Drupal\sign_for_acknowledgement\Plugin\views\field;
+@@ -49,4 +49,4 @@
+     return '---';
+   }
+ 
+-}
++}
+    ----------- end diff -----------
+
+13) modules/contrib/acknowledgements/src/Plugin/views/filter/StatusFilter.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -2,6 +2,7 @@
+
+ namespace Drupal\sign_for_acknowledgement\Plugin\views\filter;
+
++use Drupal\views\Plugin\views\filter\FilterPluginBase;
+ use Drupal\Core\Form\FormStateInterface;
+ use Drupal\Core\Database\Database;
+ use Drupal\Core\Database\Connection;
+@@ -15,7 +16,7 @@
+  *
+  * @ViewsFilter("sfa_status")
+  */
+-class StatusFilter extends \Drupal\views\Plugin\views\filter\FilterPluginBase {
++class StatusFilter extends FilterPluginBase {
+
+   /**
+    * {@inheritdoc}
+    ----------- end diff -----------
+
+14) modules/contrib/acknowledgements/src/Plugin/views/filter/UserFilter.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -2,6 +2,8 @@
+
+ namespace Drupal\sign_for_acknowledgement\Plugin\views\filter;
+
++use Drupal\views\Plugin\views\filter\FilterPluginBase;
++use Drupal\user\Entity\User;
+ use Drupal\Core\Form\FormStateInterface;
+ use Drupal\Core\Database\Database;
+ use Drupal\Core\Database\Connection;
+@@ -15,7 +17,7 @@
+  *
+  * @ViewsFilter("sfa_user")
+  */
+-class UserFilter extends \Drupal\views\Plugin\views\filter\FilterPluginBase {
++class UserFilter extends FilterPluginBase {
+
+   /**
+    * {@inheritdoc}
+@@ -107,7 +109,7 @@
+     if ($val == '***CURRENT_USER***') {
+         $val = \Drupal::currentUser()->id();
+     }
+-    $usr = \Drupal\user\Entity\User::load($val);
++    $usr = User::load($val);
+     if (empty($usr)) {
+       $this->query->addWhereExpression(0, '1 = 0'); // remove rows
+         return;
+    ----------- end diff -----------
+
+15) modules/contrib/acknowledgements/src/Service/AcknowledgementsDatabase.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -1,3 +1,3 @@
+ <?php
+ 
+ namespace Drupal\sign_for_acknowledgement\Service;
+@@ -431,4 +431,4 @@
+       $rows[$record->uid]['status'] = $this->status($timestamp, $record->mydate);
+     }
+   }
+-}
++}
+    ----------- end diff -----------
+
+16) modules/contrib/acknowledgements/src/Service/AcknowledgementsEmails.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -1,7 +1,10 @@
+ <?php
+ 
+ namespace Drupal\sign_for_acknowledgement\Service;
+ 
++use Drupal\user\Entity\User;
++use Drupal\node\Entity\Node;
++use Drupal\Component\Utility\Html;
+ use Drupal\Core\Config\ConfigFactoryInterface;
+ use Drupal\Core\Site\Settings;
+ use Drupal\Core\Entity\Entity;
+@@ -69,7 +72,7 @@
+    * build to string with users emails
+    */
+   public function buildReceivers($uids) {
+-    $users = \Drupal\user\Entity\User::loadMultiple($uids);
++    $users = User::loadMultiple($uids);
+     $result = '';
+     foreach ($users as $user) {
+       if ($user->get('status')->value == 0) {
+@@ -129,7 +132,7 @@
+   /**
+    * Send email
+    */
+-  public function nodeEmail(\Drupal\node\Entity\Node $node, $roles, $users, $nosign) {
++  public function nodeEmail(Node $node, $roles, $users, $nosign) {
+     $no_signature = FALSE;
+ 	  $emails = [];
+ 	  if ($node->email_roles->value && is_array($roles)) {
+@@ -151,13 +154,13 @@
+ 	  $mailManager = \Drupal::service('plugin.manager.mail');
+ 	  $tokenManager = \Drupal::token();
+     $params = array();
+-    $params['subject'] = $tokenManager->replace(\Drupal\Component\Utility\Html::escape($this->config->get($no_signature? 'email_subject_nosign' : 'email_subject')), array('node' => $node));
+-    $params['body'] = $tokenManager->replace(\Drupal\Component\Utility\Html::escape($this->config->get($no_signature? 'email_body_nosign' : 'email_body')), array('node' => $node));
++    $params['subject'] = $tokenManager->replace(Html::escape($this->config->get($no_signature? 'email_subject_nosign' : 'email_subject')), array('node' => $node));
++    $params['body'] = $tokenManager->replace(Html::escape($this->config->get($no_signature? 'email_body_nosign' : 'email_body')), array('node' => $node));
+     $params['headers'] = array('Bcc' => $this->buildReceivers($emails));
+     $site_mail = \Drupal::config('system.site')->get('mail');
+     $to = $this->config->get('email_to') == 1 ? $site_mail : 'undisclosed-recipients:;';
+     $mailManager->mail('sign_for_acknowledgement', 'notify', $to, \Drupal::languageManager()->getDefaultLanguage()->getId(), $params);
+     $this->saveEmailSent($emails, $node->id());
+-    drupal_set_message(t('Selected users have been notified via e-mail'));
++    \Drupal::messenger()->addStatus(t('Selected users have been notified via e-mail'));
+   }
+-}
++}
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+17) modules/contrib/acknowledgements/src/Service/AcknowledgementsNodeFields.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -1,7 +1,10 @@
+ <?php
+ 
+ namespace Drupal\sign_for_acknowledgement\Service;
+ 
++use Drupal\field\Entity\FieldConfig;
++use Drupal\Core\Url;
++use Drupal\node\Entity\Node;
+ use Drupal\Core\Config\ConfigFactoryInterface;
+ use Drupal\Core\Site\Settings;
+ use Drupal\Core\Entity\Entity;
+@@ -65,7 +68,7 @@
+ 
+ 	if ((isset($my_roles) == FALSE || count($my_roles) == 0) && !$single_user_enabled) {
+       if (\Drupal::service('path.matcher')->isFrontPage() == FALSE && $this->config->get('show_nobody')) {
+-        drupal_set_message(t('Nobody can sign this content for acknowledgement.<br />If this is unwanted, please modify the content and set up users roles.'), 'warning', TRUE);
++        \Drupal::messenger()->addWarning(t('Nobody can sign this content for acknowledgement.<br />If this is unwanted, please modify the content and set up users roles.'), TRUE);
+       }
+ 	  return FALSE;
+ 	}
+@@ -147,7 +150,7 @@
+   $defs = array();
+   // Check if our field is not already created.
+   if (!\Drupal::config('field.storage.node.'.$name)->get()) {
+-	$field_storage = \Drupal\field\Entity\FieldStorageConfig::create(array(
++	$field_storage = FieldStorageConfig::create(array(
+       'field_name' => $name,
+       'entity_type' => 'node',
+       'type' => $type,
+@@ -176,7 +179,7 @@
+         'label' => $label, 
+         'bundle' => $bundle, 
+       );
+-	  \Drupal\field\Entity\FieldConfig::create($instance)->save();
++	  FieldConfig::create($instance)->save();
+ 	  $this->getFormDisplay('node', $bundle)
+         ->setComponent($name, array(
+         'type' => $form_type,
+@@ -293,7 +296,7 @@
+  */
+   public function expirationDate($timestamp = FALSE, $nodeid = 0, $node = NULL)
+     {
+-    $current_url = \Drupal\Core\Url::fromRoute('<current>');
++    $current_url = Url::fromRoute('<current>');
+     $path = $current_url->getInternalPath();
+     $arg = explode('/', $path);
+ //	echo "<pre>";print_r($param);exit;
+@@ -302,7 +305,7 @@
+         $nodeid = $arg[1];
+       }
+       if ($node == NULL) {
+-        $node = \Drupal\node\Entity\Node::load($nodeid);
++        $node = Node::load($nodeid);
+       }
+       if ($node == NULL) {
+         return NULL;
+@@ -327,5 +330,4 @@
+       return NULL;
+     }
+   }
+-}
+-
++}
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+ [OK] Rector is done! 17 files have been changed.                               
+

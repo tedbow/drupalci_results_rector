@@ -1,0 +1,16 @@
+ [notice] Processing /var/lib/drupalci/workspace/drupal-checkouts/drupal2/modules/contrib/node_revisions_autoclean.
+PHPStan crashed in the previous run probably because of excessive memory consumption.
+It consumed around 49 MB of memory.
+
+
+To avoid this issue, allow to use more memory with the --memory-limit option.
+ 0/8 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   0%[2K 2/8 [▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░]  25%[2K 4/8 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░]  50%[2K 7/8 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░]  87%[2K 8/8 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 100%
+
+ [notice] Processing /var/lib/drupalci/workspace/drupal-checkouts/drupal2/modules/contrib/node_revisions_autoclean.
+PHPStan crashed in the previous run probably because of excessive memory consumption.
+It consumed around 49 MB of memory.
+
+
+To avoid this issue, allow to use more memory with the --memory-limit option.
+ 0/8 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   0%[2K 2/8 [▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░]  25%[2K 4/8 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░]  50%[2K 8/8 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 100%
+

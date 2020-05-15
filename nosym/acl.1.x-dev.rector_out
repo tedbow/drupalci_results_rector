@@ -1,0 +1,88 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/acl/acl.admin.inc
+[parsing] modules/contrib/acl/acl.api.php
+[parsing] modules/contrib/acl/acl.install
+[parsing] modules/contrib/acl/acl.module
+[parsing] modules/contrib/acl/src/Plugin/migrate/destination/AclList.php
+[parsing] modules/contrib/acl/src/Plugin/migrate/destination/AclTable.php
+[parsing] modules/contrib/acl/src/Plugin/migrate/source/AclList.php
+[parsing] modules/contrib/acl/src/Plugin/migrate/source/AclTable.php
+[parsing] modules/contrib/acl/src/Tests/AclMigrationTestTrait.php
+[parsing] modules/contrib/acl/src/Tests/AclTest.php
+[parsing] modules/contrib/acl/src/Tests/Migrate/d6/MigrateAclList68Test.php
+[parsing] modules/contrib/acl/src/Tests/Migrate/d7/MigrateAclList78Test.php
+[parsing] modules/contrib/acl/tests/fixtures/d6_d7_table.php
+[parsing] modules/contrib/acl/tests/modules/acl_node_test/acl_node_test.module
+[refactoring] modules/contrib/acl/acl.admin.inc
+[refactoring] modules/contrib/acl/acl.api.php
+[refactoring] modules/contrib/acl/acl.install
+[refactoring] modules/contrib/acl/acl.module
+[refactoring] modules/contrib/acl/src/Plugin/migrate/destination/AclList.php
+[refactoring] modules/contrib/acl/src/Plugin/migrate/destination/AclTable.php
+[refactoring] modules/contrib/acl/src/Plugin/migrate/source/AclList.php
+[refactoring] modules/contrib/acl/src/Plugin/migrate/source/AclTable.php
+[refactoring] modules/contrib/acl/src/Tests/AclMigrationTestTrait.php
+[refactoring] modules/contrib/acl/src/Tests/AclTest.php
+[refactoring] modules/contrib/acl/src/Tests/Migrate/d6/MigrateAclList68Test.php
+[refactoring] modules/contrib/acl/src/Tests/Migrate/d7/MigrateAclList78Test.php
+[refactoring] modules/contrib/acl/tests/fixtures/d6_d7_table.php
+[refactoring] modules/contrib/acl/tests/modules/acl_node_test/acl_node_test.module
+[printing] modules/contrib/acl/acl.admin.inc
+[printing] modules/contrib/acl/acl.api.php
+[printing] modules/contrib/acl/acl.install
+[printing] modules/contrib/acl/acl.module
+[printing] modules/contrib/acl/src/Plugin/migrate/destination/AclList.php
+[printing] modules/contrib/acl/src/Plugin/migrate/destination/AclTable.php
+[printing] modules/contrib/acl/src/Plugin/migrate/source/AclList.php
+[printing] modules/contrib/acl/src/Plugin/migrate/source/AclTable.php
+[printing] modules/contrib/acl/src/Tests/AclMigrationTestTrait.php
+[printing] modules/contrib/acl/src/Tests/AclTest.php
+[printing] modules/contrib/acl/src/Tests/Migrate/d6/MigrateAclList68Test.php
+[printing] modules/contrib/acl/src/Tests/Migrate/d7/MigrateAclList78Test.php
+[printing] modules/contrib/acl/tests/fixtures/d6_d7_table.php
+[printing] modules/contrib/acl/tests/modules/acl_node_test/acl_node_test.module
+
+
+3 files with changes
+====================
+
+1) modules/contrib/acl/acl.admin.inc
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -199,4 +199,3 @@
+   }
+   return unserialize($form['user_list']);
+ }
+-
+    ----------- end diff -----------
+
+2) modules/contrib/acl/acl.api.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -37,4 +37,3 @@
+   }
+   return $enabled;
+ }
+-
+    ----------- end diff -----------
+
+3) modules/contrib/acl/acl.module
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -439,4 +439,3 @@
+ function _acl_format_account_name($account) {
+   return check_plain(format_username($account));
+ }
+-
+    ----------- end diff -----------
+
+ [OK] Rector is done! 3 files have been changed.                                
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle>
+<file name="modules/contrib/views_bulk_operations/src/Commands/ViewsBulkOperationsCommands.php">
+  <error line="0" column="1" severity="error" message="Class Drush\Commands\DrushCommands not found and could not be autoloaded." />
+  <error line="16" column="1" severity="error" message="Class Drush\Commands\DrushCommands not found and could not be autoloaded." />
+</file>
+</checkstyle>

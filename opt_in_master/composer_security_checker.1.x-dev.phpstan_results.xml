@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle>
+<file name="modules/contrib/composer_security_checker/spec/Collections/AdvisoryCollectionSpec.php">
+  <error line="0" column="1" severity="error" message="Class spec\Drupal\composer_security_checker\Collections\AdvisoryCollectionSpec was not found while trying to analyse it - autoloading is probably not configured properly." />
+</file>
+<file name="modules/contrib/composer_security_checker/spec/Models/AdvisorySpec.php">
+  <error line="0" column="1" severity="error" message="Class spec\Drupal\composer_security_checker\Models\AdvisorySpec was not found while trying to analyse it - autoloading is probably not configured properly." />
+</file>
+<file name="modules/contrib/composer_security_checker/spec/Parsers/SensioLabsSecurityCheckerParserSpec.php">
+  <error line="0" column="1" severity="error" message="Class spec\Drupal\composer_security_checker\Parsers\SensioLabsSecurityCheckerParserSpec was not found while trying to analyse it - autoloading is probably not configured properly." />
+</file>
+</checkstyle>

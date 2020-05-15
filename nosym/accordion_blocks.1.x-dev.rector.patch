@@ -1,0 +1,60 @@
+diff --git a/accordion_blocks.module b/accordion_blocks.module
+index a1ffbc0..645ed46 100755
+--- a/accordion_blocks.module
++++ b/accordion_blocks.module
+@@ -14,4 +14,4 @@ function accordion_blocks_theme() {
+       'variables' => array('blocks' => array()),
+     ),
+   );
+-}
+\ No newline at end of file
++}
+diff --git a/src/Plugin/Field/FieldFormatter/AccordionBlockFormatter.php b/src/Plugin/Field/FieldFormatter/AccordionBlockFormatter.php
+index 1db3433..560db7a 100644
+--- a/src/Plugin/Field/FieldFormatter/AccordionBlockFormatter.php
++++ b/src/Plugin/Field/FieldFormatter/AccordionBlockFormatter.php
+@@ -40,7 +40,7 @@ class AccordionBlockFormatter extends EntityReferenceEntityFormatter {
+       }
+ 
+       if ($entity->id()) {
+-        $view_builder = \Drupal::entityManager()->getViewBuilder($entity->getEntityTypeId());
++        $view_builder = \Drupal::service('entity_type.manager')->getViewBuilder($entity->getEntityTypeId());
+         $elements[$delta] = $view_builder->view($entity, $view_mode, $entity->language()->getId());
+         $items[$delta]->_attributes += array('resource' => $entity->url(), 'title' => $label);
+         
+@@ -70,4 +70,3 @@ class AccordionBlockFormatter extends EntityReferenceEntityFormatter {
+   }
+   
+ }
+-
+diff --git a/src/Tests/AccordionBlocksTest.php b/src/Tests/AccordionBlocksTest.php
+index 3e81b06..503cd9f 100644
+--- a/src/Tests/AccordionBlocksTest.php
++++ b/src/Tests/AccordionBlocksTest.php
+@@ -81,12 +81,12 @@ class AccordionBlocksTest extends WebTestBase{
+    * - Displaying of accordion block on the specified region.
+    */
+   public function testCreateAccordionBlock() {
+-    
++
+     $admin_user = $this->drupalCreateUser(array(
+       'administer blocks', 
+       'administer block_content display'));
+     $this->drupalLogin($admin_user);
+-    
++
+     // Create a block.
+     $edit = array();
+     $edit['info[0][value]'] = 'Test Block';
+@@ -104,9 +104,9 @@ class AccordionBlocksTest extends WebTestBase{
+     )), 'Accordion block created.');
+ 
+     //$this->drupalPostForm(NULL, NULL, t('Save block'));
+-    
++
+     //$this->drupalPlaceBlock('testblock', array('id' => 'test_block', 'label' => 'Test Block', 'region' => 'sidebar_first'));
+-    
++
+     //$this->drupalGet('/node');
+     //$block = $this->xpath('//div[@id=sidebar-first]/div[contains(@class, accordion_blocks_container)]');
+     //$this->assertTrue(!empty($block));

@@ -1,0 +1,4 @@
+ [notice] Processing /var/lib/drupalci/workspace/drupal-checkouts/drupal4/modules/contrib/token_conditions.
+PHP Fatal error:  Cannot redeclare composerRequireDrupal8() (previously declared in /var/lib/drupalci/workspace/drupal-checkouts/drupal4/vendor/composer/autoload_real.php:70) in /var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/composer/autoload_real.php on line 77
+Fatal error: Cannot redeclare composerRequireDrupal8() (previously declared in /var/lib/drupalci/workspace/drupal-checkouts/drupal4/vendor/composer/autoload_real.php:70) in /var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/composer/autoload_real.php on line 77
+ [error]  PHPStan failed:  

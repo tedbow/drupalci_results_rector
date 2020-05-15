@@ -1,0 +1,49 @@
+diff --git a/shib_auth.module b/shib_auth.module
+index 7d70876..1a13b63 100644
+--- a/shib_auth.module
++++ b/shib_auth.module
+@@ -18,9 +18,6 @@ function shib_auth_help($route_name, RouteMatchInterface $route_match) {
+   // @todo - add help.
+ }
+ 
+-/**
+- *
+- */
+ function shib_auth_user_delete(EntityInterface $entity) {
+   /** @var \Drupal\Core\Database\Connection $db */
+   $db = \Drupal::service('database');
+diff --git a/src/Login/LoginHandler.php b/src/Login/LoginHandler.php
+index ee216f9..6f60dfc 100644
+--- a/src/Login/LoginHandler.php
++++ b/src/Login/LoginHandler.php
+@@ -322,16 +322,10 @@ class LoginHandler implements LoginHandlerInterface {
+     return $this->shib_session;
+   }
+ 
+-  /**
+-   *
+-   */
+   private function setErrorMessage($message) {
+     $this->error_message = $message;
+   }
+ 
+-  /**
+-   *
+-   */
+   private function getErrorMessage() {
+     return $this->error_message;
+   }
+diff --git a/src/Login/ShibSessionVars.php b/src/Login/ShibSessionVars.php
+index 10ced96..9ef8836 100644
+--- a/src/Login/ShibSessionVars.php
++++ b/src/Login/ShibSessionVars.php
+@@ -2,9 +2,6 @@
+ 
+ namespace Drupal\shib_auth\Login;
+ 
+-/**
+- *
+- */
+ class ShibSessionVars {
+ 
+   /**

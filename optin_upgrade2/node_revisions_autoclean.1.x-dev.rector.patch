@@ -1,0 +1,11 @@
+diff --git a/src/Batch/Batch.php b/src/Batch/Batch.php
+index 85de0bf..e37598f 100644
+--- a/src/Batch/Batch.php
++++ b/src/Batch/Batch.php
+@@ -46,4 +46,4 @@ class Batch {
+       );
+     }
+   }
+-}
+\ No newline at end of file
++}

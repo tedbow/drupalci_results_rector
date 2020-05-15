@@ -1,0 +1,387 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/abtestui/abtestui.install
+[parsing] modules/contrib/abtestui/abtestui.module
+[parsing] modules/contrib/abtestui/modules/abtestui_google_analytics/abtestui_google_analytics.install
+[parsing] modules/contrib/abtestui/modules/abtestui_google_analytics/abtestui_google_analytics.module
+[parsing] modules/contrib/abtestui/modules/abtestui_google_analytics/src/Controller/ListController.php
+[parsing] modules/contrib/abtestui/modules/abtestui_google_analytics/src/Routing/RouteSubscriber.php
+[parsing] modules/contrib/abtestui/src/Controller/ListController.php
+[parsing] modules/contrib/abtestui/src/Form/ABTestDeleteForm.php
+[parsing] modules/contrib/abtestui/src/Form/ABTestForm.php
+[parsing] modules/contrib/abtestui/src/Service/AbjsConditionStorage.php
+[parsing] modules/contrib/abtestui/src/Service/AbjsExperienceStorage.php
+[parsing] modules/contrib/abtestui/src/Service/AbjsTestStorage.php
+[parsing] modules/contrib/abtestui/src/Service/RequestParser.php
+[parsing] modules/contrib/abtestui/src/Service/TestStorage.php
+[parsing] modules/contrib/abtestui/src/Service/VariationStorage.php
+[refactoring] modules/contrib/abtestui/abtestui.install
+[refactoring] modules/contrib/abtestui/abtestui.module
+[refactoring] modules/contrib/abtestui/modules/abtestui_google_analytics/abtestui_google_analytics.install
+[refactoring] modules/contrib/abtestui/modules/abtestui_google_analytics/abtestui_google_analytics.module
+[refactoring] modules/contrib/abtestui/modules/abtestui_google_analytics/src/Controller/ListController.php
+[refactoring] modules/contrib/abtestui/modules/abtestui_google_analytics/src/Routing/RouteSubscriber.php
+[refactoring] modules/contrib/abtestui/src/Controller/ListController.php
+[refactoring] modules/contrib/abtestui/src/Form/ABTestDeleteForm.php
+[refactoring] modules/contrib/abtestui/src/Form/ABTestForm.php
+[refactoring] modules/contrib/abtestui/src/Service/AbjsConditionStorage.php
+[refactoring] modules/contrib/abtestui/src/Service/AbjsExperienceStorage.php
+[refactoring] modules/contrib/abtestui/src/Service/AbjsTestStorage.php
+[refactoring] modules/contrib/abtestui/src/Service/RequestParser.php
+[refactoring] modules/contrib/abtestui/src/Service/TestStorage.php
+[refactoring] modules/contrib/abtestui/src/Service/VariationStorage.php
+[printing] modules/contrib/abtestui/abtestui.install
+[printing] modules/contrib/abtestui/abtestui.module
+[printing] modules/contrib/abtestui/modules/abtestui_google_analytics/abtestui_google_analytics.install
+[printing] modules/contrib/abtestui/modules/abtestui_google_analytics/abtestui_google_analytics.module
+[printing] modules/contrib/abtestui/modules/abtestui_google_analytics/src/Controller/ListController.php
+[printing] modules/contrib/abtestui/modules/abtestui_google_analytics/src/Routing/RouteSubscriber.php
+[printing] modules/contrib/abtestui/src/Controller/ListController.php
+[printing] modules/contrib/abtestui/src/Form/ABTestDeleteForm.php
+[printing] modules/contrib/abtestui/src/Form/ABTestForm.php
+[printing] modules/contrib/abtestui/src/Service/AbjsConditionStorage.php
+[printing] modules/contrib/abtestui/src/Service/AbjsExperienceStorage.php
+[printing] modules/contrib/abtestui/src/Service/AbjsTestStorage.php
+[printing] modules/contrib/abtestui/src/Service/RequestParser.php
+[printing] modules/contrib/abtestui/src/Service/TestStorage.php
+[printing] modules/contrib/abtestui/src/Service/VariationStorage.php
+
+
+8 files with changes
+====================
+
+1) modules/contrib/abtestui/src/Controller/ListController.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -40,9 +40,6 @@
+     );
+   }
+
+-  /**
+-   *
+-   */
+   public function __construct(
+     TestStorage $testStorage,
+     RendererInterface $renderer,
+    ----------- end diff -----------
+
+2) modules/contrib/abtestui/src/Form/ABTestForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -32,9 +32,6 @@
+    */
+   private $abtestuiPath;
+
+-  /**
+-   *
+-   */
+   public function __construct() {
+     $this->abtestuiPath = drupal_get_path('module', 'abtestui');
+   }
+@@ -377,9 +374,6 @@
+     return $form['variations_fieldgroup'];
+   }
+
+-  /**
+-   *
+-   */
+   public function ajaxRemoveVariation(array $form, FormStateInterface $form_state) {
+     $elementDelta = array_keys($form_state->getValue(['variations_fieldgroup', 'variations']));
+     $elementDelta = reset($elementDelta);
+@@ -408,9 +402,6 @@
+     $form_state->setRebuild();
+   }
+
+-  /**
+-   *
+-   */
+   public function ajaxAddVariation(array $form, FormStateInterface $form_state) {
+     $lastElement = end($form_state->getUserInput()['variations_fieldgroup']['variations']);
+    ----------- end diff -----------
+
+3) modules/contrib/abtestui/src/Service/AbjsConditionStorage.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -21,16 +21,10 @@
+    */
+   private $db;
+
+-  /**
+-   *
+-   */
+   public function __construct(Connection $database) {
+     $this->db = $database;
+   }
+
+-  /**
+-   *
+-   */
+   public function save(array $values) {
+     // If there's no cid, insert.
+     if (NULL === $values['cid']) {
+@@ -57,9 +51,6 @@
+     return $values['cid'];
+   }
+
+-  /**
+-   *
+-   */
+   public function loadMultipleByTids($tids) {
+     $query = $this->db->select(AbjsTestStorage::CONDITION_RELATION_TABLE, 'base_table');
+     $query->condition('base_table.tid', $tids, 'in');
+@@ -69,9 +60,6 @@
+     return array_keys($result->fetchAllAssoc('cid', PDO::FETCH_ASSOC));
+   }
+
+-  /**
+-   *
+-   */
+   public function deleteMultiple(array $cids) {
+     if (empty($cids)) {
+       return;
+@@ -82,9 +70,6 @@
+     $query->execute();
+   }
+
+-  /**
+-   *
+-   */
+   public function deleteMultipleByTids(array $tids) {
+     if (empty($tids)) {
+       return;
+    ----------- end diff -----------
+
+4) modules/contrib/abtestui/src/Service/AbjsExperienceStorage.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -28,9 +28,6 @@
+
+   private $state;
+
+-  /**
+-   *
+-   */
+   public function __construct(
+     Connection $database,
+     LoggerChannelFactoryInterface $loggerChannelFactory,
+@@ -41,9 +38,6 @@
+     $this->state = $state;
+   }
+
+-  /**
+-   *
+-   */
+   public function createOrLoadControl() {
+     $controlExperienceID = $this->loadControl();
+
+@@ -160,9 +154,6 @@
+     return array_keys($result->fetchAllAssoc('eid', PDO::FETCH_ASSOC));
+   }
+
+-  /**
+-   *
+-   */
+   public function deleteMultiple(array $eids) {
+     if (empty($eids)) {
+       return;
+@@ -198,9 +189,6 @@
+     $this->deleteMultiple($eids);
+   }
+
+-  /**
+-   *
+-   */
+   public function delete($eid) {
+     $query = $this->db->delete(static::BASE_TABLE_NAME);
+     $query->condition('eid', $eid);
+    ----------- end diff -----------
+
+5) modules/contrib/abtestui/src/Service/AbjsTestStorage.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -22,16 +22,10 @@
+    */
+   private $db;
+
+-  /**
+-   *
+-   */
+   public function __construct(Connection $database) {
+     $this->db = $database;
+   }
+
+-  /**
+-   *
+-   */
+   public function save(array $values) {
+     // If there's no tid, insert.
+     if (NULL === $values['tid']) {
+@@ -108,16 +102,10 @@
+     return $values['tcid'];
+   }
+
+-  /**
+-   *
+-   */
+   public function delete($tid) {
+     $this->deleteMultiple([$tid]);
+   }
+
+-  /**
+-   *
+-   */
+   public function deleteMultiple(array $tids) {
+     if (empty($tids)) {
+       return;
+@@ -128,9 +116,6 @@
+     $query->execute();
+   }
+
+-  /**
+-   *
+-   */
+   public function deleteExperienceRelation($teid) {
+     $query = $this->db->delete(static::EXPERIENCE_RELATION_TABLE);
+     $query->condition('teid', $teid);
+    ----------- end diff -----------
+
+6) modules/contrib/abtestui/src/Service/RequestParser.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -121,9 +121,6 @@
+     return $experiences;
+   }
+
+-  /**
+-   *
+-   */
+   public function generateGathererScript() {
+     $test = $this->getTest();
+    ----------- end diff -----------
+
+7) modules/contrib/abtestui/src/Service/TestStorage.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -31,9 +31,6 @@
+
+   private $abjsExperienceStorage;
+
+-  /**
+-   *
+-   */
+   public function __construct(
+     Connection $database,
+     LoggerChannelFactoryInterface $loggerChannelFactory,
+@@ -50,9 +47,6 @@
+     $this->abjsExperienceStorage = $abjsExperienceStorage;
+   }
+
+-  /**
+-   *
+-   */
+   public function load($tid) {
+     if (NULL === $tid) {
+       return FALSE;
+@@ -92,9 +86,6 @@
+     return $test;
+   }
+
+-  /**
+-   *
+-   */
+   private function fetchTest($tid) {
+     $query = $this->db->select(static::BASE_TABLE_NAME, 'base_table');
+     $query->addJoin('left', 'abjs_test', 'test', 'base_table.tid = test.tid');
+@@ -105,9 +96,6 @@
+     return $result->fetchAssoc();
+   }
+
+-  /**
+-   *
+-   */
+   private function fetchConditions($tid) {
+     $query = $this->db->select('abjs_condition', 'cond');
+     $query->addJoin('left', 'abjs_test_condition', 'test_cond', 'cond.cid = test_cond.cid');
+@@ -118,9 +106,6 @@
+     return $cResult->fetchAllAssoc('tcid');
+   }
+
+-  /**
+-   *
+-   */
+   private function fetchExperiences($tid) {
+     $query = $this->db->select('abjs_experience', 'exp');
+     $query->addJoin('left', 'abjs_test_experience', 'test_exp', 'exp.eid = test_exp.eid');
+@@ -133,9 +118,6 @@
+     return $result->fetchAllAssoc('teid');
+   }
+
+-  /**
+-   *
+-   */
+   public function save($values) {
+     $this->db->merge(static::BASE_TABLE_NAME)
+       ->key('tid', $values['tid'])
+@@ -151,9 +133,6 @@
+     return $values['tid'];
+   }
+
+-  /**
+-   *
+-   */
+   public function loadMultiple(array $tids = []) {
+     if (empty($tids)) {
+       $query = $this->db->select(static::BASE_TABLE_NAME, 'base_table');
+    ----------- end diff -----------
+
+8) modules/contrib/abtestui/src/Service/VariationStorage.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -20,16 +20,10 @@
+    */
+   private $db;
+
+-  /**
+-   *
+-   */
+   public function __construct(Connection $database) {
+     $this->db = $database;
+   }
+
+-  /**
+-   *
+-   */
+   public function save(array $values) {
+     // If there's no vid, insert.
+     if (NULL === $values['vid']) {
+@@ -52,9 +46,6 @@
+     return $values['vid'];
+   }
+
+-  /**
+-   *
+-   */
+   public function delete($vid) {
+     $query = $this->db->delete(static::BASE_TABLE_NAME);
+     $query->condition('vid', $vid);
+    ----------- end diff -----------
+
+ [OK] Rector is done! 8 files have been changed.                                
+

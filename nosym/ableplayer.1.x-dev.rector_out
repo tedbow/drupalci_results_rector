@@ -1,0 +1,120 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/ableplayer/ableplayer.install
+[parsing] modules/contrib/ableplayer/ableplayer.module
+[parsing] modules/contrib/ableplayer/includes/ableplayer.inc
+[parsing] modules/contrib/ableplayer/modules/ableplayer_youtube/ableplayer_youtube.module
+[parsing] modules/contrib/ableplayer/src/AblePlayerCoreTestCase.php
+[parsing] modules/contrib/ableplayer/src/AblePlayerOutputTestCase.php
+[parsing] modules/contrib/ableplayer/src/AblePlayerValidationTestCase.php
+[parsing] modules/contrib/ableplayer/src/AblePlayerYouTubeTestCase.php
+[parsing] modules/contrib/ableplayer/src/Form/AbleplayerForm.php
+[parsing] modules/contrib/ableplayer/src/Plugin/Field/FieldFormatter/AbleplayerAudioFormatter.php
+[parsing] modules/contrib/ableplayer/src/Plugin/Field/FieldFormatter/AbleplayerTranscriptFormatter.php
+[parsing] modules/contrib/ableplayer/src/Plugin/Field/FieldFormatter/AbleplayerVideoFormatter.php
+[parsing] modules/contrib/ableplayer/themes/ableplayer.theme.inc
+[refactoring] modules/contrib/ableplayer/ableplayer.install
+[refactoring] modules/contrib/ableplayer/ableplayer.module
+[refactoring] modules/contrib/ableplayer/includes/ableplayer.inc
+[refactoring] modules/contrib/ableplayer/modules/ableplayer_youtube/ableplayer_youtube.module
+[refactoring] modules/contrib/ableplayer/src/AblePlayerCoreTestCase.php
+[refactoring] modules/contrib/ableplayer/src/AblePlayerOutputTestCase.php
+[refactoring] modules/contrib/ableplayer/src/AblePlayerValidationTestCase.php
+[refactoring] modules/contrib/ableplayer/src/AblePlayerYouTubeTestCase.php
+[refactoring] modules/contrib/ableplayer/src/Form/AbleplayerForm.php
+[refactoring] modules/contrib/ableplayer/src/Plugin/Field/FieldFormatter/AbleplayerAudioFormatter.php
+[refactoring] modules/contrib/ableplayer/src/Plugin/Field/FieldFormatter/AbleplayerTranscriptFormatter.php
+[refactoring] modules/contrib/ableplayer/src/Plugin/Field/FieldFormatter/AbleplayerVideoFormatter.php
+[refactoring] modules/contrib/ableplayer/themes/ableplayer.theme.inc
+[printing] modules/contrib/ableplayer/ableplayer.install
+[printing] modules/contrib/ableplayer/ableplayer.module
+[printing] modules/contrib/ableplayer/includes/ableplayer.inc
+[printing] modules/contrib/ableplayer/modules/ableplayer_youtube/ableplayer_youtube.module
+[printing] modules/contrib/ableplayer/src/AblePlayerCoreTestCase.php
+[printing] modules/contrib/ableplayer/src/AblePlayerOutputTestCase.php
+[printing] modules/contrib/ableplayer/src/AblePlayerValidationTestCase.php
+[printing] modules/contrib/ableplayer/src/AblePlayerYouTubeTestCase.php
+[printing] modules/contrib/ableplayer/src/Form/AbleplayerForm.php
+[printing] modules/contrib/ableplayer/src/Plugin/Field/FieldFormatter/AbleplayerAudioFormatter.php
+[printing] modules/contrib/ableplayer/src/Plugin/Field/FieldFormatter/AbleplayerTranscriptFormatter.php
+[printing] modules/contrib/ableplayer/src/Plugin/Field/FieldFormatter/AbleplayerVideoFormatter.php
+[printing] modules/contrib/ableplayer/themes/ableplayer.theme.inc
+
+
+2 files with changes
+====================
+
+1) modules/contrib/ableplayer/src/Form/AbleplayerForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -52,7 +52,7 @@
+     return ['ableplayer.settings'];
+   }
+
+-  public function buildForm(array $form, \Drupal\Core\Form\FormStateInterface $form_state) {
++  public function buildForm(array $form, FormStateInterface $form_state) {
+     $form = parent::buildForm($form, $form_state);
+    // Default settings.
+    $config = $this->config('ableplayer.settings');
+    ----------- end diff -----------
+
+2) modules/contrib/ableplayer/themes/ableplayer.theme.inc
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -1,5 +1,7 @@
+ <?php
+
++use Drupal\Component\Utility\Html;
++use Drupal\Component\Utility\Xss;
+ use Drupal\Core\Render\Element;
+
+ /**
+@@ -11,7 +13,7 @@
+  * Implements hook_preprocess_THEME().
+  */
+ function ableplayer_preprocess_ableplayer(&$variables) {
+-  $variables['options']['transcript_title'] = \Drupal\Component\Utility\Html::escape(\Drupal\Component\Utility\Xss::filter($variables['options']['transcript_title']));
++  $variables['options']['transcript_title'] = Html::escape(Xss::filter($variables['options']['transcript_title']));
+
+-  $variables['id'] = \Drupal\Component\Utility\Html::getId($variables['id']);
++  $variables['id'] = Html::getId($variables['id']);
+ }
+    ----------- end diff -----------
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/ableplayer/src/AblePlayerCoreTestCase.php" file, due  
+         to:                                                                    
+         "Analyze error: "Class Drupal\ableplayer\DrupalWebTestCase not found   
+         and could not be autoloaded.". Include your files in "parameters >     
+         autoload_paths".                                                       
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/ableplayer/src/AblePlayerOutputTestCase.php" file, due
+         to:                                                                    
+         "Analyze error: "Class Drupal\ableplayer\DrupalWebTestCase not found   
+         and could not be autoloaded.". Include your files in "parameters >     
+         autoload_paths".                                                       
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/ableplayer/src/AblePlayerValidationTestCase.php" file,
+         due to:                                                                
+         "Analyze error: "Class Drupal\ableplayer\DrupalWebTestCase not found   
+         and could not be autoloaded.". Include your files in "parameters >     
+         autoload_paths".                                                       
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/ableplayer/src/AblePlayerYouTubeTestCase.php" file,   
+         due to:                                                                
+         "Analyze error: "Class Drupal\ableplayer\DrupalWebTestCase not found   
+         and could not be autoloaded.". Include your files in "parameters >     
+         autoload_paths".                                                       
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+
