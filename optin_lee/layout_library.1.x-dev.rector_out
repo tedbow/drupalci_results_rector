@@ -1,0 +1,55 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/layout_library/layout_library.module
+[parsing] modules/contrib/layout_library/src/Entity/Layout.php
+[parsing] modules/contrib/layout_library/src/Entity/LayoutListBuilder.php
+[parsing] modules/contrib/layout_library/src/Form/LayoutAddForm.php
+[parsing] modules/contrib/layout_library/src/Form/LayoutBuilderForm.php
+[parsing] modules/contrib/layout_library/src/Form/LayoutDeleteForm.php
+[parsing] modules/contrib/layout_library/src/Form/LayoutForm.php
+[parsing] modules/contrib/layout_library/src/LayoutStorageHandler.php
+[parsing] modules/contrib/layout_library/src/Plugin/EntityReferenceSelection/LayoutLibrary.php
+[parsing] modules/contrib/layout_library/src/Plugin/SectionStorage/Library.php
+[parsing] modules/contrib/layout_library/tests/src/Functional/AddLayoutTest.php
+[parsing] modules/contrib/layout_library/tests/src/Functional/LayoutDisplayTest.php
+[parsing] modules/contrib/layout_library/tests/src/Functional/LayoutLibraryTest.php
+[parsing] modules/contrib/layout_library/tests/src/Functional/LayoutSelectionTest.php
+[parsing] modules/contrib/layout_library/tests/src/Functional/LibraryAccessTest.php
+[parsing] modules/contrib/layout_library/tests/src/Kernel/LayoutSelectionFieldTest.php
+[refactoring] modules/contrib/layout_library/layout_library.module
+[refactoring] modules/contrib/layout_library/src/Entity/Layout.php
+[refactoring] modules/contrib/layout_library/src/Entity/LayoutListBuilder.php
+[refactoring] modules/contrib/layout_library/src/Form/LayoutAddForm.php
+[refactoring] modules/contrib/layout_library/src/Form/LayoutBuilderForm.php
+[refactoring] modules/contrib/layout_library/src/Form/LayoutDeleteForm.php
+[refactoring] modules/contrib/layout_library/src/Form/LayoutForm.php
+[refactoring] modules/contrib/layout_library/src/LayoutStorageHandler.php
+[refactoring] modules/contrib/layout_library/src/Plugin/EntityReferenceSelection/LayoutLibrary.php
+[refactoring] modules/contrib/layout_library/src/Plugin/SectionStorage/Library.php
+[refactoring] modules/contrib/layout_library/tests/src/Functional/AddLayoutTest.php
+[refactoring] modules/contrib/layout_library/tests/src/Functional/LayoutDisplayTest.php
+[refactoring] modules/contrib/layout_library/tests/src/Functional/LayoutLibraryTest.php
+[refactoring] modules/contrib/layout_library/tests/src/Functional/LayoutSelectionTest.php
+[refactoring] modules/contrib/layout_library/tests/src/Functional/LibraryAccessTest.php
+[refactoring] modules/contrib/layout_library/tests/src/Kernel/LayoutSelectionFieldTest.php
+[printing] modules/contrib/layout_library/layout_library.module
+[printing] modules/contrib/layout_library/src/Entity/Layout.php
+[printing] modules/contrib/layout_library/src/Entity/LayoutListBuilder.php
+[printing] modules/contrib/layout_library/src/Form/LayoutAddForm.php
+[printing] modules/contrib/layout_library/src/Form/LayoutBuilderForm.php
+[printing] modules/contrib/layout_library/src/Form/LayoutDeleteForm.php
+[printing] modules/contrib/layout_library/src/Form/LayoutForm.php
+[printing] modules/contrib/layout_library/src/LayoutStorageHandler.php
+[printing] modules/contrib/layout_library/src/Plugin/EntityReferenceSelection/LayoutLibrary.php
+[printing] modules/contrib/layout_library/src/Plugin/SectionStorage/Library.php
+[printing] modules/contrib/layout_library/tests/src/Functional/AddLayoutTest.php
+[printing] modules/contrib/layout_library/tests/src/Functional/LayoutDisplayTest.php
+[printing] modules/contrib/layout_library/tests/src/Functional/LayoutLibraryTest.php
+[printing] modules/contrib/layout_library/tests/src/Functional/LayoutSelectionTest.php
+[printing] modules/contrib/layout_library/tests/src/Functional/LibraryAccessTest.php
+[printing] modules/contrib/layout_library/tests/src/Kernel/LayoutSelectionFieldTest.php
+
+
+ [OK] Rector is done!                                                           
+

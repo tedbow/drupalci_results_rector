@@ -1,0 +1,11 @@
+ [notice] Processing /var/lib/drupalci/workspace/drupal-checkouts/drupal2/themes/contrib/empty_theme.
+PHPStan crashed in the previous run probably because of excessive memory consumption.
+It consumed around 49 MB of memory.
+
+
+To avoid this issue, allow to use more memory with the --memory-limit option.
+    0 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░][2K    0 [▓░░░░░░░░░░░░░░░░░░░░░░░░░░░][2K    0 [▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░]
+
+ [notice] Processing /var/lib/drupalci/workspace/drupal-checkouts/drupal2/themes/contrib/empty_theme.
+    0 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░][2K    0 [▓░░░░░░░░░░░░░░░░░░░░░░░░░░░][2K    0 [▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░]
+

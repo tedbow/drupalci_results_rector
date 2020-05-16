@@ -1,0 +1,185 @@
+diff --git a/src/Form/BundleModerationConfigurationForm.php b/src/Form/BundleModerationConfigurationForm.php
+index 0ac65fe..09654cb 100644
+--- a/src/Form/BundleModerationConfigurationForm.php
++++ b/src/Form/BundleModerationConfigurationForm.php
+@@ -186,6 +186,6 @@ class BundleModerationConfigurationForm extends EntityForm {
+ 
+     parent::submitForm( $form, $form_state);
+ 
+-    drupal_set_message($this->t('Your settings have been saved.'));
++    $this->messenger()->addStatus($this->t('Your settings have been saved.'));
+   }
+ }
+diff --git a/src/Form/EntityModerationForm.php b/src/Form/EntityModerationForm.php
+index 447ca50..1bf73c5 100644
+--- a/src/Form/EntityModerationForm.php
++++ b/src/Form/EntityModerationForm.php
+@@ -146,7 +146,7 @@ class EntityModerationForm extends FormBase {
+ 
+     $entity->save();
+ 
+-    drupal_set_message($this->t('The moderation state has been updated.'));
++    $this->messenger()->addStatus($this->t('The moderation state has been updated.'));
+ 
+     /** @var ModerationState $state */
+     $state = $this->entityTypeManager->getStorage('moderation_state')->load($new_state);
+diff --git a/src/Form/ModerationStateDeleteForm.php b/src/Form/ModerationStateDeleteForm.php
+index f5c0e94..1407576 100644
+--- a/src/Form/ModerationStateDeleteForm.php
++++ b/src/Form/ModerationStateDeleteForm.php
+@@ -37,13 +37,11 @@ class ModerationStateDeleteForm extends EntityConfirmFormBase {
+   public function submitForm(array &$form, FormStateInterface $form_state) {
+     $this->entity->delete();
+ 
+-    drupal_set_message(
+-      $this->t('Moderation state %label deleted.',
+-        [
+-          '%label' => $this->entity->label()
+-        ]
+-        )
+-    );
++    $this->messenger()->addStatus($this->t('Moderation state %label deleted.',
++      [
++        '%label' => $this->entity->label()
++      ]
++      ));
+ 
+     $form_state->setRedirectUrl($this->getCancelUrl());
+   }
+diff --git a/src/Form/ModerationStateForm.php b/src/Form/ModerationStateForm.php
+index 079c8c2..4073ead 100644
+--- a/src/Form/ModerationStateForm.php
++++ b/src/Form/ModerationStateForm.php
+@@ -69,13 +69,13 @@ class ModerationStateForm extends EntityForm {
+ 
+     switch ($status) {
+       case SAVED_NEW:
+-        drupal_set_message($this->t('Created the %label Moderation state.', [
++        $this->messenger()->addStatus($this->t('Created the %label Moderation state.', [
+           '%label' => $moderation_state->label(),
+         ]));
+         break;
+ 
+       default:
+-        drupal_set_message($this->t('Saved the %label Moderation state.', [
++        $this->messenger()->addStatus($this->t('Saved the %label Moderation state.', [
+           '%label' => $moderation_state->label(),
+         ]));
+     }
+diff --git a/src/Form/ModerationStateTransitionDeleteForm.php b/src/Form/ModerationStateTransitionDeleteForm.php
+index c0d6116..b5c2c47 100644
+--- a/src/Form/ModerationStateTransitionDeleteForm.php
++++ b/src/Form/ModerationStateTransitionDeleteForm.php
+@@ -37,13 +37,11 @@ class ModerationStateTransitionDeleteForm extends EntityConfirmFormBase {
+   public function submitForm(array &$form, FormStateInterface $form_state) {
+     $this->entity->delete();
+ 
+-    drupal_set_message(
+-      $this->t('Moderation transition %label deleted.',
+-        [
+-          '%label' => $this->entity->label()
+-        ]
+-        )
+-    );
++    $this->messenger()->addStatus($this->t('Moderation transition %label deleted.',
++      [
++        '%label' => $this->entity->label()
++      ]
++      ));
+ 
+     $form_state->setRedirectUrl($this->getCancelUrl());
+   }
+diff --git a/src/Form/ModerationStateTransitionForm.php b/src/Form/ModerationStateTransitionForm.php
+index 72d492e..e8a8dad 100644
+--- a/src/Form/ModerationStateTransitionForm.php
++++ b/src/Form/ModerationStateTransitionForm.php
+@@ -125,13 +125,13 @@ class ModerationStateTransitionForm extends EntityForm {
+ 
+     switch ($status) {
+       case SAVED_NEW:
+-        drupal_set_message($this->t('Created the %label Moderation state transition.', [
++        $this->messenger()->addStatus($this->t('Created the %label Moderation state transition.', [
+           '%label' => $moderation_state_transition->label(),
+         ]));
+         break;
+ 
+       default:
+-        drupal_set_message($this->t('Saved the %label Moderation state transition.', [
++        $this->messenger()->addStatus($this->t('Saved the %label Moderation state transition.', [
+           '%label' => $moderation_state_transition->label(),
+         ]));
+     }
+diff --git a/src/ModerationInformation.php b/src/ModerationInformation.php
+index 73817bd..6583dfe 100644
+--- a/src/ModerationInformation.php
++++ b/src/ModerationInformation.php
+@@ -213,4 +213,3 @@ class ModerationInformation implements ModerationInformationInterface {
+       && $entity->moderation_state->entity->isPublishedState();
+   }
+ }
+-
+diff --git a/src/Plugin/Action/ModerationOptOutPublishNode.php b/src/Plugin/Action/ModerationOptOutPublishNode.php
+index dac967e..7a68aeb 100644
+--- a/src/Plugin/Action/ModerationOptOutPublishNode.php
++++ b/src/Plugin/Action/ModerationOptOutPublishNode.php
+@@ -43,7 +43,7 @@ class ModerationOptOutPublishNode extends PublishNode implements ContainerFactor
+    */
+   public function execute($entity = NULL) {
+     if ($entity && $this->moderationInfo->isModeratableEntity($entity)) {
+-      drupal_set_message($this->t('One or more entities were skipped as they are under moderation and may not be directly published or unpublished.'));
++      $this->messenger()->addStatus($this->t('One or more entities were skipped as they are under moderation and may not be directly published or unpublished.'));
+       return;
+     }
+ 
+diff --git a/src/Plugin/Action/ModerationOptOutUnpublishNode.php b/src/Plugin/Action/ModerationOptOutUnpublishNode.php
+index f041f49..2de1514 100644
+--- a/src/Plugin/Action/ModerationOptOutUnpublishNode.php
++++ b/src/Plugin/Action/ModerationOptOutUnpublishNode.php
+@@ -43,7 +43,7 @@ class ModerationOptOutUnpublishNode extends UnpublishNode implements ContainerFa
+    */
+   public function execute($entity = NULL) {
+     if ($entity && $this->moderationInfo->isModeratableEntity($entity)) {
+-      drupal_set_message($this->t('One or more entities were skipped as they are under moderation and may not be directly published or unpublished.'));
++      $this->messenger()->addStatus($this->t('One or more entities were skipped as they are under moderation and may not be directly published or unpublished.'));
+       return;
+     }
+ 
+diff --git a/tests/src/Functional/LatestRevisionViewsFilterTest.php b/tests/src/Functional/LatestRevisionViewsFilterTest.php
+index 3ba8d98..ecd84db 100644
+--- a/tests/src/Functional/LatestRevisionViewsFilterTest.php
++++ b/tests/src/Functional/LatestRevisionViewsFilterTest.php
+@@ -30,9 +30,6 @@ class LatestRevisionViewsFilterTest extends BrowserTestBase {
+     'publishing_dropbutton',
+   ];
+ 
+-  /**
+-   *
+-   */
+   public function testViewShowsCorrectNids() {
+     $node_type = $this->createNodeType('Test', 'test');
+ 
+diff --git a/workbench_moderation.install b/workbench_moderation.install
+index d113303..ffe621f 100644
+--- a/workbench_moderation.install
++++ b/workbench_moderation.install
+@@ -1,9 +1,10 @@
+ <?php
++
++use Drupal\Core\Entity\ContentEntityTypeInterface;
+ /**
+  * @file
+  * Contains install/update hooks for moderation_state.
+  */
+-
+ /**
+  * Implements hook_install().
+  */
+@@ -27,7 +28,7 @@ function workbench_moderation_install() {
+   // here to filter out such broken entities.
+   // @todo Remove when the underlying bug is fixed.
+   // @see https://www.drupal.org/node/2674446
+-  $revisionable_entity_defintions = array_filter($revisionable_entity_defintions, function(\Drupal\Core\Entity\ContentEntityTypeInterface $type) use ($field_manager) {
++  $revisionable_entity_defintions = array_filter($revisionable_entity_defintions, function(ContentEntityTypeInterface $type) use ($field_manager) {
+     return !empty($field_manager->getFieldStorageDefinitions($type->id())['moderation_state']);
+   });
+ 

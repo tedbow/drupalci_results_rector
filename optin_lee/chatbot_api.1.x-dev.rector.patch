@@ -1,0 +1,65 @@
+diff --git a/modules/chatbot_api_apiai/src/ApiAiContextTrait.php b/modules/chatbot_api_apiai/src/ApiAiContextTrait.php
+index 643ab0d..84a4a3d 100644
+--- a/modules/chatbot_api_apiai/src/ApiAiContextTrait.php
++++ b/modules/chatbot_api_apiai/src/ApiAiContextTrait.php
+@@ -69,7 +69,7 @@ trait ApiAiContextTrait {
+    * @see https://dialogflow.com/docs/contexts#adding_contexts
+    */
+   public function massageContextName($context_name) {
+-    return Unicode::strtolower($context_name);
++    return mb_strtolower($context_name);
+   }
+ 
+   /**
+diff --git a/modules/chatbot_api_entities/src/Form/EntityCollectionDeleteForm.php b/modules/chatbot_api_entities/src/Form/EntityCollectionDeleteForm.php
+index 6b983f3..17fd541 100644
+--- a/modules/chatbot_api_entities/src/Form/EntityCollectionDeleteForm.php
++++ b/modules/chatbot_api_entities/src/Form/EntityCollectionDeleteForm.php
+@@ -38,11 +38,9 @@ class EntityCollectionDeleteForm extends EntityConfirmFormBase {
+   public function submitForm(array &$form, FormStateInterface $form_state) {
+     $this->entity->delete();
+ 
+-    drupal_set_message(
+-      $this->t('Collection deleted: @label.', [
+-        '@label' => $this->entity->label(),
+-      ])
+-    );
++    $this->messenger()->addStatus($this->t('Collection deleted: @label.', [
++      '@label' => $this->entity->label(),
++    ]));
+ 
+     $form_state->setRedirectUrl($this->getCancelUrl());
+   }
+diff --git a/modules/chatbot_api_entities/src/Form/EntityCollectionForm.php b/modules/chatbot_api_entities/src/Form/EntityCollectionForm.php
+index daa668c..0a58c5c 100644
+--- a/modules/chatbot_api_entities/src/Form/EntityCollectionForm.php
++++ b/modules/chatbot_api_entities/src/Form/EntityCollectionForm.php
+@@ -284,13 +284,13 @@ class EntityCollectionForm extends EntityForm {
+ 
+     switch ($status) {
+       case SAVED_NEW:
+-        drupal_set_message($this->t('Created the %label collection. The collection has been queued for sending during the next cron run.', [
++        $this->messenger()->addStatus($this->t('Created the %label collection. The collection has been queued for sending during the next cron run.', [
+           '%label' => $chatbot_api_entities_collection->label(),
+         ]));
+         break;
+ 
+       default:
+-        drupal_set_message($this->t('Saved the %label collection. The collection has been queued for sending during the next cron run.', [
++        $this->messenger()->addStatus($this->t('Saved the %label collection. The collection has been queued for sending during the next cron run.', [
+           '%label' => $chatbot_api_entities_collection->label(),
+         ]));
+     }
+diff --git a/src/Plugin/views/display/ChatbotIntent.php b/src/Plugin/views/display/ChatbotIntent.php
+index 5b45b54..4442502 100644
+--- a/src/Plugin/views/display/ChatbotIntent.php
++++ b/src/Plugin/views/display/ChatbotIntent.php
+@@ -188,7 +188,7 @@ class ChatbotIntent extends DisplayPluginBase {
+ 
+     // Warn users messing around with pager settings.
+     if (strpos($form_state->get('section'), 'pager') === 0) {
+-      drupal_set_message($this->t('Pager settings should NOT be changed as behavior is unpredictable. Change them at your own risk!'), 'warning');
++      $this->messenger()->addWarning($this->t('Pager settings should NOT be changed as behavior is unpredictable. Change them at your own risk!'));
+     }
+   }
+ 

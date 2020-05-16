@@ -1,0 +1,130 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/workbench_email/src/Annotation/RecipientType.php
+[parsing] modules/contrib/workbench_email/src/Entity/Template.php
+[parsing] modules/contrib/workbench_email/src/EventSubscriber/ContentModerationStateChangedEvent.php
+[parsing] modules/contrib/workbench_email/src/EventSubscriber/WorkbenchTransitionEventSubscriber.php
+[parsing] modules/contrib/workbench_email/src/Form/TemplateDeleteForm.php
+[parsing] modules/contrib/workbench_email/src/Form/TemplateForm.php
+[parsing] modules/contrib/workbench_email/src/Plugin/Derivative/WorkbenchEmailDeriver.php
+[parsing] modules/contrib/workbench_email/src/Plugin/QueueWorker/WorkbenchEmailProcessor.php
+[parsing] modules/contrib/workbench_email/src/Plugin/RecipientType/Author.php
+[parsing] modules/contrib/workbench_email/src/Plugin/RecipientType/EmailField.php
+[parsing] modules/contrib/workbench_email/src/Plugin/RecipientType/EntityReferenceUser.php
+[parsing] modules/contrib/workbench_email/src/Plugin/RecipientType/FixedEmail.php
+[parsing] modules/contrib/workbench_email/src/Plugin/RecipientType/LastRevisionAuthor.php
+[parsing] modules/contrib/workbench_email/src/Plugin/RecipientType/Role.php
+[parsing] modules/contrib/workbench_email/src/Plugin/RecipientType/RolesWithAccess.php
+[parsing] modules/contrib/workbench_email/src/Plugin/RecipientTypeBase.php
+[parsing] modules/contrib/workbench_email/src/Plugin/RecipientTypeInterface.php
+[parsing] modules/contrib/workbench_email/src/QueuedEmail.php
+[parsing] modules/contrib/workbench_email/src/RecipientTypePluginCollection.php
+[parsing] modules/contrib/workbench_email/src/RecipientTypePluginManager.php
+[parsing] modules/contrib/workbench_email/src/TemplateHtmlRouteProvider.php
+[parsing] modules/contrib/workbench_email/src/TemplateInterface.php
+[parsing] modules/contrib/workbench_email/src/TemplateListBuilder.php
+[parsing] modules/contrib/workbench_email/src/Update/UpdateHelper.php
+[parsing] modules/contrib/workbench_email/src/WorkbenchEmailProcessor.php
+[parsing] modules/contrib/workbench_email/tests/modules/workbench_email_test/workbench_email_test.module
+[parsing] modules/contrib/workbench_email/tests/src/Functional/ContentModerationWorkbenchEmailTest.php
+[parsing] modules/contrib/workbench_email/tests/src/Functional/RecipientPluginUpdatePathTest.php
+[parsing] modules/contrib/workbench_email/tests/src/Functional/WorkbenchEmailTestBase.php
+[parsing] modules/contrib/workbench_email/tests/src/Functional/WorkbenchTransitionEmailTest.php
+[parsing] modules/contrib/workbench_email/tests/src/Kernel/ConfigDependenciesTest.php
+[parsing] modules/contrib/workbench_email/tests/src/Kernel/RecipientTypePluginsTest.php
+[parsing] modules/contrib/workbench_email/tests/src/Traits/WorkbenchEmailTestTrait.php
+[parsing] modules/contrib/workbench_email/workbench_email.install
+[parsing] modules/contrib/workbench_email/workbench_email.module
+[parsing] modules/contrib/workbench_email/workbench_email.post_update.php
+[refactoring] modules/contrib/workbench_email/src/Annotation/RecipientType.php
+[refactoring] modules/contrib/workbench_email/src/Entity/Template.php
+[refactoring] modules/contrib/workbench_email/src/EventSubscriber/ContentModerationStateChangedEvent.php
+[refactoring] modules/contrib/workbench_email/src/EventSubscriber/WorkbenchTransitionEventSubscriber.php
+[refactoring] modules/contrib/workbench_email/src/Form/TemplateDeleteForm.php
+[refactoring] modules/contrib/workbench_email/src/Form/TemplateForm.php
+[refactoring] modules/contrib/workbench_email/src/Plugin/Derivative/WorkbenchEmailDeriver.php
+[refactoring] modules/contrib/workbench_email/src/Plugin/QueueWorker/WorkbenchEmailProcessor.php
+[refactoring] modules/contrib/workbench_email/src/Plugin/RecipientType/Author.php
+[refactoring] modules/contrib/workbench_email/src/Plugin/RecipientType/EmailField.php
+[refactoring] modules/contrib/workbench_email/src/Plugin/RecipientType/EntityReferenceUser.php
+[refactoring] modules/contrib/workbench_email/src/Plugin/RecipientType/FixedEmail.php
+[refactoring] modules/contrib/workbench_email/src/Plugin/RecipientType/LastRevisionAuthor.php
+[refactoring] modules/contrib/workbench_email/src/Plugin/RecipientType/Role.php
+[refactoring] modules/contrib/workbench_email/src/Plugin/RecipientType/RolesWithAccess.php
+[refactoring] modules/contrib/workbench_email/src/Plugin/RecipientTypeBase.php
+[refactoring] modules/contrib/workbench_email/src/Plugin/RecipientTypeInterface.php
+[refactoring] modules/contrib/workbench_email/src/QueuedEmail.php
+[refactoring] modules/contrib/workbench_email/src/RecipientTypePluginCollection.php
+[refactoring] modules/contrib/workbench_email/src/RecipientTypePluginManager.php
+[refactoring] modules/contrib/workbench_email/src/TemplateHtmlRouteProvider.php
+[refactoring] modules/contrib/workbench_email/src/TemplateInterface.php
+[refactoring] modules/contrib/workbench_email/src/TemplateListBuilder.php
+[refactoring] modules/contrib/workbench_email/src/Update/UpdateHelper.php
+[refactoring] modules/contrib/workbench_email/src/WorkbenchEmailProcessor.php
+[refactoring] modules/contrib/workbench_email/tests/modules/workbench_email_test/workbench_email_test.module
+[refactoring] modules/contrib/workbench_email/tests/src/Functional/ContentModerationWorkbenchEmailTest.php
+[refactoring] modules/contrib/workbench_email/tests/src/Functional/RecipientPluginUpdatePathTest.php
+[refactoring] modules/contrib/workbench_email/tests/src/Functional/WorkbenchEmailTestBase.php
+[refactoring] modules/contrib/workbench_email/tests/src/Functional/WorkbenchTransitionEmailTest.php
+[refactoring] modules/contrib/workbench_email/tests/src/Kernel/ConfigDependenciesTest.php
+[refactoring] modules/contrib/workbench_email/tests/src/Kernel/RecipientTypePluginsTest.php
+[refactoring] modules/contrib/workbench_email/tests/src/Traits/WorkbenchEmailTestTrait.php
+[refactoring] modules/contrib/workbench_email/workbench_email.install
+[refactoring] modules/contrib/workbench_email/workbench_email.module
+[refactoring] modules/contrib/workbench_email/workbench_email.post_update.php
+[printing] modules/contrib/workbench_email/src/Annotation/RecipientType.php
+[printing] modules/contrib/workbench_email/src/Entity/Template.php
+[printing] modules/contrib/workbench_email/src/EventSubscriber/ContentModerationStateChangedEvent.php
+[printing] modules/contrib/workbench_email/src/EventSubscriber/WorkbenchTransitionEventSubscriber.php
+[printing] modules/contrib/workbench_email/src/Form/TemplateDeleteForm.php
+[printing] modules/contrib/workbench_email/src/Form/TemplateForm.php
+[printing] modules/contrib/workbench_email/src/Plugin/Derivative/WorkbenchEmailDeriver.php
+[printing] modules/contrib/workbench_email/src/Plugin/QueueWorker/WorkbenchEmailProcessor.php
+[printing] modules/contrib/workbench_email/src/Plugin/RecipientType/Author.php
+[printing] modules/contrib/workbench_email/src/Plugin/RecipientType/EmailField.php
+[printing] modules/contrib/workbench_email/src/Plugin/RecipientType/EntityReferenceUser.php
+[printing] modules/contrib/workbench_email/src/Plugin/RecipientType/FixedEmail.php
+[printing] modules/contrib/workbench_email/src/Plugin/RecipientType/LastRevisionAuthor.php
+[printing] modules/contrib/workbench_email/src/Plugin/RecipientType/Role.php
+[printing] modules/contrib/workbench_email/src/Plugin/RecipientType/RolesWithAccess.php
+[printing] modules/contrib/workbench_email/src/Plugin/RecipientTypeBase.php
+[printing] modules/contrib/workbench_email/src/Plugin/RecipientTypeInterface.php
+[printing] modules/contrib/workbench_email/src/QueuedEmail.php
+[printing] modules/contrib/workbench_email/src/RecipientTypePluginCollection.php
+[printing] modules/contrib/workbench_email/src/RecipientTypePluginManager.php
+[printing] modules/contrib/workbench_email/src/TemplateHtmlRouteProvider.php
+[printing] modules/contrib/workbench_email/src/TemplateInterface.php
+[printing] modules/contrib/workbench_email/src/TemplateListBuilder.php
+[printing] modules/contrib/workbench_email/src/Update/UpdateHelper.php
+[printing] modules/contrib/workbench_email/src/WorkbenchEmailProcessor.php
+[printing] modules/contrib/workbench_email/tests/modules/workbench_email_test/workbench_email_test.module
+[printing] modules/contrib/workbench_email/tests/src/Functional/ContentModerationWorkbenchEmailTest.php
+[printing] modules/contrib/workbench_email/tests/src/Functional/RecipientPluginUpdatePathTest.php
+[printing] modules/contrib/workbench_email/tests/src/Functional/WorkbenchEmailTestBase.php
+[printing] modules/contrib/workbench_email/tests/src/Functional/WorkbenchTransitionEmailTest.php
+[printing] modules/contrib/workbench_email/tests/src/Kernel/ConfigDependenciesTest.php
+[printing] modules/contrib/workbench_email/tests/src/Kernel/RecipientTypePluginsTest.php
+[printing] modules/contrib/workbench_email/tests/src/Traits/WorkbenchEmailTestTrait.php
+[printing] modules/contrib/workbench_email/workbench_email.install
+[printing] modules/contrib/workbench_email/workbench_email.module
+[printing] modules/contrib/workbench_email/workbench_email.post_update.php
+
+
+1 file with changes
+===================
+
+1) modules/contrib/workbench_email/workbench_email.install
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -30,4 +30,3 @@
+  */
+ function workbench_email_update_8001() {
+ }
+-
+    ----------- end diff -----------
+
+ [OK] Rector is done! 1 file have been changed.                                 
+

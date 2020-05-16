@@ -1,0 +1,193 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/ldap/docs/legacy_reference/hogwarts_x_openldap1.entries.php
+[parsing] modules/contrib/ldap/docs/legacy_reference/test_data.activedirectory1.php
+[parsing] modules/contrib/ldap/docs/legacy_reference/test_data.openldap1.php
+[parsing] modules/contrib/ldap/ldap_authentication/ldap_authentication.api.php
+[parsing] modules/contrib/ldap/ldap_authentication/ldap_authentication.install
+[parsing] modules/contrib/ldap/ldap_authentication/ldap_authentication.module
+[parsing] modules/contrib/ldap/ldap_authentication/src/Access/UserHelpTabAccess.php
+[parsing] modules/contrib/ldap/ldap_authentication/src/Controller/LdapHelpRedirect.php
+[parsing] modules/contrib/ldap/ldap_authentication/src/Controller/LoginValidator.php
+[parsing] modules/contrib/ldap/ldap_authentication/src/Form/LdapAuthenticationAdminForm.php
+[parsing] modules/contrib/ldap/ldap_authentication/src/Form/LdapAuthenticationProfileUpdateForm.php
+[parsing] modules/contrib/ldap/ldap_authentication/src/Helper/LdapAuthenticationConfiguration.php
+[parsing] modules/contrib/ldap/ldap_authentication/src/Plugin/Derivative/DynamicUserHelpLink.php
+[parsing] modules/contrib/ldap/ldap_authentication/src/Routing/EmailTemplateService.php
+[parsing] modules/contrib/ldap/ldap_authentication/src/Routing/RouteSubscriber.php
+[parsing] modules/contrib/ldap/ldap_authentication/tests/src/Kernel/RedirectTest.php
+[parsing] modules/contrib/ldap/ldap_authentication/tests/src/Unit/LoginTests.php
+[parsing] modules/contrib/ldap/ldap_authorization/ldap_authorization.module
+[parsing] modules/contrib/ldap/ldap_authorization/src/Plugin/authorization/Provider/LDAPAuthorizationProvider.php
+[parsing] modules/contrib/ldap/ldap_help/ldap_help.install
+[parsing] modules/contrib/ldap/ldap_help/ldap_help.module
+[parsing] modules/contrib/ldap/ldap_help/src/Form/DebuggingReviewForm.php
+[parsing] modules/contrib/ldap/ldap_help/src/Form/LdapDebugSettings.php
+[parsing] modules/contrib/ldap/ldap_query/ldap_query.module
+[parsing] modules/contrib/ldap/ldap_query/ldap_query.views.inc
+[parsing] modules/contrib/ldap/ldap_query/src/Controller/QueryController.php
+[parsing] modules/contrib/ldap/ldap_query/src/Entity/QueryEntity.php
+[parsing] modules/contrib/ldap/ldap_query/src/Form/QueryEntityDeleteForm.php
+[parsing] modules/contrib/ldap/ldap_query/src/Form/QueryEntityForm.php
+[parsing] modules/contrib/ldap/ldap_query/src/Form/QueryTestForm.php
+[parsing] modules/contrib/ldap/ldap_query/src/Plugin/views/VariableAttributeCustomization.php
+[parsing] modules/contrib/ldap/ldap_query/src/Plugin/views/argument/LdapAttribute.php
+[parsing] modules/contrib/ldap/ldap_query/src/Plugin/views/argument/LdapVariableAttribute.php
+[parsing] modules/contrib/ldap/ldap_query/src/Plugin/views/field/LdapAttribute.php
+[parsing] modules/contrib/ldap/ldap_query/src/Plugin/views/field/LdapVariableAttribute.php
+[parsing] modules/contrib/ldap/ldap_query/src/Plugin/views/field/LdapVariableImageAttribute.php
+[parsing] modules/contrib/ldap/ldap_query/src/Plugin/views/filter/LdapAttribute.php
+[parsing] modules/contrib/ldap/ldap_query/src/Plugin/views/filter/LdapVariableAttribute.php
+[parsing] modules/contrib/ldap/ldap_query/src/Plugin/views/query/LdapQuery.php
+[parsing] modules/contrib/ldap/ldap_query/src/Plugin/views/sort/LdapAttribute.php
+[parsing] modules/contrib/ldap/ldap_query/src/Plugin/views/sort/LdapVariableAttribute.php
+[parsing] modules/contrib/ldap/ldap_query/src/QueryEntityHtmlRouteProvider.php
+[parsing] modules/contrib/ldap/ldap_query/src/QueryEntityInterface.php
+[parsing] modules/contrib/ldap/ldap_query/src/QueryEntityListBuilder.php
+[parsing] modules/contrib/ldap/ldap_servers/ldap_servers.api.php
+[parsing] modules/contrib/ldap/ldap_servers/ldap_servers.install
+[parsing] modules/contrib/ldap/ldap_servers/ldap_servers.module
+[parsing] modules/contrib/ldap/ldap_servers/src/Entity/Server.php
+[parsing] modules/contrib/ldap/ldap_servers/src/Form/ServerDeleteForm.php
+[parsing] modules/contrib/ldap/ldap_servers/src/Form/ServerEnableDisableForm.php
+[parsing] modules/contrib/ldap/ldap_servers/src/Form/ServerForm.php
+[parsing] modules/contrib/ldap/ldap_servers/src/Form/ServerTestForm.php
+[parsing] modules/contrib/ldap/ldap_servers/src/Helper/ConversionHelper.php
+[parsing] modules/contrib/ldap/ldap_servers/src/Helper/CredentialsStorage.php
+[parsing] modules/contrib/ldap/ldap_servers/src/Helper/MassageAttributes.php
+[parsing] modules/contrib/ldap/ldap_servers/src/LdapProtocolInterface.php
+[parsing] modules/contrib/ldap/ldap_servers/src/LdapServersRebindHandler.php
+[parsing] modules/contrib/ldap/ldap_servers/src/LdapUserAttributesInterface.php
+[parsing] modules/contrib/ldap/ldap_servers/src/Logger/LdapDetailLog.php
+[parsing] modules/contrib/ldap/ldap_servers/src/Processor/TokenProcessor.php
+[parsing] modules/contrib/ldap/ldap_servers/src/ServerFactory.php
+[parsing] modules/contrib/ldap/ldap_servers/src/ServerInterface.php
+[parsing] modules/contrib/ldap/ldap_servers/src/ServerListBuilder.php
+[parsing] modules/contrib/ldap/ldap_servers/tests/src/Unit/CredentialsStorageTests.php
+[parsing] modules/contrib/ldap/ldap_servers/tests/src/Unit/ServerTests.php
+[parsing] modules/contrib/ldap/ldap_servers/tests/src/Unit/TokenTests.php
+[parsing] modules/contrib/ldap/ldap_user/ldap_user.api.php
+[parsing] modules/contrib/ldap/ldap_user/ldap_user.install
+[parsing] modules/contrib/ldap/ldap_user/ldap_user.module
+[parsing] modules/contrib/ldap/ldap_user/src/EventSubscriber/InitSubscriber.php
+[parsing] modules/contrib/ldap/ldap_user/src/Exception/LdapBadParamsException.php
+[parsing] modules/contrib/ldap/ldap_user/src/Form/LdapUserAdminForm.php
+[parsing] modules/contrib/ldap/ldap_user/src/Form/LdapUserTestForm.php
+[parsing] modules/contrib/ldap/ldap_user/src/Helper/ExternalAuthenticationHelper.php
+[parsing] modules/contrib/ldap/ldap_user/src/Helper/LdapConfiguration.php
+[parsing] modules/contrib/ldap/ldap_user/src/Helper/SemaphoreStorage.php
+[parsing] modules/contrib/ldap/ldap_user/src/Helper/SyncMappingHelper.php
+[parsing] modules/contrib/ldap/ldap_user/src/Processor/DrupalUserProcessor.php
+[parsing] modules/contrib/ldap/ldap_user/src/Processor/GroupUserUpdateProcessor.php
+[parsing] modules/contrib/ldap/ldap_user/src/Processor/LdapUserProcessor.php
+[parsing] modules/contrib/ldap/ldap_user/src/Processor/OrphanProcessor.php
+[parsing] modules/contrib/ldap/ldap_user/tests/src/Kernel/IntegrationTests.php
+[parsing] modules/contrib/ldap/ldap_user/tests/src/Unit/DrupalUserProcessorTests.php
+[parsing] modules/contrib/ldap/ldap_user/tests/src/Unit/ExternalAuthenticationHelperTests.php
+[parsing] modules/contrib/ldap/ldap_user/tests/src/Unit/SemaphoreStorageTests.php
+[parsing] modules/contrib/ldap/ldap_user/tests/src/Unit/SyncMappingHelperTests.php
+[refactoring] modules/contrib/ldap/docs/legacy_reference/hogwarts_x_openldap1.entries.php
+[refactoring] modules/contrib/ldap/docs/legacy_reference/test_data.activedirectory1.php
+[refactoring] modules/contrib/ldap/docs/legacy_reference/test_data.openldap1.php
+[refactoring] modules/contrib/ldap/ldap_authentication/ldap_authentication.api.php
+[refactoring] modules/contrib/ldap/ldap_authentication/ldap_authentication.install
+[refactoring] modules/contrib/ldap/ldap_authentication/ldap_authentication.module
+[refactoring] modules/contrib/ldap/ldap_authentication/src/Access/UserHelpTabAccess.php
+[refactoring] modules/contrib/ldap/ldap_authentication/src/Controller/LdapHelpRedirect.php
+[refactoring] modules/contrib/ldap/ldap_authentication/src/Controller/LoginValidator.php
+[refactoring] modules/contrib/ldap/ldap_authentication/src/Form/LdapAuthenticationAdminForm.php
+[refactoring] modules/contrib/ldap/ldap_authentication/src/Form/LdapAuthenticationProfileUpdateForm.php
+[refactoring] modules/contrib/ldap/ldap_authentication/src/Helper/LdapAuthenticationConfiguration.php
+[refactoring] modules/contrib/ldap/ldap_authentication/src/Plugin/Derivative/DynamicUserHelpLink.php
+[refactoring] modules/contrib/ldap/ldap_authentication/src/Routing/EmailTemplateService.php
+[refactoring] modules/contrib/ldap/ldap_authentication/src/Routing/RouteSubscriber.php
+[refactoring] modules/contrib/ldap/ldap_authentication/tests/src/Kernel/RedirectTest.php
+[refactoring] modules/contrib/ldap/ldap_authentication/tests/src/Unit/LoginTests.php
+[refactoring] modules/contrib/ldap/ldap_authorization/ldap_authorization.module
+[refactoring] modules/contrib/ldap/ldap_authorization/src/Plugin/authorization/Provider/LDAPAuthorizationProvider.php
+[refactoring] modules/contrib/ldap/ldap_help/ldap_help.install
+[refactoring] modules/contrib/ldap/ldap_help/ldap_help.module
+[refactoring] modules/contrib/ldap/ldap_help/src/Form/DebuggingReviewForm.php
+[refactoring] modules/contrib/ldap/ldap_help/src/Form/LdapDebugSettings.php
+[refactoring] modules/contrib/ldap/ldap_query/ldap_query.module
+[refactoring] modules/contrib/ldap/ldap_query/ldap_query.views.inc
+[refactoring] modules/contrib/ldap/ldap_query/src/Controller/QueryController.php
+[refactoring] modules/contrib/ldap/ldap_query/src/Entity/QueryEntity.php
+[refactoring] modules/contrib/ldap/ldap_query/src/Form/QueryEntityDeleteForm.php
+[refactoring] modules/contrib/ldap/ldap_query/src/Form/QueryEntityForm.php
+[refactoring] modules/contrib/ldap/ldap_query/src/Form/QueryTestForm.php
+[refactoring] modules/contrib/ldap/ldap_query/src/Plugin/views/VariableAttributeCustomization.php
+[refactoring] modules/contrib/ldap/ldap_query/src/Plugin/views/argument/LdapAttribute.php
+[refactoring] modules/contrib/ldap/ldap_query/src/Plugin/views/argument/LdapVariableAttribute.php
+[refactoring] modules/contrib/ldap/ldap_query/src/Plugin/views/field/LdapAttribute.php
+[refactoring] modules/contrib/ldap/ldap_query/src/Plugin/views/field/LdapVariableAttribute.php
+[refactoring] modules/contrib/ldap/ldap_query/src/Plugin/views/field/LdapVariableImageAttribute.php
+[refactoring] modules/contrib/ldap/ldap_query/src/Plugin/views/filter/LdapAttribute.php
+[refactoring] modules/contrib/ldap/ldap_query/src/Plugin/views/filter/LdapVariableAttribute.php
+[refactoring] modules/contrib/ldap/ldap_query/src/Plugin/views/query/LdapQuery.php
+[refactoring] modules/contrib/ldap/ldap_query/src/Plugin/views/sort/LdapAttribute.php
+[refactoring] modules/contrib/ldap/ldap_query/src/Plugin/views/sort/LdapVariableAttribute.php
+[refactoring] modules/contrib/ldap/ldap_query/src/QueryEntityHtmlRouteProvider.php
+[refactoring] modules/contrib/ldap/ldap_query/src/QueryEntityInterface.php
+[refactoring] modules/contrib/ldap/ldap_query/src/QueryEntityListBuilder.php
+[refactoring] modules/contrib/ldap/ldap_servers/ldap_servers.api.php
+[refactoring] modules/contrib/ldap/ldap_servers/ldap_servers.install
+[refactoring] modules/contrib/ldap/ldap_servers/ldap_servers.module
+[refactoring] modules/contrib/ldap/ldap_servers/src/Entity/Server.php
+[refactoring] modules/contrib/ldap/ldap_servers/src/Form/ServerDeleteForm.php
+[refactoring] modules/contrib/ldap/ldap_servers/src/Form/ServerEnableDisableForm.php
+[refactoring] modules/contrib/ldap/ldap_servers/src/Form/ServerForm.php
+[refactoring] modules/contrib/ldap/ldap_servers/src/Form/ServerTestForm.php
+[refactoring] modules/contrib/ldap/ldap_servers/src/Helper/ConversionHelper.php
+[refactoring] modules/contrib/ldap/ldap_servers/src/Helper/CredentialsStorage.php
+[refactoring] modules/contrib/ldap/ldap_servers/src/Helper/MassageAttributes.php
+[refactoring] modules/contrib/ldap/ldap_servers/src/LdapProtocolInterface.php
+[refactoring] modules/contrib/ldap/ldap_servers/src/LdapServersRebindHandler.php
+[refactoring] modules/contrib/ldap/ldap_servers/src/LdapUserAttributesInterface.php
+[refactoring] modules/contrib/ldap/ldap_servers/src/Logger/LdapDetailLog.php
+[refactoring] modules/contrib/ldap/ldap_servers/src/Processor/TokenProcessor.php
+[refactoring] modules/contrib/ldap/ldap_servers/src/ServerFactory.php
+[refactoring] modules/contrib/ldap/ldap_servers/src/ServerInterface.php
+[refactoring] modules/contrib/ldap/ldap_servers/src/ServerListBuilder.php
+[refactoring] modules/contrib/ldap/ldap_servers/tests/src/Unit/CredentialsStorageTests.php
+[refactoring] modules/contrib/ldap/ldap_servers/tests/src/Unit/ServerTests.php
+
+In NodeNameResolver.php line 81:
+                                                                 
+  [Rector\Core\Exception\ShouldNotHappenException]               
+  Pick more specific node than "PhpParser\Node\Expr\MethodCall"  
+                                                                 
+
+Exception trace:
+  at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/rector/rector-prefixed/rector/packages/node-name-resolver/src/NodeNameResolver.php:81
+ Rector\NodeNameResolver\NodeNameResolver->getName() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/rector/rector-prefixed/rector/src/Rector/AbstractRector/NameResolverTrait.php:56
+ Rector\Core\Rector\AbstractRector->getName() at /var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/palantirnet/drupal-rector/src/Rector/Deprecation/Base/GetMockBase.php:47
+ DrupalRector\Rector\Deprecation\Base\GetMockBase->refactor() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/rector/rector-prefixed/rector/src/Rector/AbstractRector.php:111
+ Rector\Core\Rector\AbstractRector->enterNode() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/phpstan/phpstan/phpstan.phar/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php:113
+ PhpParser\NodeTraverser->traverseNode() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/phpstan/phpstan/phpstan.phar/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php:133
+ PhpParser\NodeTraverser->traverseNode() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/phpstan/phpstan/phpstan.phar/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php:196
+ PhpParser\NodeTraverser->traverseArray() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/phpstan/phpstan/phpstan.phar/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php:105
+ PhpParser\NodeTraverser->traverseNode() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/phpstan/phpstan/phpstan.phar/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php:196
+ PhpParser\NodeTraverser->traverseArray() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/phpstan/phpstan/phpstan.phar/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php:105
+ PhpParser\NodeTraverser->traverseNode() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/phpstan/phpstan/phpstan.phar/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php:196
+ PhpParser\NodeTraverser->traverseArray() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/phpstan/phpstan/phpstan.phar/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php:105
+ PhpParser\NodeTraverser->traverseNode() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/phpstan/phpstan/phpstan.phar/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php:196
+ PhpParser\NodeTraverser->traverseArray() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/phpstan/phpstan/phpstan.phar/vendor/nikic/php-parser/lib/PhpParser/NodeTraverser.php:85
+ PhpParser\NodeTraverser->traverse() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/rector/rector-prefixed/rector/src/PhpParser/NodeTraverser/RectorNodeTraverser.php:58
+ Rector\Core\PhpParser\NodeTraverser\RectorNodeTraverser->traverse() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/rector/rector-prefixed/rector/src/Application/FileProcessor.php:107
+ Rector\Core\Application\FileProcessor->refactor() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/rector/rector-prefixed/rector/src/Application/RectorApplication.php:118
+ Rector\Core\Application\RectorApplication->Rector\Core\Application\{closure}() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/rector/rector-prefixed/rector/src/Application/RectorApplication.php:168
+ Rector\Core\Application\RectorApplication->tryCatchWrapper() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/rector/rector-prefixed/rector/src/Application/RectorApplication.php:119
+ Rector\Core\Application\RectorApplication->runOnFileInfos() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/rector/rector-prefixed/rector/src/Console/Command/ProcessCommand.php:147
+ Rector\Core\Console\Command\ProcessCommand->execute() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/rector/rector-prefixed/rector/vendor/symfony/console/Command/Command.php:228
+ _HumbugBoxeee6bda8eb22\Symfony\Component\Console\Command\Command->run() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/rector/rector-prefixed/rector/src/Console/Command/AbstractCommand.php:30
+ Rector\Core\Console\Command\AbstractCommand->run() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/rector/rector-prefixed/rector/vendor/symfony/console/Application.php:849
+ _HumbugBoxeee6bda8eb22\Symfony\Component\Console\Application->doRunCommand() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/rector/rector-prefixed/rector/vendor/symfony/console/Application.php:235
+ _HumbugBoxeee6bda8eb22\Symfony\Component\Console\Application->doRun() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/rector/rector-prefixed/rector/src/Console/Application.php:77
+ Rector\Core\Console\Application->doRun() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/rector/rector-prefixed/rector/vendor/symfony/console/Application.php:136
+ _HumbugBoxeee6bda8eb22\Symfony\Component\Console\Application->run() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/rector/rector-prefixed/rector/bin/rector:46
+ require() at /var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/rector/rector-prefixed/rector:6
+
+process [-n|--dry-run] [-a|--autoload-file AUTOLOAD-FILE] [--match-git-diff] [-r|--only ONLY] [-o|--output-format [OUTPUT-FORMAT]] [--no-progress-bar] [--output-file OUTPUT-FILE] [--cache-debug] [--clear-cache] [--] [<source>...]
+

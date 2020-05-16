@@ -1,0 +1,9 @@
+diff --git a/workbench_email.install b/workbench_email.install
+index 82e4739..0aee723 100644
+--- a/workbench_email.install
++++ b/workbench_email.install
+@@ -30,4 +30,3 @@ function workbench_email_moderation_requirements($phase) {
+  */
+ function workbench_email_update_8001() {
+ }
+-
