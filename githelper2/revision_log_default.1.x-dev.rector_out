@@ -1,0 +1,19 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/revision_log_default/revision_log_default.module
+[parsing] modules/contrib/revision_log_default/tests/modules/revision_log_entity_test/src/Entity/RevisionLogEntityTest.php
+[parsing] modules/contrib/revision_log_default/tests/modules/revision_log_entity_test/src/Entity/RevisionLogEntityTestBundle.php
+[parsing] modules/contrib/revision_log_default/tests/src/Kernel/RevisionLogDefaultTest.php
+[refactoring] modules/contrib/revision_log_default/revision_log_default.module
+[refactoring] modules/contrib/revision_log_default/tests/modules/revision_log_entity_test/src/Entity/RevisionLogEntityTest.php
+[refactoring] modules/contrib/revision_log_default/tests/modules/revision_log_entity_test/src/Entity/RevisionLogEntityTestBundle.php
+[refactoring] modules/contrib/revision_log_default/tests/src/Kernel/RevisionLogDefaultTest.php
+[printing] modules/contrib/revision_log_default/revision_log_default.module
+[printing] modules/contrib/revision_log_default/tests/modules/revision_log_entity_test/src/Entity/RevisionLogEntityTest.php
+[printing] modules/contrib/revision_log_default/tests/modules/revision_log_entity_test/src/Entity/RevisionLogEntityTestBundle.php
+[printing] modules/contrib/revision_log_default/tests/src/Kernel/RevisionLogDefaultTest.php
+
+
+ [OK] Rector is done!                                                           
+

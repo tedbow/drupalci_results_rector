@@ -1,0 +1,10 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/keyvalue_filestore/src/KeyValueStore/JsonStorage.php
+[parsing] modules/contrib/keyvalue_filestore/src/KeyValueStore/KeyValueJsonFactory.php
+[parsing] modules/contrib/keyvalue_filestore/src/KeyvalueFilestoreServiceProvider.php
+[parsing] modules/contrib/keyvalue_filestore/tests/src/Functional/LoadTest.php
+[refactoring] modules/contrib/keyvalue_filestore/src/KeyValueStore/JsonStorage.php
+PHP Recoverable fatal error:  Object of class PhpParser\Node\Expr\PropertyFetch could not be converted to string in /var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/palantirnet/drupal-rector/src/Rector/Deprecation/EntityManagerRector.php on line 62
+Recoverable fatal error: Object of class PhpParser\Node\Expr\PropertyFetch could not be converted to string in /var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/palantirnet/drupal-rector/src/Rector/Deprecation/EntityManagerRector.php on line 62

@@ -1,0 +1,13 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/responsive_table_filter/responsive_table_filter.module
+[parsing] modules/contrib/responsive_table_filter/src/Plugin/Filter/FilterResponsiveTable.php
+[refactoring] modules/contrib/responsive_table_filter/responsive_table_filter.module
+[refactoring] modules/contrib/responsive_table_filter/src/Plugin/Filter/FilterResponsiveTable.php
+[printing] modules/contrib/responsive_table_filter/responsive_table_filter.module
+[printing] modules/contrib/responsive_table_filter/src/Plugin/Filter/FilterResponsiveTable.php
+
+
+ [OK] Rector is done!                                                           
+

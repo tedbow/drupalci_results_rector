@@ -1,0 +1,31 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/menu_block/menu_block.install
+[parsing] modules/contrib/menu_block/menu_block.module
+[parsing] modules/contrib/menu_block/menu_block.post_update.php
+[parsing] modules/contrib/menu_block/src/EventSubscriber/MenuBlockKernelViewSubscriber.php
+[parsing] modules/contrib/menu_block/src/Plugin/Block/MenuBlock.php
+[parsing] modules/contrib/menu_block/src/Plugin/Derivative/MenuBlock.php
+[parsing] modules/contrib/menu_block/tests/modules/menu_block_test/src/Controller/MenuBlockTestController.php
+[parsing] modules/contrib/menu_block/tests/src/Functional/MenuBlockTest.php
+[refactoring] modules/contrib/menu_block/menu_block.install
+[refactoring] modules/contrib/menu_block/menu_block.module
+[refactoring] modules/contrib/menu_block/menu_block.post_update.php
+[refactoring] modules/contrib/menu_block/src/EventSubscriber/MenuBlockKernelViewSubscriber.php
+[refactoring] modules/contrib/menu_block/src/Plugin/Block/MenuBlock.php
+[refactoring] modules/contrib/menu_block/src/Plugin/Derivative/MenuBlock.php
+[refactoring] modules/contrib/menu_block/tests/modules/menu_block_test/src/Controller/MenuBlockTestController.php
+[refactoring] modules/contrib/menu_block/tests/src/Functional/MenuBlockTest.php
+[printing] modules/contrib/menu_block/menu_block.install
+[printing] modules/contrib/menu_block/menu_block.module
+[printing] modules/contrib/menu_block/menu_block.post_update.php
+[printing] modules/contrib/menu_block/src/EventSubscriber/MenuBlockKernelViewSubscriber.php
+[printing] modules/contrib/menu_block/src/Plugin/Block/MenuBlock.php
+[printing] modules/contrib/menu_block/src/Plugin/Derivative/MenuBlock.php
+[printing] modules/contrib/menu_block/tests/modules/menu_block_test/src/Controller/MenuBlockTestController.php
+[printing] modules/contrib/menu_block/tests/src/Functional/MenuBlockTest.php
+
+
+ [OK] Rector is done!                                                           
+

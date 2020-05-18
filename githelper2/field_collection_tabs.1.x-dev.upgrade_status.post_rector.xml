@@ -1,0 +1,1 @@
+Error: Call to a member function setParser() on array in Twig\Parser->parse() (line 99 of /var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/twig/twig/src/Parser.php).

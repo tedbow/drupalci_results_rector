@@ -1,0 +1,43 @@
+diff --git a/src/Controller/RestApiDocController.php b/src/Controller/RestApiDocController.php
+index 091d964..d2d32cf 100644
+--- a/src/Controller/RestApiDocController.php
++++ b/src/Controller/RestApiDocController.php
+@@ -224,9 +224,9 @@ class RestApiDocController extends ControllerBase implements ContainerInjectionI
+             continue;
+           }
+           list(, $entity_type_id) = explode(':', $type);
+-          $entity_type = $this->entityManager()->getDefinition($entity_type_id);
++          $entity_type = \Drupal::service('entity_type.manager')->getDefinition($entity_type_id);
+           $id_field_name = $entity_type->getKey('id');
+-          $base_fields = $this->entityManager()->getBaseFieldDefinitions($entity_type_id);
++          $base_fields = \Drupal::service('entity_field.manager')->getBaseFieldDefinitions($entity_type_id);
+           $id_field = $base_fields[$id_field_name];
+           $row = array(
+             $name,
+@@ -260,7 +260,7 @@ class RestApiDocController extends ControllerBase implements ContainerInjectionI
+             );
+             $return[$route_name]['detail']['#rows'][] = $row;
+           }
+-          $bundle_info = $this->entityManager()->getBundleInfo($entity_type_id);
++          $bundle_info = \Drupal::service('entity_type.bundle.info')->getBundleInfo($entity_type_id);
+           if (count($bundle_info) > 1) {
+             // Multiple bundles.
+             foreach (array_keys($bundle_info) as $bundle) {
+@@ -278,7 +278,7 @@ class RestApiDocController extends ControllerBase implements ContainerInjectionI
+                 ),
+               );
+               $return[$route_name]['detail']['#rows'][] = $row;
+-              $field_definitions = $this->entityManager()->getFieldDefinitions($entity_type_id, $bundle);
++              $field_definitions = \Drupal::service('entity_field.manager')->getFieldDefinitions($entity_type_id, $bundle);
+               foreach ($field_definitions as $field_name => $field) {
+                 if (!empty($base_fields[$field_name])) {
+                   continue;
+@@ -297,7 +297,7 @@ class RestApiDocController extends ControllerBase implements ContainerInjectionI
+             // Single bundle.
+             $bundle_keys = array_keys($bundle_info);
+             $bundle = array_shift($bundle_keys);
+-            $field_definitions = $this->entityManager()->getFieldDefinitions($entity_type_id, $bundle);
++            $field_definitions = \Drupal::service('entity_field.manager')->getFieldDefinitions($entity_type_id, $bundle);
+             foreach ($field_definitions as $field_name => $field) {
+               if (!empty($base_fields[$field_name])) {
+                 continue;

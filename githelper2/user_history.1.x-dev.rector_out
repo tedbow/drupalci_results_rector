@@ -1,0 +1,98 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/user_history/src/Entity/UserHistory.php
+[parsing] modules/contrib/user_history/src/Entity/UserHistoryInterface.php
+[parsing] modules/contrib/user_history/src/EventSubscriber/ConfigEventsSubscriber.php
+[parsing] modules/contrib/user_history/src/Form/UserHistoryAddForm.php
+[parsing] modules/contrib/user_history/src/Form/UserHistoryArchiveForm.php
+[parsing] modules/contrib/user_history/src/Form/UserHistoryDeleteForm.php
+[parsing] modules/contrib/user_history/src/Form/UserHistoryEditForm.php
+[parsing] modules/contrib/user_history/src/Form/UserHistoryForm.php
+[parsing] modules/contrib/user_history/src/Form/UserHistoryInitialiseForm.php
+[parsing] modules/contrib/user_history/src/Form/UserHistoryRestoreForm.php
+[parsing] modules/contrib/user_history/src/Form/UserHistorySettingsForm.php
+[parsing] modules/contrib/user_history/src/Form/UserHistoryUpdateForm.php
+[parsing] modules/contrib/user_history/src/UserHistoryAccessControlHandler.php
+[parsing] modules/contrib/user_history/src/UserHistoryHtmlRouteProvider.php
+[parsing] modules/contrib/user_history/src/UserHistoryListBuilder.php
+[parsing] modules/contrib/user_history/src/UserHistoryViewBuilder.php
+[parsing] modules/contrib/user_history/src/UserHistoryViewsData.php
+[parsing] modules/contrib/user_history/tests/src/Functional/LoadTest.php
+[parsing] modules/contrib/user_history/user_history.archive.inc
+[parsing] modules/contrib/user_history/user_history.batch.inc
+[parsing] modules/contrib/user_history/user_history.install
+[parsing] modules/contrib/user_history/user_history.module
+[parsing] modules/contrib/user_history/user_history.page.inc
+[parsing] modules/contrib/user_history/user_history.restore.inc
+[refactoring] modules/contrib/user_history/src/Entity/UserHistory.php
+[refactoring] modules/contrib/user_history/src/Entity/UserHistoryInterface.php
+[refactoring] modules/contrib/user_history/src/EventSubscriber/ConfigEventsSubscriber.php
+[refactoring] modules/contrib/user_history/src/Form/UserHistoryAddForm.php
+[refactoring] modules/contrib/user_history/src/Form/UserHistoryArchiveForm.php
+[refactoring] modules/contrib/user_history/src/Form/UserHistoryDeleteForm.php
+[refactoring] modules/contrib/user_history/src/Form/UserHistoryEditForm.php
+[refactoring] modules/contrib/user_history/src/Form/UserHistoryForm.php
+[refactoring] modules/contrib/user_history/src/Form/UserHistoryInitialiseForm.php
+[refactoring] modules/contrib/user_history/src/Form/UserHistoryRestoreForm.php
+[refactoring] modules/contrib/user_history/src/Form/UserHistorySettingsForm.php
+[refactoring] modules/contrib/user_history/src/Form/UserHistoryUpdateForm.php
+[refactoring] modules/contrib/user_history/src/UserHistoryAccessControlHandler.php
+[refactoring] modules/contrib/user_history/src/UserHistoryHtmlRouteProvider.php
+[refactoring] modules/contrib/user_history/src/UserHistoryListBuilder.php
+[refactoring] modules/contrib/user_history/src/UserHistoryViewBuilder.php
+[refactoring] modules/contrib/user_history/src/UserHistoryViewsData.php
+[refactoring] modules/contrib/user_history/tests/src/Functional/LoadTest.php
+[refactoring] modules/contrib/user_history/user_history.archive.inc
+[refactoring] modules/contrib/user_history/user_history.batch.inc
+[refactoring] modules/contrib/user_history/user_history.install
+[refactoring] modules/contrib/user_history/user_history.module
+[refactoring] modules/contrib/user_history/user_history.page.inc
+[refactoring] modules/contrib/user_history/user_history.restore.inc
+[printing] modules/contrib/user_history/src/Entity/UserHistory.php
+[printing] modules/contrib/user_history/src/Entity/UserHistoryInterface.php
+[printing] modules/contrib/user_history/src/EventSubscriber/ConfigEventsSubscriber.php
+[printing] modules/contrib/user_history/src/Form/UserHistoryAddForm.php
+[printing] modules/contrib/user_history/src/Form/UserHistoryArchiveForm.php
+[printing] modules/contrib/user_history/src/Form/UserHistoryDeleteForm.php
+[printing] modules/contrib/user_history/src/Form/UserHistoryEditForm.php
+[printing] modules/contrib/user_history/src/Form/UserHistoryForm.php
+[printing] modules/contrib/user_history/src/Form/UserHistoryInitialiseForm.php
+[printing] modules/contrib/user_history/src/Form/UserHistoryRestoreForm.php
+[printing] modules/contrib/user_history/src/Form/UserHistorySettingsForm.php
+[printing] modules/contrib/user_history/src/Form/UserHistoryUpdateForm.php
+[printing] modules/contrib/user_history/src/UserHistoryAccessControlHandler.php
+[printing] modules/contrib/user_history/src/UserHistoryHtmlRouteProvider.php
+[printing] modules/contrib/user_history/src/UserHistoryListBuilder.php
+[printing] modules/contrib/user_history/src/UserHistoryViewBuilder.php
+[printing] modules/contrib/user_history/src/UserHistoryViewsData.php
+[printing] modules/contrib/user_history/tests/src/Functional/LoadTest.php
+[printing] modules/contrib/user_history/user_history.archive.inc
+[printing] modules/contrib/user_history/user_history.batch.inc
+[printing] modules/contrib/user_history/user_history.install
+[printing] modules/contrib/user_history/user_history.module
+[printing] modules/contrib/user_history/user_history.page.inc
+[printing] modules/contrib/user_history/user_history.restore.inc
+
+
+1 file with changes
+===================
+
+1) modules/contrib/user_history/user_history.module
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -146,7 +146,7 @@
+   $user_history = user_history_create_user_history($user, $values);
+
+   // Set the label for this user_history entity
+-  $now = new \Drupal\Core\Datetime\DrupalDateTime('now', date_default_timezone_get());
++  $now = new DrupalDateTime('now', date_default_timezone_get());
+   $user_history->setLabel($user->id() . ': Delete - ' . $now->format('Ymd-Hi'));
+
+   $user_history->setModifiedBy(\Drupal::currentUser());
+    ----------- end diff -----------
+
+ [OK] Rector is done! 1 file have been changed.                                 
+

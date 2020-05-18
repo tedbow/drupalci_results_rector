@@ -1,0 +1,46 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/commerce_migrate/commerce_migrate.module
+[parsing] modules/contrib/commerce_migrate/modules/commerce/commerce_migrate_commerce.module
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/EventSubscriber/MigratePrepareRow.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/Order.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/OrderItemDeriver.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/ProductDeriver.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/ProductVariationDeriver.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/ProfileDeriver.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/field/commerce1/CommerceCustomerProfileReference.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/field/commerce1/CommerceLineItemReference.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/field/commerce1/CommercePrice.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/field/commerce1/CommerceProductReference.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/process/commerce1/CommerceAttributeHandlerSetting.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/process/commerce1/CommerceAttributeTargetType.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/process/commerce1/CommerceFieldName.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/process/commerce1/CommercePrice.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/process/commerce1/CommerceRefreshMode.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/process/commerce1/OrderAdjustmentShipping.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/process/commerce1/OrderItemAdjustment.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/process/commerce1/OrderItemDiscountAdjustment.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/process/commerce1/ResolveProductVariationType.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/source/commerce1/BillingProfile.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/source/commerce1/Currency.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/source/commerce1/Field.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/source/commerce1/LineItem.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/source/commerce1/Message.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/source/commerce1/Order.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/source/commerce1/OrderItemType.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/source/commerce1/PaymentGateway.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/source/commerce1/PaymentTransaction.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/source/commerce1/ProductDisplay.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/source/commerce1/ProductDisplayType.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/source/commerce1/ProductType.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/source/commerce1/ProductVariations.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/source/commerce1/Profile.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/source/commerce1/ProfileRevision.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/source/commerce1/ProfileType.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/source/commerce1/ShippingFlatRate.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/source/commerce1/TaxType.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/source/commerce1/ViewMode.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/source/commerce1/Vocabulary.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/tests/fixtures/ck2.php
+Killed

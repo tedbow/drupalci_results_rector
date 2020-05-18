@@ -1,0 +1,10 @@
+diff --git a/entity_pilot.info.yml b/entity_pilot.info.yml
+index fd74547..a53cf66 100644
+--- a/entity_pilot.info.yml
++++ b/entity_pilot.info.yml
+@@ -12,4 +12,5 @@ test_dependencies:
+   - paragraphs
+ package: Entity Pilot
+ core: 8.x
++core_version_requirement: ^8 || ^9
+ configure: entity_pilot.overview

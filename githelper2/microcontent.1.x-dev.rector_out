@@ -1,0 +1,71 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/microcontent/microcontent.module
+[parsing] modules/contrib/microcontent/src/Access/MicroContentAccessHandler.php
+[parsing] modules/contrib/microcontent/src/Access/MicroContentPermissions.php
+[parsing] modules/contrib/microcontent/src/Entity/MicroContent.php
+[parsing] modules/contrib/microcontent/src/Entity/MicroContentInterface.php
+[parsing] modules/contrib/microcontent/src/Entity/MicroContentType.php
+[parsing] modules/contrib/microcontent/src/Entity/MicroContentTypeInterface.php
+[parsing] modules/contrib/microcontent/src/EntityHandlers/MicrocontentListBuilder.php
+[parsing] modules/contrib/microcontent/src/EntityHandlers/MicrocontentTypeAccessHandler.php
+[parsing] modules/contrib/microcontent/src/EntityHandlers/MicrocontentTypeListBuilder.php
+[parsing] modules/contrib/microcontent/src/EntityHandlers/MicrocontentViewBuilder.php
+[parsing] modules/contrib/microcontent/src/EntityHandlers/MicrocontentViewsData.php
+[parsing] modules/contrib/microcontent/src/Form/MicroContentForm.php
+[parsing] modules/contrib/microcontent/src/Form/MicroContentTypeForm.php
+[parsing] modules/contrib/microcontent/src/Plugin/BackFillQuery/MicroContentHandler.php
+[parsing] modules/contrib/microcontent/tests/src/Functional/MicroContentAdministrationTest.php
+[parsing] modules/contrib/microcontent/tests/src/Kernel/MicroContentAccessTest.php
+[parsing] modules/contrib/microcontent/tests/src/Kernel/MicroContentEntityTest.php
+[parsing] modules/contrib/microcontent/tests/src/Traits/MicroContentTestTrait.php
+[refactoring] modules/contrib/microcontent/microcontent.module
+[refactoring] modules/contrib/microcontent/src/Access/MicroContentAccessHandler.php
+[refactoring] modules/contrib/microcontent/src/Access/MicroContentPermissions.php
+[refactoring] modules/contrib/microcontent/src/Entity/MicroContent.php
+[refactoring] modules/contrib/microcontent/src/Entity/MicroContentInterface.php
+[refactoring] modules/contrib/microcontent/src/Entity/MicroContentType.php
+[refactoring] modules/contrib/microcontent/src/Entity/MicroContentTypeInterface.php
+[refactoring] modules/contrib/microcontent/src/EntityHandlers/MicrocontentListBuilder.php
+[refactoring] modules/contrib/microcontent/src/EntityHandlers/MicrocontentTypeAccessHandler.php
+[refactoring] modules/contrib/microcontent/src/EntityHandlers/MicrocontentTypeListBuilder.php
+[refactoring] modules/contrib/microcontent/src/EntityHandlers/MicrocontentViewBuilder.php
+[refactoring] modules/contrib/microcontent/src/EntityHandlers/MicrocontentViewsData.php
+[refactoring] modules/contrib/microcontent/src/Form/MicroContentForm.php
+[refactoring] modules/contrib/microcontent/src/Form/MicroContentTypeForm.php
+[refactoring] modules/contrib/microcontent/src/Plugin/BackFillQuery/MicroContentHandler.php
+[refactoring] modules/contrib/microcontent/tests/src/Functional/MicroContentAdministrationTest.php
+[refactoring] modules/contrib/microcontent/tests/src/Kernel/MicroContentAccessTest.php
+[refactoring] modules/contrib/microcontent/tests/src/Kernel/MicroContentEntityTest.php
+[refactoring] modules/contrib/microcontent/tests/src/Traits/MicroContentTestTrait.php
+[printing] modules/contrib/microcontent/microcontent.module
+[printing] modules/contrib/microcontent/src/Access/MicroContentAccessHandler.php
+[printing] modules/contrib/microcontent/src/Access/MicroContentPermissions.php
+[printing] modules/contrib/microcontent/src/Entity/MicroContent.php
+[printing] modules/contrib/microcontent/src/Entity/MicroContentInterface.php
+[printing] modules/contrib/microcontent/src/Entity/MicroContentType.php
+[printing] modules/contrib/microcontent/src/Entity/MicroContentTypeInterface.php
+[printing] modules/contrib/microcontent/src/EntityHandlers/MicrocontentListBuilder.php
+[printing] modules/contrib/microcontent/src/EntityHandlers/MicrocontentTypeAccessHandler.php
+[printing] modules/contrib/microcontent/src/EntityHandlers/MicrocontentTypeListBuilder.php
+[printing] modules/contrib/microcontent/src/EntityHandlers/MicrocontentViewBuilder.php
+[printing] modules/contrib/microcontent/src/EntityHandlers/MicrocontentViewsData.php
+[printing] modules/contrib/microcontent/src/Form/MicroContentForm.php
+[printing] modules/contrib/microcontent/src/Form/MicroContentTypeForm.php
+[printing] modules/contrib/microcontent/src/Plugin/BackFillQuery/MicroContentHandler.php
+[printing] modules/contrib/microcontent/tests/src/Functional/MicroContentAdministrationTest.php
+[printing] modules/contrib/microcontent/tests/src/Kernel/MicroContentAccessTest.php
+[printing] modules/contrib/microcontent/tests/src/Kernel/MicroContentEntityTest.php
+[printing] modules/contrib/microcontent/tests/src/Traits/MicroContentTestTrait.php
+
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/microcontent/src/Plugin/BackFillQuery/MicroContentHand
+         ler.php" file, due to:                                                 
+         "Analyze error: "Class                                                 
+         Drupal\backfill_formatter\Plugin\BackFillQuery\PermissionStatusHandler 
+         not found and could not be autoloaded.". Include your files in         
+         "parameters > autoload_paths".                                         
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+

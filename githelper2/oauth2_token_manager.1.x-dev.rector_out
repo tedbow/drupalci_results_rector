@@ -1,0 +1,82 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/oauth2_token_manager/modules/box/src/BoxTokenManagerServiceProvider.php
+[parsing] modules/contrib/oauth2_token_manager/modules/box/src/Commands/BoxTokenGeneratorCommands.php
+[parsing] modules/contrib/oauth2_token_manager/modules/box/src/Controller/BoxValidationController.php
+[parsing] modules/contrib/oauth2_token_manager/modules/quip/src/Commands/QuipTokenGeneratorCommands.php
+[parsing] modules/contrib/oauth2_token_manager/modules/quip/src/Controller/QuipValidationController.php
+[parsing] modules/contrib/oauth2_token_manager/modules/quip/src/QuipTokenManagerServiceProvider.php
+[parsing] modules/contrib/oauth2_token_manager/modules/slack/src/Commands/SlackTokenGeneratorCommands.php
+[parsing] modules/contrib/oauth2_token_manager/modules/slack/src/Controller/SlackValidationController.php
+[parsing] modules/contrib/oauth2_token_manager/modules/slack/src/SlackTokenManagerServiceProvider.php
+[parsing] modules/contrib/oauth2_token_manager/src/Commands/TokenGeneratorCommandsBase.php
+[parsing] modules/contrib/oauth2_token_manager/src/Controller/ValidationControllerBase.php
+[parsing] modules/contrib/oauth2_token_manager/src/Oauth2TokenManagerServiceProviderBase.php
+[parsing] modules/contrib/oauth2_token_manager/src/TokenManager.php
+[parsing] modules/contrib/oauth2_token_manager/tests/src/Functional/LoadTest.php
+[refactoring] modules/contrib/oauth2_token_manager/modules/box/src/BoxTokenManagerServiceProvider.php
+[refactoring] modules/contrib/oauth2_token_manager/modules/box/src/Commands/BoxTokenGeneratorCommands.php
+[refactoring] modules/contrib/oauth2_token_manager/modules/box/src/Controller/BoxValidationController.php
+[refactoring] modules/contrib/oauth2_token_manager/modules/quip/src/Commands/QuipTokenGeneratorCommands.php
+[refactoring] modules/contrib/oauth2_token_manager/modules/quip/src/Controller/QuipValidationController.php
+[refactoring] modules/contrib/oauth2_token_manager/modules/quip/src/QuipTokenManagerServiceProvider.php
+[refactoring] modules/contrib/oauth2_token_manager/modules/slack/src/Commands/SlackTokenGeneratorCommands.php
+[refactoring] modules/contrib/oauth2_token_manager/modules/slack/src/Controller/SlackValidationController.php
+[refactoring] modules/contrib/oauth2_token_manager/modules/slack/src/SlackTokenManagerServiceProvider.php
+[refactoring] modules/contrib/oauth2_token_manager/src/Commands/TokenGeneratorCommandsBase.php
+[refactoring] modules/contrib/oauth2_token_manager/src/Controller/ValidationControllerBase.php
+[refactoring] modules/contrib/oauth2_token_manager/src/Oauth2TokenManagerServiceProviderBase.php
+[refactoring] modules/contrib/oauth2_token_manager/src/TokenManager.php
+[refactoring] modules/contrib/oauth2_token_manager/tests/src/Functional/LoadTest.php
+[printing] modules/contrib/oauth2_token_manager/modules/box/src/BoxTokenManagerServiceProvider.php
+[printing] modules/contrib/oauth2_token_manager/modules/box/src/Commands/BoxTokenGeneratorCommands.php
+[printing] modules/contrib/oauth2_token_manager/modules/box/src/Controller/BoxValidationController.php
+[printing] modules/contrib/oauth2_token_manager/modules/quip/src/Commands/QuipTokenGeneratorCommands.php
+[printing] modules/contrib/oauth2_token_manager/modules/quip/src/Controller/QuipValidationController.php
+[printing] modules/contrib/oauth2_token_manager/modules/quip/src/QuipTokenManagerServiceProvider.php
+[printing] modules/contrib/oauth2_token_manager/modules/slack/src/Commands/SlackTokenGeneratorCommands.php
+[printing] modules/contrib/oauth2_token_manager/modules/slack/src/Controller/SlackValidationController.php
+[printing] modules/contrib/oauth2_token_manager/modules/slack/src/SlackTokenManagerServiceProvider.php
+[printing] modules/contrib/oauth2_token_manager/src/Commands/TokenGeneratorCommandsBase.php
+[printing] modules/contrib/oauth2_token_manager/src/Controller/ValidationControllerBase.php
+[printing] modules/contrib/oauth2_token_manager/src/Oauth2TokenManagerServiceProviderBase.php
+[printing] modules/contrib/oauth2_token_manager/src/TokenManager.php
+[printing] modules/contrib/oauth2_token_manager/tests/src/Functional/LoadTest.php
+
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/oauth2_token_manager/modules/box/src/Commands/BoxToken
+         GeneratorCommands.php" file, due to:                                   
+         "Analyze error: "Class                                                 
+         Drupal\oauth2_token_manager\Commands\TokenGeneratorCommandsBase not    
+         found and could not be autoloaded.". Include your files in "parameters 
+         > autoload_paths".                                                     
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/oauth2_token_manager/modules/quip/src/Commands/QuipTok
+         enGeneratorCommands.php" file, due to:                                 
+         "Analyze error: "Class                                                 
+         Drupal\oauth2_token_manager\Commands\TokenGeneratorCommandsBase not    
+         found and could not be autoloaded.". Include your files in "parameters 
+         > autoload_paths".                                                     
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/oauth2_token_manager/modules/slack/src/Commands/SlackT
+         okenGeneratorCommands.php" file, due to:                               
+         "Analyze error: "Class                                                 
+         Drupal\oauth2_token_manager\Commands\TokenGeneratorCommandsBase not    
+         found and could not be autoloaded.". Include your files in "parameters 
+         > autoload_paths".                                                     
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/oauth2_token_manager/src/Commands/TokenGeneratorComman
+         dsBase.php" file, due to:                                              
+         "Analyze error: "Class Drush\Commands\DrushCommands not found and could
+         not be autoloaded.". Include your files in "parameters >               
+         autoload_paths".                                                       
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+

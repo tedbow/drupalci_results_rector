@@ -1,0 +1,9 @@
+./composer.json has been updated
+> Drupal\Composer\Composer::ensureComposerVersion
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+
+mmap() failed: [12] Cannot allocate memory
+
+mmap() failed: [12] Cannot allocate memory
+PHP Fatal error:  Out of memory (allocated 918560768) (tried to allocate 67108872 bytes) in phar:///usr/local/bin/composer/src/Composer/DependencyResolver/RuleSet.php on line 84

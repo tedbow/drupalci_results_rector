@@ -1,0 +1,474 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/workbench_moderation/src/Access/LatestRevisionCheck.php
+[parsing] modules/contrib/workbench_moderation/src/Entity/Handler/BlockContentModerationHandler.php
+[parsing] modules/contrib/workbench_moderation/src/Entity/Handler/ModerationHandler.php
+[parsing] modules/contrib/workbench_moderation/src/Entity/Handler/ModerationHandlerInterface.php
+[parsing] modules/contrib/workbench_moderation/src/Entity/Handler/NodeModerationHandler.php
+[parsing] modules/contrib/workbench_moderation/src/Entity/ModerationState.php
+[parsing] modules/contrib/workbench_moderation/src/Entity/ModerationStateTransition.php
+[parsing] modules/contrib/workbench_moderation/src/EntityOperations.php
+[parsing] modules/contrib/workbench_moderation/src/EntityTypeInfo.php
+[parsing] modules/contrib/workbench_moderation/src/Event/WorkbenchModerationEvents.php
+[parsing] modules/contrib/workbench_moderation/src/Event/WorkbenchModerationTransitionEvent.php
+[parsing] modules/contrib/workbench_moderation/src/Form/BundleModerationConfigurationForm.php
+[parsing] modules/contrib/workbench_moderation/src/Form/EntityModerationForm.php
+[parsing] modules/contrib/workbench_moderation/src/Form/ModerationStateDeleteForm.php
+[parsing] modules/contrib/workbench_moderation/src/Form/ModerationStateForm.php
+[parsing] modules/contrib/workbench_moderation/src/Form/ModerationStateTransitionDeleteForm.php
+[parsing] modules/contrib/workbench_moderation/src/Form/ModerationStateTransitionForm.php
+[parsing] modules/contrib/workbench_moderation/src/InlineEditingDisabler.php
+[parsing] modules/contrib/workbench_moderation/src/ModerationInformation.php
+[parsing] modules/contrib/workbench_moderation/src/ModerationInformationInterface.php
+[parsing] modules/contrib/workbench_moderation/src/ModerationStateAccessControlHandler.php
+[parsing] modules/contrib/workbench_moderation/src/ModerationStateInterface.php
+[parsing] modules/contrib/workbench_moderation/src/ModerationStateListBuilder.php
+[parsing] modules/contrib/workbench_moderation/src/ModerationStateTransitionInterface.php
+[parsing] modules/contrib/workbench_moderation/src/ModerationStateTransitionListBuilder.php
+[parsing] modules/contrib/workbench_moderation/src/ModerationStateTransitionStorage.php
+[parsing] modules/contrib/workbench_moderation/src/ParamConverter/EntityRevisionConverter.php
+[parsing] modules/contrib/workbench_moderation/src/Permissions.php
+[parsing] modules/contrib/workbench_moderation/src/Plugin/Action/ModerationOptOutPublishNode.php
+[parsing] modules/contrib/workbench_moderation/src/Plugin/Action/ModerationOptOutUnpublishNode.php
+[parsing] modules/contrib/workbench_moderation/src/Plugin/Derivative/DynamicLocalTasks.php
+[parsing] modules/contrib/workbench_moderation/src/Plugin/Field/FieldWidget/ModerationStateWidget.php
+[parsing] modules/contrib/workbench_moderation/src/Plugin/Menu/EditTab.php
+[parsing] modules/contrib/workbench_moderation/src/Plugin/Validation/Constraint/ModerationState.php
+[parsing] modules/contrib/workbench_moderation/src/Plugin/Validation/Constraint/ModerationStateValidator.php
+[parsing] modules/contrib/workbench_moderation/src/Plugin/views/filter/LatestRevision.php
+[parsing] modules/contrib/workbench_moderation/src/RevisionTracker.php
+[parsing] modules/contrib/workbench_moderation/src/RevisionTrackerInterface.php
+[parsing] modules/contrib/workbench_moderation/src/Routing/EntityModerationRouteProvider.php
+[parsing] modules/contrib/workbench_moderation/src/Routing/EntityTypeModerationRouteProvider.php
+[parsing] modules/contrib/workbench_moderation/src/StateTransitionValidation.php
+[parsing] modules/contrib/workbench_moderation/src/ViewsData.php
+[parsing] modules/contrib/workbench_moderation/src/WorkbenchPreprocess.php
+[parsing] modules/contrib/workbench_moderation/tests/src/Functional/LatestRevisionViewsFilterTest.php
+[parsing] modules/contrib/workbench_moderation/tests/src/Functional/ModerationFormAccessTest.php
+[parsing] modules/contrib/workbench_moderation/tests/src/Functional/ModerationFormTest.php
+[parsing] modules/contrib/workbench_moderation/tests/src/Functional/ModerationLocaleTest.php
+[parsing] modules/contrib/workbench_moderation/tests/src/Functional/ModerationStateAccessTest.php
+[parsing] modules/contrib/workbench_moderation/tests/src/Functional/ModerationStateBlockTest.php
+[parsing] modules/contrib/workbench_moderation/tests/src/Functional/ModerationStateNodeTest.php
+[parsing] modules/contrib/workbench_moderation/tests/src/Functional/ModerationStateNodeTypeTest.php
+[parsing] modules/contrib/workbench_moderation/tests/src/Functional/ModerationStateStatesTest.php
+[parsing] modules/contrib/workbench_moderation/tests/src/Functional/ModerationStateTestBase.php
+[parsing] modules/contrib/workbench_moderation/tests/src/Functional/ModerationStateTransitionsTest.php
+[parsing] modules/contrib/workbench_moderation/tests/src/Functional/NodeAccessTest.php
+[parsing] modules/contrib/workbench_moderation/tests/src/Kernel/EntityOperationsTest.php
+[parsing] modules/contrib/workbench_moderation/tests/src/Kernel/EntityRevisionConverterTest.php
+[parsing] modules/contrib/workbench_moderation/tests/src/Kernel/EntityStateChangeValidationTest.php
+[parsing] modules/contrib/workbench_moderation/tests/src/Kernel/ModerationStateEntityTest.php
+[parsing] modules/contrib/workbench_moderation/tests/src/Kernel/ModerationStateFieldTest.php
+[parsing] modules/contrib/workbench_moderation/tests/src/Kernel/ViewsDataIntegrationTest.php
+[parsing] modules/contrib/workbench_moderation/tests/src/Kernel/WorkbenchModerationSchemaTest.php
+[parsing] modules/contrib/workbench_moderation/tests/src/Traits/WorkbenchModerationTestTrait.php
+[parsing] modules/contrib/workbench_moderation/tests/src/Unit/LatestRevisionCheckTest.php
+[parsing] modules/contrib/workbench_moderation/tests/src/Unit/ModerationInformationTest.php
+[parsing] modules/contrib/workbench_moderation/tests/src/Unit/StateTransitionValidationTest.php
+[parsing] modules/contrib/workbench_moderation/tests/src/Unit/WorkbenchPreprocessTest.php
+[parsing] modules/contrib/workbench_moderation/workbench_moderation.install
+[parsing] modules/contrib/workbench_moderation/workbench_moderation.module
+[parsing] modules/contrib/workbench_moderation/workbench_moderation.views.inc
+[refactoring] modules/contrib/workbench_moderation/src/Access/LatestRevisionCheck.php
+[refactoring] modules/contrib/workbench_moderation/src/Entity/Handler/BlockContentModerationHandler.php
+[refactoring] modules/contrib/workbench_moderation/src/Entity/Handler/ModerationHandler.php
+[refactoring] modules/contrib/workbench_moderation/src/Entity/Handler/ModerationHandlerInterface.php
+[refactoring] modules/contrib/workbench_moderation/src/Entity/Handler/NodeModerationHandler.php
+[refactoring] modules/contrib/workbench_moderation/src/Entity/ModerationState.php
+[refactoring] modules/contrib/workbench_moderation/src/Entity/ModerationStateTransition.php
+[refactoring] modules/contrib/workbench_moderation/src/EntityOperations.php
+[refactoring] modules/contrib/workbench_moderation/src/EntityTypeInfo.php
+[refactoring] modules/contrib/workbench_moderation/src/Event/WorkbenchModerationEvents.php
+[refactoring] modules/contrib/workbench_moderation/src/Event/WorkbenchModerationTransitionEvent.php
+[refactoring] modules/contrib/workbench_moderation/src/Form/BundleModerationConfigurationForm.php
+[refactoring] modules/contrib/workbench_moderation/src/Form/EntityModerationForm.php
+[refactoring] modules/contrib/workbench_moderation/src/Form/ModerationStateDeleteForm.php
+[refactoring] modules/contrib/workbench_moderation/src/Form/ModerationStateForm.php
+[refactoring] modules/contrib/workbench_moderation/src/Form/ModerationStateTransitionDeleteForm.php
+[refactoring] modules/contrib/workbench_moderation/src/Form/ModerationStateTransitionForm.php
+[refactoring] modules/contrib/workbench_moderation/src/InlineEditingDisabler.php
+[refactoring] modules/contrib/workbench_moderation/src/ModerationInformation.php
+[refactoring] modules/contrib/workbench_moderation/src/ModerationInformationInterface.php
+[refactoring] modules/contrib/workbench_moderation/src/ModerationStateAccessControlHandler.php
+[refactoring] modules/contrib/workbench_moderation/src/ModerationStateInterface.php
+[refactoring] modules/contrib/workbench_moderation/src/ModerationStateListBuilder.php
+[refactoring] modules/contrib/workbench_moderation/src/ModerationStateTransitionInterface.php
+[refactoring] modules/contrib/workbench_moderation/src/ModerationStateTransitionListBuilder.php
+[refactoring] modules/contrib/workbench_moderation/src/ModerationStateTransitionStorage.php
+[refactoring] modules/contrib/workbench_moderation/src/ParamConverter/EntityRevisionConverter.php
+[refactoring] modules/contrib/workbench_moderation/src/Permissions.php
+[refactoring] modules/contrib/workbench_moderation/src/Plugin/Action/ModerationOptOutPublishNode.php
+[refactoring] modules/contrib/workbench_moderation/src/Plugin/Action/ModerationOptOutUnpublishNode.php
+[refactoring] modules/contrib/workbench_moderation/src/Plugin/Derivative/DynamicLocalTasks.php
+[refactoring] modules/contrib/workbench_moderation/src/Plugin/Field/FieldWidget/ModerationStateWidget.php
+[refactoring] modules/contrib/workbench_moderation/src/Plugin/Menu/EditTab.php
+[refactoring] modules/contrib/workbench_moderation/src/Plugin/Validation/Constraint/ModerationState.php
+[refactoring] modules/contrib/workbench_moderation/src/Plugin/Validation/Constraint/ModerationStateValidator.php
+[refactoring] modules/contrib/workbench_moderation/src/Plugin/views/filter/LatestRevision.php
+[refactoring] modules/contrib/workbench_moderation/src/RevisionTracker.php
+[refactoring] modules/contrib/workbench_moderation/src/RevisionTrackerInterface.php
+[refactoring] modules/contrib/workbench_moderation/src/Routing/EntityModerationRouteProvider.php
+[refactoring] modules/contrib/workbench_moderation/src/Routing/EntityTypeModerationRouteProvider.php
+[refactoring] modules/contrib/workbench_moderation/src/StateTransitionValidation.php
+[refactoring] modules/contrib/workbench_moderation/src/ViewsData.php
+[refactoring] modules/contrib/workbench_moderation/src/WorkbenchPreprocess.php
+[refactoring] modules/contrib/workbench_moderation/tests/src/Functional/LatestRevisionViewsFilterTest.php
+[refactoring] modules/contrib/workbench_moderation/tests/src/Functional/ModerationFormAccessTest.php
+[refactoring] modules/contrib/workbench_moderation/tests/src/Functional/ModerationFormTest.php
+[refactoring] modules/contrib/workbench_moderation/tests/src/Functional/ModerationLocaleTest.php
+[refactoring] modules/contrib/workbench_moderation/tests/src/Functional/ModerationStateAccessTest.php
+[refactoring] modules/contrib/workbench_moderation/tests/src/Functional/ModerationStateBlockTest.php
+[refactoring] modules/contrib/workbench_moderation/tests/src/Functional/ModerationStateNodeTest.php
+[refactoring] modules/contrib/workbench_moderation/tests/src/Functional/ModerationStateNodeTypeTest.php
+[refactoring] modules/contrib/workbench_moderation/tests/src/Functional/ModerationStateStatesTest.php
+[refactoring] modules/contrib/workbench_moderation/tests/src/Functional/ModerationStateTestBase.php
+[refactoring] modules/contrib/workbench_moderation/tests/src/Functional/ModerationStateTransitionsTest.php
+[refactoring] modules/contrib/workbench_moderation/tests/src/Functional/NodeAccessTest.php
+[refactoring] modules/contrib/workbench_moderation/tests/src/Kernel/EntityOperationsTest.php
+[refactoring] modules/contrib/workbench_moderation/tests/src/Kernel/EntityRevisionConverterTest.php
+[refactoring] modules/contrib/workbench_moderation/tests/src/Kernel/EntityStateChangeValidationTest.php
+[refactoring] modules/contrib/workbench_moderation/tests/src/Kernel/ModerationStateEntityTest.php
+[refactoring] modules/contrib/workbench_moderation/tests/src/Kernel/ModerationStateFieldTest.php
+[refactoring] modules/contrib/workbench_moderation/tests/src/Kernel/ViewsDataIntegrationTest.php
+[refactoring] modules/contrib/workbench_moderation/tests/src/Kernel/WorkbenchModerationSchemaTest.php
+[refactoring] modules/contrib/workbench_moderation/tests/src/Traits/WorkbenchModerationTestTrait.php
+[refactoring] modules/contrib/workbench_moderation/tests/src/Unit/LatestRevisionCheckTest.php
+[refactoring] modules/contrib/workbench_moderation/tests/src/Unit/ModerationInformationTest.php
+[refactoring] modules/contrib/workbench_moderation/tests/src/Unit/StateTransitionValidationTest.php
+[refactoring] modules/contrib/workbench_moderation/tests/src/Unit/WorkbenchPreprocessTest.php
+[refactoring] modules/contrib/workbench_moderation/workbench_moderation.install
+[refactoring] modules/contrib/workbench_moderation/workbench_moderation.module
+[refactoring] modules/contrib/workbench_moderation/workbench_moderation.views.inc
+[printing] modules/contrib/workbench_moderation/src/Access/LatestRevisionCheck.php
+[printing] modules/contrib/workbench_moderation/src/Entity/Handler/BlockContentModerationHandler.php
+[printing] modules/contrib/workbench_moderation/src/Entity/Handler/ModerationHandler.php
+[printing] modules/contrib/workbench_moderation/src/Entity/Handler/ModerationHandlerInterface.php
+[printing] modules/contrib/workbench_moderation/src/Entity/Handler/NodeModerationHandler.php
+[printing] modules/contrib/workbench_moderation/src/Entity/ModerationState.php
+[printing] modules/contrib/workbench_moderation/src/Entity/ModerationStateTransition.php
+[printing] modules/contrib/workbench_moderation/src/EntityOperations.php
+[printing] modules/contrib/workbench_moderation/src/EntityTypeInfo.php
+[printing] modules/contrib/workbench_moderation/src/Event/WorkbenchModerationEvents.php
+[printing] modules/contrib/workbench_moderation/src/Event/WorkbenchModerationTransitionEvent.php
+[printing] modules/contrib/workbench_moderation/src/Form/BundleModerationConfigurationForm.php
+[printing] modules/contrib/workbench_moderation/src/Form/EntityModerationForm.php
+[printing] modules/contrib/workbench_moderation/src/Form/ModerationStateDeleteForm.php
+[printing] modules/contrib/workbench_moderation/src/Form/ModerationStateForm.php
+[printing] modules/contrib/workbench_moderation/src/Form/ModerationStateTransitionDeleteForm.php
+[printing] modules/contrib/workbench_moderation/src/Form/ModerationStateTransitionForm.php
+[printing] modules/contrib/workbench_moderation/src/InlineEditingDisabler.php
+[printing] modules/contrib/workbench_moderation/src/ModerationInformation.php
+[printing] modules/contrib/workbench_moderation/src/ModerationInformationInterface.php
+[printing] modules/contrib/workbench_moderation/src/ModerationStateAccessControlHandler.php
+[printing] modules/contrib/workbench_moderation/src/ModerationStateInterface.php
+[printing] modules/contrib/workbench_moderation/src/ModerationStateListBuilder.php
+[printing] modules/contrib/workbench_moderation/src/ModerationStateTransitionInterface.php
+[printing] modules/contrib/workbench_moderation/src/ModerationStateTransitionListBuilder.php
+[printing] modules/contrib/workbench_moderation/src/ModerationStateTransitionStorage.php
+[printing] modules/contrib/workbench_moderation/src/ParamConverter/EntityRevisionConverter.php
+[printing] modules/contrib/workbench_moderation/src/Permissions.php
+[printing] modules/contrib/workbench_moderation/src/Plugin/Action/ModerationOptOutPublishNode.php
+[printing] modules/contrib/workbench_moderation/src/Plugin/Action/ModerationOptOutUnpublishNode.php
+[printing] modules/contrib/workbench_moderation/src/Plugin/Derivative/DynamicLocalTasks.php
+[printing] modules/contrib/workbench_moderation/src/Plugin/Field/FieldWidget/ModerationStateWidget.php
+[printing] modules/contrib/workbench_moderation/src/Plugin/Menu/EditTab.php
+[printing] modules/contrib/workbench_moderation/src/Plugin/Validation/Constraint/ModerationState.php
+[printing] modules/contrib/workbench_moderation/src/Plugin/Validation/Constraint/ModerationStateValidator.php
+[printing] modules/contrib/workbench_moderation/src/Plugin/views/filter/LatestRevision.php
+[printing] modules/contrib/workbench_moderation/src/RevisionTracker.php
+[printing] modules/contrib/workbench_moderation/src/RevisionTrackerInterface.php
+[printing] modules/contrib/workbench_moderation/src/Routing/EntityModerationRouteProvider.php
+[printing] modules/contrib/workbench_moderation/src/Routing/EntityTypeModerationRouteProvider.php
+[printing] modules/contrib/workbench_moderation/src/StateTransitionValidation.php
+[printing] modules/contrib/workbench_moderation/src/ViewsData.php
+[printing] modules/contrib/workbench_moderation/src/WorkbenchPreprocess.php
+[printing] modules/contrib/workbench_moderation/tests/src/Functional/LatestRevisionViewsFilterTest.php
+[printing] modules/contrib/workbench_moderation/tests/src/Functional/ModerationFormAccessTest.php
+[printing] modules/contrib/workbench_moderation/tests/src/Functional/ModerationFormTest.php
+[printing] modules/contrib/workbench_moderation/tests/src/Functional/ModerationLocaleTest.php
+[printing] modules/contrib/workbench_moderation/tests/src/Functional/ModerationStateAccessTest.php
+[printing] modules/contrib/workbench_moderation/tests/src/Functional/ModerationStateBlockTest.php
+[printing] modules/contrib/workbench_moderation/tests/src/Functional/ModerationStateNodeTest.php
+[printing] modules/contrib/workbench_moderation/tests/src/Functional/ModerationStateNodeTypeTest.php
+[printing] modules/contrib/workbench_moderation/tests/src/Functional/ModerationStateStatesTest.php
+[printing] modules/contrib/workbench_moderation/tests/src/Functional/ModerationStateTestBase.php
+[printing] modules/contrib/workbench_moderation/tests/src/Functional/ModerationStateTransitionsTest.php
+[printing] modules/contrib/workbench_moderation/tests/src/Functional/NodeAccessTest.php
+[printing] modules/contrib/workbench_moderation/tests/src/Kernel/EntityOperationsTest.php
+[printing] modules/contrib/workbench_moderation/tests/src/Kernel/EntityRevisionConverterTest.php
+[printing] modules/contrib/workbench_moderation/tests/src/Kernel/EntityStateChangeValidationTest.php
+[printing] modules/contrib/workbench_moderation/tests/src/Kernel/ModerationStateEntityTest.php
+[printing] modules/contrib/workbench_moderation/tests/src/Kernel/ModerationStateFieldTest.php
+[printing] modules/contrib/workbench_moderation/tests/src/Kernel/ViewsDataIntegrationTest.php
+[printing] modules/contrib/workbench_moderation/tests/src/Kernel/WorkbenchModerationSchemaTest.php
+[printing] modules/contrib/workbench_moderation/tests/src/Traits/WorkbenchModerationTestTrait.php
+[printing] modules/contrib/workbench_moderation/tests/src/Unit/LatestRevisionCheckTest.php
+[printing] modules/contrib/workbench_moderation/tests/src/Unit/ModerationInformationTest.php
+[printing] modules/contrib/workbench_moderation/tests/src/Unit/StateTransitionValidationTest.php
+[printing] modules/contrib/workbench_moderation/tests/src/Unit/WorkbenchPreprocessTest.php
+[printing] modules/contrib/workbench_moderation/workbench_moderation.install
+[printing] modules/contrib/workbench_moderation/workbench_moderation.module
+[printing] modules/contrib/workbench_moderation/workbench_moderation.views.inc
+
+
+11 files with changes
+=====================
+
+1) modules/contrib/workbench_moderation/src/Form/BundleModerationConfigurationForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -186,6 +186,6 @@
+
+     parent::submitForm( $form, $form_state);
+
+-    drupal_set_message($this->t('Your settings have been saved.'));
++    $this->messenger()->addStatus($this->t('Your settings have been saved.'));
+   }
+ }
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+2) modules/contrib/workbench_moderation/src/Form/EntityModerationForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -146,7 +146,7 @@
+
+     $entity->save();
+
+-    drupal_set_message($this->t('The moderation state has been updated.'));
++    $this->messenger()->addStatus($this->t('The moderation state has been updated.'));
+
+     /** @var ModerationState $state */
+     $state = $this->entityTypeManager->getStorage('moderation_state')->load($new_state);
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+3) modules/contrib/workbench_moderation/src/Form/ModerationStateDeleteForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -37,13 +37,11 @@
+   public function submitForm(array &$form, FormStateInterface $form_state) {
+     $this->entity->delete();
+
+-    drupal_set_message(
+-      $this->t('Moderation state %label deleted.',
+-        [
+-          '%label' => $this->entity->label()
+-        ]
+-        )
+-    );
++    $this->messenger()->addStatus($this->t('Moderation state %label deleted.',
++      [
++        '%label' => $this->entity->label()
++      ]
++      ));
+
+     $form_state->setRedirectUrl($this->getCancelUrl());
+   }
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+4) modules/contrib/workbench_moderation/src/Form/ModerationStateForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -69,13 +69,13 @@
+
+     switch ($status) {
+       case SAVED_NEW:
+-        drupal_set_message($this->t('Created the %label Moderation state.', [
++        $this->messenger()->addStatus($this->t('Created the %label Moderation state.', [
+           '%label' => $moderation_state->label(),
+         ]));
+         break;
+
+       default:
+-        drupal_set_message($this->t('Saved the %label Moderation state.', [
++        $this->messenger()->addStatus($this->t('Saved the %label Moderation state.', [
+           '%label' => $moderation_state->label(),
+         ]));
+     }
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+5) modules/contrib/workbench_moderation/src/Form/ModerationStateTransitionDeleteForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -37,13 +37,11 @@
+   public function submitForm(array &$form, FormStateInterface $form_state) {
+     $this->entity->delete();
+
+-    drupal_set_message(
+-      $this->t('Moderation transition %label deleted.',
+-        [
+-          '%label' => $this->entity->label()
+-        ]
+-        )
+-    );
++    $this->messenger()->addStatus($this->t('Moderation transition %label deleted.',
++      [
++        '%label' => $this->entity->label()
++      ]
++      ));
+
+     $form_state->setRedirectUrl($this->getCancelUrl());
+   }
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+6) modules/contrib/workbench_moderation/src/Form/ModerationStateTransitionForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -125,13 +125,13 @@
+
+     switch ($status) {
+       case SAVED_NEW:
+-        drupal_set_message($this->t('Created the %label Moderation state transition.', [
++        $this->messenger()->addStatus($this->t('Created the %label Moderation state transition.', [
+           '%label' => $moderation_state_transition->label(),
+         ]));
+         break;
+
+       default:
+-        drupal_set_message($this->t('Saved the %label Moderation state transition.', [
++        $this->messenger()->addStatus($this->t('Saved the %label Moderation state transition.', [
+           '%label' => $moderation_state_transition->label(),
+         ]));
+     }
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+7) modules/contrib/workbench_moderation/src/ModerationInformation.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -213,4 +213,3 @@
+       && $entity->moderation_state->entity->isPublishedState();
+   }
+ }
+-
+    ----------- end diff -----------
+
+8) modules/contrib/workbench_moderation/src/Plugin/Action/ModerationOptOutPublishNode.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -43,7 +43,7 @@
+    */
+   public function execute($entity = NULL) {
+     if ($entity && $this->moderationInfo->isModeratableEntity($entity)) {
+-      drupal_set_message($this->t('One or more entities were skipped as they are under moderation and may not be directly published or unpublished.'));
++      $this->messenger()->addStatus($this->t('One or more entities were skipped as they are under moderation and may not be directly published or unpublished.'));
+       return;
+     }
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+9) modules/contrib/workbench_moderation/src/Plugin/Action/ModerationOptOutUnpublishNode.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -43,7 +43,7 @@
+    */
+   public function execute($entity = NULL) {
+     if ($entity && $this->moderationInfo->isModeratableEntity($entity)) {
+-      drupal_set_message($this->t('One or more entities were skipped as they are under moderation and may not be directly published or unpublished.'));
++      $this->messenger()->addStatus($this->t('One or more entities were skipped as they are under moderation and may not be directly published or unpublished.'));
+       return;
+     }
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+10) modules/contrib/workbench_moderation/tests/src/Functional/LatestRevisionViewsFilterTest.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -30,9 +30,6 @@
+     'publishing_dropbutton',
+   ];
+
+-  /**
+-   *
+-   */
+   public function testViewShowsCorrectNids() {
+     $node_type = $this->createNodeType('Test', 'test');
+    ----------- end diff -----------
+
+11) modules/contrib/workbench_moderation/workbench_moderation.install
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -1,9 +1,10 @@
+ <?php
++
++use Drupal\Core\Entity\ContentEntityTypeInterface;
+ /**
+  * @file
+  * Contains install/update hooks for moderation_state.
+  */
+-
+ /**
+  * Implements hook_install().
+  */
+@@ -27,7 +28,7 @@
+   // here to filter out such broken entities.
+   // @todo Remove when the underlying bug is fixed.
+   // @see https://www.drupal.org/node/2674446
+-  $revisionable_entity_defintions = array_filter($revisionable_entity_defintions, function(\Drupal\Core\Entity\ContentEntityTypeInterface $type) use ($field_manager) {
++  $revisionable_entity_defintions = array_filter($revisionable_entity_defintions, function(ContentEntityTypeInterface $type) use ($field_manager) {
+     return !empty($field_manager->getFieldStorageDefinitions($type->id())['moderation_state']);
+   });
+    ----------- end diff -----------
+
+ [OK] Rector is done! 11 files have been changed.                               
+

@@ -1,0 +1,92 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/s3fs_cors/s3fs_cors.install
+[parsing] modules/contrib/s3fs_cors/s3fs_cors.module
+[parsing] modules/contrib/s3fs_cors/src/Controller/AjaxController.php
+[parsing] modules/contrib/s3fs_cors/src/Element/S3CorsFile.php
+[parsing] modules/contrib/s3fs_cors/src/Element/S3fsCorsFile.php
+[parsing] modules/contrib/s3fs_cors/src/Form/S3fsCorsAdminForm.php
+[parsing] modules/contrib/s3fs_cors/src/Plugin/Field/FieldFormatter/S3fsCorsGenericFileFormatter.php
+[parsing] modules/contrib/s3fs_cors/src/Plugin/Field/FieldType/S3CorsFileItem.php
+[parsing] modules/contrib/s3fs_cors/src/Plugin/Field/FieldType/S3fsCorsFileItem.php
+[parsing] modules/contrib/s3fs_cors/src/Plugin/Field/FieldWidget/S3fsCorsFileWidget.php
+[parsing] modules/contrib/s3fs_cors/src/Plugin/Field/FieldWidget/S3fsCorsImageWidget.php
+[refactoring] modules/contrib/s3fs_cors/s3fs_cors.install
+[refactoring] modules/contrib/s3fs_cors/s3fs_cors.module
+[refactoring] modules/contrib/s3fs_cors/src/Controller/AjaxController.php
+[refactoring] modules/contrib/s3fs_cors/src/Element/S3CorsFile.php
+[refactoring] modules/contrib/s3fs_cors/src/Element/S3fsCorsFile.php
+[refactoring] modules/contrib/s3fs_cors/src/Form/S3fsCorsAdminForm.php
+[refactoring] modules/contrib/s3fs_cors/src/Plugin/Field/FieldFormatter/S3fsCorsGenericFileFormatter.php
+[refactoring] modules/contrib/s3fs_cors/src/Plugin/Field/FieldType/S3CorsFileItem.php
+[refactoring] modules/contrib/s3fs_cors/src/Plugin/Field/FieldType/S3fsCorsFileItem.php
+[refactoring] modules/contrib/s3fs_cors/src/Plugin/Field/FieldWidget/S3fsCorsFileWidget.php
+[refactoring] modules/contrib/s3fs_cors/src/Plugin/Field/FieldWidget/S3fsCorsImageWidget.php
+[printing] modules/contrib/s3fs_cors/s3fs_cors.install
+[printing] modules/contrib/s3fs_cors/s3fs_cors.module
+[printing] modules/contrib/s3fs_cors/src/Controller/AjaxController.php
+[printing] modules/contrib/s3fs_cors/src/Element/S3CorsFile.php
+[printing] modules/contrib/s3fs_cors/src/Element/S3fsCorsFile.php
+[printing] modules/contrib/s3fs_cors/src/Form/S3fsCorsAdminForm.php
+[printing] modules/contrib/s3fs_cors/src/Plugin/Field/FieldFormatter/S3fsCorsGenericFileFormatter.php
+[printing] modules/contrib/s3fs_cors/src/Plugin/Field/FieldType/S3CorsFileItem.php
+[printing] modules/contrib/s3fs_cors/src/Plugin/Field/FieldType/S3fsCorsFileItem.php
+[printing] modules/contrib/s3fs_cors/src/Plugin/Field/FieldWidget/S3fsCorsFileWidget.php
+[printing] modules/contrib/s3fs_cors/src/Plugin/Field/FieldWidget/S3fsCorsImageWidget.php
+
+
+2 files with changes
+====================
+
+1) modules/contrib/s3fs_cors/s3fs_cors.module
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -84,7 +84,7 @@
+     $file->filemime = $input['filemime'];
+     $file->uri = \Drupal::service('file_system')->getDestinationFilename("s3://$base_dir{$input['filename']}", FILE_EXISTS_RENAME);
+     $file->status = 0;
+-    $file->timestamp = REQUEST_TIME;
++    $file->timestamp = \Drupal::time()->getRequestTime();
+
+     // Save the uploaded file to the file_managed table.
+     $file = _s3fs_cors_file_save($file);
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\RequestTimeConstRector
+
+
+2) modules/contrib/s3fs_cors/src/Controller/AjaxController.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -2,6 +2,7 @@
+
+ namespace Drupal\s3fs_cors\Controller;
+
++use Drupal\Core\File\FileSystemInterface;
+ use Drupal\Core\Controller\ControllerBase;
+ use Drupal\Core\Site\Settings;
+ use Symfony\Component\HttpFoundation\JsonResponse;
+@@ -41,7 +42,7 @@
+
+     if ($file_exists) {
+       switch ($replace) {
+-        case FILE_EXISTS_REPLACE:
++        case FileSystemInterface::EXISTS_REPLACE:
+           // Do nothing here, we want to overwrite the existing file.
+           break;
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\FileExistsReplaceRector
+
+
+ [OK] Rector is done! 2 files have been changed.                                
+

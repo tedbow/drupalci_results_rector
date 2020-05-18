@@ -1,0 +1,25 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/migrate_drupal_d8/src/Plugin/migrate/source/d8/ContentEntity.php
+[parsing] modules/contrib/migrate_drupal_d8/src/Plugin/migrate/source/d8/File.php
+[parsing] modules/contrib/migrate_drupal_d8/src/Plugin/migrate/source/d8/Node.php
+[parsing] modules/contrib/migrate_drupal_d8/src/Plugin/migrate/source/d8/TaxonomyTerm.php
+[parsing] modules/contrib/migrate_drupal_d8/src/Plugin/migrate/source/d8/User.php
+[parsing] modules/contrib/migrate_drupal_d8/tests/src/Kernel/ContentEntityTest.php
+[refactoring] modules/contrib/migrate_drupal_d8/src/Plugin/migrate/source/d8/ContentEntity.php
+[refactoring] modules/contrib/migrate_drupal_d8/src/Plugin/migrate/source/d8/File.php
+[refactoring] modules/contrib/migrate_drupal_d8/src/Plugin/migrate/source/d8/Node.php
+[refactoring] modules/contrib/migrate_drupal_d8/src/Plugin/migrate/source/d8/TaxonomyTerm.php
+[refactoring] modules/contrib/migrate_drupal_d8/src/Plugin/migrate/source/d8/User.php
+[refactoring] modules/contrib/migrate_drupal_d8/tests/src/Kernel/ContentEntityTest.php
+[printing] modules/contrib/migrate_drupal_d8/src/Plugin/migrate/source/d8/ContentEntity.php
+[printing] modules/contrib/migrate_drupal_d8/src/Plugin/migrate/source/d8/File.php
+[printing] modules/contrib/migrate_drupal_d8/src/Plugin/migrate/source/d8/Node.php
+[printing] modules/contrib/migrate_drupal_d8/src/Plugin/migrate/source/d8/TaxonomyTerm.php
+[printing] modules/contrib/migrate_drupal_d8/src/Plugin/migrate/source/d8/User.php
+[printing] modules/contrib/migrate_drupal_d8/tests/src/Kernel/ContentEntityTest.php
+
+
+ [OK] Rector is done!                                                           
+

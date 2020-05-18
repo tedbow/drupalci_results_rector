@@ -1,0 +1,7 @@
+ [notice] Processing /var/lib/drupalci/workspace/drupal-checkouts/drupal2/modules/contrib/menu_position.
+  0/13 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   0%[2K  3/13 [▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░]  23%[2K  6/13 [▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░]  46%[2K  8/13 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░]  61%[2K 10/13 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░]  76%[2K 13/13 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 100%
+
+ [notice] Processing /var/lib/drupalci/workspace/drupal-checkouts/drupal2/modules/contrib/menu_position.
+PHP Fatal error:  Cannot redeclare composerRequireDrupal8() (previously declared in /var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/composer/autoload_real.php:70) in /var/lib/drupalci/workspace/drupal-checkouts/drupal4/vendor/composer/autoload_real.php on line 77
+Fatal error: Cannot redeclare composerRequireDrupal8() (previously declared in /var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/composer/autoload_real.php:70) in /var/lib/drupalci/workspace/drupal-checkouts/drupal4/vendor/composer/autoload_real.php on line 77
+ [error]  PHPStan failed:  

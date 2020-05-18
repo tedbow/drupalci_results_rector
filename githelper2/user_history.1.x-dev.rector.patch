@@ -1,0 +1,13 @@
+diff --git a/user_history.module b/user_history.module
+index a0cbe6a..1ca9879 100644
+--- a/user_history.module
++++ b/user_history.module
+@@ -146,7 +146,7 @@ function user_history_user_delete(UserInterface $user) {
+   $user_history = user_history_create_user_history($user, $values);
+ 
+   // Set the label for this user_history entity
+-  $now = new \Drupal\Core\Datetime\DrupalDateTime('now', date_default_timezone_get());
++  $now = new DrupalDateTime('now', date_default_timezone_get());
+   $user_history->setLabel($user->id() . ': Delete - ' . $now->format('Ymd-Hi'));
+ 
+   $user_history->setModifiedBy(\Drupal::currentUser());

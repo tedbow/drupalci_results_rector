@@ -1,0 +1,55 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/datetime_extras/datetime_extras.module
+[parsing] modules/contrib/datetime_extras/src/Plugin/Field/FieldWidget/DateConfigurableListWidget.php
+[parsing] modules/contrib/datetime_extras/src/Plugin/Field/FieldWidget/DateRangeDurationWidget.php
+[parsing] modules/contrib/datetime_extras/src/Plugin/Field/FieldWidget/DateTimeDatelistNoTimeWidget.php
+[parsing] modules/contrib/datetime_extras/tests/src/Functional/DateRangeDurationWidgetTest.php
+[parsing] modules/contrib/datetime_extras/tests/src/Functional/LoadTest.php
+[parsing] modules/contrib/datetime_extras/tests/src/Kernel/DateConfigurableListWidgetTest.php
+[parsing] modules/contrib/datetime_extras/tests/src/Kernel/DateTimeDatelistNoTimeWidgetTest.php
+[refactoring] modules/contrib/datetime_extras/datetime_extras.module
+[refactoring] modules/contrib/datetime_extras/src/Plugin/Field/FieldWidget/DateConfigurableListWidget.php
+[refactoring] modules/contrib/datetime_extras/src/Plugin/Field/FieldWidget/DateRangeDurationWidget.php
+[refactoring] modules/contrib/datetime_extras/src/Plugin/Field/FieldWidget/DateTimeDatelistNoTimeWidget.php
+[refactoring] modules/contrib/datetime_extras/tests/src/Functional/DateRangeDurationWidgetTest.php
+[refactoring] modules/contrib/datetime_extras/tests/src/Functional/LoadTest.php
+[refactoring] modules/contrib/datetime_extras/tests/src/Kernel/DateConfigurableListWidgetTest.php
+[refactoring] modules/contrib/datetime_extras/tests/src/Kernel/DateTimeDatelistNoTimeWidgetTest.php
+[printing] modules/contrib/datetime_extras/datetime_extras.module
+[printing] modules/contrib/datetime_extras/src/Plugin/Field/FieldWidget/DateConfigurableListWidget.php
+[printing] modules/contrib/datetime_extras/src/Plugin/Field/FieldWidget/DateRangeDurationWidget.php
+[printing] modules/contrib/datetime_extras/src/Plugin/Field/FieldWidget/DateTimeDatelistNoTimeWidget.php
+[printing] modules/contrib/datetime_extras/tests/src/Functional/DateRangeDurationWidgetTest.php
+[printing] modules/contrib/datetime_extras/tests/src/Functional/LoadTest.php
+[printing] modules/contrib/datetime_extras/tests/src/Kernel/DateConfigurableListWidgetTest.php
+[printing] modules/contrib/datetime_extras/tests/src/Kernel/DateTimeDatelistNoTimeWidgetTest.php
+
+
+1 file with changes
+===================
+
+1) modules/contrib/datetime_extras/tests/src/Functional/DateRangeDurationWidgetTest.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -72,7 +72,7 @@
+     // versions, so we don't nee to "fix" it for upgrade_status.
+     // @noRector
+     // @phpstan-ignore-next-line
+-    return entity_get_form_display($entity_type_id, $bundle_id, $form_mode);
++    return \Drupal::service('entity_display.repository')->getFormDisplay($entity_type_id, $bundle_id, $form_mode);
+   }
+
+   /**
+    ----------- end diff -----------
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\EntityGetFormDisplayRector
+
+
+ [OK] Rector is done! 1 file have been changed.                                 
+

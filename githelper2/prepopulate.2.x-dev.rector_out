@@ -1,0 +1,37 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/prepopulate/modules/og_prepopulate/og_prepopulate.module
+[parsing] modules/contrib/prepopulate/modules/og_prepopulate/src/Populate.php
+[parsing] modules/contrib/prepopulate/prepopulate.api.php
+[parsing] modules/contrib/prepopulate/prepopulate.module
+[parsing] modules/contrib/prepopulate/src/Populate.php
+[parsing] modules/contrib/prepopulate/src/PopulateInterface.php
+[parsing] modules/contrib/prepopulate/tests/modules/prepopulate_test/src/Form/PrepopulateTestForm.php
+[parsing] modules/contrib/prepopulate/tests/modules/prepopulate_test_unsafe/prepopulate_test_unsafe.module
+[parsing] modules/contrib/prepopulate/tests/src/Functional/PrepopulateFieldTest.php
+[parsing] modules/contrib/prepopulate/tests/src/Functional/PrepopulateFormTest.php
+[refactoring] modules/contrib/prepopulate/modules/og_prepopulate/og_prepopulate.module
+[refactoring] modules/contrib/prepopulate/modules/og_prepopulate/src/Populate.php
+[refactoring] modules/contrib/prepopulate/prepopulate.api.php
+[refactoring] modules/contrib/prepopulate/prepopulate.module
+[refactoring] modules/contrib/prepopulate/src/Populate.php
+[refactoring] modules/contrib/prepopulate/src/PopulateInterface.php
+[refactoring] modules/contrib/prepopulate/tests/modules/prepopulate_test/src/Form/PrepopulateTestForm.php
+[refactoring] modules/contrib/prepopulate/tests/modules/prepopulate_test_unsafe/prepopulate_test_unsafe.module
+[refactoring] modules/contrib/prepopulate/tests/src/Functional/PrepopulateFieldTest.php
+[refactoring] modules/contrib/prepopulate/tests/src/Functional/PrepopulateFormTest.php
+[printing] modules/contrib/prepopulate/modules/og_prepopulate/og_prepopulate.module
+[printing] modules/contrib/prepopulate/modules/og_prepopulate/src/Populate.php
+[printing] modules/contrib/prepopulate/prepopulate.api.php
+[printing] modules/contrib/prepopulate/prepopulate.module
+[printing] modules/contrib/prepopulate/src/Populate.php
+[printing] modules/contrib/prepopulate/src/PopulateInterface.php
+[printing] modules/contrib/prepopulate/tests/modules/prepopulate_test/src/Form/PrepopulateTestForm.php
+[printing] modules/contrib/prepopulate/tests/modules/prepopulate_test_unsafe/prepopulate_test_unsafe.module
+[printing] modules/contrib/prepopulate/tests/src/Functional/PrepopulateFieldTest.php
+[printing] modules/contrib/prepopulate/tests/src/Functional/PrepopulateFormTest.php
+
+
+ [OK] Rector is done!                                                           
+

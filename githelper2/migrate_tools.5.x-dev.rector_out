@@ -1,0 +1,161 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/migrate_tools/migrate_tools.module
+[parsing] modules/contrib/migrate_tools/src/Commands/MigrateToolsCommands.php
+[parsing] modules/contrib/migrate_tools/src/Controller/MessageController.php
+[parsing] modules/contrib/migrate_tools/src/Controller/MigrationController.php
+[parsing] modules/contrib/migrate_tools/src/Controller/MigrationGroupListBuilder.php
+[parsing] modules/contrib/migrate_tools/src/Controller/MigrationListBuilder.php
+[parsing] modules/contrib/migrate_tools/src/Drush9LogMigrateMessage.php
+[parsing] modules/contrib/migrate_tools/src/DrushLogMigrateMessage.php
+[parsing] modules/contrib/migrate_tools/src/EventSubscriber/MigrationDrushCommandProgress.php
+[parsing] modules/contrib/migrate_tools/src/EventSubscriber/MigrationImportSync.php
+[parsing] modules/contrib/migrate_tools/src/Form/MigrationAddForm.php
+[parsing] modules/contrib/migrate_tools/src/Form/MigrationDeleteForm.php
+[parsing] modules/contrib/migrate_tools/src/Form/MigrationEditForm.php
+[parsing] modules/contrib/migrate_tools/src/Form/MigrationExecuteForm.php
+[parsing] modules/contrib/migrate_tools/src/Form/MigrationFormBase.php
+[parsing] modules/contrib/migrate_tools/src/Form/MigrationGroupAddForm.php
+[parsing] modules/contrib/migrate_tools/src/Form/MigrationGroupDeleteForm.php
+[parsing] modules/contrib/migrate_tools/src/Form/MigrationGroupEditForm.php
+[parsing] modules/contrib/migrate_tools/src/Form/MigrationGroupFormBase.php
+[parsing] modules/contrib/migrate_tools/src/IdMapFilter.php
+[parsing] modules/contrib/migrate_tools/src/MigrateBatchExecutable.php
+[parsing] modules/contrib/migrate_tools/src/MigrateExecutable.php
+[parsing] modules/contrib/migrate_tools/src/MigrateTools.php
+[parsing] modules/contrib/migrate_tools/src/Routing/RouteProcessor.php
+[parsing] modules/contrib/migrate_tools/src/SourceFilter.php
+[parsing] modules/contrib/migrate_tools/tests/modules/migrate_tools_test/src/Commands/MigrateToolsTestCommands.php
+[parsing] modules/contrib/migrate_tools/tests/modules/migrate_tools_test/src/Plugin/migrate/source/ExceptionThrowingTestSource.php
+[parsing] modules/contrib/migrate_tools/tests/src/Functional/DrushBatchImportTest.php
+[parsing] modules/contrib/migrate_tools/tests/src/Functional/DrushCommandsGeneratorTest.php
+[parsing] modules/contrib/migrate_tools/tests/src/Functional/DrushCommandsTest.php
+[parsing] modules/contrib/migrate_tools/tests/src/Functional/MigrateExecutionFormTest.php
+[parsing] modules/contrib/migrate_tools/tests/src/Functional/SourceUrlFormTest.php
+[parsing] modules/contrib/migrate_tools/tests/src/Kernel/DrushTest.php
+[parsing] modules/contrib/migrate_tools/tests/src/Kernel/MigrateImportTest.php
+[parsing] modules/contrib/migrate_tools/tests/src/Kernel/MigrateRollbackTest.php
+[parsing] modules/contrib/migrate_tools/tests/src/Unit/MigrateToolsTest.php
+[refactoring] modules/contrib/migrate_tools/migrate_tools.module
+[refactoring] modules/contrib/migrate_tools/src/Commands/MigrateToolsCommands.php
+[refactoring] modules/contrib/migrate_tools/src/Controller/MessageController.php
+[refactoring] modules/contrib/migrate_tools/src/Controller/MigrationController.php
+[refactoring] modules/contrib/migrate_tools/src/Controller/MigrationGroupListBuilder.php
+[refactoring] modules/contrib/migrate_tools/src/Controller/MigrationListBuilder.php
+[refactoring] modules/contrib/migrate_tools/src/Drush9LogMigrateMessage.php
+[refactoring] modules/contrib/migrate_tools/src/DrushLogMigrateMessage.php
+[refactoring] modules/contrib/migrate_tools/src/EventSubscriber/MigrationDrushCommandProgress.php
+[refactoring] modules/contrib/migrate_tools/src/EventSubscriber/MigrationImportSync.php
+[refactoring] modules/contrib/migrate_tools/src/Form/MigrationAddForm.php
+[refactoring] modules/contrib/migrate_tools/src/Form/MigrationDeleteForm.php
+[refactoring] modules/contrib/migrate_tools/src/Form/MigrationEditForm.php
+[refactoring] modules/contrib/migrate_tools/src/Form/MigrationExecuteForm.php
+[refactoring] modules/contrib/migrate_tools/src/Form/MigrationFormBase.php
+[refactoring] modules/contrib/migrate_tools/src/Form/MigrationGroupAddForm.php
+[refactoring] modules/contrib/migrate_tools/src/Form/MigrationGroupDeleteForm.php
+[refactoring] modules/contrib/migrate_tools/src/Form/MigrationGroupEditForm.php
+[refactoring] modules/contrib/migrate_tools/src/Form/MigrationGroupFormBase.php
+[refactoring] modules/contrib/migrate_tools/src/IdMapFilter.php
+[refactoring] modules/contrib/migrate_tools/src/MigrateBatchExecutable.php
+[refactoring] modules/contrib/migrate_tools/src/MigrateExecutable.php
+[refactoring] modules/contrib/migrate_tools/src/MigrateTools.php
+[refactoring] modules/contrib/migrate_tools/src/Routing/RouteProcessor.php
+[refactoring] modules/contrib/migrate_tools/src/SourceFilter.php
+[refactoring] modules/contrib/migrate_tools/tests/modules/migrate_tools_test/src/Commands/MigrateToolsTestCommands.php
+[refactoring] modules/contrib/migrate_tools/tests/modules/migrate_tools_test/src/Plugin/migrate/source/ExceptionThrowingTestSource.php
+[refactoring] modules/contrib/migrate_tools/tests/src/Functional/DrushBatchImportTest.php
+[refactoring] modules/contrib/migrate_tools/tests/src/Functional/DrushCommandsGeneratorTest.php
+[refactoring] modules/contrib/migrate_tools/tests/src/Functional/DrushCommandsTest.php
+[refactoring] modules/contrib/migrate_tools/tests/src/Functional/MigrateExecutionFormTest.php
+[refactoring] modules/contrib/migrate_tools/tests/src/Functional/SourceUrlFormTest.php
+[refactoring] modules/contrib/migrate_tools/tests/src/Kernel/DrushTest.php
+[refactoring] modules/contrib/migrate_tools/tests/src/Kernel/MigrateImportTest.php
+[refactoring] modules/contrib/migrate_tools/tests/src/Kernel/MigrateRollbackTest.php
+[refactoring] modules/contrib/migrate_tools/tests/src/Unit/MigrateToolsTest.php
+[printing] modules/contrib/migrate_tools/migrate_tools.module
+[printing] modules/contrib/migrate_tools/src/Commands/MigrateToolsCommands.php
+[printing] modules/contrib/migrate_tools/src/Controller/MessageController.php
+[printing] modules/contrib/migrate_tools/src/Controller/MigrationController.php
+[printing] modules/contrib/migrate_tools/src/Controller/MigrationGroupListBuilder.php
+[printing] modules/contrib/migrate_tools/src/Controller/MigrationListBuilder.php
+[printing] modules/contrib/migrate_tools/src/Drush9LogMigrateMessage.php
+[printing] modules/contrib/migrate_tools/src/DrushLogMigrateMessage.php
+[printing] modules/contrib/migrate_tools/src/EventSubscriber/MigrationDrushCommandProgress.php
+[printing] modules/contrib/migrate_tools/src/EventSubscriber/MigrationImportSync.php
+[printing] modules/contrib/migrate_tools/src/Form/MigrationAddForm.php
+[printing] modules/contrib/migrate_tools/src/Form/MigrationDeleteForm.php
+[printing] modules/contrib/migrate_tools/src/Form/MigrationEditForm.php
+[printing] modules/contrib/migrate_tools/src/Form/MigrationExecuteForm.php
+[printing] modules/contrib/migrate_tools/src/Form/MigrationFormBase.php
+[printing] modules/contrib/migrate_tools/src/Form/MigrationGroupAddForm.php
+[printing] modules/contrib/migrate_tools/src/Form/MigrationGroupDeleteForm.php
+[printing] modules/contrib/migrate_tools/src/Form/MigrationGroupEditForm.php
+[printing] modules/contrib/migrate_tools/src/Form/MigrationGroupFormBase.php
+[printing] modules/contrib/migrate_tools/src/IdMapFilter.php
+[printing] modules/contrib/migrate_tools/src/MigrateBatchExecutable.php
+[printing] modules/contrib/migrate_tools/src/MigrateExecutable.php
+[printing] modules/contrib/migrate_tools/src/MigrateTools.php
+[printing] modules/contrib/migrate_tools/src/Routing/RouteProcessor.php
+[printing] modules/contrib/migrate_tools/src/SourceFilter.php
+[printing] modules/contrib/migrate_tools/tests/modules/migrate_tools_test/src/Commands/MigrateToolsTestCommands.php
+[printing] modules/contrib/migrate_tools/tests/modules/migrate_tools_test/src/Plugin/migrate/source/ExceptionThrowingTestSource.php
+[printing] modules/contrib/migrate_tools/tests/src/Functional/DrushBatchImportTest.php
+[printing] modules/contrib/migrate_tools/tests/src/Functional/DrushCommandsGeneratorTest.php
+[printing] modules/contrib/migrate_tools/tests/src/Functional/DrushCommandsTest.php
+[printing] modules/contrib/migrate_tools/tests/src/Functional/MigrateExecutionFormTest.php
+[printing] modules/contrib/migrate_tools/tests/src/Functional/SourceUrlFormTest.php
+[printing] modules/contrib/migrate_tools/tests/src/Kernel/DrushTest.php
+[printing] modules/contrib/migrate_tools/tests/src/Kernel/MigrateImportTest.php
+[printing] modules/contrib/migrate_tools/tests/src/Kernel/MigrateRollbackTest.php
+[printing] modules/contrib/migrate_tools/tests/src/Unit/MigrateToolsTest.php
+
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/migrate_tools/src/Commands/MigrateToolsCommands.php"  
+         file, due to:                                                          
+         "Analyze error: "Class Drush\Commands\DrushCommands not found and could
+         not be autoloaded.". Include your files in "parameters >               
+         autoload_paths".                                                       
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/migrate_tools/tests/modules/migrate_tools_test/src/Com
+         mands/MigrateToolsTestCommands.php" file, due to:                      
+         "Analyze error: "Class Drush\Commands\DrushCommands not found and could
+         not be autoloaded.". Include your files in "parameters >               
+         autoload_paths".                                                       
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/migrate_tools/tests/src/Functional/DrushBatchImportTes
+         t.php" file, due to:                                                   
+         "Analyze error: "Class Drush\TestTraits\DrushTestTrait not found and   
+         could not be autoloaded.". Include your files in "parameters >         
+         autoload_paths".                                                       
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/migrate_tools/tests/src/Functional/DrushCommandsGenera
+         torTest.php" file, due to:                                             
+         "Analyze error: "Class Drush\TestTraits\DrushTestTrait not found and   
+         could not be autoloaded.". Include your files in "parameters >         
+         autoload_paths".                                                       
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/migrate_tools/tests/src/Functional/DrushCommandsTest.p
+         hp" file, due to:                                                      
+         "Analyze error: "Class Drush\TestTraits\DrushTestTrait not found and   
+         could not be autoloaded.". Include your files in "parameters >         
+         autoload_paths".                                                       
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/migrate_tools/tests/src/Kernel/DrushTest.php" file,   
+         due to:                                                                
+         "Analyze error: "Class Drush\Commands\DrushCommands not found and could
+         not be autoloaded.". Include your files in "parameters >               
+         autoload_paths".                                                       
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+

@@ -1,0 +1,34 @@
+diff --git a/s3fs_cors.module b/s3fs_cors.module
+index 95d8e2f..4dc1435 100644
+--- a/s3fs_cors.module
++++ b/s3fs_cors.module
+@@ -84,7 +84,7 @@ function s3fs_cors_upload_value(&$element, $input = FALSE, $form_state = NULL) {
+     $file->filemime = $input['filemime'];
+     $file->uri = \Drupal::service('file_system')->getDestinationFilename("s3://$base_dir{$input['filename']}", FILE_EXISTS_RENAME);
+     $file->status = 0;
+-    $file->timestamp = REQUEST_TIME;
++    $file->timestamp = \Drupal::time()->getRequestTime();
+ 
+     // Save the uploaded file to the file_managed table.
+     $file = _s3fs_cors_file_save($file);
+diff --git a/src/Controller/AjaxController.php b/src/Controller/AjaxController.php
+index 9e4b858..e14ce11 100644
+--- a/src/Controller/AjaxController.php
++++ b/src/Controller/AjaxController.php
+@@ -2,6 +2,7 @@
+ 
+ namespace Drupal\s3fs_cors\Controller;
+ 
++use Drupal\Core\File\FileSystemInterface;
+ use Drupal\Core\Controller\ControllerBase;
+ use Drupal\Core\Site\Settings;
+ use Symfony\Component\HttpFoundation\JsonResponse;
+@@ -41,7 +42,7 @@ class AjaxController extends ControllerBase {
+ 
+     if ($file_exists) {
+       switch ($replace) {
+-        case FILE_EXISTS_REPLACE:
++        case FileSystemInterface::EXISTS_REPLACE:
+           // Do nothing here, we want to overwrite the existing file.
+           break;
+ 

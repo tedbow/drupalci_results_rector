@@ -1,0 +1,22 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/migrate_source_csv/src/Plugin/migrate/source/CSV.php
+[parsing] modules/contrib/migrate_source_csv/tests/modules/csv_source_yield_test/src/Plugin/migrate/source/YieldRows.php
+[parsing] modules/contrib/migrate_source_csv/tests/modules/migrate_source_csv_test/migrate_source_csv_test.module
+[parsing] modules/contrib/migrate_source_csv/tests/src/Kernel/Plugin/migrate/source/CSVTest.php
+[parsing] modules/contrib/migrate_source_csv/tests/src/Unit/Plugin/migrate/source/CSVUnitTest.php
+[refactoring] modules/contrib/migrate_source_csv/src/Plugin/migrate/source/CSV.php
+[refactoring] modules/contrib/migrate_source_csv/tests/modules/csv_source_yield_test/src/Plugin/migrate/source/YieldRows.php
+[refactoring] modules/contrib/migrate_source_csv/tests/modules/migrate_source_csv_test/migrate_source_csv_test.module
+[refactoring] modules/contrib/migrate_source_csv/tests/src/Kernel/Plugin/migrate/source/CSVTest.php
+[refactoring] modules/contrib/migrate_source_csv/tests/src/Unit/Plugin/migrate/source/CSVUnitTest.php
+[printing] modules/contrib/migrate_source_csv/src/Plugin/migrate/source/CSV.php
+[printing] modules/contrib/migrate_source_csv/tests/modules/csv_source_yield_test/src/Plugin/migrate/source/YieldRows.php
+[printing] modules/contrib/migrate_source_csv/tests/modules/migrate_source_csv_test/migrate_source_csv_test.module
+[printing] modules/contrib/migrate_source_csv/tests/src/Kernel/Plugin/migrate/source/CSVTest.php
+[printing] modules/contrib/migrate_source_csv/tests/src/Unit/Plugin/migrate/source/CSVUnitTest.php
+
+
+ [OK] Rector is done!                                                           
+

@@ -1,0 +1,22 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/rules_session_vars/src/Plugin/Condition/SessionDataComparison.php
+[parsing] modules/contrib/rules_session_vars/src/Plugin/Condition/SessionKeyExists.php
+[parsing] modules/contrib/rules_session_vars/src/Plugin/RulesAction/AddDataToSessionAction.php
+[parsing] modules/contrib/rules_session_vars/src/Plugin/RulesAction/RemoveDataFromSessionAction.php
+[parsing] modules/contrib/rules_session_vars/tests/src/Kernel/RulesSessionTest.php
+[refactoring] modules/contrib/rules_session_vars/src/Plugin/Condition/SessionDataComparison.php
+[refactoring] modules/contrib/rules_session_vars/src/Plugin/Condition/SessionKeyExists.php
+[refactoring] modules/contrib/rules_session_vars/src/Plugin/RulesAction/AddDataToSessionAction.php
+[refactoring] modules/contrib/rules_session_vars/src/Plugin/RulesAction/RemoveDataFromSessionAction.php
+[refactoring] modules/contrib/rules_session_vars/tests/src/Kernel/RulesSessionTest.php
+[printing] modules/contrib/rules_session_vars/src/Plugin/Condition/SessionDataComparison.php
+[printing] modules/contrib/rules_session_vars/src/Plugin/Condition/SessionKeyExists.php
+[printing] modules/contrib/rules_session_vars/src/Plugin/RulesAction/AddDataToSessionAction.php
+[printing] modules/contrib/rules_session_vars/src/Plugin/RulesAction/RemoveDataFromSessionAction.php
+[printing] modules/contrib/rules_session_vars/tests/src/Kernel/RulesSessionTest.php
+
+
+ [OK] Rector is done!                                                           
+

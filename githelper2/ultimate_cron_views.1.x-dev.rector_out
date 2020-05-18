@@ -1,0 +1,25 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/ultimate_cron_views/src/Plugin/views/field/CronLogJobDuration.php
+[parsing] modules/contrib/ultimate_cron_views/src/Plugin/views/field/CronLogJobEndDate.php
+[parsing] modules/contrib/ultimate_cron_views/src/Plugin/views/field/CronLogJobStartDate.php
+[parsing] modules/contrib/ultimate_cron_views/src/Plugin/views/query/CronLogSqlQuery.php
+[parsing] modules/contrib/ultimate_cron_views/ultimate_cron_views.module
+[parsing] modules/contrib/ultimate_cron_views/ultimate_cron_views.views.inc
+[refactoring] modules/contrib/ultimate_cron_views/src/Plugin/views/field/CronLogJobDuration.php
+[refactoring] modules/contrib/ultimate_cron_views/src/Plugin/views/field/CronLogJobEndDate.php
+[refactoring] modules/contrib/ultimate_cron_views/src/Plugin/views/field/CronLogJobStartDate.php
+[refactoring] modules/contrib/ultimate_cron_views/src/Plugin/views/query/CronLogSqlQuery.php
+[refactoring] modules/contrib/ultimate_cron_views/ultimate_cron_views.module
+[refactoring] modules/contrib/ultimate_cron_views/ultimate_cron_views.views.inc
+[printing] modules/contrib/ultimate_cron_views/src/Plugin/views/field/CronLogJobDuration.php
+[printing] modules/contrib/ultimate_cron_views/src/Plugin/views/field/CronLogJobEndDate.php
+[printing] modules/contrib/ultimate_cron_views/src/Plugin/views/field/CronLogJobStartDate.php
+[printing] modules/contrib/ultimate_cron_views/src/Plugin/views/query/CronLogSqlQuery.php
+[printing] modules/contrib/ultimate_cron_views/ultimate_cron_views.module
+[printing] modules/contrib/ultimate_cron_views/ultimate_cron_views.views.inc
+
+
+ [OK] Rector is done!                                                           
+
