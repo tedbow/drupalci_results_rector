@@ -1,0 +1,204 @@
+diff --git a/src/Form/InstallmentForm.php b/src/Form/InstallmentForm.php
+index facd69f..3e85d85 100644
+--- a/src/Form/InstallmentForm.php
++++ b/src/Form/InstallmentForm.php
+@@ -26,13 +26,13 @@ class InstallmentForm extends ContentEntityForm {
+ 
+     switch ($status) {
+       case SAVED_NEW:
+-        drupal_set_message($this->t('Created the %label Installment.', [
++        $this->messenger()->addStatus($this->t('Created the %label Installment.', [
+           '%label' => $entity->label(),
+         ]));
+         break;
+ 
+       default:
+-        drupal_set_message($this->t('Saved the %label Installment.', [
++        $this->messenger()->addStatus($this->t('Saved the %label Installment.', [
+           '%label' => $entity->label(),
+         ]));
+     }
+diff --git a/src/Form/InstallmentPlanForm.php b/src/Form/InstallmentPlanForm.php
+index 4084c55..e12cb4b 100644
+--- a/src/Form/InstallmentPlanForm.php
++++ b/src/Form/InstallmentPlanForm.php
+@@ -58,13 +58,13 @@ class InstallmentPlanForm extends ContentEntityForm {
+ 
+     switch ($status) {
+       case SAVED_NEW:
+-        drupal_set_message($this->t('Created the %label Installment Plan.', [
++        $this->messenger()->addStatus($this->t('Created the %label Installment Plan.', [
+           '%label' => $entity->label(),
+         ]));
+         break;
+ 
+       default:
+-        drupal_set_message($this->t('Saved the %label Installment Plan.', [
++        $this->messenger()->addStatus($this->t('Saved the %label Installment Plan.', [
+           '%label' => $entity->label(),
+         ]));
+     }
+diff --git a/src/Form/InstallmentPlanMethodForm.php b/src/Form/InstallmentPlanMethodForm.php
+index 54143ef..2ddce37 100644
+--- a/src/Form/InstallmentPlanMethodForm.php
++++ b/src/Form/InstallmentPlanMethodForm.php
+@@ -146,7 +146,7 @@ class InstallmentPlanMethodForm extends CommercePluginEntityFormBase {
+    */
+   public function save(array $form, FormStateInterface $form_state) {
+     $this->entity->save();
+-    drupal_set_message($this->t('Saved the %label installment plan method.', ['%label' => $this->entity->label()]));
++    $this->messenger()->addStatus($this->t('Saved the %label installment plan method.', ['%label' => $this->entity->label()]));
+     $form_state->setRedirect('entity.installment_plan_method.collection');
+   }
+ 
+diff --git a/src/Form/InstallmentPlanRevisionDeleteForm.php b/src/Form/InstallmentPlanRevisionDeleteForm.php
+index 397dd31..c6c6afc 100644
+--- a/src/Form/InstallmentPlanRevisionDeleteForm.php
++++ b/src/Form/InstallmentPlanRevisionDeleteForm.php
+@@ -123,7 +123,7 @@ class InstallmentPlanRevisionDeleteForm extends ConfirmFormBase {
+     $this->InstallmentPlanStorage->deleteRevision($this->revision->getRevisionId());
+ 
+     $this->logger('content')->notice('Installment Plan: deleted %title revision %revision.', ['%title' => $this->revision->label(), '%revision' => $this->revision->getRevisionId()]);
+-    drupal_set_message($this->t('Revision from %revision-date of Installment Plan %title has been deleted.', ['%revision-date' => $this->dateFormatter->format($this->revision->getRevisionCreationTime()), '%title' => $this->revision->label()]));
++    $this->messenger()->addStatus($this->t('Revision from %revision-date of Installment Plan %title has been deleted.', ['%revision-date' => $this->dateFormatter->format($this->revision->getRevisionCreationTime()), '%title' => $this->revision->label()]));
+     $form_state->setRedirect(
+       'entity.installment_plan.canonical',
+        ['installment_plan' => $this->revision->id()] + $this->getUrlParameters()
+diff --git a/src/Form/InstallmentPlanRevisionRevertForm.php b/src/Form/InstallmentPlanRevisionRevertForm.php
+index 5f99256..e17a526 100644
+--- a/src/Form/InstallmentPlanRevisionRevertForm.php
++++ b/src/Form/InstallmentPlanRevisionRevertForm.php
+@@ -134,7 +134,7 @@ class InstallmentPlanRevisionRevertForm extends ConfirmFormBase {
+     $this->revision->save();
+ 
+     $this->logger('content')->notice('Installment Plan: reverted %title revision %revision.', ['%title' => $this->revision->label(), '%revision' => $this->revision->getRevisionId()]);
+-    drupal_set_message($this->t('Installment Plan %title has been reverted to the revision from %revision-date.', ['%title' => $this->revision->label(), '%revision-date' => $this->dateFormatter->format($original_revision_timestamp)]));
++    $this->messenger()->addStatus($this->t('Installment Plan %title has been reverted to the revision from %revision-date.', ['%title' => $this->revision->label(), '%revision-date' => $this->dateFormatter->format($original_revision_timestamp)]));
+     $form_state->setRedirect(
+       'entity.installment_plan.version_history',
+       ['installment_plan' => $this->revision->id()] + $this->getUrlParameters()
+diff --git a/src/Form/InstallmentPlanTypeDeleteForm.php b/src/Form/InstallmentPlanTypeDeleteForm.php
+index 696f60b..0744ac5 100644
+--- a/src/Form/InstallmentPlanTypeDeleteForm.php
++++ b/src/Form/InstallmentPlanTypeDeleteForm.php
+@@ -38,14 +38,12 @@ class InstallmentPlanTypeDeleteForm extends EntityConfirmFormBase {
+   public function submitForm(array &$form, FormStateInterface $form_state) {
+     $this->entity->delete();
+ 
+-    drupal_set_message(
+-      $this->t('content @type: deleted @label.',
+-        [
+-          '@type' => $this->entity->bundle(),
+-          '@label' => $this->entity->label(),
+-        ]
+-        )
+-    );
++    $this->messenger()->addStatus($this->t('content @type: deleted @label.',
++      [
++        '@type' => $this->entity->bundle(),
++        '@label' => $this->entity->label(),
++      ]
++      ));
+ 
+     $form_state->setRedirectUrl($this->getCancelUrl());
+   }
+diff --git a/src/Form/InstallmentPlanTypeForm.php b/src/Form/InstallmentPlanTypeForm.php
+index 7cb8b1d..6bb4333 100644
+--- a/src/Form/InstallmentPlanTypeForm.php
++++ b/src/Form/InstallmentPlanTypeForm.php
+@@ -50,7 +50,7 @@ class InstallmentPlanTypeForm extends BundleEntityFormBase {
+ 
+     switch ($status) {
+       case SAVED_NEW:
+-        drupal_set_message($this->t('Created the %label Installment Plan type.', [
++        $this->messenger()->addStatus($this->t('Created the %label Installment Plan type.', [
+           '%label' => $installment_plan_type->label(),
+         ]));
+         commerce_installments_add_installments_field($this->entity);
+@@ -58,7 +58,7 @@ class InstallmentPlanTypeForm extends BundleEntityFormBase {
+         break;
+ 
+       default:
+-        drupal_set_message($this->t('Saved the %label Installment Plan type.', [
++        $this->messenger()->addStatus($this->t('Saved the %label Installment Plan type.', [
+           '%label' => $installment_plan_type->label(),
+         ]));
+     }
+diff --git a/src/Form/InstallmentTypeDeleteForm.php b/src/Form/InstallmentTypeDeleteForm.php
+index 5ca9819..5022359 100644
+--- a/src/Form/InstallmentTypeDeleteForm.php
++++ b/src/Form/InstallmentTypeDeleteForm.php
+@@ -38,14 +38,12 @@ class InstallmentTypeDeleteForm extends EntityConfirmFormBase {
+   public function submitForm(array &$form, FormStateInterface $form_state) {
+     $this->entity->delete();
+ 
+-    drupal_set_message(
+-      $this->t('content @type: deleted @label.',
+-        [
+-          '@type' => $this->entity->bundle(),
+-          '@label' => $this->entity->label(),
+-        ]
+-        )
+-    );
++    $this->messenger()->addStatus($this->t('content @type: deleted @label.',
++      [
++        '@type' => $this->entity->bundle(),
++        '@label' => $this->entity->label(),
++      ]
++      ));
+ 
+     $form_state->setRedirectUrl($this->getCancelUrl());
+   }
+diff --git a/src/Form/InstallmentTypeForm.php b/src/Form/InstallmentTypeForm.php
+index a5f3e81..77d5bb5 100644
+--- a/src/Form/InstallmentTypeForm.php
++++ b/src/Form/InstallmentTypeForm.php
+@@ -79,13 +79,13 @@ class InstallmentTypeForm extends BundleEntityFormBase {
+ 
+     switch ($status) {
+       case SAVED_NEW:
+-        drupal_set_message($this->t('Created the %label Installment type.', [
++        $this->messenger()->addStatus($this->t('Created the %label Installment type.', [
+           '%label' => $installment_type->label(),
+         ]));
+         break;
+ 
+       default:
+-        drupal_set_message($this->t('Saved the %label Installment type.', [
++        $this->messenger()->addStatus($this->t('Saved the %label Installment type.', [
+           '%label' => $installment_type->label(),
+         ]));
+     }
+diff --git a/src/Plugin/Commerce/CheckoutPane/InstallmentPaymentProcess.php b/src/Plugin/Commerce/CheckoutPane/InstallmentPaymentProcess.php
+index 61cb60d..a8a451c 100644
+--- a/src/Plugin/Commerce/CheckoutPane/InstallmentPaymentProcess.php
++++ b/src/Plugin/Commerce/CheckoutPane/InstallmentPaymentProcess.php
+@@ -104,7 +104,7 @@ class InstallmentPaymentProcess extends PaymentProcess {
+ 
+     // The payment gateway is currently always required to be set.
+     if ($this->order->get('payment_gateway')->isEmpty()) {
+-      drupal_set_message($this->t('No payment gateway selected.'), 'error');
++      $this->messenger()->addError($this->t('No payment gateway selected.'));
+       $this->redirectToPreviousStep();
+     }
+ 
+@@ -126,16 +126,16 @@ class InstallmentPaymentProcess extends PaymentProcess {
+       $this->checkoutFlow->redirectToStep($this->checkoutFlow->getNextStepId($this->getStepId()));
+     }
+     elseif ($payment_gateway_plugin instanceof OffsitePaymentGatewayInterface) {
+-      drupal_set_message($this->t('Offsite payment gateway selected.'), 'error');
++      $this->messenger()->addError($this->t('Offsite payment gateway selected.'));
+       $this->redirectToPreviousStep();
+     }
+     elseif ($payment_gateway_plugin instanceof ManualPaymentGatewayInterface) {
+-      drupal_set_message($this->t('Manual payment gateway selected.'), 'error');
++      $this->messenger()->addError($this->t('Manual payment gateway selected.'));
+       $this->redirectToPreviousStep();
+     }
+ 
+     // If we get to here, then something went wrong.
+-    drupal_set_message($this->t('Something went wrong in setting up your installment plan.'), 'error');
++    $this->messenger()->addError($this->t('Something went wrong in setting up your installment plan.'));
+     $this->redirectToPreviousStep();
+   }
+ 

@@ -1,0 +1,8 @@
+ [notice] Processing /var/lib/drupalci/workspace/drupal-checkouts/drupal3/modules/contrib/field_union.
+PHPStan crashed in the previous run probably because of excessive memory consumption.
+It consumed around 49 MB of memory.
+
+
+To avoid this issue, allow to use more memory with the --memory-limit option.
+  0/14 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   0%[2K  8/14 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░]  57%[2K 10/14 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░]  71%[2K 11/14 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░]  78%[2K 14/14 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 100%
+

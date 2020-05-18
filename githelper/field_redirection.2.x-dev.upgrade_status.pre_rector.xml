@@ -1,0 +1,3 @@
+<?xml version="1.0"?>
+<checkstyle><file name="modules/contrib/field_redirection/src/Plugin/Field/FieldFormatter/FieldRedirectionFormatter.php"><error line="" message="ParseError (syntax error, unexpected ')') thrown while autoloading class Drupal\field_redirection\Plugin\Field\FieldFormatter\FieldRedirectionFormatter." severity="error"/><error line="21" message="ParseError (syntax error, unexpected ')') thrown while autoloading class Drupal\field_redirection\Plugin\Field\FieldFormatter\FieldRedirectionFormatter." severity="error"/></file></checkstyle>
+

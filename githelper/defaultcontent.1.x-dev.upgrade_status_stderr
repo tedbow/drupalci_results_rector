@@ -1,0 +1,13 @@
+ [notice] Processing /var/lib/drupalci/workspace/drupal-checkouts/drupal2/modules/contrib/defaultcontent.
+PHPStan crashed in the previous run probably because of excessive memory consumption.
+It consumed around 49 MB of memory.
+
+
+To avoid this issue, allow to use more memory with the --memory-limit option.
+  0/13 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   0%[2K  3/13 [▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░]  23%PHP Fatal error:  Declaration of Drupal\defaultcontent\LinkManager\RelationLinkManager::getRelationUri($entity_type, $bundle, $field_name) must be compatible with Drupal\hal\LinkManager\RelationLinkManager::getRelationUri($entity_type, $bundle, $field_name, $context = Array) in /var/lib/drupalci/workspace/drupal-checkouts/drupal2/modules/contrib/defaultcontent/src/LinkManager/RelationLinkManager.php on line 12
+Fatal error: Declaration of Drupal\defaultcontent\LinkManager\RelationLinkManager::getRelationUri($entity_type, $bundle, $field_name) must be compatible with Drupal\hal\LinkManager\RelationLinkManager::getRelationUri($entity_type, $bundle, $field_name, $context = Array) in /var/lib/drupalci/workspace/drupal-checkouts/drupal2/modules/contrib/defaultcontent/src/LinkManager/RelationLinkManager.php on line 12
+ [error]  PHPStan failed:  
+ [notice] Processing /var/lib/drupalci/workspace/drupal-checkouts/drupal2/modules/contrib/defaultcontent.
+  0/13 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   0%PHP Fatal error:  Declaration of Drupal\defaultcontent\LinkManager\RelationLinkManager::getRelationUri($entity_type, $bundle, $field_name) must be compatible with Drupal\hal\LinkManager\RelationLinkManager::getRelationUri($entity_type, $bundle, $field_name, $context = Array) in /var/lib/drupalci/workspace/drupal-checkouts/drupal2/modules/contrib/defaultcontent/src/LinkManager/RelationLinkManager.php on line 12
+Fatal error: Declaration of Drupal\defaultcontent\LinkManager\RelationLinkManager::getRelationUri($entity_type, $bundle, $field_name) must be compatible with Drupal\hal\LinkManager\RelationLinkManager::getRelationUri($entity_type, $bundle, $field_name, $context = Array) in /var/lib/drupalci/workspace/drupal-checkouts/drupal2/modules/contrib/defaultcontent/src/LinkManager/RelationLinkManager.php on line 12
+ [error]  PHPStan failed:  

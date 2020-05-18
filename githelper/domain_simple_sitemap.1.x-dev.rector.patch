@@ -1,0 +1,13 @@
+diff --git a/src/Plugin/simple_sitemap/UrlGenerator/EntityUrlGenerator.php b/src/Plugin/simple_sitemap/UrlGenerator/EntityUrlGenerator.php
+index 71e09fa..f0f0f25 100644
+--- a/src/Plugin/simple_sitemap/UrlGenerator/EntityUrlGenerator.php
++++ b/src/Plugin/simple_sitemap/UrlGenerator/EntityUrlGenerator.php
+@@ -223,7 +223,7 @@ class EntityUrlGenerator extends SimpleSitemapEntityUrlGenerator {
+       $this->context['message'] = $this->t(self::PROCESSING_PATH_MESSAGE, [
+         '@current' => $this->context['sandbox']['progress'],
+         '@max' => $this->context['sandbox']['max'],
+-        '@path' => HTML::escape($path),
++        '@path' => Html::escape($path),
+       ]);
+     }
+   }

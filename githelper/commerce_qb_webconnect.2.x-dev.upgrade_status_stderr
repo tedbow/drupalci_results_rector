@@ -1,0 +1,20 @@
+
+In UpgradeStatusCommands.php line 181:
+                                                                               
+  The project machine name commerce_qb_webconnect is invalid. Is this a proje  
+  ct on this site? (For community projects, use the machine name of the drupa  
+  l.org project itself).                                                       
+                                                                               
+
+upgrade_status:checkstyle [--all] [--skip-existing] [--ignore-uninstalled] [--ignore-contrib] [--ignore-custom] [-h|--help] [-q|--quiet] [-v|vv|vvv|--verbose] [-V|--version] [--ansi] [--no-ansi] [-n|--no-interaction] [-d|--debug] [-y|--yes] [--no] [--remote-host REMOTE-HOST] [--remote-user REMOTE-USER] [-r|--root ROOT] [-l|--uri URI] [--simulate] [--pipe] [-D|--define DEFINE] [--notify [NOTIFY]] [--druplicon] [--xh-link XH-LINK] [--] <command> [<projects>]...
+
+
+In UpgradeStatusCommands.php line 181:
+                                                                               
+  The project machine name commerce_qb_webconnect is invalid. Is this a proje  
+  ct on this site? (For community projects, use the machine name of the drupa  
+  l.org project itself).                                                       
+                                                                               
+
+upgrade_status:checkstyle [--all] [--skip-existing] [--ignore-uninstalled] [--ignore-contrib] [--ignore-custom] [-h|--help] [-q|--quiet] [-v|vv|vvv|--verbose] [-V|--version] [--ansi] [--no-ansi] [-n|--no-interaction] [-d|--debug] [-y|--yes] [--no] [--remote-host REMOTE-HOST] [--remote-user REMOTE-USER] [-r|--root ROOT] [-l|--uri URI] [--simulate] [--pipe] [-D|--define DEFINE] [--notify [NOTIFY]] [--druplicon] [--xh-link XH-LINK] [--] <command> [<projects>]...
+

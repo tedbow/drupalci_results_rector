@@ -1,0 +1,15 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/defaultcontent/defaultcontent.install
+[parsing] modules/contrib/defaultcontent/defaultcontent.module
+[parsing] modules/contrib/defaultcontent/drush/defaultcontent.drush.inc
+[parsing] modules/contrib/defaultcontent/src/DefaultContentManager.php
+[parsing] modules/contrib/defaultcontent/src/DefaultContentManagerInterface.php
+[parsing] modules/contrib/defaultcontent/src/DefaultContentScanner.php
+[parsing] modules/contrib/defaultcontent/src/DefaultcontentServiceProvider.php
+[parsing] modules/contrib/defaultcontent/src/Export.php
+[parsing] modules/contrib/defaultcontent/src/Import.php
+[parsing] modules/contrib/defaultcontent/src/LinkManager/RelationLinkManager.php
+PHP Fatal error:  Declaration of Drupal\defaultcontent\LinkManager\RelationLinkManager::getRelationUri($entity_type, $bundle, $field_name) must be compatible with Drupal\hal\LinkManager\RelationLinkManager::getRelationUri($entity_type, $bundle, $field_name, $context = Array) in /var/lib/drupalci/workspace/drupal-checkouts/drupal2/modules/contrib/defaultcontent/src/LinkManager/RelationLinkManager.php on line 12
+Fatal error: Declaration of Drupal\defaultcontent\LinkManager\RelationLinkManager::getRelationUri($entity_type, $bundle, $field_name) must be compatible with Drupal\hal\LinkManager\RelationLinkManager::getRelationUri($entity_type, $bundle, $field_name, $context = Array) in /var/lib/drupalci/workspace/drupal-checkouts/drupal2/modules/contrib/defaultcontent/src/LinkManager/RelationLinkManager.php on line 12

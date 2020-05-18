@@ -1,0 +1,13 @@
+diff --git a/tests/src/Functional/DateRangeDurationWidgetTest.php b/tests/src/Functional/DateRangeDurationWidgetTest.php
+index f5226e5..79a6da7 100644
+--- a/tests/src/Functional/DateRangeDurationWidgetTest.php
++++ b/tests/src/Functional/DateRangeDurationWidgetTest.php
+@@ -72,7 +72,7 @@ class DateRangeDurationWidgetTest extends DateTestBase {
+     // versions, so we don't nee to "fix" it for upgrade_status.
+     // @noRector
+     // @phpstan-ignore-next-line
+-    return entity_get_form_display($entity_type_id, $bundle_id, $form_mode);
++    return \Drupal::service('entity_display.repository')->getFormDisplay($entity_type_id, $bundle_id, $form_mode);
+   }
+ 
+   /**

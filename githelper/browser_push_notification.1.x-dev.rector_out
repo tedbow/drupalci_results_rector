@@ -1,0 +1,27 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+
+In FilesystemTweaker.php line 36:
+                                                                        
+  [Rector\Core\Exception\FileSystem\DirectoryNotFoundException]         
+  Directory "modules/contrib/browser_push_notification" was not found.  
+                                                                        
+
+Exception trace:
+  at phar:///var/lib/drupalci/drupal-checkout/vendor/rector/rector-prefixed/rector/src/FileSystem/FilesystemTweaker.php:36
+ Rector\Core\FileSystem\FilesystemTweaker->ensureDirectoryExists() at phar:///var/lib/drupalci/drupal-checkout/vendor/rector/rector-prefixed/rector/src/FileSystem/FilesystemTweaker.php:25
+ Rector\Core\FileSystem\FilesystemTweaker->resolveDirectoriesWithFnmatch() at phar:///var/lib/drupalci/drupal-checkout/vendor/rector/rector-prefixed/rector/src/FileSystem/FilesFinder.php:83
+ Rector\Core\FileSystem\FilesFinder->findInDirectories() at phar:///var/lib/drupalci/drupal-checkout/vendor/rector/rector-prefixed/rector/src/FileSystem/FilesFinder.php:63
+ Rector\Core\FileSystem\FilesFinder->findInDirectoriesAndFiles() at phar:///var/lib/drupalci/drupal-checkout/vendor/rector/rector-prefixed/rector/src/Console/Command/ProcessCommand.php:138
+ Rector\Core\Console\Command\ProcessCommand->execute() at phar:///var/lib/drupalci/drupal-checkout/vendor/rector/rector-prefixed/rector/vendor/symfony/console/Command/Command.php:228
+ _HumbugBoxeee6bda8eb22\Symfony\Component\Console\Command\Command->run() at phar:///var/lib/drupalci/drupal-checkout/vendor/rector/rector-prefixed/rector/src/Console/Command/AbstractCommand.php:30
+ Rector\Core\Console\Command\AbstractCommand->run() at phar:///var/lib/drupalci/drupal-checkout/vendor/rector/rector-prefixed/rector/vendor/symfony/console/Application.php:849
+ _HumbugBoxeee6bda8eb22\Symfony\Component\Console\Application->doRunCommand() at phar:///var/lib/drupalci/drupal-checkout/vendor/rector/rector-prefixed/rector/vendor/symfony/console/Application.php:235
+ _HumbugBoxeee6bda8eb22\Symfony\Component\Console\Application->doRun() at phar:///var/lib/drupalci/drupal-checkout/vendor/rector/rector-prefixed/rector/src/Console/Application.php:77
+ Rector\Core\Console\Application->doRun() at phar:///var/lib/drupalci/drupal-checkout/vendor/rector/rector-prefixed/rector/vendor/symfony/console/Application.php:136
+ _HumbugBoxeee6bda8eb22\Symfony\Component\Console\Application->run() at phar:///var/lib/drupalci/drupal-checkout/vendor/rector/rector-prefixed/rector/bin/rector:46
+ require() at /var/lib/drupalci/drupal-checkout/vendor/rector/rector-prefixed/rector:6
+
+process [-n|--dry-run] [-a|--autoload-file AUTOLOAD-FILE] [--match-git-diff] [-r|--only ONLY] [-o|--output-format [OUTPUT-FORMAT]] [--no-progress-bar] [--output-file OUTPUT-FILE] [--cache-debug] [--clear-cache] [--] [<source>...]
+

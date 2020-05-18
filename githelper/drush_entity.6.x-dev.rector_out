@@ -1,0 +1,17 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/drush_entity/entity.drush.inc
+[parsing] modules/contrib/drush_entity/tests/entityTest.php
+[refactoring] modules/contrib/drush_entity/entity.drush.inc
+[refactoring] modules/contrib/drush_entity/tests/entityTest.php
+[printing] modules/contrib/drush_entity/entity.drush.inc
+[printing] modules/contrib/drush_entity/tests/entityTest.php
+
+
+ [ERROR] Could not process "modules/contrib/drush_entity/tests/entityTest.php"  
+         file, due to:                                                          
+         "Analyze error: "Class Drush_CommandTestCase not found and could not be
+         autoloaded.". Include your files in "parameters > autoload_paths".     
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+

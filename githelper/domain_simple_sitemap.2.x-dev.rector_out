@@ -1,0 +1,139 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/domain_simple_sitemap/domain_simple_sitemap.drush.inc
+[parsing] modules/contrib/domain_simple_sitemap/domain_simple_sitemap.install
+[parsing] modules/contrib/domain_simple_sitemap/domain_simple_sitemap.module
+[parsing] modules/contrib/domain_simple_sitemap/src/Form/DomainSimpleSitemapConfigForm.php
+[parsing] modules/contrib/domain_simple_sitemap/src/Plugin/simple_sitemap/SitemapType/DomainSitemapType.php
+[parsing] modules/contrib/domain_simple_sitemap/src/Plugin/simple_sitemap/UrlGenerator/DomainEntityUrlGenerator.php
+[refactoring] modules/contrib/domain_simple_sitemap/domain_simple_sitemap.drush.inc
+[refactoring] modules/contrib/domain_simple_sitemap/domain_simple_sitemap.install
+[refactoring] modules/contrib/domain_simple_sitemap/domain_simple_sitemap.module
+[refactoring] modules/contrib/domain_simple_sitemap/src/Form/DomainSimpleSitemapConfigForm.php
+[refactoring] modules/contrib/domain_simple_sitemap/src/Plugin/simple_sitemap/SitemapType/DomainSitemapType.php
+[refactoring] modules/contrib/domain_simple_sitemap/src/Plugin/simple_sitemap/UrlGenerator/DomainEntityUrlGenerator.php
+[printing] modules/contrib/domain_simple_sitemap/domain_simple_sitemap.drush.inc
+[printing] modules/contrib/domain_simple_sitemap/domain_simple_sitemap.install
+[printing] modules/contrib/domain_simple_sitemap/domain_simple_sitemap.module
+[printing] modules/contrib/domain_simple_sitemap/src/Form/DomainSimpleSitemapConfigForm.php
+[printing] modules/contrib/domain_simple_sitemap/src/Plugin/simple_sitemap/SitemapType/DomainSitemapType.php
+[printing] modules/contrib/domain_simple_sitemap/src/Plugin/simple_sitemap/UrlGenerator/DomainEntityUrlGenerator.php
+
+
+3 files with changes
+====================
+
+1) modules/contrib/domain_simple_sitemap/domain_simple_sitemap.module
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -1,9 +1,10 @@
+ <?php
+
++use Drupal\Core\Entity\EntityInterface;
+ /**
+  * Implements hook_ENTITY_TYPE_insert().
+  */
+-function domain_simple_sitemap_domain_insert(\Drupal\Core\Entity\EntityInterface $domain) {
++function domain_simple_sitemap_domain_insert(EntityInterface $domain) {
+   /** @var \Drupal\simple_sitemap\Simplesitemap $simpleSitemap */
+   $simpleSitemap = \Drupal::service('simple_sitemap.generator');
+ 			 $id = $domain->id();
+@@ -27,7 +28,7 @@
+ /**
+  * Implements hook_ENTITY_TYPE_update().
+  */
+-function domain_simple_sitemap_domain_update(\Drupal\Core\Entity\EntityInterface $domain) {
++function domain_simple_sitemap_domain_update(EntityInterface $domain) {
+ 	if($domain->isActive()){
+ 		if ($domain->status()) {
+ 		  domain_simple_sitemap_domain_insert($domain);
+@@ -40,18 +41,18 @@
+   if($domain->isActive() && ($domain->status() !== $domain->get('original')->status() || $domain->getHostname() !== $domain->get('original')->getHostname() || $domain->label() !== $domain->get('original')->label() || $domain->getScheme() !== $domain->get('original')->getScheme())) {
+ 		domain_simple_sitemap_domain_insert($domain);
+ 	}
+-  
+-		   
++
++
+ 	elseif(!$domain->isActive() && $domain->status() !== $domain->get('original')->status()){
+ 		domain_simple_sitemap_domain_delete($domain);
+ 	}
+-   
++
+ */
+ }	
+ /**
+  * Implements hook_ENTITY_TYPE_delete().
+  */
+-function domain_simple_sitemap_domain_delete(\Drupal\Core\Entity\EntityInterface $domain) {
++function domain_simple_sitemap_domain_delete(EntityInterface $domain) {
+   /** @var \Drupal\simple_sitemap\Simplesitemap $simpleSitemap */
+   $simpleSitemap = \Drupal::service('simple_sitemap.generator');
+ 	 $id = $domain->id();
+@@ -65,4 +66,4 @@
+   $generator->setSitemapVariant($id);
+   $generator->setSettings(['excluded_languages' => []]);
+   $generator->remove();
+-}
+\ No newline at end of file
++}
+    ----------- end diff -----------
+
+2) modules/contrib/domain_simple_sitemap/src/Form/DomainSimpleSitemapConfigForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -67,4 +67,4 @@
+ 	$config = $this->config('domain_simple_sitemap.settings');
+ 	$config->save();
+   }
+-}
+\ No newline at end of file
++}
+    ----------- end diff -----------
+
+3) modules/contrib/domain_simple_sitemap/src/Plugin/simple_sitemap/UrlGenerator/DomainEntityUrlGenerator.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -41,7 +41,7 @@
+ 				// Skip if "Content type" is excluded for selected Varient (e.g. Index entities of this type in /admin/structure/types/manage/page)
+ 				if (!empty($bundle_settings['index'])) {
+ 					$query = $entityTypeStorage->getQuery();
+-				  
++
+ 					if (empty($keys['id'])) {
+ 						$query->sort($keys['id'], 'ASC');
+ 					}
+@@ -54,7 +54,7 @@
+
+ 					$ActiveId = \Drupal::service('domain.negotiator')->getActiveId();	
+ 					$DOMAIN_SOURCE = "field_domain_source";										   
+-			 
++
+ 					if (!empty($keys['bundle'])) {
+ 						if($keys['bundle'] == 'type' && $entity_type_name == 'node'){
+ 							// Checkbox on "./admin/config/domain/domain_simple_sitemap/config"
+@@ -206,4 +206,4 @@
+     $domain = \Drupal::service('domain.negotiator')->getActiveDomain();
+     return str_replace($GLOBALS['base_url'], $domain->getScheme() . $domain->getCanonical(), $url);
+   }
+-}
+\ No newline at end of file
++}
+    ----------- end diff -----------
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/domain_simple_sitemap/src/Plugin/simple_sitemap/Sitema
+         pType/DomainSitemapType.php" file, due to:                             
+         "Analyze error: "Class                                                 
+         Drupal\feature_domain\Plugin\simple_sitemap\SitemapType\SitemapTypeBase
+         not found and could not be autoloaded.". Include your files in         
+         "parameters > autoload_paths".                                         
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+

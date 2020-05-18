@@ -1,0 +1,13 @@
+Rector 0.8.x-dev@8896f0a
+Config file: rector.yml
+
+[parsing] modules/contrib/field_collection_tabs/field_collection_tabs.module
+[parsing] modules/contrib/field_collection_tabs/src/Plugin/Field/FieldFormatter/FieldCollectionTabsFormatter.php
+[refactoring] modules/contrib/field_collection_tabs/field_collection_tabs.module
+[refactoring] modules/contrib/field_collection_tabs/src/Plugin/Field/FieldFormatter/FieldCollectionTabsFormatter.php
+[printing] modules/contrib/field_collection_tabs/field_collection_tabs.module
+[printing] modules/contrib/field_collection_tabs/src/Plugin/Field/FieldFormatter/FieldCollectionTabsFormatter.php
+
+
+ [OK] Rector is done!                                                           
+

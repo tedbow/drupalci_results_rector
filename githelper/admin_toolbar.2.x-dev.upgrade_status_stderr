@@ -1,0 +1,7 @@
+ [notice] Processing /var/lib/drupalci/workspace/drupal-checkouts/drupal1/modules/contrib/admin_toolbar.
+  0/18 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   0%[2K  5/18 [▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░]  27%[2K  6/18 [▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░]  33%[2K 10/18 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░]  55%[2K 13/18 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░]  72%[2K 16/18 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░]  88%[2K 18/18 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 100%
+
+ [notice] Processing /var/lib/drupalci/workspace/drupal-checkouts/drupal1/modules/contrib/admin_toolbar.
+PHP Fatal error:  Cannot redeclare composerRequireDrupal8() (previously declared in /var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/composer/autoload_real.php:70) in /var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/composer/autoload_real.php on line 77
+Fatal error: Cannot redeclare composerRequireDrupal8() (previously declared in /var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/composer/autoload_real.php:70) in /var/lib/drupalci/workspace/drupal-checkouts/drupal2/vendor/composer/autoload_real.php on line 77
+ [error]  PHPStan failed:  
