@@ -1,0 +1,499 @@
+Rector 0.8.x-dev@485557d
+Config file: rector.yml
+
+[parsing] modules/contrib/smart_ip/includes/smart_ip.country_list.inc
+[parsing] modules/contrib/smart_ip/includes/smart_ip.region_lookup.inc
+[parsing] modules/contrib/smart_ip/modules/device_geolocation/device_geolocation.install
+[parsing] modules/contrib/smart_ip/modules/device_geolocation/device_geolocation.module
+[parsing] modules/contrib/smart_ip/modules/device_geolocation/src/Controller/DeviceGeolocationController.php
+[parsing] modules/contrib/smart_ip/modules/device_geolocation/src/DeviceGeolocation.php
+[parsing] modules/contrib/smart_ip/modules/device_geolocation/src/EventSubscriber/SmartIpEventSubscriber.php
+[parsing] modules/contrib/smart_ip/modules/device_geolocation/src/Plugin/Block/VisitorGeolocation.php
+[parsing] modules/contrib/smart_ip/modules/smart_ip_ip2location_bin_db/smart_ip_ip2location_bin_db.install
+[parsing] modules/contrib/smart_ip/modules/smart_ip_ip2location_bin_db/src/DatabaseFileUtility.php
+[parsing] modules/contrib/smart_ip/modules/smart_ip_ip2location_bin_db/src/EventSubscriber/SmartIpEventSubscriber.php
+[parsing] modules/contrib/smart_ip/modules/smart_ip_ip2location_bin_db/src/Ip2locationBinDb.php
+[parsing] modules/contrib/smart_ip/modules/smart_ip_ipinfodb_web_service/src/EventSubscriber/SmartIpEventSubscriber.php
+[parsing] modules/contrib/smart_ip/modules/smart_ip_ipinfodb_web_service/src/IpinfodbWebService.php
+[parsing] modules/contrib/smart_ip/modules/smart_ip_ipinfodb_web_service/src/WebServiceUtility.php
+[parsing] modules/contrib/smart_ip/modules/smart_ip_maxmind_geoip2_bin_db/smart_ip_maxmind_geoip2_bin_db.install
+[parsing] modules/contrib/smart_ip/modules/smart_ip_maxmind_geoip2_bin_db/src/DatabaseFileUtility.php
+[parsing] modules/contrib/smart_ip/modules/smart_ip_maxmind_geoip2_bin_db/src/EventSubscriber/SmartIpEventSubscriber.php
+[parsing] modules/contrib/smart_ip/modules/smart_ip_maxmind_geoip2_bin_db/src/MaxmindGeoip2BinDb.php
+[parsing] modules/contrib/smart_ip/modules/smart_ip_maxmind_geoip2_web_service/src/EventSubscriber/SmartIpEventSubscriber.php
+[parsing] modules/contrib/smart_ip/modules/smart_ip_maxmind_geoip2_web_service/src/MaxmindGeoip2WebService.php
+[parsing] modules/contrib/smart_ip/modules/smart_ip_maxmind_geoip2_web_service/src/WebServiceUtility.php
+[parsing] modules/contrib/smart_ip/smart_ip.install
+[parsing] modules/contrib/smart_ip/smart_ip.module
+[parsing] modules/contrib/smart_ip/src/AdminSettingsEvent.php
+[parsing] modules/contrib/smart_ip/src/DatabaseFileEvent.php
+[parsing] modules/contrib/smart_ip/src/DatabaseFileUtilityBase.php
+[parsing] modules/contrib/smart_ip/src/DatabaseFileUtilityInterface.php
+[parsing] modules/contrib/smart_ip/src/EventSubscriber/GeolocateUserSubscriber.php
+[parsing] modules/contrib/smart_ip/src/Form/SmartIpAdminSettingsForm.php
+[parsing] modules/contrib/smart_ip/src/GetLocationEvent.php
+[parsing] modules/contrib/smart_ip/src/Plugin/Condition/UserCountry.php
+[parsing] modules/contrib/smart_ip/src/SmartIp.php
+[parsing] modules/contrib/smart_ip/src/SmartIpDataSourceInterface.php
+[parsing] modules/contrib/smart_ip/src/SmartIpEventSubscriberBase.php
+[parsing] modules/contrib/smart_ip/src/SmartIpEvents.php
+[parsing] modules/contrib/smart_ip/src/SmartIpLocation.php
+[parsing] modules/contrib/smart_ip/src/SmartIpLocationInterface.php
+[parsing] modules/contrib/smart_ip/src/WebServiceUtilityBase.php
+[parsing] modules/contrib/smart_ip/src/WebServiceUtilityInterface.php
+[refactoring] modules/contrib/smart_ip/includes/smart_ip.country_list.inc
+[refactoring] modules/contrib/smart_ip/includes/smart_ip.region_lookup.inc
+[refactoring] modules/contrib/smart_ip/modules/device_geolocation/device_geolocation.install
+[refactoring] modules/contrib/smart_ip/modules/device_geolocation/device_geolocation.module
+[refactoring] modules/contrib/smart_ip/modules/device_geolocation/src/Controller/DeviceGeolocationController.php
+[refactoring] modules/contrib/smart_ip/modules/device_geolocation/src/DeviceGeolocation.php
+[refactoring] modules/contrib/smart_ip/modules/device_geolocation/src/EventSubscriber/SmartIpEventSubscriber.php
+[refactoring] modules/contrib/smart_ip/modules/device_geolocation/src/Plugin/Block/VisitorGeolocation.php
+[refactoring] modules/contrib/smart_ip/modules/smart_ip_ip2location_bin_db/smart_ip_ip2location_bin_db.install
+[refactoring] modules/contrib/smart_ip/modules/smart_ip_ip2location_bin_db/src/DatabaseFileUtility.php
+[refactoring] modules/contrib/smart_ip/modules/smart_ip_ip2location_bin_db/src/EventSubscriber/SmartIpEventSubscriber.php
+[refactoring] modules/contrib/smart_ip/modules/smart_ip_ip2location_bin_db/src/Ip2locationBinDb.php
+[refactoring] modules/contrib/smart_ip/modules/smart_ip_ipinfodb_web_service/src/EventSubscriber/SmartIpEventSubscriber.php
+[refactoring] modules/contrib/smart_ip/modules/smart_ip_ipinfodb_web_service/src/IpinfodbWebService.php
+[refactoring] modules/contrib/smart_ip/modules/smart_ip_ipinfodb_web_service/src/WebServiceUtility.php
+[refactoring] modules/contrib/smart_ip/modules/smart_ip_maxmind_geoip2_bin_db/smart_ip_maxmind_geoip2_bin_db.install
+[refactoring] modules/contrib/smart_ip/modules/smart_ip_maxmind_geoip2_bin_db/src/DatabaseFileUtility.php
+[refactoring] modules/contrib/smart_ip/modules/smart_ip_maxmind_geoip2_bin_db/src/EventSubscriber/SmartIpEventSubscriber.php
+[refactoring] modules/contrib/smart_ip/modules/smart_ip_maxmind_geoip2_bin_db/src/MaxmindGeoip2BinDb.php
+[refactoring] modules/contrib/smart_ip/modules/smart_ip_maxmind_geoip2_web_service/src/EventSubscriber/SmartIpEventSubscriber.php
+[refactoring] modules/contrib/smart_ip/modules/smart_ip_maxmind_geoip2_web_service/src/MaxmindGeoip2WebService.php
+[refactoring] modules/contrib/smart_ip/modules/smart_ip_maxmind_geoip2_web_service/src/WebServiceUtility.php
+[refactoring] modules/contrib/smart_ip/smart_ip.install
+[refactoring] modules/contrib/smart_ip/smart_ip.module
+[refactoring] modules/contrib/smart_ip/src/AdminSettingsEvent.php
+[refactoring] modules/contrib/smart_ip/src/DatabaseFileEvent.php
+[refactoring] modules/contrib/smart_ip/src/DatabaseFileUtilityBase.php
+[refactoring] modules/contrib/smart_ip/src/DatabaseFileUtilityInterface.php
+[refactoring] modules/contrib/smart_ip/src/EventSubscriber/GeolocateUserSubscriber.php
+[refactoring] modules/contrib/smart_ip/src/Form/SmartIpAdminSettingsForm.php
+[refactoring] modules/contrib/smart_ip/src/GetLocationEvent.php
+[refactoring] modules/contrib/smart_ip/src/Plugin/Condition/UserCountry.php
+[refactoring] modules/contrib/smart_ip/src/SmartIp.php
+[refactoring] modules/contrib/smart_ip/src/SmartIpDataSourceInterface.php
+[refactoring] modules/contrib/smart_ip/src/SmartIpEventSubscriberBase.php
+[refactoring] modules/contrib/smart_ip/src/SmartIpEvents.php
+[refactoring] modules/contrib/smart_ip/src/SmartIpLocation.php
+[refactoring] modules/contrib/smart_ip/src/SmartIpLocationInterface.php
+[refactoring] modules/contrib/smart_ip/src/WebServiceUtilityBase.php
+[refactoring] modules/contrib/smart_ip/src/WebServiceUtilityInterface.php
+[printing] modules/contrib/smart_ip/includes/smart_ip.country_list.inc
+[printing] modules/contrib/smart_ip/includes/smart_ip.region_lookup.inc
+[printing] modules/contrib/smart_ip/modules/device_geolocation/device_geolocation.install
+[printing] modules/contrib/smart_ip/modules/device_geolocation/device_geolocation.module
+[printing] modules/contrib/smart_ip/modules/device_geolocation/src/Controller/DeviceGeolocationController.php
+[printing] modules/contrib/smart_ip/modules/device_geolocation/src/DeviceGeolocation.php
+[printing] modules/contrib/smart_ip/modules/device_geolocation/src/EventSubscriber/SmartIpEventSubscriber.php
+[printing] modules/contrib/smart_ip/modules/device_geolocation/src/Plugin/Block/VisitorGeolocation.php
+[printing] modules/contrib/smart_ip/modules/smart_ip_ip2location_bin_db/smart_ip_ip2location_bin_db.install
+[printing] modules/contrib/smart_ip/modules/smart_ip_ip2location_bin_db/src/DatabaseFileUtility.php
+[printing] modules/contrib/smart_ip/modules/smart_ip_ip2location_bin_db/src/EventSubscriber/SmartIpEventSubscriber.php
+[printing] modules/contrib/smart_ip/modules/smart_ip_ip2location_bin_db/src/Ip2locationBinDb.php
+[printing] modules/contrib/smart_ip/modules/smart_ip_ipinfodb_web_service/src/EventSubscriber/SmartIpEventSubscriber.php
+[printing] modules/contrib/smart_ip/modules/smart_ip_ipinfodb_web_service/src/IpinfodbWebService.php
+[printing] modules/contrib/smart_ip/modules/smart_ip_ipinfodb_web_service/src/WebServiceUtility.php
+[printing] modules/contrib/smart_ip/modules/smart_ip_maxmind_geoip2_bin_db/smart_ip_maxmind_geoip2_bin_db.install
+[printing] modules/contrib/smart_ip/modules/smart_ip_maxmind_geoip2_bin_db/src/DatabaseFileUtility.php
+[printing] modules/contrib/smart_ip/modules/smart_ip_maxmind_geoip2_bin_db/src/EventSubscriber/SmartIpEventSubscriber.php
+[printing] modules/contrib/smart_ip/modules/smart_ip_maxmind_geoip2_bin_db/src/MaxmindGeoip2BinDb.php
+[printing] modules/contrib/smart_ip/modules/smart_ip_maxmind_geoip2_web_service/src/EventSubscriber/SmartIpEventSubscriber.php
+[printing] modules/contrib/smart_ip/modules/smart_ip_maxmind_geoip2_web_service/src/MaxmindGeoip2WebService.php
+[printing] modules/contrib/smart_ip/modules/smart_ip_maxmind_geoip2_web_service/src/WebServiceUtility.php
+[printing] modules/contrib/smart_ip/smart_ip.install
+[printing] modules/contrib/smart_ip/smart_ip.module
+[printing] modules/contrib/smart_ip/src/AdminSettingsEvent.php
+[printing] modules/contrib/smart_ip/src/DatabaseFileEvent.php
+[printing] modules/contrib/smart_ip/src/DatabaseFileUtilityBase.php
+[printing] modules/contrib/smart_ip/src/DatabaseFileUtilityInterface.php
+[printing] modules/contrib/smart_ip/src/EventSubscriber/GeolocateUserSubscriber.php
+[printing] modules/contrib/smart_ip/src/Form/SmartIpAdminSettingsForm.php
+[printing] modules/contrib/smart_ip/src/GetLocationEvent.php
+[printing] modules/contrib/smart_ip/src/Plugin/Condition/UserCountry.php
+[printing] modules/contrib/smart_ip/src/SmartIp.php
+[printing] modules/contrib/smart_ip/src/SmartIpDataSourceInterface.php
+[printing] modules/contrib/smart_ip/src/SmartIpEventSubscriberBase.php
+[printing] modules/contrib/smart_ip/src/SmartIpEvents.php
+[printing] modules/contrib/smart_ip/src/SmartIpLocation.php
+[printing] modules/contrib/smart_ip/src/SmartIpLocationInterface.php
+[printing] modules/contrib/smart_ip/src/WebServiceUtilityBase.php
+[printing] modules/contrib/smart_ip/src/WebServiceUtilityInterface.php
+
+
+12 files with changes
+=====================
+
+1) modules/contrib/smart_ip/includes/smart_ip.country_list.inc
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -1,10 +1,10 @@
+ <?php
+
++use Drupal\Core\Locale\CountryManager;
+ /**
+  * @file
+  * Provides a list of countries based on ISO standards.
+  */
+-
+ /**
+  * Get an array of all country code => country name pairs.
+  *
+@@ -14,7 +14,7 @@
+  *   An array of all country code => country name pairs.
+  */
+ function country_get_predefined_list() {
+-  $countries = \Drupal\Core\Locale\CountryManager::getStandardList();
++  $countries = CountryManager::getStandardList();
+
+   // Allow other modules to modify country list via
+   // hook_smart_ip_country_predefined_list_alter()
+@@ -21,4 +21,4 @@
+   \Drupal::moduleHandler()->alter('smart_ip_country_predefined_list', $countries);
+
+   return $countries;
+-}
+\ No newline at end of file
++}
+    ----------- end diff -----------
+
+
+2) modules/contrib/smart_ip/includes/smart_ip.region_lookup.inc
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -3,14 +3,11 @@
+  * @file
+  * Utility to get region name (Federal Information Processing Standards).
+  */
+-
+- /**
++/**
+  * Get region name (Federal Information Processing Standards).
+  *
+- * @param $country_code
+- *   ISO 3166 2-character country code.
+- * @param $region_code
+- *   Region code (FIPS).
++ * @param $country_code   ISO 3166 2-character country code.
++ * @param $region_code   Region code (FIPS).
+  * @return
+  *   Region name.
+  */
+@@ -4672,4 +4669,4 @@
+   else {
+     return $region_codes[$country_code][$region_code];
+   }
+-}
+\ No newline at end of file
++}
+    ----------- end diff -----------
+
+
+3) modules/contrib/smart_ip/modules/device_geolocation/device_geolocation.install
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -10,4 +10,4 @@
+  */
+ function device_geolocation_update_8001() {
+   drupal_flush_all_caches();
+-}
+\ No newline at end of file
++}
+    ----------- end diff -----------
+
+
+4) modules/contrib/smart_ip/modules/device_geolocation/device_geolocation.module
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -80,7 +80,7 @@
+       }
+       $label = preg_replace('/(?<=\\w)(?=[A-Z])/', " $1", $label);
+       $label = str_replace('_', ' ', $label);
+-      $label = Unicode::ucwords(Unicode::strtolower($label));
++      $label = Unicode::ucwords(mb_strtolower($label));
+       $blockData[$label] = $value;
+     }
+   }
+@@ -91,7 +91,7 @@
+  * Implements hook_page_attachments().
+  */
+ function device_geolocation_page_attachments(array &$page) {
+-  if (!\Drupal\smart_ip\SmartIp::checkAllowedPage()) {
++  if (!SmartIp::checkAllowedPage()) {
+     // This page is not on the list to access user's geolocation
+     return;
+   }
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\UnicodeStrtolowerRector
+
+
+5) modules/contrib/smart_ip/modules/smart_ip_ip2location_bin_db/smart_ip_ip2location_bin_db.install
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -1,5 +1,6 @@
+ <?php
+
++use Drupal\smart_ip_ip2location_bin_db\EventSubscriber\SmartIpEventSubscriber;
+ use Drupal\Core\Link;
+ use Drupal\Core\Url;
+
+@@ -43,7 +44,7 @@
+  * path. Change the default value of db_auto_update to FALSE.
+  */
+ function smart_ip_ip2location_bin_db_update_8301() {
+-  $configName = \Drupal\smart_ip_ip2location_bin_db\EventSubscriber\SmartIpEventSubscriber::configName();
++  $configName = SmartIpEventSubscriber::configName();
+   $config     = \Drupal::configFactory()->getEditable($configName);
+   $filesystem = \Drupal::service('file_system');
+   $path       = $filesystem->dirname($config->get('ip2location_bin_db_ipv4_custom_path'));
+@@ -52,4 +53,4 @@
+     ->clear('ip2location_bin_db_ipv4_custom_path')
+     ->clear('ip2location_bin_db_ipv6_custom_path')
+     ->save();
+-}
+\ No newline at end of file
++}
+    ----------- end diff -----------
+
+
+6) modules/contrib/smart_ip/modules/smart_ip_ip2location_bin_db/src/EventSubscriber/SmartIpEventSubscriber.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -7,6 +7,7 @@
+
+ namespace Drupal\smart_ip_ip2location_bin_db\EventSubscriber;
+
++use IP2Location\Database;
+ use Drupal\smart_ip_ip2location_bin_db\DatabaseFileUtility;
+ use Drupal\smart_ip_ip2location_bin_db\Ip2locationBinDb;
+ use Drupal\smart_ip\DatabaseFileUtilityBase;
+@@ -65,17 +66,17 @@
+         return;
+       }
+       if ($config->get('caching_method') == Ip2locationBinDb::NO_CACHE) {
+-        $cachingMethod = \IP2Location\Database::FILE_IO;
++        $cachingMethod = Database::FILE_IO;
+       }
+       elseif ($config->get('caching_method') == Ip2locationBinDb::MEMORY_CACHE) {
+-        $cachingMethod = \IP2Location\Database::MEMORY_CACHE;
++        $cachingMethod = Database::MEMORY_CACHE;
+       }
+       elseif ($config->get('caching_method') == Ip2locationBinDb::SHARED_MEMORY) {
+-        $cachingMethod = \IP2Location\Database::SHARED_MEMORY;
++        $cachingMethod = Database::SHARED_MEMORY;
+       }
+       if (!empty($dbFile) && !empty($cachingMethod)) {
+-        $reader = new \IP2Location\Database($dbFile, $cachingMethod);
+-        $record = $reader->lookup($ipAddress, \IP2Location\Database::ALL);
++        $reader = new Database($dbFile, $cachingMethod);
++        $record = $reader->lookup($ipAddress, Database::ALL);
+         foreach ($record as &$item) {
+           if (strpos($item, 'Please upgrade') !== FALSE || strpos($item, 'Invalid IP address') !== FALSE || $item == '-') {
+             // Make the value "This parameter is unavailable in selected .BIN
+@@ -393,7 +394,7 @@
+         $privateFolder = DatabaseFileUtilityBase::DRUPAL_FOLDER;
+         if (!file_exists($privateFolder)) {
+           $privateStream->mkdir($privateFolder, NULL, STREAM_MKDIR_RECURSIVE);
+-          file_prepare_directory($privateFolder);
++          \Drupal::service('file_system')->prepareDirectory($privateFolder);
+         }
+         if (empty($folder)) {
+           $privateStream->setUri($privateFolder);
+@@ -547,8 +548,8 @@
+         else {
+           $ip = '2001:4860:4860::8888';
+         }
+-        $reader = new \IP2Location\Database($file, \IP2Location\Database::FILE_IO);
+-        $record = $reader->lookup($ip, \IP2Location\Database::COUNTRY);
++        $reader = new Database($file, Database::FILE_IO);
++        $record = $reader->lookup($ip, Database::COUNTRY);
+         if (strtotime($reader->getDate()) <= 0 || empty($record['countryCode'])) {
+           $error['code'] = Ip2locationBinDb::DB_READ_ERROR;
+         }
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\FilePrepareDirectoryRector
+
+
+7) modules/contrib/smart_ip/modules/smart_ip_maxmind_geoip2_bin_db/smart_ip_maxmind_geoip2_bin_db.install
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -32,4 +32,4 @@
+   \Drupal::state()->deleteMultiple([
+     'smart_ip_maxmind_geoip2_bin_db.last_update_time',
+   ]);
+-}
+\ No newline at end of file
++}
+    ----------- end diff -----------
+
+
+8) modules/contrib/smart_ip/modules/smart_ip_maxmind_geoip2_bin_db/src/EventSubscriber/SmartIpEventSubscriber.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -7,6 +7,7 @@
+
+ namespace Drupal\smart_ip_maxmind_geoip2_bin_db\EventSubscriber;
+
++use MaxMind\Db\Reader;
+ use Drupal\smart_ip_maxmind_geoip2_bin_db\DatabaseFileUtility;
+ use Drupal\smart_ip_maxmind_geoip2_bin_db\MaxmindGeoip2BinDb;
+ use Drupal\smart_ip\DatabaseFileUtilityBase;
+@@ -64,7 +65,7 @@
+         return;
+       }
+       if (class_exists('\MaxMind\Db\Reader')) {
+-        $reader = new \MaxMind\Db\Reader($dbFile);
++        $reader = new Reader($dbFile);
+         $raw    = $reader->get($ipAddress);
+       }
+       else {
+    ----------- end diff -----------
+
+
+9) modules/contrib/smart_ip/smart_ip.install
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -1,5 +1,6 @@
+ <?php
+
++use Drupal\user\Entity\Role;
+ /**
+  * @file
+  * Install, update and uninstall functions for the image module.
+@@ -28,7 +29,7 @@
+   $config = \Drupal::configFactory()->getEditable('smart_ip.settings');
+   if ($config->get('debug_mode')) {
+     $debugIp      = $config->get('debug_mode_ip');
+-    $roles        = \Drupal\user\Entity\Role::loadMultiple();
++    $roles        = Role::loadMultiple();
+     $rolesDebug   = [];
+     $rolesDebugIp = [];
+     /** @var \Drupal\user\Entity\Role $role */
+    ----------- end diff -----------
+
+
+10) modules/contrib/smart_ip/smart_ip.module
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -92,7 +92,7 @@
+  * Implements hook_page_attachments().
+  */
+ function smart_ip_page_attachments(array &$page) {
+-  if (!\Drupal\smart_ip\SmartIp::checkAllowedPage()) {
++  if (!SmartIp::checkAllowedPage()) {
+     // This page is not on the list to access user's geolocation.
+     return;
+   }
+    ----------- end diff -----------
+
+
+11) modules/contrib/smart_ip/src/DatabaseFileUtilityBase.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -7,6 +7,7 @@
+
+ namespace Drupal\smart_ip;
+
++use Drupal\Core\File\FileSystemInterface;
+ use Drupal\Core\Link;
+ use Drupal\Core\Url;
+ use Drupal\Core\Archiver\Zip;
+@@ -116,7 +117,7 @@
+     if (!file_exists($destination)) {
+       // The Smart IP folder does not exist then create it.
+       $destinationStream->mkdir($destination, NULL, STREAM_MKDIR_RECURSIVE);
+-      file_prepare_directory($destinationRealPath);
++      \Drupal::service('file_system')->prepareDirectory($destinationRealPath);
+     }
+     if (file_exists($destination)) {
+       if (file_exists($source)) {
+@@ -135,7 +136,7 @@
+       $data = $uriData->getBody();
+       $parsedUrl        = parse_url($url);
+       $archivePath      = "$source/" . $filesystem->basename($parsedUrl['path']);
+-      $savedArchivePath = file_unmanaged_save_data($data, $archivePath, FILE_EXISTS_REPLACE);
++      $savedArchivePath = \Drupal::service('file_system')->saveData($data, $archivePath, FileSystemInterface::EXISTS_REPLACE);
+       if (!$savedArchivePath) {
+         $message = t('Failed to download %source.', ['%source' => $url]);
+         \Drupal::state()->set('smart_ip.request_db_error_source_id', $sourceId);
+@@ -189,7 +190,7 @@
+           fclose($targetFp);
+         }
+       }
+-      $sourceScanFiles = file_scan_directory($sourceRealPath, "/^$file$/");
++      $sourceScanFiles = \Drupal::service('file_system')->scanDirectory($sourceRealPath, "/^$file$/");
+       foreach ($sourceScanFiles as $sourceScanFile) {
+         if ($sourceScanFile->filename == $file) {
+           file_unmanaged_move($sourceScanFile->uri, $sourceFilePath);
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\FileExistsReplaceRector
+ * DrupalRector\Rector\Deprecation\FilePrepareDirectoryRector
+ * DrupalRector\Rector\Deprecation\FileScanDirectoryRector
+ * DrupalRector\Rector\Deprecation\FileUnmanagedSaveDataRector
+
+
+12) modules/contrib/smart_ip/src/SmartIp.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -396,10 +396,10 @@
+         $url = \Drupal::service('path.current')->getPath();
+       }
+       /** @var \Drupal\Core\Path\AliasManagerInterface $aliasManager */
+-      $aliasManager = \Drupal::service('path.alias_manager');
++      $aliasManager = \Drupal::service('path_alias.manager');
+       $pathAlias = $aliasManager->getAliasByPath($url);
+       // Convert the Drupal path to lowercase.
+-      $path = Unicode::strtolower($pathAlias);
++      $path = mb_strtolower($pathAlias);
+       /** @var \Drupal\Core\Path\PathMatcherInterface $pathMatcher */
+       $pathMatcher = \Drupal::service('path.matcher');
+       // Compare the lowercase internal and lowercase path alias (if any).
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\PathAliasManagerServiceNameRector
+ * DrupalRector\Rector\Deprecation\UnicodeStrtolowerRector
+
+
+ [OK] Rector is done! 12 files have been changed.                               
+
