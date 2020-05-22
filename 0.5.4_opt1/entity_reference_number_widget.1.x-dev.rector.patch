@@ -1,0 +1,9 @@
+diff --git a/entity_reference_number_widget.info.yml b/entity_reference_number_widget.info.yml
+index de77d7f..6fe47e5 100644
+--- a/entity_reference_number_widget.info.yml
++++ b/entity_reference_number_widget.info.yml
+@@ -3,3 +3,4 @@ description: Adds an Entity Reference field widget that directly takes the entit
+ package: Fields
+ type: module
+ core: 8.x
++core_version_requirement: ^8 || ^9

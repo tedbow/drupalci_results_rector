@@ -1,0 +1,60 @@
+diff --git a/migrate_json_example/migrate_json_example.install b/migrate_json_example/migrate_json_example.install
+index 86171fe..fa070cd 100644
+--- a/migrate_json_example/migrate_json_example.install
++++ b/migrate_json_example/migrate_json_example.install
+@@ -12,14 +12,14 @@ use Drupal\Core\File\FileSystemInterface;
+  */
+ function migrate_json_example_install() {
+   // Create the example file directory and ensure it's writable.
+-  $directory = file_default_scheme() . '://migrate_json_example';
++  $directory = \Drupal::config('system.file')->get('default_scheme') . '://migrate_json_example';
+   // TODO: remove after 8.6 is no longer supported in
+   // https://www.drupal.org/project/migrate_plus/issues/3035587
+   if (version_compare(\Drupal::VERSION, '8.7', '>=')) {
+     \Drupal::service('file_system')->prepareDirectory($directory, FileSystemInterface::CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS);
+   }
+   else {
+-    file_prepare_directory($directory, FILE_CREATE_DIRECTORY | FILE_MODIFY_PERMISSIONS);
++    \Drupal::service('file_system')->prepareDirectory($directory, FileSystemInterface::CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS);
+   }
+ 
+   // Copy the example file to example directory.
+@@ -31,6 +31,6 @@ function migrate_json_example_install() {
+     \Drupal::service('file_system')->copy($file_source, $directory . '/products.json', FileSystemInterface::EXISTS_REPLACE);
+   }
+   else {
+-    file_unmanaged_copy($file_source, $directory . '/products.json', FILE_EXISTS_REPLACE);
++    file_unmanaged_copy($file_source, $directory . '/products.json', FileSystemInterface::EXISTS_REPLACE);
+   }
+ }
+diff --git a/src/Plugin/migrate/process/FileBlob.php b/src/Plugin/migrate/process/FileBlob.php
+index e2f0e43..b9b2a5a 100644
+--- a/src/Plugin/migrate/process/FileBlob.php
++++ b/src/Plugin/migrate/process/FileBlob.php
+@@ -141,7 +141,7 @@ class FileBlob extends ProcessPluginBase implements ContainerFactoryPluginInterf
+         throw new MigrateSkipProcessException("Could not create directory '$dir'");
+       }
+     }
+-    elseif (file_prepare_directory($dir, FILE_CREATE_DIRECTORY | FILE_MODIFY_PERMISSIONS)) {
++    elseif (\Drupal::service('file_system')->prepareDirectory($dir, FileSystemInterface::CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS)) {
+       throw new MigrateSkipProcessException("Could not create directory '$dir'");
+     }
+     if ($this->putFile($destination, $blob, $replace)) {
+@@ -168,7 +168,7 @@ class FileBlob extends ProcessPluginBase implements ContainerFactoryPluginInterf
+     // TODO: remove after 8.6 is no longer supported in
+     // https://www.drupal.org/project/migrate_plus/issues/3035587
+     if (!isset($replace)) {
+-      $replace = FILE_EXISTS_REPLACE;
++      $replace = FileSystemInterface::EXISTS_REPLACE;
+     }
+     if (version_compare(\Drupal::VERSION, '8.7', '>=')) {
+       $path = $this->fileSystem->getDestinationFilename($destination, $replace);
+@@ -214,7 +214,7 @@ class FileBlob extends ProcessPluginBase implements ContainerFactoryPluginInterf
+       return FileSystemInterface::EXISTS_REPLACE;
+     }
+     else {
+-      return FILE_EXISTS_REPLACE;
++      return FileSystemInterface::EXISTS_REPLACE;
+     }
+   }
+ 

@@ -1,0 +1,5 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/hires_images/hires_images.module
+[parsing] modules/contrib/hires_images/lib/Drupal/hires_images/Plugin/ImageEffect/HiResImageEffect.php

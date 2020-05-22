@@ -1,0 +1,12 @@
+diff --git a/migrate_plus.info.yml b/migrate_plus.info.yml
+index 38c4be8..035b0e1 100644
+--- a/migrate_plus.info.yml
++++ b/migrate_plus.info.yml
+@@ -3,6 +3,7 @@ name: Migrate Plus
+ description: 'Enhancements to core migration support'
+ package: Migration
+ core: 8.x
++core_version_requirement: ^8 || ^9
+ dependencies:
+   - drupal:migrate (>=8.3)
+ test_dependencies:

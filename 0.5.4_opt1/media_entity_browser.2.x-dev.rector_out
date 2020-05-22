@@ -1,0 +1,25 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/media_entity_browser/media_entity_browser.install
+[parsing] modules/contrib/media_entity_browser/media_entity_browser.module
+[parsing] modules/contrib/media_entity_browser/media_entity_browser_media_library/media_entity_browser_media_library.module
+[parsing] modules/contrib/media_entity_browser/media_entity_browser_media_library/media_entity_browser_media_library.post_update.php
+[parsing] modules/contrib/media_entity_browser/media_entity_browser_media_library/tests/src/FunctionalJavascript/MediaEntityBrowserMediaLibraryTest.php
+[parsing] modules/contrib/media_entity_browser/tests/src/FunctionalJavascript/MediaEntityBrowserTest.php
+[refactoring] modules/contrib/media_entity_browser/media_entity_browser.install
+[refactoring] modules/contrib/media_entity_browser/media_entity_browser.module
+[refactoring] modules/contrib/media_entity_browser/media_entity_browser_media_library/media_entity_browser_media_library.module
+[refactoring] modules/contrib/media_entity_browser/media_entity_browser_media_library/media_entity_browser_media_library.post_update.php
+[refactoring] modules/contrib/media_entity_browser/media_entity_browser_media_library/tests/src/FunctionalJavascript/MediaEntityBrowserMediaLibraryTest.php
+[refactoring] modules/contrib/media_entity_browser/tests/src/FunctionalJavascript/MediaEntityBrowserTest.php
+[printing] modules/contrib/media_entity_browser/media_entity_browser.install
+[printing] modules/contrib/media_entity_browser/media_entity_browser.module
+[printing] modules/contrib/media_entity_browser/media_entity_browser_media_library/media_entity_browser_media_library.module
+[printing] modules/contrib/media_entity_browser/media_entity_browser_media_library/media_entity_browser_media_library.post_update.php
+[printing] modules/contrib/media_entity_browser/media_entity_browser_media_library/tests/src/FunctionalJavascript/MediaEntityBrowserMediaLibraryTest.php
+[printing] modules/contrib/media_entity_browser/tests/src/FunctionalJavascript/MediaEntityBrowserTest.php
+
+
+ [OK] Rector is done!                                                           
+

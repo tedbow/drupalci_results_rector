@@ -1,0 +1,56 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/email_registration/email_registration.api.php
+[parsing] modules/contrib/email_registration/email_registration.install
+[parsing] modules/contrib/email_registration/email_registration.module
+[parsing] modules/contrib/email_registration/src/Plugin/Commerce/CheckoutPane/EmailRegistrationCompletionRegistration.php
+[parsing] modules/contrib/email_registration/src/Plugin/Commerce/CheckoutPane/EmailRegistrationLogin.php
+[parsing] modules/contrib/email_registration/src/Plugin/migrate/process/EmailRegistrationUserName.php
+[parsing] modules/contrib/email_registration/tests/src/Functional/EmailRegistrationTestCase.php
+[parsing] modules/contrib/email_registration/tests/src/Functional/Plugin/Commerce/CheckoutPane/EmailRegistrationLoginTest.php
+[refactoring] modules/contrib/email_registration/email_registration.api.php
+[refactoring] modules/contrib/email_registration/email_registration.install
+[refactoring] modules/contrib/email_registration/email_registration.module
+[refactoring] modules/contrib/email_registration/src/Plugin/Commerce/CheckoutPane/EmailRegistrationCompletionRegistration.php
+[refactoring] modules/contrib/email_registration/src/Plugin/Commerce/CheckoutPane/EmailRegistrationLogin.php
+[refactoring] modules/contrib/email_registration/src/Plugin/migrate/process/EmailRegistrationUserName.php
+[refactoring] modules/contrib/email_registration/tests/src/Functional/EmailRegistrationTestCase.php
+[refactoring] modules/contrib/email_registration/tests/src/Functional/Plugin/Commerce/CheckoutPane/EmailRegistrationLoginTest.php
+[printing] modules/contrib/email_registration/email_registration.api.php
+[printing] modules/contrib/email_registration/email_registration.install
+[printing] modules/contrib/email_registration/email_registration.module
+[printing] modules/contrib/email_registration/src/Plugin/Commerce/CheckoutPane/EmailRegistrationCompletionRegistration.php
+[printing] modules/contrib/email_registration/src/Plugin/Commerce/CheckoutPane/EmailRegistrationLogin.php
+[printing] modules/contrib/email_registration/src/Plugin/migrate/process/EmailRegistrationUserName.php
+[printing] modules/contrib/email_registration/tests/src/Functional/EmailRegistrationTestCase.php
+[printing] modules/contrib/email_registration/tests/src/Functional/Plugin/Commerce/CheckoutPane/EmailRegistrationLoginTest.php
+
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/email_registration/src/Plugin/Commerce/CheckoutPane/Em
+         ailRegistrationCompletionRegistration.php" file, due to:               
+         "Analyze error: "Class                                                 
+         Drupal\commerce_checkout\Plugin\Commerce\CheckoutPane\CompletionRegiste
+         r not found and could not be autoloaded.". Include your files in       
+         "parameters > autoload_paths".                                         
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/email_registration/src/Plugin/Commerce/CheckoutPane/Em
+         ailRegistrationLogin.php" file, due to:                                
+         "Analyze error: "Class                                                 
+         Drupal\commerce_checkout\Plugin\Commerce\CheckoutPane\Login not found  
+         and could not be autoloaded.". Include your files in "parameters >     
+         autoload_paths".                                                       
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/email_registration/tests/src/Functional/Plugin/Commerc
+         e/CheckoutPane/EmailRegistrationLoginTest.php" file, due to:           
+         "Analyze error: "Class                                                 
+         Drupal\Tests\commerce\Functional\CommerceBrowserTestBase not found and 
+         could not be autoloaded.". Include your files in "parameters >         
+         autoload_paths".                                                       
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+

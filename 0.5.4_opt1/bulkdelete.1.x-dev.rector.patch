@@ -1,0 +1,10 @@
+diff --git a/bulkdelete.info.yml b/bulkdelete.info.yml
+index b64f25d..00b7c62 100644
+--- a/bulkdelete.info.yml
++++ b/bulkdelete.info.yml
+@@ -2,4 +2,5 @@ name: Bulk Delete
+ type: module
+ description: 'Adds an administrative option to bulk delete nodes by content type using the batch API.'
+ core: 8.x
++core_version_requirement: ^8 || ^9
+ configure: bulkdelete.admin

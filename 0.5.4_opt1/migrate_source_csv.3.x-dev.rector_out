@@ -1,0 +1,7 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/migrate_source_csv/src/Plugin/migrate/source/CSV.php
+[parsing] modules/contrib/migrate_source_csv/tests/modules/csv_source_yield_test/src/Plugin/migrate/source/YieldRows.php
+[parsing] modules/contrib/migrate_source_csv/tests/modules/migrate_source_csv_test/migrate_source_csv_test.module
+[parsing] modules/contrib/migrate_source_csv/tests/src/Kernel/Plugin/migrate/source/CSVTest.php

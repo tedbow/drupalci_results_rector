@@ -1,0 +1,46 @@
+ [notice] Processing /var/lib/drupalci/workspace/drupal-checkouts/drupal3/modules/contrib/composer_security_checker.
+  0/13 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   0%[2K  2/13 [▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░]  15%[2K  6/13 [▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░]  46%[2K  7/13 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░]  53%[2K 13/13 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 100%
+
+ [error]  Error: Call to a member function setParser() on array in Twig\Parser->parse() (line 99 of /var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/twig/twig/src/Parser.php) #0 /home/testbot/.composer/vendor/twig/twig/src/Environment.php(563): Twig\Parser->parse(Object(Twig\TokenStream))
+#1 /var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/twig/twig/src/Util/DeprecationCollector.php(67): Twig\Environment->parse(Object(Twig\TokenStream))
+#2 /var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/twig/twig/src/Util/DeprecationCollector.php(49): Twig\Util\DeprecationCollector->collect(Object(Twig\Util\TemplateDirIterator))
+#3 /var/lib/drupalci/workspace/drupal-checkouts/drupal3/modules/contrib/upgrade_status/src/DeprecationAnalyzer.php(435): Twig\Util\DeprecationCollector->collectDir('modules/contrib...', '.html.twig')
+#4 /var/lib/drupalci/workspace/drupal-checkouts/drupal3/modules/contrib/upgrade_status/src/DeprecationAnalyzer.php(284): Drupal\upgrade_status\DeprecationAnalyzer->analyzeTwigTemplates('modules/contrib...')
+#5 /var/lib/drupalci/workspace/drupal-checkouts/drupal3/modules/contrib/upgrade_status/src/Commands/UpgradeStatusCommands.php(197): Drupal\upgrade_status\DeprecationAnalyzer->analyze(Object(Drupal\Core\Extension\Extension))
+#6 /var/lib/drupalci/workspace/drupal-checkouts/drupal3/modules/contrib/upgrade_status/src/Commands/UpgradeStatusCommands.php(97): Drupal\upgrade_status\Commands\UpgradeStatusCommands->analyze(Array, Array)
+#7 [internal function]: Drupal\upgrade_status\Commands\UpgradeStatusCommands->checkstyle(Array, Array)
+#8 /home/testbot/.composer/vendor/consolidation/annotated-command/src/CommandProcessor.php(257): call_user_func_array(Array, Array)
+#9 /home/testbot/.composer/vendor/consolidation/annotated-command/src/CommandProcessor.php(212): Consolidation\AnnotatedCommand\CommandProcessor->runCommandCallback(Array, Object(Consolidation\AnnotatedCommand\CommandData))
+#10 /home/testbot/.composer/vendor/consolidation/annotated-command/src/CommandProcessor.php(178): Consolidation\AnnotatedCommand\CommandProcessor->validateRunAndAlter(Array, Array, Object(Consolidation\AnnotatedCommand\CommandData))
+#11 /home/testbot/.composer/vendor/consolidation/annotated-command/src/AnnotatedCommand.php(302): Consolidation\AnnotatedCommand\CommandProcessor->process(Object(Symfony\Component\Console\Output\ConsoleOutput), Array, Array, Object(Consolidation\AnnotatedCommand\CommandData))
+#12 /var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/symfony/console/Command/Command.php(255): Consolidation\AnnotatedCommand\AnnotatedCommand->execute(Object(Drush\Symfony\DrushArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/symfony/console/Application.php(1005): Symfony\Component\Console\Command\Command->run(Object(Drush\Symfony\DrushArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/symfony/console/Application.php(255): Symfony\Component\Console\Application->doRunCommand(Object(Consolidation\AnnotatedCommand\AnnotatedCommand), Object(Drush\Symfony\DrushArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/symfony/console/Application.php(148): Symfony\Component\Console\Application->doRun(Object(Drush\Symfony\DrushArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /home/testbot/.composer/vendor/drush/drush/src/Runtime/Runtime.php(118): Symfony\Component\Console\Application->run(Object(Drush\Symfony\DrushArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /home/testbot/.composer/vendor/drush/drush/src/Runtime/Runtime.php(49): Drush\Runtime\Runtime->doRun(Array, Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /home/testbot/.composer/vendor/drush/drush/drush.php(72): Drush\Runtime\Runtime->run(Array)
+#19 /home/testbot/.composer/vendor/drush/drush/drush(4): require('/home/testbot/....')
+#20 {main}. 
+Error: Call to a member function setParser() on array in /var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/twig/twig/src/Parser.php on line 99 #0 /home/testbot/.composer/vendor/twig/twig/src/Environment.php(563): Twig\Parser->parse(Object(Twig\TokenStream))
+#1 /var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/twig/twig/src/Util/DeprecationCollector.php(67): Twig\Environment->parse(Object(Twig\TokenStream))
+#2 /var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/twig/twig/src/Util/DeprecationCollector.php(49): Twig\Util\DeprecationCollector->collect(Object(Twig\Util\TemplateDirIterator))
+#3 /var/lib/drupalci/workspace/drupal-checkouts/drupal3/modules/contrib/upgrade_status/src/DeprecationAnalyzer.php(435): Twig\Util\DeprecationCollector->collectDir('modules/contrib...', '.html.twig')
+#4 /var/lib/drupalci/workspace/drupal-checkouts/drupal3/modules/contrib/upgrade_status/src/DeprecationAnalyzer.php(284): Drupal\upgrade_status\DeprecationAnalyzer->analyzeTwigTemplates('modules/contrib...')
+#5 /var/lib/drupalci/workspace/drupal-checkouts/drupal3/modules/contrib/upgrade_status/src/Commands/UpgradeStatusCommands.php(197): Drupal\upgrade_status\DeprecationAnalyzer->analyze(Object(Drupal\Core\Extension\Extension))
+#6 /var/lib/drupalci/workspace/drupal-checkouts/drupal3/modules/contrib/upgrade_status/src/Commands/UpgradeStatusCommands.php(97): Drupal\upgrade_status\Commands\UpgradeStatusCommands->analyze(Array, Array)
+#7 [internal function]: Drupal\upgrade_status\Commands\UpgradeStatusCommands->checkstyle(Array, Array)
+#8 /home/testbot/.composer/vendor/consolidation/annotated-command/src/CommandProcessor.php(257): call_user_func_array(Array, Array)
+#9 /home/testbot/.composer/vendor/consolidation/annotated-command/src/CommandProcessor.php(212): Consolidation\AnnotatedCommand\CommandProcessor->runCommandCallback(Array, Object(Consolidation\AnnotatedCommand\CommandData))
+#10 /home/testbot/.composer/vendor/consolidation/annotated-command/src/CommandProcessor.php(178): Consolidation\AnnotatedCommand\CommandProcessor->validateRunAndAlter(Array, Array, Object(Consolidation\AnnotatedCommand\CommandData))
+#11 /home/testbot/.composer/vendor/consolidation/annotated-command/src/AnnotatedCommand.php(302): Consolidation\AnnotatedCommand\CommandProcessor->process(Object(Symfony\Component\Console\Output\ConsoleOutput), Array, Array, Object(Consolidation\AnnotatedCommand\CommandData))
+#12 /var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/symfony/console/Command/Command.php(255): Consolidation\AnnotatedCommand\AnnotatedCommand->execute(Object(Drush\Symfony\DrushArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/symfony/console/Application.php(1005): Symfony\Component\Console\Command\Command->run(Object(Drush\Symfony\DrushArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/symfony/console/Application.php(255): Symfony\Component\Console\Application->doRunCommand(Object(Consolidation\AnnotatedCommand\AnnotatedCommand), Object(Drush\Symfony\DrushArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/symfony/console/Application.php(148): Symfony\Component\Console\Application->doRun(Object(Drush\Symfony\DrushArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /home/testbot/.composer/vendor/drush/drush/src/Runtime/Runtime.php(118): Symfony\Component\Console\Application->run(Object(Drush\Symfony\DrushArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /home/testbot/.composer/vendor/drush/drush/src/Runtime/Runtime.php(49): Drush\Runtime\Runtime->doRun(Array, Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /home/testbot/.composer/vendor/drush/drush/drush.php(72): Drush\Runtime\Runtime->run(Array)
+#19 /home/testbot/.composer/vendor/drush/drush/drush(4): require('/home/testbot/....')
+#20 {main}
+ [warning] Drush command terminated abnormally.

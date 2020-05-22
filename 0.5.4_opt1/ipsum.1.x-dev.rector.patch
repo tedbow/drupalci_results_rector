@@ -1,0 +1,10 @@
+diff --git a/ipsum.info.yml b/ipsum.info.yml
+index 8aaed76..b573618 100644
+--- a/ipsum.info.yml
++++ b/ipsum.info.yml
+@@ -3,4 +3,5 @@ name: Ipsum
+ description: 'Provides a service to generate dummy filler text.'
+ package: Development
+ core: 8.x
++core_version_requirement: ^8 || ^9
+ configure: ipsum.settings

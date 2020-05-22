@@ -1,0 +1,152 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/imagecache_external/imagecache_external.api.php
+[parsing] modules/contrib/imagecache_external/imagecache_external.install
+[parsing] modules/contrib/imagecache_external/imagecache_external.module
+[parsing] modules/contrib/imagecache_external/src/Form/FlushExternalImages.php
+[parsing] modules/contrib/imagecache_external/src/Form/SettingsForm.php
+[parsing] modules/contrib/imagecache_external/src/Plugin/Field/FieldFormatter/ImagecacheExternalImage.php
+[parsing] modules/contrib/imagecache_external/src/Plugin/Field/FieldFormatter/ImagecacheExternalResponsiveImage.php
+[refactoring] modules/contrib/imagecache_external/imagecache_external.api.php
+[refactoring] modules/contrib/imagecache_external/imagecache_external.install
+[refactoring] modules/contrib/imagecache_external/imagecache_external.module
+[refactoring] modules/contrib/imagecache_external/src/Form/FlushExternalImages.php
+[refactoring] modules/contrib/imagecache_external/src/Form/SettingsForm.php
+[refactoring] modules/contrib/imagecache_external/src/Plugin/Field/FieldFormatter/ImagecacheExternalImage.php
+[refactoring] modules/contrib/imagecache_external/src/Plugin/Field/FieldFormatter/ImagecacheExternalResponsiveImage.php
+[printing] modules/contrib/imagecache_external/imagecache_external.api.php
+[printing] modules/contrib/imagecache_external/imagecache_external.install
+[printing] modules/contrib/imagecache_external/imagecache_external.module
+[printing] modules/contrib/imagecache_external/src/Form/FlushExternalImages.php
+[printing] modules/contrib/imagecache_external/src/Form/SettingsForm.php
+[printing] modules/contrib/imagecache_external/src/Plugin/Field/FieldFormatter/ImagecacheExternalImage.php
+[printing] modules/contrib/imagecache_external/src/Plugin/Field/FieldFormatter/ImagecacheExternalResponsiveImage.php
+
+
+3 files with changes
+====================
+
+1) modules/contrib/imagecache_external/imagecache_external.api.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -12,7 +12,7 @@
+  */
+ function hook_imagecache_external_needs_refresh_alter(&$needs_refresh, $filepath) {
+   // Example: refresh images at least once a week.
+-  if (filemtime($filepath) > REQUEST_TIME - 60 * 60 * 24 * 7) {
++  if (filemtime($filepath) > \Drupal::time()->getRequestTime() - 60 * 60 * 24 * 7) {
+     $needs_refresh = TRUE;
+   }
+ }
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\RequestTimeConstRector
+
+
+2) modules/contrib/imagecache_external/imagecache_external.module
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -1,4 +1,5 @@
+ <?php
++use Drupal\Core\File\FileSystemInterface;
+ /**
+  * @file
+  * Allows the usage of Image Styles on external images.
+@@ -109,7 +110,7 @@
+
+   // Check if this is a non-standard file stream and adjust accordingly.
+   $scheme = $file_system->uriScheme($url);
+-  $default_scheme = file_default_scheme();
++  $default_scheme = \Drupal::config('system.file')->get('default_scheme');
+
+   if ($scheme == $default_scheme) {
+     // Don't try fetch already existing files on local file system.
+@@ -135,7 +136,7 @@
+   }
+
+   $directory = $default_scheme . '://' . $config->get('imagecache_directory');
+-  if (file_prepare_directory($directory, FILE_CREATE_DIRECTORY | FILE_MODIFY_PERMISSIONS)) {
++  if (\Drupal::service('file_system')->prepareDirectory($directory, FileSystemInterface::CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS)) {
+     $needs_refresh = FALSE;
+     $filepath = $directory . '/' . $filename;
+     // Allow modules to add custom logic to check if it needs to be re-fetched.
+@@ -211,10 +212,10 @@
+     }
+     if (!empty($result->getBody()) && $code != 400 && $code != 500 && $content_type_allowed) {
+       if ($config->get('imagecache_external_management') == 'unmanaged') {
+-        return file_unmanaged_save_data($result->getBody(), $cachepath, FILE_EXISTS_REPLACE);
++        return \Drupal::service('file_system')->saveData($result->getBody(), $cachepath, FileSystemInterface::EXISTS_REPLACE);
+       }
+       else {
+-        $file = file_save_data($result->getBody(), $cachepath, FILE_EXISTS_REPLACE);
++        $file = file_save_data($result->getBody(), $cachepath, FileSystemInterface::EXISTS_REPLACE);
+         return $file->getFileUri();
+       }
+     }
+@@ -316,7 +317,7 @@
+  */
+ function imagecache_external_get_directory_path() {
+   $config = imagecache_external_config();
+-  $scheme = file_default_scheme();
++  $scheme = \Drupal::config('system.file')->get('default_scheme');
+   $wrapper = \Drupal::service('stream_wrapper_manager')->getViaScheme($scheme);
+   $path = realpath($wrapper->getDirectoryPath() . '/' . $config->get('imagecache_directory'));
+   return $path;
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\FileCreateDirectoryRector
+ * DrupalRector\Rector\Deprecation\FileDefaultSchemeRector
+ * DrupalRector\Rector\Deprecation\FileExistsReplaceRector
+ * DrupalRector\Rector\Deprecation\FileModifyPermissionsRector
+ * DrupalRector\Rector\Deprecation\FilePrepareDirectoryRector
+ * DrupalRector\Rector\Deprecation\FileUnmanagedSaveDataRector
+
+
+3) modules/contrib/imagecache_external/src/Form/SettingsForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -2,6 +2,7 @@
+
+ namespace Drupal\imagecache_external\Form;
+
++use Drupal\Core\File\FileSystemInterface;
+ use Drupal\Core\Form\ConfigFormBase;
+ use Drupal\Core\Form\FormStateInterface;
+
+@@ -114,9 +115,9 @@
+    * {@inheritdoc}
+    */
+   public function validateForm(array &$form, FormStateInterface $form_state) {
+-    $scheme = file_default_scheme();
++    $scheme = \Drupal::config('system.file')->get('default_scheme');
+     $directory = $scheme . '://' . $form_state->getValue('imagecache_directory');
+-    if (!file_prepare_directory($directory, FILE_CREATE_DIRECTORY)) {
++    if (!\Drupal::service('file_system')->prepareDirectory($directory, FileSystemInterface::CREATE_DIRECTORY)) {
+       $error = $this->t('The directory %directory does not exist or is not writable.', ['%directory' => $directory]);
+       $form_state->setErrorByName('imagecache_directory', $error);
+       $this->logger('imagecache_external')->error($error);
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\FileCreateDirectoryRector
+ * DrupalRector\Rector\Deprecation\FileDefaultSchemeRector
+ * DrupalRector\Rector\Deprecation\FilePrepareDirectoryRector
+
+
+ [OK] Rector is done! 3 files have been changed.                                
+

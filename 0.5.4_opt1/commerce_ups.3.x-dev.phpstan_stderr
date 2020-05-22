@@ -1,0 +1,36 @@
+./composer.json has been updated
+> Drupal\Composer\Composer::ensureComposerVersion
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+Package operations: 18 installs, 0 updates, 0 removals
+  - Installing gabrielbull/ups-api (0.8.0): Loading from cache
+  - Installing drupal/physical (1.1.0): Loading from cache
+  - Installing commerceguys/intl (v1.0.5): Loading from cache
+  - Installing drupal/state_machine (1.0.0): Loading from cache
+  - Installing drupal/entity (1.0.0): Loading from cache
+  - Installing drupal/profile (1.1.0): Loading from cache
+  - Installing drupal/entity_reference_revisions (1.8.0): Loading from cache
+  - Installing drupal/token (1.7.0): Loading from cache
+  - Installing drupal/inline_entity_form (1.0.0-rc6): Loading from cache
+  - Installing commerceguys/addressing (v1.0.7): Loading from cache
+  - Installing drupal/address (1.8.0): Loading from cache
+  - Installing drupal/commerce (2.17.0): Loading from cache
+  - Installing drupal/commerce_price (2.17.0)
+  - Installing drupal/commerce_store (2.17.0)
+  - Installing drupal/commerce_number_pattern (2.17.0)
+  - Installing drupal/commerce_order (2.17.0)
+  - Installing drupal/commerce_shipping (2.0.0-rc1): Loading from cache
+  - Installing drupal/commerce_ups (dev-3.x 602e66e): Cloning 602e66ebc5
+gabrielbull/ups-api suggests installing ext-soap (Required if you need the Tradeability API of UPS)
+Package container-interop/container-interop is abandoned, you should avoid using it. Use psr/container instead.
+Package phpunit/phpunit-mock-objects is abandoned, you should avoid using it. No replacement was suggested.
+Package zendframework/zend-servicemanager is abandoned, you should avoid using it. Use laminas/laminas-servicemanager instead.
+Package zendframework/zend-text is abandoned, you should avoid using it. Use laminas/laminas-text instead.
+Writing lock file
+Generating autoload files
+> Drupal\Core\Composer\Composer::preAutoloadDump
+Hardening vendor directory with .htaccess and web.config files.
+33 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+Cleaning vendor directory.
+> Drupal\Composer\Composer::generateMetapackages
