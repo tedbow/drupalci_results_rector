@@ -1,0 +1,49 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/menu_position/menu_position.api.php
+[parsing] modules/contrib/menu_position/menu_position.module
+[parsing] modules/contrib/menu_position/menu_position.post_update.php
+[parsing] modules/contrib/menu_position/src/Controller/MenuPositionRuleListBuilder.php
+[parsing] modules/contrib/menu_position/src/Entity/MenuPositionRule.php
+[parsing] modules/contrib/menu_position/src/Form/MenuPositionRuleDeleteForm.php
+[parsing] modules/contrib/menu_position/src/Form/MenuPositionRuleForm.php
+[parsing] modules/contrib/menu_position/src/Form/MenuPositionRuleOrderForm.php
+[parsing] modules/contrib/menu_position/src/Form/MenuPositionSettings.php
+[parsing] modules/contrib/menu_position/src/Menu/MenuPositionActiveTrail.php
+[parsing] modules/contrib/menu_position/src/MenuPositionRuleInterface.php
+[parsing] modules/contrib/menu_position/src/MenuPositionServiceProvider.php
+[parsing] modules/contrib/menu_position/src/Plugin/Derivative/MenuPositionLink.php
+[parsing] modules/contrib/menu_position/src/Plugin/Menu/MenuPositionLink.php
+[refactoring] modules/contrib/menu_position/menu_position.api.php
+[refactoring] modules/contrib/menu_position/menu_position.module
+[refactoring] modules/contrib/menu_position/menu_position.post_update.php
+[refactoring] modules/contrib/menu_position/src/Controller/MenuPositionRuleListBuilder.php
+[refactoring] modules/contrib/menu_position/src/Entity/MenuPositionRule.php
+[refactoring] modules/contrib/menu_position/src/Form/MenuPositionRuleDeleteForm.php
+[refactoring] modules/contrib/menu_position/src/Form/MenuPositionRuleForm.php
+[refactoring] modules/contrib/menu_position/src/Form/MenuPositionRuleOrderForm.php
+[refactoring] modules/contrib/menu_position/src/Form/MenuPositionSettings.php
+[refactoring] modules/contrib/menu_position/src/Menu/MenuPositionActiveTrail.php
+[refactoring] modules/contrib/menu_position/src/MenuPositionRuleInterface.php
+[refactoring] modules/contrib/menu_position/src/MenuPositionServiceProvider.php
+[refactoring] modules/contrib/menu_position/src/Plugin/Derivative/MenuPositionLink.php
+[refactoring] modules/contrib/menu_position/src/Plugin/Menu/MenuPositionLink.php
+[printing] modules/contrib/menu_position/menu_position.api.php
+[printing] modules/contrib/menu_position/menu_position.module
+[printing] modules/contrib/menu_position/menu_position.post_update.php
+[printing] modules/contrib/menu_position/src/Controller/MenuPositionRuleListBuilder.php
+[printing] modules/contrib/menu_position/src/Entity/MenuPositionRule.php
+[printing] modules/contrib/menu_position/src/Form/MenuPositionRuleDeleteForm.php
+[printing] modules/contrib/menu_position/src/Form/MenuPositionRuleForm.php
+[printing] modules/contrib/menu_position/src/Form/MenuPositionRuleOrderForm.php
+[printing] modules/contrib/menu_position/src/Form/MenuPositionSettings.php
+[printing] modules/contrib/menu_position/src/Menu/MenuPositionActiveTrail.php
+[printing] modules/contrib/menu_position/src/MenuPositionRuleInterface.php
+[printing] modules/contrib/menu_position/src/MenuPositionServiceProvider.php
+[printing] modules/contrib/menu_position/src/Plugin/Derivative/MenuPositionLink.php
+[printing] modules/contrib/menu_position/src/Plugin/Menu/MenuPositionLink.php
+
+
+ [OK] Rector is done!                                                           
+

@@ -1,0 +1,8 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector-no-tests.yml
+
+[parsing] modules/contrib/commerce_migrate/commerce_migrate.module
+[parsing] modules/contrib/commerce_migrate/modules/commerce/commerce_migrate_commerce.module
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/EventSubscriber/MigratePrepareRow.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/Order.php
+[parsing] modules/contrib/commerce_migrate/modules/commerce/src/Plugin/migrate/OrderItemDeriver.php

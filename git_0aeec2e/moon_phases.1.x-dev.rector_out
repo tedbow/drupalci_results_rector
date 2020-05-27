@@ -1,0 +1,34 @@
+Rector 0.8.x-dev@7286f34
+Config file: rector.yml
+
+[parsing] modules/contrib/moon_phases/inc/definitions.inc
+[parsing] modules/contrib/moon_phases/moon_phases.install
+[parsing] modules/contrib/moon_phases/moon_phases.module
+[parsing] modules/contrib/moon_phases/src/Controller/MoonPhasesController.php
+[parsing] modules/contrib/moon_phases/src/Controller/MoonPhasesMonthlyController.php
+[parsing] modules/contrib/moon_phases/src/Form/MoonPhasesSettingsForm.php
+[parsing] modules/contrib/moon_phases/src/MoonCalc.php
+[parsing] modules/contrib/moon_phases/src/MoonCalcInterface.php
+[parsing] modules/contrib/moon_phases/src/Plugin/Block/MoonPhaseBlock.php
+[refactoring] modules/contrib/moon_phases/inc/definitions.inc
+[refactoring] modules/contrib/moon_phases/moon_phases.install
+[refactoring] modules/contrib/moon_phases/moon_phases.module
+[refactoring] modules/contrib/moon_phases/src/Controller/MoonPhasesController.php
+[refactoring] modules/contrib/moon_phases/src/Controller/MoonPhasesMonthlyController.php
+[refactoring] modules/contrib/moon_phases/src/Form/MoonPhasesSettingsForm.php
+[refactoring] modules/contrib/moon_phases/src/MoonCalc.php
+[refactoring] modules/contrib/moon_phases/src/MoonCalcInterface.php
+[refactoring] modules/contrib/moon_phases/src/Plugin/Block/MoonPhaseBlock.php
+[printing] modules/contrib/moon_phases/inc/definitions.inc
+[printing] modules/contrib/moon_phases/moon_phases.install
+[printing] modules/contrib/moon_phases/moon_phases.module
+[printing] modules/contrib/moon_phases/src/Controller/MoonPhasesController.php
+[printing] modules/contrib/moon_phases/src/Controller/MoonPhasesMonthlyController.php
+[printing] modules/contrib/moon_phases/src/Form/MoonPhasesSettingsForm.php
+[printing] modules/contrib/moon_phases/src/MoonCalc.php
+[printing] modules/contrib/moon_phases/src/MoonCalcInterface.php
+[printing] modules/contrib/moon_phases/src/Plugin/Block/MoonPhaseBlock.php
+
+
+ [OK] Rector is done!                                                           
+

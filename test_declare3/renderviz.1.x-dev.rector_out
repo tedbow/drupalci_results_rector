@@ -1,0 +1,16 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/renderviz/renderviz.module
+[parsing] modules/contrib/renderviz/src/Renderer.php
+[parsing] modules/contrib/renderviz/src/RendervizServiceProvider.php
+[refactoring] modules/contrib/renderviz/renderviz.module
+[refactoring] modules/contrib/renderviz/src/Renderer.php
+[refactoring] modules/contrib/renderviz/src/RendervizServiceProvider.php
+[printing] modules/contrib/renderviz/renderviz.module
+[printing] modules/contrib/renderviz/src/Renderer.php
+[printing] modules/contrib/renderviz/src/RendervizServiceProvider.php
+
+
+ [OK] Rector is done!                                                           
+

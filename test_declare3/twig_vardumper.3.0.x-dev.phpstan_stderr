@@ -1,0 +1,14 @@
+./composer.json has been updated
+> Drupal\Composer\Composer::ensureComposerVersion
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+Your requirements could not be resolved to an installable set of packages.
+
+  Problem 1
+    - drupal/core 9.1.x-dev requires php >=7.3 -> your PHP version (7.2.31) does not satisfy that requirement.
+    - drupal/core 9.0.x-dev requires php >=7.3 -> your PHP version (7.2.31) does not satisfy that requirement.
+    - drupal/twig_vardumper 3.0.x-dev requires drupal/core ^9 -> satisfiable by drupal/core[9.0.x-dev, 9.1.x-dev].
+    - Installation request for drupal/twig_vardumper 3.0.x-dev -> satisfiable by drupal/twig_vardumper[3.0.x-dev].
+
+
+Installation failed, reverting ./composer.json to its original content.

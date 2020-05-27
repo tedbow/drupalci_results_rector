@@ -1,0 +1,3 @@
+<?xml version="1.0"?>
+<checkstyle><file name="modules/contrib/ultimate_cron_views"><error line="0" message="The 'ultimate_cron_views' extension is not installed. Cannot check deprecated library use." severity="error"/></file></checkstyle>
+

@@ -1,0 +1,77 @@
+Rector 0.8.x-dev@92ddbfc
+Config file: rector.yml
+
+[parsing] modules/contrib/backfill_formatter/src/Annotation/BackFillQuery.php
+[parsing] modules/contrib/backfill_formatter/src/BackFillQueryEntityTypeDeriver.php
+[parsing] modules/contrib/backfill_formatter/src/BackFillQueryPluginBase.php
+[parsing] modules/contrib/backfill_formatter/src/BackFillQueryPluginInterface.php
+[parsing] modules/contrib/backfill_formatter/src/BackFillQueryPluginManager.php
+[parsing] modules/contrib/backfill_formatter/src/BackFillTerms.php
+[parsing] modules/contrib/backfill_formatter/src/Plugin/BackFillQuery/CommentHandler.php
+[parsing] modules/contrib/backfill_formatter/src/Plugin/BackFillQuery/DefaultHandler.php
+[parsing] modules/contrib/backfill_formatter/src/Plugin/BackFillQuery/MediaHandler.php
+[parsing] modules/contrib/backfill_formatter/src/Plugin/BackFillQuery/NodeHandler.php
+[parsing] modules/contrib/backfill_formatter/src/Plugin/BackFillQuery/PermissionStatusHandler.php
+[parsing] modules/contrib/backfill_formatter/src/Plugin/BackFillQuery/TermHandler.php
+[parsing] modules/contrib/backfill_formatter/src/Plugin/BackFillQuery/UserHandler.php
+[parsing] modules/contrib/backfill_formatter/src/Plugin/Field/FieldFormatter/BackFillByTermsFormatter.php
+[parsing] modules/contrib/backfill_formatter/tests/modules/backfill_formatter_access_test/backfill_formatter_access_test.module
+[parsing] modules/contrib/backfill_formatter/tests/src/Kernel/BackFillByTermTest.php
+[parsing] modules/contrib/backfill_formatter/tests/src/Kernel/BackFillByTermsTestTrait.php
+[parsing] modules/contrib/backfill_formatter/tests/src/Kernel/FormatterAccessCacheTest.php
+[refactoring] modules/contrib/backfill_formatter/src/Annotation/BackFillQuery.php
+[refactoring] modules/contrib/backfill_formatter/src/BackFillQueryEntityTypeDeriver.php
+[refactoring] modules/contrib/backfill_formatter/src/BackFillQueryPluginBase.php
+[refactoring] modules/contrib/backfill_formatter/src/BackFillQueryPluginInterface.php
+[refactoring] modules/contrib/backfill_formatter/src/BackFillQueryPluginManager.php
+[refactoring] modules/contrib/backfill_formatter/src/BackFillTerms.php
+[refactoring] modules/contrib/backfill_formatter/src/Plugin/BackFillQuery/CommentHandler.php
+[refactoring] modules/contrib/backfill_formatter/src/Plugin/BackFillQuery/DefaultHandler.php
+[refactoring] modules/contrib/backfill_formatter/src/Plugin/BackFillQuery/MediaHandler.php
+[refactoring] modules/contrib/backfill_formatter/src/Plugin/BackFillQuery/NodeHandler.php
+[refactoring] modules/contrib/backfill_formatter/src/Plugin/BackFillQuery/PermissionStatusHandler.php
+[refactoring] modules/contrib/backfill_formatter/src/Plugin/BackFillQuery/TermHandler.php
+[refactoring] modules/contrib/backfill_formatter/src/Plugin/BackFillQuery/UserHandler.php
+[refactoring] modules/contrib/backfill_formatter/src/Plugin/Field/FieldFormatter/BackFillByTermsFormatter.php
+[refactoring] modules/contrib/backfill_formatter/tests/modules/backfill_formatter_access_test/backfill_formatter_access_test.module
+[refactoring] modules/contrib/backfill_formatter/tests/src/Kernel/BackFillByTermTest.php
+[refactoring] modules/contrib/backfill_formatter/tests/src/Kernel/BackFillByTermsTestTrait.php
+[refactoring] modules/contrib/backfill_formatter/tests/src/Kernel/FormatterAccessCacheTest.php
+[printing] modules/contrib/backfill_formatter/src/Annotation/BackFillQuery.php
+[printing] modules/contrib/backfill_formatter/src/BackFillQueryEntityTypeDeriver.php
+[printing] modules/contrib/backfill_formatter/src/BackFillQueryPluginBase.php
+[printing] modules/contrib/backfill_formatter/src/BackFillQueryPluginInterface.php
+[printing] modules/contrib/backfill_formatter/src/BackFillQueryPluginManager.php
+[printing] modules/contrib/backfill_formatter/src/BackFillTerms.php
+[printing] modules/contrib/backfill_formatter/src/Plugin/BackFillQuery/CommentHandler.php
+[printing] modules/contrib/backfill_formatter/src/Plugin/BackFillQuery/DefaultHandler.php
+[printing] modules/contrib/backfill_formatter/src/Plugin/BackFillQuery/MediaHandler.php
+[printing] modules/contrib/backfill_formatter/src/Plugin/BackFillQuery/NodeHandler.php
+[printing] modules/contrib/backfill_formatter/src/Plugin/BackFillQuery/PermissionStatusHandler.php
+[printing] modules/contrib/backfill_formatter/src/Plugin/BackFillQuery/TermHandler.php
+[printing] modules/contrib/backfill_formatter/src/Plugin/BackFillQuery/UserHandler.php
+[printing] modules/contrib/backfill_formatter/src/Plugin/Field/FieldFormatter/BackFillByTermsFormatter.php
+[printing] modules/contrib/backfill_formatter/tests/modules/backfill_formatter_access_test/backfill_formatter_access_test.module
+[printing] modules/contrib/backfill_formatter/tests/src/Kernel/BackFillByTermTest.php
+[printing] modules/contrib/backfill_formatter/tests/src/Kernel/BackFillByTermsTestTrait.php
+[printing] modules/contrib/backfill_formatter/tests/src/Kernel/FormatterAccessCacheTest.php
+
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/backfill_formatter/tests/src/Kernel/BackFillByTermTest
+         .php" file, due to:                                                    
+         "Analyze error: "Class                                                 
+         Drupal\Tests\taxonomy_entity_index\Kernel\TaxonomyEntityIndexKernelTest
+         Base not found and could not be autoloaded.". Include your files in    
+         "parameters > autoload_paths".                                         
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/backfill_formatter/tests/src/Kernel/FormatterAccessCac
+         heTest.php" file, due to:                                              
+         "Analyze error: "Class                                                 
+         Drupal\Tests\taxonomy_entity_index\Kernel\TaxonomyEntityIndexKernelTest
+         Base not found and could not be autoloaded.". Include your files in    
+         "parameters > autoload_paths".                                         
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+

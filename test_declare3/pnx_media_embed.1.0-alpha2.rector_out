@@ -1,0 +1,47 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/pnx_media_embed/pnx_media_embed.install
+[refactoring] modules/contrib/pnx_media_embed/pnx_media_embed.install
+[printing] modules/contrib/pnx_media_embed/pnx_media_embed.install
+
+
+1 file with changes
+===================
+
+1) modules/contrib/pnx_media_embed/pnx_media_embed.install
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -1,10 +1,10 @@
+ <?php
+
++use Drupal\Core\File\FileSystemInterface;
+ /**
+  * @file
+  * Contains update, install and uninstall hooks for the module.
+  */
+-
+ /**
+  * Implements hook_install().
+  */
+@@ -11,7 +11,7 @@
+ function pnx_media_embed_install() {
+   $data = file_get_contents(__DIR__ . '/images/media.png');
+   /** @var \Drupal\file\FileInterface $file */
+-  if ($file = file_save_data($data, 'public://pnx-embed-media.png', FILE_EXISTS_REPLACE)) {
++  if ($file = file_save_data($data, 'public://pnx-embed-media.png', FileSystemInterface::EXISTS_REPLACE)) {
+     // Set file uuid same as default config.
+     $file->set('uuid', 'fff0d509-a14d-4e58-bf59-c47ff4df5696');
+     $file->save();
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\FileExistsReplaceRector
+
+
+ [OK] Rector is done! 1 file have been changed.                                 
+

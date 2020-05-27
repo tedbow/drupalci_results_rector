@@ -1,0 +1,18 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/google_appliance/google_appliance.api.php
+[parsing] modules/contrib/google_appliance/google_appliance.module
+[parsing] modules/contrib/google_appliance/src/Controller/SearchViewController.php
+[parsing] modules/contrib/google_appliance/src/Form/AdministrationForm.php
+[parsing] modules/contrib/google_appliance/src/Form/SearchForm.php
+[parsing] modules/contrib/google_appliance/src/Plugin/Block/SearchBlock.php
+[parsing] modules/contrib/google_appliance/src/Routing/SearchViewRoute.php
+[parsing] modules/contrib/google_appliance/src/SearchResults/KeyMatch.php
+[parsing] modules/contrib/google_appliance/src/SearchResults/OneBoxResult.php
+[parsing] modules/contrib/google_appliance/src/SearchResults/OneBoxResultSet.php
+[parsing] modules/contrib/google_appliance/src/SearchResults/Result.php
+[parsing] modules/contrib/google_appliance/src/SearchResults/ResultSet.php
+[parsing] modules/contrib/google_appliance/src/SearchResults/SearchQuery.php
+[parsing] modules/contrib/google_appliance/src/SearchResults/Synonym.php
+[parsing] modules/contrib/google_appliance/src/Service/Click.php

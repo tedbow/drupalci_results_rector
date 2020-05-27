@@ -1,0 +1,31 @@
+Rector 0.8.x-dev@7286f34
+Config file: rector.yml
+
+[parsing] modules/contrib/node_revisions_autoclean/node_revisions_autoclean.install
+[parsing] modules/contrib/node_revisions_autoclean/node_revisions_autoclean.module
+[parsing] modules/contrib/node_revisions_autoclean/src/Batch/Batch.php
+[parsing] modules/contrib/node_revisions_autoclean/src/Commands/NodeRevisionsAutocleanCommands.php
+[parsing] modules/contrib/node_revisions_autoclean/src/Form/NodeRevisionsByBundleForm.php
+[parsing] modules/contrib/node_revisions_autoclean/src/Plugin/QueueWorker/CleanupRevisionsQueueWorker.php
+[parsing] modules/contrib/node_revisions_autoclean/src/Services/RevisionsManager.php
+[parsing] modules/contrib/node_revisions_autoclean/tests/src/Functional/NodeRevisionsAutocleanTest.php
+[refactoring] modules/contrib/node_revisions_autoclean/node_revisions_autoclean.install
+[refactoring] modules/contrib/node_revisions_autoclean/node_revisions_autoclean.module
+[refactoring] modules/contrib/node_revisions_autoclean/src/Batch/Batch.php
+[refactoring] modules/contrib/node_revisions_autoclean/src/Commands/NodeRevisionsAutocleanCommands.php
+[refactoring] modules/contrib/node_revisions_autoclean/src/Form/NodeRevisionsByBundleForm.php
+[refactoring] modules/contrib/node_revisions_autoclean/src/Plugin/QueueWorker/CleanupRevisionsQueueWorker.php
+[refactoring] modules/contrib/node_revisions_autoclean/src/Services/RevisionsManager.php
+[refactoring] modules/contrib/node_revisions_autoclean/tests/src/Functional/NodeRevisionsAutocleanTest.php
+[printing] modules/contrib/node_revisions_autoclean/node_revisions_autoclean.install
+[printing] modules/contrib/node_revisions_autoclean/node_revisions_autoclean.module
+[printing] modules/contrib/node_revisions_autoclean/src/Batch/Batch.php
+[printing] modules/contrib/node_revisions_autoclean/src/Commands/NodeRevisionsAutocleanCommands.php
+[printing] modules/contrib/node_revisions_autoclean/src/Form/NodeRevisionsByBundleForm.php
+[printing] modules/contrib/node_revisions_autoclean/src/Plugin/QueueWorker/CleanupRevisionsQueueWorker.php
+[printing] modules/contrib/node_revisions_autoclean/src/Services/RevisionsManager.php
+[printing] modules/contrib/node_revisions_autoclean/tests/src/Functional/NodeRevisionsAutocleanTest.php
+
+
+ [OK] Rector is done!                                                           
+

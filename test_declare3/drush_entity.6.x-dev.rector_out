@@ -1,0 +1,52 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/drush_entity/entity.drush.inc
+[parsing] modules/contrib/drush_entity/tests/entityTest.php
+[refactoring] modules/contrib/drush_entity/entity.drush.inc
+[refactoring] modules/contrib/drush_entity/tests/entityTest.php
+[printing] modules/contrib/drush_entity/entity.drush.inc
+[printing] modules/contrib/drush_entity/tests/entityTest.php
+
+
+1 file with changes
+===================
+
+1) modules/contrib/drush_entity/entity.drush.inc
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -810,7 +810,7 @@
+     case 7:
+       // This should always be the latest API core version.
+       // For now both 7 and 8
+-      $entities = entity_load($entity_type, $ids);
++      $entities = \Drupal::service('entity_type.manager')->getStorage($entity_type)->load($ids);
+       break;
+     default:
+       // Drupal 8
+@@ -1031,7 +1031,7 @@
+     // Drupal 5/6
+     // node-delete is implemented this way to prevent calling cache_clear_all() for each node.
+     foreach ($nids as $nid) {
+-      $node = node_load($nid, NULL, TRUE);
++      $node = \Drupal::service('entity_type.manager')->getStorage('node')->load($nid);
+       \Drupal::database()->query('DELETE FROM {node} WHERE nid = %d', $nid);
+       \Drupal::database()->query('DELETE FROM {node_revisions} WHERE nid = %d', $nid);
+       node_invoke($node, 'delete');
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\EntityLoadRector
+ * DrupalRector\Rector\Deprecation\NodeLoadRector
+
+
+ [ERROR] Could not process "modules/contrib/drush_entity/tests/entityTest.php"  
+         file, due to:                                                          
+         "Analyze error: "Class Drush_CommandTestCase not found and could not be
+         autoloaded.". Include your files in "parameters > autoload_paths".     
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+

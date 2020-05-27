@@ -1,0 +1,31 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/field_redirection/src/FieldRedirectionResult.php
+[parsing] modules/contrib/field_redirection/src/FieldRedirectionResultBuilder.php
+[parsing] modules/contrib/field_redirection/src/Plugin/Field/FieldFormatter/FieldRedirectionFormatter.php
+[parsing] modules/contrib/field_redirection/tests/src/Functional/FormatterConfigurationTest.php
+[parsing] modules/contrib/field_redirection/tests/src/Functional/FormatterRedirectTest.php
+[parsing] modules/contrib/field_redirection/tests/src/Kernel/FieldRedirectionResultBuilderLinkTest.php
+[parsing] modules/contrib/field_redirection/tests/src/Traits/FieldRedirectionTestTrait.php
+[parsing] modules/contrib/field_redirection/tests/src/Unit/FieldRedirectionResultUnitTest.php
+[refactoring] modules/contrib/field_redirection/src/FieldRedirectionResult.php
+[refactoring] modules/contrib/field_redirection/src/FieldRedirectionResultBuilder.php
+[refactoring] modules/contrib/field_redirection/src/Plugin/Field/FieldFormatter/FieldRedirectionFormatter.php
+[refactoring] modules/contrib/field_redirection/tests/src/Functional/FormatterConfigurationTest.php
+[refactoring] modules/contrib/field_redirection/tests/src/Functional/FormatterRedirectTest.php
+[refactoring] modules/contrib/field_redirection/tests/src/Kernel/FieldRedirectionResultBuilderLinkTest.php
+[refactoring] modules/contrib/field_redirection/tests/src/Traits/FieldRedirectionTestTrait.php
+[refactoring] modules/contrib/field_redirection/tests/src/Unit/FieldRedirectionResultUnitTest.php
+[printing] modules/contrib/field_redirection/src/FieldRedirectionResult.php
+[printing] modules/contrib/field_redirection/src/FieldRedirectionResultBuilder.php
+[printing] modules/contrib/field_redirection/src/Plugin/Field/FieldFormatter/FieldRedirectionFormatter.php
+[printing] modules/contrib/field_redirection/tests/src/Functional/FormatterConfigurationTest.php
+[printing] modules/contrib/field_redirection/tests/src/Functional/FormatterRedirectTest.php
+[printing] modules/contrib/field_redirection/tests/src/Kernel/FieldRedirectionResultBuilderLinkTest.php
+[printing] modules/contrib/field_redirection/tests/src/Traits/FieldRedirectionTestTrait.php
+[printing] modules/contrib/field_redirection/tests/src/Unit/FieldRedirectionResultUnitTest.php
+
+
+ [OK] Rector is done!                                                           
+

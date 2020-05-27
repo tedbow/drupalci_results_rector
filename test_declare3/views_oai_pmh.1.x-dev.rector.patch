@@ -1,0 +1,12 @@
+diff --git a/views_oai_pmh.info.yml b/views_oai_pmh.info.yml
+index 384c1bf..7ba0a00 100644
+--- a/views_oai_pmh.info.yml
++++ b/views_oai_pmh.info.yml
+@@ -2,6 +2,7 @@ name: Views OAI-PMH
+ type: module
+ description: Views plugins to publish data through the OAI-PMH protocol.
+ core: 8.x
++core_version_requirement: ^8 || ^9
+ package: Views
+ dependencies:
+   - drupal:views

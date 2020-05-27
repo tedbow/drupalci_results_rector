@@ -1,0 +1,25 @@
+./composer.json has been updated
+> Drupal\Composer\Composer::ensureComposerVersion
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+Package operations: 5 installs, 0 updates, 0 removals
+  - Installing drupal/migrate_plus (5.1.0): Downloading (100%)
+  - Installing drupal/migrate_tools (5.0.0): Downloading (100%)
+  - Installing league/csv (9.6.0): Downloading (100%)
+  - Installing drupal/migrate_source_csv (3.4.0): Downloading (100%)
+  - Installing drupal/migrate_source_ui (dev-1.x 546ec75): Cloning 546ec75c99
+drupal/migrate_plus suggests installing sainsburys/guzzle-oauth2-plugin (3.0 required for the OAuth2 authentication plugin)
+drupal/migrate_plus suggests installing ext-soap (*)
+drupal/migrate_tools suggests installing drush/drush (^9 || ^10)
+Package container-interop/container-interop is abandoned, you should avoid using it. Use psr/container instead.
+Package phpunit/phpunit-mock-objects is abandoned, you should avoid using it. No replacement was suggested.
+Package zendframework/zend-servicemanager is abandoned, you should avoid using it. Use laminas/laminas-servicemanager instead.
+Package zendframework/zend-text is abandoned, you should avoid using it. Use laminas/laminas-text instead.
+Writing lock file
+Generating autoload files
+> Drupal\Core\Composer\Composer::preAutoloadDump
+Hardening vendor directory with .htaccess and web.config files.
+34 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+Cleaning vendor directory.
+> Drupal\Composer\Composer::generateMetapackages

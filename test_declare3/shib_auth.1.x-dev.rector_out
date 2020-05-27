@@ -1,0 +1,110 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/shib_auth/shib_auth.install
+[parsing] modules/contrib/shib_auth/shib_auth.module
+[parsing] modules/contrib/shib_auth/src/Controller/LoginController.php
+[parsing] modules/contrib/shib_auth/src/Controller/LogoutController.php
+[parsing] modules/contrib/shib_auth/src/EventSubscriber/ShibAuthSubscriber.php
+[parsing] modules/contrib/shib_auth/src/Form/AdvancedSettings.php
+[parsing] modules/contrib/shib_auth/src/Form/CustomDataForm.php
+[parsing] modules/contrib/shib_auth/src/Form/ShibbolethSettings.php
+[parsing] modules/contrib/shib_auth/src/Login/LoginHandler.php
+[parsing] modules/contrib/shib_auth/src/Login/LoginHandlerInterface.php
+[parsing] modules/contrib/shib_auth/src/Login/ShibSessionVars.php
+[parsing] modules/contrib/shib_auth/src/Plugin/Block/ShibbolethLoginBlock.php
+[parsing] modules/contrib/shib_auth/src/Tests/LoadTest.php
+[refactoring] modules/contrib/shib_auth/shib_auth.install
+[refactoring] modules/contrib/shib_auth/shib_auth.module
+[refactoring] modules/contrib/shib_auth/src/Controller/LoginController.php
+[refactoring] modules/contrib/shib_auth/src/Controller/LogoutController.php
+[refactoring] modules/contrib/shib_auth/src/EventSubscriber/ShibAuthSubscriber.php
+[refactoring] modules/contrib/shib_auth/src/Form/AdvancedSettings.php
+[refactoring] modules/contrib/shib_auth/src/Form/CustomDataForm.php
+[refactoring] modules/contrib/shib_auth/src/Form/ShibbolethSettings.php
+[refactoring] modules/contrib/shib_auth/src/Login/LoginHandler.php
+[refactoring] modules/contrib/shib_auth/src/Login/LoginHandlerInterface.php
+[refactoring] modules/contrib/shib_auth/src/Login/ShibSessionVars.php
+[refactoring] modules/contrib/shib_auth/src/Plugin/Block/ShibbolethLoginBlock.php
+[refactoring] modules/contrib/shib_auth/src/Tests/LoadTest.php
+[printing] modules/contrib/shib_auth/shib_auth.install
+[printing] modules/contrib/shib_auth/shib_auth.module
+[printing] modules/contrib/shib_auth/src/Controller/LoginController.php
+[printing] modules/contrib/shib_auth/src/Controller/LogoutController.php
+[printing] modules/contrib/shib_auth/src/EventSubscriber/ShibAuthSubscriber.php
+[printing] modules/contrib/shib_auth/src/Form/AdvancedSettings.php
+[printing] modules/contrib/shib_auth/src/Form/CustomDataForm.php
+[printing] modules/contrib/shib_auth/src/Form/ShibbolethSettings.php
+[printing] modules/contrib/shib_auth/src/Login/LoginHandler.php
+[printing] modules/contrib/shib_auth/src/Login/LoginHandlerInterface.php
+[printing] modules/contrib/shib_auth/src/Login/ShibSessionVars.php
+[printing] modules/contrib/shib_auth/src/Plugin/Block/ShibbolethLoginBlock.php
+[printing] modules/contrib/shib_auth/src/Tests/LoadTest.php
+
+
+3 files with changes
+====================
+
+1) modules/contrib/shib_auth/shib_auth.module
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -18,9 +18,6 @@
+   // @todo - add help.
+ }
+
+-/**
+- *
+- */
+ function shib_auth_user_delete(EntityInterface $entity) {
+   /** @var \Drupal\Core\Database\Connection $db */
+   $db = \Drupal::service('database');
+    ----------- end diff -----------
+
+
+2) modules/contrib/shib_auth/src/Login/LoginHandler.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -322,16 +322,10 @@
+     return $this->shib_session;
+   }
+
+-  /**
+-   *
+-   */
+   private function setErrorMessage($message) {
+     $this->error_message = $message;
+   }
+
+-  /**
+-   *
+-   */
+   private function getErrorMessage() {
+     return $this->error_message;
+   }
+    ----------- end diff -----------
+
+
+3) modules/contrib/shib_auth/src/Login/ShibSessionVars.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -2,9 +2,6 @@
+
+ namespace Drupal\shib_auth\Login;
+
+-/**
+- *
+- */
+ class ShibSessionVars {
+
+   /**
+    ----------- end diff -----------
+
+
+ [OK] Rector is done! 3 files have been changed.                                
+

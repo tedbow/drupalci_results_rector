@@ -1,0 +1,3 @@
+<?xml version="1.0"?>
+<checkstyle><file name="modules/contrib/chatbot_api/src/Command/Generate/PluginChatbotIntentCommand.php"><error line="" message="Class Drupal\Console\Core\Command\Command not found and could not be autoloaded." severity="error"/><error line="31" message="Class Drupal\Console\Core\Command\Command not found and could not be autoloaded." severity="error"/></file><file name="modules/contrib/chatbot_api/src/Generator/PluginChatbotIntentGenerator.php"><error line="" message="Class Drupal\Console\Core\Generator\Generator not found and could not be autoloaded." severity="error"/><error line="11" message="Class Drupal\Console\Core\Generator\Generator not found and could not be autoloaded." severity="error"/></file></checkstyle>
+

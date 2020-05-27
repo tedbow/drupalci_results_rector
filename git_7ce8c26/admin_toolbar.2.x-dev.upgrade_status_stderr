@@ -1,0 +1,9 @@
+ [notice] Processing /var/lib/drupalci/workspace/drupal-checkouts/drupal1/modules/contrib/admin_toolbar.
+PHPStan crashed in the previous run probably because of excessive memory consumption.
+It consumed around 49 MB of memory.
+
+
+To avoid this issue, allow to use more memory with the --memory-limit option.
+PHP Fatal error:  Cannot redeclare composerRequireDrupal8() (previously declared in /var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/composer/autoload_real.php:70) in /var/lib/drupalci/workspace/drupal-checkouts/drupal4/vendor/composer/autoload_real.php on line 77
+Fatal error: Cannot redeclare composerRequireDrupal8() (previously declared in /var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/composer/autoload_real.php:70) in /var/lib/drupalci/workspace/drupal-checkouts/drupal4/vendor/composer/autoload_real.php on line 77
+ [error]  PHPStan failed:  

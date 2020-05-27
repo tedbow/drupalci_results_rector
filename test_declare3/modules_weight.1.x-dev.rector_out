@@ -1,0 +1,49 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/modules_weight/modules_weight.drush.inc
+[parsing] modules/contrib/modules_weight/modules_weight.module
+[parsing] modules/contrib/modules_weight/src/Form/ModulesListForm.php
+[parsing] modules/contrib/modules_weight/src/Form/ModulesWeightAdminSettings.php
+[parsing] modules/contrib/modules_weight/src/ModulesWeight.php
+[parsing] modules/contrib/modules_weight/src/ModulesWeightInterface.php
+[parsing] modules/contrib/modules_weight/src/Utility/FormElement.php
+[parsing] modules/contrib/modules_weight/src/Utility/SortArray.php
+[parsing] modules/contrib/modules_weight/tests/src/Functional/ModulesListFormTest.php
+[parsing] modules/contrib/modules_weight/tests/src/Functional/ModulesWeightAdminSettingsTest.php
+[parsing] modules/contrib/modules_weight/tests/src/Kernel/DefaultConfigurationTest.php
+[parsing] modules/contrib/modules_weight/tests/src/Unit/ModulesWeightTest.php
+[parsing] modules/contrib/modules_weight/tests/src/Unit/Utility/FormElementTest.php
+[parsing] modules/contrib/modules_weight/tests/src/Unit/Utility/SortArrayTest.php
+[refactoring] modules/contrib/modules_weight/modules_weight.drush.inc
+[refactoring] modules/contrib/modules_weight/modules_weight.module
+[refactoring] modules/contrib/modules_weight/src/Form/ModulesListForm.php
+[refactoring] modules/contrib/modules_weight/src/Form/ModulesWeightAdminSettings.php
+[refactoring] modules/contrib/modules_weight/src/ModulesWeight.php
+[refactoring] modules/contrib/modules_weight/src/ModulesWeightInterface.php
+[refactoring] modules/contrib/modules_weight/src/Utility/FormElement.php
+[refactoring] modules/contrib/modules_weight/src/Utility/SortArray.php
+[refactoring] modules/contrib/modules_weight/tests/src/Functional/ModulesListFormTest.php
+[refactoring] modules/contrib/modules_weight/tests/src/Functional/ModulesWeightAdminSettingsTest.php
+[refactoring] modules/contrib/modules_weight/tests/src/Kernel/DefaultConfigurationTest.php
+[refactoring] modules/contrib/modules_weight/tests/src/Unit/ModulesWeightTest.php
+[refactoring] modules/contrib/modules_weight/tests/src/Unit/Utility/FormElementTest.php
+[refactoring] modules/contrib/modules_weight/tests/src/Unit/Utility/SortArrayTest.php
+[printing] modules/contrib/modules_weight/modules_weight.drush.inc
+[printing] modules/contrib/modules_weight/modules_weight.module
+[printing] modules/contrib/modules_weight/src/Form/ModulesListForm.php
+[printing] modules/contrib/modules_weight/src/Form/ModulesWeightAdminSettings.php
+[printing] modules/contrib/modules_weight/src/ModulesWeight.php
+[printing] modules/contrib/modules_weight/src/ModulesWeightInterface.php
+[printing] modules/contrib/modules_weight/src/Utility/FormElement.php
+[printing] modules/contrib/modules_weight/src/Utility/SortArray.php
+[printing] modules/contrib/modules_weight/tests/src/Functional/ModulesListFormTest.php
+[printing] modules/contrib/modules_weight/tests/src/Functional/ModulesWeightAdminSettingsTest.php
+[printing] modules/contrib/modules_weight/tests/src/Kernel/DefaultConfigurationTest.php
+[printing] modules/contrib/modules_weight/tests/src/Unit/ModulesWeightTest.php
+[printing] modules/contrib/modules_weight/tests/src/Unit/Utility/FormElementTest.php
+[printing] modules/contrib/modules_weight/tests/src/Unit/Utility/SortArrayTest.php
+
+
+ [OK] Rector is done!                                                           
+

@@ -1,0 +1,28 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/contribute/contribute.install
+[parsing] modules/contrib/contribute/contribute.module
+[parsing] modules/contrib/contribute/src/ContributeManager.php
+[parsing] modules/contrib/contribute/src/ContributeManagerInterface.php
+[parsing] modules/contrib/contribute/src/Controller/ContributeAutocompleteController.php
+[parsing] modules/contrib/contribute/src/Form/ContributeSettingsForm.php
+[parsing] modules/contrib/contribute/tests/src/Functional/ContributeFunctionalTest.php
+[refactoring] modules/contrib/contribute/contribute.install
+[refactoring] modules/contrib/contribute/contribute.module
+[refactoring] modules/contrib/contribute/src/ContributeManager.php
+[refactoring] modules/contrib/contribute/src/ContributeManagerInterface.php
+[refactoring] modules/contrib/contribute/src/Controller/ContributeAutocompleteController.php
+[refactoring] modules/contrib/contribute/src/Form/ContributeSettingsForm.php
+[refactoring] modules/contrib/contribute/tests/src/Functional/ContributeFunctionalTest.php
+[printing] modules/contrib/contribute/contribute.install
+[printing] modules/contrib/contribute/contribute.module
+[printing] modules/contrib/contribute/src/ContributeManager.php
+[printing] modules/contrib/contribute/src/ContributeManagerInterface.php
+[printing] modules/contrib/contribute/src/Controller/ContributeAutocompleteController.php
+[printing] modules/contrib/contribute/src/Form/ContributeSettingsForm.php
+[printing] modules/contrib/contribute/tests/src/Functional/ContributeFunctionalTest.php
+
+
+ [OK] Rector is done!                                                           
+

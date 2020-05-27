@@ -1,0 +1,12 @@
+diff --git a/commerce_ups.info.yml b/commerce_ups.info.yml
+index 7515eb6..0ba81db 100755
+--- a/commerce_ups.info.yml
++++ b/commerce_ups.info.yml
+@@ -2,6 +2,7 @@ name: Commerce UPS
+ type: module
+ description: UPS Shipping Module for Drupal 8
+ core: 8.x
++core_version_requirement: ^8 || ^9
+ package: Commerce (shipping)
+ dependencies:
+   - commerce_shipping

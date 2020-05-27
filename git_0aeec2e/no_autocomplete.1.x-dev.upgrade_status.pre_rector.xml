@@ -1,0 +1,3 @@
+<?xml version="1.0"?>
+<checkstyle><file name="modules/contrib/no_autocomplete/no_autocomplete.drush.inc"><error line="131" message="Call to deprecated function drush_log()." severity="error"/><error line="140" message="Call to deprecated function drush_log()." severity="error"/><error line="144" message="Call to deprecated function drush_print()." severity="error"/></file></checkstyle>
+

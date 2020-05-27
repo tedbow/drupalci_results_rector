@@ -1,0 +1,13 @@
+diff --git a/modules/ctools_views/ctools_views.module b/modules/ctools_views/ctools_views.module
+index 6a3e96b..7224989 100644
+--- a/modules/ctools_views/ctools_views.module
++++ b/modules/ctools_views/ctools_views.module
+@@ -12,7 +12,7 @@ use Drupal\ctools_views\Plugin\Display\Block;
+  * Implements hook_views_plugins_display_alter().
+  */
+ function ctools_views_views_plugins_display_alter(&$displays) {
+-  if (!empty($displays['block']['class']) && $displays['block']['class'] == CoreBlock::class) {
++  if (!empty($displays['block']['class']) && $displays['block']['class'] == Block::class) {
+     $displays['block']['class'] = Block::class;
+   }
+ }

@@ -1,0 +1,10 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/lazy_config_form/src/Form/LazyConfigForm.php
+[refactoring] modules/contrib/lazy_config_form/src/Form/LazyConfigForm.php
+[printing] modules/contrib/lazy_config_form/src/Form/LazyConfigForm.php
+
+
+ [OK] Rector is done!                                                           
+

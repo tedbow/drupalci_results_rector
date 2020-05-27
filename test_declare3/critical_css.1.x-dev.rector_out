@@ -1,0 +1,31 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/critical_css/critical_css.api.php
+[parsing] modules/contrib/critical_css/critical_css.module
+[parsing] modules/contrib/critical_css/src/Asset/CriticalCssProvider.php
+[parsing] modules/contrib/critical_css/src/Asset/CriticalCssProviderInterface.php
+[parsing] modules/contrib/critical_css/src/Asset/CssCollectionRenderer.php
+[parsing] modules/contrib/critical_css/src/Form/SettingsForm.php
+[parsing] modules/contrib/critical_css/tests/src/Functional/CriticalCssHeadTest.php
+[parsing] modules/contrib/critical_css/tests/src/Unit/CriticalCssProviderTest.php
+[refactoring] modules/contrib/critical_css/critical_css.api.php
+[refactoring] modules/contrib/critical_css/critical_css.module
+[refactoring] modules/contrib/critical_css/src/Asset/CriticalCssProvider.php
+[refactoring] modules/contrib/critical_css/src/Asset/CriticalCssProviderInterface.php
+[refactoring] modules/contrib/critical_css/src/Asset/CssCollectionRenderer.php
+[refactoring] modules/contrib/critical_css/src/Form/SettingsForm.php
+[refactoring] modules/contrib/critical_css/tests/src/Functional/CriticalCssHeadTest.php
+[refactoring] modules/contrib/critical_css/tests/src/Unit/CriticalCssProviderTest.php
+[printing] modules/contrib/critical_css/critical_css.api.php
+[printing] modules/contrib/critical_css/critical_css.module
+[printing] modules/contrib/critical_css/src/Asset/CriticalCssProvider.php
+[printing] modules/contrib/critical_css/src/Asset/CriticalCssProviderInterface.php
+[printing] modules/contrib/critical_css/src/Asset/CssCollectionRenderer.php
+[printing] modules/contrib/critical_css/src/Form/SettingsForm.php
+[printing] modules/contrib/critical_css/tests/src/Functional/CriticalCssHeadTest.php
+[printing] modules/contrib/critical_css/tests/src/Unit/CriticalCssProviderTest.php
+
+
+ [OK] Rector is done!                                                           
+

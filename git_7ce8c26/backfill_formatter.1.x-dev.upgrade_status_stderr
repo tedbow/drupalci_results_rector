@@ -1,0 +1,7 @@
+
+                                                                               
+  Command upgrade_status:checkstyle was not found. Drush was unable to query   
+  the database. As a result, many commands are unavailable. Re-run your comma  
+  nd with --debug to see relevant log messages.                                
+                                                                               
+

@@ -1,0 +1,12 @@
+diff --git a/olark.info.yml b/olark.info.yml
+index 1b5372f..17930d0 100644
+--- a/olark.info.yml
++++ b/olark.info.yml
+@@ -1,6 +1,7 @@
+ name: 'Olark Chat'
+ description: 'Olark chat integration.'
+ core: 8.x
++core_version_requirement: ^8 || ^9
+ package: Olark
+ type: module
+ 

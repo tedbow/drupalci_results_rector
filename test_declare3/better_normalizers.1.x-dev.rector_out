@@ -1,0 +1,25 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/better_normalizers/src/BetterNormalizersServiceProvider.php
+[parsing] modules/contrib/better_normalizers/src/Normalizer/EntityStub.php
+[parsing] modules/contrib/better_normalizers/src/Normalizer/FileEntityNormalizer.php
+[parsing] modules/contrib/better_normalizers/src/Normalizer/FileItemNormalizer.php
+[parsing] modules/contrib/better_normalizers/src/Normalizer/MenuLinkContentNormalizer.php
+[parsing] modules/contrib/better_normalizers/tests/src/Kernel/MenuLinkContentNormalizerTest.php
+[refactoring] modules/contrib/better_normalizers/src/BetterNormalizersServiceProvider.php
+[refactoring] modules/contrib/better_normalizers/src/Normalizer/EntityStub.php
+[refactoring] modules/contrib/better_normalizers/src/Normalizer/FileEntityNormalizer.php
+[refactoring] modules/contrib/better_normalizers/src/Normalizer/FileItemNormalizer.php
+[refactoring] modules/contrib/better_normalizers/src/Normalizer/MenuLinkContentNormalizer.php
+[refactoring] modules/contrib/better_normalizers/tests/src/Kernel/MenuLinkContentNormalizerTest.php
+[printing] modules/contrib/better_normalizers/src/BetterNormalizersServiceProvider.php
+[printing] modules/contrib/better_normalizers/src/Normalizer/EntityStub.php
+[printing] modules/contrib/better_normalizers/src/Normalizer/FileEntityNormalizer.php
+[printing] modules/contrib/better_normalizers/src/Normalizer/FileItemNormalizer.php
+[printing] modules/contrib/better_normalizers/src/Normalizer/MenuLinkContentNormalizer.php
+[printing] modules/contrib/better_normalizers/tests/src/Kernel/MenuLinkContentNormalizerTest.php
+
+
+ [OK] Rector is done!                                                           
+

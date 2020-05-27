@@ -1,0 +1,10 @@
+diff --git a/twig_extensions.info.yml b/twig_extensions.info.yml
+index c36e98a..0428c83 100644
+--- a/twig_extensions.info.yml
++++ b/twig_extensions.info.yml
+@@ -2,4 +2,5 @@ name: Twig Extensions
+ type: module
+ description: Twig extensions from http://twig.sensiolabs.org/doc/extensions/index.html
+ core: 8.x
++core_version_requirement: ^8 || ^9
+ package: Twig

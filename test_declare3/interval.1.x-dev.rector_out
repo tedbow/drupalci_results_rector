@@ -1,0 +1,58 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/interval/interval.module
+[parsing] modules/contrib/interval/interval.rules.inc
+[parsing] modules/contrib/interval/src/Element/Interval.php
+[parsing] modules/contrib/interval/src/IntervalBase.php
+[parsing] modules/contrib/interval/src/IntervalInterface.php
+[parsing] modules/contrib/interval/src/IntervalItemInterface.php
+[parsing] modules/contrib/interval/src/IntervalPluginManager.php
+[parsing] modules/contrib/interval/src/IntervalPluginManagerInterface.php
+[parsing] modules/contrib/interval/src/InvalidIntervalException.php
+[parsing] modules/contrib/interval/src/Plugin/Field/FieldFormatter/IntervalFormatterBase.php
+[parsing] modules/contrib/interval/src/Plugin/Field/FieldFormatter/IntervalFormatterDefault.php
+[parsing] modules/contrib/interval/src/Plugin/Field/FieldFormatter/IntervalFormatterPhp.php
+[parsing] modules/contrib/interval/src/Plugin/Field/FieldFormatter/IntervalFormatterRaw.php
+[parsing] modules/contrib/interval/src/Plugin/Field/FieldType/IntervalItem.php
+[parsing] modules/contrib/interval/src/Plugin/Field/FieldWidget/IntervalWidget.php
+[parsing] modules/contrib/interval/tests/src/Functional/IntervalTest.php
+[parsing] modules/contrib/interval/tests/src/Kernel/IntervalItemTest.php
+[refactoring] modules/contrib/interval/interval.module
+[refactoring] modules/contrib/interval/interval.rules.inc
+[refactoring] modules/contrib/interval/src/Element/Interval.php
+[refactoring] modules/contrib/interval/src/IntervalBase.php
+[refactoring] modules/contrib/interval/src/IntervalInterface.php
+[refactoring] modules/contrib/interval/src/IntervalItemInterface.php
+[refactoring] modules/contrib/interval/src/IntervalPluginManager.php
+[refactoring] modules/contrib/interval/src/IntervalPluginManagerInterface.php
+[refactoring] modules/contrib/interval/src/InvalidIntervalException.php
+[refactoring] modules/contrib/interval/src/Plugin/Field/FieldFormatter/IntervalFormatterBase.php
+[refactoring] modules/contrib/interval/src/Plugin/Field/FieldFormatter/IntervalFormatterDefault.php
+[refactoring] modules/contrib/interval/src/Plugin/Field/FieldFormatter/IntervalFormatterPhp.php
+[refactoring] modules/contrib/interval/src/Plugin/Field/FieldFormatter/IntervalFormatterRaw.php
+[refactoring] modules/contrib/interval/src/Plugin/Field/FieldType/IntervalItem.php
+[refactoring] modules/contrib/interval/src/Plugin/Field/FieldWidget/IntervalWidget.php
+[refactoring] modules/contrib/interval/tests/src/Functional/IntervalTest.php
+[refactoring] modules/contrib/interval/tests/src/Kernel/IntervalItemTest.php
+[printing] modules/contrib/interval/interval.module
+[printing] modules/contrib/interval/interval.rules.inc
+[printing] modules/contrib/interval/src/Element/Interval.php
+[printing] modules/contrib/interval/src/IntervalBase.php
+[printing] modules/contrib/interval/src/IntervalInterface.php
+[printing] modules/contrib/interval/src/IntervalItemInterface.php
+[printing] modules/contrib/interval/src/IntervalPluginManager.php
+[printing] modules/contrib/interval/src/IntervalPluginManagerInterface.php
+[printing] modules/contrib/interval/src/InvalidIntervalException.php
+[printing] modules/contrib/interval/src/Plugin/Field/FieldFormatter/IntervalFormatterBase.php
+[printing] modules/contrib/interval/src/Plugin/Field/FieldFormatter/IntervalFormatterDefault.php
+[printing] modules/contrib/interval/src/Plugin/Field/FieldFormatter/IntervalFormatterPhp.php
+[printing] modules/contrib/interval/src/Plugin/Field/FieldFormatter/IntervalFormatterRaw.php
+[printing] modules/contrib/interval/src/Plugin/Field/FieldType/IntervalItem.php
+[printing] modules/contrib/interval/src/Plugin/Field/FieldWidget/IntervalWidget.php
+[printing] modules/contrib/interval/tests/src/Functional/IntervalTest.php
+[printing] modules/contrib/interval/tests/src/Kernel/IntervalItemTest.php
+
+
+ [OK] Rector is done!                                                           
+

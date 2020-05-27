@@ -1,0 +1,12 @@
+diff --git a/linkyreplacer.info.yml b/linkyreplacer.info.yml
+index c6e5097..b5e0e93 100644
+--- a/linkyreplacer.info.yml
++++ b/linkyreplacer.info.yml
+@@ -2,6 +2,7 @@ name: Linky Replacer
+ description: Converts hyperlink URL's to Linky entities, and replaces URL with Linky.
+ type: module
+ core: 8.x
++core_version_requirement: ^8 || ^9
+ php: 7.3
+ package: Utility
+ dependencies:

@@ -1,0 +1,22 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/simple_gse_search/src/Controller/SearchPage.php
+[parsing] modules/contrib/simple_gse_search/src/Form/SearchForm.php
+[parsing] modules/contrib/simple_gse_search/src/Form/SettingsForm.php
+[parsing] modules/contrib/simple_gse_search/src/Plugin/Block/GSESearchFormBlock.php
+[parsing] modules/contrib/simple_gse_search/tests/src/Functional/SimpleGseSearchTest.php
+[refactoring] modules/contrib/simple_gse_search/src/Controller/SearchPage.php
+[refactoring] modules/contrib/simple_gse_search/src/Form/SearchForm.php
+[refactoring] modules/contrib/simple_gse_search/src/Form/SettingsForm.php
+[refactoring] modules/contrib/simple_gse_search/src/Plugin/Block/GSESearchFormBlock.php
+[refactoring] modules/contrib/simple_gse_search/tests/src/Functional/SimpleGseSearchTest.php
+[printing] modules/contrib/simple_gse_search/src/Controller/SearchPage.php
+[printing] modules/contrib/simple_gse_search/src/Form/SearchForm.php
+[printing] modules/contrib/simple_gse_search/src/Form/SettingsForm.php
+[printing] modules/contrib/simple_gse_search/src/Plugin/Block/GSESearchFormBlock.php
+[printing] modules/contrib/simple_gse_search/tests/src/Functional/SimpleGseSearchTest.php
+
+
+ [OK] Rector is done!                                                           
+

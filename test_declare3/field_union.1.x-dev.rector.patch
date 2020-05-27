@@ -1,0 +1,12 @@
+diff --git a/field_union.info.yml b/field_union.info.yml
+index ba65993..6b6ac60 100644
+--- a/field_union.info.yml
++++ b/field_union.info.yml
+@@ -1,6 +1,7 @@
+ name: Field Union Construction Kit
+ description: 'Provides ability to construct a new field type from the union of other field types'
+ core: 8.x
++core_version_requirement: ^8 || ^9
+ type: module
+ dependencies:
+   - drupal:field

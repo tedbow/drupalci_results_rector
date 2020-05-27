@@ -1,0 +1,34 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/abuseipdb/abuseipdb.install
+[parsing] modules/contrib/abuseipdb/abuseipdb.module
+[parsing] modules/contrib/abuseipdb/src/Controller/Report.php
+[parsing] modules/contrib/abuseipdb/src/Controller/Request.php
+[parsing] modules/contrib/abuseipdb/src/EventSubscriber/Terminate.php
+[parsing] modules/contrib/abuseipdb/src/Form/FormCheck.php
+[parsing] modules/contrib/abuseipdb/src/Form/Paths.php
+[parsing] modules/contrib/abuseipdb/src/Form/Report.php
+[parsing] modules/contrib/abuseipdb/src/Form/Settings.php
+[refactoring] modules/contrib/abuseipdb/abuseipdb.install
+[refactoring] modules/contrib/abuseipdb/abuseipdb.module
+[refactoring] modules/contrib/abuseipdb/src/Controller/Report.php
+[refactoring] modules/contrib/abuseipdb/src/Controller/Request.php
+[refactoring] modules/contrib/abuseipdb/src/EventSubscriber/Terminate.php
+[refactoring] modules/contrib/abuseipdb/src/Form/FormCheck.php
+[refactoring] modules/contrib/abuseipdb/src/Form/Paths.php
+[refactoring] modules/contrib/abuseipdb/src/Form/Report.php
+[refactoring] modules/contrib/abuseipdb/src/Form/Settings.php
+[printing] modules/contrib/abuseipdb/abuseipdb.install
+[printing] modules/contrib/abuseipdb/abuseipdb.module
+[printing] modules/contrib/abuseipdb/src/Controller/Report.php
+[printing] modules/contrib/abuseipdb/src/Controller/Request.php
+[printing] modules/contrib/abuseipdb/src/EventSubscriber/Terminate.php
+[printing] modules/contrib/abuseipdb/src/Form/FormCheck.php
+[printing] modules/contrib/abuseipdb/src/Form/Paths.php
+[printing] modules/contrib/abuseipdb/src/Form/Report.php
+[printing] modules/contrib/abuseipdb/src/Form/Settings.php
+
+
+ [OK] Rector is done!                                                           
+

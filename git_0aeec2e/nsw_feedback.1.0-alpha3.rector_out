@@ -1,0 +1,10 @@
+Rector 0.8.x-dev@7286f34
+Config file: rector.yml
+
+[parsing] modules/contrib/nsw_feedback/src/Plugin/Block/NswFeedbackAssistBlock.php
+[refactoring] modules/contrib/nsw_feedback/src/Plugin/Block/NswFeedbackAssistBlock.php
+[printing] modules/contrib/nsw_feedback/src/Plugin/Block/NswFeedbackAssistBlock.php
+
+
+ [OK] Rector is done!                                                           
+

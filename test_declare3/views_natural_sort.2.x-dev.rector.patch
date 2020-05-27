@@ -1,0 +1,100 @@
+diff --git a/src/Form/ConfigurationForm.php b/src/Form/ConfigurationForm.php
+index 8190a80..dbedb69 100644
+--- a/src/Form/ConfigurationForm.php
++++ b/src/Form/ConfigurationForm.php
+@@ -124,7 +124,7 @@ class ConfigurationForm extends ConfigFormBase {
+       ->set('transformation_settings.days_of_the_week.enabled', $values['days_of_the_week_enabled'])
+       ->set('rebuild_items_per_batch', $values['rebuild_items_per_batch'])
+       ->save();
+-    drupal_set_message($this->t('The configuration options have been saved.'));
++    $this->messenger()->addStatus($this->t('The configuration options have been saved.'));
+     $this->submitFormReindexOnly($form, $form_state);
+   }
+ 
+diff --git a/src/ViewsNaturalSortService.php b/src/ViewsNaturalSortService.php
+index 9691925..c78fb21 100644
+--- a/src/ViewsNaturalSortService.php
++++ b/src/ViewsNaturalSortService.php
+@@ -223,8 +223,8 @@ class ViewsNaturalSortService {
+ 
+   public function finishRebuild($success, $results, $operations) {
+     if ($success) {
+-      drupal_set_message($this->t('Index rebuild has completed.'));
+-      drupal_set_message($this->t('Indexed %count.', [
++      \Drupal::messenger()->addStatus($this->t('Index rebuild has completed.'));
++      \Drupal::messenger()->addStatus($this->t('Indexed %count.', [
+         '%count' => format_plural($results['entries'], '1 entry', '@count entries'),
+       ]));
+     }
+diff --git a/tests/src/Kernel/BasicTest.php b/tests/src/Kernel/BasicTest.php
+index 955ab6b..f939fee 100644
+--- a/tests/src/Kernel/BasicTest.php
++++ b/tests/src/Kernel/BasicTest.php
+@@ -2,6 +2,7 @@
+ 
+ namespace Drupal\Tests\views_natural_sort\Kernel;
+ 
++use Drupal\views_natural_sort\Plugin\IndexRecordContentTransformation\RemoveSymbols;
+ use Drupal\node\Entity\Node;
+ use Drupal\Tests\views\Kernel\ViewsKernelTestBase;
+ use Drupal\views\Tests\ViewTestData;
+@@ -125,7 +126,7 @@ class BasicTest extends ViewsKernelTestBase {
+    * Test Unicode symbol removal in sorting.
+    */
+   public function testNaturalSortUnicodeSymbols() {
+-    $plugin = new \Drupal\views_natural_sort\Plugin\IndexRecordContentTransformation\RemoveSymbols([
++    $plugin = new RemoveSymbols([
+       'settings' => "#…\",'\\()[]«?!»¡¿",
+     ], '', '');
+     $titles = [
+@@ -180,7 +181,7 @@ class BasicTest extends ViewsKernelTestBase {
+       'title' => '-3.5501 apples',
+     ]);
+     $node8->save();
+-    $node9 = node::create([
++    $node9 = Node::create([
+       'type' => 'views_natural_sort_test_content',
+       'title' => '3.5501 apples',
+     ]);
+@@ -269,12 +270,12 @@ class BasicTest extends ViewsKernelTestBase {
+   }
+ 
+   public function testStoringLongUnicode() {
+-    $node = node::create([
++    $node = Node::create([
+       'type' => 'views_natural_sort_test_content',
+       'title' => str_repeat('⌘', 255),
+     ]);
+     $node->save();
+-    $content = db_select('views_natural_sort', 'vns')
++    $content = \Drupal::database()->select('views_natural_sort', 'vns')
+       ->fields('vns', ['content'])
+       ->condition('vns.eid', $node->id())
+       ->condition('vns.entity_type', 'node')
+diff --git a/views_natural_sort.info.yml b/views_natural_sort.info.yml
+index c0a72ea..244082a 100644
+--- a/views_natural_sort.info.yml
++++ b/views_natural_sort.info.yml
+@@ -2,6 +2,7 @@ name: Views Natural Sort
+ type: module
+ description: Sort results naturaly on a node's title skipping articles like "the" and "a."
+ core: 8.x
++core_version_requirement: ^8 || ^9
+ package: Views
+ configure: views_natural_sort.settings
+ dependencies:
+diff --git a/views_natural_sort.module b/views_natural_sort.module
+index c9a0a6a..5903aa7 100644
+--- a/views_natural_sort.module
++++ b/views_natural_sort.module
+@@ -212,8 +212,8 @@ function views_natural_sort_rebuild_index($queue_name, &$context) {
+ 
+ function views_natural_sort_finish_rebuild($success, $results, $operations) {
+   if ($success) {
+-    drupal_set_message(t('Index rebuild has completed.'));
+-    drupal_set_message(t('Indexed %count.', [
++    \Drupal::messenger()->addStatus(t('Index rebuild has completed.'));
++    \Drupal::messenger()->addStatus(t('Indexed %count.', [
+       '%count' => \Drupal::translation()->formatPlural($results['entries'], '1 entry', '@count entries'),
+     ]));
+   }

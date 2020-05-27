@@ -1,0 +1,144 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/chatbot_api/chatbot_api.module
+[parsing] modules/contrib/chatbot_api/modules/chatbot_api_entities/chatbot_api_entities.module
+[parsing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Annotation/PushHandler.php
+[parsing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Annotation/QueryHandler.php
+[parsing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Entity/EntityCollection.php
+[parsing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Entity/EntityCollectionInterface.php
+[parsing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/EntityCollectionListBuilder.php
+[parsing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/EntityHookDispatcher.php
+[parsing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Form/EntityCollectionDeleteForm.php
+[parsing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Form/EntityCollectionForm.php
+[parsing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Plugin/ChatbotApiEntities/QueryHandler/DefaultEntity.php
+[parsing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Plugin/ChatbotApiEntities/QueryHandler/User.php
+[parsing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Plugin/Derivative/DefaultEntityDeriver.php
+[parsing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Plugin/PushHandlerBase.php
+[parsing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Plugin/PushHandlerInterface.php
+[parsing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Plugin/PushHandlerManager.php
+[parsing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Plugin/QueryHandlerBase.php
+[parsing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Plugin/QueryHandlerInterface.php
+[parsing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Plugin/QueryHandlerManager.php
+[parsing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Plugin/QueueWorker/ChatbotEntityPushWorker.php
+[parsing] modules/contrib/chatbot_api/modules/chatbot_api_entities/tests/modules/chatbot_api_entities_test/src/Plugin/ChatbotApiEntities/PushHandler/ChatbotApiEntitiesTestHandler.php
+[parsing] modules/contrib/chatbot_api/modules/chatbot_api_entities/tests/src/Functional/ChatbotApiEntitiesFunctionalTest.php
+[parsing] modules/contrib/chatbot_api/modules/chatbot_api_entities/tests/src/Kernel/ChatbotApiEntityIntegrationTest.php
+[parsing] modules/contrib/chatbot_api/modules/chatbot_api_entities/tests/src/Traits/ChatbotApiEntitiesTestTrait.php
+[parsing] modules/contrib/chatbot_api/modules/examples/helloworld_intent/helloworld_intent.module
+[parsing] modules/contrib/chatbot_api/modules/examples/helloworld_intent/src/Plugin/Chatbot/Intent/HelloWorldIntent.php
+[parsing] modules/contrib/chatbot_api/src/Annotation/Intent.php
+[parsing] modules/contrib/chatbot_api/src/Command/Generate/PluginChatbotIntentCommand.php
+[parsing] modules/contrib/chatbot_api/src/Generator/PluginChatbotIntentGenerator.php
+[parsing] modules/contrib/chatbot_api/src/IntentRequestInterface.php
+[parsing] modules/contrib/chatbot_api/src/IntentResponseInterface.php
+[parsing] modules/contrib/chatbot_api/src/Plugin/Chatbot/Intent/ViewsIntent.php
+[parsing] modules/contrib/chatbot_api/src/Plugin/Derivative/ViewsIntent.php
+[parsing] modules/contrib/chatbot_api/src/Plugin/Discovery/IntentDerivativeDiscoveryDecorator.php
+[parsing] modules/contrib/chatbot_api/src/Plugin/IntentPluginBase.php
+[parsing] modules/contrib/chatbot_api/src/Plugin/IntentPluginInterface.php
+[parsing] modules/contrib/chatbot_api/src/Plugin/IntentPluginManager.php
+[parsing] modules/contrib/chatbot_api/src/Plugin/views/display/ChatbotIntent.php
+[parsing] modules/contrib/chatbot_api/tests/modules/chatbot_api_helloworld_intent_test/src/Plugin/Chatbot/Intent/HelloWorldIntent.php
+[parsing] modules/contrib/chatbot_api/tests/src/Kernel/ChatbotApiIntentTest.php
+[parsing] modules/contrib/chatbot_api/tests/src/Kernel/ChatbotViewsIntentTest.php
+[refactoring] modules/contrib/chatbot_api/chatbot_api.module
+[refactoring] modules/contrib/chatbot_api/modules/chatbot_api_entities/chatbot_api_entities.module
+[refactoring] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Annotation/PushHandler.php
+[refactoring] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Annotation/QueryHandler.php
+[refactoring] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Entity/EntityCollection.php
+[refactoring] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Entity/EntityCollectionInterface.php
+[refactoring] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/EntityCollectionListBuilder.php
+[refactoring] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/EntityHookDispatcher.php
+[refactoring] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Form/EntityCollectionDeleteForm.php
+[refactoring] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Form/EntityCollectionForm.php
+[refactoring] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Plugin/ChatbotApiEntities/QueryHandler/DefaultEntity.php
+[refactoring] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Plugin/ChatbotApiEntities/QueryHandler/User.php
+[refactoring] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Plugin/Derivative/DefaultEntityDeriver.php
+[refactoring] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Plugin/PushHandlerBase.php
+[refactoring] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Plugin/PushHandlerInterface.php
+[refactoring] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Plugin/PushHandlerManager.php
+[refactoring] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Plugin/QueryHandlerBase.php
+[refactoring] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Plugin/QueryHandlerInterface.php
+[refactoring] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Plugin/QueryHandlerManager.php
+[refactoring] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Plugin/QueueWorker/ChatbotEntityPushWorker.php
+[refactoring] modules/contrib/chatbot_api/modules/chatbot_api_entities/tests/modules/chatbot_api_entities_test/src/Plugin/ChatbotApiEntities/PushHandler/ChatbotApiEntitiesTestHandler.php
+[refactoring] modules/contrib/chatbot_api/modules/chatbot_api_entities/tests/src/Functional/ChatbotApiEntitiesFunctionalTest.php
+[refactoring] modules/contrib/chatbot_api/modules/chatbot_api_entities/tests/src/Kernel/ChatbotApiEntityIntegrationTest.php
+[refactoring] modules/contrib/chatbot_api/modules/chatbot_api_entities/tests/src/Traits/ChatbotApiEntitiesTestTrait.php
+[refactoring] modules/contrib/chatbot_api/modules/examples/helloworld_intent/helloworld_intent.module
+[refactoring] modules/contrib/chatbot_api/modules/examples/helloworld_intent/src/Plugin/Chatbot/Intent/HelloWorldIntent.php
+[refactoring] modules/contrib/chatbot_api/src/Annotation/Intent.php
+[refactoring] modules/contrib/chatbot_api/src/Command/Generate/PluginChatbotIntentCommand.php
+[refactoring] modules/contrib/chatbot_api/src/Generator/PluginChatbotIntentGenerator.php
+[refactoring] modules/contrib/chatbot_api/src/IntentRequestInterface.php
+[refactoring] modules/contrib/chatbot_api/src/IntentResponseInterface.php
+[refactoring] modules/contrib/chatbot_api/src/Plugin/Chatbot/Intent/ViewsIntent.php
+[refactoring] modules/contrib/chatbot_api/src/Plugin/Derivative/ViewsIntent.php
+[refactoring] modules/contrib/chatbot_api/src/Plugin/Discovery/IntentDerivativeDiscoveryDecorator.php
+[refactoring] modules/contrib/chatbot_api/src/Plugin/IntentPluginBase.php
+[refactoring] modules/contrib/chatbot_api/src/Plugin/IntentPluginInterface.php
+[refactoring] modules/contrib/chatbot_api/src/Plugin/IntentPluginManager.php
+[refactoring] modules/contrib/chatbot_api/src/Plugin/views/display/ChatbotIntent.php
+[refactoring] modules/contrib/chatbot_api/tests/modules/chatbot_api_helloworld_intent_test/src/Plugin/Chatbot/Intent/HelloWorldIntent.php
+[refactoring] modules/contrib/chatbot_api/tests/src/Kernel/ChatbotApiIntentTest.php
+[refactoring] modules/contrib/chatbot_api/tests/src/Kernel/ChatbotViewsIntentTest.php
+[printing] modules/contrib/chatbot_api/chatbot_api.module
+[printing] modules/contrib/chatbot_api/modules/chatbot_api_entities/chatbot_api_entities.module
+[printing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Annotation/PushHandler.php
+[printing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Annotation/QueryHandler.php
+[printing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Entity/EntityCollection.php
+[printing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Entity/EntityCollectionInterface.php
+[printing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/EntityCollectionListBuilder.php
+[printing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/EntityHookDispatcher.php
+[printing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Form/EntityCollectionDeleteForm.php
+[printing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Form/EntityCollectionForm.php
+[printing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Plugin/ChatbotApiEntities/QueryHandler/DefaultEntity.php
+[printing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Plugin/ChatbotApiEntities/QueryHandler/User.php
+[printing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Plugin/Derivative/DefaultEntityDeriver.php
+[printing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Plugin/PushHandlerBase.php
+[printing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Plugin/PushHandlerInterface.php
+[printing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Plugin/PushHandlerManager.php
+[printing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Plugin/QueryHandlerBase.php
+[printing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Plugin/QueryHandlerInterface.php
+[printing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Plugin/QueryHandlerManager.php
+[printing] modules/contrib/chatbot_api/modules/chatbot_api_entities/src/Plugin/QueueWorker/ChatbotEntityPushWorker.php
+[printing] modules/contrib/chatbot_api/modules/chatbot_api_entities/tests/modules/chatbot_api_entities_test/src/Plugin/ChatbotApiEntities/PushHandler/ChatbotApiEntitiesTestHandler.php
+[printing] modules/contrib/chatbot_api/modules/chatbot_api_entities/tests/src/Functional/ChatbotApiEntitiesFunctionalTest.php
+[printing] modules/contrib/chatbot_api/modules/chatbot_api_entities/tests/src/Kernel/ChatbotApiEntityIntegrationTest.php
+[printing] modules/contrib/chatbot_api/modules/chatbot_api_entities/tests/src/Traits/ChatbotApiEntitiesTestTrait.php
+[printing] modules/contrib/chatbot_api/modules/examples/helloworld_intent/helloworld_intent.module
+[printing] modules/contrib/chatbot_api/modules/examples/helloworld_intent/src/Plugin/Chatbot/Intent/HelloWorldIntent.php
+[printing] modules/contrib/chatbot_api/src/Annotation/Intent.php
+[printing] modules/contrib/chatbot_api/src/Command/Generate/PluginChatbotIntentCommand.php
+[printing] modules/contrib/chatbot_api/src/Generator/PluginChatbotIntentGenerator.php
+[printing] modules/contrib/chatbot_api/src/IntentRequestInterface.php
+[printing] modules/contrib/chatbot_api/src/IntentResponseInterface.php
+[printing] modules/contrib/chatbot_api/src/Plugin/Chatbot/Intent/ViewsIntent.php
+[printing] modules/contrib/chatbot_api/src/Plugin/Derivative/ViewsIntent.php
+[printing] modules/contrib/chatbot_api/src/Plugin/Discovery/IntentDerivativeDiscoveryDecorator.php
+[printing] modules/contrib/chatbot_api/src/Plugin/IntentPluginBase.php
+[printing] modules/contrib/chatbot_api/src/Plugin/IntentPluginInterface.php
+[printing] modules/contrib/chatbot_api/src/Plugin/IntentPluginManager.php
+[printing] modules/contrib/chatbot_api/src/Plugin/views/display/ChatbotIntent.php
+[printing] modules/contrib/chatbot_api/tests/modules/chatbot_api_helloworld_intent_test/src/Plugin/Chatbot/Intent/HelloWorldIntent.php
+[printing] modules/contrib/chatbot_api/tests/src/Kernel/ChatbotApiIntentTest.php
+[printing] modules/contrib/chatbot_api/tests/src/Kernel/ChatbotViewsIntentTest.php
+
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/chatbot_api/src/Command/Generate/PluginChatbotIntentCo
+         mmand.php" file, due to:                                               
+         "Analyze error: "Class Drupal\Console\Core\Command\Command not found   
+         and could not be autoloaded.". Include your files in "parameters >     
+         autoload_paths".                                                       
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/chatbot_api/src/Generator/PluginChatbotIntentGenerator
+         .php" file, due to:                                                    
+         "Analyze error: "Class Drupal\Console\Core\Generator\Generator not     
+         found and could not be autoloaded.". Include your files in "parameters 
+         > autoload_paths".                                                     
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+

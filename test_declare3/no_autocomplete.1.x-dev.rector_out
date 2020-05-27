@@ -1,0 +1,28 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/no_autocomplete/no_autocomplete.drush.inc
+[parsing] modules/contrib/no_autocomplete/no_autocomplete.install
+[parsing] modules/contrib/no_autocomplete/no_autocomplete.module
+[parsing] modules/contrib/no_autocomplete/src/Form/NoAutoCompleteAdminSettingsForm.php
+[parsing] modules/contrib/no_autocomplete/tests/src/Functional/FormTest.php
+[parsing] modules/contrib/no_autocomplete/tests/src/Functional/NoAutoCompleteAdminSettingsFormTest.php
+[parsing] modules/contrib/no_autocomplete/tests/src/Kernel/DefaultConfigurationTest.php
+[refactoring] modules/contrib/no_autocomplete/no_autocomplete.drush.inc
+[refactoring] modules/contrib/no_autocomplete/no_autocomplete.install
+[refactoring] modules/contrib/no_autocomplete/no_autocomplete.module
+[refactoring] modules/contrib/no_autocomplete/src/Form/NoAutoCompleteAdminSettingsForm.php
+[refactoring] modules/contrib/no_autocomplete/tests/src/Functional/FormTest.php
+[refactoring] modules/contrib/no_autocomplete/tests/src/Functional/NoAutoCompleteAdminSettingsFormTest.php
+[refactoring] modules/contrib/no_autocomplete/tests/src/Kernel/DefaultConfigurationTest.php
+[printing] modules/contrib/no_autocomplete/no_autocomplete.drush.inc
+[printing] modules/contrib/no_autocomplete/no_autocomplete.install
+[printing] modules/contrib/no_autocomplete/no_autocomplete.module
+[printing] modules/contrib/no_autocomplete/src/Form/NoAutoCompleteAdminSettingsForm.php
+[printing] modules/contrib/no_autocomplete/tests/src/Functional/FormTest.php
+[printing] modules/contrib/no_autocomplete/tests/src/Functional/NoAutoCompleteAdminSettingsFormTest.php
+[printing] modules/contrib/no_autocomplete/tests/src/Kernel/DefaultConfigurationTest.php
+
+
+ [OK] Rector is done!                                                           
+

@@ -1,0 +1,187 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector-no-tests.yml
+
+[parsing] modules/contrib/panels/panels.api.php
+[parsing] modules/contrib/panels/panels.install
+[parsing] modules/contrib/panels/panels.module
+[parsing] modules/contrib/panels/panels_ipe/panels_ipe.api.php
+[parsing] modules/contrib/panels/panels_ipe/panels_ipe.install
+[parsing] modules/contrib/panels/panels_ipe/panels_ipe.module
+[parsing] modules/contrib/panels/panels_ipe/src/Annotation/IPEAccess.php
+[parsing] modules/contrib/panels/panels_ipe/src/Controller/PanelsIPEPageController.php
+[parsing] modules/contrib/panels/panels_ipe/src/Exception/EmptyRequestContentException.php
+[parsing] modules/contrib/panels/panels_ipe/src/Form/PanelsIPEBlockContentForm.php
+[parsing] modules/contrib/panels/panels_ipe/src/Form/PanelsIPEBlockPluginForm.php
+[parsing] modules/contrib/panels/panels_ipe/src/Form/PanelsIPELayoutForm.php
+[parsing] modules/contrib/panels/panels_ipe/src/Helpers/RemoveBlockRequestHandler.php
+[parsing] modules/contrib/panels/panels_ipe/src/Helpers/RequestHandlerBase.php
+[parsing] modules/contrib/panels/panels_ipe/src/Helpers/RequestHandlerInterface.php
+[parsing] modules/contrib/panels/panels_ipe/src/Helpers/UpdateLayoutRequestHandler.php
+[parsing] modules/contrib/panels/panels_ipe/src/PanelsIPEBlockRendererTrait.php
+[parsing] modules/contrib/panels/panels_ipe/src/Plugin/DisplayBuilder/InPlaceEditorDisplayBuilder.php
+[parsing] modules/contrib/panels/panels_ipe/src/Plugin/IPEAccessBase.php
+[parsing] modules/contrib/panels/panels_ipe/src/Plugin/IPEAccessInterface.php
+[parsing] modules/contrib/panels/panels_ipe/src/Plugin/IPEAccessManager.php
+[parsing] modules/contrib/panels/panels_ipe/src/Plugin/IPEAccessManagerInterface.php
+[parsing] modules/contrib/panels/src/Annotation/DisplayBuilder.php
+[parsing] modules/contrib/panels/src/Annotation/PanelsPattern.php
+[parsing] modules/contrib/panels/src/Annotation/PanelsStorage.php
+[parsing] modules/contrib/panels/src/CachedValuesGetterTrait.php
+[parsing] modules/contrib/panels/src/Controller/Panels.php
+[parsing] modules/contrib/panels/src/Form/LayoutChangeRegions.php
+[parsing] modules/contrib/panels/src/Form/LayoutChangeSettings.php
+[parsing] modules/contrib/panels/src/Form/LayoutPluginSelector.php
+[parsing] modules/contrib/panels/src/Form/PanelsAddBlockForm.php
+[parsing] modules/contrib/panels/src/Form/PanelsBlockConfigureFormBase.php
+[parsing] modules/contrib/panels/src/Form/PanelsContentForm.php
+[parsing] modules/contrib/panels/src/Form/PanelsDeleteBlockForm.php
+[parsing] modules/contrib/panels/src/Form/PanelsEditBlockForm.php
+[parsing] modules/contrib/panels/src/PanelsDisplayManager.php
+[parsing] modules/contrib/panels/src/PanelsDisplayManagerInterface.php
+[parsing] modules/contrib/panels/src/PanelsEvents.php
+[parsing] modules/contrib/panels/src/PanelsPatternManager.php
+[parsing] modules/contrib/panels/src/PanelsVariantEvent.php
+[parsing] modules/contrib/panels/src/Plugin/DisplayBuilder/DisplayBuilderBase.php
+[parsing] modules/contrib/panels/src/Plugin/DisplayBuilder/DisplayBuilderInterface.php
+[parsing] modules/contrib/panels/src/Plugin/DisplayBuilder/DisplayBuilderManager.php
+[parsing] modules/contrib/panels/src/Plugin/DisplayBuilder/DisplayBuilderManagerInterface.php
+[parsing] modules/contrib/panels/src/Plugin/DisplayBuilder/StandardDisplayBuilder.php
+[parsing] modules/contrib/panels/src/Plugin/DisplayVariant/PanelsDisplayVariant.php
+[parsing] modules/contrib/panels/src/Plugin/PanelsPattern/DefaultPattern.php
+[parsing] modules/contrib/panels/src/Plugin/PanelsPattern/PanelsPatternInterface.php
+[parsing] modules/contrib/panels/src/Plugin/PanelsStorage/PageManagerPanelsStorage.php
+[parsing] modules/contrib/panels/src/Storage/PanelsStorageAccess.php
+[parsing] modules/contrib/panels/src/Storage/PanelsStorageBase.php
+[parsing] modules/contrib/panels/src/Storage/PanelsStorageInterface.php
+[parsing] modules/contrib/panels/src/Storage/PanelsStorageManager.php
+[parsing] modules/contrib/panels/src/Storage/PanelsStorageManagerInterface.php
+[refactoring] modules/contrib/panels/panels.api.php
+[refactoring] modules/contrib/panels/panels.install
+[refactoring] modules/contrib/panels/panels.module
+[refactoring] modules/contrib/panels/panels_ipe/panels_ipe.api.php
+[refactoring] modules/contrib/panels/panels_ipe/panels_ipe.install
+[refactoring] modules/contrib/panels/panels_ipe/panels_ipe.module
+[refactoring] modules/contrib/panels/panels_ipe/src/Annotation/IPEAccess.php
+[refactoring] modules/contrib/panels/panels_ipe/src/Controller/PanelsIPEPageController.php
+[refactoring] modules/contrib/panels/panels_ipe/src/Exception/EmptyRequestContentException.php
+[refactoring] modules/contrib/panels/panels_ipe/src/Form/PanelsIPEBlockContentForm.php
+[refactoring] modules/contrib/panels/panels_ipe/src/Form/PanelsIPEBlockPluginForm.php
+[refactoring] modules/contrib/panels/panels_ipe/src/Form/PanelsIPELayoutForm.php
+[refactoring] modules/contrib/panels/panels_ipe/src/Helpers/RemoveBlockRequestHandler.php
+[refactoring] modules/contrib/panels/panels_ipe/src/Helpers/RequestHandlerBase.php
+[refactoring] modules/contrib/panels/panels_ipe/src/Helpers/RequestHandlerInterface.php
+[refactoring] modules/contrib/panels/panels_ipe/src/Helpers/UpdateLayoutRequestHandler.php
+[refactoring] modules/contrib/panels/panels_ipe/src/PanelsIPEBlockRendererTrait.php
+[refactoring] modules/contrib/panels/panels_ipe/src/Plugin/DisplayBuilder/InPlaceEditorDisplayBuilder.php
+[refactoring] modules/contrib/panels/panels_ipe/src/Plugin/IPEAccessBase.php
+[refactoring] modules/contrib/panels/panels_ipe/src/Plugin/IPEAccessInterface.php
+[refactoring] modules/contrib/panels/panels_ipe/src/Plugin/IPEAccessManager.php
+[refactoring] modules/contrib/panels/panels_ipe/src/Plugin/IPEAccessManagerInterface.php
+[refactoring] modules/contrib/panels/src/Annotation/DisplayBuilder.php
+[refactoring] modules/contrib/panels/src/Annotation/PanelsPattern.php
+[refactoring] modules/contrib/panels/src/Annotation/PanelsStorage.php
+[refactoring] modules/contrib/panels/src/CachedValuesGetterTrait.php
+[refactoring] modules/contrib/panels/src/Controller/Panels.php
+[refactoring] modules/contrib/panels/src/Form/LayoutChangeRegions.php
+[refactoring] modules/contrib/panels/src/Form/LayoutChangeSettings.php
+[refactoring] modules/contrib/panels/src/Form/LayoutPluginSelector.php
+[refactoring] modules/contrib/panels/src/Form/PanelsAddBlockForm.php
+[refactoring] modules/contrib/panels/src/Form/PanelsBlockConfigureFormBase.php
+[refactoring] modules/contrib/panels/src/Form/PanelsContentForm.php
+[refactoring] modules/contrib/panels/src/Form/PanelsDeleteBlockForm.php
+[refactoring] modules/contrib/panels/src/Form/PanelsEditBlockForm.php
+[refactoring] modules/contrib/panels/src/PanelsDisplayManager.php
+[refactoring] modules/contrib/panels/src/PanelsDisplayManagerInterface.php
+[refactoring] modules/contrib/panels/src/PanelsEvents.php
+[refactoring] modules/contrib/panels/src/PanelsPatternManager.php
+[refactoring] modules/contrib/panels/src/PanelsVariantEvent.php
+[refactoring] modules/contrib/panels/src/Plugin/DisplayBuilder/DisplayBuilderBase.php
+[refactoring] modules/contrib/panels/src/Plugin/DisplayBuilder/DisplayBuilderInterface.php
+[refactoring] modules/contrib/panels/src/Plugin/DisplayBuilder/DisplayBuilderManager.php
+[refactoring] modules/contrib/panels/src/Plugin/DisplayBuilder/DisplayBuilderManagerInterface.php
+[refactoring] modules/contrib/panels/src/Plugin/DisplayBuilder/StandardDisplayBuilder.php
+[refactoring] modules/contrib/panels/src/Plugin/DisplayVariant/PanelsDisplayVariant.php
+[refactoring] modules/contrib/panels/src/Plugin/PanelsPattern/DefaultPattern.php
+[refactoring] modules/contrib/panels/src/Plugin/PanelsPattern/PanelsPatternInterface.php
+[refactoring] modules/contrib/panels/src/Plugin/PanelsStorage/PageManagerPanelsStorage.php
+[refactoring] modules/contrib/panels/src/Storage/PanelsStorageAccess.php
+[refactoring] modules/contrib/panels/src/Storage/PanelsStorageBase.php
+[refactoring] modules/contrib/panels/src/Storage/PanelsStorageInterface.php
+[refactoring] modules/contrib/panels/src/Storage/PanelsStorageManager.php
+[refactoring] modules/contrib/panels/src/Storage/PanelsStorageManagerInterface.php
+[printing] modules/contrib/panels/panels.api.php
+[printing] modules/contrib/panels/panels.install
+[printing] modules/contrib/panels/panels.module
+[printing] modules/contrib/panels/panels_ipe/panels_ipe.api.php
+[printing] modules/contrib/panels/panels_ipe/panels_ipe.install
+[printing] modules/contrib/panels/panels_ipe/panels_ipe.module
+[printing] modules/contrib/panels/panels_ipe/src/Annotation/IPEAccess.php
+[printing] modules/contrib/panels/panels_ipe/src/Controller/PanelsIPEPageController.php
+[printing] modules/contrib/panels/panels_ipe/src/Exception/EmptyRequestContentException.php
+[printing] modules/contrib/panels/panels_ipe/src/Form/PanelsIPEBlockContentForm.php
+[printing] modules/contrib/panels/panels_ipe/src/Form/PanelsIPEBlockPluginForm.php
+[printing] modules/contrib/panels/panels_ipe/src/Form/PanelsIPELayoutForm.php
+[printing] modules/contrib/panels/panels_ipe/src/Helpers/RemoveBlockRequestHandler.php
+[printing] modules/contrib/panels/panels_ipe/src/Helpers/RequestHandlerBase.php
+[printing] modules/contrib/panels/panels_ipe/src/Helpers/RequestHandlerInterface.php
+[printing] modules/contrib/panels/panels_ipe/src/Helpers/UpdateLayoutRequestHandler.php
+[printing] modules/contrib/panels/panels_ipe/src/PanelsIPEBlockRendererTrait.php
+[printing] modules/contrib/panels/panels_ipe/src/Plugin/DisplayBuilder/InPlaceEditorDisplayBuilder.php
+[printing] modules/contrib/panels/panels_ipe/src/Plugin/IPEAccessBase.php
+[printing] modules/contrib/panels/panels_ipe/src/Plugin/IPEAccessInterface.php
+[printing] modules/contrib/panels/panels_ipe/src/Plugin/IPEAccessManager.php
+[printing] modules/contrib/panels/panels_ipe/src/Plugin/IPEAccessManagerInterface.php
+[printing] modules/contrib/panels/src/Annotation/DisplayBuilder.php
+[printing] modules/contrib/panels/src/Annotation/PanelsPattern.php
+[printing] modules/contrib/panels/src/Annotation/PanelsStorage.php
+[printing] modules/contrib/panels/src/CachedValuesGetterTrait.php
+[printing] modules/contrib/panels/src/Controller/Panels.php
+[printing] modules/contrib/panels/src/Form/LayoutChangeRegions.php
+[printing] modules/contrib/panels/src/Form/LayoutChangeSettings.php
+[printing] modules/contrib/panels/src/Form/LayoutPluginSelector.php
+[printing] modules/contrib/panels/src/Form/PanelsAddBlockForm.php
+[printing] modules/contrib/panels/src/Form/PanelsBlockConfigureFormBase.php
+[printing] modules/contrib/panels/src/Form/PanelsContentForm.php
+[printing] modules/contrib/panels/src/Form/PanelsDeleteBlockForm.php
+[printing] modules/contrib/panels/src/Form/PanelsEditBlockForm.php
+[printing] modules/contrib/panels/src/PanelsDisplayManager.php
+[printing] modules/contrib/panels/src/PanelsDisplayManagerInterface.php
+[printing] modules/contrib/panels/src/PanelsEvents.php
+[printing] modules/contrib/panels/src/PanelsPatternManager.php
+[printing] modules/contrib/panels/src/PanelsVariantEvent.php
+[printing] modules/contrib/panels/src/Plugin/DisplayBuilder/DisplayBuilderBase.php
+[printing] modules/contrib/panels/src/Plugin/DisplayBuilder/DisplayBuilderInterface.php
+[printing] modules/contrib/panels/src/Plugin/DisplayBuilder/DisplayBuilderManager.php
+[printing] modules/contrib/panels/src/Plugin/DisplayBuilder/DisplayBuilderManagerInterface.php
+[printing] modules/contrib/panels/src/Plugin/DisplayBuilder/StandardDisplayBuilder.php
+[printing] modules/contrib/panels/src/Plugin/DisplayVariant/PanelsDisplayVariant.php
+[printing] modules/contrib/panels/src/Plugin/PanelsPattern/DefaultPattern.php
+[printing] modules/contrib/panels/src/Plugin/PanelsPattern/PanelsPatternInterface.php
+[printing] modules/contrib/panels/src/Plugin/PanelsStorage/PageManagerPanelsStorage.php
+[printing] modules/contrib/panels/src/Storage/PanelsStorageAccess.php
+[printing] modules/contrib/panels/src/Storage/PanelsStorageBase.php
+[printing] modules/contrib/panels/src/Storage/PanelsStorageInterface.php
+[printing] modules/contrib/panels/src/Storage/PanelsStorageManager.php
+[printing] modules/contrib/panels/src/Storage/PanelsStorageManagerInterface.php
+
+
+1 file with changes
+===================
+
+1) modules/contrib/panels/panels.install
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -62,4 +62,4 @@
+     \Drupal::service('module_installer')->uninstall(['layout_plugin'], FALSE);
+     \Drupal::service('module_installer')->install(['layout_discovery'], FALSE);
+   }
+-}
+\ No newline at end of file
++}
+    ----------- end diff -----------
+
+
+ [OK] Rector is done! 1 file have been changed.                                 
+
