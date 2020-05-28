@@ -1,0 +1,69 @@
+Rector 0.8.x-dev@cf3198a
+Config file: rector.yml
+
+[parsing] modules/contrib/username_login/src/Form/UsernameLoginAdminSettingsForm.php
+[parsing] modules/contrib/username_login/src/Form/UsernameLoginForm.php
+[parsing] modules/contrib/username_login/src/Plugin/Block/UsernameLoginBlock.php
+[parsing] modules/contrib/username_login/username_login.install
+[refactoring] modules/contrib/username_login/src/Form/UsernameLoginAdminSettingsForm.php
+[refactoring] modules/contrib/username_login/src/Form/UsernameLoginForm.php
+[refactoring] modules/contrib/username_login/src/Plugin/Block/UsernameLoginBlock.php
+[refactoring] modules/contrib/username_login/username_login.install
+[printing] modules/contrib/username_login/src/Form/UsernameLoginAdminSettingsForm.php
+[printing] modules/contrib/username_login/src/Form/UsernameLoginForm.php
+[printing] modules/contrib/username_login/src/Plugin/Block/UsernameLoginBlock.php
+[printing] modules/contrib/username_login/username_login.install
+
+
+2 files with changes
+====================
+
+1) modules/contrib/username_login/src/Form/UsernameLoginForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -81,10 +81,10 @@
+     if ($this->usernameLoginVerifyUserRoles($username_roles)) {
+       $user = $username;
+       user_login_finalize($user);
+-      drupal_set_message($this->t('You are now logged in as %user.', ['%user' => $account->getUsername()]));	  
++      $this->messenger()->addStatus($this->t('You are now logged in as %user.', ['%user' => $account->getUsername()]));	  
+     }
+     else {
+-      drupal_set_message($this->t("Login failed."), 'error');
++      $this->messenger()->addError($this->t("Login failed."));
+     }
+   }
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+2) modules/contrib/username_login/username_login.install
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -9,7 +9,7 @@
+  * Implements hook_install().
+  */ 
+ function username_login_install() {
+-  drupal_set_message(t('WARNING: This module has security implications, because it allows you to log in with a user name. Any user can login as another user, just knowing the user name.'), 'warning');
++  \Drupal::messenger()->addWarning(t('WARNING: This module has security implications, because it allows you to log in with a user name. Any user can login as another user, just knowing the user name.'));
+ } 
+
+ /*
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+ [OK] Rector is done! 2 files have been changed.                                
+

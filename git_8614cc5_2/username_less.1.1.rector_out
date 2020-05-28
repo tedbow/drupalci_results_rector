@@ -1,0 +1,64 @@
+Rector 0.8.x-dev@cf3198a
+Config file: rector.yml
+
+[parsing] modules/contrib/username_less/src/Form/UsernameLessForm.php
+[parsing] modules/contrib/username_less/username_less.module
+[refactoring] modules/contrib/username_less/src/Form/UsernameLessForm.php
+[refactoring] modules/contrib/username_less/username_less.module
+[printing] modules/contrib/username_less/src/Form/UsernameLessForm.php
+[printing] modules/contrib/username_less/username_less.module
+
+
+2 files with changes
+====================
+
+1) modules/contrib/username_less/src/Form/UsernameLessForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -120,10 +120,10 @@
+                 ->set("confirm", $values['confirm'][0])
+                 ->save();
+       }
+-      drupal_set_message('Setting saved successfully');
++      $this->messenger()->addStatus('Setting saved successfully');
+     }
+     catch (Exception $e) {
+-      drupal_set_message('Caught exception in username less module: ' . $e->getMessage(), 'error');
++      $this->messenger()->addError('Caught exception in username less module: ' . $e->getMessage());
+     }
+   }
+ }
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+2) modules/contrib/username_less/username_less.module
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -47,7 +47,7 @@
+   $name = ('' === $name) ? t('user') : $name;
+
+   // Truncate to a reasonable size.
+-  $name = (Unicode::strlen($name) > (USERNAME_MAX_LENGTH - 10)) ? Unicode::substr($name, 0, USERNAME_MAX_LENGTH - 11) : $name;
++  $name = (mb_strlen($name) > (USERNAME_MAX_LENGTH - 10)) ? mb_substr($name, 0, USERNAME_MAX_LENGTH - 11) : $name;
+   return $name;
+ }
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\UnicodeStrlenRector
+ * DrupalRector\Rector\Deprecation\UnicodeSubstrRector
+
+
+ [OK] Rector is done! 2 files have been changed.                                
+

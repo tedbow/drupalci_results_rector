@@ -1,0 +1,92 @@
+Rector 0.8.x-dev@cf3198a
+Config file: rector.yml
+
+[parsing] modules/contrib/api_ai_webhook/api_ai_webhook.install
+[parsing] modules/contrib/api_ai_webhook/api_ai_webhook.module
+[parsing] modules/contrib/api_ai_webhook/modules/chatbot_api_apiai/chatbot_api_apiai.module
+[parsing] modules/contrib/api_ai_webhook/modules/chatbot_api_apiai/src/ApiAiContextTrait.php
+[parsing] modules/contrib/api_ai_webhook/modules/chatbot_api_apiai/src/EventSubscriber/RequestSubscriber.php
+[parsing] modules/contrib/api_ai_webhook/modules/chatbot_api_apiai/src/IntentRequestApiAiProxy.php
+[parsing] modules/contrib/api_ai_webhook/modules/chatbot_api_apiai/src/IntentResponseApiAiProxy.php
+[parsing] modules/contrib/api_ai_webhook/modules/chatbot_api_apiai/tests/src/Unit/IntentAttributeSetGetTest.php
+[parsing] modules/contrib/api_ai_webhook/src/ApiAiEvent.php
+[parsing] modules/contrib/api_ai_webhook/src/Authentication/Provider/ApiAiAuth.php
+[parsing] modules/contrib/api_ai_webhook/src/Controller/ApiAiEndpointController.php
+[parsing] modules/contrib/api_ai_webhook/src/EventSubscriber/ResponseEventSubscriber.php
+[parsing] modules/contrib/api_ai_webhook/src/Form/ModuleConfigurationForm.php
+[parsing] modules/contrib/api_ai_webhook/src/Plugin/ChatbotApiEntities/PushHandler/ApiAiPushHandler.php
+[parsing] modules/contrib/api_ai_webhook/tests/modules/api_ai_webhook_test/src/Plugin/Chatbot/Intent/UserInfo.php
+[parsing] modules/contrib/api_ai_webhook/tests/src/Functional/ConfigurationTest.php
+[parsing] modules/contrib/api_ai_webhook/tests/src/Kernel/ChatbotIntentPluginTest.php
+[parsing] modules/contrib/api_ai_webhook/tests/src/Unit/ApiAiPushHandlerTest.php
+[refactoring] modules/contrib/api_ai_webhook/api_ai_webhook.install
+[refactoring] modules/contrib/api_ai_webhook/api_ai_webhook.module
+[refactoring] modules/contrib/api_ai_webhook/modules/chatbot_api_apiai/chatbot_api_apiai.module
+[refactoring] modules/contrib/api_ai_webhook/modules/chatbot_api_apiai/src/ApiAiContextTrait.php
+[refactoring] modules/contrib/api_ai_webhook/modules/chatbot_api_apiai/src/EventSubscriber/RequestSubscriber.php
+[refactoring] modules/contrib/api_ai_webhook/modules/chatbot_api_apiai/src/IntentRequestApiAiProxy.php
+[refactoring] modules/contrib/api_ai_webhook/modules/chatbot_api_apiai/src/IntentResponseApiAiProxy.php
+[refactoring] modules/contrib/api_ai_webhook/modules/chatbot_api_apiai/tests/src/Unit/IntentAttributeSetGetTest.php
+[refactoring] modules/contrib/api_ai_webhook/src/ApiAiEvent.php
+[refactoring] modules/contrib/api_ai_webhook/src/Authentication/Provider/ApiAiAuth.php
+[refactoring] modules/contrib/api_ai_webhook/src/Controller/ApiAiEndpointController.php
+[refactoring] modules/contrib/api_ai_webhook/src/EventSubscriber/ResponseEventSubscriber.php
+[refactoring] modules/contrib/api_ai_webhook/src/Form/ModuleConfigurationForm.php
+[refactoring] modules/contrib/api_ai_webhook/src/Plugin/ChatbotApiEntities/PushHandler/ApiAiPushHandler.php
+[refactoring] modules/contrib/api_ai_webhook/tests/modules/api_ai_webhook_test/src/Plugin/Chatbot/Intent/UserInfo.php
+[refactoring] modules/contrib/api_ai_webhook/tests/src/Functional/ConfigurationTest.php
+[refactoring] modules/contrib/api_ai_webhook/tests/src/Kernel/ChatbotIntentPluginTest.php
+[refactoring] modules/contrib/api_ai_webhook/tests/src/Unit/ApiAiPushHandlerTest.php
+[printing] modules/contrib/api_ai_webhook/api_ai_webhook.install
+[printing] modules/contrib/api_ai_webhook/api_ai_webhook.module
+[printing] modules/contrib/api_ai_webhook/modules/chatbot_api_apiai/chatbot_api_apiai.module
+[printing] modules/contrib/api_ai_webhook/modules/chatbot_api_apiai/src/ApiAiContextTrait.php
+[printing] modules/contrib/api_ai_webhook/modules/chatbot_api_apiai/src/EventSubscriber/RequestSubscriber.php
+[printing] modules/contrib/api_ai_webhook/modules/chatbot_api_apiai/src/IntentRequestApiAiProxy.php
+[printing] modules/contrib/api_ai_webhook/modules/chatbot_api_apiai/src/IntentResponseApiAiProxy.php
+[printing] modules/contrib/api_ai_webhook/modules/chatbot_api_apiai/tests/src/Unit/IntentAttributeSetGetTest.php
+[printing] modules/contrib/api_ai_webhook/src/ApiAiEvent.php
+[printing] modules/contrib/api_ai_webhook/src/Authentication/Provider/ApiAiAuth.php
+[printing] modules/contrib/api_ai_webhook/src/Controller/ApiAiEndpointController.php
+[printing] modules/contrib/api_ai_webhook/src/EventSubscriber/ResponseEventSubscriber.php
+[printing] modules/contrib/api_ai_webhook/src/Form/ModuleConfigurationForm.php
+[printing] modules/contrib/api_ai_webhook/src/Plugin/ChatbotApiEntities/PushHandler/ApiAiPushHandler.php
+[printing] modules/contrib/api_ai_webhook/tests/modules/api_ai_webhook_test/src/Plugin/Chatbot/Intent/UserInfo.php
+[printing] modules/contrib/api_ai_webhook/tests/src/Functional/ConfigurationTest.php
+[printing] modules/contrib/api_ai_webhook/tests/src/Kernel/ChatbotIntentPluginTest.php
+[printing] modules/contrib/api_ai_webhook/tests/src/Unit/ApiAiPushHandlerTest.php
+
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/api_ai_webhook/modules/chatbot_api_apiai/src/EventSubs
+         criber/RequestSubscriber.php" file, due to:                            
+         "Analyze error: "Class Drupal\chatbot_api\IntentRequestInterface not   
+         found and could not be autoloaded.". Include your files in "parameters 
+         > autoload_paths".                                                     
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/api_ai_webhook/modules/chatbot_api_apiai/src/IntentRes
+         ponseApiAiProxy.php" file, due to:                                     
+         "Analyze error: "Class Drupal\chatbot_api\IntentResponseInterface not  
+         found and could not be autoloaded.". Include your files in "parameters 
+         > autoload_paths".                                                     
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/api_ai_webhook/src/Plugin/ChatbotApiEntities/PushHandl
+         er/ApiAiPushHandler.php" file, due to:                                 
+         "Analyze error: "Class                                                 
+         Drupal\chatbot_api_entities\Plugin\PushHandlerInterface not found and  
+         could not be autoloaded.". Include your files in "parameters >         
+         autoload_paths".                                                       
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/api_ai_webhook/tests/modules/api_ai_webhook_test/src/P
+         lugin/Chatbot/Intent/UserInfo.php" file, due to:                       
+         "Analyze error: "Class Drupal\chatbot_api\Plugin\IntentPluginBase not  
+         found and could not be autoloaded.". Include your files in "parameters 
+         > autoload_paths".                                                     
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+
