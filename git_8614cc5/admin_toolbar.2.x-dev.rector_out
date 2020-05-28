@@ -1,0 +1,61 @@
+Rector 0.8.x-dev@cf3198a
+Config file: rector.yml
+
+[parsing] modules/contrib/admin_toolbar/admin_toolbar.install
+[parsing] modules/contrib/admin_toolbar/admin_toolbar.module
+[parsing] modules/contrib/admin_toolbar/admin_toolbar_links_access_filter/admin_toolbar_links_access_filter.module
+[parsing] modules/contrib/admin_toolbar/admin_toolbar_search/admin_toolbar_search.module
+[parsing] modules/contrib/admin_toolbar/admin_toolbar_search/src/Controller/AdminToolbarSearchController.php
+[parsing] modules/contrib/admin_toolbar/admin_toolbar_search/src/SearchLinks.php
+[parsing] modules/contrib/admin_toolbar/admin_toolbar_search/tests/src/FunctionalJavascript/AdminToolbarSearchTest.php
+[parsing] modules/contrib/admin_toolbar/admin_toolbar_search/tests/src/FunctionalJavascript/AdminToolbarSearchTestBase.php
+[parsing] modules/contrib/admin_toolbar/admin_toolbar_search/tests/src/FunctionalJavascript/AdminToolbarToolsSearchTest.php
+[parsing] modules/contrib/admin_toolbar/admin_toolbar_tools/admin_toolbar_tools.install
+[parsing] modules/contrib/admin_toolbar/admin_toolbar_tools/admin_toolbar_tools.module
+[parsing] modules/contrib/admin_toolbar/admin_toolbar_tools/src/AdminToolbarToolsHelper.php
+[parsing] modules/contrib/admin_toolbar/admin_toolbar_tools/src/Controller/ToolbarController.php
+[parsing] modules/contrib/admin_toolbar/admin_toolbar_tools/src/Plugin/Derivative/ExtraLinks.php
+[parsing] modules/contrib/admin_toolbar/admin_toolbar_tools/tests/src/Functional/AdminToolbarToolsAlterTest.php
+[parsing] modules/contrib/admin_toolbar/src/Render/Element/AdminToolbar.php
+[parsing] modules/contrib/admin_toolbar/tests/src/Functional/AdminToolbarAlterTest.php
+[parsing] modules/contrib/admin_toolbar/tests/src/Functional/AdminToolbarToolsSortTest.php
+[refactoring] modules/contrib/admin_toolbar/admin_toolbar.install
+[refactoring] modules/contrib/admin_toolbar/admin_toolbar.module
+[refactoring] modules/contrib/admin_toolbar/admin_toolbar_links_access_filter/admin_toolbar_links_access_filter.module
+[refactoring] modules/contrib/admin_toolbar/admin_toolbar_search/admin_toolbar_search.module
+[refactoring] modules/contrib/admin_toolbar/admin_toolbar_search/src/Controller/AdminToolbarSearchController.php
+[refactoring] modules/contrib/admin_toolbar/admin_toolbar_search/src/SearchLinks.php
+[refactoring] modules/contrib/admin_toolbar/admin_toolbar_search/tests/src/FunctionalJavascript/AdminToolbarSearchTest.php
+[refactoring] modules/contrib/admin_toolbar/admin_toolbar_search/tests/src/FunctionalJavascript/AdminToolbarSearchTestBase.php
+[refactoring] modules/contrib/admin_toolbar/admin_toolbar_search/tests/src/FunctionalJavascript/AdminToolbarToolsSearchTest.php
+[refactoring] modules/contrib/admin_toolbar/admin_toolbar_tools/admin_toolbar_tools.install
+[refactoring] modules/contrib/admin_toolbar/admin_toolbar_tools/admin_toolbar_tools.module
+[refactoring] modules/contrib/admin_toolbar/admin_toolbar_tools/src/AdminToolbarToolsHelper.php
+[refactoring] modules/contrib/admin_toolbar/admin_toolbar_tools/src/Controller/ToolbarController.php
+[refactoring] modules/contrib/admin_toolbar/admin_toolbar_tools/src/Plugin/Derivative/ExtraLinks.php
+[refactoring] modules/contrib/admin_toolbar/admin_toolbar_tools/tests/src/Functional/AdminToolbarToolsAlterTest.php
+[refactoring] modules/contrib/admin_toolbar/src/Render/Element/AdminToolbar.php
+[refactoring] modules/contrib/admin_toolbar/tests/src/Functional/AdminToolbarAlterTest.php
+[refactoring] modules/contrib/admin_toolbar/tests/src/Functional/AdminToolbarToolsSortTest.php
+[printing] modules/contrib/admin_toolbar/admin_toolbar.install
+[printing] modules/contrib/admin_toolbar/admin_toolbar.module
+[printing] modules/contrib/admin_toolbar/admin_toolbar_links_access_filter/admin_toolbar_links_access_filter.module
+[printing] modules/contrib/admin_toolbar/admin_toolbar_search/admin_toolbar_search.module
+[printing] modules/contrib/admin_toolbar/admin_toolbar_search/src/Controller/AdminToolbarSearchController.php
+[printing] modules/contrib/admin_toolbar/admin_toolbar_search/src/SearchLinks.php
+[printing] modules/contrib/admin_toolbar/admin_toolbar_search/tests/src/FunctionalJavascript/AdminToolbarSearchTest.php
+[printing] modules/contrib/admin_toolbar/admin_toolbar_search/tests/src/FunctionalJavascript/AdminToolbarSearchTestBase.php
+[printing] modules/contrib/admin_toolbar/admin_toolbar_search/tests/src/FunctionalJavascript/AdminToolbarToolsSearchTest.php
+[printing] modules/contrib/admin_toolbar/admin_toolbar_tools/admin_toolbar_tools.install
+[printing] modules/contrib/admin_toolbar/admin_toolbar_tools/admin_toolbar_tools.module
+[printing] modules/contrib/admin_toolbar/admin_toolbar_tools/src/AdminToolbarToolsHelper.php
+[printing] modules/contrib/admin_toolbar/admin_toolbar_tools/src/Controller/ToolbarController.php
+[printing] modules/contrib/admin_toolbar/admin_toolbar_tools/src/Plugin/Derivative/ExtraLinks.php
+[printing] modules/contrib/admin_toolbar/admin_toolbar_tools/tests/src/Functional/AdminToolbarToolsAlterTest.php
+[printing] modules/contrib/admin_toolbar/src/Render/Element/AdminToolbar.php
+[printing] modules/contrib/admin_toolbar/tests/src/Functional/AdminToolbarAlterTest.php
+[printing] modules/contrib/admin_toolbar/tests/src/Functional/AdminToolbarToolsSortTest.php
+
+
+ [OK] Rector is done!                                                           
+

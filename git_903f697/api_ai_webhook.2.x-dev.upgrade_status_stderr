@@ -1,0 +1,2 @@
+ [warning] file_put_contents(/tmp/upgrade_status/deprecation_testing.neon): failed to open stream: Permission denied DeprecationAnalyzer.php:479
+ [error]  Project scan @name failed. 
