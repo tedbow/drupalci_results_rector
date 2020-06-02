@@ -1,0 +1,22 @@
+Rector 0.8.x-dev@3465583
+Config file: rector.yml
+
+[parsing] modules/contrib/drush_help/drush_help.module
+[parsing] modules/contrib/drush_help/src/Controller/HelpController.php
+[parsing] modules/contrib/drush_help/src/DrushHelp.php
+[parsing] modules/contrib/drush_help/src/DrushHelpInterface.php
+[parsing] modules/contrib/drush_help/src/Routing/RouteSubscriber.php
+[refactoring] modules/contrib/drush_help/drush_help.module
+[refactoring] modules/contrib/drush_help/src/Controller/HelpController.php
+[refactoring] modules/contrib/drush_help/src/DrushHelp.php
+[refactoring] modules/contrib/drush_help/src/DrushHelpInterface.php
+[refactoring] modules/contrib/drush_help/src/Routing/RouteSubscriber.php
+[printing] modules/contrib/drush_help/drush_help.module
+[printing] modules/contrib/drush_help/src/Controller/HelpController.php
+[printing] modules/contrib/drush_help/src/DrushHelp.php
+[printing] modules/contrib/drush_help/src/DrushHelpInterface.php
+[printing] modules/contrib/drush_help/src/Routing/RouteSubscriber.php
+
+
+ [OK] Rector is done!                                                           
+

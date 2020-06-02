@@ -1,0 +1,73 @@
+Rector 0.8.x-dev@3465583
+Config file: rector.yml
+
+[parsing] modules/contrib/dashboard_connector/dashboard_connector.drush.inc
+[parsing] modules/contrib/dashboard_connector/dashboard_connector.module
+[parsing] modules/contrib/dashboard_connector/src/Checker/CheckerBase.php
+[parsing] modules/contrib/dashboard_connector/src/Checker/CheckerInterface.php
+[parsing] modules/contrib/dashboard_connector/src/Checker/CoreExtensionChecker.php
+[parsing] modules/contrib/dashboard_connector/src/Checker/ModuleStateChecker.php
+[parsing] modules/contrib/dashboard_connector/src/Checker/ModuleStatusChecker.php
+[parsing] modules/contrib/dashboard_connector/src/Checker/PerformanceChecker.php
+[parsing] modules/contrib/dashboard_connector/src/Checker/PhpChecker.php
+[parsing] modules/contrib/dashboard_connector/src/Checker/RequirementsChecker.php
+[parsing] modules/contrib/dashboard_connector/src/Dashboard.php
+[parsing] modules/contrib/dashboard_connector/src/DashboardConnector.php
+[parsing] modules/contrib/dashboard_connector/src/DashboardConnectorInterface.php
+[parsing] modules/contrib/dashboard_connector/src/DashboardConnectorServiceProvider.php
+[parsing] modules/contrib/dashboard_connector/src/Form/SettingsForm.php
+[parsing] modules/contrib/dashboard_connector/src/SnapshotBuilder.php
+[parsing] modules/contrib/dashboard_connector/src/SnapshotBuilderInterface.php
+[parsing] modules/contrib/dashboard_connector/tests/bootstrap.php
+[parsing] modules/contrib/dashboard_connector/tests/src/Functional/SnapshotTest.php
+[parsing] modules/contrib/dashboard_connector/tests/src/Kernel/CoreExtensionCheckerKernelTest.php
+[parsing] modules/contrib/dashboard_connector/tests/src/Unit/PerformanceCheckerTest.php
+[parsing] modules/contrib/dashboard_connector/tests/src/Unit/PhpCheckerTest.php
+[refactoring] modules/contrib/dashboard_connector/dashboard_connector.drush.inc
+[refactoring] modules/contrib/dashboard_connector/dashboard_connector.module
+[refactoring] modules/contrib/dashboard_connector/src/Checker/CheckerBase.php
+[refactoring] modules/contrib/dashboard_connector/src/Checker/CheckerInterface.php
+[refactoring] modules/contrib/dashboard_connector/src/Checker/CoreExtensionChecker.php
+[refactoring] modules/contrib/dashboard_connector/src/Checker/ModuleStateChecker.php
+[refactoring] modules/contrib/dashboard_connector/src/Checker/ModuleStatusChecker.php
+[refactoring] modules/contrib/dashboard_connector/src/Checker/PerformanceChecker.php
+[refactoring] modules/contrib/dashboard_connector/src/Checker/PhpChecker.php
+[refactoring] modules/contrib/dashboard_connector/src/Checker/RequirementsChecker.php
+[refactoring] modules/contrib/dashboard_connector/src/Dashboard.php
+[refactoring] modules/contrib/dashboard_connector/src/DashboardConnector.php
+[refactoring] modules/contrib/dashboard_connector/src/DashboardConnectorInterface.php
+[refactoring] modules/contrib/dashboard_connector/src/DashboardConnectorServiceProvider.php
+[refactoring] modules/contrib/dashboard_connector/src/Form/SettingsForm.php
+[refactoring] modules/contrib/dashboard_connector/src/SnapshotBuilder.php
+[refactoring] modules/contrib/dashboard_connector/src/SnapshotBuilderInterface.php
+[refactoring] modules/contrib/dashboard_connector/tests/bootstrap.php
+[refactoring] modules/contrib/dashboard_connector/tests/src/Functional/SnapshotTest.php
+[refactoring] modules/contrib/dashboard_connector/tests/src/Kernel/CoreExtensionCheckerKernelTest.php
+[refactoring] modules/contrib/dashboard_connector/tests/src/Unit/PerformanceCheckerTest.php
+[refactoring] modules/contrib/dashboard_connector/tests/src/Unit/PhpCheckerTest.php
+[printing] modules/contrib/dashboard_connector/dashboard_connector.drush.inc
+[printing] modules/contrib/dashboard_connector/dashboard_connector.module
+[printing] modules/contrib/dashboard_connector/src/Checker/CheckerBase.php
+[printing] modules/contrib/dashboard_connector/src/Checker/CheckerInterface.php
+[printing] modules/contrib/dashboard_connector/src/Checker/CoreExtensionChecker.php
+[printing] modules/contrib/dashboard_connector/src/Checker/ModuleStateChecker.php
+[printing] modules/contrib/dashboard_connector/src/Checker/ModuleStatusChecker.php
+[printing] modules/contrib/dashboard_connector/src/Checker/PerformanceChecker.php
+[printing] modules/contrib/dashboard_connector/src/Checker/PhpChecker.php
+[printing] modules/contrib/dashboard_connector/src/Checker/RequirementsChecker.php
+[printing] modules/contrib/dashboard_connector/src/Dashboard.php
+[printing] modules/contrib/dashboard_connector/src/DashboardConnector.php
+[printing] modules/contrib/dashboard_connector/src/DashboardConnectorInterface.php
+[printing] modules/contrib/dashboard_connector/src/DashboardConnectorServiceProvider.php
+[printing] modules/contrib/dashboard_connector/src/Form/SettingsForm.php
+[printing] modules/contrib/dashboard_connector/src/SnapshotBuilder.php
+[printing] modules/contrib/dashboard_connector/src/SnapshotBuilderInterface.php
+[printing] modules/contrib/dashboard_connector/tests/bootstrap.php
+[printing] modules/contrib/dashboard_connector/tests/src/Functional/SnapshotTest.php
+[printing] modules/contrib/dashboard_connector/tests/src/Kernel/CoreExtensionCheckerKernelTest.php
+[printing] modules/contrib/dashboard_connector/tests/src/Unit/PerformanceCheckerTest.php
+[printing] modules/contrib/dashboard_connector/tests/src/Unit/PhpCheckerTest.php
+
+
+ [OK] Rector is done!                                                           
+

@@ -1,0 +1,21 @@
+diff --git a/src/Form/ConfigSettingsForm.php b/src/Form/ConfigSettingsForm.php
+index 1162e51..567e345 100644
+--- a/src/Form/ConfigSettingsForm.php
++++ b/src/Form/ConfigSettingsForm.php
+@@ -87,13 +87,13 @@ class ConfigSettingsForm extends ConfigFormBase {
+         $config->get('api_id'),
+         $config->get('api_key')
+       ));
+-      drupal_set_message($this->t('Successfully pinged API.'), 'status');
++      $this->messenger()->addStatus($this->t('Successfully pinged API.'));
+     }
+     catch (PingException $e) {
+-      drupal_set_message($this->t(
++      $this->messenger()->addError($this->t(
+         'TaxCloud connection error: @error',
+         ['@error' => $e->getMessage()]
+-      ), 'error');
++      ));
+     }
+   }
+ 

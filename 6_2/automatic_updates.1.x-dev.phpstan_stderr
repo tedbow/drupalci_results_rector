@@ -1,0 +1,21 @@
+./composer.json has been updated
+> Drupal\Composer\Composer::ensureComposerVersion
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+Package operations: 3 installs, 0 updates, 0 removals
+  - Installing paragonie/sodium_compat (v1.13.0): Downloading (100%)
+  - Installing drupal/php-signify (1.0.0): Downloading (100%)
+  - Installing drupal/automatic_updates (dev-1.x 2435612): Cloning 2435612664
+paragonie/sodium_compat suggests installing ext-libsodium (PHP < 7.0: Better performance, password hashing (Argon2i), secure memory management (memzero), and better security.)
+Package container-interop/container-interop is abandoned, you should avoid using it. Use psr/container instead.
+Package phpunit/phpunit-mock-objects is abandoned, you should avoid using it. No replacement was suggested.
+Package zendframework/zend-servicemanager is abandoned, you should avoid using it. Use laminas/laminas-servicemanager instead.
+Package zendframework/zend-text is abandoned, you should avoid using it. Use laminas/laminas-text instead.
+Writing lock file
+Generating autoload files
+> Drupal\Core\Composer\Composer::preAutoloadDump
+Hardening vendor directory with .htaccess and web.config files.
+36 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+Cleaning vendor directory.
+> Drupal\Composer\Composer::generateMetapackages
