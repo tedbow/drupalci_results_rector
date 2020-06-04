@@ -1,0 +1,8 @@
+
+                                                                                                                         
+  [InvalidArgumentException]                                                                                             
+  Package drupal/automatic_updates at version 2.x-dev has a PHP requirement incompatible with your PHP version (7.2.31)  
+                                                                                                                         
+
+require [--dev] [--prefer-source] [--prefer-dist] [--fixed] [--no-progress] [--no-suggest] [--no-update] [--no-scripts] [--update-no-dev] [--update-with-dependencies] [--update-with-all-dependencies] [--ignore-platform-reqs] [--prefer-stable] [--prefer-lowest] [--sort-packages] [-o|--optimize-autoloader] [-a|--classmap-authoritative] [--apcu-autoloader] [--] [<packages>]...
+

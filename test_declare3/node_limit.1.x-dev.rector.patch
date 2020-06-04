@@ -1,0 +1,13 @@
+diff --git a/old/node_limit.module b/old/node_limit.module
+index 08db4bb..d8516d0 100644
+--- a/old/node_limit.module
++++ b/old/node_limit.module
+@@ -274,7 +274,7 @@ function _node_limit_sql($lid) {
+  *   The node object that may be limited.
+  */
+ function node_limit_limits(&$node) {
+-  $user = user_load($node->uid);
++  $user = \Drupal::service('entity_type.manager')->getStorage('user')->load($node->uid);
+   // Get all the limits.
+   $query = \Drupal::database()->select('node_limit', 'nl')
+     ->fields('nl')

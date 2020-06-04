@@ -1,0 +1,13 @@
+diff --git a/absolute_url.info.yml b/absolute_url.info.yml
+index 7ce4a8d..5b54db9 100644
+--- a/absolute_url.info.yml
++++ b/absolute_url.info.yml
+@@ -2,4 +2,5 @@ name: Absolute URL
+ type: module
+ description: "Returns absolute url of the site, no language prefix garanted"
+ package: Custom
+-core: 8.x
+\ No newline at end of file
++core: 8.x
++core_version_requirement: ^8 || ^9
+\ No newline at end of file

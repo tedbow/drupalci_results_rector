@@ -1,0 +1,37 @@
+Rector 0.8.x-dev@cf3198a
+Config file: rector.yml
+
+[parsing] modules/contrib/user_online_status/src/Controller/OnlineStatusController.php
+[parsing] modules/contrib/user_online_status/src/Controller/UserOnlineStatusController.php
+[parsing] modules/contrib/user_online_status/src/Form/UserOnlineStatusSettingsForm.php
+[parsing] modules/contrib/user_online_status/src/Plugin/views/field/UserOnlineStatus.php
+[parsing] modules/contrib/user_online_status/src/StatusService.php
+[parsing] modules/contrib/user_online_status/tests/src/Functional/ServiceTest.php
+[parsing] modules/contrib/user_online_status/user_online_status.install
+[parsing] modules/contrib/user_online_status/user_online_status.module
+[parsing] modules/contrib/user_online_status/user_online_status.post_update.php
+[parsing] modules/contrib/user_online_status/user_online_status.views.inc
+[refactoring] modules/contrib/user_online_status/src/Controller/OnlineStatusController.php
+[refactoring] modules/contrib/user_online_status/src/Controller/UserOnlineStatusController.php
+[refactoring] modules/contrib/user_online_status/src/Form/UserOnlineStatusSettingsForm.php
+[refactoring] modules/contrib/user_online_status/src/Plugin/views/field/UserOnlineStatus.php
+[refactoring] modules/contrib/user_online_status/src/StatusService.php
+[refactoring] modules/contrib/user_online_status/tests/src/Functional/ServiceTest.php
+[refactoring] modules/contrib/user_online_status/user_online_status.install
+[refactoring] modules/contrib/user_online_status/user_online_status.module
+[refactoring] modules/contrib/user_online_status/user_online_status.post_update.php
+[refactoring] modules/contrib/user_online_status/user_online_status.views.inc
+[printing] modules/contrib/user_online_status/src/Controller/OnlineStatusController.php
+[printing] modules/contrib/user_online_status/src/Controller/UserOnlineStatusController.php
+[printing] modules/contrib/user_online_status/src/Form/UserOnlineStatusSettingsForm.php
+[printing] modules/contrib/user_online_status/src/Plugin/views/field/UserOnlineStatus.php
+[printing] modules/contrib/user_online_status/src/StatusService.php
+[printing] modules/contrib/user_online_status/tests/src/Functional/ServiceTest.php
+[printing] modules/contrib/user_online_status/user_online_status.install
+[printing] modules/contrib/user_online_status/user_online_status.module
+[printing] modules/contrib/user_online_status/user_online_status.post_update.php
+[printing] modules/contrib/user_online_status/user_online_status.views.inc
+
+
+ [OK] Rector is done!                                                           
+

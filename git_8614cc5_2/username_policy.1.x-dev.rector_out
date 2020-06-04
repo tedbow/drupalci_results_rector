@@ -1,0 +1,69 @@
+Rector 0.8.x-dev@cf3198a
+Config file: rector.yml
+
+[parsing] modules/contrib/username_policy/src/Form/UserNamePatternConfigForm.php
+[parsing] modules/contrib/username_policy/src/Plugin/Validation/Constraint/UserNamePatternConstraint.php
+[parsing] modules/contrib/username_policy/src/Plugin/Validation/Constraint/UserNamePatternConstraintValidator.php
+[parsing] modules/contrib/username_policy/username_policy.install
+[parsing] modules/contrib/username_policy/username_policy.module
+[refactoring] modules/contrib/username_policy/src/Form/UserNamePatternConfigForm.php
+[refactoring] modules/contrib/username_policy/src/Plugin/Validation/Constraint/UserNamePatternConstraint.php
+[refactoring] modules/contrib/username_policy/src/Plugin/Validation/Constraint/UserNamePatternConstraintValidator.php
+[refactoring] modules/contrib/username_policy/username_policy.install
+[refactoring] modules/contrib/username_policy/username_policy.module
+[printing] modules/contrib/username_policy/src/Form/UserNamePatternConfigForm.php
+[printing] modules/contrib/username_policy/src/Plugin/Validation/Constraint/UserNamePatternConstraint.php
+[printing] modules/contrib/username_policy/src/Plugin/Validation/Constraint/UserNamePatternConstraintValidator.php
+[printing] modules/contrib/username_policy/username_policy.install
+[printing] modules/contrib/username_policy/username_policy.module
+
+
+2 files with changes
+====================
+
+1) modules/contrib/username_policy/src/Form/UserNamePatternConfigForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -104,7 +104,7 @@
+    *   Options for profile fields.
+    */
+   public function get_profile_fields($entity_type, $bundle) {
+-    $fields = \Drupal::entityManager()->getFieldDefinitions($entity_type, $bundle);
++    $fields = \Drupal::service('entity_field.manager')->getFieldDefinitions($entity_type, $bundle);
+     foreach ($fields as $field_name => $field_definition) {
+       if (!empty($field_definition->getTargetBundle()) && $field_definition->get('required') == 1) {
+         $listFields[$field_name]['type'] = $field_definition->getType();
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\EntityManagerRector
+
+
+2) modules/contrib/username_policy/src/Plugin/Validation/Constraint/UserNamePatternConstraintValidator.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -49,7 +49,7 @@
+     ) {
+       $this->context->addViolation($constraint->illegalMessage);
+     }
+-    if (Unicode::strlen($name) > USERNAME_MAX_LENGTH) {
++    if (mb_strlen($name) > USERNAME_MAX_LENGTH) {
+       $this->context->addViolation($constraint->tooLongMessage, ['%name' => $name, '%max' => USERNAME_MAX_LENGTH]);
+     }
+   }
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\UnicodeStrlenRector
+
+
+ [OK] Rector is done! 2 files have been changed.                                
+

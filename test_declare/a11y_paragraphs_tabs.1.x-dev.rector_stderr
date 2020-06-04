@@ -1,0 +1,29 @@
+
+In RobotLoader.php line 186:
+                                                                               
+  [_HumbugBox186ce906dbdb\Nette\InvalidStateException]                         
+  Ambiguous class Drupal\Tests\paragraphs\Functional\WidgetStable\ParagraphsR  
+  eplicateEnableTest resolution; defined in modules/contrib/paragraphs/tests/  
+  src/Functional/WidgetStable/ParagraphsReplicateEnableTest.php and in module  
+  s/contrib/paragraphs/src/Functional/WidgetStable/ParagraphsReplicateEnableT  
+  est.php.                                                                     
+                                                                               
+
+Exception trace:
+  at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/rector/rector-prefixed/rector/vendor/nette/robot-loader/src/RobotLoader/RobotLoader.php:186
+ _HumbugBox186ce906dbdb\Nette\Loaders\RobotLoader->refreshClasses() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/rector/rector-prefixed/rector/vendor/nette/robot-loader/src/RobotLoader/RobotLoader.php:372
+ _HumbugBox186ce906dbdb\Nette\Loaders\RobotLoader->loadCache() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/rector/rector-prefixed/rector/vendor/nette/robot-loader/src/RobotLoader/RobotLoader.php:58
+ _HumbugBox186ce906dbdb\Nette\Loaders\RobotLoader->register() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/rector/rector-prefixed/rector/src/Autoloading/AdditionalAutoloader.php:92
+ Rector\Core\Autoloading\AdditionalAutoloader->autoloadDirectories() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/rector/rector-prefixed/rector/src/Autoloading/AdditionalAutoloader.php:51
+ Rector\Core\Autoloading\AdditionalAutoloader->autoloadWithInputAndSource() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/rector/rector-prefixed/rector/src/Console/Command/ProcessCommand.php:130
+ Rector\Core\Console\Command\ProcessCommand->execute() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/rector/rector-prefixed/rector/vendor/symfony/console/Command/Command.php:228
+ _HumbugBox186ce906dbdb\Symfony\Component\Console\Command\Command->run() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/rector/rector-prefixed/rector/src/Console/Command/AbstractCommand.php:30
+ Rector\Core\Console\Command\AbstractCommand->run() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/rector/rector-prefixed/rector/vendor/symfony/console/Application.php:849
+ _HumbugBox186ce906dbdb\Symfony\Component\Console\Application->doRunCommand() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/rector/rector-prefixed/rector/vendor/symfony/console/Application.php:235
+ _HumbugBox186ce906dbdb\Symfony\Component\Console\Application->doRun() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/rector/rector-prefixed/rector/src/Console/Application.php:83
+ Rector\Core\Console\Application->doRun() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/rector/rector-prefixed/rector/vendor/symfony/console/Application.php:136
+ _HumbugBox186ce906dbdb\Symfony\Component\Console\Application->run() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/rector/rector-prefixed/rector/bin/rector:48
+ require() at /var/lib/drupalci/workspace/drupal-checkouts/drupal3/vendor/rector/rector-prefixed/rector:6
+
+process [-n|--dry-run] [-a|--autoload-file AUTOLOAD-FILE] [--match-git-diff] [-o|--output-format [OUTPUT-FORMAT]] [--no-progress-bar] [--output-file OUTPUT-FILE] [--cache-debug] [--clear-cache] [--] [<source>...]
+

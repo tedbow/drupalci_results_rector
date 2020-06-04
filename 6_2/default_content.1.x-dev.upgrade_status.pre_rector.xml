@@ -1,0 +1,3 @@
+<?xml version="1.0"?>
+<checkstyle><file name="modules/contrib/default_content/drush/default_content.drush.inc"><error line="61" message="Call to deprecated function drush_get_option()." severity="error"/><error line="65" message="Call to deprecated function drush_print()." severity="error"/><error line="81" message="Call to deprecated function drush_get_option()." severity="error"/></file></checkstyle>
+

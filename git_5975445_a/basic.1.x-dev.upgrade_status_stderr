@@ -1,0 +1,7 @@
+ [notice] Processing /var/lib/drupalci/workspace/drupal-checkouts/drupal1/themes/contrib/basic.
+ 0/3 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   0%[2K 2/3 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░]  66%[2K 3/3 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 100%
+
+ [notice] Processing /var/lib/drupalci/workspace/drupal-checkouts/drupal1/themes/contrib/basic.
+PHP Fatal error:  Cannot redeclare composerRequireDrupal8() (previously declared in /var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/composer/autoload_real.php:70) in /var/lib/drupalci/workspace/drupal-checkouts/drupal4/vendor/composer/autoload_real.php on line 77
+Fatal error: Cannot redeclare composerRequireDrupal8() (previously declared in /var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/composer/autoload_real.php:70) in /var/lib/drupalci/workspace/drupal-checkouts/drupal4/vendor/composer/autoload_real.php on line 77
+ [error]  PHPStan failed:  

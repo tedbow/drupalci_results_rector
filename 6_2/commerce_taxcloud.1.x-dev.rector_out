@@ -1,0 +1,51 @@
+Rector 0.8.x-dev@3465583
+Config file: rector.yml
+
+[parsing] modules/contrib/commerce_taxcloud/src/Events/CommerceTaxCloudEvents.php
+[parsing] modules/contrib/commerce_taxcloud/src/Events/PrepareLookupDataEvent.php
+[parsing] modules/contrib/commerce_taxcloud/src/Form/ConfigSettingsForm.php
+[parsing] modules/contrib/commerce_taxcloud/src/Plugin/Commerce/TaxType/TaxCloud.php
+[refactoring] modules/contrib/commerce_taxcloud/src/Events/CommerceTaxCloudEvents.php
+[refactoring] modules/contrib/commerce_taxcloud/src/Events/PrepareLookupDataEvent.php
+[refactoring] modules/contrib/commerce_taxcloud/src/Form/ConfigSettingsForm.php
+[refactoring] modules/contrib/commerce_taxcloud/src/Plugin/Commerce/TaxType/TaxCloud.php
+[printing] modules/contrib/commerce_taxcloud/src/Events/CommerceTaxCloudEvents.php
+[printing] modules/contrib/commerce_taxcloud/src/Events/PrepareLookupDataEvent.php
+[printing] modules/contrib/commerce_taxcloud/src/Form/ConfigSettingsForm.php
+[printing] modules/contrib/commerce_taxcloud/src/Plugin/Commerce/TaxType/TaxCloud.php
+
+
+1 file with changes
+===================
+
+1) modules/contrib/commerce_taxcloud/src/Form/ConfigSettingsForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -87,13 +87,13 @@
+         $config->get('api_id'),
+         $config->get('api_key')
+       ));
+-      drupal_set_message($this->t('Successfully pinged API.'), 'status');
++      $this->messenger()->addStatus($this->t('Successfully pinged API.'));
+     }
+     catch (PingException $e) {
+-      drupal_set_message($this->t(
++      $this->messenger()->addError($this->t(
+         'TaxCloud connection error: @error',
+         ['@error' => $e->getMessage()]
+-      ), 'error');
++      ));
+     }
+   }
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+ [OK] Rector is done! 1 file have been changed.                                 
+

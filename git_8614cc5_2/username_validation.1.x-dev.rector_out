@@ -1,0 +1,38 @@
+Rector 0.8.x-dev@cf3198a
+Config file: rector.yml
+
+[parsing] modules/contrib/username_validation/src/Form/UserNameValidationConfig.php
+[parsing] modules/contrib/username_validation/username_validation.module
+[refactoring] modules/contrib/username_validation/src/Form/UserNameValidationConfig.php
+[refactoring] modules/contrib/username_validation/username_validation.module
+[printing] modules/contrib/username_validation/src/Form/UserNameValidationConfig.php
+[printing] modules/contrib/username_validation/username_validation.module
+
+
+1 file with changes
+===================
+
+1) modules/contrib/username_validation/username_validation.module
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -127,7 +127,7 @@
+   // Finding characters in the node title.
+   foreach ($find as $char) {
+     // Check for single character.
+-    if (Unicode::strlen($char) == 1) {
++    if (mb_strlen($char) == 1) {
+       if (strpos($input, trim($char)) !== FALSE) {
+         $findings[] = trim($char);
+       }
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\UnicodeStrlenRector
+
+
+ [OK] Rector is done! 1 file have been changed.                                 
+

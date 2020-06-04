@@ -1,0 +1,87 @@
+diff --git a/imagecache_external.api.php b/imagecache_external.api.php
+index 904d210..c9ba491 100644
+--- a/imagecache_external.api.php
++++ b/imagecache_external.api.php
+@@ -12,7 +12,7 @@
+  */
+ function hook_imagecache_external_needs_refresh_alter(&$needs_refresh, $filepath) {
+   // Example: refresh images at least once a week.
+-  if (filemtime($filepath) > REQUEST_TIME - 60 * 60 * 24 * 7) {
++  if (filemtime($filepath) > \Drupal::time()->getRequestTime() - 60 * 60 * 24 * 7) {
+     $needs_refresh = TRUE;
+   }
+ }
+diff --git a/imagecache_external.module b/imagecache_external.module
+index 64774fe..2d85a56 100755
+--- a/imagecache_external.module
++++ b/imagecache_external.module
+@@ -1,4 +1,5 @@
+ <?php
++use Drupal\Core\File\FileSystemInterface;
+ /**
+  * @file
+  * Allows the usage of Image Styles on external images.
+@@ -109,7 +110,7 @@ function imagecache_external_generate_path($url) {
+ 
+   // Check if this is a non-standard file stream and adjust accordingly.
+   $scheme = $file_system->uriScheme($url);
+-  $default_scheme = file_default_scheme();
++  $default_scheme = \Drupal::config('system.file')->get('default_scheme');
+ 
+   if ($scheme == $default_scheme) {
+     // Don't try fetch already existing files on local file system.
+@@ -135,7 +136,7 @@ function imagecache_external_generate_path($url) {
+   }
+ 
+   $directory = $default_scheme . '://' . $config->get('imagecache_directory');
+-  if (file_prepare_directory($directory, FILE_CREATE_DIRECTORY | FILE_MODIFY_PERMISSIONS)) {
++  if (\Drupal::service('file_system')->prepareDirectory($directory, FileSystemInterface::CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS)) {
+     $needs_refresh = FALSE;
+     $filepath = $directory . '/' . $filename;
+     // Allow modules to add custom logic to check if it needs to be re-fetched.
+@@ -211,10 +212,10 @@ function imagecache_external_fetch($url, $cachepath) {
+     }
+     if (!empty($result->getBody()) && $code != 400 && $code != 500 && $content_type_allowed) {
+       if ($config->get('imagecache_external_management') == 'unmanaged') {
+-        return file_unmanaged_save_data($result->getBody(), $cachepath, FILE_EXISTS_REPLACE);
++        return \Drupal::service('file_system')->saveData($result->getBody(), $cachepath, FileSystemInterface::EXISTS_REPLACE);
+       }
+       else {
+-        $file = file_save_data($result->getBody(), $cachepath, FILE_EXISTS_REPLACE);
++        $file = file_save_data($result->getBody(), $cachepath, FileSystemInterface::EXISTS_REPLACE);
+         return $file->getFileUri();
+       }
+     }
+@@ -316,7 +317,7 @@ function imagecache_external_file_download($uri) {
+  */
+ function imagecache_external_get_directory_path() {
+   $config = imagecache_external_config();
+-  $scheme = file_default_scheme();
++  $scheme = \Drupal::config('system.file')->get('default_scheme');
+   $wrapper = \Drupal::service('stream_wrapper_manager')->getViaScheme($scheme);
+   $path = realpath($wrapper->getDirectoryPath() . '/' . $config->get('imagecache_directory'));
+   return $path;
+diff --git a/src/Form/SettingsForm.php b/src/Form/SettingsForm.php
+index 1bb900d..1214fd6 100644
+--- a/src/Form/SettingsForm.php
++++ b/src/Form/SettingsForm.php
+@@ -2,6 +2,7 @@
+ 
+ namespace Drupal\imagecache_external\Form;
+ 
++use Drupal\Core\File\FileSystemInterface;
+ use Drupal\Core\Form\ConfigFormBase;
+ use Drupal\Core\Form\FormStateInterface;
+ 
+@@ -114,9 +115,9 @@ class SettingsForm extends ConfigFormBase {
+    * {@inheritdoc}
+    */
+   public function validateForm(array &$form, FormStateInterface $form_state) {
+-    $scheme = file_default_scheme();
++    $scheme = \Drupal::config('system.file')->get('default_scheme');
+     $directory = $scheme . '://' . $form_state->getValue('imagecache_directory');
+-    if (!file_prepare_directory($directory, FILE_CREATE_DIRECTORY)) {
++    if (!\Drupal::service('file_system')->prepareDirectory($directory, FileSystemInterface::CREATE_DIRECTORY)) {
+       $error = $this->t('The directory %directory does not exist or is not writable.', ['%directory' => $directory]);
+       $form_state->setErrorByName('imagecache_directory', $error);
+       $this->logger('imagecache_external')->error($error);

@@ -1,0 +1,2 @@
+PHP Fatal error:  Class 'Drupal\entity_reference_revisions\Normalizer\EntityReferenceRevisionItemNormalizer' not found in /var/lib/drupalci/workspace/drupal-checkouts/drupal3/modules/contrib/entity_pilot/src/Normalizer/EntityReferenceRevisionItemNormalizer.php on line 13
+Fatal error: Class 'Drupal\entity_reference_revisions\Normalizer\EntityReferenceRevisionItemNormalizer' not found in /var/lib/drupalci/workspace/drupal-checkouts/drupal3/modules/contrib/entity_pilot/src/Normalizer/EntityReferenceRevisionItemNormalizer.php on line 13

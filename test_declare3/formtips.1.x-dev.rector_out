@@ -1,0 +1,13 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/formtips/formtips.module
+[parsing] modules/contrib/formtips/src/Form/FormtipsSettingForm.php
+[refactoring] modules/contrib/formtips/formtips.module
+[refactoring] modules/contrib/formtips/src/Form/FormtipsSettingForm.php
+[printing] modules/contrib/formtips/formtips.module
+[printing] modules/contrib/formtips/src/Form/FormtipsSettingForm.php
+
+
+ [OK] Rector is done!                                                           
+

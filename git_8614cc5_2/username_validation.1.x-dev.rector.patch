@@ -1,0 +1,13 @@
+diff --git a/username_validation.module b/username_validation.module
+index 5921a59..719ece8 100755
+--- a/username_validation.module
++++ b/username_validation.module
+@@ -127,7 +127,7 @@ function _username_validation_search_excludes_in_title($input, $find) {
+   // Finding characters in the node title.
+   foreach ($find as $char) {
+     // Check for single character.
+-    if (Unicode::strlen($char) == 1) {
++    if (mb_strlen($char) == 1) {
+       if (strpos($input, trim($char)) !== FALSE) {
+         $findings[] = trim($char);
+       }

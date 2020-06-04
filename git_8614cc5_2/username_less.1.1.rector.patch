@@ -1,0 +1,30 @@
+diff --git a/src/Form/UsernameLessForm.php b/src/Form/UsernameLessForm.php
+index ac7ba8f..1d4184d 100644
+--- a/src/Form/UsernameLessForm.php
++++ b/src/Form/UsernameLessForm.php
+@@ -120,10 +120,10 @@ class UsernameLessForm extends ConfigFormBase {
+                 ->set("confirm", $values['confirm'][0])
+                 ->save();
+       }
+-      drupal_set_message('Setting saved successfully');
++      $this->messenger()->addStatus('Setting saved successfully');
+     }
+     catch (Exception $e) {
+-      drupal_set_message('Caught exception in username less module: ' . $e->getMessage(), 'error');
++      $this->messenger()->addError('Caught exception in username less module: ' . $e->getMessage());
+     }
+   }
+ }
+diff --git a/username_less.module b/username_less.module
+index e1c5aa4..e4bd302 100644
+--- a/username_less.module
++++ b/username_less.module
+@@ -47,7 +47,7 @@ function username_less_cleanup_username($name) {
+   $name = ('' === $name) ? t('user') : $name;
+ 
+   // Truncate to a reasonable size.
+-  $name = (Unicode::strlen($name) > (USERNAME_MAX_LENGTH - 10)) ? Unicode::substr($name, 0, USERNAME_MAX_LENGTH - 11) : $name;
++  $name = (mb_strlen($name) > (USERNAME_MAX_LENGTH - 10)) ? mb_substr($name, 0, USERNAME_MAX_LENGTH - 11) : $name;
+   return $name;
+ }
+ 

@@ -1,0 +1,21 @@
+./composer.json has been updated
+> Drupal\Composer\Composer::ensureComposerVersion
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+Package operations: 3 installs, 0 updates, 0 removals
+  - Installing drupal/entity_reference_revisions (dev-1.x eec92af): Cloning eec92af3eb
+  - Installing drupal/paragraphs (dev-1.x 4f44470): Cloning 4f44470603
+  - Installing drupal/a11y_paragraphs_tabs (dev-1.x df510cc): Cloning df510cc9de
+drupal/paragraphs suggests installing drupal/entity_browser (Recommended for an improved user experience when using the Paragraphs library module)
+Package container-interop/container-interop is abandoned, you should avoid using it. Use psr/container instead.
+Package phpunit/phpunit-mock-objects is abandoned, you should avoid using it. No replacement was suggested.
+Package zendframework/zend-servicemanager is abandoned, you should avoid using it. Use laminas/laminas-servicemanager instead.
+Package zendframework/zend-text is abandoned, you should avoid using it. Use laminas/laminas-text instead.
+Writing lock file
+Generating autoload files
+> Drupal\Core\Composer\Composer::preAutoloadDump
+Hardening vendor directory with .htaccess and web.config files.
+33 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+Cleaning vendor directory.
+> Drupal\Composer\Composer::generateMetapackages

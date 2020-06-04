@@ -1,0 +1,22 @@
+Rector 0.8.x-dev@7286f34
+Config file: rector.yml
+
+[parsing] modules/contrib/asana/asana.module
+[parsing] modules/contrib/asana/src/Asana.php
+[parsing] modules/contrib/asana/src/AsanaInterface.php
+[parsing] modules/contrib/asana/src/Form/AsanaAdminSettings.php
+[parsing] modules/contrib/asana/src/Plugin/Block/AsanaProjects.php
+[refactoring] modules/contrib/asana/asana.module
+[refactoring] modules/contrib/asana/src/Asana.php
+[refactoring] modules/contrib/asana/src/AsanaInterface.php
+[refactoring] modules/contrib/asana/src/Form/AsanaAdminSettings.php
+[refactoring] modules/contrib/asana/src/Plugin/Block/AsanaProjects.php
+[printing] modules/contrib/asana/asana.module
+[printing] modules/contrib/asana/src/Asana.php
+[printing] modules/contrib/asana/src/AsanaInterface.php
+[printing] modules/contrib/asana/src/Form/AsanaAdminSettings.php
+[printing] modules/contrib/asana/src/Plugin/Block/AsanaProjects.php
+
+
+ [OK] Rector is done!                                                           
+

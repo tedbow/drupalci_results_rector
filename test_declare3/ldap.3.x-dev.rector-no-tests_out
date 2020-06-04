@@ -1,0 +1,914 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector-no-tests.yml
+
+[parsing] modules/contrib/ldap/docs/legacy_reference/hogwarts_x_openldap1.entries.php
+[parsing] modules/contrib/ldap/docs/legacy_reference/test_data.activedirectory1.php
+[parsing] modules/contrib/ldap/docs/legacy_reference/test_data.openldap1.php
+[parsing] modules/contrib/ldap/ldap_authentication/ldap_authentication.api.php
+[parsing] modules/contrib/ldap/ldap_authentication/ldap_authentication.install
+[parsing] modules/contrib/ldap/ldap_authentication/ldap_authentication.module
+[parsing] modules/contrib/ldap/ldap_authentication/src/Access/UserHelpTabAccess.php
+[parsing] modules/contrib/ldap/ldap_authentication/src/Controller/LdapHelpRedirect.php
+[parsing] modules/contrib/ldap/ldap_authentication/src/Controller/LoginValidator.php
+[parsing] modules/contrib/ldap/ldap_authentication/src/Form/LdapAuthenticationAdminForm.php
+[parsing] modules/contrib/ldap/ldap_authentication/src/Form/LdapAuthenticationProfileUpdateForm.php
+[parsing] modules/contrib/ldap/ldap_authentication/src/Helper/LdapAuthenticationConfiguration.php
+[parsing] modules/contrib/ldap/ldap_authentication/src/Plugin/Derivative/DynamicUserHelpLink.php
+[parsing] modules/contrib/ldap/ldap_authentication/src/Routing/EmailTemplateService.php
+[parsing] modules/contrib/ldap/ldap_authentication/src/Routing/RouteSubscriber.php
+[parsing] modules/contrib/ldap/ldap_authorization/ldap_authorization.module
+[parsing] modules/contrib/ldap/ldap_authorization/src/Plugin/authorization/Provider/LDAPAuthorizationProvider.php
+[parsing] modules/contrib/ldap/ldap_help/ldap_help.install
+[parsing] modules/contrib/ldap/ldap_help/ldap_help.module
+[parsing] modules/contrib/ldap/ldap_help/src/Form/DebuggingReviewForm.php
+[parsing] modules/contrib/ldap/ldap_help/src/Form/LdapDebugSettings.php
+[parsing] modules/contrib/ldap/ldap_query/ldap_query.module
+[parsing] modules/contrib/ldap/ldap_query/ldap_query.views.inc
+[parsing] modules/contrib/ldap/ldap_query/src/Controller/QueryController.php
+[parsing] modules/contrib/ldap/ldap_query/src/Entity/QueryEntity.php
+[parsing] modules/contrib/ldap/ldap_query/src/Form/QueryEntityDeleteForm.php
+[parsing] modules/contrib/ldap/ldap_query/src/Form/QueryEntityForm.php
+[parsing] modules/contrib/ldap/ldap_query/src/Form/QueryTestForm.php
+[parsing] modules/contrib/ldap/ldap_query/src/Plugin/views/VariableAttributeCustomization.php
+[parsing] modules/contrib/ldap/ldap_query/src/Plugin/views/argument/LdapAttribute.php
+[parsing] modules/contrib/ldap/ldap_query/src/Plugin/views/argument/LdapVariableAttribute.php
+[parsing] modules/contrib/ldap/ldap_query/src/Plugin/views/field/LdapAttribute.php
+[parsing] modules/contrib/ldap/ldap_query/src/Plugin/views/field/LdapVariableAttribute.php
+[parsing] modules/contrib/ldap/ldap_query/src/Plugin/views/field/LdapVariableImageAttribute.php
+[parsing] modules/contrib/ldap/ldap_query/src/Plugin/views/filter/LdapAttribute.php
+[parsing] modules/contrib/ldap/ldap_query/src/Plugin/views/filter/LdapVariableAttribute.php
+[parsing] modules/contrib/ldap/ldap_query/src/Plugin/views/query/LdapQuery.php
+[parsing] modules/contrib/ldap/ldap_query/src/Plugin/views/sort/LdapAttribute.php
+[parsing] modules/contrib/ldap/ldap_query/src/Plugin/views/sort/LdapVariableAttribute.php
+[parsing] modules/contrib/ldap/ldap_query/src/QueryEntityHtmlRouteProvider.php
+[parsing] modules/contrib/ldap/ldap_query/src/QueryEntityInterface.php
+[parsing] modules/contrib/ldap/ldap_query/src/QueryEntityListBuilder.php
+[parsing] modules/contrib/ldap/ldap_servers/ldap_servers.api.php
+[parsing] modules/contrib/ldap/ldap_servers/ldap_servers.install
+[parsing] modules/contrib/ldap/ldap_servers/ldap_servers.module
+[parsing] modules/contrib/ldap/ldap_servers/src/Entity/Server.php
+[parsing] modules/contrib/ldap/ldap_servers/src/Form/ServerDeleteForm.php
+[parsing] modules/contrib/ldap/ldap_servers/src/Form/ServerEnableDisableForm.php
+[parsing] modules/contrib/ldap/ldap_servers/src/Form/ServerForm.php
+[parsing] modules/contrib/ldap/ldap_servers/src/Form/ServerTestForm.php
+[parsing] modules/contrib/ldap/ldap_servers/src/Helper/ConversionHelper.php
+[parsing] modules/contrib/ldap/ldap_servers/src/Helper/CredentialsStorage.php
+[parsing] modules/contrib/ldap/ldap_servers/src/Helper/MassageAttributes.php
+[parsing] modules/contrib/ldap/ldap_servers/src/LdapProtocolInterface.php
+[parsing] modules/contrib/ldap/ldap_servers/src/LdapServersRebindHandler.php
+[parsing] modules/contrib/ldap/ldap_servers/src/LdapUserAttributesInterface.php
+[parsing] modules/contrib/ldap/ldap_servers/src/Logger/LdapDetailLog.php
+[parsing] modules/contrib/ldap/ldap_servers/src/Processor/TokenProcessor.php
+[parsing] modules/contrib/ldap/ldap_servers/src/ServerFactory.php
+[parsing] modules/contrib/ldap/ldap_servers/src/ServerInterface.php
+[parsing] modules/contrib/ldap/ldap_servers/src/ServerListBuilder.php
+[parsing] modules/contrib/ldap/ldap_user/ldap_user.api.php
+[parsing] modules/contrib/ldap/ldap_user/ldap_user.install
+[parsing] modules/contrib/ldap/ldap_user/ldap_user.module
+[parsing] modules/contrib/ldap/ldap_user/src/EventSubscriber/InitSubscriber.php
+[parsing] modules/contrib/ldap/ldap_user/src/Exception/LdapBadParamsException.php
+[parsing] modules/contrib/ldap/ldap_user/src/Form/LdapUserAdminForm.php
+[parsing] modules/contrib/ldap/ldap_user/src/Form/LdapUserTestForm.php
+[parsing] modules/contrib/ldap/ldap_user/src/Helper/ExternalAuthenticationHelper.php
+[parsing] modules/contrib/ldap/ldap_user/src/Helper/LdapConfiguration.php
+[parsing] modules/contrib/ldap/ldap_user/src/Helper/SemaphoreStorage.php
+[parsing] modules/contrib/ldap/ldap_user/src/Helper/SyncMappingHelper.php
+[parsing] modules/contrib/ldap/ldap_user/src/Processor/DrupalUserProcessor.php
+[parsing] modules/contrib/ldap/ldap_user/src/Processor/GroupUserUpdateProcessor.php
+[parsing] modules/contrib/ldap/ldap_user/src/Processor/LdapUserProcessor.php
+[parsing] modules/contrib/ldap/ldap_user/src/Processor/OrphanProcessor.php
+[refactoring] modules/contrib/ldap/docs/legacy_reference/hogwarts_x_openldap1.entries.php
+[refactoring] modules/contrib/ldap/docs/legacy_reference/test_data.activedirectory1.php
+[refactoring] modules/contrib/ldap/docs/legacy_reference/test_data.openldap1.php
+[refactoring] modules/contrib/ldap/ldap_authentication/ldap_authentication.api.php
+[refactoring] modules/contrib/ldap/ldap_authentication/ldap_authentication.install
+[refactoring] modules/contrib/ldap/ldap_authentication/ldap_authentication.module
+[refactoring] modules/contrib/ldap/ldap_authentication/src/Access/UserHelpTabAccess.php
+[refactoring] modules/contrib/ldap/ldap_authentication/src/Controller/LdapHelpRedirect.php
+[refactoring] modules/contrib/ldap/ldap_authentication/src/Controller/LoginValidator.php
+[refactoring] modules/contrib/ldap/ldap_authentication/src/Form/LdapAuthenticationAdminForm.php
+[refactoring] modules/contrib/ldap/ldap_authentication/src/Form/LdapAuthenticationProfileUpdateForm.php
+[refactoring] modules/contrib/ldap/ldap_authentication/src/Helper/LdapAuthenticationConfiguration.php
+[refactoring] modules/contrib/ldap/ldap_authentication/src/Plugin/Derivative/DynamicUserHelpLink.php
+[refactoring] modules/contrib/ldap/ldap_authentication/src/Routing/EmailTemplateService.php
+[refactoring] modules/contrib/ldap/ldap_authentication/src/Routing/RouteSubscriber.php
+[refactoring] modules/contrib/ldap/ldap_authorization/ldap_authorization.module
+[refactoring] modules/contrib/ldap/ldap_authorization/src/Plugin/authorization/Provider/LDAPAuthorizationProvider.php
+[refactoring] modules/contrib/ldap/ldap_help/ldap_help.install
+[refactoring] modules/contrib/ldap/ldap_help/ldap_help.module
+[refactoring] modules/contrib/ldap/ldap_help/src/Form/DebuggingReviewForm.php
+[refactoring] modules/contrib/ldap/ldap_help/src/Form/LdapDebugSettings.php
+[refactoring] modules/contrib/ldap/ldap_query/ldap_query.module
+[refactoring] modules/contrib/ldap/ldap_query/ldap_query.views.inc
+[refactoring] modules/contrib/ldap/ldap_query/src/Controller/QueryController.php
+[refactoring] modules/contrib/ldap/ldap_query/src/Entity/QueryEntity.php
+[refactoring] modules/contrib/ldap/ldap_query/src/Form/QueryEntityDeleteForm.php
+[refactoring] modules/contrib/ldap/ldap_query/src/Form/QueryEntityForm.php
+[refactoring] modules/contrib/ldap/ldap_query/src/Form/QueryTestForm.php
+[refactoring] modules/contrib/ldap/ldap_query/src/Plugin/views/VariableAttributeCustomization.php
+[refactoring] modules/contrib/ldap/ldap_query/src/Plugin/views/argument/LdapAttribute.php
+[refactoring] modules/contrib/ldap/ldap_query/src/Plugin/views/argument/LdapVariableAttribute.php
+[refactoring] modules/contrib/ldap/ldap_query/src/Plugin/views/field/LdapAttribute.php
+[refactoring] modules/contrib/ldap/ldap_query/src/Plugin/views/field/LdapVariableAttribute.php
+[refactoring] modules/contrib/ldap/ldap_query/src/Plugin/views/field/LdapVariableImageAttribute.php
+[refactoring] modules/contrib/ldap/ldap_query/src/Plugin/views/filter/LdapAttribute.php
+[refactoring] modules/contrib/ldap/ldap_query/src/Plugin/views/filter/LdapVariableAttribute.php
+[refactoring] modules/contrib/ldap/ldap_query/src/Plugin/views/query/LdapQuery.php
+[refactoring] modules/contrib/ldap/ldap_query/src/Plugin/views/sort/LdapAttribute.php
+[refactoring] modules/contrib/ldap/ldap_query/src/Plugin/views/sort/LdapVariableAttribute.php
+[refactoring] modules/contrib/ldap/ldap_query/src/QueryEntityHtmlRouteProvider.php
+[refactoring] modules/contrib/ldap/ldap_query/src/QueryEntityInterface.php
+[refactoring] modules/contrib/ldap/ldap_query/src/QueryEntityListBuilder.php
+[refactoring] modules/contrib/ldap/ldap_servers/ldap_servers.api.php
+[refactoring] modules/contrib/ldap/ldap_servers/ldap_servers.install
+[refactoring] modules/contrib/ldap/ldap_servers/ldap_servers.module
+[refactoring] modules/contrib/ldap/ldap_servers/src/Entity/Server.php
+[refactoring] modules/contrib/ldap/ldap_servers/src/Form/ServerDeleteForm.php
+[refactoring] modules/contrib/ldap/ldap_servers/src/Form/ServerEnableDisableForm.php
+[refactoring] modules/contrib/ldap/ldap_servers/src/Form/ServerForm.php
+[refactoring] modules/contrib/ldap/ldap_servers/src/Form/ServerTestForm.php
+[refactoring] modules/contrib/ldap/ldap_servers/src/Helper/ConversionHelper.php
+[refactoring] modules/contrib/ldap/ldap_servers/src/Helper/CredentialsStorage.php
+[refactoring] modules/contrib/ldap/ldap_servers/src/Helper/MassageAttributes.php
+[refactoring] modules/contrib/ldap/ldap_servers/src/LdapProtocolInterface.php
+[refactoring] modules/contrib/ldap/ldap_servers/src/LdapServersRebindHandler.php
+[refactoring] modules/contrib/ldap/ldap_servers/src/LdapUserAttributesInterface.php
+[refactoring] modules/contrib/ldap/ldap_servers/src/Logger/LdapDetailLog.php
+[refactoring] modules/contrib/ldap/ldap_servers/src/Processor/TokenProcessor.php
+[refactoring] modules/contrib/ldap/ldap_servers/src/ServerFactory.php
+[refactoring] modules/contrib/ldap/ldap_servers/src/ServerInterface.php
+[refactoring] modules/contrib/ldap/ldap_servers/src/ServerListBuilder.php
+[refactoring] modules/contrib/ldap/ldap_user/ldap_user.api.php
+[refactoring] modules/contrib/ldap/ldap_user/ldap_user.install
+[refactoring] modules/contrib/ldap/ldap_user/ldap_user.module
+[refactoring] modules/contrib/ldap/ldap_user/src/EventSubscriber/InitSubscriber.php
+[refactoring] modules/contrib/ldap/ldap_user/src/Exception/LdapBadParamsException.php
+[refactoring] modules/contrib/ldap/ldap_user/src/Form/LdapUserAdminForm.php
+[refactoring] modules/contrib/ldap/ldap_user/src/Form/LdapUserTestForm.php
+[refactoring] modules/contrib/ldap/ldap_user/src/Helper/ExternalAuthenticationHelper.php
+[refactoring] modules/contrib/ldap/ldap_user/src/Helper/LdapConfiguration.php
+[refactoring] modules/contrib/ldap/ldap_user/src/Helper/SemaphoreStorage.php
+[refactoring] modules/contrib/ldap/ldap_user/src/Helper/SyncMappingHelper.php
+[refactoring] modules/contrib/ldap/ldap_user/src/Processor/DrupalUserProcessor.php
+[refactoring] modules/contrib/ldap/ldap_user/src/Processor/GroupUserUpdateProcessor.php
+[refactoring] modules/contrib/ldap/ldap_user/src/Processor/LdapUserProcessor.php
+[refactoring] modules/contrib/ldap/ldap_user/src/Processor/OrphanProcessor.php
+[printing] modules/contrib/ldap/docs/legacy_reference/hogwarts_x_openldap1.entries.php
+[printing] modules/contrib/ldap/docs/legacy_reference/test_data.activedirectory1.php
+[printing] modules/contrib/ldap/docs/legacy_reference/test_data.openldap1.php
+[printing] modules/contrib/ldap/ldap_authentication/ldap_authentication.api.php
+[printing] modules/contrib/ldap/ldap_authentication/ldap_authentication.install
+[printing] modules/contrib/ldap/ldap_authentication/ldap_authentication.module
+[printing] modules/contrib/ldap/ldap_authentication/src/Access/UserHelpTabAccess.php
+[printing] modules/contrib/ldap/ldap_authentication/src/Controller/LdapHelpRedirect.php
+[printing] modules/contrib/ldap/ldap_authentication/src/Controller/LoginValidator.php
+[printing] modules/contrib/ldap/ldap_authentication/src/Form/LdapAuthenticationAdminForm.php
+[printing] modules/contrib/ldap/ldap_authentication/src/Form/LdapAuthenticationProfileUpdateForm.php
+[printing] modules/contrib/ldap/ldap_authentication/src/Helper/LdapAuthenticationConfiguration.php
+[printing] modules/contrib/ldap/ldap_authentication/src/Plugin/Derivative/DynamicUserHelpLink.php
+[printing] modules/contrib/ldap/ldap_authentication/src/Routing/EmailTemplateService.php
+[printing] modules/contrib/ldap/ldap_authentication/src/Routing/RouteSubscriber.php
+[printing] modules/contrib/ldap/ldap_authorization/ldap_authorization.module
+[printing] modules/contrib/ldap/ldap_authorization/src/Plugin/authorization/Provider/LDAPAuthorizationProvider.php
+[printing] modules/contrib/ldap/ldap_help/ldap_help.install
+[printing] modules/contrib/ldap/ldap_help/ldap_help.module
+[printing] modules/contrib/ldap/ldap_help/src/Form/DebuggingReviewForm.php
+[printing] modules/contrib/ldap/ldap_help/src/Form/LdapDebugSettings.php
+[printing] modules/contrib/ldap/ldap_query/ldap_query.module
+[printing] modules/contrib/ldap/ldap_query/ldap_query.views.inc
+[printing] modules/contrib/ldap/ldap_query/src/Controller/QueryController.php
+[printing] modules/contrib/ldap/ldap_query/src/Entity/QueryEntity.php
+[printing] modules/contrib/ldap/ldap_query/src/Form/QueryEntityDeleteForm.php
+[printing] modules/contrib/ldap/ldap_query/src/Form/QueryEntityForm.php
+[printing] modules/contrib/ldap/ldap_query/src/Form/QueryTestForm.php
+[printing] modules/contrib/ldap/ldap_query/src/Plugin/views/VariableAttributeCustomization.php
+[printing] modules/contrib/ldap/ldap_query/src/Plugin/views/argument/LdapAttribute.php
+[printing] modules/contrib/ldap/ldap_query/src/Plugin/views/argument/LdapVariableAttribute.php
+[printing] modules/contrib/ldap/ldap_query/src/Plugin/views/field/LdapAttribute.php
+[printing] modules/contrib/ldap/ldap_query/src/Plugin/views/field/LdapVariableAttribute.php
+[printing] modules/contrib/ldap/ldap_query/src/Plugin/views/field/LdapVariableImageAttribute.php
+[printing] modules/contrib/ldap/ldap_query/src/Plugin/views/filter/LdapAttribute.php
+[printing] modules/contrib/ldap/ldap_query/src/Plugin/views/filter/LdapVariableAttribute.php
+[printing] modules/contrib/ldap/ldap_query/src/Plugin/views/query/LdapQuery.php
+[printing] modules/contrib/ldap/ldap_query/src/Plugin/views/sort/LdapAttribute.php
+[printing] modules/contrib/ldap/ldap_query/src/Plugin/views/sort/LdapVariableAttribute.php
+[printing] modules/contrib/ldap/ldap_query/src/QueryEntityHtmlRouteProvider.php
+[printing] modules/contrib/ldap/ldap_query/src/QueryEntityInterface.php
+[printing] modules/contrib/ldap/ldap_query/src/QueryEntityListBuilder.php
+[printing] modules/contrib/ldap/ldap_servers/ldap_servers.api.php
+[printing] modules/contrib/ldap/ldap_servers/ldap_servers.install
+[printing] modules/contrib/ldap/ldap_servers/ldap_servers.module
+[printing] modules/contrib/ldap/ldap_servers/src/Entity/Server.php
+[printing] modules/contrib/ldap/ldap_servers/src/Form/ServerDeleteForm.php
+[printing] modules/contrib/ldap/ldap_servers/src/Form/ServerEnableDisableForm.php
+[printing] modules/contrib/ldap/ldap_servers/src/Form/ServerForm.php
+[printing] modules/contrib/ldap/ldap_servers/src/Form/ServerTestForm.php
+[printing] modules/contrib/ldap/ldap_servers/src/Helper/ConversionHelper.php
+[printing] modules/contrib/ldap/ldap_servers/src/Helper/CredentialsStorage.php
+[printing] modules/contrib/ldap/ldap_servers/src/Helper/MassageAttributes.php
+[printing] modules/contrib/ldap/ldap_servers/src/LdapProtocolInterface.php
+[printing] modules/contrib/ldap/ldap_servers/src/LdapServersRebindHandler.php
+[printing] modules/contrib/ldap/ldap_servers/src/LdapUserAttributesInterface.php
+[printing] modules/contrib/ldap/ldap_servers/src/Logger/LdapDetailLog.php
+[printing] modules/contrib/ldap/ldap_servers/src/Processor/TokenProcessor.php
+[printing] modules/contrib/ldap/ldap_servers/src/ServerFactory.php
+[printing] modules/contrib/ldap/ldap_servers/src/ServerInterface.php
+[printing] modules/contrib/ldap/ldap_servers/src/ServerListBuilder.php
+[printing] modules/contrib/ldap/ldap_user/ldap_user.api.php
+[printing] modules/contrib/ldap/ldap_user/ldap_user.install
+[printing] modules/contrib/ldap/ldap_user/ldap_user.module
+[printing] modules/contrib/ldap/ldap_user/src/EventSubscriber/InitSubscriber.php
+[printing] modules/contrib/ldap/ldap_user/src/Exception/LdapBadParamsException.php
+[printing] modules/contrib/ldap/ldap_user/src/Form/LdapUserAdminForm.php
+[printing] modules/contrib/ldap/ldap_user/src/Form/LdapUserTestForm.php
+[printing] modules/contrib/ldap/ldap_user/src/Helper/ExternalAuthenticationHelper.php
+[printing] modules/contrib/ldap/ldap_user/src/Helper/LdapConfiguration.php
+[printing] modules/contrib/ldap/ldap_user/src/Helper/SemaphoreStorage.php
+[printing] modules/contrib/ldap/ldap_user/src/Helper/SyncMappingHelper.php
+[printing] modules/contrib/ldap/ldap_user/src/Processor/DrupalUserProcessor.php
+[printing] modules/contrib/ldap/ldap_user/src/Processor/GroupUserUpdateProcessor.php
+[printing] modules/contrib/ldap/ldap_user/src/Processor/LdapUserProcessor.php
+[printing] modules/contrib/ldap/ldap_user/src/Processor/OrphanProcessor.php
+
+
+18 files with changes
+=====================
+
+1) modules/contrib/ldap/ldap_authentication/ldap_authentication.module
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -16,7 +16,7 @@
+ function ldap_authentication_help($path, $arg) {
+
+   $authentication_help = t('LDAP authentication allows authentication against an LDAP server. It may be used alongside other authentication means such as built in Drupal authentication, OpenID, etc.  More detailed help is available on drupal.org at !helplink.', [
+-    '%helplink' => \Drupal::l('http://drupal.org/node/997082', Url::fromUri('http://drupal.org/node/997082')),
++    '%helplink' => \Drupal::service('link_generator')->generate('http://drupal.org/node/997082', Url::fromUri('http://drupal.org/node/997082')),
+   ]
+   );
+   switch ($path) {
+@@ -40,7 +40,7 @@
+  */
+ function ldap_authentication_ldap_authenticated($user) {
+   if (is_numeric($user)) {
+-    $user = @\Drupal::entityManager()->getStorage('user')->load((int) $user);
++    $user = @\Drupal::service('entity_type.manager')->getStorage('user')->load((int) $user);
+   }
+   if (!is_object($user) || $user->id() == 0) {
+     return FALSE;
+@@ -103,8 +103,7 @@
+   if ($account && ldap_authentication_ldap_authenticated($account)) {
+     if ($config->get('passwordOption') != LdapAuthenticationConfiguration::$passwordFieldAllow) {
+       if ($config->get('ldapUserHelpLinkUrl')) {
+-        $helpLink = \Drupal::l($config->get('ldapUserHelpLinkText'),
+-          Url::fromUri($config->get('ldapUserHelpLinkUrl')));
++        $helpLink = \Drupal::service('link_generator')->generate($config->get('ldapUserHelpLinkText'), Url::fromUri($config->get('ldapUserHelpLinkUrl')));
+         $form_state->setErrorByName('name', t(
+           'You may not reset your password here. You must reset your password via the directions at @link.',
+           ['@link' => $helpLink])
+@@ -150,7 +149,7 @@
+         $form['account']['current_pass']['#disabled'] = TRUE;
+         $form['account']['pass']['#disabled'] = TRUE;
+         if ($config->get('ldapUserHelpLinkUrl')) {
+-          $form['account']['current_pass']['#description'] = \Drupal::l($config->get('ldapUserHelpLinkText'), Url::fromUri($config->get('ldapUserHelpLinkUrl')));
++          $form['account']['current_pass']['#description'] = \Drupal::service('link_generator')->generate($config->get('ldapUserHelpLinkText'), Url::fromUri($config->get('ldapUserHelpLinkUrl')));
+         }
+         else {
+           $form['account']['current_pass']['#description'] = t('The password cannot be changed using this website.');
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalLRector
+ * DrupalRector\Rector\Deprecation\EntityManagerRector
+
+
+2) modules/contrib/ldap/ldap_authentication/src/Controller/LoginValidator.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -2,6 +2,7 @@
+
+ namespace Drupal\ldap_authentication\Controller;
+
++use Drupal\Component\Render\FormattableMarkup;
+ use Drupal\Component\Utility\SafeMarkup;
+ use Drupal\Core\Config\ConfigFactoryInterface;
+ use Drupal\Core\Entity\EntityTypeManagerInterface;
+@@ -543,7 +544,7 @@
+         ['%username' => $this->authName], 'ldap_authentication'
+       );
+
+-      drupal_set_message($this->t('Error: %err_text', ['%err_text' => $this->authenticationHelpText($authenticationResult)]), "error");
++      \Drupal::messenger()->addError($this->t('Error: %err_text', ['%err_text' => $this->authenticationHelpText($authenticationResult)]));
+     }
+     else {
+       // Fail scenario 2.  Simply fails LDAP. Return false, but don't throw form
+@@ -672,7 +673,7 @@
+       }
+
+       if (!$valid_profile) {
+-        drupal_set_message($this->t('The site logon is currently not working due to a configuration error. Please see logs for additional details.'), 'warning');
++        \Drupal::messenger()->addWarning($this->t('The site logon is currently not working due to a configuration error. Please see logs for additional details.'));
+         $this->logger->notice('LDAP Authentication is configured to deny users without LDAP Authorization mappings, but 0 LDAP Authorization consumers are configured.');
+         return FALSE;
+       }
+@@ -726,11 +727,9 @@
+       }
+       elseif ($this->config->get('emailUpdate') == LdapAuthenticationConfiguration::$emailUpdateOnLdapChangeEnableNotify
+       ) {
+-        drupal_set_message($this->t(
++        \Drupal::messenger()->addStatus($this->t(
+           'Your e-mail has been updated to match your current account (%mail).',
+-          ['%mail' => $this->ldapUser['mail']]),
+-          'status'
+-        );
++          ['%mail' => $this->ldapUser['mail']]));
+         return TRUE;
+       }
+     }
+@@ -754,10 +753,8 @@
+         $this->drupalUser->save();
+         ExternalAuthenticationHelper::setUserIdentifier($this->drupalUser, $this->authName);
+         $this->drupalUserAuthMapped = TRUE;
+-        drupal_set_message(
+-            $this->t('Your existing account %username has been updated to %new_username.',
+-              ['%username' => $oldName, '%new_username' => $this->drupalUserName]),
+-            'status');
++        \Drupal::messenger()->addStatus($this->t('Your existing account %username has been updated to %new_username.',
++          ['%username' => $oldName, '%new_username' => $this->drupalUserName]));
+       }
+     }
+   }
+@@ -875,7 +872,7 @@
+             ]
+           );
+       }
+-      drupal_set_message($this->t('Another user already exists in the system with the same login name. You should contact the system administrator in order to solve this conflict.'), 'error');
++      \Drupal::messenger()->addError($this->t('Another user already exists in the system with the same login name. You should contact the system administrator in order to solve this conflict.'));
+       return FALSE;
+     }
+     else {
+@@ -899,7 +896,7 @@
+     if (!empty($this->config->get('emailTemplate'))) {
+       $template = $this->config->get('emailTemplate');
+     }
+-    $this->ldapUser['mail'] = SafeMarkup::format($template, $this->emailTemplateTokens)->__toString();
++    $this->ldapUser['mail'] = (new FormattableMarkup($template, $this->emailTemplateTokens))->__toString();
+   }
+
+   /**
+@@ -944,7 +941,7 @@
+           ]
+         );
+
+-        drupal_set_message($this->t('Another user already exists in the system with the same email address. You should contact the system administrator in order to solve this conflict.'), 'error');
++        \Drupal::messenger()->addError($this->t('Another user already exists in the system with the same email address. You should contact the system administrator in order to solve this conflict.'));
+         return FALSE;
+       }
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+ * DrupalRector\Rector\Deprecation\SafeMarkupFormatRector
+
+
+3) modules/contrib/ldap/ldap_authentication/src/Form/LdapAuthenticationAdminForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -74,9 +74,9 @@
+       $url = Url::fromRoute('entity.ldap_server.collection');
+       $edit_server_link = Link::fromTextAndUrl($this->t('@path', ['@path' => 'LDAP Servers']), $url)->toString();
+
+-      drupal_set_message($this->t('At least one LDAP server must configured and <em>enabled</em> before configuring LDAP authentication. Please go to @link to configure an LDAP server.',
++      $this->messenger()->addWarning($this->t('At least one LDAP server must configured and <em>enabled</em> before configuring LDAP authentication. Please go to @link to configure an LDAP server.',
+         ['@link' => $edit_server_link]
+-      ), 'warning');
++      ));
+
+       return $form;
+     }
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+4) modules/contrib/ldap/ldap_authentication/src/Form/LdapAuthenticationProfileUpdateForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -95,7 +95,7 @@
+     $user = $this->entityTypeManager->getStorage('user')->load($this->currentUser->id());
+     $user->set('mail', $form_state->getValue('mail'));
+     $user->save();
+-    drupal_set_message($this->t('Your profile has been updated.'));
++    $this->messenger()->addStatus($this->t('Your profile has been updated.'));
+     $form_state->setRedirect('<front>');
+   }
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+5) modules/contrib/ldap/ldap_authorization/src/Plugin/authorization/Provider/LDAPAuthorizationProvider.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -62,7 +62,7 @@
+         '#type' => 'markup',
+         '#markup' => t('<strong>Warning</strong>: You must create an LDAP Server first.'),
+       ];
+-      drupal_set_message(t('You must create an LDAP Server first.'), 'warning');
++      $this->messenger()->addWarning(t('You must create an LDAP Server first.'));
+     }
+     else {
+       $server_options = [];
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+6) modules/contrib/ldap/ldap_help/src/Form/DebuggingReviewForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -71,7 +71,7 @@
+     ];
+
+     if (!extension_loaded('ldap')) {
+-      drupal_set_message($this->t('PHP LDAP extension not loaded.'), 'error');
++      $this->messenger()->addError($this->t('PHP LDAP extension not loaded.'));
+     }
+     else {
+       $form['heading_modules'] = [
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+7) modules/contrib/ldap/ldap_query/src/Form/QueryEntityDeleteForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -38,14 +38,12 @@
+   public function submitForm(array &$form, FormStateInterface $form_state) {
+     $this->entity->delete();
+
+-    drupal_set_message(
+-      $this->t('content @type: deleted @label.',
+-        [
+-          '@type' => $this->entity->bundle(),
+-          '@label' => $this->entity->label(),
+-        ]
+-        )
+-    );
++    $this->messenger()->addStatus($this->t('content @type: deleted @label.',
++      [
++        '@type' => $this->entity->bundle(),
++        '@label' => $this->entity->label(),
++      ]
++      ));
+
+     $form_state->setRedirectUrl($this->getCancelUrl());
+   }
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+8) modules/contrib/ldap/ldap_query/src/Form/QueryEntityForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -159,13 +159,13 @@
+
+     switch ($status) {
+       case SAVED_NEW:
+-        drupal_set_message($this->t('Created the %label LDAP Queries.', [
++        $this->messenger()->addStatus($this->t('Created the %label LDAP Queries.', [
+           '%label' => $ldap_query_entity->label(),
+         ]));
+         break;
+
+       default:
+-        drupal_set_message($this->t('Saved the %label LDAP Queries.', [
++        $this->messenger()->addStatus($this->t('Saved the %label LDAP Queries.', [
+           '%label' => $ldap_query_entity->label(),
+         ]));
+     }
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+9) modules/contrib/ldap/ldap_servers/ldap_servers.install
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -126,4 +126,4 @@
+  */
+ function ldap_servers_update_8305() {
+   return t('Escaping of field data now relies solely on Twig auto-escaping. If you have created custom code make sure it takes this into account. See https://www.drupal.org/project/ldap/issues/2969097 for details.');
+-}
+\ No newline at end of file
++}
+    ----------- end diff -----------
+
+
+10) modules/contrib/ldap/ldap_servers/src/Form/ServerDeleteForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -44,14 +44,12 @@
+         '%title' => $this->entity->label(),
+       ]);
+
+-    drupal_set_message(
+-      $this->t('@type: deleted @label.',
+-        [
+-          '@type' => $this->entity->bundle(),
+-          '@label' => $this->entity->label(),
+-        ]
+-        )
+-    );
++    $this->messenger()->addStatus($this->t('@type: deleted @label.',
++      [
++        '@type' => $this->entity->bundle(),
++        '@label' => $this->entity->label(),
++      ]
++      ));
+
+     $form_state->setRedirectUrl($this->getCancelUrl());
+   }
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+11) modules/contrib/ldap/ldap_servers/src/Form/ServerEnableDisableForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -65,12 +65,12 @@
+       '%sid' => $this->entity->id(),
+     ];
+     if ($this->entity->get('status') == 1) {
+-      drupal_set_message(t('LDAP server configuration %name (server id = %sid) has been enabled', $tokens));
++      $this->messenger()->addStatus(t('LDAP server configuration %name (server id = %sid) has been enabled', $tokens));
+       \Drupal::logger('ldap_servers')
+         ->notice('LDAP server enabled: %name (sid = %sid) ', $tokens);
+     }
+     else {
+-      drupal_set_message(t('LDAP server configuration %name (server id = %sid) has been disabled', $tokens));
++      $this->messenger()->addStatus(t('LDAP server configuration %name (server id = %sid) has been disabled', $tokens));
+       \Drupal::logger('ldap_servers')
+         ->notice('LDAP server disabled: %name (sid = %sid) ', $tokens);
+     }
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+12) modules/contrib/ldap/ldap_servers/src/Form/ServerForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -505,13 +505,13 @@
+
+     switch ($status) {
+       case SAVED_NEW:
+-        drupal_set_message($this->t('Created the %label Server.', [
++        $this->messenger()->addStatus($this->t('Created the %label Server.', [
+           '%label' => $this->entity->label(),
+         ]));
+         break;
+
+       default:
+-        drupal_set_message($this->t('Saved the %label Server.', [
++        $this->messenger()->addStatus($this->t('Saved the %label Server.', [
+           '%label' => $this->entity->label(),
+         ]));
+     }
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+13) modules/contrib/ldap/ldap_servers/src/Processor/TokenProcessor.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -323,7 +323,7 @@
+     elseif (!empty($account->get($attribute_name)->getValue())) {
+       $file_reference = $account->get($attribute_name)->getValue();
+       if (isset($file_reference[0]['target_id'])) {
+-        $file = file_load($file_reference[0]['target_id']);
++        $file = \Drupal::service('entity_type.manager')->getStorage('file')->load($file_reference[0]['target_id']);
+         if ($file) {
+           $value = file_get_contents($this->fileSystem->realpath($file->getFileUri()));
+         }
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\FileLoadRector
+
+
+14) modules/contrib/ldap/ldap_user/ldap_user.install
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -30,8 +30,8 @@
+   // Check for externalauth module (which has been a dependency for ages).
+   if (!\Drupal::moduleHandler()->moduleExists('externalauth')) {
+     $external_link = Url::fromUri('https://drupal.org/project/externalauth');
+-    $message = t('Please install the 8301 %external_link module.', ['%external_link' => \Drupal::l('External Auth', $external_link)]);
+-    drupal_set_message($message, "error");
++    $message = t('Please install the 8301 %external_link module.', ['%external_link' => \Drupal::service('link_generator')->generate('External Auth', $external_link)]);
++    \Drupal::messenger()->addError($message);
+     throw new UpdateException($message);
+   }
+
+@@ -38,11 +38,11 @@
+   if (empty($sandbox)) {
+     $sandbox['progress'] = 0;
+     $sandbox['current_id'] = 0;
+-    $sandbox['max'] = db_query('SELECT COUNT(DISTINCT aid) FROM {ldap_user_identities}')->fetchField();
++    $sandbox['max'] = \Drupal::database()->query('SELECT COUNT(DISTINCT aid) FROM {ldap_user_identities}')->fetchField();
+   }
+   $limit = 25;
+
+-  $result = db_select('ldap_user_identities')
++  $result = \Drupal::database()->select('ldap_user_identities')
+     ->fields('ldap_user_identities', ['aid', 'uid', 'identifier'])
+     ->condition('aid', $sandbox['current_id'], '>')
+     ->orderBy('aid')
+@@ -52,12 +52,12 @@
+   // Iterate over the old table and create entries in the new table.
+   foreach ($result as $identity) {
+     // Load the user as the service expects an account.
+-    $account = user_load($identity->uid);
++    $account = \Drupal::service('entity_type.manager')->getStorage('user')->load($identity->uid);
+     $authmap = \Drupal::service('externalauth.authmap');
+     $authmap->save($account, 'ldap_user', $identity->identifier);
+
+     // Delete the row if successful.
+-    db_query("DELETE FROM {ldap_user_identities} WHERE aid = :aid", [':aid' => $identity->aid]);
++    \Drupal::database()->query("DELETE FROM {ldap_user_identities} WHERE aid = :aid", [':aid' => $identity->aid]);
+
+     $sandbox['results'][] = $identity->aid . ' : ' . SafeMarkup::checkPlain($identity->identifier);
+     $sandbox['progress']++;
+@@ -76,16 +76,16 @@
+   // Check for externalauth module (which has been a dependency for ages).
+   if (!\Drupal::moduleHandler()->moduleExists('externalauth')) {
+     $external_link = Url::fromUri('https://drupal.org/project/externalauth');
+-    $message = t('Please install the 8301 %external_link module.', ['%external_link' => \Drupal::l('External Auth', $external_link)]);
+-    drupal_set_message($message, "error");
++    $message = t('Please install the 8301 %external_link module.', ['%external_link' => \Drupal::service('link_generator')->generate('External Auth', $external_link)]);
++    \Drupal::messenger()->addError($message);
+     throw new UpdateException($message);
+   }
+   // Drop the table if it exists.
+   try {
+-    db_query("DROP TABLE {ldap_user_identities}");
++    \Drupal::database()->query("DROP TABLE {ldap_user_identities}");
+   }
+   catch (Exception $e) {
+-    drupal_set_message(t("Couldn't drop the table 'ldap_user_identities'. Maybe it's been dropped already?"), "warning");
++    \Drupal::messenger()->addWarning(t("Couldn't drop the table 'ldap_user_identities'. Maybe it's been dropped already?"));
+   }
+ }
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DBQueryRector
+ * DrupalRector\Rector\Deprecation\DBSelectRector
+ * DrupalRector\Rector\Deprecation\DrupalLRector
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+ * DrupalRector\Rector\Deprecation\UserLoadRector
+
+
+15) modules/contrib/ldap/ldap_user/ldap_user.module
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -371,7 +371,7 @@
+       if (!$ldap_provision_entry) {
+         $provision_result = $ldapProcessor->provisionLdapEntry($account);
+         if ($provision_result['status'] == 'fail') {
+-          drupal_set_message(t('An error occurred while creating your LDAP entry, please see the log for details.'), 'error');
++          \Drupal::messenger()->addError(t('An error occurred while creating your LDAP entry, please see the log for details.'));
+         }
+       }
+       else {
+@@ -394,7 +394,7 @@
+     $association = $userProcessor->ldapAssociateDrupalAccount($values['name']);
+
+     if (!$association) {
+-      drupal_set_message(t('Account created but no LDAP account found to associate with.'), 'warning');
++      \Drupal::messenger()->addWarning(t('Account created but no LDAP account found to associate with.'));
+     }
+   }
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+16) modules/contrib/ldap/ldap_user/src/Form/LdapUserAdminForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -476,19 +476,19 @@
+     $hasDrupalAcctProvServers = $config->get('drupalAcctProvisionServer');
+     $hasDrupalAcctProvSettingsOptions = (count(array_filter($config->get('drupalAcctProvisionTriggers'))) > 0);
+     if (!$config->get('drupalAcctProvisionServer') && $hasDrupalAcctProvSettingsOptions) {
+-      drupal_set_message($this->t('No servers are enabled to provide provisioning to Drupal, but Drupal account provisioning options are selected.'), 'warning');
++      $this->messenger()->addWarning($this->t('No servers are enabled to provide provisioning to Drupal, but Drupal account provisioning options are selected.'));
+     }
+     elseif ($hasDrupalAcctProvServers && !$hasDrupalAcctProvSettingsOptions) {
+-      drupal_set_message($this->t('Servers are enabled to provide provisioning to Drupal, but no Drupal account provisioning options are selected. This will result in no syncing happening.'), 'warning');
++      $this->messenger()->addWarning($this->t('Servers are enabled to provide provisioning to Drupal, but no Drupal account provisioning options are selected. This will result in no syncing happening.'));
+     }
+
+     $has_ldap_prov_servers = $config->get('ldapEntryProvisionServer');
+     $has_ldap_prov_settings_options = (count(array_filter($config->get('ldapEntryProvisionTriggers'))) > 0);
+     if (!$has_ldap_prov_servers && $has_ldap_prov_settings_options) {
+-      drupal_set_message($this->t('No servers are enabled to provide provisioning to LDAP, but LDAP entry options are selected.'), 'warning');
++      $this->messenger()->addWarning($this->t('No servers are enabled to provide provisioning to LDAP, but LDAP entry options are selected.'));
+     }
+     if ($has_ldap_prov_servers && !$has_ldap_prov_settings_options) {
+-      drupal_set_message($this->t('Servers are enabled to provide provisioning to LDAP, but no LDAP entry options are selected. This will result in no syncing happening.'), 'warning');
++      $this->messenger()->addWarning($this->t('Servers are enabled to provide provisioning to LDAP, but no LDAP entry options are selected. This will result in no syncing happening.'));
+     }
+   }
+
+@@ -608,9 +608,9 @@
+   private function checkEmptyEvents(array $mappings) {
+     foreach ($mappings as $mapping) {
+       if (empty($mapping['prov_events'])) {
+-        drupal_set_message($this->t('No synchronization events checked in %item. This field will not be synchronized until some are checked.',
++        $this->messenger()->addWarning($this->t('No synchronization events checked in %item. This field will not be synchronized until some are checked.',
+           ['%item' => $mapping['ldap_attr']]
+-        ), 'warning');
++        ));
+       }
+     }
+   }
+@@ -646,7 +646,7 @@
+
+     SemaphoreStorage::flushAllValues();
+     $this->cache->invalidate('ldap_user_sync_mapping');
+-    drupal_set_message($this->t('User synchronization configuration updated.'));
++    $this->messenger()->addStatus($this->t('User synchronization configuration updated.'));
+   }
+
+   /**
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+17) modules/contrib/ldap/ldap_user/src/Form/LdapUserTestForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -167,7 +167,7 @@
+       dpm($results);
+     }
+     else {
+-      drupal_set_message($this->t('This form will not display results unless the devel module is enabled.'), 'warning');
++      $this->messenger()->addWarning($this->t('This form will not display results unless the devel module is enabled.'));
+     }
+
+     $params = [
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+18) modules/contrib/ldap/ldap_user/src/Processor/DrupalUserProcessor.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -387,7 +387,7 @@
+     ];
+
+     // 2. Drupal user fields.
+-    $user_fields = \Drupal::entityManager()->getFieldStorageDefinitions('user');
++    $user_fields = \Drupal::service('entity_field.manager')->getFieldStorageDefinitions('user');
+
+     foreach ($user_fields as $field_name => $field_instance) {
+       $field_id = "[field.$field_name]";
+@@ -650,13 +650,13 @@
+     $this->applyAttributesToAccount($ldap_user, self::PROVISION_TO_DRUPAL, [self::EVENT_CREATE_DRUPAL_USER]);
+     $tokens = ['%drupal_username' => $this->account->getAccountName()];
+     if (empty($this->account->getAccountName())) {
+-      drupal_set_message(t('User account creation failed because of invalid, empty derived Drupal username.'), 'error');
++      \Drupal::messenger()->addError(t('User account creation failed because of invalid, empty derived Drupal username.'));
+       \Drupal::logger('ldap_user')
+         ->error('Failed to create Drupal account %drupal_username because Drupal username could not be derived.', $tokens);
+       return FALSE;
+     }
+     if (!$mail = $this->account->getEmail()) {
+-      drupal_set_message(t('User account creation failed because of invalid, empty derived email address.'), 'error');
++      \Drupal::messenger()->addError(t('User account creation failed because of invalid, empty derived email address.'));
+       \Drupal::logger('ldap_user')
+         ->error('Failed to create Drupal account %drupal_username because email address could not be derived by LDAP User module', $tokens);
+       return FALSE;
+@@ -670,12 +670,12 @@
+           '%duplicate_name' => $account_with_same_email->getAccountName(),
+         ]
+       );
+-      drupal_set_message(t('Another user already exists in the system with the same email address. You should contact the system administrator in order to solve this conflict.'), 'error');
++      \Drupal::messenger()->addError(t('Another user already exists in the system with the same email address. You should contact the system administrator in order to solve this conflict.'));
+       return FALSE;
+     }
+     $this->saveAccount();
+     if (!$this->account) {
+-      drupal_set_message(t('User account creation failed because of system problems.'), 'error');
++      \Drupal::messenger()->addError(t('User account creation failed because of system problems.'));
+     }
+     else {
+       ExternalAuthenticationHelper::setUserIdentifier($this->account, $this->account->getAccountName());
+@@ -753,7 +753,7 @@
+   private function saveUserPicture(FieldItemListInterface $field, $ldapUserPicture) {
+     // Create tmp file to get image format and derive extension.
+     $fileName = uniqid();
+-    $unmanagedFile = file_directory_temp() . '/' . $fileName;
++    $unmanagedFile = \Drupal::service('file_system')->getTempDirectory() . '/' . $fileName;
+     file_put_contents($unmanagedFile, $ldapUserPicture);
+     $image_type = exif_imagetype($unmanagedFile);
+     $extension = image_type_to_extension($image_type, FALSE);
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+ * DrupalRector\Rector\Deprecation\EntityManagerRector
+ * DrupalRector\Rector\Deprecation\FileDirectoryTempRector
+
+
+ [OK] Rector is done! 18 files have been changed.                               
+

@@ -1,0 +1,71 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/moderation_sidebar/moderation_sidebar.api.php
+[parsing] modules/contrib/moderation_sidebar/moderation_sidebar.module
+[parsing] modules/contrib/moderation_sidebar/src/Controller/ModerationSidebarController.php
+[parsing] modules/contrib/moderation_sidebar/src/Form/ModerationSidebarSettingsForm.php
+[parsing] modules/contrib/moderation_sidebar/src/Form/QuickTransitionForm.php
+[parsing] modules/contrib/moderation_sidebar/tests/src/Functional/AdminToolbarStateTaxonomyTermTest.php
+[parsing] modules/contrib/moderation_sidebar/tests/src/Functional/AdminToolbarStateTest.php
+[parsing] modules/contrib/moderation_sidebar/tests/src/FunctionalJavascript/ModerationSidebarTaxonomyTermTest.php
+[parsing] modules/contrib/moderation_sidebar/tests/src/FunctionalJavascript/ModerationSidebarTest.php
+[refactoring] modules/contrib/moderation_sidebar/moderation_sidebar.api.php
+[refactoring] modules/contrib/moderation_sidebar/moderation_sidebar.module
+[refactoring] modules/contrib/moderation_sidebar/src/Controller/ModerationSidebarController.php
+[refactoring] modules/contrib/moderation_sidebar/src/Form/ModerationSidebarSettingsForm.php
+[refactoring] modules/contrib/moderation_sidebar/src/Form/QuickTransitionForm.php
+[refactoring] modules/contrib/moderation_sidebar/tests/src/Functional/AdminToolbarStateTaxonomyTermTest.php
+[refactoring] modules/contrib/moderation_sidebar/tests/src/Functional/AdminToolbarStateTest.php
+[refactoring] modules/contrib/moderation_sidebar/tests/src/FunctionalJavascript/ModerationSidebarTaxonomyTermTest.php
+[refactoring] modules/contrib/moderation_sidebar/tests/src/FunctionalJavascript/ModerationSidebarTest.php
+[printing] modules/contrib/moderation_sidebar/moderation_sidebar.api.php
+[printing] modules/contrib/moderation_sidebar/moderation_sidebar.module
+[printing] modules/contrib/moderation_sidebar/src/Controller/ModerationSidebarController.php
+[printing] modules/contrib/moderation_sidebar/src/Form/ModerationSidebarSettingsForm.php
+[printing] modules/contrib/moderation_sidebar/src/Form/QuickTransitionForm.php
+[printing] modules/contrib/moderation_sidebar/tests/src/Functional/AdminToolbarStateTaxonomyTermTest.php
+[printing] modules/contrib/moderation_sidebar/tests/src/Functional/AdminToolbarStateTest.php
+[printing] modules/contrib/moderation_sidebar/tests/src/FunctionalJavascript/ModerationSidebarTaxonomyTermTest.php
+[printing] modules/contrib/moderation_sidebar/tests/src/FunctionalJavascript/ModerationSidebarTest.php
+
+
+1 file with changes
+===================
+
+1) modules/contrib/moderation_sidebar/moderation_sidebar.api.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -1,15 +1,14 @@
+ <?php
+
++use Drupal\Core\Entity\EntityInterface;
+ /**
+  * @file
+  * Hooks related to moderation sidebar module.
+  */
+-
+ /**
+  * @addtogroup hooks
+  * @{
+  */
+-
+ /**
+  * Alter the build rendered in the moderation sidebar.
+  *
+@@ -20,7 +19,7 @@
+  *
+  * @see \Drupal\moderation_sidebar\Controller\ModerationSidebarController::sideBar()
+  */
+-function hook_moderation_sidebar_alter(array &$build, \Drupal\Core\Entity\EntityInterface $entity) {
++function hook_moderation_sidebar_alter(array &$build, EntityInterface $entity) {
+   if ($entity->getEntityTypeId() === 'my_great_type') {
+     $build['fun'] = [
+       '#markup' => '<a href="#" class="button">This does nothing, suckers!</a>',
+    ----------- end diff -----------
+
+
+ [OK] Rector is done! 1 file have been changed.                                 
+

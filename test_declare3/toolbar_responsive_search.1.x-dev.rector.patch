@@ -1,0 +1,12 @@
+diff --git a/toolbar_responsive_search.info.yml b/toolbar_responsive_search.info.yml
+index 8881b5c..e4736b9 100644
+--- a/toolbar_responsive_search.info.yml
++++ b/toolbar_responsive_search.info.yml
+@@ -2,6 +2,7 @@ name: Toolbar Responsive Search
+ type: module
+ description: Adds a responsive search form to the toolbar.
+ core: 8.x
++core_version_requirement: ^8 || ^9
+ package: Toolbar
+ dependencies:
+   - drupal:toolbar

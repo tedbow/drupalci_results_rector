@@ -1,0 +1,91 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector-no-tests.yml
+
+[parsing] modules/contrib/views_bulk_operations/modules/actions_permissions/src/ActionsPermissions.php
+[parsing] modules/contrib/views_bulk_operations/modules/actions_permissions/src/EventSubscriber/ActionsPermissionsEventSubscriber.php
+[parsing] modules/contrib/views_bulk_operations/modules/views_bulk_operations_example/src/Plugin/Action/ViewsBulkOperationExampleAction.php
+[parsing] modules/contrib/views_bulk_operations/src/Access/ViewsBulkOperationsAccess.php
+[parsing] modules/contrib/views_bulk_operations/src/Action/ViewsBulkOperationsActionBase.php
+[parsing] modules/contrib/views_bulk_operations/src/Action/ViewsBulkOperationsActionInterface.php
+[parsing] modules/contrib/views_bulk_operations/src/Action/ViewsBulkOperationsPreconfigurationInterface.php
+[parsing] modules/contrib/views_bulk_operations/src/Commands/ViewsBulkOperationsCommands.php
+[parsing] modules/contrib/views_bulk_operations/src/Controller/ViewsBulkOperationsController.php
+[parsing] modules/contrib/views_bulk_operations/src/EventSubscriber/ViewsBulkOperationsEventSubscriber.php
+[parsing] modules/contrib/views_bulk_operations/src/Form/ConfigureAction.php
+[parsing] modules/contrib/views_bulk_operations/src/Form/ConfirmAction.php
+[parsing] modules/contrib/views_bulk_operations/src/Form/ViewsBulkOperationsFormTrait.php
+[parsing] modules/contrib/views_bulk_operations/src/Plugin/Action/CancelUserAction.php
+[parsing] modules/contrib/views_bulk_operations/src/Plugin/Action/EntityDeleteAction.php
+[parsing] modules/contrib/views_bulk_operations/src/Plugin/views/field/ViewsBulkOperationsBulkForm.php
+[parsing] modules/contrib/views_bulk_operations/src/Service/ViewsBulkOperationsActionManager.php
+[parsing] modules/contrib/views_bulk_operations/src/Service/ViewsBulkOperationsActionProcessor.php
+[parsing] modules/contrib/views_bulk_operations/src/Service/ViewsBulkOperationsActionProcessorInterface.php
+[parsing] modules/contrib/views_bulk_operations/src/Service/ViewsBulkOperationsViewData.php
+[parsing] modules/contrib/views_bulk_operations/src/Service/ViewsBulkOperationsViewDataInterface.php
+[parsing] modules/contrib/views_bulk_operations/src/ViewsBulkOperationsBatch.php
+[parsing] modules/contrib/views_bulk_operations/src/ViewsBulkOperationsEvent.php
+[parsing] modules/contrib/views_bulk_operations/views_bulk_operations.drush.inc
+[parsing] modules/contrib/views_bulk_operations/views_bulk_operations.install
+[parsing] modules/contrib/views_bulk_operations/views_bulk_operations.module
+[refactoring] modules/contrib/views_bulk_operations/modules/actions_permissions/src/ActionsPermissions.php
+[refactoring] modules/contrib/views_bulk_operations/modules/actions_permissions/src/EventSubscriber/ActionsPermissionsEventSubscriber.php
+[refactoring] modules/contrib/views_bulk_operations/modules/views_bulk_operations_example/src/Plugin/Action/ViewsBulkOperationExampleAction.php
+[refactoring] modules/contrib/views_bulk_operations/src/Access/ViewsBulkOperationsAccess.php
+[refactoring] modules/contrib/views_bulk_operations/src/Action/ViewsBulkOperationsActionBase.php
+[refactoring] modules/contrib/views_bulk_operations/src/Action/ViewsBulkOperationsActionInterface.php
+[refactoring] modules/contrib/views_bulk_operations/src/Action/ViewsBulkOperationsPreconfigurationInterface.php
+[refactoring] modules/contrib/views_bulk_operations/src/Commands/ViewsBulkOperationsCommands.php
+[refactoring] modules/contrib/views_bulk_operations/src/Controller/ViewsBulkOperationsController.php
+[refactoring] modules/contrib/views_bulk_operations/src/EventSubscriber/ViewsBulkOperationsEventSubscriber.php
+[refactoring] modules/contrib/views_bulk_operations/src/Form/ConfigureAction.php
+[refactoring] modules/contrib/views_bulk_operations/src/Form/ConfirmAction.php
+[refactoring] modules/contrib/views_bulk_operations/src/Form/ViewsBulkOperationsFormTrait.php
+[refactoring] modules/contrib/views_bulk_operations/src/Plugin/Action/CancelUserAction.php
+[refactoring] modules/contrib/views_bulk_operations/src/Plugin/Action/EntityDeleteAction.php
+[refactoring] modules/contrib/views_bulk_operations/src/Plugin/views/field/ViewsBulkOperationsBulkForm.php
+[refactoring] modules/contrib/views_bulk_operations/src/Service/ViewsBulkOperationsActionManager.php
+[refactoring] modules/contrib/views_bulk_operations/src/Service/ViewsBulkOperationsActionProcessor.php
+[refactoring] modules/contrib/views_bulk_operations/src/Service/ViewsBulkOperationsActionProcessorInterface.php
+[refactoring] modules/contrib/views_bulk_operations/src/Service/ViewsBulkOperationsViewData.php
+[refactoring] modules/contrib/views_bulk_operations/src/Service/ViewsBulkOperationsViewDataInterface.php
+[refactoring] modules/contrib/views_bulk_operations/src/ViewsBulkOperationsBatch.php
+[refactoring] modules/contrib/views_bulk_operations/src/ViewsBulkOperationsEvent.php
+[refactoring] modules/contrib/views_bulk_operations/views_bulk_operations.drush.inc
+[refactoring] modules/contrib/views_bulk_operations/views_bulk_operations.install
+[refactoring] modules/contrib/views_bulk_operations/views_bulk_operations.module
+[printing] modules/contrib/views_bulk_operations/modules/actions_permissions/src/ActionsPermissions.php
+[printing] modules/contrib/views_bulk_operations/modules/actions_permissions/src/EventSubscriber/ActionsPermissionsEventSubscriber.php
+[printing] modules/contrib/views_bulk_operations/modules/views_bulk_operations_example/src/Plugin/Action/ViewsBulkOperationExampleAction.php
+[printing] modules/contrib/views_bulk_operations/src/Access/ViewsBulkOperationsAccess.php
+[printing] modules/contrib/views_bulk_operations/src/Action/ViewsBulkOperationsActionBase.php
+[printing] modules/contrib/views_bulk_operations/src/Action/ViewsBulkOperationsActionInterface.php
+[printing] modules/contrib/views_bulk_operations/src/Action/ViewsBulkOperationsPreconfigurationInterface.php
+[printing] modules/contrib/views_bulk_operations/src/Commands/ViewsBulkOperationsCommands.php
+[printing] modules/contrib/views_bulk_operations/src/Controller/ViewsBulkOperationsController.php
+[printing] modules/contrib/views_bulk_operations/src/EventSubscriber/ViewsBulkOperationsEventSubscriber.php
+[printing] modules/contrib/views_bulk_operations/src/Form/ConfigureAction.php
+[printing] modules/contrib/views_bulk_operations/src/Form/ConfirmAction.php
+[printing] modules/contrib/views_bulk_operations/src/Form/ViewsBulkOperationsFormTrait.php
+[printing] modules/contrib/views_bulk_operations/src/Plugin/Action/CancelUserAction.php
+[printing] modules/contrib/views_bulk_operations/src/Plugin/Action/EntityDeleteAction.php
+[printing] modules/contrib/views_bulk_operations/src/Plugin/views/field/ViewsBulkOperationsBulkForm.php
+[printing] modules/contrib/views_bulk_operations/src/Service/ViewsBulkOperationsActionManager.php
+[printing] modules/contrib/views_bulk_operations/src/Service/ViewsBulkOperationsActionProcessor.php
+[printing] modules/contrib/views_bulk_operations/src/Service/ViewsBulkOperationsActionProcessorInterface.php
+[printing] modules/contrib/views_bulk_operations/src/Service/ViewsBulkOperationsViewData.php
+[printing] modules/contrib/views_bulk_operations/src/Service/ViewsBulkOperationsViewDataInterface.php
+[printing] modules/contrib/views_bulk_operations/src/ViewsBulkOperationsBatch.php
+[printing] modules/contrib/views_bulk_operations/src/ViewsBulkOperationsEvent.php
+[printing] modules/contrib/views_bulk_operations/views_bulk_operations.drush.inc
+[printing] modules/contrib/views_bulk_operations/views_bulk_operations.install
+[printing] modules/contrib/views_bulk_operations/views_bulk_operations.module
+
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/views_bulk_operations/src/Commands/ViewsBulkOperations
+         Commands.php" file, due to:                                            
+         "Analyze error: "Class Drush\Commands\DrushCommands not found and could
+         not be autoloaded.". Include your files in "parameters >               
+         autoload_paths".                                                       
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+

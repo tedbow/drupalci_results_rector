@@ -1,0 +1,11 @@
+diff --git a/svg_sanitizer.info.yml b/svg_sanitizer.info.yml
+index c867d01..80de6e3 100755
+--- a/svg_sanitizer.info.yml
++++ b/svg_sanitizer.info.yml
+@@ -1,5 +1,6 @@
+ name: SVG Sanitizer
+ description: Makes the SVG Sanitizer library available to Drupal
+ core: 8.x
++core_version_requirement: ^8 || ^9
+ package: Media
+ type: module

@@ -1,0 +1,16 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/views_url_path_arguments/src/Plugin/views/argument_default/UrlPath.php
+[parsing] modules/contrib/views_url_path_arguments/src/Plugin/views/argument_validator/UrlPath.php
+[parsing] modules/contrib/views_url_path_arguments/tests/src/Functional/LoadTest.php
+[refactoring] modules/contrib/views_url_path_arguments/src/Plugin/views/argument_default/UrlPath.php
+[refactoring] modules/contrib/views_url_path_arguments/src/Plugin/views/argument_validator/UrlPath.php
+[refactoring] modules/contrib/views_url_path_arguments/tests/src/Functional/LoadTest.php
+[printing] modules/contrib/views_url_path_arguments/src/Plugin/views/argument_default/UrlPath.php
+[printing] modules/contrib/views_url_path_arguments/src/Plugin/views/argument_validator/UrlPath.php
+[printing] modules/contrib/views_url_path_arguments/tests/src/Functional/LoadTest.php
+
+
+ [OK] Rector is done!                                                           
+

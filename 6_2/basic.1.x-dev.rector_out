@@ -1,0 +1,41 @@
+Rector 0.8.x-dev@3465583
+Config file: rector.yml
+
+[parsing] themes/contrib/basic/basic.theme
+[parsing] themes/contrib/basic/includes/basic.drush.inc
+[parsing] themes/contrib/basic/theme-settings.php
+[refactoring] themes/contrib/basic/basic.theme
+[refactoring] themes/contrib/basic/includes/basic.drush.inc
+[refactoring] themes/contrib/basic/theme-settings.php
+[printing] themes/contrib/basic/basic.theme
+[printing] themes/contrib/basic/includes/basic.drush.inc
+[printing] themes/contrib/basic/theme-settings.php
+
+
+1 file with changes
+===================
+
+1) themes/contrib/basic/basic.theme
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -24,7 +24,7 @@
+   if (!$variables['is_front']) {
+     // Add unique classes for each page and website section.
+     $path = \Drupal::service('path.current')->getPath();
+-    $alias = \Drupal::service('path.alias_manager')->getAliasByPath($path);
++    $alias = \Drupal::service('path_alias.manager')->getAliasByPath($path);
+     $alias = trim($alias, '/');
+     if (!empty($alias)) {
+       $name = str_replace('/', '-', $alias);
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\PathAliasManagerServiceNameRector
+
+
+ [OK] Rector is done! 1 file have been changed.                                 
+

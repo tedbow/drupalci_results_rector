@@ -1,0 +1,100 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/linky/linky.module
+[parsing] modules/contrib/linky/linky.page.inc
+[parsing] modules/contrib/linky/src/Controller/LinkyController.php
+[parsing] modules/contrib/linky/src/Element/LinkyEntityAutocomplete.php
+[parsing] modules/contrib/linky/src/Entity/Linky.php
+[parsing] modules/contrib/linky/src/Entity/LinkyViewsData.php
+[parsing] modules/contrib/linky/src/Form/LinkyForm.php
+[parsing] modules/contrib/linky/src/LinkyAccessControlHandler.php
+[parsing] modules/contrib/linky/src/LinkyEntityViewBuilder.php
+[parsing] modules/contrib/linky/src/LinkyHtmlRouteProvider.php
+[parsing] modules/contrib/linky/src/LinkyInterface.php
+[parsing] modules/contrib/linky/src/LinkyListBuilder.php
+[parsing] modules/contrib/linky/src/Plugin/DsField/LinkyTitle.php
+[parsing] modules/contrib/linky/src/Plugin/EntityReferenceSelection/LinkySelection.php
+[parsing] modules/contrib/linky/src/Plugin/Field/FieldFormatter/LinkyFormatter.php
+[parsing] modules/contrib/linky/src/Plugin/Field/FieldWidget/LinkyWidget.php
+[parsing] modules/contrib/linky/src/Plugin/Filter/DirectLinkFilter.php
+[parsing] modules/contrib/linky/src/Plugin/Linkit/Matcher/LinkyMatcher.php
+[parsing] modules/contrib/linky/src/Url.php
+[parsing] modules/contrib/linky/tests/src/Functional/LinkyFunctionalTest.php
+[parsing] modules/contrib/linky/tests/src/FunctionalJavascript/LinkyFunctionalTest.php
+[parsing] modules/contrib/linky/tests/src/Kernel/LinkyDirectLinkFilterTest.php
+[parsing] modules/contrib/linky/tests/src/Kernel/LinkyKernelTest.php
+[parsing] modules/contrib/linky/tests/src/Kernel/LinkyKernelTestBase.php
+[parsing] modules/contrib/linky/tests/src/Kernel/LinkyMenuIntegrationKernelTest.php
+[parsing] modules/contrib/linky/tests/src/Kernel/LinkyUrlTest.php
+[refactoring] modules/contrib/linky/linky.module
+[refactoring] modules/contrib/linky/linky.page.inc
+[refactoring] modules/contrib/linky/src/Controller/LinkyController.php
+[refactoring] modules/contrib/linky/src/Element/LinkyEntityAutocomplete.php
+[refactoring] modules/contrib/linky/src/Entity/Linky.php
+[refactoring] modules/contrib/linky/src/Entity/LinkyViewsData.php
+[refactoring] modules/contrib/linky/src/Form/LinkyForm.php
+[refactoring] modules/contrib/linky/src/LinkyAccessControlHandler.php
+[refactoring] modules/contrib/linky/src/LinkyEntityViewBuilder.php
+[refactoring] modules/contrib/linky/src/LinkyHtmlRouteProvider.php
+[refactoring] modules/contrib/linky/src/LinkyInterface.php
+[refactoring] modules/contrib/linky/src/LinkyListBuilder.php
+[refactoring] modules/contrib/linky/src/Plugin/DsField/LinkyTitle.php
+[refactoring] modules/contrib/linky/src/Plugin/EntityReferenceSelection/LinkySelection.php
+[refactoring] modules/contrib/linky/src/Plugin/Field/FieldFormatter/LinkyFormatter.php
+[refactoring] modules/contrib/linky/src/Plugin/Field/FieldWidget/LinkyWidget.php
+[refactoring] modules/contrib/linky/src/Plugin/Filter/DirectLinkFilter.php
+[refactoring] modules/contrib/linky/src/Plugin/Linkit/Matcher/LinkyMatcher.php
+[refactoring] modules/contrib/linky/src/Url.php
+[refactoring] modules/contrib/linky/tests/src/Functional/LinkyFunctionalTest.php
+[refactoring] modules/contrib/linky/tests/src/FunctionalJavascript/LinkyFunctionalTest.php
+[refactoring] modules/contrib/linky/tests/src/Kernel/LinkyDirectLinkFilterTest.php
+[refactoring] modules/contrib/linky/tests/src/Kernel/LinkyKernelTest.php
+[refactoring] modules/contrib/linky/tests/src/Kernel/LinkyKernelTestBase.php
+[refactoring] modules/contrib/linky/tests/src/Kernel/LinkyMenuIntegrationKernelTest.php
+[refactoring] modules/contrib/linky/tests/src/Kernel/LinkyUrlTest.php
+[printing] modules/contrib/linky/linky.module
+[printing] modules/contrib/linky/linky.page.inc
+[printing] modules/contrib/linky/src/Controller/LinkyController.php
+[printing] modules/contrib/linky/src/Element/LinkyEntityAutocomplete.php
+[printing] modules/contrib/linky/src/Entity/Linky.php
+[printing] modules/contrib/linky/src/Entity/LinkyViewsData.php
+[printing] modules/contrib/linky/src/Form/LinkyForm.php
+[printing] modules/contrib/linky/src/LinkyAccessControlHandler.php
+[printing] modules/contrib/linky/src/LinkyEntityViewBuilder.php
+[printing] modules/contrib/linky/src/LinkyHtmlRouteProvider.php
+[printing] modules/contrib/linky/src/LinkyInterface.php
+[printing] modules/contrib/linky/src/LinkyListBuilder.php
+[printing] modules/contrib/linky/src/Plugin/DsField/LinkyTitle.php
+[printing] modules/contrib/linky/src/Plugin/EntityReferenceSelection/LinkySelection.php
+[printing] modules/contrib/linky/src/Plugin/Field/FieldFormatter/LinkyFormatter.php
+[printing] modules/contrib/linky/src/Plugin/Field/FieldWidget/LinkyWidget.php
+[printing] modules/contrib/linky/src/Plugin/Filter/DirectLinkFilter.php
+[printing] modules/contrib/linky/src/Plugin/Linkit/Matcher/LinkyMatcher.php
+[printing] modules/contrib/linky/src/Url.php
+[printing] modules/contrib/linky/tests/src/Functional/LinkyFunctionalTest.php
+[printing] modules/contrib/linky/tests/src/FunctionalJavascript/LinkyFunctionalTest.php
+[printing] modules/contrib/linky/tests/src/Kernel/LinkyDirectLinkFilterTest.php
+[printing] modules/contrib/linky/tests/src/Kernel/LinkyKernelTest.php
+[printing] modules/contrib/linky/tests/src/Kernel/LinkyKernelTestBase.php
+[printing] modules/contrib/linky/tests/src/Kernel/LinkyMenuIntegrationKernelTest.php
+[printing] modules/contrib/linky/tests/src/Kernel/LinkyUrlTest.php
+
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/linky/src/Plugin/DsField/LinkyTitle.php" file, due to:
+                                                                                
+         "Analyze error: "Class Drupal\ds\Plugin\DsField\Title not found and    
+         could not be autoloaded.". Include your files in "parameters >         
+         autoload_paths".                                                       
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/linky/src/Plugin/Linkit/Matcher/LinkyMatcher.php"     
+         file, due to:                                                          
+         "Analyze error: "Class                                                 
+         Drupal\linkit\Plugin\Linkit\Matcher\EntityMatcher not found and could  
+         not be autoloaded.". Include your files in "parameters >               
+         autoload_paths".                                                       
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+

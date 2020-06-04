@@ -1,0 +1,413 @@
+diff --git a/abookings.module b/abookings.module
+index dbaadbc..9547da3 100644
+--- a/abookings.module
++++ b/abookings.module
+@@ -106,7 +106,7 @@ function booking_form_validate($form, FormStateInterface &$form_state) {
+   $bookable = NULL;
+   if (in_array('target_id', $bookable_nid_val[0])) {
+     $bookable_nid = $bookable_nid_val[0]['target_id'];
+-    $bookable = node_load($bookable_nid);
++    $bookable = \Drupal::service('entity_type.manager')->getStorage('node')->load($bookable_nid);
+   }
+ 
+   // If booking was confirmed
+@@ -227,7 +227,7 @@ function abookings_node_form_submit($form, FormStateInterface &$form_state) {
+ 
+   $bookable_nid = $form_state->getValue('field_bookable_unit')[0]['target_id'];
+ 
+-  $bookable = node_load($bookable_nid);
++  $bookable = \Drupal::service('entity_type.manager')->getStorage('node')->load($bookable_nid);
+ 
+   $amount_due = get_booking_costs($booking)['amount_due'];
+   // kint($amount_due, '$amount_due');
+@@ -331,12 +331,12 @@ function check_provisional_bookings() {
+ 
+   // Loop through them
+   foreach ($results as $rid => $nid) {
+-    $booking = node_load($nid);
++    $booking = \Drupal::service('entity_type.manager')->getStorage('node')->load($nid);
+     $booking_time = $booking->getCreatedTime(); // string timestamp
+     // kint($booking_time, '$booking_time');
+ 
+     $bookable_nid = $booking->get('field_bookable_unit')->getValue()[0]['target_id'];
+-    $bookable = node_load($bookable_nid);
++    $bookable = \Drupal::service('entity_type.manager')->getStorage('node')->load($bookable_nid);
+ 
+     $deposit_email_sent = $booking->get('field_reminder_sent_deposit')->getValue()[0]['value'];
+ 
+@@ -407,10 +407,10 @@ function check_confirmed_bookings() {
+ 
+   // Loop through them
+   foreach ($results as $rid => $nid) {
+-    $booking = node_load($nid);
++    $booking = \Drupal::service('entity_type.manager')->getStorage('node')->load($nid);
+ 
+     $bookable_nid = $booking->get('field_bookable_unit')->getValue()[0]['target_id'];
+-    $bookable = node_load($bookable_nid);
++    $bookable = \Drupal::service('entity_type.manager')->getStorage('node')->load($bookable_nid);
+ 
+     $checkout_date = $booking->get('field_checkout_date')->getValue()[0]['value'];
+     // kint($checkout_date, '$checkout_date');
+@@ -427,7 +427,7 @@ function check_confirmed_bookings() {
+ 
+     $prearrival_hours = \Drupal::config('abookings.bookingsettings')->get('prearrival_hours');
+     // kint($prearrival_hours, '$prearrival_hours');
+-    $checkin_timestamp = \Drupal\Core\Datetime\DrupalDateTime
++    $checkin_timestamp = DrupalDateTime
+       ::createFromFormat('Y-m-d:H:i', $checkin_date . ':' . $checkin_time)->format('U');
+     // kint($checkin_timestamp, '$checkin_timestamp');
+     $prearrival_timestamp = intval($checkin_timestamp) - ($prearrival_hours * 60 * 60);
+@@ -444,7 +444,7 @@ function check_confirmed_bookings() {
+ 
+     // If past checkout time, complete the booking process
+ 
+-    $checkout_date_timestamp = \Drupal\Core\Datetime\DrupalDateTime
++    $checkout_date_timestamp = DrupalDateTime
+       ::createFromFormat('Y-m-d:H:i', $checkout_date . ':' . $checkout_time)->format('U');
+     // kint($checkout_date_timestamp, '$checkout_date_timestamp');
+ 
+diff --git a/includes/emails.inc b/includes/emails.inc
+index 155f2ff..56a0643 100644
+--- a/includes/emails.inc
++++ b/includes/emails.inc
+@@ -3,12 +3,11 @@
+  * @file
+  * Contains emails abookings.module.
+  */
+-
+ /**
+  * CONTENTS
+- * 
++ *
+  * send_booking_email()
+- * 
++ *
+  * send_confirmation_email()
+  * send_provis_booking_email()
+  * send_prearrival_email()
+@@ -16,7 +15,6 @@
+  * send_expired_booking_email()
+  * send_completed_booking_email()
+  */
+-
+ use Drupal\node\Entity\Node;
+ 
+ 
+@@ -92,14 +90,14 @@ function send_booking_email($subject, $body, $to, $key) {
+   if ($result['result'] != true) {
+     $message = t('There was a problem sending your email notification to @email, email key: @key.',
+       array('@email' => $to, '@key' => $key));
+-    drupal_set_message($message, 'error');
++    \Drupal::messenger()->addError($message);
+     \Drupal::logger('mail-log')->error($message);
+     return;
+   }
+ 
+   $message = t('An email notification has been sent to @email, email key: @key.',
+     array('@email' => $to, '@key' => $key));
+-  drupal_set_message($message);
++  \Drupal::messenger()->addStatus($message);
+   \Drupal::logger('mail-log')->notice($message);
+ }
+ 
+@@ -339,4 +337,4 @@ function send_completed_booking_email(Node $booking, Node $bookable) {
+     $notifn_emails_addresses_st, $email_key);
+ 
+   log_email_to_history($booking, 'Booking completed; feedback asked for.');
+-}
+\ No newline at end of file
++}
+diff --git a/includes/queries.inc b/includes/queries.inc
+index 6e13ba2..6a4fca1 100644
+--- a/includes/queries.inc
++++ b/includes/queries.inc
+@@ -1,4 +1,5 @@
+ <?php
++use Drupal\Core\Datetime\DrupalDateTime;
+ /**
+  * @file
+  * Contains functions that query site data such as fetching bookings.
+@@ -36,7 +37,7 @@ function get_bookables() {
+ 
+   // Save the array in the format: ['nid' => node].
+   foreach ($results as $rid => $nid) {
+-    $bookables[$nid] = node_load($nid);
++    $bookables[$nid] = \Drupal::service('entity_type.manager')->getStorage('node')->load($nid);
+   }
+   // kint($bookables, '$bookables');
+ 
+@@ -94,7 +95,7 @@ function get_promo($code_provided, $checkin_date, $nights) {
+ 
+   // Loop through them
+   foreach ($results as $rid => $nid) {
+-    $promo = node_load($nid);
++    $promo = \Drupal::service('entity_type.manager')->getStorage('node')->load($nid);
+     // kint($promo, '$promo');
+ 
+     // Check if code provided matches this promo's code
+@@ -143,13 +144,13 @@ function get_seasons_data() {
+     // Get Start date as unix timestamp
+     $start_iso_8601_date = $season->get('field_start_date')->get(0)
+       ->getValue()['value'];
+-    $start_timestamp = \Drupal\Core\Datetime\DrupalDateTime
++    $start_timestamp = DrupalDateTime
+       ::createFromFormat('Y-m-d', $start_iso_8601_date)->format('U'); // 'c'
+ 
+     // Get End date as unix timestamp
+     $end_iso_8601_date = $season->get('field_end_date')->get(0)
+       ->getValue()['value'];
+-    $end_timestamp = \Drupal\Core\Datetime\DrupalDateTime
++    $end_timestamp = DrupalDateTime
+       ::createFromFormat('Y-m-d', $end_iso_8601_date)->format('U'); // 'c'
+ 
+     // Add season data to drupalSettings (for JS to use)
+@@ -180,13 +181,13 @@ function get_bookings_data() {
+     // Get Check-in date as unix timestamp
+     $checkin_iso_8601_date = $booking->get('field_checkin_date')->get(0)
+       ->getValue()['value'];
+-    $checkin_timestamp = \Drupal\Core\Datetime\DrupalDateTime
++    $checkin_timestamp = DrupalDateTime
+       ::createFromFormat('Y-m-d', $checkin_iso_8601_date)->format('U'); // 'c'
+ 
+     // Get Check-out date as unix timestamp
+     $checkout_iso_8601_date = $booking->get('field_checkout_date')->get(0)
+       ->getValue()['value'];
+-    $checkout_timestamp = \Drupal\Core\Datetime\DrupalDateTime
++    $checkout_timestamp = DrupalDateTime
+       ::createFromFormat('Y-m-d', $checkout_iso_8601_date)->format('U'); // 'c'
+ 
+     // Add booking data to drupalSettings (for JS to use)
+diff --git a/libraries/fullcalendar/demos/php/get-events.php b/libraries/fullcalendar/demos/php/get-events.php
+index 5b7b388..460523b 100644
+--- a/libraries/fullcalendar/demos/php/get-events.php
++++ b/libraries/fullcalendar/demos/php/get-events.php
+@@ -47,4 +47,4 @@ foreach ($input_arrays as $array) {
+ }
+ 
+ // Send JSON to the client.
+-echo json_encode($output_arrays);
+\ No newline at end of file
++echo json_encode($output_arrays);
+diff --git a/libraries/fullcalendar/demos/php/get-timezones.php b/libraries/fullcalendar/demos/php/get-timezones.php
+index 241e1bd..95ef07d 100644
+--- a/libraries/fullcalendar/demos/php/get-timezones.php
++++ b/libraries/fullcalendar/demos/php/get-timezones.php
+@@ -6,4 +6,4 @@
+ // Requires PHP 5.2.0 or higher.
+ //--------------------------------------------------------------------------------------------------
+ 
+-echo json_encode(DateTimeZone::listIdentifiers());
+\ No newline at end of file
++echo json_encode(DateTimeZone::listIdentifiers());
+diff --git a/modules/booking/booking.module b/modules/booking/booking.module
+index e149d9a..48c8a5c 100644
+--- a/modules/booking/booking.module
++++ b/modules/booking/booking.module
+@@ -138,9 +138,6 @@ function booking_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+ 
+ 
+ 
+-/**
+- *
+- */
+ function get_line_items($booking_nid, $type) {
+   $l_items = [];
+ 
+@@ -160,7 +157,7 @@ function get_line_items($booking_nid, $type) {
+ 
+   // Save the array in the format: ['nid' => node].
+   foreach ($results as $rid => $nid) {
+-    $l_items[$nid] = node_load($nid);
++    $l_items[$nid] = \Drupal::service('entity_type.manager')->getStorage('node')->load($nid);
+   }
+   // kint($l_items, '$l_items');
+ 
+diff --git a/modules/booking/includes/form_manipulators.inc b/modules/booking/includes/form_manipulators.inc
+index 93d9f07..b1d308c 100644
+--- a/modules/booking/includes/form_manipulators.inc
++++ b/modules/booking/includes/form_manipulators.inc
+@@ -61,7 +61,7 @@ function all_booking_form_alter(&$form, FormStateInterface $form_state, $form_id
+ 
+ 
+   $bookable_nid = \Drupal::config('abookings.bookingsettings')->get('bookable');
+-  $bookable = node_load($bookable_nid);
++  $bookable = \Drupal::service('entity_type.manager')->getStorage('node')->load($bookable_nid);
+   // kint($bookable, '$bookable');
+ 
+   if (! in_array("/book", $build_info_args)) {
+diff --git a/modules/booking/src/Plugin/rest/resource/BookingRestResource.php b/modules/booking/src/Plugin/rest/resource/BookingRestResource.php
+index 1e96569..f44935e 100644
+--- a/modules/booking/src/Plugin/rest/resource/BookingRestResource.php
++++ b/modules/booking/src/Plugin/rest/resource/BookingRestResource.php
+@@ -68,7 +68,7 @@ class BookingRestResource extends EntityResource {
+    * {@inheritdoc}
+    */
+   public function get($entity) {
+-    $entity = (gettype($entity) === 'string') ? node_load($entity) : $entity;
++    $entity = (gettype($entity) === 'string') ? \Drupal::service('entity_type.manager')->getStorage('node')->load($entity) : $entity;
+     return parent::get($entity);
+   }
+ 
+@@ -77,7 +77,7 @@ class BookingRestResource extends EntityResource {
+    */
+   public function post($entity = NULL) {
+     // kint($entity, '$entity');
+-    $entity = (gettype($entity) === 'string') ? node_load($entity) : $entity;
++    $entity = (gettype($entity) === 'string') ? \Drupal::service('entity_type.manager')->getStorage('node')->load($entity) : $entity;
+     return parent::post($entity);
+   }
+ 
+@@ -85,7 +85,7 @@ class BookingRestResource extends EntityResource {
+    * {@inheritdoc}
+    */
+   public function delete($entity) {
+-    $entity = (gettype($entity) === 'string') ? node_load($entity) : $entity;
++    $entity = (gettype($entity) === 'string') ? \Drupal::service('entity_type.manager')->getStorage('node')->load($entity) : $entity;
+     return parent::delete($entity);
+   }
+ 
+@@ -93,7 +93,7 @@ class BookingRestResource extends EntityResource {
+    * {@inheritdoc}
+    */
+   public function patch($original_entity, $entity = NULL) {
+-    $entity = (gettype($entity) === 'string') ? node_load($entity) : $entity;
++    $entity = (gettype($entity) === 'string') ? \Drupal::service('entity_type.manager')->getStorage('node')->load($entity) : $entity;
+     return parent::patch($original_entity, $entity);
+   }
+ 
+diff --git a/modules/bookings_backend/bookings_backend.module b/modules/bookings_backend/bookings_backend.module
+index 1d3f317..8b80325 100644
+--- a/modules/bookings_backend/bookings_backend.module
++++ b/modules/bookings_backend/bookings_backend.module
+@@ -76,4 +76,4 @@ function bookings_backend_views_post_render(ViewExecutable $view, &$output, Cach
+   // kint($cache, '$cache');
+ 
+   $output['#attached']['library'][] = 'bookings_backend/booking_views';
+-}
+\ No newline at end of file
++}
+diff --git a/modules/bookings_backend/src/Controller/BookingController.php b/modules/bookings_backend/src/Controller/BookingController.php
+index ae2491a..bde6e12 100644
+--- a/modules/bookings_backend/src/Controller/BookingController.php
++++ b/modules/bookings_backend/src/Controller/BookingController.php
+@@ -126,13 +126,13 @@ class BookingController extends ControllerBase {
+       array('%type' => $booking->getEntityTypeId(), '%id' => $booking->id()));
+ 
+     $bookable_nid = $booking->get('field_bookable_unit')->getValue()[0]['target_id'];
+-    $bookable = node_load($bookable_nid);
++    $bookable = \Drupal::service('entity_type.manager')->getStorage('node')->load($bookable_nid);
+ 
+     send_provis_booking_email($booking, $bookable);
+ 
+     // Prepare the response
+ 
+-    $url = $booking->urlInfo('canonical', ['absolute' => TRUE])->toString(TRUE);
++    $url = $booking->toUrl('canonical', ['absolute' => TRUE])->toString(TRUE);
+     // $response = new ModifiedResourceResponse($booking, 201, [
+     //   'Location' => $url->getGeneratedUrl()
+     // ]);
+diff --git a/modules/season/season.module b/modules/season/season.module
+index abb0f9b..7da803b 100644
+--- a/modules/season/season.module
++++ b/modules/season/season.module
+@@ -1,5 +1,6 @@
+ <?php
+ 
++use Drupal\Core\Form\FormStateInterface;
+ /**
+  * @file
+  * Contains season.module.
+@@ -36,7 +37,7 @@ function season_help($route_name, RouteMatchInterface $route_match) {
+  * Implements hook_form_FORM_ID_alter().
+  */
+ function season_form_node_season_edit_form_alter(&$form,
+-  \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
++  FormStateInterface $form_state, $form_id) {
+   $form['#validate'][] = 'validate_season';
+ }
+ 
+diff --git a/src/Controller/BookingStatsPageController.php b/src/Controller/BookingStatsPageController.php
+index a46fab9..fe8cc3c 100644
+--- a/src/Controller/BookingStatsPageController.php
++++ b/src/Controller/BookingStatsPageController.php
+@@ -2,6 +2,7 @@
+ 
+ namespace Drupal\abookings\Controller;
+ 
++use Drupal\Core\Datetime\DrupalDateTime;
+ use Drupal\Core\Controller\ControllerBase;
+ 
+ /**
+@@ -76,7 +77,7 @@ function get_booking_data($bookable_nid) {
+   $current_timestamp = time();
+   // $timezone = drupal_get_user_timezone();
+   // kint($timezone, '$timezone');
+-  $datetime = \Drupal\Core\Datetime\DrupalDateTime
++  $datetime = DrupalDateTime
+     ::createFromFormat('U', $current_timestamp);
+   // drupal_set_message(t('1'), 'status', FALSE);
+ 
+@@ -181,7 +182,7 @@ function stats_get_occupancy_perc($date_ranges, $bookable_nid = NULL) {
+ 
+     $nodes = [];
+     foreach ($results as $rid => $nid) {
+-      $booking = node_load($nid);
++      $booking = \Drupal::service('entity_type.manager')->getStorage('node')->load($nid);
+       $nodes[$nid] = [
+         'checkin_date'  => $booking->get('field_checkin_date')->getValue()[0]['value'],
+         'checkout_date' => $booking->get('field_checkout_date')->getValue()[0]['value'],
+@@ -189,7 +190,7 @@ function stats_get_occupancy_perc($date_ranges, $bookable_nid = NULL) {
+     }
+     // kint($nodes, '$nodes');
+ 
+-    $i_date = \Drupal\Core\Datetime\DrupalDateTime
++    $i_date = DrupalDateTime
+       ::createFromFormat('Y-m-d', $dates_pair[1]);
+     $start_month = intval($i_date->format('n'));
+     $start_year = intval($i_date->format('Y'));
+@@ -245,7 +246,7 @@ function stats_get_revenue($date_ranges, $bookable_nid = NULL) {
+ 
+     $total = 0;
+     foreach ($results as $rid => $nid) {
+-      $booking = node_load($nid);
++      $booking = \Drupal::service('entity_type.manager')->getStorage('node')->load($nid);
+       $booking_base_cost = $booking->get('field_base_cost')->getValue();
+       if (array_key_exists(0, $booking_base_cost)) {
+         $total += floatval($booking_base_cost[0]['value']);
+diff --git a/src/Form/BookingSettingsForm.php b/src/Form/BookingSettingsForm.php
+index a386a69..efeb1ff 100644
+--- a/src/Form/BookingSettingsForm.php
++++ b/src/Form/BookingSettingsForm.php
+@@ -119,7 +119,7 @@ class BookingSettingsForm extends ConfigFormBase {
+     // Validate site bookable unit
+     $bookable_nid = $form_state->getValue('bookable');
+     if ($bookable_nid) {
+-      $bookable = node_load($bookable_nid);
++      $bookable = \Drupal::service('entity_type.manager')->getStorage('node')->load($bookable_nid);
+       if (! $bookable) {
+         $form_state->setErrorByName('bookable',
+           $this->t("No bookable unit was found with that ID."));
+diff --git a/src/Form/ManualEmailsForm.php b/src/Form/ManualEmailsForm.php
+index 0f6df9f..5c190d5 100644
+--- a/src/Form/ManualEmailsForm.php
++++ b/src/Form/ManualEmailsForm.php
+@@ -29,7 +29,7 @@ class ManualEmailsForm extends FormBase {
+     $booking = $form_state->getBuildInfo()['args'][0];
+     // kint($booking, '$booking');
+     $bookable_nid = $booking->get('field_bookable_unit')->getValue()[0]['target_id'];
+-    $bookable = node_load($bookable_nid);
++    $bookable = \Drupal::service('entity_type.manager')->getStorage('node')->load($bookable_nid);
+ 
+     $codes = get_all_codes_values($booking, $bookable);
+ 
+diff --git a/tests/src/Unit/ExampleConversionsTest.php b/tests/src/Unit/ExampleConversionsTest.php
+index b076793..484da40 100644
+--- a/tests/src/Unit/ExampleConversionsTest.php
++++ b/tests/src/Unit/ExampleConversionsTest.php
+@@ -35,4 +35,4 @@ class ExampleConversionsTest extends UnitTestCase {
+     $this->assertEquals(12, 11 + 1);
+   }
+  
+-}
+\ No newline at end of file
++}

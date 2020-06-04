@@ -1,0 +1,13 @@
+Rector 0.8.x-dev@3465583
+Config file: rector.yml
+
+[parsing] modules/contrib/bulkdelete/bulkdelete.module
+[parsing] modules/contrib/bulkdelete/src/Form/BulkDeleteForm.php
+[refactoring] modules/contrib/bulkdelete/bulkdelete.module
+[refactoring] modules/contrib/bulkdelete/src/Form/BulkDeleteForm.php
+[printing] modules/contrib/bulkdelete/bulkdelete.module
+[printing] modules/contrib/bulkdelete/src/Form/BulkDeleteForm.php
+
+
+ [OK] Rector is done!                                                           
+

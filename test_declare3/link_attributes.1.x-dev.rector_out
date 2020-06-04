@@ -1,0 +1,31 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/link_attributes/link_attributes.api.php
+[parsing] modules/contrib/link_attributes/link_attributes.module
+[parsing] modules/contrib/link_attributes/src/LinkAttributesManager.php
+[parsing] modules/contrib/link_attributes/src/Plugin/Field/FieldWidget/LinkWithAttributesWidget.php
+[parsing] modules/contrib/link_attributes/tests/modules/link_attributes_test_alterinfo/link_attributes_test_alterinfo.module
+[parsing] modules/contrib/link_attributes/tests/src/Functional/LinkAttributesFieldTest.php
+[parsing] modules/contrib/link_attributes/tests/src/Functional/LinkAttributesMenuTest.php
+[parsing] modules/contrib/link_attributes/tests/src/Kernel/InfoAlterTest.php
+[refactoring] modules/contrib/link_attributes/link_attributes.api.php
+[refactoring] modules/contrib/link_attributes/link_attributes.module
+[refactoring] modules/contrib/link_attributes/src/LinkAttributesManager.php
+[refactoring] modules/contrib/link_attributes/src/Plugin/Field/FieldWidget/LinkWithAttributesWidget.php
+[refactoring] modules/contrib/link_attributes/tests/modules/link_attributes_test_alterinfo/link_attributes_test_alterinfo.module
+[refactoring] modules/contrib/link_attributes/tests/src/Functional/LinkAttributesFieldTest.php
+[refactoring] modules/contrib/link_attributes/tests/src/Functional/LinkAttributesMenuTest.php
+[refactoring] modules/contrib/link_attributes/tests/src/Kernel/InfoAlterTest.php
+[printing] modules/contrib/link_attributes/link_attributes.api.php
+[printing] modules/contrib/link_attributes/link_attributes.module
+[printing] modules/contrib/link_attributes/src/LinkAttributesManager.php
+[printing] modules/contrib/link_attributes/src/Plugin/Field/FieldWidget/LinkWithAttributesWidget.php
+[printing] modules/contrib/link_attributes/tests/modules/link_attributes_test_alterinfo/link_attributes_test_alterinfo.module
+[printing] modules/contrib/link_attributes/tests/src/Functional/LinkAttributesFieldTest.php
+[printing] modules/contrib/link_attributes/tests/src/Functional/LinkAttributesMenuTest.php
+[printing] modules/contrib/link_attributes/tests/src/Kernel/InfoAlterTest.php
+
+
+ [OK] Rector is done!                                                           
+

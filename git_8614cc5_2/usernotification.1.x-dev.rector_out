@@ -1,0 +1,16 @@
+Rector 0.8.x-dev@cf3198a
+Config file: rector.yml
+
+[parsing] modules/contrib/usernotification/src/Form/NotificationSettingsForm.php
+[parsing] modules/contrib/usernotification/src/Plugin/Action/SendUserNotification.php
+[parsing] modules/contrib/usernotification/usernotification.module
+[refactoring] modules/contrib/usernotification/src/Form/NotificationSettingsForm.php
+[refactoring] modules/contrib/usernotification/src/Plugin/Action/SendUserNotification.php
+[refactoring] modules/contrib/usernotification/usernotification.module
+[printing] modules/contrib/usernotification/src/Form/NotificationSettingsForm.php
+[printing] modules/contrib/usernotification/src/Plugin/Action/SendUserNotification.php
+[printing] modules/contrib/usernotification/usernotification.module
+
+
+ [OK] Rector is done!                                                           
+

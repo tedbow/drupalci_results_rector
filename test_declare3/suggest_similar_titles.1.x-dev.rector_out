@@ -1,0 +1,16 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/suggest_similar_titles/src/Controller/SuggestionController.php
+[parsing] modules/contrib/suggest_similar_titles/src/Form/SuggestionConfigurationForm.php
+[parsing] modules/contrib/suggest_similar_titles/suggest_similar_titles.module
+[refactoring] modules/contrib/suggest_similar_titles/src/Controller/SuggestionController.php
+[refactoring] modules/contrib/suggest_similar_titles/src/Form/SuggestionConfigurationForm.php
+[refactoring] modules/contrib/suggest_similar_titles/suggest_similar_titles.module
+[printing] modules/contrib/suggest_similar_titles/src/Controller/SuggestionController.php
+[printing] modules/contrib/suggest_similar_titles/src/Form/SuggestionConfigurationForm.php
+[printing] modules/contrib/suggest_similar_titles/suggest_similar_titles.module
+
+
+ [OK] Rector is done!                                                           
+

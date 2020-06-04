@@ -1,0 +1,3 @@
+<?xml version="1.0"?>
+<checkstyle><file name="modules/contrib/abtestui/abtestui.info.yml"><error line="0" message="Add &lt;code&gt;core_version_requirement: ^8 || ^9&lt;/code&gt; to abtestui.info.yml to designate that the module is compatible with Drupal 9. See https://drupal.org/node/3070687." severity="error"/></file><file name="modules/contrib/abtestui/composer.json"><error line="0" message="The drupal/core requirement is not Drupal 9 compatible. Either remove it or update it to be compatible with Drupal 9. See https://drupal.org/node/2514612#s-drupal-9-compatibility." severity="error"/></file></checkstyle>
+

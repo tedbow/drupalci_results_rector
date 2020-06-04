@@ -1,0 +1,23 @@
+./composer.json has been updated
+> Drupal\Composer\Composer::ensureComposerVersion
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+Package operations: 6 installs, 0 updates, 0 removals
+  - Installing drupal/externalauth (1.3.0): Downloading (100%)
+  - Installing drupal/authorization (1.0.0-beta1): Downloading (100%)
+  - Installing symfony/options-resolver (v5.0.8): Downloading (100%)
+  - Installing grahl/ldap (v4.4.2.1): Downloading (100%)
+  - Installing drupal/ldap_servers (dev-4.x)
+  - Installing drupal/ldap (dev-4.x 015dbba): Cloning 015dbba939
+Package container-interop/container-interop is abandoned, you should avoid using it. Use psr/container instead.
+Package phpunit/phpunit-mock-objects is abandoned, you should avoid using it. No replacement was suggested.
+Package zendframework/zend-servicemanager is abandoned, you should avoid using it. Use laminas/laminas-servicemanager instead.
+Package zendframework/zend-text is abandoned, you should avoid using it. Use laminas/laminas-text instead.
+Writing lock file
+Generating autoload files
+> Drupal\Core\Composer\Composer::preAutoloadDump
+Hardening vendor directory with .htaccess and web.config files.
+34 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+Cleaning vendor directory.
+> Drupal\Composer\Composer::generateMetapackages

@@ -1,0 +1,22 @@
+diff --git a/entity.drush.inc b/entity.drush.inc
+index 7a2bcb7..0aab47a 100644
+--- a/entity.drush.inc
++++ b/entity.drush.inc
+@@ -810,7 +810,7 @@ function _drush_entity_load($entity_type = NULL, array $ids = array()) {
+     case 7:
+       // This should always be the latest API core version.
+       // For now both 7 and 8
+-      $entities = entity_load($entity_type, $ids);
++      $entities = \Drupal::service('entity_type.manager')->getStorage($entity_type)->load($ids);
+       break;
+     default:
+       // Drupal 8
+@@ -1031,7 +1031,7 @@ function _drush_entity_delete_node(array $nids = array()) {
+     // Drupal 5/6
+     // node-delete is implemented this way to prevent calling cache_clear_all() for each node.
+     foreach ($nids as $nid) {
+-      $node = node_load($nid, NULL, TRUE);
++      $node = \Drupal::service('entity_type.manager')->getStorage('node')->load($nid);
+       \Drupal::database()->query('DELETE FROM {node} WHERE nid = %d', $nid);
+       \Drupal::database()->query('DELETE FROM {node_revisions} WHERE nid = %d', $nid);
+       node_invoke($node, 'delete');

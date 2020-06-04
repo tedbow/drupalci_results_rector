@@ -1,0 +1,36 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/workbench_moderation/src/Access/LatestRevisionCheck.php
+[parsing] modules/contrib/workbench_moderation/src/Entity/Handler/BlockContentModerationHandler.php
+[parsing] modules/contrib/workbench_moderation/src/Entity/Handler/ModerationHandler.php
+[parsing] modules/contrib/workbench_moderation/src/Entity/Handler/ModerationHandlerInterface.php
+[parsing] modules/contrib/workbench_moderation/src/Entity/Handler/NodeModerationHandler.php
+[parsing] modules/contrib/workbench_moderation/src/Entity/ModerationState.php
+[parsing] modules/contrib/workbench_moderation/src/Entity/ModerationStateTransition.php
+[parsing] modules/contrib/workbench_moderation/src/EntityOperations.php
+[parsing] modules/contrib/workbench_moderation/src/EntityTypeInfo.php
+[parsing] modules/contrib/workbench_moderation/src/Event/WorkbenchModerationEvents.php
+[parsing] modules/contrib/workbench_moderation/src/Event/WorkbenchModerationTransitionEvent.php
+[parsing] modules/contrib/workbench_moderation/src/Form/BundleModerationConfigurationForm.php
+[parsing] modules/contrib/workbench_moderation/src/Form/EntityModerationForm.php
+[parsing] modules/contrib/workbench_moderation/src/Form/ModerationStateDeleteForm.php
+[parsing] modules/contrib/workbench_moderation/src/Form/ModerationStateForm.php
+[parsing] modules/contrib/workbench_moderation/src/Form/ModerationStateTransitionDeleteForm.php
+[parsing] modules/contrib/workbench_moderation/src/Form/ModerationStateTransitionForm.php
+[parsing] modules/contrib/workbench_moderation/src/InlineEditingDisabler.php
+[parsing] modules/contrib/workbench_moderation/src/ModerationInformation.php
+[parsing] modules/contrib/workbench_moderation/src/ModerationInformationInterface.php
+[parsing] modules/contrib/workbench_moderation/src/ModerationStateAccessControlHandler.php
+[parsing] modules/contrib/workbench_moderation/src/ModerationStateInterface.php
+[parsing] modules/contrib/workbench_moderation/src/ModerationStateListBuilder.php
+[parsing] modules/contrib/workbench_moderation/src/ModerationStateTransitionInterface.php
+[parsing] modules/contrib/workbench_moderation/src/ModerationStateTransitionListBuilder.php
+[parsing] modules/contrib/workbench_moderation/src/ModerationStateTransitionStorage.php
+[parsing] modules/contrib/workbench_moderation/src/ParamConverter/EntityRevisionConverter.php
+[parsing] modules/contrib/workbench_moderation/src/Permissions.php
+[parsing] modules/contrib/workbench_moderation/src/Plugin/Action/ModerationOptOutPublishNode.php
+[parsing] modules/contrib/workbench_moderation/src/Plugin/Action/ModerationOptOutUnpublishNode.php
+[parsing] modules/contrib/workbench_moderation/src/Plugin/Derivative/DynamicLocalTasks.php
+[parsing] modules/contrib/workbench_moderation/src/Plugin/Field/FieldWidget/ModerationStateWidget.php
+[parsing] modules/contrib/workbench_moderation/src/Plugin/Menu/EditTab.php

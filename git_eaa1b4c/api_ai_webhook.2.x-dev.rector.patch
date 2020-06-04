@@ -1,0 +1,12 @@
+diff --git a/api_ai_webhook.info.yml b/api_ai_webhook.info.yml
+index 58d984e..9c3c6fb 100644
+--- a/api_ai_webhook.info.yml
++++ b/api_ai_webhook.info.yml
+@@ -2,6 +2,7 @@ name: Dialogflow Webhook
+ type: module
+ description: Dialogflow (formal Api.AI) Webhook implementation.
+ core: 8.x
++core_version_requirement: ^8 || ^9
+ package: Chatbot
+ test_dependencies:
+   - chatbot_api:chatbot_api (>=2.0-rc0)

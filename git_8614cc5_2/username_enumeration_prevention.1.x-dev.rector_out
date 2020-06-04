@@ -1,0 +1,25 @@
+Rector 0.8.x-dev@cf3198a
+Config file: rector.yml
+
+[parsing] modules/contrib/username_enumeration_prevention/src/UserRouteEventSubscriber.php
+[parsing] modules/contrib/username_enumeration_prevention/tests/src/Functional/FloodTest.php
+[parsing] modules/contrib/username_enumeration_prevention/tests/src/Functional/UserFormTest.php
+[parsing] modules/contrib/username_enumeration_prevention/tests/src/Functional/UserRouteTest.php
+[parsing] modules/contrib/username_enumeration_prevention/username_enumeration_prevention.install
+[parsing] modules/contrib/username_enumeration_prevention/username_enumeration_prevention.module
+[refactoring] modules/contrib/username_enumeration_prevention/src/UserRouteEventSubscriber.php
+[refactoring] modules/contrib/username_enumeration_prevention/tests/src/Functional/FloodTest.php
+[refactoring] modules/contrib/username_enumeration_prevention/tests/src/Functional/UserFormTest.php
+[refactoring] modules/contrib/username_enumeration_prevention/tests/src/Functional/UserRouteTest.php
+[refactoring] modules/contrib/username_enumeration_prevention/username_enumeration_prevention.install
+[refactoring] modules/contrib/username_enumeration_prevention/username_enumeration_prevention.module
+[printing] modules/contrib/username_enumeration_prevention/src/UserRouteEventSubscriber.php
+[printing] modules/contrib/username_enumeration_prevention/tests/src/Functional/FloodTest.php
+[printing] modules/contrib/username_enumeration_prevention/tests/src/Functional/UserFormTest.php
+[printing] modules/contrib/username_enumeration_prevention/tests/src/Functional/UserRouteTest.php
+[printing] modules/contrib/username_enumeration_prevention/username_enumeration_prevention.install
+[printing] modules/contrib/username_enumeration_prevention/username_enumeration_prevention.module
+
+
+ [OK] Rector is done!                                                           
+

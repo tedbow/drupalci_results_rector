@@ -1,0 +1,55 @@
+diff --git a/domain_simple_sitemap.module b/domain_simple_sitemap.module
+index 1549a52..f2415bd 100644
+--- a/domain_simple_sitemap.module
++++ b/domain_simple_sitemap.module
+@@ -1,9 +1,10 @@
+ <?php
+ 
++use Drupal\Core\Entity\EntityInterface;
+ /**
+  * Implements hook_ENTITY_TYPE_insert().
+  */
+-function domain_simple_sitemap_domain_insert(\Drupal\Core\Entity\EntityInterface $domain) {
++function domain_simple_sitemap_domain_insert(EntityInterface $domain) {
+   /** @var \Drupal\simple_sitemap\Simplesitemap $simpleSitemap */
+   $simpleSitemap = \Drupal::service('simple_sitemap.generator');
+ 			 $id = $domain->id();
+@@ -27,7 +28,7 @@ function domain_simple_sitemap_domain_insert(\Drupal\Core\Entity\EntityInterface
+ /**
+  * Implements hook_ENTITY_TYPE_update().
+  */
+-function domain_simple_sitemap_domain_update(\Drupal\Core\Entity\EntityInterface $domain) {
++function domain_simple_sitemap_domain_update(EntityInterface $domain) {
+ 	if($domain->isActive()){
+ 		if ($domain->status()) {
+ 		  domain_simple_sitemap_domain_insert($domain);
+@@ -40,18 +41,18 @@ function domain_simple_sitemap_domain_update(\Drupal\Core\Entity\EntityInterface
+   if($domain->isActive() && ($domain->status() !== $domain->get('original')->status() || $domain->getHostname() !== $domain->get('original')->getHostname() || $domain->label() !== $domain->get('original')->label() || $domain->getScheme() !== $domain->get('original')->getScheme())) {
+ 		domain_simple_sitemap_domain_insert($domain);
+ 	}
+-  
+-		   
++
++
+ 	elseif(!$domain->isActive() && $domain->status() !== $domain->get('original')->status()){
+ 		domain_simple_sitemap_domain_delete($domain);
+ 	}
+-   
++
+ */
+ }	
+ /**
+  * Implements hook_ENTITY_TYPE_delete().
+  */
+-function domain_simple_sitemap_domain_delete(\Drupal\Core\Entity\EntityInterface $domain) {
++function domain_simple_sitemap_domain_delete(EntityInterface $domain) {
+   /** @var \Drupal\simple_sitemap\Simplesitemap $simpleSitemap */
+   $simpleSitemap = \Drupal::service('simple_sitemap.generator');
+ 	 $id = $domain->id();
+@@ -65,4 +66,4 @@ function domain_simple_sitemap_domain_delete(\Drupal\Core\Entity\EntityInterface
+   $generator->setSitemapVariant($id);
+   $generator->setSettings(['excluded_languages' => []]);
+   $generator->remove();
+-}
+\ No newline at end of file
++}

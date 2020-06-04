@@ -1,0 +1,10 @@
+diff --git a/twig_vardumper.info.yml b/twig_vardumper.info.yml
+index d868508..c5f1a2c 100644
+--- a/twig_vardumper.info.yml
++++ b/twig_vardumper.info.yml
+@@ -2,4 +2,5 @@ name: Twig VarDumper
+ type: module
+ description: 'Provides a way to display Twig PHP variables in a pretty way.'
+ core: 8.x
++core_version_requirement: ^8 || ^9
+ package: Development

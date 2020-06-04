@@ -1,0 +1,41 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/svg_icon/src/Plugin/EntityReferenceSelection/SvgSelection.php
+[parsing] modules/contrib/svg_icon/src/Plugin/Field/FieldFormatter/SvgIconFormatter.php
+[parsing] modules/contrib/svg_icon/src/Plugin/Field/FieldType/SvgIcon.php
+[parsing] modules/contrib/svg_icon/src/Plugin/Field/FieldWidget/SvgIconWidget.php
+[parsing] modules/contrib/svg_icon/src/Svg.php
+[parsing] modules/contrib/svg_icon/svg_icon.module
+[refactoring] modules/contrib/svg_icon/src/Plugin/EntityReferenceSelection/SvgSelection.php
+[refactoring] modules/contrib/svg_icon/src/Plugin/Field/FieldFormatter/SvgIconFormatter.php
+[refactoring] modules/contrib/svg_icon/src/Plugin/Field/FieldType/SvgIcon.php
+[refactoring] modules/contrib/svg_icon/src/Plugin/Field/FieldWidget/SvgIconWidget.php
+[refactoring] modules/contrib/svg_icon/src/Svg.php
+[refactoring] modules/contrib/svg_icon/svg_icon.module
+[printing] modules/contrib/svg_icon/src/Plugin/EntityReferenceSelection/SvgSelection.php
+[printing] modules/contrib/svg_icon/src/Plugin/Field/FieldFormatter/SvgIconFormatter.php
+[printing] modules/contrib/svg_icon/src/Plugin/Field/FieldType/SvgIcon.php
+[printing] modules/contrib/svg_icon/src/Plugin/Field/FieldWidget/SvgIconWidget.php
+[printing] modules/contrib/svg_icon/src/Svg.php
+[printing] modules/contrib/svg_icon/svg_icon.module
+
+
+1 file with changes
+===================
+
+1) modules/contrib/svg_icon/src/Svg.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -108,4 +108,3 @@
+   }
+
+ }
+-
+    ----------- end diff -----------
+
+
+ [OK] Rector is done! 1 file have been changed.                                 
+

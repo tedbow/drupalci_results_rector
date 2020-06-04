@@ -1,0 +1,64 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/group_content_menu/group_content_menu.module
+[parsing] modules/contrib/group_content_menu/src/Access/GroupOwnsMenuContentAccessChecker.php
+[parsing] modules/contrib/group_content_menu/src/Controller/GroupContentMenuController.php
+[parsing] modules/contrib/group_content_menu/src/Entity/GroupContentMenu.php
+[parsing] modules/contrib/group_content_menu/src/Entity/GroupContentMenuType.php
+[parsing] modules/contrib/group_content_menu/src/Form/GroupContentMenuDeleteForm.php
+[parsing] modules/contrib/group_content_menu/src/Form/GroupContentMenuForm.php
+[parsing] modules/contrib/group_content_menu/src/Form/GroupContentMenuTypeForm.php
+[parsing] modules/contrib/group_content_menu/src/GroupContentMenuInterface.php
+[parsing] modules/contrib/group_content_menu/src/GroupContentMenuListBuilder.php
+[parsing] modules/contrib/group_content_menu/src/GroupContentMenuParentFormSelector.php
+[parsing] modules/contrib/group_content_menu/src/GroupContentMenuServiceProvider.php
+[parsing] modules/contrib/group_content_menu/src/GroupContentMenuTypeListBuilder.php
+[parsing] modules/contrib/group_content_menu/src/Plugin/Block/GroupMenuBlock.php
+[parsing] modules/contrib/group_content_menu/src/Plugin/Derivative/GroupMenuBlock.php
+[parsing] modules/contrib/group_content_menu/src/Plugin/GroupContentEnabler/GroupContentMenu.php
+[parsing] modules/contrib/group_content_menu/src/Plugin/GroupContentEnabler/GroupContentMenuDeriver.php
+[parsing] modules/contrib/group_content_menu/src/Routing/GroupContentMenuRouteProvider.php
+[parsing] modules/contrib/group_content_menu/tests/src/Functional/GroupContentMenuTest.php
+[refactoring] modules/contrib/group_content_menu/group_content_menu.module
+[refactoring] modules/contrib/group_content_menu/src/Access/GroupOwnsMenuContentAccessChecker.php
+[refactoring] modules/contrib/group_content_menu/src/Controller/GroupContentMenuController.php
+[refactoring] modules/contrib/group_content_menu/src/Entity/GroupContentMenu.php
+[refactoring] modules/contrib/group_content_menu/src/Entity/GroupContentMenuType.php
+[refactoring] modules/contrib/group_content_menu/src/Form/GroupContentMenuDeleteForm.php
+[refactoring] modules/contrib/group_content_menu/src/Form/GroupContentMenuForm.php
+[refactoring] modules/contrib/group_content_menu/src/Form/GroupContentMenuTypeForm.php
+[refactoring] modules/contrib/group_content_menu/src/GroupContentMenuInterface.php
+[refactoring] modules/contrib/group_content_menu/src/GroupContentMenuListBuilder.php
+[refactoring] modules/contrib/group_content_menu/src/GroupContentMenuParentFormSelector.php
+[refactoring] modules/contrib/group_content_menu/src/GroupContentMenuServiceProvider.php
+[refactoring] modules/contrib/group_content_menu/src/GroupContentMenuTypeListBuilder.php
+[refactoring] modules/contrib/group_content_menu/src/Plugin/Block/GroupMenuBlock.php
+[refactoring] modules/contrib/group_content_menu/src/Plugin/Derivative/GroupMenuBlock.php
+[refactoring] modules/contrib/group_content_menu/src/Plugin/GroupContentEnabler/GroupContentMenu.php
+[refactoring] modules/contrib/group_content_menu/src/Plugin/GroupContentEnabler/GroupContentMenuDeriver.php
+[refactoring] modules/contrib/group_content_menu/src/Routing/GroupContentMenuRouteProvider.php
+[refactoring] modules/contrib/group_content_menu/tests/src/Functional/GroupContentMenuTest.php
+[printing] modules/contrib/group_content_menu/group_content_menu.module
+[printing] modules/contrib/group_content_menu/src/Access/GroupOwnsMenuContentAccessChecker.php
+[printing] modules/contrib/group_content_menu/src/Controller/GroupContentMenuController.php
+[printing] modules/contrib/group_content_menu/src/Entity/GroupContentMenu.php
+[printing] modules/contrib/group_content_menu/src/Entity/GroupContentMenuType.php
+[printing] modules/contrib/group_content_menu/src/Form/GroupContentMenuDeleteForm.php
+[printing] modules/contrib/group_content_menu/src/Form/GroupContentMenuForm.php
+[printing] modules/contrib/group_content_menu/src/Form/GroupContentMenuTypeForm.php
+[printing] modules/contrib/group_content_menu/src/GroupContentMenuInterface.php
+[printing] modules/contrib/group_content_menu/src/GroupContentMenuListBuilder.php
+[printing] modules/contrib/group_content_menu/src/GroupContentMenuParentFormSelector.php
+[printing] modules/contrib/group_content_menu/src/GroupContentMenuServiceProvider.php
+[printing] modules/contrib/group_content_menu/src/GroupContentMenuTypeListBuilder.php
+[printing] modules/contrib/group_content_menu/src/Plugin/Block/GroupMenuBlock.php
+[printing] modules/contrib/group_content_menu/src/Plugin/Derivative/GroupMenuBlock.php
+[printing] modules/contrib/group_content_menu/src/Plugin/GroupContentEnabler/GroupContentMenu.php
+[printing] modules/contrib/group_content_menu/src/Plugin/GroupContentEnabler/GroupContentMenuDeriver.php
+[printing] modules/contrib/group_content_menu/src/Routing/GroupContentMenuRouteProvider.php
+[printing] modules/contrib/group_content_menu/tests/src/Functional/GroupContentMenuTest.php
+
+
+ [OK] Rector is done!                                                           
+

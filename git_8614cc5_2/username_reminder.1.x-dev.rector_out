@@ -1,0 +1,19 @@
+Rector 0.8.x-dev@cf3198a
+Config file: rector.yml
+
+[parsing] modules/contrib/username_reminder/src/Form/SettingsForm.php
+[parsing] modules/contrib/username_reminder/src/Form/UsernameReminderForm.php
+[parsing] modules/contrib/username_reminder/tests/src/Functional/UsernameReminderTest.php
+[parsing] modules/contrib/username_reminder/username_reminder.module
+[refactoring] modules/contrib/username_reminder/src/Form/SettingsForm.php
+[refactoring] modules/contrib/username_reminder/src/Form/UsernameReminderForm.php
+[refactoring] modules/contrib/username_reminder/tests/src/Functional/UsernameReminderTest.php
+[refactoring] modules/contrib/username_reminder/username_reminder.module
+[printing] modules/contrib/username_reminder/src/Form/SettingsForm.php
+[printing] modules/contrib/username_reminder/src/Form/UsernameReminderForm.php
+[printing] modules/contrib/username_reminder/tests/src/Functional/UsernameReminderTest.php
+[printing] modules/contrib/username_reminder/username_reminder.module
+
+
+ [OK] Rector is done!                                                           
+

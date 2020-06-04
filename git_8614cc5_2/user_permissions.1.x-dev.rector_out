@@ -1,0 +1,16 @@
+Rector 0.8.x-dev@cf3198a
+Config file: rector.yml
+
+[parsing] modules/contrib/user_permissions/src/Form/UserPermissionsForm.php
+[parsing] modules/contrib/user_permissions/user_permissions.install
+[parsing] modules/contrib/user_permissions/user_permissions.module
+[refactoring] modules/contrib/user_permissions/src/Form/UserPermissionsForm.php
+[refactoring] modules/contrib/user_permissions/user_permissions.install
+[refactoring] modules/contrib/user_permissions/user_permissions.module
+[printing] modules/contrib/user_permissions/src/Form/UserPermissionsForm.php
+[printing] modules/contrib/user_permissions/user_permissions.install
+[printing] modules/contrib/user_permissions/user_permissions.module
+
+
+ [OK] Rector is done!                                                           
+
