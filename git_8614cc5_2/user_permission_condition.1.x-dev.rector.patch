@@ -1,0 +1,11 @@
+diff --git a/user_permission_condition.info.yml b/user_permission_condition.info.yml
+index 7abe186..9e21f7d 100644
+--- a/user_permission_condition.info.yml
++++ b/user_permission_condition.info.yml
+@@ -2,5 +2,6 @@ name: 'User Permission Condition'
+ type: module
+ description: 'Provides a user permission condition.'
+ core: 8.x
++core_version_requirement: ^8 || ^9
+ dependencies:
+   - drupal:user

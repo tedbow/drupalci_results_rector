@@ -1,0 +1,19 @@
+ [notice] Processing /var/lib/drupalci/workspace/drupal-checkouts/drupal1/modules/contrib/drush_help.
+PHP Notice:  Constant DRUSH_BOOTSTRAP_NONE already defined in /var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/drush/drush/includes/bootstrap.inc on line 12
+Notice: Constant DRUSH_BOOTSTRAP_NONE already defined in /var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/drush/drush/includes/bootstrap.inc on line 12
+PHP Notice:  Constant DRUSH_BOOTSTRAP_MAX already defined in /var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/drush/drush/includes/bootstrap.inc on line 21
+Notice: Constant DRUSH_BOOTSTRAP_MAX already defined in /var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/drush/drush/includes/bootstrap.inc on line 21
+PHP Notice:  Constant DRUSH_BOOTSTRAP_DRUSH already defined in /var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/drush/drush/includes/bootstrap.inc on line 29
+Notice: Constant DRUSH_BOOTSTRAP_DRUSH already defined in /var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/drush/drush/includes/bootstrap.inc on line 29
+PHP Notice:  Constant DRUSH_BOOTSTRAP_DRUPAL_ROOT already defined in /var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/drush/drush/includes/bootstrap.inc on line 38
+Notice: Constant DRUSH_BOOTSTRAP_DRUPAL_ROOT already defined in /var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/drush/drush/includes/bootstrap.inc on line 38
+PHP Notice:  Constant DRUSH_BOOTSTRAP_DRUPAL_SITE already defined in /var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/drush/drush/includes/bootstrap.inc on line 53
+Notice: Constant DRUSH_BOOTSTRAP_DRUPAL_SITE already defined in /var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/drush/drush/includes/bootstrap.inc on line 53
+PHP Notice:  Constant DRUSH_BOOTSTRAP_DRUPAL_CONFIGURATION already defined in /var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/drush/drush/includes/bootstrap.inc on line 64
+Notice: Constant DRUSH_BOOTSTRAP_DRUPAL_CONFIGURATION already defined in /var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/drush/drush/includes/bootstrap.inc on line 64
+PHP Notice:  Constant DRUSH_BOOTSTRAP_DRUPAL_DATABASE already defined in /var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/drush/drush/includes/bootstrap.inc on line 76
+Notice: Constant DRUSH_BOOTSTRAP_DRUPAL_DATABASE already defined in /var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/drush/drush/includes/bootstrap.inc on line 76
+PHP Notice:  Constant DRUSH_BOOTSTRAP_DRUPAL_FULL already defined in /var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/drush/drush/includes/bootstrap.inc on line 87
+Notice: Constant DRUSH_BOOTSTRAP_DRUPAL_FULL already defined in /var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/drush/drush/includes/bootstrap.inc on line 87
+ 0/5 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   0%[2K 3/5 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░]  60%[2K 4/5 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░]  80%[2K 5/5 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 100%
+

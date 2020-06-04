@@ -1,0 +1,73 @@
+Rector 0.8.x-dev@3465583
+Config file: rector.yml
+
+[parsing] modules/contrib/domain_simple_sitemap/domain_simple_sitemap.drush.inc
+[parsing] modules/contrib/domain_simple_sitemap/domain_simple_sitemap.install
+[parsing] modules/contrib/domain_simple_sitemap/domain_simple_sitemap.module
+[parsing] modules/contrib/domain_simple_sitemap/src/Batch.php
+[parsing] modules/contrib/domain_simple_sitemap/src/Controller/DomainSimpleSitemapController.php
+[parsing] modules/contrib/domain_simple_sitemap/src/DomainSimpleSitemap.php
+[parsing] modules/contrib/domain_simple_sitemap/src/DomainSimpleSitemapGenerator.php
+[parsing] modules/contrib/domain_simple_sitemap/src/Plugin/simple_sitemap/UrlGenerator/CustomUrlGenerator.php
+[parsing] modules/contrib/domain_simple_sitemap/src/Plugin/simple_sitemap/UrlGenerator/EntityUrlGenerator.php
+[parsing] modules/contrib/domain_simple_sitemap/src/Routing/RouteSubscriber.php
+[parsing] modules/contrib/domain_simple_sitemap/tests/src/Functional/EntityUrlTest.php
+[refactoring] modules/contrib/domain_simple_sitemap/domain_simple_sitemap.drush.inc
+[refactoring] modules/contrib/domain_simple_sitemap/domain_simple_sitemap.install
+[refactoring] modules/contrib/domain_simple_sitemap/domain_simple_sitemap.module
+[refactoring] modules/contrib/domain_simple_sitemap/src/Batch.php
+[refactoring] modules/contrib/domain_simple_sitemap/src/Controller/DomainSimpleSitemapController.php
+[refactoring] modules/contrib/domain_simple_sitemap/src/DomainSimpleSitemap.php
+[refactoring] modules/contrib/domain_simple_sitemap/src/DomainSimpleSitemapGenerator.php
+[refactoring] modules/contrib/domain_simple_sitemap/src/Plugin/simple_sitemap/UrlGenerator/CustomUrlGenerator.php
+[refactoring] modules/contrib/domain_simple_sitemap/src/Plugin/simple_sitemap/UrlGenerator/EntityUrlGenerator.php
+[refactoring] modules/contrib/domain_simple_sitemap/src/Routing/RouteSubscriber.php
+[refactoring] modules/contrib/domain_simple_sitemap/tests/src/Functional/EntityUrlTest.php
+[printing] modules/contrib/domain_simple_sitemap/domain_simple_sitemap.drush.inc
+[printing] modules/contrib/domain_simple_sitemap/domain_simple_sitemap.install
+[printing] modules/contrib/domain_simple_sitemap/domain_simple_sitemap.module
+[printing] modules/contrib/domain_simple_sitemap/src/Batch.php
+[printing] modules/contrib/domain_simple_sitemap/src/Controller/DomainSimpleSitemapController.php
+[printing] modules/contrib/domain_simple_sitemap/src/DomainSimpleSitemap.php
+[printing] modules/contrib/domain_simple_sitemap/src/DomainSimpleSitemapGenerator.php
+[printing] modules/contrib/domain_simple_sitemap/src/Plugin/simple_sitemap/UrlGenerator/CustomUrlGenerator.php
+[printing] modules/contrib/domain_simple_sitemap/src/Plugin/simple_sitemap/UrlGenerator/EntityUrlGenerator.php
+[printing] modules/contrib/domain_simple_sitemap/src/Routing/RouteSubscriber.php
+[printing] modules/contrib/domain_simple_sitemap/tests/src/Functional/EntityUrlTest.php
+
+
+1 file with changes
+===================
+
+1) modules/contrib/domain_simple_sitemap/src/Plugin/simple_sitemap/UrlGenerator/EntityUrlGenerator.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -223,7 +223,7 @@
+       $this->context['message'] = $this->t(self::PROCESSING_PATH_MESSAGE, [
+         '@current' => $this->context['sandbox']['progress'],
+         '@max' => $this->context['sandbox']['max'],
+-        '@path' => HTML::escape($path),
++        '@path' => Html::escape($path),
+       ]);
+     }
+   }
+    ----------- end diff -----------
+
+
+ [ERROR] Could not process "modules/contrib/domain_simple_sitemap/src/Batch.php"
+         file, due to:                                                          
+         "Analyze error: "Class Drupal\simple_sitemap\Batch not found and could 
+         not be autoloaded.". Include your files in "parameters >               
+         autoload_paths".                                                       
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/domain_simple_sitemap/src/DomainSimpleSitemapGenerator
+         .php" file, due to:                                                    
+         "Analyze error: "Class Drupal\simple_sitemap\SitemapGenerator not found
+         and could not be autoloaded.". Include your files in "parameters >     
+         autoload_paths".                                                       
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+

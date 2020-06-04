@@ -1,0 +1,30 @@
+diff --git a/src/Form/UsernameLoginForm.php b/src/Form/UsernameLoginForm.php
+index da0562c..c31b80e 100644
+--- a/src/Form/UsernameLoginForm.php
++++ b/src/Form/UsernameLoginForm.php
+@@ -81,10 +81,10 @@ class UsernameLoginForm extends FormBase {
+     if ($this->usernameLoginVerifyUserRoles($username_roles)) {
+       $user = $username;
+       user_login_finalize($user);
+-      drupal_set_message($this->t('You are now logged in as %user.', ['%user' => $account->getUsername()]));	  
++      $this->messenger()->addStatus($this->t('You are now logged in as %user.', ['%user' => $account->getUsername()]));	  
+     }
+     else {
+-      drupal_set_message($this->t("Login failed."), 'error');
++      $this->messenger()->addError($this->t("Login failed."));
+     }
+   }
+ 
+diff --git a/username_login.install b/username_login.install
+index f570ef9..39c8940 100644
+--- a/username_login.install
++++ b/username_login.install
+@@ -9,7 +9,7 @@
+  * Implements hook_install().
+  */ 
+ function username_login_install() {
+-  drupal_set_message(t('WARNING: This module has security implications, because it allows you to log in with a user name. Any user can login as another user, just knowing the user name.'), 'warning');
++  \Drupal::messenger()->addWarning(t('WARNING: This module has security implications, because it allows you to log in with a user name. Any user can login as another user, just knowing the user name.'));
+ } 
+ 
+ /*

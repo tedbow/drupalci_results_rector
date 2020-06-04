@@ -1,0 +1,64 @@
+Rector 0.8.x-dev@7286f34
+Config file: rector.yml
+
+[parsing] modules/contrib/node_limit/node_limit.module
+[parsing] modules/contrib/node_limit/old/node_limit.api.php
+[parsing] modules/contrib/node_limit/old/node_limit.install
+[parsing] modules/contrib/node_limit/old/node_limit.module
+[parsing] modules/contrib/node_limit/old/node_limit_interval/node_limit_interval.install
+[parsing] modules/contrib/node_limit/old/node_limit_interval/node_limit_interval.module
+[parsing] modules/contrib/node_limit/old/node_limit_role/node_limit_role.install
+[parsing] modules/contrib/node_limit/old/node_limit_role/node_limit_role.module
+[parsing] modules/contrib/node_limit/old/node_limit_type/node_limit_type.install
+[parsing] modules/contrib/node_limit/old/node_limit_type/node_limit_type.module
+[parsing] modules/contrib/node_limit/old/node_limit_user/node_limit_user.install
+[parsing] modules/contrib/node_limit/old/node_limit_user/node_limit_user.module
+[parsing] modules/contrib/node_limit/old/node_limit_userofrole/node_limit_userofrole.install
+[parsing] modules/contrib/node_limit/old/node_limit_userofrole/node_limit_userofrole.module
+[parsing] modules/contrib/node_limit/src/Controller/NodeLimitListBuilder.php
+[parsing] modules/contrib/node_limit/src/Entity/NodeLimit.php
+[parsing] modules/contrib/node_limit/src/Form/NodeLimitDeleteForm.php
+[parsing] modules/contrib/node_limit/src/Form/NodeLimitForm.php
+[parsing] modules/contrib/node_limit/src/NodeLimitInterface.php
+[refactoring] modules/contrib/node_limit/node_limit.module
+[refactoring] modules/contrib/node_limit/old/node_limit.api.php
+[refactoring] modules/contrib/node_limit/old/node_limit.install
+[refactoring] modules/contrib/node_limit/old/node_limit.module
+[refactoring] modules/contrib/node_limit/old/node_limit_interval/node_limit_interval.install
+[refactoring] modules/contrib/node_limit/old/node_limit_interval/node_limit_interval.module
+[refactoring] modules/contrib/node_limit/old/node_limit_role/node_limit_role.install
+[refactoring] modules/contrib/node_limit/old/node_limit_role/node_limit_role.module
+[refactoring] modules/contrib/node_limit/old/node_limit_type/node_limit_type.install
+[refactoring] modules/contrib/node_limit/old/node_limit_type/node_limit_type.module
+[refactoring] modules/contrib/node_limit/old/node_limit_user/node_limit_user.install
+[refactoring] modules/contrib/node_limit/old/node_limit_user/node_limit_user.module
+[refactoring] modules/contrib/node_limit/old/node_limit_userofrole/node_limit_userofrole.install
+[refactoring] modules/contrib/node_limit/old/node_limit_userofrole/node_limit_userofrole.module
+[refactoring] modules/contrib/node_limit/src/Controller/NodeLimitListBuilder.php
+[refactoring] modules/contrib/node_limit/src/Entity/NodeLimit.php
+[refactoring] modules/contrib/node_limit/src/Form/NodeLimitDeleteForm.php
+[refactoring] modules/contrib/node_limit/src/Form/NodeLimitForm.php
+[refactoring] modules/contrib/node_limit/src/NodeLimitInterface.php
+[printing] modules/contrib/node_limit/node_limit.module
+[printing] modules/contrib/node_limit/old/node_limit.api.php
+[printing] modules/contrib/node_limit/old/node_limit.install
+[printing] modules/contrib/node_limit/old/node_limit.module
+[printing] modules/contrib/node_limit/old/node_limit_interval/node_limit_interval.install
+[printing] modules/contrib/node_limit/old/node_limit_interval/node_limit_interval.module
+[printing] modules/contrib/node_limit/old/node_limit_role/node_limit_role.install
+[printing] modules/contrib/node_limit/old/node_limit_role/node_limit_role.module
+[printing] modules/contrib/node_limit/old/node_limit_type/node_limit_type.install
+[printing] modules/contrib/node_limit/old/node_limit_type/node_limit_type.module
+[printing] modules/contrib/node_limit/old/node_limit_user/node_limit_user.install
+[printing] modules/contrib/node_limit/old/node_limit_user/node_limit_user.module
+[printing] modules/contrib/node_limit/old/node_limit_userofrole/node_limit_userofrole.install
+[printing] modules/contrib/node_limit/old/node_limit_userofrole/node_limit_userofrole.module
+[printing] modules/contrib/node_limit/src/Controller/NodeLimitListBuilder.php
+[printing] modules/contrib/node_limit/src/Entity/NodeLimit.php
+[printing] modules/contrib/node_limit/src/Form/NodeLimitDeleteForm.php
+[printing] modules/contrib/node_limit/src/Form/NodeLimitForm.php
+[printing] modules/contrib/node_limit/src/NodeLimitInterface.php
+
+
+ [OK] Rector is done!                                                           
+

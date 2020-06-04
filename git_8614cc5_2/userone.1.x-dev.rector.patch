@@ -1,0 +1,12 @@
+diff --git a/userone.info.yml b/userone.info.yml
+index 6b55b00..3143888 100644
+--- a/userone.info.yml
++++ b/userone.info.yml
+@@ -2,6 +2,7 @@ name: User One
+ type: module
+ description: Provide limited access to user one account even from administrators
+ core: 8.x
++core_version_requirement: ^8 || ^9
+ configure: userone.settings_form
+ dependencies:
+   - ban

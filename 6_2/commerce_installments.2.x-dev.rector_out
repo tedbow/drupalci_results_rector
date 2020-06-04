@@ -1,0 +1,461 @@
+Rector 0.8.x-dev@3465583
+Config file: rector.yml
+
+[parsing] modules/contrib/commerce_installments/commerce_installment.page.inc
+[parsing] modules/contrib/commerce_installments/commerce_installment_plan.page.inc
+[parsing] modules/contrib/commerce_installments/commerce_installments.module
+[parsing] modules/contrib/commerce_installments/installment.page.inc
+[parsing] modules/contrib/commerce_installments/installment_plan.page.inc
+[parsing] modules/contrib/commerce_installments/src/Annotation/InstallmentPlan.php
+[parsing] modules/contrib/commerce_installments/src/Controller/InstallmentPlanController.php
+[parsing] modules/contrib/commerce_installments/src/Controller/InstallmentPlanEntityController.php
+[parsing] modules/contrib/commerce_installments/src/Entity/Installment.php
+[parsing] modules/contrib/commerce_installments/src/Entity/InstallmentInterface.php
+[parsing] modules/contrib/commerce_installments/src/Entity/InstallmentPlan.php
+[parsing] modules/contrib/commerce_installments/src/Entity/InstallmentPlanInterface.php
+[parsing] modules/contrib/commerce_installments/src/Entity/InstallmentPlanMethod.php
+[parsing] modules/contrib/commerce_installments/src/Entity/InstallmentPlanMethodInterface.php
+[parsing] modules/contrib/commerce_installments/src/Entity/InstallmentPlanType.php
+[parsing] modules/contrib/commerce_installments/src/Entity/InstallmentPlanTypeInterface.php
+[parsing] modules/contrib/commerce_installments/src/Entity/InstallmentType.php
+[parsing] modules/contrib/commerce_installments/src/Entity/InstallmentTypeInterface.php
+[parsing] modules/contrib/commerce_installments/src/Event/FilterInstallmentPlanMethodsEvent.php
+[parsing] modules/contrib/commerce_installments/src/Event/InstallmentPlanMethodsEvents.php
+[parsing] modules/contrib/commerce_installments/src/Form/InstallmentForm.php
+[parsing] modules/contrib/commerce_installments/src/Form/InstallmentPlanForm.php
+[parsing] modules/contrib/commerce_installments/src/Form/InstallmentPlanMethodForm.php
+[parsing] modules/contrib/commerce_installments/src/Form/InstallmentPlanRevisionDeleteForm.php
+[parsing] modules/contrib/commerce_installments/src/Form/InstallmentPlanRevisionRevertForm.php
+[parsing] modules/contrib/commerce_installments/src/Form/InstallmentPlanRevisionRevertTranslationForm.php
+[parsing] modules/contrib/commerce_installments/src/Form/InstallmentPlanTypeDeleteForm.php
+[parsing] modules/contrib/commerce_installments/src/Form/InstallmentPlanTypeForm.php
+[parsing] modules/contrib/commerce_installments/src/Form/InstallmentTypeDeleteForm.php
+[parsing] modules/contrib/commerce_installments/src/Form/InstallmentTypeForm.php
+[parsing] modules/contrib/commerce_installments/src/InstallmentAccessControlHandler.php
+[parsing] modules/contrib/commerce_installments/src/InstallmentPlanAccessControlHandler.php
+[parsing] modules/contrib/commerce_installments/src/InstallmentPlanListBuilder.php
+[parsing] modules/contrib/commerce_installments/src/InstallmentPlanMethodListBuilder.php
+[parsing] modules/contrib/commerce_installments/src/InstallmentPlanMethodStorage.php
+[parsing] modules/contrib/commerce_installments/src/InstallmentPlanMethodStorageInterface.php
+[parsing] modules/contrib/commerce_installments/src/InstallmentPlanStorage.php
+[parsing] modules/contrib/commerce_installments/src/InstallmentPlanStorageInterface.php
+[parsing] modules/contrib/commerce_installments/src/InstallmentPlanTypeListBuilder.php
+[parsing] modules/contrib/commerce_installments/src/InstallmentTypeListBuilder.php
+[parsing] modules/contrib/commerce_installments/src/Plugin/Commerce/CheckoutFlow/InstallmentsDefault.php
+[parsing] modules/contrib/commerce_installments/src/Plugin/Commerce/CheckoutPane/InstallmentPaymentProcess.php
+[parsing] modules/contrib/commerce_installments/src/Plugin/Commerce/CheckoutPane/InstallmentSelection.php
+[parsing] modules/contrib/commerce_installments/src/Plugin/Commerce/InstallmentPlanMethod/InstallmentPlanMethodInterface.php
+[parsing] modules/contrib/commerce_installments/src/Plugin/Commerce/InstallmentPlanMethod/InstallmentPlanMethodMethodBase.php
+[parsing] modules/contrib/commerce_installments/src/Plugin/Commerce/InstallmentPlanMethod/Monthly.php
+[parsing] modules/contrib/commerce_installments/src/Plugin/InstallmentPlanMethodManager.php
+[parsing] modules/contrib/commerce_installments/src/Plugin/InstallmentPlanMethodPluginCollection.php
+[parsing] modules/contrib/commerce_installments/src/Routing/InstallmentHtmlRouteProvider.php
+[parsing] modules/contrib/commerce_installments/src/Routing/InstallmentPlanHtmlRouteProvider.php
+[parsing] modules/contrib/commerce_installments/src/Routing/RouteSubscriber.php
+[parsing] modules/contrib/commerce_installments/src/UrlParameterBuilderTrait.php
+[parsing] modules/contrib/commerce_installments/tests/src/Functional/LoadTest.php
+[refactoring] modules/contrib/commerce_installments/commerce_installment.page.inc
+[refactoring] modules/contrib/commerce_installments/commerce_installment_plan.page.inc
+[refactoring] modules/contrib/commerce_installments/commerce_installments.module
+[refactoring] modules/contrib/commerce_installments/installment.page.inc
+[refactoring] modules/contrib/commerce_installments/installment_plan.page.inc
+[refactoring] modules/contrib/commerce_installments/src/Annotation/InstallmentPlan.php
+[refactoring] modules/contrib/commerce_installments/src/Controller/InstallmentPlanController.php
+[refactoring] modules/contrib/commerce_installments/src/Controller/InstallmentPlanEntityController.php
+[refactoring] modules/contrib/commerce_installments/src/Entity/Installment.php
+[refactoring] modules/contrib/commerce_installments/src/Entity/InstallmentInterface.php
+[refactoring] modules/contrib/commerce_installments/src/Entity/InstallmentPlan.php
+[refactoring] modules/contrib/commerce_installments/src/Entity/InstallmentPlanInterface.php
+[refactoring] modules/contrib/commerce_installments/src/Entity/InstallmentPlanMethod.php
+[refactoring] modules/contrib/commerce_installments/src/Entity/InstallmentPlanMethodInterface.php
+[refactoring] modules/contrib/commerce_installments/src/Entity/InstallmentPlanType.php
+[refactoring] modules/contrib/commerce_installments/src/Entity/InstallmentPlanTypeInterface.php
+[refactoring] modules/contrib/commerce_installments/src/Entity/InstallmentType.php
+[refactoring] modules/contrib/commerce_installments/src/Entity/InstallmentTypeInterface.php
+[refactoring] modules/contrib/commerce_installments/src/Event/FilterInstallmentPlanMethodsEvent.php
+[refactoring] modules/contrib/commerce_installments/src/Event/InstallmentPlanMethodsEvents.php
+[refactoring] modules/contrib/commerce_installments/src/Form/InstallmentForm.php
+[refactoring] modules/contrib/commerce_installments/src/Form/InstallmentPlanForm.php
+[refactoring] modules/contrib/commerce_installments/src/Form/InstallmentPlanMethodForm.php
+[refactoring] modules/contrib/commerce_installments/src/Form/InstallmentPlanRevisionDeleteForm.php
+[refactoring] modules/contrib/commerce_installments/src/Form/InstallmentPlanRevisionRevertForm.php
+[refactoring] modules/contrib/commerce_installments/src/Form/InstallmentPlanRevisionRevertTranslationForm.php
+[refactoring] modules/contrib/commerce_installments/src/Form/InstallmentPlanTypeDeleteForm.php
+[refactoring] modules/contrib/commerce_installments/src/Form/InstallmentPlanTypeForm.php
+[refactoring] modules/contrib/commerce_installments/src/Form/InstallmentTypeDeleteForm.php
+[refactoring] modules/contrib/commerce_installments/src/Form/InstallmentTypeForm.php
+[refactoring] modules/contrib/commerce_installments/src/InstallmentAccessControlHandler.php
+[refactoring] modules/contrib/commerce_installments/src/InstallmentPlanAccessControlHandler.php
+[refactoring] modules/contrib/commerce_installments/src/InstallmentPlanListBuilder.php
+[refactoring] modules/contrib/commerce_installments/src/InstallmentPlanMethodListBuilder.php
+[refactoring] modules/contrib/commerce_installments/src/InstallmentPlanMethodStorage.php
+[refactoring] modules/contrib/commerce_installments/src/InstallmentPlanMethodStorageInterface.php
+[refactoring] modules/contrib/commerce_installments/src/InstallmentPlanStorage.php
+[refactoring] modules/contrib/commerce_installments/src/InstallmentPlanStorageInterface.php
+[refactoring] modules/contrib/commerce_installments/src/InstallmentPlanTypeListBuilder.php
+[refactoring] modules/contrib/commerce_installments/src/InstallmentTypeListBuilder.php
+[refactoring] modules/contrib/commerce_installments/src/Plugin/Commerce/CheckoutFlow/InstallmentsDefault.php
+[refactoring] modules/contrib/commerce_installments/src/Plugin/Commerce/CheckoutPane/InstallmentPaymentProcess.php
+[refactoring] modules/contrib/commerce_installments/src/Plugin/Commerce/CheckoutPane/InstallmentSelection.php
+[refactoring] modules/contrib/commerce_installments/src/Plugin/Commerce/InstallmentPlanMethod/InstallmentPlanMethodInterface.php
+[refactoring] modules/contrib/commerce_installments/src/Plugin/Commerce/InstallmentPlanMethod/InstallmentPlanMethodMethodBase.php
+[refactoring] modules/contrib/commerce_installments/src/Plugin/Commerce/InstallmentPlanMethod/Monthly.php
+[refactoring] modules/contrib/commerce_installments/src/Plugin/InstallmentPlanMethodManager.php
+[refactoring] modules/contrib/commerce_installments/src/Plugin/InstallmentPlanMethodPluginCollection.php
+[refactoring] modules/contrib/commerce_installments/src/Routing/InstallmentHtmlRouteProvider.php
+[refactoring] modules/contrib/commerce_installments/src/Routing/InstallmentPlanHtmlRouteProvider.php
+[refactoring] modules/contrib/commerce_installments/src/Routing/RouteSubscriber.php
+[refactoring] modules/contrib/commerce_installments/src/UrlParameterBuilderTrait.php
+[refactoring] modules/contrib/commerce_installments/tests/src/Functional/LoadTest.php
+[printing] modules/contrib/commerce_installments/commerce_installment.page.inc
+[printing] modules/contrib/commerce_installments/commerce_installment_plan.page.inc
+[printing] modules/contrib/commerce_installments/commerce_installments.module
+[printing] modules/contrib/commerce_installments/installment.page.inc
+[printing] modules/contrib/commerce_installments/installment_plan.page.inc
+[printing] modules/contrib/commerce_installments/src/Annotation/InstallmentPlan.php
+[printing] modules/contrib/commerce_installments/src/Controller/InstallmentPlanController.php
+[printing] modules/contrib/commerce_installments/src/Controller/InstallmentPlanEntityController.php
+[printing] modules/contrib/commerce_installments/src/Entity/Installment.php
+[printing] modules/contrib/commerce_installments/src/Entity/InstallmentInterface.php
+[printing] modules/contrib/commerce_installments/src/Entity/InstallmentPlan.php
+[printing] modules/contrib/commerce_installments/src/Entity/InstallmentPlanInterface.php
+[printing] modules/contrib/commerce_installments/src/Entity/InstallmentPlanMethod.php
+[printing] modules/contrib/commerce_installments/src/Entity/InstallmentPlanMethodInterface.php
+[printing] modules/contrib/commerce_installments/src/Entity/InstallmentPlanType.php
+[printing] modules/contrib/commerce_installments/src/Entity/InstallmentPlanTypeInterface.php
+[printing] modules/contrib/commerce_installments/src/Entity/InstallmentType.php
+[printing] modules/contrib/commerce_installments/src/Entity/InstallmentTypeInterface.php
+[printing] modules/contrib/commerce_installments/src/Event/FilterInstallmentPlanMethodsEvent.php
+[printing] modules/contrib/commerce_installments/src/Event/InstallmentPlanMethodsEvents.php
+[printing] modules/contrib/commerce_installments/src/Form/InstallmentForm.php
+[printing] modules/contrib/commerce_installments/src/Form/InstallmentPlanForm.php
+[printing] modules/contrib/commerce_installments/src/Form/InstallmentPlanMethodForm.php
+[printing] modules/contrib/commerce_installments/src/Form/InstallmentPlanRevisionDeleteForm.php
+[printing] modules/contrib/commerce_installments/src/Form/InstallmentPlanRevisionRevertForm.php
+[printing] modules/contrib/commerce_installments/src/Form/InstallmentPlanRevisionRevertTranslationForm.php
+[printing] modules/contrib/commerce_installments/src/Form/InstallmentPlanTypeDeleteForm.php
+[printing] modules/contrib/commerce_installments/src/Form/InstallmentPlanTypeForm.php
+[printing] modules/contrib/commerce_installments/src/Form/InstallmentTypeDeleteForm.php
+[printing] modules/contrib/commerce_installments/src/Form/InstallmentTypeForm.php
+[printing] modules/contrib/commerce_installments/src/InstallmentAccessControlHandler.php
+[printing] modules/contrib/commerce_installments/src/InstallmentPlanAccessControlHandler.php
+[printing] modules/contrib/commerce_installments/src/InstallmentPlanListBuilder.php
+[printing] modules/contrib/commerce_installments/src/InstallmentPlanMethodListBuilder.php
+[printing] modules/contrib/commerce_installments/src/InstallmentPlanMethodStorage.php
+[printing] modules/contrib/commerce_installments/src/InstallmentPlanMethodStorageInterface.php
+[printing] modules/contrib/commerce_installments/src/InstallmentPlanStorage.php
+[printing] modules/contrib/commerce_installments/src/InstallmentPlanStorageInterface.php
+[printing] modules/contrib/commerce_installments/src/InstallmentPlanTypeListBuilder.php
+[printing] modules/contrib/commerce_installments/src/InstallmentTypeListBuilder.php
+[printing] modules/contrib/commerce_installments/src/Plugin/Commerce/CheckoutFlow/InstallmentsDefault.php
+[printing] modules/contrib/commerce_installments/src/Plugin/Commerce/CheckoutPane/InstallmentPaymentProcess.php
+[printing] modules/contrib/commerce_installments/src/Plugin/Commerce/CheckoutPane/InstallmentSelection.php
+[printing] modules/contrib/commerce_installments/src/Plugin/Commerce/InstallmentPlanMethod/InstallmentPlanMethodInterface.php
+[printing] modules/contrib/commerce_installments/src/Plugin/Commerce/InstallmentPlanMethod/InstallmentPlanMethodMethodBase.php
+[printing] modules/contrib/commerce_installments/src/Plugin/Commerce/InstallmentPlanMethod/Monthly.php
+[printing] modules/contrib/commerce_installments/src/Plugin/InstallmentPlanMethodManager.php
+[printing] modules/contrib/commerce_installments/src/Plugin/InstallmentPlanMethodPluginCollection.php
+[printing] modules/contrib/commerce_installments/src/Routing/InstallmentHtmlRouteProvider.php
+[printing] modules/contrib/commerce_installments/src/Routing/InstallmentPlanHtmlRouteProvider.php
+[printing] modules/contrib/commerce_installments/src/Routing/RouteSubscriber.php
+[printing] modules/contrib/commerce_installments/src/UrlParameterBuilderTrait.php
+[printing] modules/contrib/commerce_installments/tests/src/Functional/LoadTest.php
+
+
+10 files with changes
+=====================
+
+1) modules/contrib/commerce_installments/src/Form/InstallmentForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -26,13 +26,13 @@
+
+     switch ($status) {
+       case SAVED_NEW:
+-        drupal_set_message($this->t('Created the %label Installment.', [
++        $this->messenger()->addStatus($this->t('Created the %label Installment.', [
+           '%label' => $entity->label(),
+         ]));
+         break;
+
+       default:
+-        drupal_set_message($this->t('Saved the %label Installment.', [
++        $this->messenger()->addStatus($this->t('Saved the %label Installment.', [
+           '%label' => $entity->label(),
+         ]));
+     }
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+2) modules/contrib/commerce_installments/src/Form/InstallmentPlanForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -58,13 +58,13 @@
+
+     switch ($status) {
+       case SAVED_NEW:
+-        drupal_set_message($this->t('Created the %label Installment Plan.', [
++        $this->messenger()->addStatus($this->t('Created the %label Installment Plan.', [
+           '%label' => $entity->label(),
+         ]));
+         break;
+
+       default:
+-        drupal_set_message($this->t('Saved the %label Installment Plan.', [
++        $this->messenger()->addStatus($this->t('Saved the %label Installment Plan.', [
+           '%label' => $entity->label(),
+         ]));
+     }
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+3) modules/contrib/commerce_installments/src/Form/InstallmentPlanMethodForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -146,7 +146,7 @@
+    */
+   public function save(array $form, FormStateInterface $form_state) {
+     $this->entity->save();
+-    drupal_set_message($this->t('Saved the %label installment plan method.', ['%label' => $this->entity->label()]));
++    $this->messenger()->addStatus($this->t('Saved the %label installment plan method.', ['%label' => $this->entity->label()]));
+     $form_state->setRedirect('entity.installment_plan_method.collection');
+   }
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+4) modules/contrib/commerce_installments/src/Form/InstallmentPlanRevisionDeleteForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -123,7 +123,7 @@
+     $this->InstallmentPlanStorage->deleteRevision($this->revision->getRevisionId());
+
+     $this->logger('content')->notice('Installment Plan: deleted %title revision %revision.', ['%title' => $this->revision->label(), '%revision' => $this->revision->getRevisionId()]);
+-    drupal_set_message($this->t('Revision from %revision-date of Installment Plan %title has been deleted.', ['%revision-date' => $this->dateFormatter->format($this->revision->getRevisionCreationTime()), '%title' => $this->revision->label()]));
++    $this->messenger()->addStatus($this->t('Revision from %revision-date of Installment Plan %title has been deleted.', ['%revision-date' => $this->dateFormatter->format($this->revision->getRevisionCreationTime()), '%title' => $this->revision->label()]));
+     $form_state->setRedirect(
+       'entity.installment_plan.canonical',
+        ['installment_plan' => $this->revision->id()] + $this->getUrlParameters()
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+5) modules/contrib/commerce_installments/src/Form/InstallmentPlanRevisionRevertForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -134,7 +134,7 @@
+     $this->revision->save();
+
+     $this->logger('content')->notice('Installment Plan: reverted %title revision %revision.', ['%title' => $this->revision->label(), '%revision' => $this->revision->getRevisionId()]);
+-    drupal_set_message($this->t('Installment Plan %title has been reverted to the revision from %revision-date.', ['%title' => $this->revision->label(), '%revision-date' => $this->dateFormatter->format($original_revision_timestamp)]));
++    $this->messenger()->addStatus($this->t('Installment Plan %title has been reverted to the revision from %revision-date.', ['%title' => $this->revision->label(), '%revision-date' => $this->dateFormatter->format($original_revision_timestamp)]));
+     $form_state->setRedirect(
+       'entity.installment_plan.version_history',
+       ['installment_plan' => $this->revision->id()] + $this->getUrlParameters()
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+6) modules/contrib/commerce_installments/src/Form/InstallmentPlanTypeDeleteForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -38,14 +38,12 @@
+   public function submitForm(array &$form, FormStateInterface $form_state) {
+     $this->entity->delete();
+
+-    drupal_set_message(
+-      $this->t('content @type: deleted @label.',
+-        [
+-          '@type' => $this->entity->bundle(),
+-          '@label' => $this->entity->label(),
+-        ]
+-        )
+-    );
++    $this->messenger()->addStatus($this->t('content @type: deleted @label.',
++      [
++        '@type' => $this->entity->bundle(),
++        '@label' => $this->entity->label(),
++      ]
++      ));
+
+     $form_state->setRedirectUrl($this->getCancelUrl());
+   }
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+7) modules/contrib/commerce_installments/src/Form/InstallmentPlanTypeForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -50,7 +50,7 @@
+
+     switch ($status) {
+       case SAVED_NEW:
+-        drupal_set_message($this->t('Created the %label Installment Plan type.', [
++        $this->messenger()->addStatus($this->t('Created the %label Installment Plan type.', [
+           '%label' => $installment_plan_type->label(),
+         ]));
+         commerce_installments_add_installments_field($this->entity);
+@@ -58,7 +58,7 @@
+         break;
+
+       default:
+-        drupal_set_message($this->t('Saved the %label Installment Plan type.', [
++        $this->messenger()->addStatus($this->t('Saved the %label Installment Plan type.', [
+           '%label' => $installment_plan_type->label(),
+         ]));
+     }
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+8) modules/contrib/commerce_installments/src/Form/InstallmentTypeDeleteForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -38,14 +38,12 @@
+   public function submitForm(array &$form, FormStateInterface $form_state) {
+     $this->entity->delete();
+
+-    drupal_set_message(
+-      $this->t('content @type: deleted @label.',
+-        [
+-          '@type' => $this->entity->bundle(),
+-          '@label' => $this->entity->label(),
+-        ]
+-        )
+-    );
++    $this->messenger()->addStatus($this->t('content @type: deleted @label.',
++      [
++        '@type' => $this->entity->bundle(),
++        '@label' => $this->entity->label(),
++      ]
++      ));
+
+     $form_state->setRedirectUrl($this->getCancelUrl());
+   }
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+9) modules/contrib/commerce_installments/src/Form/InstallmentTypeForm.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -79,13 +79,13 @@
+
+     switch ($status) {
+       case SAVED_NEW:
+-        drupal_set_message($this->t('Created the %label Installment type.', [
++        $this->messenger()->addStatus($this->t('Created the %label Installment type.', [
+           '%label' => $installment_type->label(),
+         ]));
+         break;
+
+       default:
+-        drupal_set_message($this->t('Saved the %label Installment type.', [
++        $this->messenger()->addStatus($this->t('Saved the %label Installment type.', [
+           '%label' => $installment_type->label(),
+         ]));
+     }
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+10) modules/contrib/commerce_installments/src/Plugin/Commerce/CheckoutPane/InstallmentPaymentProcess.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -104,7 +104,7 @@
+
+     // The payment gateway is currently always required to be set.
+     if ($this->order->get('payment_gateway')->isEmpty()) {
+-      drupal_set_message($this->t('No payment gateway selected.'), 'error');
++      $this->messenger()->addError($this->t('No payment gateway selected.'));
+       $this->redirectToPreviousStep();
+     }
+
+@@ -126,16 +126,16 @@
+       $this->checkoutFlow->redirectToStep($this->checkoutFlow->getNextStepId($this->getStepId()));
+     }
+     elseif ($payment_gateway_plugin instanceof OffsitePaymentGatewayInterface) {
+-      drupal_set_message($this->t('Offsite payment gateway selected.'), 'error');
++      $this->messenger()->addError($this->t('Offsite payment gateway selected.'));
+       $this->redirectToPreviousStep();
+     }
+     elseif ($payment_gateway_plugin instanceof ManualPaymentGatewayInterface) {
+-      drupal_set_message($this->t('Manual payment gateway selected.'), 'error');
++      $this->messenger()->addError($this->t('Manual payment gateway selected.'));
+       $this->redirectToPreviousStep();
+     }
+
+     // If we get to here, then something went wrong.
+-    drupal_set_message($this->t('Something went wrong in setting up your installment plan.'), 'error');
++    $this->messenger()->addError($this->t('Something went wrong in setting up your installment plan.'));
+     $this->redirectToPreviousStep();
+   }
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DrupalSetMessageRector
+
+
+ [OK] Rector is done! 10 files have been changed.                               
+

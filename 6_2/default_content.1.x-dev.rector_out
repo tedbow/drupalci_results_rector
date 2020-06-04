@@ -1,0 +1,52 @@
+Rector 0.8.x-dev@3465583
+Config file: rector.yml
+
+[parsing] modules/contrib/default_content/default_content.module
+[parsing] modules/contrib/default_content/drush/default_content.drush.inc
+[parsing] modules/contrib/default_content/src/Commands/DefaultContentCommands.php
+[parsing] modules/contrib/default_content/src/Config/DefaultContentConfigSubscriber.php
+[parsing] modules/contrib/default_content/src/Event/DefaultContentEvents.php
+[parsing] modules/contrib/default_content/src/Event/ExportEvent.php
+[parsing] modules/contrib/default_content/src/Event/ImportEvent.php
+[parsing] modules/contrib/default_content/src/Exporter.php
+[parsing] modules/contrib/default_content/src/ExporterInterface.php
+[parsing] modules/contrib/default_content/src/Importer.php
+[parsing] modules/contrib/default_content/src/ImporterInterface.php
+[parsing] modules/contrib/default_content/src/Scanner.php
+[parsing] modules/contrib/default_content/src/ScannerInterface.php
+[parsing] modules/contrib/default_content/tests/src/Functional/DefaultContentTest.php
+[parsing] modules/contrib/default_content/tests/src/Kernel/ExporterIntegrationTest.php
+[refactoring] modules/contrib/default_content/default_content.module
+[refactoring] modules/contrib/default_content/drush/default_content.drush.inc
+[refactoring] modules/contrib/default_content/src/Commands/DefaultContentCommands.php
+[refactoring] modules/contrib/default_content/src/Config/DefaultContentConfigSubscriber.php
+[refactoring] modules/contrib/default_content/src/Event/DefaultContentEvents.php
+[refactoring] modules/contrib/default_content/src/Event/ExportEvent.php
+[refactoring] modules/contrib/default_content/src/Event/ImportEvent.php
+[refactoring] modules/contrib/default_content/src/Exporter.php
+[refactoring] modules/contrib/default_content/src/ExporterInterface.php
+[refactoring] modules/contrib/default_content/src/Importer.php
+[refactoring] modules/contrib/default_content/src/ImporterInterface.php
+[refactoring] modules/contrib/default_content/src/Scanner.php
+[refactoring] modules/contrib/default_content/src/ScannerInterface.php
+[refactoring] modules/contrib/default_content/tests/src/Functional/DefaultContentTest.php
+[refactoring] modules/contrib/default_content/tests/src/Kernel/ExporterIntegrationTest.php
+[printing] modules/contrib/default_content/default_content.module
+[printing] modules/contrib/default_content/drush/default_content.drush.inc
+[printing] modules/contrib/default_content/src/Commands/DefaultContentCommands.php
+[printing] modules/contrib/default_content/src/Config/DefaultContentConfigSubscriber.php
+[printing] modules/contrib/default_content/src/Event/DefaultContentEvents.php
+[printing] modules/contrib/default_content/src/Event/ExportEvent.php
+[printing] modules/contrib/default_content/src/Event/ImportEvent.php
+[printing] modules/contrib/default_content/src/Exporter.php
+[printing] modules/contrib/default_content/src/ExporterInterface.php
+[printing] modules/contrib/default_content/src/Importer.php
+[printing] modules/contrib/default_content/src/ImporterInterface.php
+[printing] modules/contrib/default_content/src/Scanner.php
+[printing] modules/contrib/default_content/src/ScannerInterface.php
+[printing] modules/contrib/default_content/tests/src/Functional/DefaultContentTest.php
+[printing] modules/contrib/default_content/tests/src/Kernel/ExporterIntegrationTest.php
+
+
+ [OK] Rector is done!                                                           
+

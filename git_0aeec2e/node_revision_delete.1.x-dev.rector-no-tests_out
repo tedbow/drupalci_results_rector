@@ -1,0 +1,70 @@
+Rector 0.8.x-dev@7286f34
+Config file: rector-no-tests.yml
+
+[parsing] modules/contrib/node_revision_delete/modules/node_revision_generate/node_revision_generate.module
+[parsing] modules/contrib/node_revision_delete/modules/node_revision_generate/src/Form/NodeRevisionGenerateForm.php
+[parsing] modules/contrib/node_revision_delete/modules/node_revision_generate/src/NodeRevisionGenerate.php
+[parsing] modules/contrib/node_revision_delete/modules/node_revision_generate/src/NodeRevisionGenerateBatch.php
+[parsing] modules/contrib/node_revision_delete/modules/node_revision_generate/src/NodeRevisionGenerateInterface.php
+[parsing] modules/contrib/node_revision_delete/node_revision_delete.drush.inc
+[parsing] modules/contrib/node_revision_delete/node_revision_delete.install
+[parsing] modules/contrib/node_revision_delete/node_revision_delete.module
+[parsing] modules/contrib/node_revision_delete/src/Commands/NodeRevisionDeleteCommands.php
+[parsing] modules/contrib/node_revision_delete/src/Form/AdminSettingsForm.php
+[parsing] modules/contrib/node_revision_delete/src/Form/CandidateNodesForm.php
+[parsing] modules/contrib/node_revision_delete/src/Form/CandidateNodesRevisionsDeleteForm.php
+[parsing] modules/contrib/node_revision_delete/src/Form/CandidateRevisionsContentTypeForm.php
+[parsing] modules/contrib/node_revision_delete/src/Form/CandidateRevisionsNodeForm.php
+[parsing] modules/contrib/node_revision_delete/src/Form/ContentTypeConfigurationDeleteForm.php
+[parsing] modules/contrib/node_revision_delete/src/Form/ContentTypeRevisionsDeleteForm.php
+[parsing] modules/contrib/node_revision_delete/src/NodeRevisionDelete.php
+[parsing] modules/contrib/node_revision_delete/src/NodeRevisionDeleteBatch.php
+[parsing] modules/contrib/node_revision_delete/src/NodeRevisionDeleteInterface.php
+[parsing] modules/contrib/node_revision_delete/src/Utility/Donation.php
+[parsing] modules/contrib/node_revision_delete/src/Utility/Time.php
+[refactoring] modules/contrib/node_revision_delete/modules/node_revision_generate/node_revision_generate.module
+[refactoring] modules/contrib/node_revision_delete/modules/node_revision_generate/src/Form/NodeRevisionGenerateForm.php
+[refactoring] modules/contrib/node_revision_delete/modules/node_revision_generate/src/NodeRevisionGenerate.php
+[refactoring] modules/contrib/node_revision_delete/modules/node_revision_generate/src/NodeRevisionGenerateBatch.php
+[refactoring] modules/contrib/node_revision_delete/modules/node_revision_generate/src/NodeRevisionGenerateInterface.php
+[refactoring] modules/contrib/node_revision_delete/node_revision_delete.drush.inc
+[refactoring] modules/contrib/node_revision_delete/node_revision_delete.install
+[refactoring] modules/contrib/node_revision_delete/node_revision_delete.module
+[refactoring] modules/contrib/node_revision_delete/src/Commands/NodeRevisionDeleteCommands.php
+[refactoring] modules/contrib/node_revision_delete/src/Form/AdminSettingsForm.php
+[refactoring] modules/contrib/node_revision_delete/src/Form/CandidateNodesForm.php
+[refactoring] modules/contrib/node_revision_delete/src/Form/CandidateNodesRevisionsDeleteForm.php
+[refactoring] modules/contrib/node_revision_delete/src/Form/CandidateRevisionsContentTypeForm.php
+[refactoring] modules/contrib/node_revision_delete/src/Form/CandidateRevisionsNodeForm.php
+[refactoring] modules/contrib/node_revision_delete/src/Form/ContentTypeConfigurationDeleteForm.php
+[refactoring] modules/contrib/node_revision_delete/src/Form/ContentTypeRevisionsDeleteForm.php
+[refactoring] modules/contrib/node_revision_delete/src/NodeRevisionDelete.php
+[refactoring] modules/contrib/node_revision_delete/src/NodeRevisionDeleteBatch.php
+[refactoring] modules/contrib/node_revision_delete/src/NodeRevisionDeleteInterface.php
+[refactoring] modules/contrib/node_revision_delete/src/Utility/Donation.php
+[refactoring] modules/contrib/node_revision_delete/src/Utility/Time.php
+[printing] modules/contrib/node_revision_delete/modules/node_revision_generate/node_revision_generate.module
+[printing] modules/contrib/node_revision_delete/modules/node_revision_generate/src/Form/NodeRevisionGenerateForm.php
+[printing] modules/contrib/node_revision_delete/modules/node_revision_generate/src/NodeRevisionGenerate.php
+[printing] modules/contrib/node_revision_delete/modules/node_revision_generate/src/NodeRevisionGenerateBatch.php
+[printing] modules/contrib/node_revision_delete/modules/node_revision_generate/src/NodeRevisionGenerateInterface.php
+[printing] modules/contrib/node_revision_delete/node_revision_delete.drush.inc
+[printing] modules/contrib/node_revision_delete/node_revision_delete.install
+[printing] modules/contrib/node_revision_delete/node_revision_delete.module
+[printing] modules/contrib/node_revision_delete/src/Commands/NodeRevisionDeleteCommands.php
+[printing] modules/contrib/node_revision_delete/src/Form/AdminSettingsForm.php
+[printing] modules/contrib/node_revision_delete/src/Form/CandidateNodesForm.php
+[printing] modules/contrib/node_revision_delete/src/Form/CandidateNodesRevisionsDeleteForm.php
+[printing] modules/contrib/node_revision_delete/src/Form/CandidateRevisionsContentTypeForm.php
+[printing] modules/contrib/node_revision_delete/src/Form/CandidateRevisionsNodeForm.php
+[printing] modules/contrib/node_revision_delete/src/Form/ContentTypeConfigurationDeleteForm.php
+[printing] modules/contrib/node_revision_delete/src/Form/ContentTypeRevisionsDeleteForm.php
+[printing] modules/contrib/node_revision_delete/src/NodeRevisionDelete.php
+[printing] modules/contrib/node_revision_delete/src/NodeRevisionDeleteBatch.php
+[printing] modules/contrib/node_revision_delete/src/NodeRevisionDeleteInterface.php
+[printing] modules/contrib/node_revision_delete/src/Utility/Donation.php
+[printing] modules/contrib/node_revision_delete/src/Utility/Time.php
+
+
+ [OK] Rector is done!                                                           
+

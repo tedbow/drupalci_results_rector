@@ -1,0 +1,26 @@
+diff --git a/src/Form/UserNamePatternConfigForm.php b/src/Form/UserNamePatternConfigForm.php
+index dbd5c95..a413180 100644
+--- a/src/Form/UserNamePatternConfigForm.php
++++ b/src/Form/UserNamePatternConfigForm.php
+@@ -104,7 +104,7 @@ class UserNamePatternConfigForm extends ConfigFormBase {
+    *   Options for profile fields.
+    */
+   public function get_profile_fields($entity_type, $bundle) {
+-    $fields = \Drupal::entityManager()->getFieldDefinitions($entity_type, $bundle);
++    $fields = \Drupal::service('entity_field.manager')->getFieldDefinitions($entity_type, $bundle);
+     foreach ($fields as $field_name => $field_definition) {
+       if (!empty($field_definition->getTargetBundle()) && $field_definition->get('required') == 1) {
+         $listFields[$field_name]['type'] = $field_definition->getType();
+diff --git a/src/Plugin/Validation/Constraint/UserNamePatternConstraintValidator.php b/src/Plugin/Validation/Constraint/UserNamePatternConstraintValidator.php
+index 99ede16..5c6086e 100644
+--- a/src/Plugin/Validation/Constraint/UserNamePatternConstraintValidator.php
++++ b/src/Plugin/Validation/Constraint/UserNamePatternConstraintValidator.php
+@@ -49,7 +49,7 @@ class UserNamePatternConstraintValidator extends ConstraintValidator {
+     ) {
+       $this->context->addViolation($constraint->illegalMessage);
+     }
+-    if (Unicode::strlen($name) > USERNAME_MAX_LENGTH) {
++    if (mb_strlen($name) > USERNAME_MAX_LENGTH) {
+       $this->context->addViolation($constraint->tooLongMessage, ['%name' => $name, '%max' => USERNAME_MAX_LENGTH]);
+     }
+   }

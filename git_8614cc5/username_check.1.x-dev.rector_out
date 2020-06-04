@@ -1,0 +1,169 @@
+Rector 0.8.x-dev@cf3198a
+Config file: rector.yml
+
+[parsing] modules/contrib/username_check/src/Controller/DefaultController.php
+[parsing] modules/contrib/username_check/src/Form/UsernameCheckSettings.php
+[parsing] modules/contrib/username_check/username_check.admin.inc
+[parsing] modules/contrib/username_check/username_check.module
+[parsing] modules/contrib/username_check/username_check.unique.inc
+[refactoring] modules/contrib/username_check/src/Controller/DefaultController.php
+[refactoring] modules/contrib/username_check/src/Form/UsernameCheckSettings.php
+[refactoring] modules/contrib/username_check/username_check.admin.inc
+[refactoring] modules/contrib/username_check/username_check.module
+[refactoring] modules/contrib/username_check/username_check.unique.inc
+[printing] modules/contrib/username_check/src/Controller/DefaultController.php
+[printing] modules/contrib/username_check/src/Form/UsernameCheckSettings.php
+[printing] modules/contrib/username_check/username_check.admin.inc
+[printing] modules/contrib/username_check/username_check.module
+[printing] modules/contrib/username_check/username_check.unique.inc
+
+
+3 files with changes
+====================
+
+1) modules/contrib/username_check/src/Controller/DefaultController.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -37,8 +37,8 @@
+         $ret = $this->_username_check_is_user_exists($username);
+         if ($ret) {
+           $url = Url::fromRoute("user.page");
+-          $login_link = \Drupal::l(t('login'), $url);
+-          $forgot_link = \Drupal::l(t(' password'), $url);
++          $login_link = \Drupal::service('link_generator')->generate(t('login'), $url);
++          $forgot_link = \Drupal::service('link_generator')->generate(t(' password'), $url);
+           $output['allowed'] = FALSE;
+           $output['msg'] = t('The username %username is already taken. If this is you, please ' . $login_link . ' or if you\'ve forgotten your password, ' . $forgot_link . '.', [
+             '%username' => $username
+@@ -56,7 +56,7 @@
+  * Query user table to check if such username is already exists.
+  */
+ function _username_check_is_user_exists($username) {
+-  return db_query("SELECT COUNT(u.name) count FROM {users_field_data} u WHERE LOWER(u.name) = LOWER(:username)", array(':username' => $username))->fetchField();
++  return \Drupal::database()->query("SELECT COUNT(u.name) count FROM {users_field_data} u WHERE LOWER(u.name) = LOWER(:username)", array(':username' => $username))->fetchField();
+ }
+
+   public function username_check_profile_callback() {
+@@ -109,7 +109,7 @@
+  */
+ function _username_check_is_current_user($username) {
+   $account = \Drupal::currentUser();
+-  return db_query("SELECT COUNT(u.name) count FROM {users_field_data} u WHERE LOWER(u.name) = LOWER(:username) AND u.uid =" . $account->id(), array(':username' => $username))->fetchField();
++  return \Drupal::database()->query("SELECT COUNT(u.name) count FROM {users_field_data} u WHERE LOWER(u.name) = LOWER(:username) AND u.uid =" . $account->id(), array(':username' => $username))->fetchField();
+ }
+
+   public function username_check_mail_callback() {
+@@ -134,8 +134,8 @@
+
+         if ($ret) {
+           $url = Url::fromRoute("user.page");
+-          $login_link = \Drupal::l(t('login'), $url);
+-          $forgot_link = \Drupal::l(t(' password'), $url);
++          $login_link = \Drupal::service('link_generator')->generate(t('login'), $url);
++          $forgot_link = \Drupal::service('link_generator')->generate(t(' password'), $url);
+           $output['allowed'] = FALSE;
+           $output['msg'] = t('The e-mail address %mail is already in the system, you have an account here. Please ' . $login_link . ' or if you\'ve forgotten your password, ' . $forgot_link . '.', [
+             '%mail' => $mail
+@@ -154,7 +154,7 @@
+  * Query user table to check if such mail is already exists.
+  */
+ public function _username_check_is_mail_exists($mail) {
+-  return db_query("SELECT COUNT(u.mail) count FROM {users_field_data} u WHERE LOWER(u.mail) = LOWER(@mail)", array('@mail' => $mail))->fetchField();
++  return \Drupal::database()->query("SELECT COUNT(u.mail) count FROM {users_field_data} u WHERE LOWER(u.mail) = LOWER(@mail)", array('@mail' => $mail))->fetchField();
+ }
+
+ }
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DBQueryRector
+ * DrupalRector\Rector\Deprecation\DrupalLRector
+
+
+2) modules/contrib/username_check/src/Form/UsernameCheckSettings.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -45,7 +45,7 @@
+     return ['username_check.settings'];
+   }
+
+-  public function buildForm(array $form, \Drupal\Core\Form\FormStateInterface $form_state) {
++  public function buildForm(array $form, FormStateInterface $form_state) {
+     $form = [];
+     $config = \Drupal::config('username_check.settings');
+     $form['username_check_mode'] = [
+    ----------- end diff -----------
+
+
+3) modules/contrib/username_check/username_check.unique.inc
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -1,5 +1,6 @@
+ <?php
+
++use Drupal\Core\Url;
+ /**
+  * @file
+  * AJAX callbacks for the username_check module.
+@@ -30,7 +31,7 @@
+
+       if ($ret) {
+         $output['allowed'] = FALSE;
+-        $output['msg'] = t('The username %username is already taken. If this is you, please ' . \Drupal::l('login,', \Drupal\Core\Url::fromRoute('user.page')) . ' or if you\'ve forgotten your password, ' . \Drupal::l('request a new password', \Drupal\Core\Url::fromRoute('user.pass')) . '.', array('%username' => $username));
++        $output['msg'] = t('The username %username is already taken. If this is you, please ' . \Drupal::service('link_generator')->generate('login,', Url::fromRoute('user.page')) . ' or if you\'ve forgotten your password, ' . \Drupal::service('link_generator')->generate('request a new password', Url::fromRoute('user.pass')) . '.', array('%username' => $username));
+       }
+       else {
+         $output['allowed'] = TRUE;
+@@ -45,7 +46,7 @@
+  * Query user table to check if such username is already exists.
+  */
+ function _username_check_is_user_exists($username) {
+-  return db_query("SELECT COUNT(u.name) count FROM {users} u WHERE LOWER(u.name) = LOWER(:username)", array(':username' => $username))->fetchField();
++  return \Drupal::database()->query("SELECT COUNT(u.name) count FROM {users} u WHERE LOWER(u.name) = LOWER(:username)", array(':username' => $username))->fetchField();
+ }
+
+
+@@ -99,7 +100,7 @@
+  */
+ function _username_check_is_current_user($username) {
+   $user = \Drupal::currentUser();
+-  return db_query("SELECT COUNT(u.name) count FROM {users} u WHERE LOWER(u.name) = LOWER(:username) AND u.uid =" . $user->uid, array(':username' => $username))->fetchField();
++  return \Drupal::database()->query("SELECT COUNT(u.name) count FROM {users} u WHERE LOWER(u.name) = LOWER(:username) AND u.uid =" . $user->uid, array(':username' => $username))->fetchField();
+ }
+
+
+@@ -134,7 +135,7 @@
+
+       if ($ret) {
+         $output['allowed'] = FALSE;
+-        $output['msg'] = t('The e-mail address %mail is already in the system, you have an account here. Please ' . \Drupal::l('login,', \Drupal\Core\Url::fromRoute('user.page')) . ' or if you\'ve forgotten your password, ' . \Drupal::l('request a new password', \Drupal\Core\Url::fromRoute('user.pass')) .'.', array('%mail' => $mail));
++        $output['msg'] = t('The e-mail address %mail is already in the system, you have an account here. Please ' . \Drupal::service('link_generator')->generate('login,', Url::fromRoute('user.page')) . ' or if you\'ve forgotten your password, ' . \Drupal::service('link_generator')->generate('request a new password', Url::fromRoute('user.pass')) .'.', array('%mail' => $mail));
+       }
+       else {
+         $output['allowed'] = TRUE;
+@@ -149,5 +150,5 @@
+  * Query user table to check if such mail is already exists.
+  */
+ function _username_check_is_mail_exists($mail) {
+-  return db_query("SELECT COUNT(u.mail) count FROM {users} u WHERE LOWER(u.mail) = LOWER(:mail)", array(':mail' => $mail))->fetchField();
++  return \Drupal::database()->query("SELECT COUNT(u.mail) count FROM {users} u WHERE LOWER(u.mail) = LOWER(:mail)", array(':mail' => $mail))->fetchField();
+ }
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\DBQueryRector
+ * DrupalRector\Rector\Deprecation\DrupalLRector
+
+
+ [OK] Rector is done! 3 files have been changed.                                
+

@@ -1,0 +1,9 @@
+diff --git a/builder_notes.info.yml b/builder_notes.info.yml
+index b049580..57b3963 100644
+--- a/builder_notes.info.yml
++++ b/builder_notes.info.yml
+@@ -4,3 +4,4 @@ type: module
+ dependencies:
+   - field_ui
+ core: 8.x
++core_version_requirement: ^8 || ^9

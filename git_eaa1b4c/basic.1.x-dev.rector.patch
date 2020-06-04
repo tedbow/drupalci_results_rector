@@ -1,0 +1,13 @@
+diff --git a/basic.theme b/basic.theme
+index 5781cc0..39ed76e 100644
+--- a/basic.theme
++++ b/basic.theme
+@@ -24,7 +24,7 @@ function basic_preprocess_html(&$variables) {
+   if (!$variables['is_front']) {
+     // Add unique classes for each page and website section.
+     $path = \Drupal::service('path.current')->getPath();
+-    $alias = \Drupal::service('path.alias_manager')->getAliasByPath($path);
++    $alias = \Drupal::service('path_alias.manager')->getAliasByPath($path);
+     $alias = trim($alias, '/');
+     if (!empty($alias)) {
+       $name = str_replace('/', '-', $alias);

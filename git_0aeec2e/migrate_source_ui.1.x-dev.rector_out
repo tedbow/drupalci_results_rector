@@ -1,0 +1,22 @@
+Rector 0.8.x-dev@7286f34
+Config file: rector.yml
+
+[parsing] modules/contrib/migrate_source_ui/migrate_source_ui.module
+[parsing] modules/contrib/migrate_source_ui/src/Form/MigrateSourceUiForm.php
+[parsing] modules/contrib/migrate_source_ui/src/MigrateBatchExecutable.php
+[parsing] modules/contrib/migrate_source_ui/src/StubMigrationMessage.php
+[parsing] modules/contrib/migrate_source_ui/tests/src/Functional/LoadTest.php
+[refactoring] modules/contrib/migrate_source_ui/migrate_source_ui.module
+[refactoring] modules/contrib/migrate_source_ui/src/Form/MigrateSourceUiForm.php
+[refactoring] modules/contrib/migrate_source_ui/src/MigrateBatchExecutable.php
+[refactoring] modules/contrib/migrate_source_ui/src/StubMigrationMessage.php
+[refactoring] modules/contrib/migrate_source_ui/tests/src/Functional/LoadTest.php
+[printing] modules/contrib/migrate_source_ui/migrate_source_ui.module
+[printing] modules/contrib/migrate_source_ui/src/Form/MigrateSourceUiForm.php
+[printing] modules/contrib/migrate_source_ui/src/MigrateBatchExecutable.php
+[printing] modules/contrib/migrate_source_ui/src/StubMigrationMessage.php
+[printing] modules/contrib/migrate_source_ui/tests/src/Functional/LoadTest.php
+
+
+ [OK] Rector is done!                                                           
+

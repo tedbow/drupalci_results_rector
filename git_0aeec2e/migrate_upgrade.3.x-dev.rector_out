@@ -1,0 +1,28 @@
+Rector 0.8.x-dev@7286f34
+Config file: rector.yml
+
+[parsing] modules/contrib/migrate_upgrade/migrate_upgrade.drush.inc
+[parsing] modules/contrib/migrate_upgrade/src/Commands/MigrateUpgradeCommands.php
+[parsing] modules/contrib/migrate_upgrade/src/DrushLogMigrateMessage.php
+[parsing] modules/contrib/migrate_upgrade/src/MigrateUpgradeDrushRunner.php
+[parsing] modules/contrib/migrate_upgrade/tests/src/Functional/MigrateUpgradeCommandsTest.php
+[parsing] modules/contrib/migrate_upgrade/tests/src/Kernel/DrushTest.php
+[parsing] modules/contrib/migrate_upgrade/tests/src/Unit/MigrateUpgradeDrushRunnerTest.php
+[refactoring] modules/contrib/migrate_upgrade/migrate_upgrade.drush.inc
+[refactoring] modules/contrib/migrate_upgrade/src/Commands/MigrateUpgradeCommands.php
+[refactoring] modules/contrib/migrate_upgrade/src/DrushLogMigrateMessage.php
+[refactoring] modules/contrib/migrate_upgrade/src/MigrateUpgradeDrushRunner.php
+[refactoring] modules/contrib/migrate_upgrade/tests/src/Functional/MigrateUpgradeCommandsTest.php
+[refactoring] modules/contrib/migrate_upgrade/tests/src/Kernel/DrushTest.php
+[refactoring] modules/contrib/migrate_upgrade/tests/src/Unit/MigrateUpgradeDrushRunnerTest.php
+[printing] modules/contrib/migrate_upgrade/migrate_upgrade.drush.inc
+[printing] modules/contrib/migrate_upgrade/src/Commands/MigrateUpgradeCommands.php
+[printing] modules/contrib/migrate_upgrade/src/DrushLogMigrateMessage.php
+[printing] modules/contrib/migrate_upgrade/src/MigrateUpgradeDrushRunner.php
+[printing] modules/contrib/migrate_upgrade/tests/src/Functional/MigrateUpgradeCommandsTest.php
+[printing] modules/contrib/migrate_upgrade/tests/src/Kernel/DrushTest.php
+[printing] modules/contrib/migrate_upgrade/tests/src/Unit/MigrateUpgradeDrushRunnerTest.php
+
+
+ [OK] Rector is done!                                                           
+
