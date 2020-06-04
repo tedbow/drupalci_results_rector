@@ -1,0 +1,46 @@
+diff --git a/modules/views_bulk_operations_example/src/Plugin/Action/ViewsBulkOperationExampleAction.php b/modules/views_bulk_operations_example/src/Plugin/Action/ViewsBulkOperationExampleAction.php
+index d4262e5..5ea536d 100644
+--- a/modules/views_bulk_operations_example/src/Plugin/Action/ViewsBulkOperationExampleAction.php
++++ b/modules/views_bulk_operations_example/src/Plugin/Action/ViewsBulkOperationExampleAction.php
+@@ -40,7 +40,7 @@ class ViewsBulkOperationExampleAction extends ViewsBulkOperationsActionBase impl
+ 
+     // Do some processing..
+     // ...
+-    drupal_set_message($entity->label());
++    $this->messenger()->addStatus($entity->label());
+     return sprintf('Example action (configuration: %s)', print_r($this->configuration, TRUE));
+   }
+ 
+diff --git a/src/Form/ViewsBulkOperationsFormTrait.php b/src/Form/ViewsBulkOperationsFormTrait.php
+index fba98fc..951dc14 100644
+--- a/src/Form/ViewsBulkOperationsFormTrait.php
++++ b/src/Form/ViewsBulkOperationsFormTrait.php
+@@ -190,7 +190,7 @@ trait ViewsBulkOperationsFormTrait {
+    */
+   public function cancelForm(array &$form, FormStateInterface $form_state) {
+     $form_data = $form_state->get('views_bulk_operations');
+-    drupal_set_message($this->t('Canceled "%action".', ['%action' => $form_data['action_label']]));
++    \Drupal::messenger()->addStatus($this->t('Canceled "%action".', ['%action' => $form_data['action_label']]));
+     $form_state->setRedirectUrl($form_data['redirect_url']);
+   }
+ 
+diff --git a/src/Plugin/Action/CancelUserAction.php b/src/Plugin/Action/CancelUserAction.php
+index 1e73ffc..bd39fe7 100644
+--- a/src/Plugin/Action/CancelUserAction.php
++++ b/src/Plugin/Action/CancelUserAction.php
+@@ -92,12 +92,12 @@ class CancelUserAction extends ViewsBulkOperationsActionBase implements Containe
+    */
+   public function execute($account = NULL) {
+     if ($account->id() === $this->currentUser->id() && (empty($this->context['list']) || count($this->context['list'] > 1))) {
+-      drupal_set_message($this->t('The current user account cannot be canceled in a batch operation. Select your account only or cancel it from your account page.'), 'error');
++      $this->messenger()->addError($this->t('The current user account cannot be canceled in a batch operation. Select your account only or cancel it from your account page.'));
+     }
+     elseif (intval($account->id()) === 1) {
+-      drupal_set_message($this->t('The user 1 account (%label) cannot be canceled.', [
++      $this->messenger()->addError($this->t('The user 1 account (%label) cannot be canceled.', [
+         '%label' => $account->label(),
+-      ]), 'error');
++      ]));
+     }
+     else {
+       // Allow other modules to act.

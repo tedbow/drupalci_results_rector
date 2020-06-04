@@ -1,0 +1,67 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/preview_link/preview_link.install
+[parsing] modules/contrib/preview_link/preview_link.module
+[parsing] modules/contrib/preview_link/src/Access/PreviewEnabledAccessCheck.php
+[parsing] modules/contrib/preview_link/src/Access/PreviewLinkAccessCheck.php
+[parsing] modules/contrib/preview_link/src/Controller/PreviewLinkController.php
+[parsing] modules/contrib/preview_link/src/Entity/PreviewLink.php
+[parsing] modules/contrib/preview_link/src/Entity/PreviewLinkInterface.php
+[parsing] modules/contrib/preview_link/src/Form/PreviewLinkForm.php
+[parsing] modules/contrib/preview_link/src/Plugin/Derivative/PreviewLinkTasks.php
+[parsing] modules/contrib/preview_link/src/PreviewLinkCacheContext.php
+[parsing] modules/contrib/preview_link/src/PreviewLinkStorage.php
+[parsing] modules/contrib/preview_link/src/PreviewLinkStorageInterface.php
+[parsing] modules/contrib/preview_link/src/Routing/PreviewLinkRouteProvider.php
+[parsing] modules/contrib/preview_link/tests/src/Functional/PreviewLinkAccessTest.php
+[parsing] modules/contrib/preview_link/tests/src/Functional/PreviewLinkForwardRevisionTest.php
+[parsing] modules/contrib/preview_link/tests/src/Functional/PreviewLinkTest.php
+[parsing] modules/contrib/preview_link/tests/src/Kernel/PreviewLinkAccessTest.php
+[parsing] modules/contrib/preview_link/tests/src/Kernel/PreviewLinkBase.php
+[parsing] modules/contrib/preview_link/tests/src/Kernel/PreviewLinkExpiryTest.php
+[parsing] modules/contrib/preview_link/tests/src/Kernel/PreviewLinkStorageTest.php
+[refactoring] modules/contrib/preview_link/preview_link.install
+[refactoring] modules/contrib/preview_link/preview_link.module
+[refactoring] modules/contrib/preview_link/src/Access/PreviewEnabledAccessCheck.php
+[refactoring] modules/contrib/preview_link/src/Access/PreviewLinkAccessCheck.php
+[refactoring] modules/contrib/preview_link/src/Controller/PreviewLinkController.php
+[refactoring] modules/contrib/preview_link/src/Entity/PreviewLink.php
+[refactoring] modules/contrib/preview_link/src/Entity/PreviewLinkInterface.php
+[refactoring] modules/contrib/preview_link/src/Form/PreviewLinkForm.php
+[refactoring] modules/contrib/preview_link/src/Plugin/Derivative/PreviewLinkTasks.php
+[refactoring] modules/contrib/preview_link/src/PreviewLinkCacheContext.php
+[refactoring] modules/contrib/preview_link/src/PreviewLinkStorage.php
+[refactoring] modules/contrib/preview_link/src/PreviewLinkStorageInterface.php
+[refactoring] modules/contrib/preview_link/src/Routing/PreviewLinkRouteProvider.php
+[refactoring] modules/contrib/preview_link/tests/src/Functional/PreviewLinkAccessTest.php
+[refactoring] modules/contrib/preview_link/tests/src/Functional/PreviewLinkForwardRevisionTest.php
+[refactoring] modules/contrib/preview_link/tests/src/Functional/PreviewLinkTest.php
+[refactoring] modules/contrib/preview_link/tests/src/Kernel/PreviewLinkAccessTest.php
+[refactoring] modules/contrib/preview_link/tests/src/Kernel/PreviewLinkBase.php
+[refactoring] modules/contrib/preview_link/tests/src/Kernel/PreviewLinkExpiryTest.php
+[refactoring] modules/contrib/preview_link/tests/src/Kernel/PreviewLinkStorageTest.php
+[printing] modules/contrib/preview_link/preview_link.install
+[printing] modules/contrib/preview_link/preview_link.module
+[printing] modules/contrib/preview_link/src/Access/PreviewEnabledAccessCheck.php
+[printing] modules/contrib/preview_link/src/Access/PreviewLinkAccessCheck.php
+[printing] modules/contrib/preview_link/src/Controller/PreviewLinkController.php
+[printing] modules/contrib/preview_link/src/Entity/PreviewLink.php
+[printing] modules/contrib/preview_link/src/Entity/PreviewLinkInterface.php
+[printing] modules/contrib/preview_link/src/Form/PreviewLinkForm.php
+[printing] modules/contrib/preview_link/src/Plugin/Derivative/PreviewLinkTasks.php
+[printing] modules/contrib/preview_link/src/PreviewLinkCacheContext.php
+[printing] modules/contrib/preview_link/src/PreviewLinkStorage.php
+[printing] modules/contrib/preview_link/src/PreviewLinkStorageInterface.php
+[printing] modules/contrib/preview_link/src/Routing/PreviewLinkRouteProvider.php
+[printing] modules/contrib/preview_link/tests/src/Functional/PreviewLinkAccessTest.php
+[printing] modules/contrib/preview_link/tests/src/Functional/PreviewLinkForwardRevisionTest.php
+[printing] modules/contrib/preview_link/tests/src/Functional/PreviewLinkTest.php
+[printing] modules/contrib/preview_link/tests/src/Kernel/PreviewLinkAccessTest.php
+[printing] modules/contrib/preview_link/tests/src/Kernel/PreviewLinkBase.php
+[printing] modules/contrib/preview_link/tests/src/Kernel/PreviewLinkExpiryTest.php
+[printing] modules/contrib/preview_link/tests/src/Kernel/PreviewLinkStorageTest.php
+
+
+ [OK] Rector is done!                                                           
+

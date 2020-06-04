@@ -1,0 +1,22 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/publishing_dropbutton/publishing_dropbutton.module
+[parsing] modules/contrib/publishing_dropbutton/src/NodePublishingDropbutton.php
+[parsing] modules/contrib/publishing_dropbutton/src/Plugin/Field/FieldWidget/ModerationStateWidget.php
+[parsing] modules/contrib/publishing_dropbutton/tests/src/Functional/ModerationFormTest.php
+[parsing] modules/contrib/publishing_dropbutton/tests/src/Functional/NodeFormButtonsTest.php
+[refactoring] modules/contrib/publishing_dropbutton/publishing_dropbutton.module
+[refactoring] modules/contrib/publishing_dropbutton/src/NodePublishingDropbutton.php
+[refactoring] modules/contrib/publishing_dropbutton/src/Plugin/Field/FieldWidget/ModerationStateWidget.php
+[refactoring] modules/contrib/publishing_dropbutton/tests/src/Functional/ModerationFormTest.php
+[refactoring] modules/contrib/publishing_dropbutton/tests/src/Functional/NodeFormButtonsTest.php
+[printing] modules/contrib/publishing_dropbutton/publishing_dropbutton.module
+[printing] modules/contrib/publishing_dropbutton/src/NodePublishingDropbutton.php
+[printing] modules/contrib/publishing_dropbutton/src/Plugin/Field/FieldWidget/ModerationStateWidget.php
+[printing] modules/contrib/publishing_dropbutton/tests/src/Functional/ModerationFormTest.php
+[printing] modules/contrib/publishing_dropbutton/tests/src/Functional/NodeFormButtonsTest.php
+
+
+ [OK] Rector is done!                                                           
+

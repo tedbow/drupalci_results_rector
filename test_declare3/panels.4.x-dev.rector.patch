@@ -1,0 +1,11 @@
+diff --git a/panels.install b/panels.install
+index 6a67704..d771c15 100644
+--- a/panels.install
++++ b/panels.install
+@@ -62,4 +62,4 @@ function panels_update_8401() {
+     \Drupal::service('module_installer')->uninstall(['layout_plugin'], FALSE);
+     \Drupal::service('module_installer')->install(['layout_discovery'], FALSE);
+   }
+-}
+\ No newline at end of file
++}

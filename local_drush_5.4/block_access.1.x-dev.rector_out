@@ -1,0 +1,22 @@
+Rector 0.8.x-dev@92ddbfc
+Config file: rector.yml
+
+[parsing] modules/contrib/block_access/block_access.module
+[parsing] modules/contrib/block_access/src/Permissions.php
+[parsing] modules/contrib/block_access/tests/src/Kernel/BlockAccessTest.php
+[refactoring] modules/contrib/block_access/block_access.module
+[refactoring] modules/contrib/block_access/src/Permissions.php
+[refactoring] modules/contrib/block_access/tests/src/Kernel/BlockAccessTest.php
+[printing] modules/contrib/block_access/block_access.module
+[printing] modules/contrib/block_access/src/Permissions.php
+[printing] modules/contrib/block_access/tests/src/Kernel/BlockAccessTest.php
+
+
+ [ERROR] Could not process                                                      
+         "modules/contrib/block_access/tests/src/Kernel/BlockAccessTest.php"    
+         file, due to:                                                          
+         "Analyze error: "Class Drupal\Tests\token\Kernel\KernelTestBase not    
+         found and could not be autoloaded.". Include your files in "parameters 
+         > autoload_paths".                                                     
+         See https://github.com/rectorphp/rector#extra-autoloading".            
+

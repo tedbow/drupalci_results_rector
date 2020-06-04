@@ -1,0 +1,19 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/keyvalue_filestore/src/KeyValueStore/JsonStorage.php
+[parsing] modules/contrib/keyvalue_filestore/src/KeyValueStore/KeyValueJsonFactory.php
+[parsing] modules/contrib/keyvalue_filestore/src/KeyvalueFilestoreServiceProvider.php
+[parsing] modules/contrib/keyvalue_filestore/tests/src/Functional/LoadTest.php
+[refactoring] modules/contrib/keyvalue_filestore/src/KeyValueStore/JsonStorage.php
+[refactoring] modules/contrib/keyvalue_filestore/src/KeyValueStore/KeyValueJsonFactory.php
+[refactoring] modules/contrib/keyvalue_filestore/src/KeyvalueFilestoreServiceProvider.php
+[refactoring] modules/contrib/keyvalue_filestore/tests/src/Functional/LoadTest.php
+[printing] modules/contrib/keyvalue_filestore/src/KeyValueStore/JsonStorage.php
+[printing] modules/contrib/keyvalue_filestore/src/KeyValueStore/KeyValueJsonFactory.php
+[printing] modules/contrib/keyvalue_filestore/src/KeyvalueFilestoreServiceProvider.php
+[printing] modules/contrib/keyvalue_filestore/tests/src/Functional/LoadTest.php
+
+
+ [OK] Rector is done!                                                           
+

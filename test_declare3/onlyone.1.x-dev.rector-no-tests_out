@@ -1,0 +1,73 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector-no-tests.yml
+
+[parsing] modules/contrib/onlyone/modules/onlyone_admin_toolbar/onlyone_admin_toolbar.module
+[parsing] modules/contrib/onlyone/modules/onlyone_admin_toolbar/src/EventSubscriber/ContentTypesUpdatedSubscriber.php
+[parsing] modules/contrib/onlyone/modules/onlyone_admin_toolbar/src/OnlyOneAdminToolbar.php
+[parsing] modules/contrib/onlyone/modules/onlyone_admin_toolbar/src/OnlyOneAdminToolbarInterface.php
+[parsing] modules/contrib/onlyone/onlyone.drush.inc
+[parsing] modules/contrib/onlyone/onlyone.install
+[parsing] modules/contrib/onlyone/onlyone.module
+[parsing] modules/contrib/onlyone/src/Controller/OnlyOneController.php
+[parsing] modules/contrib/onlyone/src/Event/OnlyOneEvents.php
+[parsing] modules/contrib/onlyone/src/Form/ConfigContentTypes.php
+[parsing] modules/contrib/onlyone/src/Form/OnlyOneAdminSettings.php
+[parsing] modules/contrib/onlyone/src/OnlyOne.php
+[parsing] modules/contrib/onlyone/src/OnlyOneInterface.php
+[parsing] modules/contrib/onlyone/src/OnlyOneModuleHandler.php
+[parsing] modules/contrib/onlyone/src/OnlyOneModuleHandlerInterface.php
+[parsing] modules/contrib/onlyone/src/OnlyOnePrintAdminPage.php
+[parsing] modules/contrib/onlyone/src/OnlyOnePrintDrush.php
+[parsing] modules/contrib/onlyone/src/OnlyOnePrintStrategyInterface.php
+[parsing] modules/contrib/onlyone/src/Plugin/Validation/Constraint/OnlyOneConstraint.php
+[parsing] modules/contrib/onlyone/src/Plugin/Validation/Constraint/OnlyOneConstraintValidator.php
+[parsing] modules/contrib/onlyone/src/Routing/OnlyOneRoutes.php
+[parsing] modules/contrib/onlyone/src/Routing/RouteSubscriber.php
+[refactoring] modules/contrib/onlyone/modules/onlyone_admin_toolbar/onlyone_admin_toolbar.module
+[refactoring] modules/contrib/onlyone/modules/onlyone_admin_toolbar/src/EventSubscriber/ContentTypesUpdatedSubscriber.php
+[refactoring] modules/contrib/onlyone/modules/onlyone_admin_toolbar/src/OnlyOneAdminToolbar.php
+[refactoring] modules/contrib/onlyone/modules/onlyone_admin_toolbar/src/OnlyOneAdminToolbarInterface.php
+[refactoring] modules/contrib/onlyone/onlyone.drush.inc
+[refactoring] modules/contrib/onlyone/onlyone.install
+[refactoring] modules/contrib/onlyone/onlyone.module
+[refactoring] modules/contrib/onlyone/src/Controller/OnlyOneController.php
+[refactoring] modules/contrib/onlyone/src/Event/OnlyOneEvents.php
+[refactoring] modules/contrib/onlyone/src/Form/ConfigContentTypes.php
+[refactoring] modules/contrib/onlyone/src/Form/OnlyOneAdminSettings.php
+[refactoring] modules/contrib/onlyone/src/OnlyOne.php
+[refactoring] modules/contrib/onlyone/src/OnlyOneInterface.php
+[refactoring] modules/contrib/onlyone/src/OnlyOneModuleHandler.php
+[refactoring] modules/contrib/onlyone/src/OnlyOneModuleHandlerInterface.php
+[refactoring] modules/contrib/onlyone/src/OnlyOnePrintAdminPage.php
+[refactoring] modules/contrib/onlyone/src/OnlyOnePrintDrush.php
+[refactoring] modules/contrib/onlyone/src/OnlyOnePrintStrategyInterface.php
+[refactoring] modules/contrib/onlyone/src/Plugin/Validation/Constraint/OnlyOneConstraint.php
+[refactoring] modules/contrib/onlyone/src/Plugin/Validation/Constraint/OnlyOneConstraintValidator.php
+[refactoring] modules/contrib/onlyone/src/Routing/OnlyOneRoutes.php
+[refactoring] modules/contrib/onlyone/src/Routing/RouteSubscriber.php
+[printing] modules/contrib/onlyone/modules/onlyone_admin_toolbar/onlyone_admin_toolbar.module
+[printing] modules/contrib/onlyone/modules/onlyone_admin_toolbar/src/EventSubscriber/ContentTypesUpdatedSubscriber.php
+[printing] modules/contrib/onlyone/modules/onlyone_admin_toolbar/src/OnlyOneAdminToolbar.php
+[printing] modules/contrib/onlyone/modules/onlyone_admin_toolbar/src/OnlyOneAdminToolbarInterface.php
+[printing] modules/contrib/onlyone/onlyone.drush.inc
+[printing] modules/contrib/onlyone/onlyone.install
+[printing] modules/contrib/onlyone/onlyone.module
+[printing] modules/contrib/onlyone/src/Controller/OnlyOneController.php
+[printing] modules/contrib/onlyone/src/Event/OnlyOneEvents.php
+[printing] modules/contrib/onlyone/src/Form/ConfigContentTypes.php
+[printing] modules/contrib/onlyone/src/Form/OnlyOneAdminSettings.php
+[printing] modules/contrib/onlyone/src/OnlyOne.php
+[printing] modules/contrib/onlyone/src/OnlyOneInterface.php
+[printing] modules/contrib/onlyone/src/OnlyOneModuleHandler.php
+[printing] modules/contrib/onlyone/src/OnlyOneModuleHandlerInterface.php
+[printing] modules/contrib/onlyone/src/OnlyOnePrintAdminPage.php
+[printing] modules/contrib/onlyone/src/OnlyOnePrintDrush.php
+[printing] modules/contrib/onlyone/src/OnlyOnePrintStrategyInterface.php
+[printing] modules/contrib/onlyone/src/Plugin/Validation/Constraint/OnlyOneConstraint.php
+[printing] modules/contrib/onlyone/src/Plugin/Validation/Constraint/OnlyOneConstraintValidator.php
+[printing] modules/contrib/onlyone/src/Routing/OnlyOneRoutes.php
+[printing] modules/contrib/onlyone/src/Routing/RouteSubscriber.php
+
+
+ [OK] Rector is done!                                                           
+

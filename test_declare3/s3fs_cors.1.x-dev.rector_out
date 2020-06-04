@@ -1,0 +1,40 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/s3fs_cors/s3fs_cors.install
+[parsing] modules/contrib/s3fs_cors/s3fs_cors.module
+[parsing] modules/contrib/s3fs_cors/src/Controller/AjaxController.php
+[parsing] modules/contrib/s3fs_cors/src/Element/S3CorsFile.php
+[parsing] modules/contrib/s3fs_cors/src/Element/S3fsCorsFile.php
+[parsing] modules/contrib/s3fs_cors/src/Form/S3fsCorsAdminForm.php
+[parsing] modules/contrib/s3fs_cors/src/Plugin/Field/FieldFormatter/S3fsCorsGenericFileFormatter.php
+[parsing] modules/contrib/s3fs_cors/src/Plugin/Field/FieldType/S3CorsFileItem.php
+[parsing] modules/contrib/s3fs_cors/src/Plugin/Field/FieldType/S3fsCorsFileItem.php
+[parsing] modules/contrib/s3fs_cors/src/Plugin/Field/FieldWidget/S3fsCorsFileWidget.php
+[parsing] modules/contrib/s3fs_cors/src/Plugin/Field/FieldWidget/S3fsCorsImageWidget.php
+[refactoring] modules/contrib/s3fs_cors/s3fs_cors.install
+[refactoring] modules/contrib/s3fs_cors/s3fs_cors.module
+[refactoring] modules/contrib/s3fs_cors/src/Controller/AjaxController.php
+[refactoring] modules/contrib/s3fs_cors/src/Element/S3CorsFile.php
+[refactoring] modules/contrib/s3fs_cors/src/Element/S3fsCorsFile.php
+[refactoring] modules/contrib/s3fs_cors/src/Form/S3fsCorsAdminForm.php
+[refactoring] modules/contrib/s3fs_cors/src/Plugin/Field/FieldFormatter/S3fsCorsGenericFileFormatter.php
+[refactoring] modules/contrib/s3fs_cors/src/Plugin/Field/FieldType/S3CorsFileItem.php
+[refactoring] modules/contrib/s3fs_cors/src/Plugin/Field/FieldType/S3fsCorsFileItem.php
+[refactoring] modules/contrib/s3fs_cors/src/Plugin/Field/FieldWidget/S3fsCorsFileWidget.php
+[refactoring] modules/contrib/s3fs_cors/src/Plugin/Field/FieldWidget/S3fsCorsImageWidget.php
+[printing] modules/contrib/s3fs_cors/s3fs_cors.install
+[printing] modules/contrib/s3fs_cors/s3fs_cors.module
+[printing] modules/contrib/s3fs_cors/src/Controller/AjaxController.php
+[printing] modules/contrib/s3fs_cors/src/Element/S3CorsFile.php
+[printing] modules/contrib/s3fs_cors/src/Element/S3fsCorsFile.php
+[printing] modules/contrib/s3fs_cors/src/Form/S3fsCorsAdminForm.php
+[printing] modules/contrib/s3fs_cors/src/Plugin/Field/FieldFormatter/S3fsCorsGenericFileFormatter.php
+[printing] modules/contrib/s3fs_cors/src/Plugin/Field/FieldType/S3CorsFileItem.php
+[printing] modules/contrib/s3fs_cors/src/Plugin/Field/FieldType/S3fsCorsFileItem.php
+[printing] modules/contrib/s3fs_cors/src/Plugin/Field/FieldWidget/S3fsCorsFileWidget.php
+[printing] modules/contrib/s3fs_cors/src/Plugin/Field/FieldWidget/S3fsCorsImageWidget.php
+
+
+ [OK] Rector is done!                                                           
+

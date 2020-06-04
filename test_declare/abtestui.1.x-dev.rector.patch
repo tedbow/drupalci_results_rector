@@ -1,0 +1,74 @@
+diff --git a/src/Service/TestStorage.php b/src/Service/TestStorage.php
+index ffcfcff..0b59dd0 100644
+--- a/src/Service/TestStorage.php
++++ b/src/Service/TestStorage.php
+@@ -31,9 +31,6 @@ class TestStorage {
+ 
+   private $abjsExperienceStorage;
+ 
+-  /**
+-   *
+-   */
+   public function __construct(
+     Connection $database,
+     LoggerChannelFactoryInterface $loggerChannelFactory,
+@@ -50,9 +47,6 @@ class TestStorage {
+     $this->abjsExperienceStorage = $abjsExperienceStorage;
+   }
+ 
+-  /**
+-   *
+-   */
+   public function load($tid) {
+     if (NULL === $tid) {
+       return FALSE;
+@@ -92,9 +86,6 @@ class TestStorage {
+     return $test;
+   }
+ 
+-  /**
+-   *
+-   */
+   private function fetchTest($tid) {
+     $query = $this->db->select(static::BASE_TABLE_NAME, 'base_table');
+     $query->addJoin('left', 'abjs_test', 'test', 'base_table.tid = test.tid');
+@@ -105,9 +96,6 @@ class TestStorage {
+     return $result->fetchAssoc();
+   }
+ 
+-  /**
+-   *
+-   */
+   private function fetchConditions($tid) {
+     $query = $this->db->select('abjs_condition', 'cond');
+     $query->addJoin('left', 'abjs_test_condition', 'test_cond', 'cond.cid = test_cond.cid');
+@@ -118,9 +106,6 @@ class TestStorage {
+     return $cResult->fetchAllAssoc('tcid');
+   }
+ 
+-  /**
+-   *
+-   */
+   private function fetchExperiences($tid) {
+     $query = $this->db->select('abjs_experience', 'exp');
+     $query->addJoin('left', 'abjs_test_experience', 'test_exp', 'exp.eid = test_exp.eid');
+@@ -133,9 +118,6 @@ class TestStorage {
+     return $result->fetchAllAssoc('teid');
+   }
+ 
+-  /**
+-   *
+-   */
+   public function save($values) {
+     $this->db->merge(static::BASE_TABLE_NAME)
+       ->key('tid', $values['tid'])
+@@ -151,9 +133,6 @@ class TestStorage {
+     return $values['tid'];
+   }
+ 
+-  /**
+-   *
+-   */
+   public function loadMultiple(array $tids = []) {
+     if (empty($tids)) {
+       $query = $this->db->select(static::BASE_TABLE_NAME, 'base_table');

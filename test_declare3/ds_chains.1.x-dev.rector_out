@@ -1,0 +1,31 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/ds_chains/ds_chains.module
+[parsing] modules/contrib/ds_chains/src/ChainsUi.php
+[parsing] modules/contrib/ds_chains/src/Derivative/ChainsDeriver.php
+[parsing] modules/contrib/ds_chains/src/Plugin/DsField/ChainedField.php
+[parsing] modules/contrib/ds_chains/tests/src/Functional/ChainsUITest.php
+[parsing] modules/contrib/ds_chains/tests/src/Kernel/ChainedFieldBuildTest.php
+[parsing] modules/contrib/ds_chains/tests/src/Kernel/ChainedFieldTestTrait.php
+[parsing] modules/contrib/ds_chains/tests/src/Kernel/DiscoveryTest.php
+[refactoring] modules/contrib/ds_chains/ds_chains.module
+[refactoring] modules/contrib/ds_chains/src/ChainsUi.php
+[refactoring] modules/contrib/ds_chains/src/Derivative/ChainsDeriver.php
+[refactoring] modules/contrib/ds_chains/src/Plugin/DsField/ChainedField.php
+[refactoring] modules/contrib/ds_chains/tests/src/Functional/ChainsUITest.php
+[refactoring] modules/contrib/ds_chains/tests/src/Kernel/ChainedFieldBuildTest.php
+[refactoring] modules/contrib/ds_chains/tests/src/Kernel/ChainedFieldTestTrait.php
+[refactoring] modules/contrib/ds_chains/tests/src/Kernel/DiscoveryTest.php
+[printing] modules/contrib/ds_chains/ds_chains.module
+[printing] modules/contrib/ds_chains/src/ChainsUi.php
+[printing] modules/contrib/ds_chains/src/Derivative/ChainsDeriver.php
+[printing] modules/contrib/ds_chains/src/Plugin/DsField/ChainedField.php
+[printing] modules/contrib/ds_chains/tests/src/Functional/ChainsUITest.php
+[printing] modules/contrib/ds_chains/tests/src/Kernel/ChainedFieldBuildTest.php
+[printing] modules/contrib/ds_chains/tests/src/Kernel/ChainedFieldTestTrait.php
+[printing] modules/contrib/ds_chains/tests/src/Kernel/DiscoveryTest.php
+
+
+ [OK] Rector is done!                                                           
+

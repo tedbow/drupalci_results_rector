@@ -1,0 +1,80 @@
+diff --git a/src/Form/AddAbbrfilterForm.php b/src/Form/AddAbbrfilterForm.php
+index 9afc178..b2dc888 100644
+--- a/src/Form/AddAbbrfilterForm.php
++++ b/src/Form/AddAbbrfilterForm.php
+@@ -121,15 +121,15 @@ class AddAbbrfilterForm extends ConfigFormBase {
+       }
+ 
+       if ($abbrduplicate != '' && $form_state->getValue('skipdupes') == 1) {
+-        drupal_set_message(t('Skipping abbreviation %abbr, already exists.', array('%abbr' => $row['abbrs'])));
++        $this->messenger()->addStatus(t('Skipping abbreviation %abbr, already exists.', array('%abbr' => $row['abbrs'])));
+         $form_state->setRedirect('abbrfilter.admin');
+       } else if ($abbrduplicate != '') {
+-        drupal_set_message(t('Cannot add abbreviation. %abbr already exists.', array('%abbr' => $row['abbrs'])), 'error');
++        $this->messenger()->addError(t('Cannot add abbreviation. %abbr already exists.', array('%abbr' => $row['abbrs'])));
+         $form_state->setRedirect(FALSE);
+         $submissioncheck = 'NO';
+       }
+       elseif (preg_match('/^[\w][\w\.~\/\-]+$/', $row['abbrs']) == FALSE) {
+-        drupal_set_message(t('Cannot add abbreviation. %abbr contains invalid characters.', array('%abbr' => $row['abbrs'])), 'error');
++        $this->messenger()->addError(t('Cannot add abbreviation. %abbr contains invalid characters.', array('%abbr' => $row['abbrs'])));
+         $form_state->setRedirect(FALSE);
+         $submissioncheck = 'NO';
+       }
+@@ -137,7 +137,7 @@ class AddAbbrfilterForm extends ConfigFormBase {
+         $submissions[] = $row;
+       }
+       else {
+-        drupal_set_message(t('Cannot add abbreviation.  You must specify the unabbreviated text for: %abbr',  array('%abbr' => $row['abbrs'])), 'error');
++        $this->messenger()->addError(t('Cannot add abbreviation.  You must specify the unabbreviated text for: %abbr',  array('%abbr' => $row['abbrs'])));
+         $form_state->disableRedirect(TRUE);
+         $submissioncheck = 'NO';
+       }
+@@ -145,7 +145,7 @@ class AddAbbrfilterForm extends ConfigFormBase {
+ 
+     if ($submissioncheck == '') {
+       $this->configFactory->getEditable('abbrlist.settings')->set('abbr_list', $submissions)->save();
+-      drupal_set_message(t('Added filter for: %abbr', array('%abbr' => $row['abbrs'])));
++      $this->messenger()->addStatus(t('Added filter for: %abbr', array('%abbr' => $row['abbrs'])));
+       $form_state->setRedirect('abbrfilter.admin');
+     }
+     else {
+diff --git a/src/Form/EditAbbrfilterForm.php b/src/Form/EditAbbrfilterForm.php
+index 9de9f33..4bd4eeb 100644
+--- a/src/Form/EditAbbrfilterForm.php
++++ b/src/Form/EditAbbrfilterForm.php
+@@ -66,8 +66,8 @@ class EditAbbrfilterForm extends ConfigFormBase  {
+     $buildinfo = $form_state->getBuildInfo();
+     $this->abbrfilter_id = $buildinfo['args'][0];
+     if (!isset($this->abbrfilter_id) || !is_numeric($this->abbrfilter_id)) {
+-      drupal_set_message(t('The ABBRfilter ID of the abbr or phrase you are trying to edit is missing or is not a number.'), 'error');
+-      return new RedirectResponse(\Drupal::url('abbrfilter.admin'));
++      $this->messenger()->addError(t('The ABBRfilter ID of the abbr or phrase you are trying to edit is missing or is not a number.'));
++      return new RedirectResponse(\Drupal::service('url_generator')->generateFromRoute('abbrfilter.admin'));
+     }
+ 
+     $form['id'] = array(
+@@ -115,7 +115,7 @@ class EditAbbrfilterForm extends ConfigFormBase  {
+ 
+     $list = $this->abbrfilters->get_abbr_list();
+     if (preg_match('/^[\w][\w\.~\/\-]+$/', $row['abbrs'])==FALSE) {
+-      drupal_set_message(t('Cannot add abbreviation. %abbr contains invalid characters.', array('%abbr' => $row['abbrs'])), 'error');
++      $this->messenger()->addError(t('Cannot add abbreviation. %abbr contains invalid characters.', array('%abbr' => $row['abbrs'])));
+       $form_state->disableRedirect(TRUE);
+     }
+     elseif ($row['replacement']) {
+@@ -124,12 +124,12 @@ class EditAbbrfilterForm extends ConfigFormBase  {
+         'replacement' => $row['replacement'],
+       );
+       \Drupal::configFactory()->getEditable('abbrlist.settings')->set('abbr_list', $list)->save();
+-      drupal_set_message(t('Updated filter for: %abbr', array('%abbr' => $row['abbrs'])));
++      $this->messenger()->addStatus(t('Updated filter for: %abbr', array('%abbr' => $row['abbrs'])));
+       $form_state->setRedirect('abbrfilter.admin');
+       \Drupal::cache()->delete('filter');
+     }
+     else {
+-      drupal_set_message(t('Cannot add abbreviation.  You must specify the unabbreviated text for: %abbr',  array('%abbr' => $row['abbrs'])), 'error');
++      $this->messenger()->addError(t('Cannot add abbreviation.  You must specify the unabbreviated text for: %abbr',  array('%abbr' => $row['abbrs'])));
+       $form_state->disableRedirect(TRUE);
+     }
+   }

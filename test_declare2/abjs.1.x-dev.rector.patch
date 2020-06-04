@@ -1,0 +1,10 @@
+diff --git a/tests/src/Kernel/Form/AbjsSettingsAdminTest.php b/tests/src/Kernel/Form/AbjsSettingsAdminTest.php
+index 95ab711..8c88f6c 100644
+--- a/tests/src/Kernel/Form/AbjsSettingsAdminTest.php
++++ b/tests/src/Kernel/Form/AbjsSettingsAdminTest.php
+@@ -77,4 +77,4 @@ class AbjsSettingsAdminTest extends KernelTestBase {
+     $this->assertInstanceOf(FormInterface::class, $this->abjsSettingsForm);
+   }
+ 
+-}
++}

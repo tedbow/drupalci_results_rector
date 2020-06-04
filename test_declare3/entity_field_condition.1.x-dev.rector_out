@@ -1,0 +1,10 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/entity_field_condition/src/Plugin/Condition/NodeField.php
+[refactoring] modules/contrib/entity_field_condition/src/Plugin/Condition/NodeField.php
+[printing] modules/contrib/entity_field_condition/src/Plugin/Condition/NodeField.php
+
+
+ [OK] Rector is done!                                                           
+

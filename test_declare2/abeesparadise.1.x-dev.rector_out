@@ -1,0 +1,30 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] themes/contrib/abeesparadise/drupal8.theme
+[refactoring] themes/contrib/abeesparadise/drupal8.theme
+[printing] themes/contrib/abeesparadise/drupal8.theme
+
+
+1 file with changes
+===================
+
+1) themes/contrib/abeesparadise/drupal8.theme
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -44,7 +44,7 @@
+   $variables['site_slogan'] = $config->get('slogan');
+
+   // Getting primary links to display on footer
+-  $menu = \Drupal\block\Entity\Block::load('drupal8_main_menu');
++  $menu = Block::load('drupal8_main_menu');
+   $variables['main_menu'] = \Drupal::entityTypeManager()
+     ->getViewBuilder('block')
+     ->view($menu);
+    ----------- end diff -----------
+
+
+ [OK] Rector is done! 1 file have been changed.                                 
+

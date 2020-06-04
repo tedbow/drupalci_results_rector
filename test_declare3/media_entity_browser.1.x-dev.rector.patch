@@ -1,0 +1,12 @@
+diff --git a/media_entity_browser.info.yml b/media_entity_browser.info.yml
+index 7b4f6ac..33ea823 100644
+--- a/media_entity_browser.info.yml
++++ b/media_entity_browser.info.yml
+@@ -3,6 +3,7 @@ type: module
+ description: 'This module provides an Entity Browser for Media Entity.'
+ package: Media
+ core: '8.x'
++core_version_requirement: ^8 || ^9
+ 
+ dependencies:
+   - inline_entity_form

@@ -1,0 +1,278 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector-no-tests.yml
+
+[parsing] modules/contrib/migrate_plus/migrate_example/migrate_example_setup/migrate_example_setup.install
+[parsing] modules/contrib/migrate_plus/migrate_example/src/Plugin/migrate/source/BeerComment.php
+[parsing] modules/contrib/migrate_plus/migrate_example/src/Plugin/migrate/source/BeerNode.php
+[parsing] modules/contrib/migrate_plus/migrate_example/src/Plugin/migrate/source/BeerTerm.php
+[parsing] modules/contrib/migrate_plus/migrate_example/src/Plugin/migrate/source/BeerUser.php
+[parsing] modules/contrib/migrate_plus/migrate_example_advanced/migrate_example_advanced.install
+[parsing] modules/contrib/migrate_plus/migrate_example_advanced/migrate_example_advanced_setup/migrate_example_advanced_setup.install
+[parsing] modules/contrib/migrate_plus/migrate_example_advanced/migrate_example_advanced_setup/src/Plugin/rest/resource/PositionResource.php
+[parsing] modules/contrib/migrate_plus/migrate_example_advanced/migrate_example_advanced_setup/src/Plugin/rest/resource/VarietyItems.php
+[parsing] modules/contrib/migrate_plus/migrate_example_advanced/migrate_example_advanced_setup/src/Plugin/rest/resource/VarietyList.php
+[parsing] modules/contrib/migrate_plus/migrate_example_advanced/migrate_example_advanced_setup/src/Plugin/rest/resource/VarietyMultiFiles.php
+[parsing] modules/contrib/migrate_plus/migrate_example_advanced/src/Plugin/migrate/source/WineTerm.php
+[parsing] modules/contrib/migrate_plus/migrate_json_example/migrate_json_example.install
+[parsing] modules/contrib/migrate_plus/migrate_plus.install
+[parsing] modules/contrib/migrate_plus/migrate_plus.module
+[parsing] modules/contrib/migrate_plus/src/Annotation/Authentication.php
+[parsing] modules/contrib/migrate_plus/src/Annotation/DataFetcher.php
+[parsing] modules/contrib/migrate_plus/src/Annotation/DataParser.php
+[parsing] modules/contrib/migrate_plus/src/AuthenticationPluginBase.php
+[parsing] modules/contrib/migrate_plus/src/AuthenticationPluginInterface.php
+[parsing] modules/contrib/migrate_plus/src/AuthenticationPluginManager.php
+[parsing] modules/contrib/migrate_plus/src/DataFetcherPluginBase.php
+[parsing] modules/contrib/migrate_plus/src/DataFetcherPluginInterface.php
+[parsing] modules/contrib/migrate_plus/src/DataFetcherPluginManager.php
+[parsing] modules/contrib/migrate_plus/src/DataParserPluginBase.php
+[parsing] modules/contrib/migrate_plus/src/DataParserPluginInterface.php
+[parsing] modules/contrib/migrate_plus/src/DataParserPluginManager.php
+[parsing] modules/contrib/migrate_plus/src/Entity/Migration.php
+[parsing] modules/contrib/migrate_plus/src/Entity/MigrationGroup.php
+[parsing] modules/contrib/migrate_plus/src/Entity/MigrationGroupInterface.php
+[parsing] modules/contrib/migrate_plus/src/Entity/MigrationInterface.php
+[parsing] modules/contrib/migrate_plus/src/Event/MigrateEvents.php
+[parsing] modules/contrib/migrate_plus/src/Event/MigratePrepareRowEvent.php
+[parsing] modules/contrib/migrate_plus/src/Plugin/MigrationConfigDeriver.php
+[parsing] modules/contrib/migrate_plus/src/Plugin/migrate/destination/Table.php
+[parsing] modules/contrib/migrate_plus/src/Plugin/migrate/process/ArrayPop.php
+[parsing] modules/contrib/migrate_plus/src/Plugin/migrate/process/ArrayShift.php
+[parsing] modules/contrib/migrate_plus/src/Plugin/migrate/process/Dom.php
+[parsing] modules/contrib/migrate_plus/src/Plugin/migrate/process/DomProcessBase.php
+[parsing] modules/contrib/migrate_plus/src/Plugin/migrate/process/DomStrReplace.php
+[parsing] modules/contrib/migrate_plus/src/Plugin/migrate/process/EntityGenerate.php
+[parsing] modules/contrib/migrate_plus/src/Plugin/migrate/process/EntityLookup.php
+[parsing] modules/contrib/migrate_plus/src/Plugin/migrate/process/FileBlob.php
+[parsing] modules/contrib/migrate_plus/src/Plugin/migrate/process/Merge.php
+[parsing] modules/contrib/migrate_plus/src/Plugin/migrate/process/MultipleValues.php
+[parsing] modules/contrib/migrate_plus/src/Plugin/migrate/process/SingleValue.php
+[parsing] modules/contrib/migrate_plus/src/Plugin/migrate/process/SkipOnValue.php
+[parsing] modules/contrib/migrate_plus/src/Plugin/migrate/process/StrReplace.php
+[parsing] modules/contrib/migrate_plus/src/Plugin/migrate/process/Transliteration.php
+[parsing] modules/contrib/migrate_plus/src/Plugin/migrate/source/SourcePluginExtension.php
+[parsing] modules/contrib/migrate_plus/src/Plugin/migrate/source/Url.php
+[parsing] modules/contrib/migrate_plus/src/Plugin/migrate_plus/authentication/Basic.php
+[parsing] modules/contrib/migrate_plus/src/Plugin/migrate_plus/authentication/Digest.php
+[parsing] modules/contrib/migrate_plus/src/Plugin/migrate_plus/authentication/OAuth2.php
+[parsing] modules/contrib/migrate_plus/src/Plugin/migrate_plus/data_fetcher/File.php
+[parsing] modules/contrib/migrate_plus/src/Plugin/migrate_plus/data_fetcher/Http.php
+[parsing] modules/contrib/migrate_plus/src/Plugin/migrate_plus/data_parser/Json.php
+[parsing] modules/contrib/migrate_plus/src/Plugin/migrate_plus/data_parser/SimpleXml.php
+[parsing] modules/contrib/migrate_plus/src/Plugin/migrate_plus/data_parser/Soap.php
+[parsing] modules/contrib/migrate_plus/src/Plugin/migrate_plus/data_parser/Xml.php
+[parsing] modules/contrib/migrate_plus/src/Plugin/migrate_plus/data_parser/XmlTrait.php
+[refactoring] modules/contrib/migrate_plus/migrate_example/migrate_example_setup/migrate_example_setup.install
+[refactoring] modules/contrib/migrate_plus/migrate_example/src/Plugin/migrate/source/BeerComment.php
+[refactoring] modules/contrib/migrate_plus/migrate_example/src/Plugin/migrate/source/BeerNode.php
+[refactoring] modules/contrib/migrate_plus/migrate_example/src/Plugin/migrate/source/BeerTerm.php
+[refactoring] modules/contrib/migrate_plus/migrate_example/src/Plugin/migrate/source/BeerUser.php
+[refactoring] modules/contrib/migrate_plus/migrate_example_advanced/migrate_example_advanced.install
+[refactoring] modules/contrib/migrate_plus/migrate_example_advanced/migrate_example_advanced_setup/migrate_example_advanced_setup.install
+[refactoring] modules/contrib/migrate_plus/migrate_example_advanced/migrate_example_advanced_setup/src/Plugin/rest/resource/PositionResource.php
+[refactoring] modules/contrib/migrate_plus/migrate_example_advanced/migrate_example_advanced_setup/src/Plugin/rest/resource/VarietyItems.php
+[refactoring] modules/contrib/migrate_plus/migrate_example_advanced/migrate_example_advanced_setup/src/Plugin/rest/resource/VarietyList.php
+[refactoring] modules/contrib/migrate_plus/migrate_example_advanced/migrate_example_advanced_setup/src/Plugin/rest/resource/VarietyMultiFiles.php
+[refactoring] modules/contrib/migrate_plus/migrate_example_advanced/src/Plugin/migrate/source/WineTerm.php
+[refactoring] modules/contrib/migrate_plus/migrate_json_example/migrate_json_example.install
+[refactoring] modules/contrib/migrate_plus/migrate_plus.install
+[refactoring] modules/contrib/migrate_plus/migrate_plus.module
+[refactoring] modules/contrib/migrate_plus/src/Annotation/Authentication.php
+[refactoring] modules/contrib/migrate_plus/src/Annotation/DataFetcher.php
+[refactoring] modules/contrib/migrate_plus/src/Annotation/DataParser.php
+[refactoring] modules/contrib/migrate_plus/src/AuthenticationPluginBase.php
+[refactoring] modules/contrib/migrate_plus/src/AuthenticationPluginInterface.php
+[refactoring] modules/contrib/migrate_plus/src/AuthenticationPluginManager.php
+[refactoring] modules/contrib/migrate_plus/src/DataFetcherPluginBase.php
+[refactoring] modules/contrib/migrate_plus/src/DataFetcherPluginInterface.php
+[refactoring] modules/contrib/migrate_plus/src/DataFetcherPluginManager.php
+[refactoring] modules/contrib/migrate_plus/src/DataParserPluginBase.php
+[refactoring] modules/contrib/migrate_plus/src/DataParserPluginInterface.php
+[refactoring] modules/contrib/migrate_plus/src/DataParserPluginManager.php
+[refactoring] modules/contrib/migrate_plus/src/Entity/Migration.php
+[refactoring] modules/contrib/migrate_plus/src/Entity/MigrationGroup.php
+[refactoring] modules/contrib/migrate_plus/src/Entity/MigrationGroupInterface.php
+[refactoring] modules/contrib/migrate_plus/src/Entity/MigrationInterface.php
+[refactoring] modules/contrib/migrate_plus/src/Event/MigrateEvents.php
+[refactoring] modules/contrib/migrate_plus/src/Event/MigratePrepareRowEvent.php
+[refactoring] modules/contrib/migrate_plus/src/Plugin/MigrationConfigDeriver.php
+[refactoring] modules/contrib/migrate_plus/src/Plugin/migrate/destination/Table.php
+[refactoring] modules/contrib/migrate_plus/src/Plugin/migrate/process/ArrayPop.php
+[refactoring] modules/contrib/migrate_plus/src/Plugin/migrate/process/ArrayShift.php
+[refactoring] modules/contrib/migrate_plus/src/Plugin/migrate/process/Dom.php
+[refactoring] modules/contrib/migrate_plus/src/Plugin/migrate/process/DomProcessBase.php
+[refactoring] modules/contrib/migrate_plus/src/Plugin/migrate/process/DomStrReplace.php
+[refactoring] modules/contrib/migrate_plus/src/Plugin/migrate/process/EntityGenerate.php
+[refactoring] modules/contrib/migrate_plus/src/Plugin/migrate/process/EntityLookup.php
+[refactoring] modules/contrib/migrate_plus/src/Plugin/migrate/process/FileBlob.php
+[refactoring] modules/contrib/migrate_plus/src/Plugin/migrate/process/Merge.php
+[refactoring] modules/contrib/migrate_plus/src/Plugin/migrate/process/MultipleValues.php
+[refactoring] modules/contrib/migrate_plus/src/Plugin/migrate/process/SingleValue.php
+[refactoring] modules/contrib/migrate_plus/src/Plugin/migrate/process/SkipOnValue.php
+[refactoring] modules/contrib/migrate_plus/src/Plugin/migrate/process/StrReplace.php
+[refactoring] modules/contrib/migrate_plus/src/Plugin/migrate/process/Transliteration.php
+[refactoring] modules/contrib/migrate_plus/src/Plugin/migrate/source/SourcePluginExtension.php
+[refactoring] modules/contrib/migrate_plus/src/Plugin/migrate/source/Url.php
+[refactoring] modules/contrib/migrate_plus/src/Plugin/migrate_plus/authentication/Basic.php
+[refactoring] modules/contrib/migrate_plus/src/Plugin/migrate_plus/authentication/Digest.php
+[refactoring] modules/contrib/migrate_plus/src/Plugin/migrate_plus/authentication/OAuth2.php
+[refactoring] modules/contrib/migrate_plus/src/Plugin/migrate_plus/data_fetcher/File.php
+[refactoring] modules/contrib/migrate_plus/src/Plugin/migrate_plus/data_fetcher/Http.php
+[refactoring] modules/contrib/migrate_plus/src/Plugin/migrate_plus/data_parser/Json.php
+[refactoring] modules/contrib/migrate_plus/src/Plugin/migrate_plus/data_parser/SimpleXml.php
+[refactoring] modules/contrib/migrate_plus/src/Plugin/migrate_plus/data_parser/Soap.php
+[refactoring] modules/contrib/migrate_plus/src/Plugin/migrate_plus/data_parser/Xml.php
+[refactoring] modules/contrib/migrate_plus/src/Plugin/migrate_plus/data_parser/XmlTrait.php
+[printing] modules/contrib/migrate_plus/migrate_example/migrate_example_setup/migrate_example_setup.install
+[printing] modules/contrib/migrate_plus/migrate_example/src/Plugin/migrate/source/BeerComment.php
+[printing] modules/contrib/migrate_plus/migrate_example/src/Plugin/migrate/source/BeerNode.php
+[printing] modules/contrib/migrate_plus/migrate_example/src/Plugin/migrate/source/BeerTerm.php
+[printing] modules/contrib/migrate_plus/migrate_example/src/Plugin/migrate/source/BeerUser.php
+[printing] modules/contrib/migrate_plus/migrate_example_advanced/migrate_example_advanced.install
+[printing] modules/contrib/migrate_plus/migrate_example_advanced/migrate_example_advanced_setup/migrate_example_advanced_setup.install
+[printing] modules/contrib/migrate_plus/migrate_example_advanced/migrate_example_advanced_setup/src/Plugin/rest/resource/PositionResource.php
+[printing] modules/contrib/migrate_plus/migrate_example_advanced/migrate_example_advanced_setup/src/Plugin/rest/resource/VarietyItems.php
+[printing] modules/contrib/migrate_plus/migrate_example_advanced/migrate_example_advanced_setup/src/Plugin/rest/resource/VarietyList.php
+[printing] modules/contrib/migrate_plus/migrate_example_advanced/migrate_example_advanced_setup/src/Plugin/rest/resource/VarietyMultiFiles.php
+[printing] modules/contrib/migrate_plus/migrate_example_advanced/src/Plugin/migrate/source/WineTerm.php
+[printing] modules/contrib/migrate_plus/migrate_json_example/migrate_json_example.install
+[printing] modules/contrib/migrate_plus/migrate_plus.install
+[printing] modules/contrib/migrate_plus/migrate_plus.module
+[printing] modules/contrib/migrate_plus/src/Annotation/Authentication.php
+[printing] modules/contrib/migrate_plus/src/Annotation/DataFetcher.php
+[printing] modules/contrib/migrate_plus/src/Annotation/DataParser.php
+[printing] modules/contrib/migrate_plus/src/AuthenticationPluginBase.php
+[printing] modules/contrib/migrate_plus/src/AuthenticationPluginInterface.php
+[printing] modules/contrib/migrate_plus/src/AuthenticationPluginManager.php
+[printing] modules/contrib/migrate_plus/src/DataFetcherPluginBase.php
+[printing] modules/contrib/migrate_plus/src/DataFetcherPluginInterface.php
+[printing] modules/contrib/migrate_plus/src/DataFetcherPluginManager.php
+[printing] modules/contrib/migrate_plus/src/DataParserPluginBase.php
+[printing] modules/contrib/migrate_plus/src/DataParserPluginInterface.php
+[printing] modules/contrib/migrate_plus/src/DataParserPluginManager.php
+[printing] modules/contrib/migrate_plus/src/Entity/Migration.php
+[printing] modules/contrib/migrate_plus/src/Entity/MigrationGroup.php
+[printing] modules/contrib/migrate_plus/src/Entity/MigrationGroupInterface.php
+[printing] modules/contrib/migrate_plus/src/Entity/MigrationInterface.php
+[printing] modules/contrib/migrate_plus/src/Event/MigrateEvents.php
+[printing] modules/contrib/migrate_plus/src/Event/MigratePrepareRowEvent.php
+[printing] modules/contrib/migrate_plus/src/Plugin/MigrationConfigDeriver.php
+[printing] modules/contrib/migrate_plus/src/Plugin/migrate/destination/Table.php
+[printing] modules/contrib/migrate_plus/src/Plugin/migrate/process/ArrayPop.php
+[printing] modules/contrib/migrate_plus/src/Plugin/migrate/process/ArrayShift.php
+[printing] modules/contrib/migrate_plus/src/Plugin/migrate/process/Dom.php
+[printing] modules/contrib/migrate_plus/src/Plugin/migrate/process/DomProcessBase.php
+[printing] modules/contrib/migrate_plus/src/Plugin/migrate/process/DomStrReplace.php
+[printing] modules/contrib/migrate_plus/src/Plugin/migrate/process/EntityGenerate.php
+[printing] modules/contrib/migrate_plus/src/Plugin/migrate/process/EntityLookup.php
+[printing] modules/contrib/migrate_plus/src/Plugin/migrate/process/FileBlob.php
+[printing] modules/contrib/migrate_plus/src/Plugin/migrate/process/Merge.php
+[printing] modules/contrib/migrate_plus/src/Plugin/migrate/process/MultipleValues.php
+[printing] modules/contrib/migrate_plus/src/Plugin/migrate/process/SingleValue.php
+[printing] modules/contrib/migrate_plus/src/Plugin/migrate/process/SkipOnValue.php
+[printing] modules/contrib/migrate_plus/src/Plugin/migrate/process/StrReplace.php
+[printing] modules/contrib/migrate_plus/src/Plugin/migrate/process/Transliteration.php
+[printing] modules/contrib/migrate_plus/src/Plugin/migrate/source/SourcePluginExtension.php
+[printing] modules/contrib/migrate_plus/src/Plugin/migrate/source/Url.php
+[printing] modules/contrib/migrate_plus/src/Plugin/migrate_plus/authentication/Basic.php
+[printing] modules/contrib/migrate_plus/src/Plugin/migrate_plus/authentication/Digest.php
+[printing] modules/contrib/migrate_plus/src/Plugin/migrate_plus/authentication/OAuth2.php
+[printing] modules/contrib/migrate_plus/src/Plugin/migrate_plus/data_fetcher/File.php
+[printing] modules/contrib/migrate_plus/src/Plugin/migrate_plus/data_fetcher/Http.php
+[printing] modules/contrib/migrate_plus/src/Plugin/migrate_plus/data_parser/Json.php
+[printing] modules/contrib/migrate_plus/src/Plugin/migrate_plus/data_parser/SimpleXml.php
+[printing] modules/contrib/migrate_plus/src/Plugin/migrate_plus/data_parser/Soap.php
+[printing] modules/contrib/migrate_plus/src/Plugin/migrate_plus/data_parser/Xml.php
+[printing] modules/contrib/migrate_plus/src/Plugin/migrate_plus/data_parser/XmlTrait.php
+
+
+2 files with changes
+====================
+
+1) modules/contrib/migrate_plus/migrate_json_example/migrate_json_example.install
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -12,7 +12,7 @@
+  */
+ function migrate_json_example_install() {
+   // Create the example file directory and ensure it's writable.
+-  $directory = file_default_scheme() . '://migrate_json_example';
++  $directory = \Drupal::config('system.file')->get('default_scheme') . '://migrate_json_example';
+   // TODO: remove after 8.6 is no longer supported in
+   // https://www.drupal.org/project/migrate_plus/issues/3035587
+   if (version_compare(\Drupal::VERSION, '8.7', '>=')) {
+@@ -19,7 +19,7 @@
+     \Drupal::service('file_system')->prepareDirectory($directory, FileSystemInterface::CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS);
+   }
+   else {
+-    file_prepare_directory($directory, FILE_CREATE_DIRECTORY | FILE_MODIFY_PERMISSIONS);
++    \Drupal::service('file_system')->prepareDirectory($directory, FileSystemInterface::CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS);
+   }
+
+   // Copy the example file to example directory.
+@@ -31,6 +31,6 @@
+     \Drupal::service('file_system')->copy($file_source, $directory . '/products.json', FileSystemInterface::EXISTS_REPLACE);
+   }
+   else {
+-    file_unmanaged_copy($file_source, $directory . '/products.json', FILE_EXISTS_REPLACE);
++    file_unmanaged_copy($file_source, $directory . '/products.json', FileSystemInterface::EXISTS_REPLACE);
+   }
+ }
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\FileCreateDirectoryRector
+ * DrupalRector\Rector\Deprecation\FileDefaultSchemeRector
+ * DrupalRector\Rector\Deprecation\FileExistsReplaceRector
+ * DrupalRector\Rector\Deprecation\FileModifyPermissionsRector
+ * DrupalRector\Rector\Deprecation\FilePrepareDirectoryRector
+
+
+2) modules/contrib/migrate_plus/src/Plugin/migrate/process/FileBlob.php
+
+    ---------- begin diff ----------
+--- Original
++++ New
+@@ -141,7 +141,7 @@
+         throw new MigrateSkipProcessException("Could not create directory '$dir'");
+       }
+     }
+-    elseif (file_prepare_directory($dir, FILE_CREATE_DIRECTORY | FILE_MODIFY_PERMISSIONS)) {
++    elseif (\Drupal::service('file_system')->prepareDirectory($dir, FileSystemInterface::CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS)) {
+       throw new MigrateSkipProcessException("Could not create directory '$dir'");
+     }
+     if ($this->putFile($destination, $blob, $replace)) {
+@@ -168,7 +168,7 @@
+     // TODO: remove after 8.6 is no longer supported in
+     // https://www.drupal.org/project/migrate_plus/issues/3035587
+     if (!isset($replace)) {
+-      $replace = FILE_EXISTS_REPLACE;
++      $replace = FileSystemInterface::EXISTS_REPLACE;
+     }
+     if (version_compare(\Drupal::VERSION, '8.7', '>=')) {
+       $path = $this->fileSystem->getDestinationFilename($destination, $replace);
+@@ -214,7 +214,7 @@
+       return FileSystemInterface::EXISTS_REPLACE;
+     }
+     else {
+-      return FILE_EXISTS_REPLACE;
++      return FileSystemInterface::EXISTS_REPLACE;
+     }
+   }
+    ----------- end diff -----------
+
+
+Applied rules:
+
+ * DrupalRector\Rector\Deprecation\FileCreateDirectoryRector
+ * DrupalRector\Rector\Deprecation\FileExistsReplaceRector
+ * DrupalRector\Rector\Deprecation\FileModifyPermissionsRector
+ * DrupalRector\Rector\Deprecation\FilePrepareDirectoryRector
+
+
+ [OK] Rector is done! 2 files have been changed.                                
+

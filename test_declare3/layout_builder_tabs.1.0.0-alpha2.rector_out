@@ -1,0 +1,10 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/layout_builder_tabs/src/TwigExtension/SortByWeight.php
+[refactoring] modules/contrib/layout_builder_tabs/src/TwigExtension/SortByWeight.php
+[printing] modules/contrib/layout_builder_tabs/src/TwigExtension/SortByWeight.php
+
+
+ [OK] Rector is done!                                                           
+

@@ -1,0 +1,46 @@
+
+In ServiceMap.php line 19:
+                                         
+  [PHPStan\ShouldNotHappenException]     
+  No Drupal service map was registered.  
+                                         
+
+Exception trace:
+  at /var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/mglaman/phpstan-drupal/src/Drupal/ServiceMap.php:19
+ PHPStan\Drupal\ServiceMap->getService() at /var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/mglaman/phpstan-drupal/src/Type/ServiceDynamicReturnTypeExtension.php:57
+ PHPStan\Type\ServiceDynamicReturnTypeExtension->getTypeFromMethodCall() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/phpstan/phpstan/phpstan.phar/src/Analyser/MutatingScope.php:2404
+ PHPStan\Analyser\MutatingScope->methodCallReturnType() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/phpstan/phpstan/phpstan.phar/src/Analyser/MutatingScope.php:1105
+ PHPStan\Analyser\MutatingScope->PHPStan\Analyser\{closure}() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/phpstan/phpstan/phpstan.phar/src/Type/TypeTraverser.php:47
+ PHPStan\Type\TypeTraverser->mapInternal() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/phpstan/phpstan/phpstan.phar/src/Type/TypeTraverser.php:37
+ PHPStan\Type\TypeTraverser::map() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/phpstan/phpstan/phpstan.phar/src/Analyser/MutatingScope.php:1107
+ PHPStan\Analyser\MutatingScope->resolveType() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/phpstan/phpstan/phpstan.phar/src/Analyser/MutatingScope.php:305
+ PHPStan\Analyser\MutatingScope->getType() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/phpstan/phpstan/phpstan.phar/src/Analyser/NodeScopeResolver.php:1151
+ PHPStan\Analyser\NodeScopeResolver->processExprNode() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/phpstan/phpstan/phpstan.phar/src/Analyser/NodeScopeResolver.php:1679
+ PHPStan\Analyser\NodeScopeResolver->processArgs() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/phpstan/phpstan/phpstan.phar/src/Analyser/NodeScopeResolver.php:1414
+ PHPStan\Analyser\NodeScopeResolver->processExprNode() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/phpstan/phpstan/phpstan.phar/src/Analyser/NodeScopeResolver.php:317
+ PHPStan\Analyser\NodeScopeResolver->processStmtNode() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/phpstan/phpstan/phpstan.phar/src/Analyser/NodeScopeResolver.php:203
+ PHPStan\Analyser\NodeScopeResolver->processStmtNodes() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/phpstan/phpstan/phpstan.phar/src/Analyser/NodeScopeResolver.php:305
+ PHPStan\Analyser\NodeScopeResolver->processStmtNode() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/phpstan/phpstan/phpstan.phar/src/Analyser/NodeScopeResolver.php:203
+ PHPStan\Analyser\NodeScopeResolver->processStmtNodes() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/phpstan/phpstan/phpstan.phar/src/Analyser/NodeScopeResolver.php:362
+ PHPStan\Analyser\NodeScopeResolver->processStmtNode() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/phpstan/phpstan/phpstan.phar/src/Analyser/NodeScopeResolver.php:203
+ PHPStan\Analyser\NodeScopeResolver->processStmtNodes() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/phpstan/phpstan/phpstan.phar/src/Analyser/NodeScopeResolver.php:346
+ PHPStan\Analyser\NodeScopeResolver->processStmtNode() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/phpstan/phpstan/phpstan.phar/src/Analyser/NodeScopeResolver.php:172
+ PHPStan\Analyser\NodeScopeResolver->processNodes() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/rector/rector-prefixed/rector/packages/node-type-resolver/src/PHPStan/Scope/NodeScopeResolver.php:117
+ Rector\NodeTypeResolver\PHPStan\Scope\NodeScopeResolver->processNodes() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/rector/rector-prefixed/rector/packages/node-type-resolver/src/NodeScopeAndMetadataDecorator.php:96
+ Rector\NodeTypeResolver\NodeScopeAndMetadataDecorator->decorateNodesFromFile() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/rector/rector-prefixed/rector/src/Application/FileProcessor.php:124
+ Rector\Core\Application\FileProcessor->parseAndTraverseFileInfoToNodes() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/rector/rector-prefixed/rector/src/Application/FileProcessor.php:79
+ Rector\Core\Application\FileProcessor->parseFileInfoToLocalCache() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/rector/rector-prefixed/rector/src/Application/RectorApplication.php:101
+ Rector\Core\Application\RectorApplication->Rector\Core\Application\{closure}() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/rector/rector-prefixed/rector/src/Application/RectorApplication.php:157
+ Rector\Core\Application\RectorApplication->tryCatchWrapper() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/rector/rector-prefixed/rector/src/Application/RectorApplication.php:102
+ Rector\Core\Application\RectorApplication->runOnFileInfos() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/rector/rector-prefixed/rector/src/Console/Command/ProcessCommand.php:138
+ Rector\Core\Console\Command\ProcessCommand->execute() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/rector/rector-prefixed/rector/vendor/symfony/console/Command/Command.php:228
+ _HumbugBox186ce906dbdb\Symfony\Component\Console\Command\Command->run() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/rector/rector-prefixed/rector/src/Console/Command/AbstractCommand.php:30
+ Rector\Core\Console\Command\AbstractCommand->run() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/rector/rector-prefixed/rector/vendor/symfony/console/Application.php:849
+ _HumbugBox186ce906dbdb\Symfony\Component\Console\Application->doRunCommand() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/rector/rector-prefixed/rector/vendor/symfony/console/Application.php:235
+ _HumbugBox186ce906dbdb\Symfony\Component\Console\Application->doRun() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/rector/rector-prefixed/rector/src/Console/Application.php:83
+ Rector\Core\Console\Application->doRun() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/rector/rector-prefixed/rector/vendor/symfony/console/Application.php:136
+ _HumbugBox186ce906dbdb\Symfony\Component\Console\Application->run() at phar:///var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/rector/rector-prefixed/rector/bin/rector:48
+ require() at /var/lib/drupalci/workspace/drupal-checkouts/drupal1/vendor/rector/rector-prefixed/rector:6
+
+process [-n|--dry-run] [-a|--autoload-file AUTOLOAD-FILE] [--match-git-diff] [-o|--output-format [OUTPUT-FORMAT]] [--no-progress-bar] [--output-file OUTPUT-FILE] [--cache-debug] [--clear-cache] [--] [<source>...]
+

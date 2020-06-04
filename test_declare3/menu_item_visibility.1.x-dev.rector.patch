@@ -1,0 +1,12 @@
+diff --git a/menu_item_visibility.info.yml b/menu_item_visibility.info.yml
+index cf8be96..f4b8fac 100644
+--- a/menu_item_visibility.info.yml
++++ b/menu_item_visibility.info.yml
+@@ -1,6 +1,7 @@
+ name: Menu Item Visibility
+ description: 'Controls the visibility of the menus for user roles.'
+ core: 8.x
++core_version_requirement: ^8 || ^9
+ type: module
+ 
+ dependencies:

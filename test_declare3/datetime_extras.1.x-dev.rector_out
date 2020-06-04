@@ -1,0 +1,31 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/datetime_extras/datetime_extras.module
+[parsing] modules/contrib/datetime_extras/src/Plugin/Field/FieldWidget/DateConfigurableListWidget.php
+[parsing] modules/contrib/datetime_extras/src/Plugin/Field/FieldWidget/DateRangeDurationWidget.php
+[parsing] modules/contrib/datetime_extras/src/Plugin/Field/FieldWidget/DateTimeDatelistNoTimeWidget.php
+[parsing] modules/contrib/datetime_extras/tests/src/Functional/DateRangeDurationWidgetTest.php
+[parsing] modules/contrib/datetime_extras/tests/src/Functional/LoadTest.php
+[parsing] modules/contrib/datetime_extras/tests/src/Kernel/DateConfigurableListWidgetTest.php
+[parsing] modules/contrib/datetime_extras/tests/src/Kernel/DateTimeDatelistNoTimeWidgetTest.php
+[refactoring] modules/contrib/datetime_extras/datetime_extras.module
+[refactoring] modules/contrib/datetime_extras/src/Plugin/Field/FieldWidget/DateConfigurableListWidget.php
+[refactoring] modules/contrib/datetime_extras/src/Plugin/Field/FieldWidget/DateRangeDurationWidget.php
+[refactoring] modules/contrib/datetime_extras/src/Plugin/Field/FieldWidget/DateTimeDatelistNoTimeWidget.php
+[refactoring] modules/contrib/datetime_extras/tests/src/Functional/DateRangeDurationWidgetTest.php
+[refactoring] modules/contrib/datetime_extras/tests/src/Functional/LoadTest.php
+[refactoring] modules/contrib/datetime_extras/tests/src/Kernel/DateConfigurableListWidgetTest.php
+[refactoring] modules/contrib/datetime_extras/tests/src/Kernel/DateTimeDatelistNoTimeWidgetTest.php
+[printing] modules/contrib/datetime_extras/datetime_extras.module
+[printing] modules/contrib/datetime_extras/src/Plugin/Field/FieldWidget/DateConfigurableListWidget.php
+[printing] modules/contrib/datetime_extras/src/Plugin/Field/FieldWidget/DateRangeDurationWidget.php
+[printing] modules/contrib/datetime_extras/src/Plugin/Field/FieldWidget/DateTimeDatelistNoTimeWidget.php
+[printing] modules/contrib/datetime_extras/tests/src/Functional/DateRangeDurationWidgetTest.php
+[printing] modules/contrib/datetime_extras/tests/src/Functional/LoadTest.php
+[printing] modules/contrib/datetime_extras/tests/src/Kernel/DateConfigurableListWidgetTest.php
+[printing] modules/contrib/datetime_extras/tests/src/Kernel/DateTimeDatelistNoTimeWidgetTest.php
+
+
+ [OK] Rector is done!                                                           
+

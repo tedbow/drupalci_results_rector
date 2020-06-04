@@ -1,0 +1,13 @@
+Rector 0.8.x-dev@80f429b
+Config file: rector.yml
+
+[parsing] modules/contrib/filelist_formatter/filelist_formatter.module
+[parsing] modules/contrib/filelist_formatter/src/Plugin/Field/FieldFormatter/FileListFormatter.php
+[refactoring] modules/contrib/filelist_formatter/filelist_formatter.module
+[refactoring] modules/contrib/filelist_formatter/src/Plugin/Field/FieldFormatter/FileListFormatter.php
+[printing] modules/contrib/filelist_formatter/filelist_formatter.module
+[printing] modules/contrib/filelist_formatter/src/Plugin/Field/FieldFormatter/FileListFormatter.php
+
+
+ [OK] Rector is done!                                                           
+

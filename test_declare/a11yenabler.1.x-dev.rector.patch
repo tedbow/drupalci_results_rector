@@ -1,0 +1,13 @@
+diff --git a/src/Form/A11yEnablerSettingsForm.php b/src/Form/A11yEnablerSettingsForm.php
+index 787224a..df2b49d 100644
+--- a/src/Form/A11yEnablerSettingsForm.php
++++ b/src/Form/A11yEnablerSettingsForm.php
+@@ -49,7 +49,7 @@ class A11yEnablerSettingsForm extends ConfigFormBase {
+   /**
+    * {@inheritdoc}
+    */
+-  public function buildForm(array $form, \Drupal\Core\Form\FormStateInterface $form_state) {
++  public function buildForm(array $form, FormStateInterface $form_state) {
+     $form = [];
+ 
+     $form['a11yenabler_heading'] = array(

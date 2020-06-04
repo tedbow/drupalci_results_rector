@@ -1,0 +1,9 @@
+diff --git a/htmlpurifier.info.yml b/htmlpurifier.info.yml
+index 75de4bc..532f917 100644
+--- a/htmlpurifier.info.yml
++++ b/htmlpurifier.info.yml
+@@ -3,3 +3,4 @@ type: module
+ description: 'Filter that removes malicious HTML and ensures standards compliant output.'
+ package: Filter
+ core: 8.x
++core_version_requirement: ^8 || ^9

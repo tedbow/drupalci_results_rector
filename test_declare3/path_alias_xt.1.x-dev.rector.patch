@@ -1,0 +1,12 @@
+diff --git a/path_alias_xt.info.yml b/path_alias_xt.info.yml
+index 74cb193..c0765fb 100644
+--- a/path_alias_xt.info.yml
++++ b/path_alias_xt.info.yml
+@@ -3,6 +3,7 @@ description: 'Automatically extend path aliases to include tabs, like <em>about-
+ 
+ type: module
+ core: 8.x
++core_version_requirement: ^8 || ^9
+ 
+ dependencies:
+   - drupal:path
